@@ -1,0 +1,21 @@
+/* figures
+---------------------------------------------------------------------------- */
+/**
+ * 1. Address margin not present in IE 8/9 and Safari 5.
+ * 2. http://demosthenes.info/blog/662/Design-From-the-Inside-Out-With-CSS-Min-Content
+ */
+figure {
+	@include fallback('margin', 1em 2.5rem); /* 1 */
+}
+
+figcaption {
+	font-size: 83.3333%;
+	line-height: inherit;
+}
+
+figcaption p,
+figcaption small {
+	margin: 0;
+	font-size: 1em;
+}
+

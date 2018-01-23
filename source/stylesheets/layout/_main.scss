@@ -1,0 +1,11 @@
+/**
+ * The main content of a document.
+ *
+ * This marks the content that is directly related to or expands upon the central topic of the document. The main role is a non-obtrusive alternative for "skip to main content" links, where the navigation option to go to the main content (or other landmarks) is provided by the user agent through a dialog or by assistive technologies.
+ *
+ * Within any `document` or `application`, the author **SHOULD** mark no more than one element with the `main` role.
+ *
+ * The `[role='main']` element can be a `main` or an `article`
+ */
+[role='main'] {
+}

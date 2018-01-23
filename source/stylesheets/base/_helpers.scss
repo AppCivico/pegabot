@@ -1,0 +1,128 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/* CLASSES
+============================================================================ */
+%loading-bg {
+	background-image: url($base-url + 'loading.svg');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-color: palette('loading', 'background');
+}
+
+%loading-el {
+	overflow: hidden;
+
+	cursor: wait;
+
+	&::after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		z-index: layer('modal');
+
+		content: '';
+	}
+}
+
+/// Content which loads **after** the page does, should be informed to user.
+///
+/// `[aria-busy='true']` adds a loading background to any loading element
+/// which can't be a parent and a pseudo element over any element other than
+/// `html`.
+///
+/// Don't forget to customize it to your needs. Speacially the background
+/// color.
+///
+/// Already applied to `embed` and `img`, which can cause issues with
+/// transparent images.
+///
+/// @author Sobral
+/// @group helpers
+///
+/// @example markup
+///
+/// <dialog open aria-busy="true">
+/// 	<form method="dialog">
+/// 		[...]
+/// 	</form>
+/// </dialog>
+///
+[aria-busy='true'] {
+	> body,
+	&:not(html) {
+		@extend %loading-bg;
+		@extend %loading-el;
+	}
+}
+
+img,
+embed {
+	@extend %loading-bg;
+
+	background-size: auto;
+
+	&::after {
+		/*
+		 *	Future proof reset
+		 */
+		content: none;
+	}
+}
+
+input,
+output,
+keygen,
+textarea {
+	&[aria-busy='true'] {
+		@extend %loading-bg;
+
+		background-size: auto;
+	}
+}
+
+
+/// Load the Susy grid under the class `grid-debug`
+///
+/// @author Sobral
+/// @group helpers
+///
+/// @example markup
+///
+/// <html class="grid-debug">
+/// 	<body>
+/// 		[...]
+/// 	</body>
+/// </html>
+///
+@if function-exists(susy-svg-grid) {
+	.grid-debug {
+		> body,
+		&:not(html) {
+			&:after {
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+
+				z-index: layer('modal');
+
+				font-size: 1rem;
+
+				pointer-events: none;
+
+				background-image: susy-svg-grid();
+				background-position: center top;
+				background-size: span('all' 'wider') 100%;
+				background-repeat: repeat-y;
+
+				content: '';
+			}
+		}
+	}
+}

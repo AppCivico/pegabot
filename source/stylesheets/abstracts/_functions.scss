@@ -1,0 +1,355 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+/// Native `url(..)` function wrapper
+/// @group helpers
+/// @param {String} $base - base URL for the asset
+/// @param {String} $type - asset type folder (e.g. `fonts/`)
+/// @param {String} $path - asset path
+/// @return {Url}
+@function asset($base, $type, $path) {
+	@return url($base + $type + $path);
+}
+
+/// Returns URL to an image based on its path
+/// @group helpers
+/// @param {String} $path - image path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+/// @require {variable} $base-url
+@function image($path, $base: $base-url) {
+	@return asset($base, 'img/', $path);
+}
+
+/// Returns URL to a font based on its path
+/// @group helpers
+/// @param {String} $path - font path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+/// @require {variable} $base-url
+@function font($path, $base: $base-url) {
+	@return asset($base, 'ff/', $path);
+}
+
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @access public
+/// @return {Number} - Unitless number
+/// @link http://stackoverflow.com/a/12335841
+@function strip-unit($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+	@return $number;
+}
+
+/// Slightly lighten a color
+/// @access public
+/// @group helpers
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage) {
+	@return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @group helpers
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+	@return mix(black, $color, $percentage);
+}
+
+///  Calculate the Perceived Brightness of a Color
+/// @access private
+/// @param {color} $color
+/// @link http://www.nbdtech.com/Blog/archive/2008/04/27/Calculating-the-Perceived-Brightness-of-a-Color.aspx
+@function _brightness($color) {
+	$red-magic-number: 241;
+	$green-magic-number: 691;
+	$blue-magic-number: 68;
+	$brightness-divisor: $red-magic-number + $green-magic-number + $blue-magic-number;
+
+	// Extract color components
+	$red-component: red($color);
+	$green-component: green($color);
+	$blue-component: blue($color);
+
+	// Calculate a brightness value in 3d color space between 0 and 255
+	$number: sqrt((($red-component * $red-component * $red-magic-number) + ($green-component * $green-component * $green-magic-number) + ($blue-component * $blue-component * $blue-magic-number)) / $brightness-divisor);
+
+	// Convert to percentage and return
+	@return 100% * $number / 255;
+}
+
+
+/// Choose text color based on background
+/// @access public
+/// @group helpers
+/// @param {color} $bg-color - background color
+/// @param {color} $light - light text option
+/// @param {color} $dark - dark text option
+/// @return {Color}
+@function contrasting-color($bg-color, $light, $dark) {
+	@if _brightness($bg-color) < 65% {
+		@return $light;
+	} @else {
+		@return $dark;
+	}
+}
+
+/// Convert a HSL color to RGB
+/// @access public
+/// @group helpers
+/// @link https://gist.github.com/omgmog/6192734
+/// @param {color} $hsl-color - hsl color
+@function hsl-to-rgb($hsl-color) {
+	@return mix($hsl-color, $hsl-color);
+}
+
+
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @group helpers
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: '') {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+
+/// Convert font weights names to numbers. Names can be any case,
+/// dash or separated separated or not separated at all.
+///
+/// @access public
+/// @author Sobral
+/// @group helpers
+/// @param {String} $weight - Weight name
+/// @return {Number}
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight?v=control#Common_weight_name_mapping
+///
+/// @example scss
+/// 	h1 {
+/// 		font-weight: font-weight('medium');
+/// 	}
+@function font-weight($weight: 'normal') {
+
+	$weights: (
+		'thin': 100,
+		'hairline': 100,
+		'extralight': 200,
+		'extra light': 200,
+		'extra-light': 200,
+		'ultralight': 200,
+		'ultra light': 200,
+		'ultra-light': 200,
+		'light': 300,
+		'normal': 400,
+		'medium': 500,
+		'semibold': 600,
+		'semi bold': 600,
+		'semi-bold': 600,
+		'demibold': 600,
+		'demi bold': 600,
+		'demi-bold': 600,
+		'bold': 700,
+		'extrabold': 800,
+		'extra bold': 800,
+		'extra-bold': 800,
+		'ultrabold': 800,
+		'ultra bold': 800,
+		'ultra-bold': 800,
+		'black': 900,
+		'heavy': 900
+	);
+
+	$weight: to-lower-case($weight);
+
+	@if not map-has-key($weights, $weight) {
+		@error 'unknown value sent to `font-weight` function-> #{$weight}.';
+	}
+
+	@return map-get($weights, $weight);
+}
+
+
+
+/// Get a z-index value from a layer name
+///
+/// @access public
+/// @group helpers
+/// @param {String} $layer - Layer’s name
+/// @require {variable} $layers
+/// @return {Number}
+///
+/// @example scss
+/// 	dialog[open] {
+/// 		z-index: layer('modal');
+/// 	}
+@function layer($layer: 'default') {
+// sass-lint:disable-block indentation
+	$default-layers: (
+		'modal': 5000,
+		'dropdown': 4000,
+		'default': 1,
+		'below': -1,
+	);
+
+	@if variable-exists('layers') and type-of($layers) == 'map' {
+		$default-layers: map-merge($default-layers, $layers);
+	}
+
+	@if not map-has-key($default-layers, $layer) {
+		@error 'unknown value sent to `layer` function-> #{$layer}. Availabe values-> `#{map-keys($default-layers)}`';
+	}
+
+	@return map-get($default-layers, $layer);
+}
+
+
+/// Helper function to use organized colors and tones
+///
+/// @access public
+/// @group helpers
+/// @param {String} $color-name - Color name
+/// @param {String} $tone ['base'] - Tone name
+/// @require {variable} $palette
+/// @return {color}
+/// @link http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+///
+/// @example scss
+/// 	a {
+/// 		color: palette('anchor');
+///
+/// 		&:hover {
+/// 			color: palette('anchor', 'hover');
+/// 		}
+/// 	}
+@function palette($color-name, $tone: null) {
+	$default-palette: (
+		'white': rgb(255, 255, 255),
+		'black': rgb(0, 0, 0),
+		'debug': rgb(255, 0, 0),
+		'anchor': (
+			'base': rgb(0, 102, 204),
+			'link': rgb(0, 102, 204),
+			'visited': rgb(128, 0, 128),
+			'hover': rgb(50, 152, 255),
+			'focus': rgb(50, 152, 255),
+			'active': rgb(229, 0, 80),
+		),
+		'border': (
+			'base': rgb(192, 192, 192),
+			'focus': rgb(0, 0 , 0),
+			),
+		'button': (
+			'base': rgb(225, 225, 225),
+			'focus': rgb(229, 241, 251),
+			'slider': hsl(0, 0%, 40%),
+			'submit': rgb(217, 83, 79),
+			'reset': transparent,
+		),
+		'disabled': (
+			'foreground': hsl(0, 0%, 42%),
+			'background': hsl(0, 0%, 94%),
+		),
+		'loading': (
+			'foreground': hsl(0, 0%, 94%),
+			'background': hsla(0, 0%, 7%, 0.8),
+		),
+		'label': (
+			'default': rgb(119, 119, 119),
+			'primary': rgb(51, 122, 183),
+			'success': rgb(66, 133, 66),
+			'info': rgb(60, 127, 145),
+			'warning': rgb(240, 173, 78),
+			'danger': rgb(217, 83, 79),
+		),
+		'mark': (
+			'foreground': rgb(51, 51, 51),
+			'background': rgb(215, 255, 90),
+		),
+		'quotes': hsl(0, 0%, 34%),
+		'placeholder': hsl(0, 0%, 34%),
+		'selection': rgb(20, 105, 140),
+		'tap-highlight': rgb(255, 94, 153),
+		'target-highlight': rgb(255, 255, 102),
+		'text': (
+			'dark': hsl(0, 0%, 13%),
+			'light': rgb(229, 231, 234),
+		),
+	);
+
+	@if variable-exists('palette') and type-of($palette) == 'map' {
+		$default-palette: map-merge($default-palette, $palette);
+	}
+
+	@if not map-has-key($default-palette, $color-name) {
+		@error 'unknown color sent to `palette` function-> `#{$color-name}`. Available colors-> `#{map-keys($default-palette)}`';
+	}
+
+	$color: map-get($default-palette, $color-name);
+
+	@if $tone != null {
+		@if type-of($color) == 'color' or $color == 'transparent' {
+			@error 'unknown tone sent to `palette` function-> `#{$tone}`. There is only one tone available for color `#{$color-name}`-> `#{$color}`';
+		} @elseif not map-has-key($color, $tone) {
+			@error 'unknown tone sent to `palette` function-> `#{$tone}`. Available tones for `#{$color-name}`-> `#{map-keys($color)}`';
+		} @else {
+			@return map-get(map-get($default-palette, $color-name), $tone);
+		}
+	} @else {
+		@if type-of($color) == 'color' or $color == 'transparent' {
+			@return $color;
+		} @elseif type-of($color) == 'map' and not map-has-key($color, 'base') {
+			@error 'color `#{$color}` misses `base` tone';
+		} @else {
+			@return map-get($color, 'base');
+		}
+	}
+}
+
+/// Trims a string by removing leading and trailing spaces
+///
+/// @group helpers
+/// @param {String} $string - String to trim
+/// @return {String} - String without spaces
+///
+@function trim($string) {
+	@return str-slice(
+		$string,
+		_first-index($string, 'left'),
+		_first-index($string, 'right')
+	);
+}
+
+/// Find first char which is not a space
+///
+/// @param {String} $string - String to search
+/// @param {String} $direction ['left'] - Either 'left' or 'right' to indicate search direction
+/// @access private
+/// @return {Number} - Index of first non-space character
+///
+@function _first-index($string, $direction: 'left') {
+	@for $i from 1 through str-length($string) {
+		$index: if($direction == 'left', $i, -$i);
+
+		@if str-slice($string, $index, $index) != ' ' {
+			@return $index;
+		}
+	}
+
+	@return 0;
+}

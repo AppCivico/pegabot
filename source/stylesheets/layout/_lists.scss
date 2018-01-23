@@ -1,0 +1,84 @@
+/* LISTS
+============================================================================ */
+/**
+ * @see http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/
+ */
+ul,
+ol {
+	@include fallback('margin', 0 0 1.5rem);
+
+	padding-left: 1em;
+	margin: 0;
+}
+
+ol {
+	counter-reset: li;
+}
+
+/**
+ * Chrome and Firefox have different UA values of text-align for li. It can
+ * result in different alignment of text in li depending on the direction of text (LTR/RTL)
+ * @see https://github.com/necolas/normalize.css/issues/334
+ */
+article li {
+	position: relative;
+
+	padding-left: 0;
+	margin: 0;
+
+	list-style: none;
+
+	&::before {
+		position: absolute;
+		left: -0.5em;
+
+		z-index: layer('default'); // required to prevent Blink clipping issues on columns
+
+		font-weight: bold;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+article ul > li::before {
+	content: '-\a0';
+}
+
+article ol > li::before {
+	left: 1em;
+
+	content: counter(li)'.\00a0';
+	counter-increment: li;
+}
+
+li ol,
+li ul {
+}
+
+/* definition
+---------------------------------------------------------------------------- */
+dl {
+	@include fallback('margin', 0 0 1.5rem);
+
+	padding: 0;
+}
+
+dt,
+dd {
+	padding: 0;
+	margin: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	@include fallback('margin', 0 0 1.5rem);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

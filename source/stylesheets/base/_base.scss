@@ -1,0 +1,431 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * 1. Make all elements from the DOM inherit from the parent box-sizing
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+::before,
+::after {
+	background-repeat: no-repeat;
+
+	box-sizing: inherit;
+
+	tab-size: inherit;
+}
+
+/* User interaction (https://www.w3.org/TR/html5/editing.html)
+========================================================================== */
+::selection {
+	text-shadow: none;
+
+	color: palette('white');
+
+	background-color: palette('selection');
+}
+
+/**
+ * ARIA roles should include visual cursor hints
+ */
+[aria-busy='true'] {
+	cursor: progress;
+}
+
+[aria-controls] {
+	cursor: pointer;
+}
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements (opinionated).
+ */
+[aria-disabled] {
+	cursor: default;
+}
+
+/*
+ * Remove the tapping delay on clickable elements (opinionated).
+ * 1. Remove the tapping delay in IE 10.
+ */
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+	touch-action: manipulation; /* 1 */
+}
+
+:target {
+	animation: highlight 0.8s ease-out;
+
+	@keyframes highlight {
+		// sass-lint:disable-block no-color-literals
+		0% {
+			background-color: rgba(palette('target-highlight'), 1);
+		}
+
+		100% {
+			background-color: rgba(palette('target-highlight'), 0);
+		}
+	}
+}
+
+/**
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ * http://clagnut.com/blog/348/#c790
+ * 2. Scaling HTML element to window height
+ * https://github.com/necolas/normalize.css/pull/422#issuecomment-78379521
+ * 3. Keeps page centred in all browsers regardless of content height
+ * 4. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ * www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+html {
+	/* 2 */
+	height: 100%;
+
+	padding: 0;
+	margin: 0;
+
+	/* 3 */
+	overflow-y: scroll;
+
+	/* 1 */
+	font-size: 100.01%;
+
+	/* 4 */
+	text-size-adjust: 100%;
+
+	background: palette('white');
+
+	box-sizing: border-box;
+
+	tab-size: 4;
+}
+
+body {
+	min-height: 100%;
+
+	margin: 0;
+}
+
+/* section items HTML5
+============================================================================ */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+	display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+	display: list-item;
+
+	list-style-type: none;
+
+	cursor: pointer;
+
+	&::-webkit-details-marker {
+		display: none;
+	}
+
+	&:focus {
+		outline: -webkit-focus-ring-color auto 5px;
+	}
+
+	&::before {
+		padding-right: 0.5em;
+		content: '\25B6';
+	}
+
+	details[open] > &::before {
+		content: '\25BC';
+	}
+}
+
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+	display: none;
+}
+
+/**
+ * Visually hidden content should remain accessible
+ */
+[hidden][aria-hidden='false'] {
+	position: absolute;
+
+	display: inherit;
+
+	clip: rect(0, 0, 0, 0);
+
+	&:focus {
+		clip: auto;
+	}
+}
+
+
+
+/* BLOCK TEXT
+============================================================================ */
+
+/**
+ * @see http://sonspring.com/journal/styling-hr
+ *
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/**
+ */
+hr {
+	/* line-height */
+	@include fallback('margin', calc(1.5em - 1px) 0 1.5em, 1.5em 0);
+
+	clear: both;
+
+	display: block;
+
+	/* 1 */
+	height: 0;
+
+	padding: 0;
+
+	/* 2 */
+	overflow: visible;
+
+	color: palette('gray');
+
+	border: 0;
+	border-top: 1px solid palette('gray');
+
+	/* 1 */
+	box-sizing: content-box;
+}
+
+/* MEDIA ELEMENTS
+============================================================================ */
+/**
+ * Corrects overflow displayed oddly in IE9
+ */
+svg:not(:root) {
+	overflow: hidden;
+}
+
+/**
+ * SVGs should fallback to their surrounding text color
+ */
+svg {
+	fill: currentColor;
+}
+
+a > svg {
+	pointer-events: none;
+}
+
+/**
+ * 1. Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ * 2. Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+audio,
+canvas,
+iframe,
+progress,
+svg,
+video {
+	/* 1 */
+	display: inline-block;
+
+	/* 2 */
+	vertical-align: middle;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Add the correct display in iOS 4-7.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+	display: none;
+
+	height: 0;
+}
+
+meter,
+progress {
+	background-size: auto;
+
+	appearance: none;
+}
+
+audio {
+}
+
+iframe,
+img,
+object {
+	font-size: 83.3333%;
+
+	color: currentColor;
+
+	border-style: none;
+}
+
+img,
+embed,
+object,
+video {
+	max-width: 100%;
+}
+
+video {
+}
+
+video > source {
+	width: 100%;
+	height: auto;
+}
+
+.ie:not(.ie6-8),
+object > img {
+	position: relative;
+
+	z-index: layer('below');
+
+	font-size: 1em;
+
+	pointer-events: none;
+}
+
+/**
+* 1. Improving quality of image resampling
+* @see  https://developer.mozilla.org/En/CSS/Image-rendering
+* @see  code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+*
+* 2. prevent images higher than viewport
+*/
+img {
+	height: auto;
+	max-width: 100%;
+	max-height: 90vh; /* 2 */
+
+	image-rendering: optimizeQuality; /* 1 */
+	-ms-interpolation-mode: bicubic; /* 1 */ // sass-lint:disable-line no-misspelled-properties
+}
+
+[usemap] {
+	color: palette('anchor');
+}
+
+map {
+}
+
+area {
+}
+
+object {
+}
+
+li img,
+p img {
+	vertical-align: middle;
+}
+
+a img,
+a > picture {
+	border: 0;
+}
+
+/* links
+============================================================================ */
+a {
+	// sass-lint:disable-block property-sort-order
+	padding: 0;
+	margin: 0;
+
+	font-size: 100%;
+
+	vertical-align: baseline;
+
+	@include on-event {
+		text-decoration: underline;
+	}
+
+	&:link {
+		text-decoration: underline;
+
+		cursor: pointer;
+		-webkit-tap-highlight-color: palette('tap-highlight'); // sass-lint:disable-line no-vendor-prefixes
+	}
+
+	&:visited {
+		@include on-event {
+			text-decoration: underline;
+		}
+	}
+
+	&:hover,
+	&:focus {
+	}
+
+	&:focus {
+		overflow: hidden;
+
+		outline: 1px dotted;
+		outline-offset: 2px;
+	}
+
+	/**
+	 * Improve readability when focused and also mouse hovered in all browsers.
+	 */
+	&:hover,
+	&:active {
+		outline-width: 0;
+	}
+
+	/**
+	 * Remove the gray background color from active links in IE 10.
+	 * @see https://github.com/necolas/normalize.css/issues/473
+	 */
+	&:active {
+		background-color: transparent;
+	}
+
+	&[target='_blank'],
+	&[rel='external'] {
+	}
+}
+
+/* Contact info and addresses
+---------------------------------------------------------------------------- */
+address {
+	padding: 0;
+	margin: 0;
+
+	font-style: italic;
+}

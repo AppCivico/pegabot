@@ -1,0 +1,237 @@
+////
+/// This file contains all application-wide Sass configuration variables
+/// @group configurations
+/// @todo Customize to match your design needs.
+////
+
+/// Title font stack
+///
+/// @access public
+/// @type list
+/// @todo Customize it to match your design needs or use one of the already available [font stacks](#font-stacks). Or do both.
+///
+/// @example scss
+/// $title-font-stack: ComicSans, $basic-title-font-stack;
+$title-font-stack: $basic-title-font-stack !default;
+
+
+/// Text body font stack
+///
+/// @access public
+/// @type list
+/// @todo Customize it to match your design needs or use one of the already available [font stacks](#font-stacks). Or do both.
+///
+/// @example scss
+/// $text-font-stack: ComicSans, $native-font-stack;
+$text-font-stack: $native-font-stack !default;
+
+
+/// Code (monospace) font stack
+///
+/// @access public
+/// @type list
+/// @todo Customize it to match your design needs or use one of the already available [font stacks](#font-stacks). Or do both.
+///
+/// @example scss
+/// $code-font-stack: ComicSans, $basic-code-font-stack;
+$code-font-stack: $basic-code-font-stack !default;
+
+
+/// Body text font-size
+///
+/// @access public
+/// @type number
+$body-font-size: 1em !default;
+
+/// Default Leading
+///
+/// @access public
+/// @type number
+$line-height: 1.5 !default;
+
+/// flexible line heights map
+/// @access private
+/// @type Map
+/// @prop {number} min - minimum line height expressed unitless
+/// @prop {number} max - maximum line height expressed unitless
+$line-heights: (
+	'min': 1.15,
+	'max': 1.5,
+) !default;
+
+
+/// flexible line length map
+///
+/// @type Map
+/// @prop {number} min - minimum line length expressed in `em`
+/// @prop {number} max - maximum line length expressed in `em`
+$line-lengths: (
+	'min': 21em,
+	'max': 35em,
+) !default;
+
+///
+/// @link http://www.modularscale.com/?1&rem&1.25
+$modularscale: (
+	base: 1rem,
+	ratio: 1.25
+);
+
+/// List all available colors and tones.
+///
+/// @access private
+/// @prop {string} color - Pure colors or a map of tones
+/// @prop {color | map} color.tone - Pure colors or returned color value of functions
+/// @require {function} palette
+/// @todo Customize the colors or add new ones to match your design needs.
+$palette: (
+	'gray': (
+		'x-light': tint(rgb(229, 231, 234), 10%),
+		'light': rgb(229, 231, 234),
+		'base': rgb(151, 153, 156),
+		'dark': rgb(64, 68, 71),
+		'x-dark': shade(rgb(64, 68, 71), 10%),
+	),
+	'white': rgb(255, 255, 255),
+	'black': rgb(0, 0, 0),
+	'debug': rgb(255, 0, 0),
+	'anchor': (
+		'base': rgb(0, 102, 204),
+		'link': rgb(0, 102, 204),
+		'visited': rgb(128, 0, 128),
+		'hover': rgb(50, 152, 255),
+		'focus': rgb(50, 152, 255),
+		'active': rgb(229, 0, 80),
+	),
+	'border': (
+		'base': rgb(192, 192, 192),
+		'focus': rgb(0, 0 , 0),
+		),
+	'button': (
+		'base': rgb(225, 225, 225),
+		'focus': rgb(229, 241, 251),
+		'slider': hsl(0, 0%, 40%),
+		'submit': rgb(217, 83, 79),
+		'reset': transparent,
+	),
+	'disabled': (
+		'foreground': hsl(0, 0%, 42%),
+		'background': hsl(0, 0%, 94%),
+	),
+	'loading': (
+		'foreground': hsl(0, 0%, 94%),
+		'background': hsla(0, 0%, 7%, 0.8),
+	),
+	'label': (
+		'default': rgb(119, 119, 119),
+		'primary': rgb(51, 122, 183),
+		'success': rgb(66, 133, 66),
+		'info': rgb(60, 127, 145),
+		'warning': rgb(240, 173, 78),
+		'danger': rgb(217, 83, 79),
+	),
+	'mark': (
+		'foreground': rgb(51, 51, 51),
+		'background': rgb(215, 255, 90),
+	),
+	'quotes': hsl(0, 0%, 34%),
+	'placeholder': hsl(0, 0%, 34%),
+	'selection': rgb(20, 105, 140),
+	'tap-highlight': rgb(255, 94, 153),
+	'target-highlight': rgb(255, 255, 102),
+	'text': (
+		'dark': hsl(0, 0%, 13%),
+		'light': rgb(229, 231, 234),
+	),
+);
+
+
+/// Default border-radius
+/// @todo Customize it to match your design.
+/// @type number
+$border-radius: 0 !default;
+
+/// border default width
+/// @type number
+$stroke: 1px !default;
+
+@function _im-to-em($breakpoints, $base-value: 16px) {
+	$new-breakpoints: ();
+
+	@each $name, $value in $breakpoints {
+		$em-value: ($value / $base-value) * 1em;
+		$new-breakpoints: map-merge($new-breakpoints, ($name: $em-value));
+	}
+
+	@return $new-breakpoints;
+}
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: _im-to-em(
+	(
+		'phone': 320px,
+		'tablet': 768px,
+		'desktop': 1024px
+	)
+) !default;
+
+$toggle-breakpoints: (
+	'toggle-table-layout': 48em,
+	'toggle-menu': 64em,
+);
+
+$breakpoints: map-merge($breakpoints, $toggle-breakpoints);
+
+// 320
+// 480
+// 760
+// 960
+// 1200
+// 1600.
+
+/// Container's maximum width
+/// @type number
+$max-width: 1180px !default;
+
+
+/// Z-indexes map, gathering all Z layers of the application. Avoid to edit it.
+/// @access public
+/// @type Map
+$layers: (
+	'modal': 5000,
+	'dropdown': 4000,
+	'default': 1,
+	'below': -1,
+);
+
+
+
+
+/// Relative or absolute URL where all assets are served from.
+/// @todo Customize it to match your setup.
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+
+@function _im-to-px($breakpoints, $base-value: 16px) {
+	$new-breakpoints: ();
+
+	@each $name, $value in $breakpoints {
+		@if (unit($value) != 'em' and unit($value) != 'px') {
+			@error 'all media queries units should be either `em` or `px`. `#{unit($value)}` given.';
+		}
+
+		$px-value: if(unit($value) == 'em', $value / 1em * $base-value, $value);
+
+		$new-breakpoints: map-merge($new-breakpoints, ($name: $px-value));
+	}
+
+	@return $new-breakpoints;
+}
+
+@if variable-exists('im-media-support') and $im-media-support == false {
+	$breakpoints: _im-to-px($breakpoints);
+}

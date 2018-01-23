@@ -1,0 +1,58 @@
+/* navigation
+---------------------------------------------------------------------------- */
+menu,
+nav {
+}
+
+menu ul,
+menu ol,
+nav ul,
+nav ol {
+	padding: 0;
+	margin: 0;
+
+	list-style: none;
+}
+
+menu li,
+nav li {
+	padding: 0;
+	margin: 0;
+
+	&::before {
+		content: none;
+	}
+}
+
+menu a,
+nav a {
+	display: block;
+
+	&:link {
+		text-decoration: none;
+	}
+}
+
+.current > a {
+	pointer-events: none;
+}
+
+
+/* access
+---------------------------------------------------------------------------- */
+.skip-links {
+}
+
+/* pagination
+---------------------------------------------------------------------------- */
+.pagination {
+}
+
+.pagination__current {
+}
+
+.pagination__previous {
+}
+
+.pagination__next {
+}

@@ -1,0 +1,83 @@
+
+/* buttons
+---------------------------------------------------------------------------- */
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Improve usability and consistency of cursor style between image-type `input` and others.
+ * 3. Address `overflow` set to `hidden` in IE 8/9/10. Corrects inner spacing displayed oddly in IE6/7
+ * 4. Remove inner padding and border in Firefox 4+.
+ * 5. Consistent buttons background color for all browsers (opinionated).
+ * 6. Consistent paddings.
+ * @see  http://archivist.incutio.com/viewlist/css-discuss/98999
+ * @see  http://www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ * @see  http://christophzillgens.com/en/articles/equal-height-input-and-button-elements-in-firefox-and-safari
+ */
+
+%button-reset {
+	@extend %os-element-reset;
+
+	width: auto; /* 3 */
+
+	padding: 1px 6px; /* 6 */ // sass-lint:disable-line property-units
+
+	overflow: visible; /* 3 */
+
+	text-indent: 0;
+	white-space: inherit;
+
+	cursor: pointer; /* 2 */
+
+	background-color: palette('button'); /* 5 */
+
+	box-sizing: inherit;
+
+	appearance: button; /* 1 */
+
+	&::-moz-focus-inner {
+		/* 4 */
+		padding: 0;
+
+		border: 0;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: palette('button', 'focus');
+	}
+
+	&:active {
+	}
+}
+
+/**
+ * Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ * and `video` controls.
+ * Please note that this fix DOES NOT work for buttons contained inside table elements.
+ * @see  http://www.viget.com/inspire/styling-the-button-element-in-internet-explorer/
+ */
+
+html [type='button'] {
+	@extend %button-reset;
+}
+
+button,
+[role='button'],
+[type='button'] {
+	@extend %button-reset;
+}
+
+[type='reset'] {
+	@extend %button-reset;
+}
+
+[type='submit'] {
+	@extend %button-reset;
+}
+
+/**
+* Replace focus style removed in the border reset above
+*/
+button:-moz-focusring,
+input:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}

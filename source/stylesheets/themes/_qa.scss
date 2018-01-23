@@ -1,0 +1,464 @@
+////
+/// This file contains rules intended to prevent mistakes
+///
+/// @group qa
+/// @link https://bitsofco.de/linting-html-using-css/
+/// @link https://github.com/j9t/qa-style-sheet
+/// @link https://github.com/Heydon/REVENGE.CSS
+////
+
+// sass-lint:disable no-important
+
+%error {
+	outline: 5px solid palette('debug') !important;
+}
+
+@mixin alert {
+	&::before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		display: block;
+		z-index: layer('modal');
+		padding: 1em;
+		font-weight: font-weight('heavy');
+		text-align: center;
+		color: palette('white');
+		background-color: palette('debug');
+
+		@content;
+	}
+}
+
+/* Deprecated elements */
+acronym,
+applet,
+basefont,
+bgsound,
+big,
+blink,
+center,
+comment,
+dir,
+embed,
+font,
+frame,
+frameset,
+isindex,
+listing,
+marquee,
+multicol,
+nobr,
+noembed,
+plaintext,
+spacer,
+strike,
+wbr,
+xmp {
+	@extend %error;
+
+	@include alert {
+		content: 'Deprecated element.' !important;
+	}
+}
+
+/* Inline Styles */
+[style]:not([class*='js-']) {
+	@extend %error;
+
+	@include alert {
+		content: '`style` attribute shouldn\'t be used, despeite being added by some scripts.' !important;
+	}
+}
+
+/* Faulty or Missing Link Targets */
+a {
+	&:not([href]),
+	&[href$='#'],
+	&[href=''],
+	&[href^='javascript'] {
+		@extend %error;
+
+		@include alert {
+			content: 'Links should only be used to navigation. Use a `<button>` instead.' !important;
+		}
+	}
+}
+
+/* Layout tables */
+table table {
+	@extend %error;
+
+	@include alert {
+		content: 'Tables shouldn\'t be nested.' !important;
+	}
+
+	display: block !important;
+}
+
+/* Unaccessible Images */
+/*
+*	@see	http://www.userfocus.co.uk/articles/alt_text.html
+*/
+img:not([alt]) {
+	@extend %error;
+
+	+ * {
+		@include alert {
+			content: '`alt` attribute missing.' !important;
+		}
+	}
+}
+
+// Missing Document Language
+html:not([lang]),
+html[lang=''] {
+	body {
+		@extend %error;
+
+		@include alert {
+			content: 'Missing Document Language.' !important;
+		}
+	}
+}
+
+// Incorrect Character Set
+meta[charset='UTF-8']:not(:first-child) {
+	& + body {
+		@extend %error;
+
+		@include alert {
+			content: 'Incorrect Character Set.' !important;
+		}
+	}
+}
+
+// Unaccessible Viewport Attributes
+meta[name='viewport'][content*='user-scalable=no'],
+meta[name='viewport'][content*='maximum-scale'],
+meta[name='viewport'][content*='minimum-scale'] {
+	& + body {
+		@extend %error;
+
+		@include alert {
+			content: 'Unaccessible Viewport Attributes.' !important;
+		}
+	}
+}
+
+
+form[action=''] {
+	@extend %error;
+
+	@include alert {
+		content: '`action` attribute isn\'t required on `form`, but it shouldn\'t be empty.' !important;
+	}
+}
+
+
+label:not([for]) {
+	@extend %error;
+
+	@include alert {
+		content: 'Isn\'t the `for` attribute missing?.' !important;
+	}
+}
+
+// Unlabelled Form Elements
+input,
+select,
+textarea {
+	&:not([id]),
+	&:not([name]) {
+		@extend %error;
+	}
+}
+
+form:not([name]):not([id]) {
+	@extend %error;
+}
+
+
+/// If the image button (<input type="image">) is used, the label is set in
+/// the alt attribute, for example:
+/// <input type="image" src="searchbutton.png" alt="Search">
+///
+/// @link https://www.w3.org/WAI/tutorials/forms/labels/#labelling-buttons
+///
+input[type='image'] {
+	&:not([alt])
+	&[alt=''] {
+		@extend %error;
+	}
+
+	+ * {
+		@include alert {
+			content: '`input[type=image]` requires `alt` attribute.' !important;
+		}
+	}
+}
+
+
+// Prevent decimal separator issues
+/// @link https://ctrl.blog/entry/html5-input-number-localization
+input[type='number']:not([lang]),
+input[type='number'][lang=''] {
+	@extend %error;
+
+	+ * {
+		@include alert {
+			content: 'To prevent decimal separator issues, declared [lang].' !important;
+		}
+	}
+}
+
+
+button:not([type]) {
+	@extend %error;
+
+	@include alert {
+		content: 'The default `type` of a button is `submit`, but this isn\'t clear to all developers. To avoid confusion, declare it.' !important;
+	}
+}
+
+
+// Deprecated Attributes
+[align],
+[alink],
+[background],
+[bgcolor],
+[border],
+[clear],
+[color],
+[height],
+[hspace],
+[link],
+[noshade],
+[nowrap],
+[size],
+[start],
+[vlink],
+[vspace],
+[width]  {
+	@include alert {
+		content: 'Deprecated Attribute. Use CSS instead.' !important;
+	}
+}
+
+script[language] {
+	@include alert {
+		content: 'Instead of the `language` attribute, use `type`.' !important;
+	}
+}
+
+table[summary] {
+	@include alert {
+		content: '`summary` attribute is deprecated. Use the <caption> element.' !important;
+	}
+}
+
+
+// Unnecessary Attributes
+script[type='text/javascript'],
+link[rel='stylesheet'][type='text/css'] {
+	@include alert {
+		content: 'Unnecessary Attributes';
+	}
+
+	@at-root {
+		head {
+			display: block !important;
+			overflow: visible !important;
+		}
+	}
+}
+
+
+[tabindex]:not([tabindex='-1']):not([tabindex='0']) {
+	@include alert {
+		content: 'Tab order altered.' !important;
+	}
+}
+
+
+/// Empty element not used for scripting
+*:empty:not(area):not(base):not(br):not(col):not(command):not(embed):not(hr):not(img):not(input):not(keygen):not(link):not(param):not(script):not(source):not(td):not(track):not(wbr):not([id]):not([class*='js-']) {
+	@extend %error;
+
+	@include alert {
+		content: 'Empty element should only be used for scripting.' !important;
+	}
+}
+
+
+/// Misuse of sectioning elements
+article > article,
+section > section,
+section > article,
+section > aside,
+aside > aside,
+aside > section,
+footer > footer {
+	@extend %error;
+
+	@include alert {
+		content: 'Misued section element.' !important;
+	}
+}
+
+article,
+section,
+aside,
+footer {
+	&[role='banner'] {
+		@extend %error;
+
+		@include alert {
+			content: 'Only `<header>` or `<div>` can have `[role=banner]`.' !important;
+		}
+	}
+}
+
+article,
+header,
+section,
+aside {
+	&[role='contentinfo'] {
+		@extend %error;
+
+		@include alert {
+			content: 'Only `<footer>` or `<div>` can have `[role=contentinfo]`.' !important;
+		}
+	}
+}
+
+
+
+
+/**
+* Helpers
+----------------------------------------------------------------------
+*/
+
+
+[class*='toggle']:not([aria-pressed]) {
+	@extend %error;
+
+	@include alert {
+		content: 'Toggleable elements should have an `aria-pressed` attribute.' !important;
+	}
+}
+
+
+button,
+input,
+select,
+textarea {
+	&.disabled:not([disabled]):not([readonly]) {
+		@extend %error;
+
+		@include alert {
+			content: 'A field shouldn\'t be disabled in appearane only.' !important;
+		}
+	}
+}
+
+
+
+/**
+* List errors
+----------------------------------------------------------------------
+*/
+
+ol > *:not(li):not(script):not(template),
+ul > *:not(li):not(script):not(template) {
+	@extend %error;
+
+	@include alert {
+		content: 'Unallowed element used as direct child of `<ul>` or `<ol>`.' !important;
+	}
+}
+
+dl > *:not(dd):not(div):not(script):not(template) {
+	@extend %error;
+
+	@include alert {
+		content: 'Unallowed element used as direct child of `<dl>`.' !important;
+	}
+}
+
+dt ~ *:not(dd) {
+	@extend %error;
+
+	@include alert {
+		content: 'Definitions must follow definition terms.' !important;
+	}
+}
+
+/* Boot Crap (specific to Twitter BootStrap class misuse)
+-----------------------------------------------------------------------------*/
+///
+/// Icons used for pure decoration or visual styling If you're using an icon
+/// to add some extra decoration or branding, it does not need to be announced
+/// to users as they are navigating your site or app aurally. Additionally, if
+/// you're using an icon to visually re-emphasize or add styling to content
+/// already present in your HTML, it does not need to be repeated to an
+/// assistive technology-using user. You can make sure this is not read by
+/// adding the `aria- hidden="true"` to your Font Awesome markup.
+///
+/// @link https://github.com/Heydon/REVENGE.CSS/issues/19
+/// @link http://fontawesome.io/accessibility/
+i,
+span {
+	&.fa:not([aria-hidden='true']) {
+		@include alert {
+			content: 'Use `aria-hidden="true"` on empty elements used as icons wrappers.' !important;
+		}
+	}
+}
+
+
+
+li {
+	&.divider:not([role='separator']),
+	&:empty:not([role='separator']) {
+		@include alert {
+			content: 'Declare list items used as separator using `[role=separator]`. Or, even better, don\t use them at all.' !important;
+		}
+	}
+
+	&.dropdown-header {
+		@include alert {
+			content: 'Do not use list items as headers for lists, obvs.' !important;
+		}
+	}
+}
+
+.btn:not(button):not([href])::after {
+	@include alert {
+		content: 'Inaccessible control. Use a `button[type]` or a `a[href]`.' !important;
+	}
+}
+
+.disabled > a[href]:not([tabindex='-1']),
+.disabled > button:not([disabled]),
+.disabled[href],
+.disabled:not([disabled]) {
+	@include alert {
+		content: 'Elements improperly disabled.' !important;
+	}
+}
+
+[data-toggle='dropdown']:not([aria-haspopup]) {
+	@include alert {
+		content: 'Hidden menus should be synalized with `[aria-haspopup]`.' !important;
+	}
+}
+
+.button:not(a):not(button):not(input):not([tabindex]),
+.btn:not(a):not(button):not(input):not([tabindex]) {
+	@include alert {
+		content: 'Element impossibly focusable used for as "button".' !important;
+	}
+}

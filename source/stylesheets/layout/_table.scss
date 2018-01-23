@@ -1,0 +1,133 @@
+/* TABLES
+============================================================================ */
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+	width: auto;
+	height: auto;
+
+	font-size: 1em;
+
+	vertical-align: top;
+
+	background-color: transparent;
+
+	border: 0;
+
+	@media screen and (min-width: #{map-get($breakpoints, 'toggle-table-layout')}) {
+		display: block;
+	}
+}
+
+table {
+	@include fallback('margin', 0 0 1.5em 0);/* line-height */
+
+	font-size: 100%;
+	font-family: inherit;
+	font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1, 'pnum' 0, 'tnum' 1, 'onum' 0, 'lnum' 1, 'dlig' 0;
+
+	border-collapse: collapse;
+	empty-cells: show;
+}
+
+table p,
+table li {
+	font-size: 1em;
+}
+
+caption {
+}
+
+tr {
+	@media screen and (min-width: #{map-get($breakpoints, 'toggle-table-layout')}) {
+		@include fallback('margin', 0 0 1.5rem);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+th {
+	font-weight: bold;
+}
+
+td {
+	font-family: inherit;
+
+	@media screen and (min-width: #{map-get($breakpoints, 'toggle-table-layout')}) {
+		&:empty {
+			display: none;
+		}
+	}
+}
+
+thead th,
+thead td {
+	text-align: right;
+	vertical-align: bottom;
+
+	@media screen and (min-width: #{map-get($breakpoints, 'toggle-table-layout')}) {
+		display: none;
+	}
+}
+
+thead th:first-child,
+tfoot th:first-child {
+	text-align: left;
+}
+
+thead > tr:nth-last-of-type(odd) > th,
+thead > tr:nth-last-of-type(odd) > td {
+}
+
+tbody {
+	font-family: mono-space, monospace;
+}
+
+tbody th {
+	text-align: left;
+}
+
+tbody td {
+	text-align: right;
+
+	@media screen and (min-width: #{map-get($breakpoints, 'toggle-table-layout')}) {
+		text-align: left;
+
+		&[title] {
+			text-align: right;
+
+			&::before {
+				float: left;
+
+				font-style: italic;
+
+				content: attr(title)': ';
+			}
+		}
+	}
+
+	font-variant-numeric: lining-nums oldstyle-nums;
+}
+
+td img {
+	vertical-align: top;
+}
+
+tbody tr:nth-of-type(odd) > th,
+tbody tr:nth-of-type(odd) > td {
+
+	@media screen and (min-width: #{map-get($breakpoints, 'toggle-table-layout')}) {
+		background-color: transparent;
+	}
+}
+
+tfoot th,
+tfoot td {
+	vertical-align: top;
+}

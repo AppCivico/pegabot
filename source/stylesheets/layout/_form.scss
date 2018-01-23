@@ -1,0 +1,435 @@
+/* FORMS
+============================================================================ */
+/**
+ * Property compatibility table for form widgets
+ * @see https://developer.mozilla.org/en-US/docs/Property_compatibility_table_for_form_widgets
+ */
+
+form {
+	margin: 0;
+}
+
+fieldset {
+	max-width: none;
+	min-width: 0;
+
+	padding: 0;
+	margin: 0;
+
+	border: 0;
+}
+
+fieldset fieldset {
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ * 4. to override default firefox style
+ */
+/* 4 */
+fieldset > legend,
+legend {
+	display: table; /* 1 */
+
+	max-width: 100%; /* 1 */
+
+	padding: 0; /* 3 */
+
+	font-weight: bolder;
+
+	white-space: normal; /* 1 */
+
+	color: inherit; /* 2 */
+
+	box-sizing: border-box; /* 1 */
+}
+
+label {
+	padding: 0;
+	margin: 0;
+
+	font-size: small;
+	line-height: inherit;
+
+	cursor: pointer;
+}
+
+label * {
+	font-size: 1em;
+}
+
+/* pragraphs inside forms
+---------------------------------------------------------------------------- */
+form p {
+}
+
+form br {
+	clear: both;
+}
+
+/* common rules
+ * @see https://github.com/jonathantneal/sanitize.css/issues/115#issue-178563944
+---------------------------------------------------------------------------- */
+
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ * 3. Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * 4. Allow setting the same size for all form fields.
+ * 5. Add a focus outline for some fields only (opinionated).
+ * 6. Set the focus outline to be just around the field border.
+ */
+%os-element-reset {
+	display: inline-block;
+
+	padding: 1px; /* 2 */ // sass-lint:disable-line property-units
+	margin: 0;
+
+	overflow: visible;
+
+	font-size: inherit; /* 1 */
+	line-height: inherit; /* 1 */
+	font-family: inherit; /* 1 */
+	-webkit-font-smoothing: inherit; // sass-lint:disable-line no-vendor-prefixes
+	letter-spacing: inherit;
+
+	text-align: inherit;
+	text-transform: inherit; /* 3 */
+	white-space: normal;
+	vertical-align: top;
+
+	color: inherit;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: palette('border');
+	border-radius: 0;
+
+	outline: 0;
+
+	box-sizing: border-box; /* 4 */
+
+	&:hover {
+	}
+
+	&:focus {
+		outline: 1px dotted palette('black'); /* 5 */
+		outline-offset: 0; /* 6 */
+	}
+}
+
+:disabled,
+:readonly {
+	color: palette('disabled', 'foreground');
+
+	background: palette('disabled', 'background');
+}
+
+:disabled {
+	cursor: not-allowed;
+}
+
+:readonly {
+	cursor: default;
+}
+
+:enabled {
+}
+
+:optional {
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+:-moz-placeholder {
+	color: palette('placeholder');
+
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: palette('placeholder');
+}
+
+:-ms-input-placeholder {
+	color: palette('placeholder');
+}
+
+
+
+/* complex inputs
+============================================================================ */
+[type='date'] {
+}
+
+[type='month'] {
+}
+
+[type='week'] {
+}
+
+[type='time'] {
+}
+
+[type='datetime-local'] {
+}
+
+
+/* impossible inputs
+============================================================================ */
+
+[type='file'],
+[type='color'],
+[type='image'] {
+	padding: 0;
+
+	vertical-align: middle;
+
+	cursor: pointer;
+
+	border: 0;
+}
+
+/**
+ * Consistent display mode in Firefox when image field is empty.
+ */
+
+[type='image'] {
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Consistent background color on Chrome.
+ */
+[type='color'] {
+	background-color: palette('white');
+}
+
+/**
+ * Remove the inside button border in Chrome.
+ */
+::-webkit-color-swatch {
+	border: 0;
+}
+
+/**
+ * Remove the inside button border in Firefox.
+ */
+::-moz-color-swatch {
+	border: 0;
+}
+
+/**
+ * Remove the inside button padding in Chrome.
+ */
+::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+/**
+ * Remove the inside button padding in Firefox.
+ */
+::-moz-color-swatch-wrapper {
+	padding: 0;
+}
+
+
+
+// sobral, confira isso
+//
+/**
+ * 1. Consistent background color on Edge and IE.
+ * 2. override Opera margin and padding
+ */
+[type='file'] {
+	height: 2em;
+	min-width: 250px;
+
+	padding: 0 !important; /* 2 */ // sass-lint:disable-line no-important
+	margin: 0; /* 2 */
+
+	font-family: inherit;
+
+	text-align: start !important; // sass-lint:disable-line no-important
+	white-space: nowrap;
+
+	cursor: default;
+
+	background-color: transparent; /* 1 */
+
+	border-style: none !important; // sass-lint:disable-line no-important
+
+	-webkit-box-align: baseline; //sass-lint:disable-line no-vendor-prefixes
+
+	-webkit-appearance: none; //sass-lint:disable-line no-vendor-prefixes
+	   -moz-appearance: none; //sass-lint:disable-line no-vendor-prefixes indentation
+	        appearance: normal; //sass-lint:disable-line indentation
+
+	-moz-binding: none; //sass-lint:disable-line no-vendor-prefixes
+}
+
+[type='file'][multiple] {
+}
+
+[type='file'] > [type='text'] {
+	height: inherit;
+
+	font-size: inherit;
+	letter-spacing: inherit;
+
+	color: inherit;
+
+	background-color: inherit;
+
+	border-color: inherit;
+}
+
+[type='file'] > [type='button'] {
+	height: inherit;
+
+	padding: 0;
+
+	font-size: inherit;
+
+	white-space: normal;
+
+	-webkit-box-align: center; // sass-lint:disable-line no-vendor-prefixes
+	box-sizing: content-box;
+
+	appearance: button;
+}
+
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Consistent background color for all browsers (same than above).
+ * 3. Consistent style, width and color between all fields (same than above).
+ * 4. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+	font: inherit; /* 4 */
+
+	cursor: pointer;
+
+	background-color: palette('button'); /* 2 */
+
+	border-width: 1px; /* 3 */
+	border-style: solid; /* 3 */
+	border-color: palette('border'); /* 3 */
+
+	-webkit-appearance: button; /* 1 */ // sass-lint:disable-line no-vendor-prefixes
+
+	&:hover {
+		background-color: palette('button', 'focus');
+	}
+}
+
+/**
+ * Add a focus outline for color field (Chrome) and file selector field (Chrome & Safari) (same than above).
+ */
+
+:focus::-webkit-color-swatch,
+:focus::-webkit-file-upload-button {
+	outline: 1px dotted palette('black');
+}
+
+/**
+ * Consistent style, width and color between all fields (same than above).
+ */
+
+::-ms-browse {
+	border-width: 1px; /* 1 */
+	border-style: solid; /* 1 */
+	border-color: palette('border'); /* 1 */
+
+	&:hover {
+		background-color: palette('button', 'focus');
+	}
+}
+
+/**
+ * Add a focus outline for file selector field in Edge and IE (same than above).
+ */
+
+:focus::-ms-browse {
+	outline: 1px dotted palette('black');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ALERTS and FORMS */
+.success {
+}
+
+:valid {
+}
+
+:in-range {
+}
+
+:required:valid {
+}
+
+.warning {
+}
+
+[required],
+:required {
+	box-shadow: none;
+}
+
+.alert {
+}
+
+:out-of-range {
+}
+
+[type='submit']:-moz-submit-invalid {
+}
+
+x-moz-errormessage {
+}
+
+/**
+ * Remove the focus outline in Firefox to only keep the original effect.
+ */
+[type='range']:-moz-focusring,
+[type='checkbox']:-moz-focusring,
+[type='radio']:-moz-focusring {
+	outline-width: 0;
+}

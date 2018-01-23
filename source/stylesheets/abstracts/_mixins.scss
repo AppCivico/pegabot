@@ -1,0 +1,905 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Gray placeholder image
+///
+/// @group helpers
+///
+/// @require {function} palette
+///
+/// @example scss
+/// image[src=""] {
+/// 	@include placeholder-bg;
+/// }
+///
+/// @output
+/// ```css
+/// image[src=""] {
+/// 	background:
+/// 		linear-gradient(
+/// 			to top left,
+/// 			transparent 0%,
+/// 			transparent calc(50% - 1px),
+/// 			black 50%,
+/// 			transparent calc(50% + 1px),
+/// 			transparent 100%
+/// 		),
+/// 		linear-gradient(
+/// 			to top right,
+/// 			transparent 0%,
+/// 			transparent calc(50% - 1px),
+/// 			black 50%,
+/// 			transparent calc(50% + 1px),
+/// 			transparent 100%
+/// 		),
+/// 		silver;
+/// }
+/// ```
+///
+@mixin placeholder-bg {
+	background: linear-gradient(to top left, transparent 0%, transparent calc(50% - 1px), palette('black') 50%, transparent calc(50% + 1px), transparent 100%), linear-gradient(to top right, transparent 0%, transparent calc(50% - 1px), palette('black') 50%, transparent calc(50% + 1px), transparent 100%), palette('gray', 'light');
+}
+
+
+/// Special style for the _&_ used as a conjunction.
+///
+/// @access private
+///
+@mixin _italic-overflow {
+	overflow: visible;
+
+	font-style: italic;
+}
+
+/// Special style for the _&_ used as a conjunction.
+///
+/// @group helpers
+/// @link http://simplebits.com/notebook/2008/08/14/ampersands-2/
+/// @require {variable} $ampersand-font-stack
+///
+/// @example scss
+/// h1 {
+/// 	@include alt-ampersand;
+/// }
+///
+/// @example markup
+/// <h1>This <span class="amp">&amp;</span> that</h1>
+///
+/// @output
+/// ```css
+/// h1 .amp {
+/// 	overflow: visible;
+/// 	font-style: italic;
+/// 	font-size: 2em;
+/// 	line-height: 0.25;
+/// 	font-family: 'Cochin', 'Hoefler Titling', 'Requiem', 'Hoefler Text', 'Baskerville', 'Baskerville MT', 'Urw Chancery L', 'Goudy Old Style', 'Palatino', 'Palatino Linotype', 'Urw Palladio L', 'Constantia', 'Book Antiqua', serif;
+/// 	vertical-align: middle;
+/// }
+/// ```
+///
+@mixin alt-ampersand {
+	.amp { // sass-lint:disable-line no-qualifying-elements
+		@include _italic-overflow;
+
+		font-size: 2em;
+		line-height: 0.25;
+		font-family: $ampersand-font-stack;
+
+		vertical-align: middle;
+
+		@content;
+	}
+}
+
+/// Special style for conjunctions or prepositions.
+///
+/// @group helpers
+/// @require {variable} $alt-font-stack
+///
+/// @example markup
+/// <h1>The Elements <span class="alt">of</span> Typographic Style</h1>
+///
+/// @example scss
+/// h1 {
+/// 	@include alt-preposition;
+/// }
+///
+/// @output
+/// ```css
+/// h1 .alt {
+/// 	overflow: visible;
+/// 	font-style: italic;
+/// 	font-family: 'baskerville italic', 'Warnock Pro', 'Goudy Old Style', 'Palatino', 'palatino linotype', 'Book Antiqua', 'Georgia', serif;
+/// }
+/// ```
+///
+@mixin alt-preposition {
+	.alt { // sass-lint:disable-line no-qualifying-elements
+		@include _italic-overflow;
+
+		font-family: $alt-font-stack;
+
+		@content;
+	}
+}
+
+
+/// Helper for an inline-block grid.
+///
+/// To be used together with [`inline-block-item`](#helpers-mixin-inline-block-item).
+///
+/// The used font stack makes grids work on all known environments and
+/// it's developed by the PureCSS framework team.
+///
+/// - `FreeSans`: Ships with many Linux distros, including Ubuntu;
+/// - `Arimo`: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+/// Arial to get picked up by the browser, even though neither is available
+/// in Chrome OS;
+/// - `Droid Sans`: Ships with all versions of Android;
+/// - `Helvetica, Arial, sans-serif`: Common font stack on OS X and Windows.
+///
+/// @group helpers
+/// @link http://blog.purecss.io/post/60789414532/how-we-improved-grids-in-pure-030
+/// @parameter {int} $ie [9] - minimum Internet Explorer version
+///
+/// @example scss
+/// .h-feed {
+/// 	@include inline-block-wrapper;
+/// }
+///
+/// .h-feed > .h-entry {
+/// 	@include inline-block-item($align: 'top', $font-size:  1rem);
+/// }
+///
+/// @output
+/// ```css
+/// .h-feed {
+/// 	font-size: 0;
+/// 	font-family: "FreeSans", "Arimo", "Droid Sans", "Helvetica", "Arial", sans-serif;
+/// 	/* Webkit: collapse white-space between units */
+/// 	letter-spacing: -0.31em;
+/// 	/* reset IE < 8 */
+/// 	letter-spacing: normal\9;
+/// 	/* IE < 8: collapse white-space between units */
+/// 	word-spacing: -0.43em\9;
+/// 	/* Webkit: fixes text-rendering: optimizeLegibility */
+/// 	text-rendering: optimizespeed;
+/// }
+/// ```
+
+@mixin inline-block-wrapper {
+	// sass-lint:disable-block no-duplicate-properties
+	$_inline-block-font-stack: 'FreeSans', 'Arimo', 'Droid Sans', 'Helvetica', 'Arial', sans-serif;
+
+	font-size: 0;
+	font-family: $_inline-block-font-stack;
+	/* Webkit: collapse white-space between units */
+	letter-spacing: -0.31em;
+	/* reset IE < 8 */
+	letter-spacing: normal\9;
+	/* IE < 8: collapse white-space between units */
+	word-spacing: -0.43em\9;
+
+	/* Webkit: fixes text-rendering: optimizeLegibility */
+	text-rendering: optimizespeed;
+}
+
+/// Helper for an inline-block grid.
+///
+/// To be used together with [`inline-block-wrapper`](#helpers-mixin-inline-block-wrapper).
+///
+/// @group helpers
+/// @parameter {string} $align ['top'] - valid keyword `vertical-aligment` for
+/// the grid cells: `baseline`, `sub`, `super`, `text-top`, `text-bottom`,
+/// `middle`, `top`, `bottom`.
+///
+/// @parameter {number} $font-size [1rem] - reset of grid cells font-size
+///
+/// @example scss
+/// .h-feed {
+/// 	@include inline-block-wrapper;
+/// }
+///
+/// .h-feed > .h-entry {
+/// 	@include inline-block-item($align: 'top', $font-size:  1rem);
+/// }
+///
+/// @output
+/// ```css
+/// .h-feed > .h-entry {
+/// 	display: inline-block;
+/// 	font-size: 1rem;
+/// 	font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+/// 	letter-spacing: normal;
+/// 	word-spacing: normal;
+/// 	text-rendering: auto;
+/// 	vertical-align: top;
+/// 	zoom: 1;
+/// }
+/// ```
+///
+@mixin inline-block-item($align: 'top', $font-size:  1rem) {
+	display: inline-block;
+
+	font-size: $font-size;
+	font-family: $text-font-stack;
+	letter-spacing: normal;
+	word-spacing: normal;
+
+	text-rendering: auto;
+	vertical-align: unquote($align);
+
+	zoom: 1;
+}
+
+/// Helper for an table grid layout.
+///
+/// To be used together with [`table-layout-item`](#helpers-mixin-table-layout-item).
+///
+/// @group helpers
+///
+/// @example scss
+/// .h-feed {
+/// 	@include table-layout-wrapper;
+/// }
+///
+/// .h-feed > .h-entry {
+/// 	@include table-layout-item;
+/// }
+///
+/// @output
+/// ```css
+/// .h-feed {
+/// 	display: table;
+/// 	border-collapse: collapse;
+/// }
+/// ```
+///
+@mixin table-layout-wrapper {
+	display: table;
+
+	border-collapse: collapse;
+
+	@content;
+}
+
+/// Helper for an table grid layout.
+///
+/// To be used together with [`table-layout-wrapper`](#helpers-mixin-table-layout-wrapper).
+///
+/// @group helpers
+///
+/// @example scss
+/// .h-feed {
+/// 	@include table-layout-wrapper;
+/// }
+///
+/// .h-feed > .h-entry {
+/// 	@include table-layout-item;
+/// }
+///
+/// @output
+/// ```css
+/// .h-feed > .h-entry {
+/// 	display: table-cell;
+/// 	vertical-align: top;
+/// }
+/// ```
+///
+@mixin table-layout-item {
+	display: table-cell;
+
+	vertical-align: top;
+
+	@content;
+}
+
+/// Special style icon fonts.
+///
+/// @access private
+///
+@mixin _font-smoothing($value: true) {
+	// sass-lint:disable-block no-vendor-prefixes
+	@if ($value == true) {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	} @else {
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
+	}
+}
+
+
+/// Helper for icon font.
+///
+/// It can be used with Font Awesome
+///
+/// @group helpers
+///
+/// @example scss
+/// .icon {
+/// 	@include icon-font;
+/// }
+///
+/// @output
+/// ```css
+/// .icon {
+/// 	-webkit-font-smoothing: antialiased;
+/// 	-moz-osx-font-smoothing: grayscale;
+/// 	font-style: normal;
+/// 	font-variant: normal;
+/// 	font-weight: normal;
+/// 	font-size: 14px;
+/// 	line-height: 1;
+/// 	text-transform: none;
+/// 	speak: none;
+/// }
+/// ```
+///
+@mixin icon-font {
+	@include _font-smoothing(true);
+
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* font-awesome pixel perfection is at 14px and multiples of 14 */
+	font-size: 14px; // sass-lint:disable-line property-units
+	line-height: 1;
+
+	text-transform: none;
+
+	speak: none;
+}
+
+
+@mixin clearfix($ie: 8) {
+	/**
+	 * For modern browsers
+	 * 1. The space content is one way to avoid an Opera bug when the
+	 *    contenteditable attribute is included anywhere else in the document.
+	 *    Otherwise it causes space to appear at the top and bottom of elements
+	 *    that are clearfixed.
+	 * 2. The use of `table` rather than `block` is only necessary if using
+	 *    `:before` to contain the top-margins of child elements.
+	 * 3. To prevent Firefox 57+ border-spacing issues
+	 */
+	&::before,
+	&::after {
+		/* 2 */
+		display: table;
+
+		/* 1 */
+		content: '';
+
+		/* 3 */
+		border-collapse: collapse;
+	}
+
+	&::after {
+		clear: both;
+	}
+
+	@if ($ie <= 8) {
+		// old IE sucks
+		zoom: 1\9;
+	}
+}
+
+/// @content the rules to be applied
+@mixin link-undercover {
+	&,
+	&:link,
+	&:visited {
+		text-decoration: inherit;
+
+		color: inherit;
+
+		@content;
+	}
+}
+
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @content the rules to be applied
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+	@if $self {
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			@content;
+		}
+	} @else {
+		&:hover,
+		&:active,
+		&:focus {
+			@content;
+		}
+	}
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+	#{$context} & {
+		@content;
+	}
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+@mixin visually-hidden {
+	// sass-lint:disable-block no-duplicate-properties no-important property-units
+	position: absolute !important;
+
+	width: 1px !important;
+	height: 1px !important;
+
+	padding: 0 !important;
+	margin: -1px;
+
+	overflow: hidden !important;
+	clip: rect(1px 1px 1px 1px) !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	clip-path: inset(50%) !important;
+
+	white-space: nowrap !important;
+
+	border: 0 !important;
+}
+
+@mixin visually-hidden--focusable {
+	// sass-lint:disable-block no-important
+	@include visually-hidden;
+
+	&:active,
+	&:focus {
+		width: auto !important;
+		height: auto !important;
+
+		margin: auto;
+
+		overflow: visible !important;
+		clip: auto !important;
+		clip-path: none !important;
+
+		white-space: normal !important;
+	}
+}
+
+
+/// Truncate and add ellipsis to a string too long for it to fit on a single
+/// line.
+///
+/// @group helpers
+///
+/// @example scss
+/// .username {
+/// 	@include truncate;
+/// }
+///
+/// @output
+/// ```css
+/// .username {
+/// 	overflow: hidden;
+/// 	text-overflow: ellipsis;
+/// 	white-space: nowrap;
+/// }
+/// ```
+@mixin truncate {
+	overflow: hidden;
+
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+///
+/// Helper to justify the last line of an elements list.
+///
+/// @group helpers
+///
+/// @example scss
+/// .sponsors {
+/// 	@include justify-last-line;
+/// }
+///
+/// @output
+/// ```css
+/// .sponsors {
+/// 	text-align: justify;
+/// }
+/// .sponsors::after {
+/// 	display: inline-block;
+/// 	width: 100%;
+/// 	height: 0;
+/// 	content: '';
+/// }
+/// ```
+///
+@mixin justify-last-line {
+	text-align: justify;
+
+	&::after {
+		display: inline-block;
+		width: 100%;
+		height: 0;
+		content: '';
+	}
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+@mixin hide-text {
+	/* 1 */
+	padding: 0;
+
+	overflow: hidden;
+
+	text-indent: 101%;
+	white-space: nowrap;
+}
+
+@mixin image-replacement($overflow: true) {
+	@if $overflow {
+		overflow: hidden;
+
+		text-indent: 101%;
+		white-space: nowrap;
+
+		background-repeat: no-repeat;
+
+		direction: ltr;
+	} @else {
+		font: 0/0 a;
+
+		text-shadow: none;
+
+		color: transparent;
+
+		border: 0;
+	}
+}
+
+$no-alpha: false !default;
+$no-calc: false !default;
+$no-gradient: false !default;
+$no-rem: false !default;
+$no-viewport: false !default;
+
+/// Helper to conditionally output css values
+/// @author Robson Sobral
+/// @param {String} $property - Property name
+/// @param {List} $values - Default values
+/// @param {List} $fallbacks - Non required fallback values
+@mixin fallback($property, $values, $fallbacks: null) {
+	$fallback-values: if($fallbacks == null, (), $fallbacks);
+	$fallback-units: ();
+	$i: 1;
+
+	@each $value in $values {
+		@if type-of($value) == number {
+			@if str-index(unit($value), 'v') != null {
+				@if $fallbacks == null {
+					@error 'fallback values, the 3rd parameter, are required for viewport units';
+				}
+				$fallback-units: join($fallback-units, 'viewport');
+			} @else {
+				$fallback-units: join($fallback-units, unit($value));
+			}
+		} @elseif $fallbacks == null {
+			@error 'fallback values, the 3rd parameter, are required for everything except `rem` numbers';
+		} @elseif str-index($value, 'calc') {
+			$fallback-units: join($fallback-units, 'calc');
+		} @elseif str-index($value, 'gradient') {
+			$fallback-units: join($fallback-units, 'gradient');
+		}
+
+		@if $fallbacks == null {
+			@if type-of($value) == number and unit($value) == 'rem' {
+				$fallback-values: join($fallback-values, $value / 1rem * 16px);
+			} @else {
+				$fallback-values: join($fallback-values, $value);
+			}
+		}
+
+		$i: $i + 1;
+	}
+
+	$print-fallback: _print-fallback($fallback-units);
+
+	// sass-lint:disable-block indentation brace-style
+	@if (index($fallback-units, 'alpha') != null and $no-alpha != false) or
+	    (index($fallback-units, 'calc') != null and $no-calc != false) or
+	    (index($fallback-units, 'gradient') != null and $no-gradient != false) or
+	    (index($fallback-units, 'rem') != null and $no-rem != false) or
+	    (index($fallback-units, 'viewport') != null and $no-viewport != false)
+	{
+		#{$property}: #{$fallback-values};
+	}
+
+	@if (index($fallback-units, 'alpha') != null and $no-alpha != true) or
+	    (index($fallback-units, 'calc') != null and $no-calc != true) or
+	    (index($fallback-units, 'gradient') != null and $no-gradient != true) or
+	    (index($fallback-units, 'rem') != null and $no-rem != true) or
+	    (index($fallback-units, 'viewport') != null and $no-viewport != true)
+	{
+		#{$property}: #{$values};
+	}
+}
+
+/// Fix for vw, vh, vmin, vmax on iOS 7.
+/// This fix works by replacing viewport units with px values on known screen sizes.
+/// iPhone 6 and 6 Plus cannot run iOS 7, so are not targeted by this fix.
+/// Target devices running iOS 8+ will incidentally execute the media query,
+/// but this will still produce the expected result; so this is not a problem.
+///
+/// @example css
+///   height: 50vh;
+///   font-size: 5vmin;
+///
+/// @example scss
+///   @include viewport-unit(height, 50vh);
+///   @include viewport-unit(font-size, 5vmin);
+///
+/// @link https://gist.github.com/BenMorel/e9e34c08360ebbbd0634
+/// @link http://caniuse.com/#feat=viewport-units
+@mixin viewport-unit($property, $value) {
+	// sass-lint:disable-block indentation
+
+	#{$property}: $value;
+
+	$unit: unit($value);
+
+	@if (index((vw, vh, vmin, vmax), $unit) != null) {
+		$devices: (
+			(768px, 1024px), // iPad (all versions)
+			(320px, 480px), // iPhone 4
+			(320px, 568px) // iPhone 5, 5C, 5S
+		);
+
+		@each $device in $devices {
+			$device-width: nth($device, 1);
+			$device-height: nth($device, 2);
+			$device-query: 'only screen and (-webkit-min-device-pixel-ratio: 1)';
+			$device-query: '#{$device-query} and (device-width: #{$device-width})';
+			$device-query: '#{$device-query} and (device-height: #{$device-height})';
+			$percent: $value / ($value * 0 + 1); // see https://github.com/sass/sass/issues/533
+			$percent-width: $device-width * $percent / 100;
+			$percent-height: $device-height * $percent / 100;
+
+			@if ($unit == vmin or $unit == vmax) {
+				@media #{$device-query} {
+					#{$property}: if($unit == vmin, $percent-width, $percent-height);
+				}
+			} @else {
+				@media #{$device-query} and (orientation: portrait) {
+					#{$property}: if($unit == vw, $percent-width, $percent-height);
+				}
+
+				@media #{$device-query} and (orientation: landscape) {
+					#{$property}: if($unit == vw, $percent-height, $percent-width);
+				}
+			}
+		}
+	}
+}
+
+
+/// Returns the opposite direction of each direction in a list
+/// @author Hugo Giraudel
+/// @param {List} $directions - List of initial directions
+/// @return {List} - List of opposite directions
+/// @access private
+@function _opposite-direction($directions) {
+	$opposite-directions: ();
+	$direction-map: (
+		'top':    'bottom',
+		'right':  'left',
+		'bottom': 'top',
+		'left':   'right',
+		'center': 'center',
+		'ltr':    'rtl',
+		'rtl':    'ltr'
+	);
+
+	@each $direction in $directions {
+		$direction: to-lower-case($direction);
+
+		@if map-has-key($direction-map, $direction) {
+			$opposite-directions: append($opposite-directions, unquote(map-get($direction-map, $direction)));
+		} @else {
+			@warn 'No opposite direction can be found for `#{$direction}`. Direction omitted.';
+		}
+	}
+
+	@return $opposite-directions;
+}
+
+
+/// Triangle helper mixin
+/// @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
+/// @param {Color} $color [currentcolor] - Triangle color
+/// @param {number} $size [1em] - Triangle size
+@mixin triangle($direction, $color: currentcolor, $size: 1em) {
+	@if not index(top right bottom left, $direction) {
+		@error 'Direction must be either `top`, `right`, `bottom` or `left`.';
+	}
+
+	z-index: 2;
+	width: 0;
+	height: 0;
+	border-#{_opposite-direction($direction)}: ($size * 1.5) solid $color; // sass-lint:disable-line property-sort-order
+
+	$perpendicular-borders: $size solid transparent;
+
+	@if $direction == top or $direction == bottom {
+		border-right: $perpendicular-borders;
+		border-left: $perpendicular-borders;
+	} @else if $direction == right or $direction == left {
+		border-top: $perpendicular-borders;
+		border-bottom: $perpendicular-borders;
+	}
+
+	content: '';
+}
+
+
+
+
+
+
+/// Compute the maximum depth of a map
+/// @param {Map} $map
+/// @return {Number} max depth of `$map`
+
+@function depth($map) {
+	$level: 1;
+
+	@each $key, $value in $map {
+		@if type-of($value) == 'map' {
+			$level: max(depth($value) + 1, $level);
+		}
+	}
+
+	@return $level;
+}
+
+@mixin debug-map($map) {
+	@at-root {
+		@debug-map {
+			// these properties are for debug only. They do not exist
+			// sass-lint:disable-block no-misspelled-properties
+			__toString__: inspect($map);
+			__length__: length($map);
+			__depth__: depth($map);
+			__keys__: map-keys($map);
+
+			__properties__ {
+				@each $key, $value in $map {
+					#{'(' + type-of($value) + ') ' + $key}: inspect($value);
+				}
+			}
+		}
+	}
+}
+
+/// Helper to set a two dimensional proportion to an element.
+///
+/// The height is a minimum. Set the contents height or their position to `absolute`,
+/// if you want to always respect the proportion.
+///
+/// @group helpers
+///
+/// @param {list} $ratio - being a list of 2 elements, width and height, or 3,
+/// width and height separated by a lowercase `x`
+///
+/// @example scss
+/// div {
+/// 	@include aspect-ratio(3 x 4);
+/// }
+///
+/// @output
+/// ```css
+/// div {
+/// 	position: relative;
+/// }
+/// div::before {
+/// 	float: left;
+/// 	padding-top: 133.33333%; /* height / width * 100% */
+/// 	content: '';
+/// }
+/// div::after {
+/// 	clear: both;
+/// 	display: table;
+/// 	content: '';
+/// }
+/// ```
+@mixin aspect-ratio ($ratio) {
+	@if type-of($ratio) != list {
+		@error '`aspect-ratio` function expecting a list for `$ratio`; `#{type-of($ratio)}` given.';
+	} @elseif length($ratio) == 3 and nth($ratio, 2) != 'x' {
+		@error 'when using 3 values length list, `aspect-ratio` function expects the second to be `x`; #{nth($ratio, 2)} given.';
+	} @elseif length($ratio) < 2 and length($ratio) > 3 {
+		@error '`aspect-ratio` function expecting a list with 2 or 3 items for `$ratio`; `#{length($ratio)}` given.';
+	}
+
+	$w: nth($ratio, 1);
+	$h: if(length($ratio) == 3, nth($ratio, 3), nth($ratio, 2));
+
+	@if type-of($w) != 'number' {
+		@error 'the value sent to `width` isn\'t a `number`.';
+	} @elseif not unitless($w) {
+		@error 'the value sent to `width` **must** be unitless.';
+	}
+
+	@if type-of($h) != 'number' {
+		@error 'the value sent to `height` isn\'t a `number`.';
+	} @elseif not unitless($h) {
+		@error 'the value sent to `height` **must** be unitless.';
+	}
+
+	position: relative;
+
+	&::before {
+		float: left;
+
+		padding-top: ($h / $w * 100%);
+
+		content: '';
+	}
+
+	&::after {
+		clear: both;
+
+		display: table;
+
+		content: '';
+	}
+}
+
+/// Sass calc lock for line-height
+/// @link http://blog.typekit.com/2016/08/17/flexible-typography-with-css-locks/
+/// @link http://codepen.io/timbrown/full/akXvRw/
+@mixin fluid-line-height (
+	$font-size: null,
+	$min-line-height: map-get($line-heights, 'min'),
+	$max-line-height: map-get($line-heights, 'max'),
+	$line-length-lower-gate: map-get($line-lengths, 'min'),
+	$line-length-upper-gate: map-get($line-lengths, 'max')
+) {
+
+	@if $font-size == null {
+		@error 'the `font-size` of the element **must** be provided to calculate the media query limits.';
+	} @else if unit($font-size) == '%' {
+		$font-size: $font-size / 100%;
+	} @else if unit($font-size) == 'em' {
+		$font-size: $font-size / 1em;
+	} @else if unit($font-size) == 'rem' {
+		$font-size: $font-size / 1rem;
+	} @else if unitless($font-size) {
+		@error 'the unit of the parameter sent should be `%`, `em`, `rem`. Unitless value given.';
+	} @else {
+		@error 'the unit of the parameter sent should be `%`, `em`, `rem`. `#{unit($font-size)}` given.';
+	}
+
+	line-height: $min-line-height;
+
+	@media screen and (min-width: #{$line-length-lower-gate * $font-size}) {
+		line-height: calc(#{$min-line-height * 1em} + (#{$max-line-height} - #{$min-line-height}) * ((100vw - #{$line-length-lower-gate})/(#{$line-length-upper-gate / 1em} - #{$line-length-lower-gate / 1em})));
+	}
+
+	@media (min-width: #{$line-length-upper-gate * $font-size}) {
+		line-height: $max-line-height;
+	}
+}

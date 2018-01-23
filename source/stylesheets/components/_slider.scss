@@ -1,0 +1,142 @@
+
+@mixin range-track ($height, $thumb-height, $bg-fallback: null) {
+	&::-webkit-slider-runnable-track {
+		width: 100%;
+
+		@content;
+	}
+
+	&::-moz-range-track {
+		@content;
+	}
+
+	&::-ms-track {
+		@if type-of($height) != 'number' or unitless($height) {
+			@error '`$height` argument is required to be a not unitless number due MS Edge and IE necessary hacks.';
+		}
+
+		@if type-of($thumb-height) != 'number' or unitless($thumb-height) {
+			@error '`$thumb-height` argument is required to be a not unitless number due MS Edge and IE necessary hacks.';
+		}
+
+		width: 100%;
+
+		color: transparent;
+		background: transparent;
+
+		@if unit($height) != unit($thumb-height) {
+			border-width: calc((#{$thumb-height} - #{$height}) / 2) 0;
+		} @else {
+			border-width: (($thumb-height - $height) / 2) 0;
+		}
+
+		border-color: transparent;
+	}
+
+
+	&::-ms-fill-lower {
+		@content;
+
+		@if $bg-fallback != null {
+			background: $bg-fallback;
+		}
+	}
+
+	&::-ms-fill-upper {
+		@content;
+
+		@if $bg-fallback != null {
+			background: $bg-fallback;
+		}
+	}
+}
+
+@mixin range-thumb ($height, $track-height) {
+	@if type-of($height) != 'number' or unitless($height) {
+		@error '`$height` argument is required to be a not unitless number due MS Edge, IE, Blink and Webkit necessary hacks.';
+	}
+
+	@if type-of($track-height) != 'number' or unitless($track-height) {
+		@error '`$track-height` argument is required to be a not unitless number due MS Edge, IE, Blink and Webkit necessary hacks.';
+	}
+
+	&::-webkit-slider-thumb {
+		@content;
+
+		@if unit($height) != unit($track-height) {
+			margin-top: calc((#{$height} - #{$track-height}) / -2);
+		} @else {
+			margin-top: ($height - $track-height) / -2;
+		}
+
+		appearance: none;
+	}
+
+	&::-moz-range-thumb {
+		@content;
+
+		appearance: none;
+	}
+
+	&::-ms-thumb {
+		margin-top: 0; // reset value used for webkit. Weird, right?
+
+		appearance: none;
+
+		@content;
+	}
+
+}
+
+@mixin vertical-input-range {
+	writing-mode: bt-lr;
+
+	-webkit-appearance: slider-vertical; // sass-lint:disable-line no-vendor-prefixes
+}
+
+/**
+ * 1. required for proper track sizing in FF
+ */
+[type='range'] {
+	display: block;
+
+	width: 100%; /* 1 */
+
+	padding: 0;
+
+	vertical-align: middle;
+
+	cursor: pointer;
+
+	background: transparent;
+	border: 0; /* 1 */
+
+	appearance: none;
+
+	@include range-track ($height: 0.125rem, $thumb-height: 1.5rem, $bg-fallback: null) { // sass-lint:disable-line mixins-before-declarations
+		background-color: palette('button');
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	@include range-thumb ($height: 1.5rem, $track-height: 0.125rem) { // sass-lint:disable-line mixins-before-declarations
+		background-color: palette('button', 'slider');
+
+		border: 0;
+	}
+
+	/**
+	 * 1. Remove the focus border in Firefox.
+	 */
+	&::-moz-focus-outer {
+		border: 0; /* 1 */
+	}
+
+	/* hide the outline behind the border */
+	&:-moz-focusring {
+		outline: 1px solid transparent;
+		outline-offset: -1px;
+	}
+}

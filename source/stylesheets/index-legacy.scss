@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+
+$no-alpha: true;
+$no-calc: true;
+$no-gradient: true;
+$im-media-support: false;
+// $im-no-media-breakpoint: 'desktop'; //default
+// $im-no-media-expressions: ('screen', 'portrait', 'landscape'); //default
+$no-rem: true;
+$no-viewport: true;
+
+// @see https://github.com/sass/sass/issues/408#issuecomment-6086901
+
+@import
+'index';

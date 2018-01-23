@@ -1,0 +1,87 @@
+/* h-entry
+* @see http://microformats.org/wiki/h-entry
+*/
+.h-entry {
+}
+
+// entry name/title
+.h-entry__p-name {
+}
+
+// short entry summary
+.h-entry__p-summary {
+}
+
+// full content of the entry
+.h-entry__e-content {
+}
+
+// when the entry was published
+.h-entry__dt-published {
+}
+
+// when the entry was updated
+.h-entry__dt-updated {
+}
+
+// who wrote the entry, optionally embedded h-card(s)
+.h-entry__p-author {
+}
+
+// entry categories/tags
+.h-entry__p-category {
+}
+
+// entry permalink URL
+.h-entry__u-url {
+}
+
+// universally unique identifier, typically canonical entry URL
+.h-entry__u-uid {
+}
+
+// location the entry was posted from, optionally embed h-card, h-adr, or h-geo
+.h-entry__p-location {
+}
+
+// URL(s) of syndicated copies of this post. The property equivalent of rel-syndication (example)
+.h-entry__u-syndication {
+}
+
+// the URL which the h-entry is considered reply to (i.e. doesn’t make sense without context, could show up in comment thread), optionally an embedded h-cite (reply-context) (example)
+.h-entry__u-in-reply-to {
+}
+
+// (enum, use <data> element or value-class-pattern)
+//    "yes", "no", "maybe", "interested". Case-insensitive values, normalized to lowercase. Examples:
+//    ... <data class="p-rsvp" value="yes">is going</data> to ..., or
+//    ... <data class="p-rsvp" value="maybe">might go</data> to ...
+//    ... <data class="p-rsvp" value="no">unable to go</data> to ...
+//    ... <data class="p-rsvp" value="interested">am interested/tracking/watching</data> ...
+.h-entry__p-rsvp {
+}
+
+
+// Draft Properties
+
+// The following draft properties are in use in the wild (published and consumed), and are under strong consideration, but are not yet part of the core:
+
+// optionally embedded (or nested?) h-cite(s), each of which is a comment on/reply to the parent h-entry. See comment-brainstorming (example)
+.h-entry__p-comment {
+}
+
+// the URL which the h-entry is considered a “like” (favorite, star) of. Optionally an embedded h-cite (example)
+.h-entry__u-like-of {
+}
+
+// the URL which the h-entry is considered a “repost” of. Optionally an embedded h-cite.
+.h-entry__u-repost-of {
+}
+
+// one or more photos that is/are considered the primary content of the entry, unless there is a p-location h-card, which is still considered a "checkin" (i.e. with a photo). Otherwise the presence of a u-photo means the name of the entry should be interpreted as a caption on the photo, and the summary/content should be interpreted as a description of the photo.
+.h-entry__u-photo {
+}
+
+// special u- parsing rules for <video src> & <source src>
+.h-entry__u-video {
+}

@@ -1,0 +1,128 @@
+@media print {
+	// sass-lint:disable-block no-color-literals no-important
+	/**
+	 * @see http://www.alistapart.com/articles/goingtoprint/
+	 * @see http://www.merttol.com/articles/css/too-light-for-print.html
+	 */
+	* {
+		text-shadow: none !important;
+
+		color: rgb(0, 0, 0) !important; /* Black prints faster: h5bp.com/s */
+
+		background: transparent !important;
+	}
+
+	body {
+		font: 12pt/1.33333 'Palatino Linotype', Palatino, 'Times New Roman', Times, serif;
+
+		color: rgb(0, 0, 0);
+
+		background: rgb(255, 255, 255) none;
+	}
+
+	a,
+	a:link,
+	a:visited {
+		font-weight: bold;
+
+		text-decoration: underline;
+
+		color: rgb(68, 68, 68) !important;
+
+		background: transparent;
+	}
+
+	a[href]::after {
+		font-style: italic;
+
+		word-wrap: break-word;
+		white-space: pre-wrap;
+
+		color: rgb(51, 51, 51);
+
+		content: ' (' attr(href) ') ';
+	}
+
+	/**
+	* Don't show links for images, or javascript/internal links
+	*/
+
+	a[href^='javascript:'],
+	a[href^='#'] {
+		&::after {
+			content: '';
+		}
+	}
+
+	abbr[title]::after {
+		font-style: italic;
+
+		content: ' (' attr(title) ')';
+	}
+
+	pre,
+	blockquote {
+		page-break-inside: avoid;
+
+		border: 1px solid rgb(153, 153, 153);
+	}
+
+	/**
+	 * @see css-discuss.incutio.com/wiki/Printing_Tables
+	 */
+	thead {
+		display: table-header-group;
+	}
+
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+
+	img {
+		max-width: 100% !important;
+
+		vertical-align: bottom;
+	}
+
+
+	@page {
+		margin: 0.5cm;  // sass-lint:disable-line property-units
+	}
+
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	legend,
+	caption {
+		page-break-after: avoid;
+		page-break-inside: never;
+	}
+
+	[role='main'] {
+		float: none !important;
+
+		width: auto;
+
+		padding: 0;
+		margin: 0 5%;
+
+		border: 0;
+	}
+
+	nav,
+	.access,
+	.secondary {
+		display: none;
+	}
+}

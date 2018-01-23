@@ -1,0 +1,49 @@
+{
+  "name": "pega-bots",
+  "version": "0.1.0",
+  "description": "Social networks profiles bot-like analyzer",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm-run-all --parallel build:img build:css build:js",
+    "prebuild": "npm-run-all --parallel lint clean",
+    "build:js": "npm-run-all compile:js",
+    "build:css": "npm-run-all compile:sass compress:css",
+    "build:dev": "npm-run-all build",
+    "build:img": "npm-run-all compress:img",
+    "build:prod": "npm-run-all build cachebust",
+    "clean": "rimraf ./static/assets/**/*.{css,img,js,json,png,gif,jpg,map}",
+    "cachebust": "npm run cachebust:img && npm run cachebust:cssAndJs",
+    "cachebust:content": "hashmark -l 8 /**/*.{gif,jpg,png,svg} {dir}/{name}-{hash}{ext} --cwd content | replaceinfiles -s \"{content,data}/**/*.{md,yaml}\" -d \"{dir}/{base}\"",
+    "cachebust:cssAndJs": "hashmark -l 8 assets/**/*.{js,css} {dir}/{name}-{hash}{ext} --cwd static | replaceinfiles -s \"layouts/**/*.html\" -d \"{dir}/{base}\"",
+    "cachebust:img": "hashmark -l 8 assets/**/*.{gif,jpg,png,svg} {dir}/{name}-{hash}{ext} --cwd static | replaceinfiles -s \"{content,data,layouts,static}/**/*.{md,html,css}\" -d \"{dir}/{base}\"",
+    "compile:sass": "node-sass ./_source/stylesheets --output-style compressed --output ./static/assets/styles --source-map true",
+    "compress:css": "postcss --use autoprefixer cssnano --safe -r ./static/assets/styles/**/*.css",
+    "compress:img": "imagemin \"./_source/images/**/*.{gif,jpg,png,svg}\" --out-dir=./static/assets/images",
+    "compile:js": "browserify ./_source/scripts/index.js -o ./static/assets/scripts/index.js -t [ babelify ]",
+    "prelint": "rimraf ./_testReports/**/*.xml",
+    "lint": "npm-run-all --parallel lint:*",
+    "lint:es": "eslint --ext .es,.js \"./_source/scripts/**\" --format junit --output-file ./_testReports/esLint.xml",
+    "lint:sass": "sass-lint \"./_source/stylesheets/**/*.scss\" --verbose --no-exit --format junit --output ./_testReports/sassLint.xml",
+    "test": "jest",
+    "preversion": "git checkout master && git merge develop",
+    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md",
+    "posversion": "git checkout develop && git merge master",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:sass": "onchange \"./_source/stylesheets/**/*.scss\" -- npm run build:css",
+    "watch:es6": "onchange \"./_source/scripts/**/*.{es,js,json}\" -- npm run build:js",
+    "watch:img": "onchange \"./_source/images/**/*.{gif,jpg,png,svg}\" -- npm run build:img"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/eokoe__frontend/pega-bots.git"
+  },
+  "keywords": [
+    "html",
+    "es6",
+    "sass",
+    "hugo"
+  ],
+  "author": "sobral",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/eokoe__frontend/pega-bots#readme"
+}

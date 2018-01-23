@@ -1,0 +1,66 @@
+	</div><!-- .content-container -->
+	<footer class="site-footer">
+		<div role="contentinfo">
+			{{ with .Site.Params.responsibles }}
+				<div class="contentinfo__responsibles">
+					<h5>
+						{{ i18n "responsibles" (len .) | title }}
+					</h5>
+					<ul>
+						{{ range $k, $v := . }}
+							<li class="{{ $k }}"><a href="{{ $v.link }}" target="_blank"><img src="/assets/img/{{ $v.logo }}" alt="{{ i18n "logo" }} {{ $v.name }}"></a></li>
+						{{ end }}
+					</ul>
+				</div>
+			{{ end }}
+
+			{{ with .Site.Params.partners }}
+				<div class="contentinfo__partners">
+					<h5>
+						{{ i18n "partners" (len .) | title }}
+					</h5>
+					<ul>
+						{{ range $k, $v := . }}
+							<li class="{{ $k }}"><a href="{{ $v.link }}" target="_blank"><img src="/assets/img/{{ $v.logo }}" alt="{{ i18n "logo" }} {{ $v.name }}"></a></li>
+						{{ end }}
+					</ul>
+				</div>
+			{{ end }}
+
+				<div class="contentinfo__colophon">
+					<p>{{ i18n "colophon" | safeHTML }}</p>
+
+					<p>{{ i18n "developedBy" }}
+						<a href="http://appcivico.com" target="_blank">AppCívico</a>
+					</p>
+				</div>
+		</div>
+
+		<nav class="footer-menu">
+			{{ partialCached "footer-menu.html" . }}
+		</nav>
+	</footer>
+	{{ partialCached "browserUpdate.html" . }}
+</div><!-- .main-container -->
+
+<style>
+	/* Always set the map height explicitly to define the size of the div
+	* element that contains the map. */
+	[id='map'] {
+		height: 650px;
+	}
+</style>
+
+	<script src="/assets/js/index.js"></script>
+
+	{{ with $.Site.Params.googleMapsAPI }}
+		<script src="https://maps.googleapis.com/maps/api/js?key={{ . }}&callback=initMap" async defer></script>
+	{{ end }}
+
+	{{ with $.Scratch.Get "scriptsFooter" }}
+		{{ . | safeHTML }}
+	{{ end }}
+
+{{ partialCached "microtemplates/infoPanel.html" . }}
+</body>
+</html>
