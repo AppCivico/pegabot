@@ -1,0 +1,27 @@
+{{ with $.Site.Data.authors }}
+<div class="authors">
+	<h6>{{ i18n "aProjectBy" }}</h6>
+
+	<ul>
+		{{ range . }}
+			<li
+			{{ with .id }}
+				class="authors__author--{{ . }}"
+			{{ end }}
+
+			{{ with .icon }}
+				style="background-image: url({{ . }});"
+			{{ end }}
+			>
+				{{ with .link }}
+					<a href="{{ .link }}" target="_blank">
+				{{ end }}
+				{{ .name }}
+				{{ with .link }}
+					</a>
+				{{ end }}
+			</li>
+		{{ end }}
+	</ul>
+</div>
+{{ end }}

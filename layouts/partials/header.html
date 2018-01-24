@@ -10,20 +10,20 @@
 	<meta content="width=device-width,initial-scale=1.0" name="viewport">
 
 	<link rel="stylesheet" href="/assets/styles/index.css" media="all">
+
 	{{ if eq (getenv "NODE_ENV") "development" }}
 		<link rel="stylesheet" href="/assets/styles/qa.css" media="all">
 	{{ end }}
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:700,700i,900,900i" rel="stylesheet">
 
-	<script type="text/javascript">document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, '');
-	</script>
+	<script type="text/javascript">document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, '');</script>
 
 	<link rel="preload" href="/assets/scripts/index.js" as="script">
 
 	<title>{{ if not .IsHome }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
 
-	{{ with .Site.Params.SiteDescription }}<meta name="description" content="{{ . }}">{{ end }}
+	{{ with .Site.Params.siteDescription }}<meta name="description" content="{{ . }}">{{ end }}
 
 	{{ with $.Scratch.Get "scriptsHeader" }}
 		{{ . | safeHTML }}
@@ -35,7 +35,9 @@
 </head>
 <body>
 	{{ if ne .Kind "404" }}
-		<input type="checkbox" id="menu-controller" class="menu-controller" hidden>
+		{{ with .Site.Menus.main }}
+			<input type="checkbox" id="menu-controller" class="menu-controller" hidden>
+		{{ end }}
 	{{ end }}
 	{{ if eq (getenv "NODE_ENV") "production" }}
 		{{ partialCached "gTranslator.html" . }}
@@ -51,17 +53,24 @@
 		{{ end }}
 		<header class="site-header">
 			{{ if ne .Kind "404" }}
+				{{ with .Site.Menus.main }}
 				<label for="menu-controller" onclick>menu</label>
+				{{ end }}
 			{{ end }}
+
+			{{ partial "authors.html" . }}
+
 			<div role="banner">
 				<a href="/">
 					{{ .Site.Title }}
 				</a>
 			</div>
 			{{ if ne .Kind "404" }}
-				<nav class="main-menu" id="menu">
-					{{ partialCached "menu.html" . }}
-				</nav>
+				{{ with .Site.Menus.main }}
+					<nav class="main-menu" id="menu">
+						{{ partialCached "menu.html" . }}
+					</nav>
+				{{ end }}
 			{{ end }}
 		</header>
 		<div class="content-container">

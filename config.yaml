@@ -2,10 +2,10 @@ baseURL: ""
 languageCode: "pt-br"
 title: "pegaBots"
 defaultContentLanguage: "pt"
-disableRSS: true
 enableGitInfo: true
 enableMissingTranslationPlaceholders: true
 enableRobotsTXT: true
+disableHugoGeneratorInject: true
 disableKinds:
   - "section"
   - "taxonomy"
@@ -15,3 +15,8 @@ disableKinds:
 googleAnalytics: ""
 languageCode: "pt-br"
 metaDataFormat: "yaml"
+Languages:
+  pt:
+    params:
+      siteDescription: "O pegaBots verifica a atividade de uma conta em rede social e dá uma pontuação baseada na probabilidade dessa conta ser um bot. Maiores pontuações são mais bot-like."
+      tagline: "Por uma comunicação mais limpa e transparente"
