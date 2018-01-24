@@ -1,3 +1,17 @@
-baseURL: http://example.org/
-languageCode: pt-br
-title: Pega Bots
+baseURL: ""
+languageCode: "pt-br"
+title: "pegaBots"
+defaultContentLanguage: "pt"
+disableRSS: true
+enableGitInfo: true
+enableMissingTranslationPlaceholders: true
+enableRobotsTXT: true
+disableKinds:
+  - "section"
+  - "taxonomy"
+  - "taxonomyTerm"
+  - "RSS"
+  - "sitemap"
+googleAnalytics: ""
+languageCode: "pt-br"
+metaDataFormat: "yaml"
