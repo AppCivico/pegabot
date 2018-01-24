@@ -2,6 +2,8 @@
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
 draft: true
-slug: ""
+layout: none
+slug: "{{ .TranslationBaseName }}"
+type: contentResource
+weight: 0
 ---
-
