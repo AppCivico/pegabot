@@ -54,12 +54,12 @@
 		<header class="site-header">
 			{{ if ne .Kind "404" }}
 				{{ with .Site.Menus.main }}
-				<label for="menu-controller" onclick>menu</label>
+					<label for="menu-controller" onclick>menu</label>
 				{{ end }}
 			{{ end }}
 
 			{{ partial "responsibles.html" . }}
-€
+
 			<div role="banner">
 				<a href="/">
 					{{ .Site.Title }}
