@@ -1,5 +1,30 @@
 {{ partialCached "header.html" . }}
 <main role="main" id="conteudo">
 
+	{{ with $.Site.Data.botStats }}
+		<article class="statistcs">
+			<dl>
+				{{ range .stats }}
+					<dt>{{ .number }}</dt>
+					<dd>{{ .description }}</dd>
+				{{ end }}
+			</dl>
+		</article>
+	{{ end }}
+
+	{{ with .Content }}
+		{{ . }}
+	{{ end }}
+
+	{{ $resources := where (where $.Site.Pages ".Section" "_home") ".Type" "contentResource" }}
+
+	{{ range $resources }}
+		<article>
+			{{ .Title }}
+			{{ .Content }}
+		</article>
+	{{ end }}
+
+
 </main>
 {{ partialCached "footer.html" . }}
