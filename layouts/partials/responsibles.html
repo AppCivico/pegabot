@@ -1,12 +1,12 @@
-{{ with $.Site.Data.authors }}
-<div class="authors">
+{{ with $.Site.Data.responsibles }}
+<div class="responsibles">
 	<h6>{{ i18n "aProjectBy" }}</h6>
 
 	<ul>
 		{{ range . }}
 			<li
 			{{ with .id }}
-				class="authors__author--{{ . }}"
+				class="responsibles__author--{{ . }}"
 			{{ end }}
 
 			{{ with .icon }}
