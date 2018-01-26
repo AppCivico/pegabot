@@ -1,7 +1,11 @@
 {{ partialCached "header.html" . }}
 <main role="main" id="conteudo">
 
-	{{ partialCached "analysisForm.html" . }}
+	{{ range where $.Site.Pages "File.TranslationBaseName" "results" }}
+
+		{{ partialCached "analysisForm.html" . }}
+
+	{{ end }}
 
 	{{ with $.Site.Data.botStats }}
 		<article class="statistcs">
