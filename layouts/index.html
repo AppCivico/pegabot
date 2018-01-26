@@ -1,6 +1,8 @@
 {{ partialCached "header.html" . }}
 <main role="main" id="conteudo">
 
+	{{ partialCached "analysisForm.html" . }}
+
 	{{ with $.Site.Data.botStats }}
 		<article class="statistcs">
 			<dl>

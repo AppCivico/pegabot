@@ -1,0 +1,25 @@
+<form action="" method="post">
+	<fieldset>
+		<legend>{{ i18n "toCatchThatBot" }}</legend>
+
+		<p>
+			<label for="social-network">
+				{{ i18n "socialnetwork" }}
+			</label>
+			<select name="socialnetwork" id="social-network">
+				<option selected required value="twitter">twitter</option>
+			</select>
+		</p>
+
+		<p>
+			<label for="profile">
+				{{ i18n "profile" }}
+			</label>
+			<input autofocus type="search" name="profile" id="profile">
+		</p>
+
+		<button value="profile" type="submit">{{ i18n "toCatch" }}</button>
+		<button value="followers" type="submit">{{ i18n "toCatchFollowers" }}</button>
+		<button value="friends" type="submit">{{ i18n "toCatchFriends" }}</button>
+	</fieldset>
+</form>
