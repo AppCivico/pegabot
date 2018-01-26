@@ -21,7 +21,7 @@ Social networks profiles bot-like analyzer.
 	+ user
 - bot probability
 	+ all features
-	+ language dependent
+	+ language independent
 - share link on social network
 - user profile language
 - feedback report link
