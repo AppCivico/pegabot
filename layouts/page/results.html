@@ -9,7 +9,7 @@
 	<p>{{ i18n "returnedResults" "<output id=\"results__count\">0</output>" | safeHTML }}</p>
 
 	<section class="results__list" id="results__list">
-
+		{{ partialCached "profile.html" . }}
 	</section>
 
 </article>

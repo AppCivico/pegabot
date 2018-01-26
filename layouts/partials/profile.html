@@ -1,0 +1,94 @@
+<article class="results__profile profile">
+	<figure class="profile__data">
+		<img data-attr-to-bind-in="src" data-to-bind="profile_avatar" src="" alt="">
+		<figcaption data-to-bind="profile_username">@LorenaIpsum</figcaption>
+	</figure>
+
+	<section class="profile__analysis-results">
+		<h3 data-to-prepend="user_profile_language">{{ i18n "englishSpecificFeatures" }}</h3>
+
+		<dl>
+			<div>
+				<dt>{{ i18n "content" }}</dt>
+				<dd data-to-bind="content"></dd>
+			</div>
+
+			<div>
+				<dt>{{ i18n "sentiment" }}</dt>
+				<dd data-to-bind="sentiment"></dd>
+			</div>
+		</dl>
+	</section>
+
+	<section class="profile__analysis-results">
+		<h3>{{ i18n "languageIndependentFeatures" }}</h3>
+
+		<dl>
+			<div>
+				<dt>{{ i18n "friend" }}</dt>
+				<dd data-to-bind="friend"></dd>
+			</div>
+
+			<div>
+				<dt>{{ i18n "temporal" }}</dt>
+				<dd data-to-bind="temporal"></dd>
+			</div>
+
+			<div>
+				<dt>{{ i18n "network" }}</dt>
+				<dd data-to-bind="network"></dd>
+			</div>
+
+			<div>
+				<dt>{{ i18n "user" }}</dt>
+				<dd data-to-bind="user"></dd>
+			</div>
+		</dl>
+	</section>
+
+	<section class="profile__analysis-results">
+		<h3>bot probability</h3>
+
+		<dl>
+			<div>
+				<dt>{{ i18n "all features" }}</dt>
+				<dd data-to-bind="features"></dd>
+			</div>
+
+			<div>
+				<dt>{{ i18n "language independent" }}</dt>
+				<dd data-to-bind="language_independent"></dd>
+			</div>
+		</dl>
+	</section>
+
+	<footer class="profile__links">
+		<nav>
+			<ul>
+				<li>
+					<a data-attr-to-bind-in="href" data-to-bind="profile_link" href="" target="_blank">
+						{{ i18n "profileLink" }}
+					</a>
+				</li>
+
+				<li>
+					<a data-attr-to-append-to="href" data-to-append="tweet_link" href="" target="_blank">
+						{{ i18n "tweetItLink" }}
+					</a>
+				</li>
+
+				<li>
+					<a data-attr-to-append-to="href" data-to-append="profile_username" href="" target="_blank">
+						{{ i18n "tweetItLink" }}
+					</a>
+				</li>
+
+				<li>
+					<a data-attr-to-bind-in="href" data-to-append="feedback_report_link" href="" target="_blank">
+						{{ i18n "feedbackLink" }}
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+</article>
