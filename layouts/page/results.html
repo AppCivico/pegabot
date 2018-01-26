@@ -1,0 +1,16 @@
+{{ $.Scratch.Add "rootClass" "results-page" }}{{ partial "header.html" . }}
+<article role="main" id="conteudo">
+	<h1>{{ .Title }}</h1>
+{{ .File.TranslationBaseName }}
+	{{ with .Content }}
+		{{ . }}
+	{{ end }}
+
+	<p>{{ i18n "returnedResults" "<output id=\"results__count\">0</output>" | safeHTML }}</p>
+
+	<section class="results__list" id="results__list">
+
+	</section>
+
+</article>
+{{ partialCached "footer.html" . }}

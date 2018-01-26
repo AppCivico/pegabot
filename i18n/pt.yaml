@@ -1,0 +1,2 @@
+- id: returnedResults
+  translation: "Sua busca retornou {{ .Count }} resultados."
