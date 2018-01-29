@@ -87,7 +87,7 @@ $modularscale: (
 $palette: (
 	'gray': (
 		'x-light': tint(rgb(229, 231, 234), 10%),
-		'light': rgb(229, 231, 234),
+		'light': rgb(243, 243, 243),
 		'base': rgb(151, 153, 156),
 		'dark': rgb(64, 68, 71),
 		'x-dark': shade(rgb(64, 68, 71), 10%),
@@ -195,7 +195,7 @@ $breakpoints: map-merge($breakpoints, $toggle-breakpoints);
 
 /// Container's maximum width
 /// @type number
-$max-width: 1180px !default;
+$max-width: breakpoint('wide') !default;
 
 
 /// Z-indexes map, gathering all Z layers of the application. Avoid to edit it.
