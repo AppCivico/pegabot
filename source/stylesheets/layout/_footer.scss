@@ -1,7 +1,25 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+.site-footer {
+	font-size: ms(-1);
 
+	color: palette('white');
+
+	background-color: palette('blue', 'dark');
+}
+
+.site-footer ul,
+.site-footer li {
+	padding: 0;
+	margin: 0;
+
+	list-style-type: none;
+}
+
+.site-footer .site-tagline {
+	margin-bottom: $line-height * 5em;
+}
 
 /**
  * A large perceivable region that contains information about the parent document.
@@ -11,4 +29,30 @@
  * Within any `document` or `application`, the author **SHOULD** mark no more than one element with the `contentinfo` role.
  */
 [role='contentinfo'] {
+	@include clearfix;
+}
+
+[role='contentinfo'] h6 {
+	margin: 0;
+}
+
+[role='contentinfo'] > div {
+	margin-bottom: $line-height * 1em;
+
+	@media screen and (min-width: breakpoint('phablet')) {
+		float: left;
+
+		width: 50%;
+
+		padding-right: $gutter / 2;
+		padding-left: $gutter / 2;
+
+		&:nth-child(odd) {
+			padding-left: 0;
+		}
+
+		&:nth-child(even) {
+			padding-right: 0;
+		}
+	}
 }
