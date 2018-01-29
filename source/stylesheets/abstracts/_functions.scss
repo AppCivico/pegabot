@@ -353,3 +353,54 @@
 
 	@return 0;
 }
+
+/// Get a length value from a breakpoint name
+///
+/// @access public
+/// @group helpers
+/// @param {String} $breakpoint - breakpoint’s name
+/// @require {variable} $breakpoints
+/// @return {Number}
+///
+/// @example scss
+///
+///
+///
+@function breakpoint($breakpoint: null) {
+	$default-breakpoints: (
+		'phone': 20em, // 320px,
+		'tablet': 48em, // 768px,
+		'desktop': 64em, // 1024px,
+	);
+
+	@if $breakpoint==null {
+		@error 'A breakpoint name is required. Availabe values-> `#{map-keys($default-breakpoints)}`';
+	}
+
+	@if variable-exists('breakpoints') and type-of($breakpoints)=='map' {
+		$default-breakpoints: map-merge($default-breakpoints, $breakpoints);
+	}
+
+	@if not map-has-key($default-breakpoints, $breakpoint) {
+		@error 'unknown value sent to `breakpoint` function-> #{$breakpoint}. Availabe values-> `#{map-keys($default-breakpoints)}`';
+	}
+
+	@return map-get($default-breakpoints, $breakpoint);
+}
+
+/// @group helpers
+@function grid-image($columns: 1, $gutter: $gutter) {
+	$color: rgba(palette('debug'), 0.35);
+	$grid-image: $color 0, $color $gutter, transparent $gutter;
+
+	@for $i from 1 to $columns {
+		$multiplier: $i / $columns;
+		$grid-image: append($grid-image, ( transparent calc(#{100% * $multiplier} - #{$gutter *      $multiplier }), $color calc(#{100% * $multiplier} - #{$gutter *      $multiplier }), $color calc(#{100% * $multiplier} + #{$gutter * (1 - $multiplier)}), transparent calc(#{100% * $multiplier} + #{$gutter * (1 - $multiplier)})), comma);
+
+	}
+
+	$grid-image: append($grid-image, (transparent calc(100% - #{$gutter}), $color calc(100% - #{$gutter}), $color 100%), comma);
+	$grid-image: linear-gradient(to right, $grid-image);
+
+	@return $grid-image;
+}
