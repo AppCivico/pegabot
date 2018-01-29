@@ -72,6 +72,9 @@ dt a {
 h1 {
 	font-size: ms(3);
 
+	@media screen and (min-width: breakpoint('desktop')) {
+		font-size: ms(4);
+	}
 }
 
 h2 {
