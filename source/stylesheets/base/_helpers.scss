@@ -99,29 +99,39 @@ textarea {
 /// 	</body>
 /// </html>
 ///
-@if function-exists(susy-svg-grid) {
-	.grid-debug {
-		> body,
-		&:not(html) {
-			&:after {
-				position: fixed;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
+.grid-debug {
+	> body,
+	&:not(html) {
+		&::after {
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
 
-				z-index: layer('modal');
+			z-index: layer('modal');
 
-				font-size: 1rem;
+			font-size: 1rem;
 
-				pointer-events: none;
+			pointer-events: none;
 
-				background-image: susy-svg-grid();
-				background-position: center top;
-				background-size: span('all' 'wider') 100%;
-				background-repeat: repeat-y;
+			background-image: grid-image(2);
+			background-position: center top;
+			background-repeat: repeat-y;
 
-				content: '';
+			content: '';
+
+			@media screen and(min-wdith: breakpoint('tablet')) {
+				background-image: grid-image(4);
+			}
+
+			@media screen and(min-wdith: breakpoint('desktop')) {
+				background-image: grid-image(5);
+			}
+
+			@media screen and(min-wdith: breakpoint('wide')) {
+				background-image: grid-image(6);
+				background-size: $max-width 100%;
 			}
 		}
 	}
