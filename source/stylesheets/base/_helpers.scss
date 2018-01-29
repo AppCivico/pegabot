@@ -121,15 +121,15 @@ textarea {
 
 			content: '';
 
-			@media screen and(min-wdith: breakpoint('tablet')) {
+			@media screen and(min-width: breakpoint('tablet')) {
 				background-image: grid-image(4);
 			}
 
-			@media screen and(min-wdith: breakpoint('desktop')) {
+			@media screen and(min-width: breakpoint('desktop')) {
 				background-image: grid-image(5);
 			}
 
-			@media screen and(min-wdith: breakpoint('wide')) {
+			@media screen and(min-width: breakpoint('wide')) {
 				background-image: grid-image(6);
 				background-size: $max-width 100%;
 			}

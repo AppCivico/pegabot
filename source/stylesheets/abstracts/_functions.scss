@@ -395,8 +395,12 @@
 
 	@for $i from 1 to $columns {
 		$multiplier: $i / $columns;
-		$grid-image: append($grid-image, ( transparent calc(#{100% * $multiplier} - #{$gutter *      $multiplier }), $color calc(#{100% * $multiplier} - #{$gutter *      $multiplier }), $color calc(#{100% * $multiplier} + #{$gutter * (1 - $multiplier)}), transparent calc(#{100% * $multiplier} + #{$gutter * (1 - $multiplier)})), comma);
-
+		$grid-image: append($grid-image, (
+				transparent calc(#{100% * $multiplier} - #{$gutter *      $multiplier }),
+				$color      calc(#{100% * $multiplier} - #{$gutter *      $multiplier }),
+				$color      calc(#{100% * $multiplier} + #{$gutter * (1 - $multiplier)}),
+				transparent calc(#{100% * $multiplier} + #{$gutter * (1 - $multiplier)})
+			), comma);
 	}
 
 	$grid-image: append($grid-image, (transparent calc(100% - #{$gutter}), $color calc(100% - #{$gutter}), $color 100%), comma);
