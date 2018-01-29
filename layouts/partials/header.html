@@ -23,7 +23,7 @@
 
 	<title>{{ if not .IsHome }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
 
-	{{ with .Site.Params.siteDescription }}<meta name="description" content="{{ . }}">{{ end }}
+	{{ with $.Site.Params.siteDescription }}<meta name="description" content="{{ . }}">{{ end }}
 
 	{{ with $.Scratch.Get "scriptsHeader" }}
 		{{ . | safeHTML }}
