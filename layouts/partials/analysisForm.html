@@ -1,4 +1,4 @@
-<form action="{{ .URL }}" method="post">
+<form action="{{ .URL }}" method="get">
 	<fieldset>
 		<legend>{{ i18n "toCatchThatBot" }}</legend>
 
@@ -18,8 +18,8 @@
 			<input autofocus type="search" name="profile" id="profile">
 		</p>
 
-		<button value="profile" type="submit">{{ i18n "toCatch" }}</button>
-		<button value="followers" type="submit">{{ i18n "toCatchFollowers" }}</button>
-		<button value="friends" type="submit">{{ i18n "toCatchFriends" }}</button>
+		<button name="search_for" value="profile" type="submit">{{ i18n "toCatch" }}</button>
+		<button name="search_for" value="followers" type="submit">{{ i18n "toCatchFollowers" }}</button>
+		<button name="search_for" value="friends" type="submit">{{ i18n "toCatchFriends" }}</button>
 	</fieldset>
 </form>
