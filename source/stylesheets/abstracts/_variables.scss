@@ -49,6 +49,8 @@ $body-font-size: 1.125em !default; // 18px
 /// @type number
 $line-height: 1.6666666666666667 !default; // 30px
 
+$gutter: $line-height * $body-font-size / 1em * 1rem;
+
 /// flexible line heights map
 /// @access private
 /// @type Map
