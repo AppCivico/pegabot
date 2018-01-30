@@ -76,7 +76,15 @@ dt a {
 }
 
 h1 {
+	max-width: 100%;
+
+	overflow: hidden;
+
 	font-size: ms(2);
+
+	hyphens: auto;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 
 	@media screen and (min-width: breakpoint('desktop')) {
 		font-size: ms(4);
