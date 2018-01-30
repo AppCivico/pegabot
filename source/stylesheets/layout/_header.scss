@@ -8,5 +8,36 @@
  *
  * Within any `document` or `application`, the author **SHOULD** mark no more than one element with the `banner` role.
  */
+
+.skip-links {
+	padding: 0;
+}
+
+.skip-links a {
+	@include visually-hidden--focusable;
+}
+
+.site-header {
+	font-size: ms(-1);
+}
+
+.responsibles {
+	@extend %content-info;
+
+	@media screen and (min-width: breakpoint('phablet')) {
+		width: auto;
+
+		margin-right: 0;
+		margin-left: auto;
+	}
+}
+
 [role='banner'] {
+	@include image-replacement;
+	@include placeholder-bg;
+
+	width: $line-height * 4rem;
+	height: $line-height * 6rem;
+
+	margin: ($line-height * 1rem) auto;
 }
