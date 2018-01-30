@@ -1,13 +1,27 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+$height--desktop: $line-height * 3rem;
+
 .site-footer {
+	@include clearfix;
+
 	font-size: ms(-1);
 
 	color: palette('white');
 
 	background-color: palette('blue', 'dark');
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		letter-spacing: 0.125em;
+	}
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		text-align: right;
+	}
 }
+
 
 .site-footer ul,
 .site-footer li {
@@ -18,29 +32,47 @@
 }
 
 .site-footer .site-tagline {
-	margin-bottom: $line-height * 5em;
+	margin-bottom: $line-height * 2.5em;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		margin-bottom: $line-height * 5em;
+	}
 }
 
 /**
- * A large perceivable region that contains information about the parent document.
- *
- * Examples of information included in this region of the page are copyrights and links to privacy statements.
- *
- * Within any `document` or `application`, the author **SHOULD** mark no more than one element with the `contentinfo` role.
- */
+* A large perceivable region that contains information about the parent document.
+*
+* Examples of information included in this region of the page are copyrights and links to privacy statements.
+*
+* Within any `document` or `application`, the author **SHOULD** mark no more than one element with the `contentinfo` role.
+*/
 [role='contentinfo'] {
-	@include clearfix;
+	@media screen and (min-width: breakpoint('phablet')) {
+		display: table;
+
+		width: 100%;
+
+		table-layout: fixed;
+	}
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		float: right;
+
+		width: auto;
+
+		vertical-align: middle;
+	}
 }
 
-[role='contentinfo'] h6 {
-	margin: 0;
+[role='contentinfo'] * {
+	vertical-align: inherit;
 }
 
 [role='contentinfo'] > div {
 	margin-bottom: $line-height * 1em;
 
 	@media screen and (min-width: breakpoint('phablet')) {
-		float: left;
+		display: table-cell;
 
 		width: 50%;
 
@@ -55,4 +87,64 @@
 			padding-right: 0;
 		}
 	}
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		width: auto;
+
+		padding: 0;
+
+		white-space: nowrap;
+	}
+}
+
+[role='contentinfo'] h6 {
+	margin: 0;
+
+	font-weight: inherit;
+	font-size: inherit;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		font-size: ms(-2);
+	}
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		display: inline-block;
+
+		line-height: $height--desktop;
+
+		white-space: nowrap;
+	}
+}
+
+[role='contentinfo'] ul {
+	text-align: center;
+
+
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		display: inline;
+	}
+}
+
+[role='contentinfo'] li {
+	@include image-replacement;
+	@include placeholder-bg;
+
+	height: $height--desktop;
+	min-width: 140px;
+
+	padding-top: $gutter / 2;
+	padding-bottom: $gutter / 2;
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		display: inline-block;
+
+		width: 20%;
+	}
+}
+
+[role='contentinfo'] a {
+	display: block;
+
+	height: 100%;
 }
