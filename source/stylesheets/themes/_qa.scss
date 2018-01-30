@@ -380,7 +380,7 @@ ul > *:not(li):not(script):not(template) {
 	}
 }
 
-dl > *:not(dd):not(div):not(script):not(template) {
+dl>*:not(dt):not(dd):not(div):not(script):not(template) {
 	@extend %error;
 
 	@include alert {
@@ -388,7 +388,7 @@ dl > *:not(dd):not(div):not(script):not(template) {
 	}
 }
 
-dt ~ *:not(dd) {
+:not(dt):not(dd) + dd {
 	@extend %error;
 
 	@include alert {
