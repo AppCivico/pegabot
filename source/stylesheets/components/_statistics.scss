@@ -1,0 +1,104 @@
+.statistics {
+	@include inline-block-wrapper;
+	@include justify-last-line;
+
+	padding-top: $gutter;
+	padding-right: $gutter / 2;
+	padding-bottom: $gutter;
+	padding-left: $gutter / 2;
+	margin-right: $gutter * -1;
+	margin-left: $gutter * -1;
+
+	text-align: justify;
+
+	color: palette('white');
+
+	background-color: palette('blue', 'dark');
+}
+
+.statistics__item {
+	@include inline-block-item;
+
+	width: 50%;
+	max-width: 11em;
+
+	padding-right: $gutter / 2;
+	padding-left: $gutter / 2;
+
+	text-align: left;
+
+	@supports (animation: 4s linear 0s infinite alternate robot-alternate) {
+		position: relative;
+
+		@at-root {
+			@keyframes robot-stat-alternate {
+				0% {
+					opacity: 0;
+				}
+
+				75% {
+					opacity: 0;
+				}
+
+				100% {
+					opacity: 1;
+				}
+			}
+		}
+
+		dt,
+		dd {
+			animation-name: robot-stat-alternate;
+			animation-duration: 4s;
+			animation-timing-function: ease;
+			animation-delay: 4s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+
+		&:nth-child(odd) {
+			dt,
+			dd {
+				animation-delay: 2s;
+			}
+		}
+
+		&::before {
+			@include placeholder-bg;
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			content: '';
+
+			animation-name: robot-stat-alternate;
+			animation-duration: 4s;
+			animation-timing-function: ease;
+			animation-delay: 0s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+
+		&:nth-child(odd) {
+			&::before {
+				animation-delay: 6s;
+			}
+		}
+	}
+}
+
+.statistics dt {
+	font-weight: 900;
+	font-size: ms(2);
+	line-height: 1;
+
+	color: palette('orange');
+}
+
+.statistics dd {
+	font-size: ms(-1);
+	line-height: 1.25;
+}

@@ -7,26 +7,32 @@
 
 	{{ end }}
 
-	{{ with $.Site.Data.botStats }}
-		<article class="statistcs">
-			<dl>
+	<article class="intro" id="intro">
+		{{ with $.Site.Data.botStats }}
+			<dl class="statistics">
 				{{ range .stats }}
-					<dt>{{ .number }}</dt>
-					<dd>{{ .description }}</dd>
+					<div class="statistics__item">
+						<dt>{{ .number }}</dt>
+						<dd>{{ .description }}</dd>
+					</div>
 				{{ end }}
 			</dl>
-		</article>
-	{{ end }}
+		{{ end }}
 
-	{{ with .Content }}
-		{{ . }}
-	{{ end }}
+		{{ with .Content }}
+			{{ . }}
+		{{ end }}
+	</article>
+
 
 	{{ $resources := where (where $.Site.Pages ".Section" "_home") ".Type" "contentResource" }}
 
 	{{ range $resources }}
-		<article>
-			{{ .Title }}
+		<article id="{{ .File.TranslationBaseName }}">
+			<h2>
+				{{ .Title }}
+			</h2>
+
 			{{ .Content }}
 		</article>
 	{{ end }}

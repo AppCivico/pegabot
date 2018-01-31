@@ -119,6 +119,10 @@ textarea {
 
 		content: '';
 
+		@media screen and(min-width: breakpoint('phablet')) {
+			background-image: grid-image(3);
+		}
+
 		@media screen and(min-width: breakpoint('tablet')) {
 			background-image: grid-image(4);
 		}
