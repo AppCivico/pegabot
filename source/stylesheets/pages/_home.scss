@@ -1,3 +1,32 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+._about {
+}
+
+._about video {
+	display: block;
+
+	width: 100%;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		float: right;
+
+		width: 50%;
+
+		margin-left: $gutter;
+	}
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		width: 60%;
+	}
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		width: 66.666666%;
+	}
+}
+
+main article {
+	padding-top: $line-height * 3.5em;
+	padding-bottom: $line-height * 3.5em;
+}

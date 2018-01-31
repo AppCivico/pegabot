@@ -87,6 +87,10 @@ h1 {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 
+	h2 + & {
+		margin-top: 0;
+	}
+
 	@media screen and (min-width: breakpoint('phablet')) {
 		max-width: 80%;
 

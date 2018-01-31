@@ -1,0 +1,13 @@
+{{ if .IsNamedParams }}
+	<video src="{{ .Get "src" }}" poster="{{ .Get "poster" }}" autoplay loop playsinline>
+		Sorry, your browser doesn't support embedded videos, but don't worry, you can
+		<a href="{{ .Get "src" }}">download it</a>
+		and watch it with your favorite video player!
+	</video>
+{{ else }}
+	<video src="{{ .Get 0}}">
+		Sorry, your browser doesn't support embedded videos, but don't worry, you can
+		<a href="{{ .Get 0}}">download it</a>
+		and watch it with your favorite video player!
+	</video>
+{{ end }}

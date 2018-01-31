@@ -28,7 +28,7 @@
 	{{ $resources := where (where $.Site.Pages ".Section" "_home") ".Type" "contentResource" }}
 
 	{{ range $resources }}
-		<article id="{{ .File.TranslationBaseName }}">
+		<article id="{{ .File.TranslationBaseName }}" class="{{ .File.TranslationBaseName }}">
 			<h2>
 				{{ .Title }}
 			</h2>
