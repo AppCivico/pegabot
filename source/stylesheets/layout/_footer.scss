@@ -39,29 +39,36 @@ $height--desktop: $line-height * 3rem;
 */
 [role='contentinfo'] {
 	@extend %content-info;
+}
 
+.site-footer [role='contentinfo'] {
 	@media screen and (min-width: breakpoint('phablet')) {
 		display: table;
 
 		width: 100%;
+		max-width: 100%;
 
 		table-layout: fixed;
 	}
 
 	@media screen and (min-width: breakpoint('desktop')) {
-		float: right;
-
 		width: auto;
 
+		margin-right: 0;
+		margin-left: auto;
+
+		text-align: right;
 		vertical-align: middle;
+
+		table-layout: auto;
 	}
 }
 
-[role='contentinfo'] * {
+.site-footer [role='contentinfo'] * {
 	vertical-align: inherit;
 }
 
-[role='contentinfo'] > div {
+.site-footer [role='contentinfo'] > div {
 	margin-bottom: $line-height * 1em;
 
 	@media screen and (min-width: breakpoint('phablet')) {
@@ -83,35 +90,36 @@ $height--desktop: $line-height * 3rem;
 
 	@media screen and (min-width: breakpoint('desktop')) {
 		width: auto;
+		max-width: none;
 
 		padding: 0;
 
 		white-space: nowrap;
+
+		border-spacing: $gutter;
+
+		border-collapse: separate;
 	}
 }
 
-[role='contentinfo'] h6 {
+.site-footer [role='contentinfo'] h6 {
 	@media screen and (min-width: breakpoint('desktop')) {
-		display: inline-block;
+		float: left;
 
 		line-height: $height--desktop;
-
-		white-space: nowrap;
 	}
 }
 
-[role='contentinfo'] ul {
+.site-footer [role='contentinfo'] ul {
 	text-align: center;
 
 	@media screen and (min-width: breakpoint('desktop')) {
-		display: inline;
+		float: left;
 	}
 }
 
-[role='contentinfo'] li {
+.site-footer [role='contentinfo'] li {
 	@media screen and (min-width: breakpoint('desktop')) {
-		display: inline-block;
-
-		width: 20%;
+		width: auto;
 	}
 }

@@ -1,13 +1,8 @@
-$logo-width: $line-height * 8.75rem;
-
-
+$logo-width: 140px / 16px * 1rem;
 
 %content-info {
-	max-width: 100%;
-
-	@media screen and (min-width: ($logo-width * 3)) {
-		max-width: $logo-width * 2;
-	}
+	width: 100%;
+	max-width: $logo-width * 2;
 }
 
 %content-info h6 {
@@ -42,6 +37,7 @@ $logo-width: $line-height * 8.75rem;
 
 	width: 50%;
 	height: $height--desktop;
+	max-width: 140px;
 	min-width: 80px;
 
 	padding-top: $gutter / 2;
