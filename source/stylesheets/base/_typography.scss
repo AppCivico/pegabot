@@ -44,6 +44,7 @@ legend,
 caption,
 details > summary {
 	font-weight: 900;
+	line-height: 1;
 	font-family: $title-font-stack;
 	font-feature-settings: 'case' 1, 'cpsp' 1, 'cswh' 1, 'liga' 1, 'locl' 1, 'lnum' 1, 'pnum' 1, 'titl' 1, 'zero' 1;
 
@@ -86,6 +87,16 @@ h1 {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 
+	@media screen and (min-width: breakpoint('phablet')) {
+		max-width: 80%;
+
+		overflow: visible;
+
+		hyphens: none;
+		word-wrap: normal;
+		overflow-wrap: normal;
+	}
+
 	@media screen and (min-width: breakpoint('desktop')) {
 		font-size: ms(4);
 	}
@@ -124,6 +135,8 @@ p {
  * @see: http://demosthenes.info/blog/946/Controlling-Widows--Orphans
  */
 article p {
+	max-width: 33em;
+
 	orphans: 3;
 	widows: 3;
 }
@@ -410,11 +423,9 @@ blockquote {
 
 blockquote > p {
 	&::before {
-
 	}
 
 	&:last-of-type::after {
-
 	}
 }
 
@@ -449,11 +460,13 @@ blockquote li {
 	font-size: 1em;
 }
 
-blockquote.verse { // sass-lint:disable-line no-qualifying-elements
+blockquote.verse {
+	// sass-lint:disable-line no-qualifying-elements
 	text-align: center;
 }
 
-blockquote.verse p { // sass-lint:disable-line no-qualifying-elements
+blockquote.verse p {
+	// sass-lint:disable-line no-qualifying-elements
 	display: inline-block;
 
 	width: auto;
