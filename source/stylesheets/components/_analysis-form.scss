@@ -1,0 +1,124 @@
+.analisys-form {
+}
+
+.analisys-form legend {
+	@include visually-hidden;
+}
+
+.analisys-form label {
+	position: absolute;
+	top: -2em;
+	right: 0;
+	left: 0;
+
+	overflow: hidden;
+
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.analisys-form input,
+.analisys-form select,
+.analisys-form button {
+	display: block;
+
+	width: 100%;
+	height: 100%;
+
+	padding-top: ($line-height / 2 * 1em);
+	padding-right: ($line-height / 2 * 1em);
+	padding-bottom: ($line-height / 2 * 1em);
+	padding-left: ($line-height / 2 * 1em);
+
+	font-size: 1em;
+	line-height: $line-height;
+
+	background-color: transparent;
+
+	border: 0;
+	border-radius: ($line-height * 1em);
+
+	box-sizing: border-box;
+}
+
+.analysis-form__search-fields {
+	@include clearfix;
+
+	height: $line-height * 2em;
+
+	margin-bottom: $line-height * 1em;
+
+	line-height: $line-height;
+
+	background-color: palette('gray', 'x-light');
+
+	border-radius: $line-height * 1em;
+
+	box-shadow: 0 6px 0 0 palette('gray', 'base'), 0 20px 10px palette('shadow');
+}
+
+.analysis-form__search-fields p {
+	position: relative;
+
+	float: left;
+
+	height: 100%;
+
+	margin: 0;
+}
+
+.analisys-form button {
+	padding-right: ($line-height * 1em);
+	padding-left: ($line-height * 1em);
+}
+
+.analysis-form__search-fields input,
+.analysis-form__search-fields select {
+	&:focus {
+		color: palette('white');
+
+		background-color: palette('purple');
+
+		outline: 0;
+	}
+}
+
+.analisys-form__social-network {
+	width: 30%;
+}
+
+.analisys-form__profile {
+	width: 70%;
+}
+
+.analisys-form__social-network select {
+	padding-right: $line-height * 1em;
+
+	color: palette('purple');
+
+	background-color: palette('gray', 'light');
+
+	border-radius: ($line-height * 1em) 0 0 ($line-height * 1em);
+}
+
+.analisys-form__profile input {
+	border-radius: 0 ($line-height * 1em) ($line-height * 1em) 0;
+}
+
+.analysis-form__profile-button {
+	color: palette('white');
+
+	background-color: palette('orange');
+
+	box-shadow: 0 6px 0 0 palette('orange', 'dark'), 0 20px 10px palette('shadow');
+}
+
+.analysis-form__followers-button,
+.analysis-form__friends-button {
+}
+
+.analysis-form__followers-button {
+}
+
+.analysis-form__friends-button {
+}
