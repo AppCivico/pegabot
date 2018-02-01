@@ -8,6 +8,7 @@
 	display: block;
 
 	width: 100%;
+
 	box-shadow: 0 $gutter ($gutter * 2) palette('shadow');
 
 	@media screen and (min-width: breakpoint('tablet')) {
@@ -20,6 +21,7 @@
 
 	@media screen and (min-width: breakpoint('desktop')) {
 		width: 60%;
+
 		margin-left: $gutter * 3;
 	}
 }
@@ -27,4 +29,13 @@
 main article {
 	padding-top: $line-height * 3.5em;
 	padding-bottom: $line-height * 3.5em;
+}
+
+.intro {
+	text-align: right;
+}
+
+.intro p {
+	margin-right: 0;
+	margin-left: auto;
 }
