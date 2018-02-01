@@ -25,7 +25,7 @@
     "lint": "npm-run-all --parallel lint:*",
     "lint:es": "eslint --ext .es,.js \"./source/scripts/**\" --format junit --output-file ./_testReports/esLint.xml",
     "lint:sass": "sass-lint \"./source/stylesheets/**/*.scss\" --verbose --no-exit --format junit --output ./_testReports/sassLint.xml",
-    "start": "npm-run-all --parallel watch start:*",
+    "dev": "npm-run-all --parallel watch start:*",
     "start:hugo": "NODE_ENV=development hugo server --noHTTPCache=true --ignoreCache --templateMetrics",
     "pretest": "npm run lint",
     "test": "jest",
