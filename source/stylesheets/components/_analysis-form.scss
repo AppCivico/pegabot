@@ -1,6 +1,13 @@
 .analisys-form {
 }
 
+.analisys-form > fieldset {
+	max-width: 33em;
+
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .analisys-form legend {
 	@include visually-hidden;
 }
@@ -39,6 +46,13 @@
 	border-radius: ($line-height * 1em);
 
 	box-sizing: border-box;
+
+	&:hover,
+	&:focus {
+		color: palette('white');
+
+		background-color: palette('purple');
+	}
 }
 
 .analysis-form__search-fields {
@@ -55,6 +69,14 @@
 	border-radius: $line-height * 1em;
 
 	box-shadow: 0 6px 0 0 palette('gray', 'base'), 0 20px 10px palette('shadow');
+
+	@media screen and (min-width: breakpoint('phablet')) {
+		float: left;
+
+		width: 70%;
+
+		margin-right: 2%;
+	}
 }
 
 .analysis-form__search-fields p {
@@ -70,10 +92,16 @@
 .analisys-form button {
 	padding-right: ($line-height * 1em);
 	padding-left: ($line-height * 1em);
+
+	overflow: hidden;
+
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .analysis-form__search-fields input,
 .analysis-form__search-fields select {
+	&:hover,
 	&:focus {
 		color: palette('white');
 
@@ -85,11 +113,20 @@
 
 .analisys-form__social-network {
 	width: 30%;
+
+	@media screen and (min-width: breakpoint('phone')) {
+		width: 20%;
+	}
 }
 
 .analisys-form__profile {
 	width: 70%;
+
+	@media screen and (min-width: breakpoint('phone')) {
+		width: 80%;
+	}
 }
+
 
 .analisys-form__social-network select {
 	padding-right: $line-height * 1em;
@@ -105,20 +142,58 @@
 	border-radius: 0 ($line-height * 1em) ($line-height * 1em) 0;
 }
 
-.analysis-form__profile-button {
+.analysis-form__profile-button.analysis-form__profile-button {
+	width: auto;
+
+	margin-right: 0;
+	margin-bottom: $line-height * 1em;
+	margin-left: auto;
+
 	color: palette('white');
 
 	background-color: palette('orange');
 
 	box-shadow: 0 6px 0 0 palette('orange', 'dark'), 0 20px 10px palette('shadow');
+
+	&:hover,
+	&:focus {
+		box-shadow: 0 6px 0 0 palette('blue', 'dark'), 0 20px 10px palette('shadow');
+	}
+
+	@media screen and (min-width: breakpoint('phablet')) {
+		width: 28%;
+	}
 }
 
-.analysis-form__followers-button,
-.analysis-form__friends-button {
+.analysis-form__followers-button.analysis-form__followers-button,
+.analysis-form__friends-button.analysis-form__friends-button {
+	padding: 0;
+	margin-bottom: 0;
+
+	text-align: left;
+
+	color: palette('orange');
+
+	border-radius: 0;
+
+	&::before {
+		padding-right: 0.5em;
+
+		color: palette('purple');
+
+		content: '> ';
+	}
+
+	&:hover,
+	&:focus {
+		color: palette('purple');
+
+		background: transparent;
+	}
 }
 
-.analysis-form__followers-button {
+.analysis-form__followers-button.analysis-form__followers-button {
 }
 
-.analysis-form__friends-button {
+.analysis-form__friends-button.analysis-form__friends-button {
 }
