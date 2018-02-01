@@ -35,9 +35,6 @@
 
 // 5. Components
 @import
-'components/analysis-form',
-'components/content-info',
-'components/statistics',
 'components/h-entry',
 'components/figure',
 'components/button',
@@ -46,7 +43,10 @@
 'components/progress',
 'components/select',
 'components/slider',
-'components/text-field';
+'components/text-field',
+'components/analysis-form',
+'components/content-info',
+'components/statistics';
 
 // 6. Page-specific styles
 @import
