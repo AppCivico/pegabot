@@ -1,0 +1,16 @@
+.results-page {
+}
+
+[id='results__count'] {
+	padding-right: 0.25em;
+	padding-left: 0.25em;
+
+	color: palette('white');
+
+	background-color: palette('purple');
+}
+
+
+.results-page .site-footer {
+	@include visually-hidden;
+}

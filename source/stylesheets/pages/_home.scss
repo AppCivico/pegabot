@@ -1,6 +1,10 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+.home-page [role='banner'] {
+	margin: ($line-height * 1rem) auto;
+}
+
 ._about {
 }
 

@@ -19,6 +19,10 @@
 
 .site-header {
 	font-size: ms(-1);
+
+	&:not(.home-page) {
+		background-position: 35% 0;
+	}
 }
 
 .responsibles {
@@ -39,5 +43,6 @@
 	width: $line-height * 4rem;
 	height: $line-height * 6rem;
 
-	margin: ($line-height * 1rem) auto;
+	margin-top: ($line-height * 1rem);
+	margin-bottom: ($line-height * 1rem);
 }
