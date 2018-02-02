@@ -57,10 +57,6 @@
  * @see  http://www.viget.com/inspire/styling-the-button-element-in-internet-explorer/
  */
 
-html [type='button'] {
-	@extend %button-reset;
-}
-
 button,
 [role='button'],
 [type='button'] {
