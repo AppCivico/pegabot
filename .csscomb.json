@@ -311,6 +311,7 @@
     "tab-size"
   ],
   [
+    "$include alert",
     "$include breakpoint",
     "$include media",
     "$include mq",

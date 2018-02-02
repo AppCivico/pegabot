@@ -19,12 +19,18 @@
 		top: 0;
 		right: 0;
 		left: 0;
+
 		display: block;
 		z-index: layer('modal');
+
 		padding: 1em;
+
 		font-weight: font-weight('heavy');
+
 		text-align: center;
+
 		color: palette('white');
+
 		background-color: palette('debug');
 
 		@content;
@@ -90,11 +96,11 @@ a {
 table table {
 	@extend %error;
 
+	display: block !important;
+
 	@include alert {
 		content: 'Tables shouldn\'t be nested.' !important;
 	}
-
-	display: block !important;
 }
 
 /* Unaccessible Images */
@@ -240,7 +246,7 @@ button:not([type]) {
 [start],
 [vlink],
 [vspace],
-[width]  {
+[width] {
 	@include alert {
 		content: 'Deprecated Attribute. Use CSS instead.' !important;
 	}
@@ -269,6 +275,7 @@ link[rel='stylesheet'][type='text/css'] {
 	@at-root {
 		head {
 			display: block !important;
+
 			overflow: visible !important;
 		}
 	}
@@ -295,7 +302,7 @@ link[rel='stylesheet'][type='text/css'] {
 /// Misuse of sectioning elements
 article > article,
 section > section,
-section > article,
+// section > article,
 section > aside,
 aside > aside,
 aside > section,
@@ -380,7 +387,7 @@ ul > *:not(li):not(script):not(template) {
 	}
 }
 
-dl>*:not(dt):not(dd):not(div):not(script):not(template) {
+dl> *:not(dt):not(dd):not(div):not(script):not(template) {
 	@extend %error;
 
 	@include alert {
