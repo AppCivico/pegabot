@@ -9,7 +9,9 @@
 	<p>{{ i18n "returnedResults" "<output id=\"results__count\">0</output>" | safeHTML }}</p>
 
 	<section class="results__list" id="results__list">
-		{{ partialCached "profile.html" . }}
+		{{ range 1 through 12 }}
+			{{ partial "profile.html" . }}
+		{{ end }}
 	</section>
 
 </article>
