@@ -87,6 +87,7 @@ h1 {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 
+	&:first-child,
 	h2 + & {
 		margin-top: 0;
 	}
