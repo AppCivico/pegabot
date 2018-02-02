@@ -9,16 +9,27 @@ menu ul,
 menu ol,
 nav ul,
 nav ol {
+	display: table;
+
+	width: 100%;
+
 	padding: 0;
 	margin: 0;
 
 	list-style: none;
+
+	table-layout: fixed;
+	border-collapse: collapse;
 }
 
-menu li,
-nav li {
+menu ul li,
+nav ul li {
+	display: table-cell;
+
 	padding: 0;
 	margin: 0;
+
+	overflow: hidden;
 
 	&::before {
 		content: none;
