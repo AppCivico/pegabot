@@ -1,2 +1,6 @@
 - id: returnedResults
   translation: "Sua busca retornou {{ .Count }} resultados."
+- id: content
+  translation: "Conteúdo"
+- id: sentiment
+  translation: "Sentimento"

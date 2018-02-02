@@ -1,8 +1,14 @@
-<article class="results__profile profile">
-	<figure class="profile__data">
-		<img data-attr-to-bind-in="src" data-to-bind="profile_avatar" src="" alt="">
-		<figcaption data-to-bind="profile_username">@LorenaIpsum</figcaption>
-	</figure>
+<article class="results__profile profile" tabindex="0">
+	<button type="button" class="profile__close-button">&times;</button>
+
+	<section class="profile__analysis-summary">
+		<figure class="profile__data">
+			<img data-attr-to-bind-in="src" data-to-bind="profile_avatar" src="" alt="">
+			<figcaption data-to-bind="profile_username">@LorenaIpsum</figcaption>
+		</figure>
+		<output class="profile__result">{{ "{{bot_value}}" }}</output>
+		<meter class="profile__meter" max="100" value="50">{{ "{{bot_value}}" }}</meter>
+	</section>
 
 	<section class="profile__analysis-results">
 		<h3 data-to-prepend="user_profile_language">{{ i18n "englishSpecificFeatures" }}</h3>
@@ -10,12 +16,16 @@
 		<dl>
 			<div>
 				<dt>{{ i18n "content" }}</dt>
-				<dd data-to-bind="content"></dd>
+				<dd data-to-bind="content">
+					{{ "{{content}}" }}
+				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "sentiment" }}</dt>
-				<dd data-to-bind="sentiment"></dd>
+				<dd data-to-bind="sentiment">
+					{{ "{{sentiment}}" }}
+				</dd>
 			</div>
 		</dl>
 	</section>
@@ -26,38 +36,50 @@
 		<dl>
 			<div>
 				<dt>{{ i18n "friend" }}</dt>
-				<dd data-to-bind="friend"></dd>
+				<dd data-to-bind="friend">
+					{{ "{{friend}}" }}
+				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "temporal" }}</dt>
-				<dd data-to-bind="temporal"></dd>
+				<dd data-to-bind="temporal">
+					{{ "{{temporal}}" }}
+				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "network" }}</dt>
-				<dd data-to-bind="network"></dd>
+				<dd data-to-bind="network">
+					{{ "{{network}}" }}
+				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "user" }}</dt>
-				<dd data-to-bind="user"></dd>
+				<dd data-to-bind="user">
+					{{ "{{user}}" }}
+				</dd>
 			</div>
 		</dl>
 	</section>
 
-	<section class="profile__analysis-results">
-		<h3>bot probability</h3>
+	<section class="profile__analysis-results profile__analysis-results--compiled">
+		<h3>{{ i18n "botProbability" }}</h3>
 
 		<dl>
 			<div>
-				<dt>{{ i18n "all features" }}</dt>
-				<dd data-to-bind="features"></dd>
+				<dt>{{ i18n "allFeatures" }}</dt>
+				<dd data-to-bind="features">
+					{{ "{{all_features}}" }}
+				</dd>
 			</div>
 
 			<div>
-				<dt>{{ i18n "language independent" }}</dt>
-				<dd data-to-bind="language_independent"></dd>
+				<dt>{{ i18n "languageIndependent" }}</dt>
+				<dd data-to-bind="language_independent">
+					{{ "{{language_independent}}" }}
+				</dd>
 			</div>
 		</dl>
 	</section>
@@ -66,25 +88,25 @@
 		<nav>
 			<ul>
 				<li>
-					<a data-attr-to-bind-in="href" data-to-bind="profile_link" href="" target="_blank">
+					<a data-attr-to-bind-in="href" data-to-bind="profile_link" href="profileLink" target="_blank">
 						{{ i18n "profileLink" }}
 					</a>
 				</li>
 
 				<li>
-					<a data-attr-to-append-to="href" data-to-append="tweet_link" href="" target="_blank">
+					<a data-attr-to-append-to="href" data-to-append="tweet_link" href="tweetItLink" target="_blank">
 						{{ i18n "tweetItLink" }}
 					</a>
 				</li>
 
 				<li>
-					<a data-attr-to-append-to="href" data-to-append="profile_username" href="" target="_blank">
+					<a data-attr-to-append-to="href" data-to-append="profile_username" href="tweetItLink" target="_blank">
 						{{ i18n "tweetItLink" }}
 					</a>
 				</li>
 
 				<li>
-					<a data-attr-to-bind-in="href" data-to-append="feedback_report_link" href="" target="_blank">
+					<a data-attr-to-bind-in="href" data-to-append="feedback_report_link" href="feedbackLink" target="_blank">
 						{{ i18n "feedbackLink" }}
 					</a>
 				</li>
