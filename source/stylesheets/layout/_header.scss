@@ -46,3 +46,9 @@
 	margin-top: ($line-height * 1rem);
 	margin-bottom: ($line-height * 1rem);
 }
+
+[role='banner'] a {
+	display: block;
+
+	height: 100%;
+}
