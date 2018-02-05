@@ -78,6 +78,9 @@ $modularscale: (
 	base: 1.125em,
 	ratio: 1.33333,
 );
+$_purple: rgb(108, 23, 188);
+$_blue--dark: rgb(43, 1, 106);
+$_blue--base: rgb(93, 27, 192);
 
 /// List all available colors and tones.
 ///
@@ -101,15 +104,15 @@ $palette: (
 		'base': rgb(255, 142, 9)
 	),
 	'blue': (
-		'dark': rgb(43, 1, 106),
-		'base': rgb(93, 27, 192),
+		'dark': $_blue--dark,
+		'base': $_blue--base,
 	),
-	'purple': rgb(108, 23, 188),
+	'purple': $_purple,
 	'shadow': rgba(18, 0, 42, 0.5),
 	'debug': rgb(255, 0, 0),
 	'anchor': (
-		'base': rgb(0, 102, 204),
-		'link': rgb(0, 102, 204),
+		'base': $_purple,
+		'link': $_purple,
 		'visited': rgb(128, 0, 128),
 		'hover': rgb(50, 152, 255),
 		'focus': rgb(50, 152, 255),
@@ -120,8 +123,8 @@ $palette: (
 		'focus': rgb(0, 0 , 0),
 		),
 	'button': (
-		'base': rgb(225, 225, 225),
-		'focus': rgb(229, 241, 251),
+		'base': $_blue--base,
+		'focus': $_blue--dark,
 		'slider': hsl(0, 0%, 40%),
 		'submit': rgb(217, 83, 79),
 		'reset': transparent,
@@ -217,9 +220,6 @@ $layers: (
 	'default': 1,
 	'below': -1,
 );
-
-
-
 
 /// Relative or absolute URL where all assets are served from.
 /// @todo Customize it to match your setup.

@@ -92,14 +92,11 @@ html {
 	padding: 0;
 	margin: 0;
 
-	/* 3 */
-	overflow-y: scroll;
+	overflow-y: scroll; /* 3 */
 
-	/* 1 */
-	font-size: 100.01%;
+	font-size: 100.01%; /* 1 */
 
-	/* 4 */
-	text-size-adjust: 100%;
+	text-size-adjust: 100%; /* 4 */
 
 	background: palette('gray', 'light');
 
@@ -156,6 +153,7 @@ summary {
 
 	&::before {
 		padding-right: 0.5em;
+
 		content: '\25B6';
 	}
 
@@ -210,21 +208,18 @@ hr {
 
 	display: block;
 
-	/* 1 */
-	height: 0;
+	height: 0; /* 1 */
 
 	padding: 0;
 
-	/* 2 */
-	overflow: visible;
+	overflow: visible; /* 2 */
 
 	color: palette('gray');
 
 	border: 0;
 	border-top: 1px solid palette('gray');
 
-	/* 1 */
-	box-sizing: content-box;
+	box-sizing: content-box; /* 1 */
 }
 
 /* MEDIA ELEMENTS
@@ -258,11 +253,9 @@ iframe,
 progress,
 svg,
 video {
-	/* 1 */
-	display: inline-block;
+	display: inline-block; /* 1 */
 
-	/* 2 */
-	vertical-align: middle;
+	vertical-align: middle; /* 2 */
 }
 
 /**
@@ -381,9 +374,13 @@ a {
 
 		cursor: pointer;
 		-webkit-tap-highlight-color: palette('tap-highlight'); // sass-lint:disable-line no-vendor-prefixes
+
+		color: palette('anchor');
 	}
 
 	&:visited {
+		color: palette('anchor', 'visited');
+
 		@include on-event {
 			text-decoration: underline;
 		}
@@ -393,26 +390,34 @@ a {
 	&:focus {
 	}
 
+	&:hover {
+		color: palette('anchor', 'hover');
+	}
+
 	&:focus {
 		overflow: hidden;
+
+		color: palette('anchor', 'focus');
 
 		outline: 1px dotted;
 		outline-offset: 2px;
 	}
 
 	/**
-	 * Improve readability when focused and also mouse hovered in all browsers.
-	 */
+	* Improve readability when focused and also mouse hovered in all browsers.
+	*/
 	&:hover,
 	&:active {
 		outline-width: 0;
 	}
 
 	/**
-	 * Remove the gray background color from active links in IE 10.
-	 * @see https://github.com/necolas/normalize.css/issues/473
-	 */
+	* Remove the gray background color from active links in IE 10.
+	* @see https://github.com/necolas/normalize.css/issues/473
+	*/
 	&:active {
+		color: palette('anchor', 'active');
+
 		background-color: transparent;
 	}
 
