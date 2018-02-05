@@ -5,6 +5,11 @@ $gauge-hand-height: 0.625em;
 .results-page {
 }
 
+.results-page .content-container {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
 [id='results__count'] {
 	padding-right: 0.25em;
 	padding-left: 0.25em;
@@ -336,4 +341,56 @@ $gauge-hand-height: 0.625em;
 
 .results-page .site-footer {
 	@include visually-hidden;
+}
+
+.results__footer {
+	padding: $gutter;
+	margin-right: $gutter * -1;
+	margin-left: $gutter * -1;
+
+	font-size: 1rem;
+
+	text-align: center;
+
+	color: palette('white');
+
+	background-color: palette('orange');
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		margin-right: $gutter / -2;
+		margin-left: $gutter / -2;
+
+		text-align: right;
+	}
+}
+
+.results__footer p {
+	@media screen and (min-width: breakpoint('tablet')) {
+		display: inline-block;
+
+		height: $line-height * 1em;
+
+		padding-right: $gutter;
+		margin-bottom: 0;
+
+		vertical-align: middle;
+	}
+}
+
+.results__footer button {
+	display: inline-block;
+
+	padding-right: $line-height * 0.5em;
+	padding-left: $line-height * 0.5em;
+
+	vertical-align: middle;
+
+	background-color: transparent;
+
+	border: $stroke solid palette('white');
+	border-radius: $line-height * 1em; // sass-lint:disable-line property-units
+
+	&::before {
+		content: '\25a0\a0';
+	}
 }

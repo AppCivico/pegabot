@@ -21,6 +21,19 @@
 		{{ partial "profile.html" . }}
 		{{ partial "profile.html" . }}
 		{{ partial "profile.html" . }}
+
+		<footer class="results__footer">
+			<p>
+				<a href="#" id="results__export" download>
+					{{ i18n "toExportData" }}
+				</a>
+			</p>
+
+			<p class="results__progress" id="results__progress">
+				{{ i18n "analysisProgress" | safeHTML }}
+			</p>
+			<button type="button">{{ i18n "toStop" }}</button>
+		</footer>
 	</section>
 
 </article>

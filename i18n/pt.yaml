@@ -1,6 +1,10 @@
-- id: returnedResults
-  translation: "Sua busca retornou {{ .Count }} resultados."
+- id: analysisProgress
+  translation: "Analisando <strong id=\"results__current-index\">0</strong> de <strong id=\"results__total\">0</strong> contas."
 - id: content
   translation: "Conteúdo"
+- id: returnedResults
+  translation: "Sua busca retornou {{ .Count }} resultados."
 - id: sentiment
   translation: "Sentimento"
+- id: toExportData
+  translation: "Exportar dados"
