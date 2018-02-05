@@ -164,11 +164,11 @@ $palette: (
 /// Default border-radius
 /// @todo Customize it to match your design.
 /// @type number
-$border-radius: 0 !default;
+$border-radius: $line-height * 1em !default;
 
 /// border default width
 /// @type number
-$stroke: 1px !default;
+$stroke: 2px !default;
 
 @function _im-to-em($breakpoints, $base-value: 16px) {
 	$new-breakpoints: ();

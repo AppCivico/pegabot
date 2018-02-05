@@ -18,19 +18,25 @@
 
 	width: auto; /* 3 */
 
-	padding: 1px 6px; /* 6 */ // sass-lint:disable-line property-units
+	padding-top: 0;
+	padding-right: $line-height * 1em;
+	padding-bottom: 0;
+	padding-left: $line-height * 1em;
 
 	overflow: visible; /* 3 */
 
 	text-align: center;
 	text-indent: 0;
-	white-space: inherit;
+	white-space: nowrap;
 
 	cursor: pointer; /* 2 */
 
-	color: palette('white');
+	color: palette('button'); /* 5 */
 
-	background-color: palette('button'); /* 5 */
+	background-color: transparent;
+
+	border-color: palette('button');
+	border-radius: $line-height *1em; // sass-lint:disable-line property-units
 
 	box-sizing: inherit;
 
@@ -45,7 +51,11 @@
 
 	&:hover,
 	&:focus {
+		color: palette('white');
+
 		background-color: palette('button', 'focus');
+
+		border-color: palette('button', 'focus');
 	}
 
 	&:active {
@@ -67,6 +77,8 @@ button,
 
 [type='reset'] {
 	@extend %button-reset;
+
+	border: 0;
 }
 
 [type='submit'] {

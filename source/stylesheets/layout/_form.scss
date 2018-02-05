@@ -6,7 +6,7 @@
  */
 
 form {
-	margin: 0;
+	margin: 0 0 #{$line-height * 1em};
 }
 
 fieldset {
@@ -103,7 +103,7 @@ form br {
 
 	color: inherit;
 
-	border-width: 1px;
+	border-width: $stroke;
 	border-style: solid;
 	border-color: palette('border');
 	border-radius: 0;

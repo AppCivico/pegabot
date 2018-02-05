@@ -21,15 +21,11 @@
 	appearance: textfield; /* 1 */
 
 	&:invalid {
-		border-radius: $border-radius;
-
-		box-shadow: 0 0 5px palette('label', 'danger');
+		box-shadow: none;
 	}
 
 	&:-moz-ui-invalid {
-		border-radius: $border-radius;
-
-		box-shadow: 0 0 5px palette('label', 'danger');
+		box-shadow: none;
 	}
 
 	&:focus {
