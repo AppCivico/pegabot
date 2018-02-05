@@ -71,7 +71,7 @@ rules:
       convention: hyphenatedlowercase
   mixins-before-declarations:
     - 1
-    - exclude: ['breakpoint', 'media', 'mq', 'on-event']
+    - exclude: ['breakpoint', 'media', 'mq', 'on-event', 'alert']
   nesting-depth:
     - 1
     - max-depth: 3
