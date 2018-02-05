@@ -212,28 +212,10 @@ dfn {
 	font-size: 1em;
 }
 
-/**
- * Addresses style set to 'bolder' in FF3/4, S4/5, Chrome
- * 1. Get font-weight value from parent element
- * 2. Set font-weight bolder than parent
- *
- * @see https://github.com/necolas/normalize.css/pull/342
- * @see https://github.com/necolas/normalize.css/pull/342#issuecomment-173801037
- */
-
-// sass-lint:disable no-mergeable-selectors
 b,
 strong {
-	// sass-lint:disable-block no-duplicate-properties
-	font-weight: bold;
-	font-weight: inherit; /* 1 */
+	font-weight: 900;
 }
-
-b,
-strong {
-	font-weight: bolder; /* 2 */
-}
-// sass-lint:enable no-mergeable-selectors
 
 em,
 i {
