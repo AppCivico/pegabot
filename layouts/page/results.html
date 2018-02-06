@@ -46,8 +46,17 @@
 	{{ partial "profile.html" . }}
 </script>
 
+{{ if eq (getenv "NODE_ENV") "development" }}
 {{ $.Scratch.Add "scriptsFooter" `
 <script src="https://vuejs.org/js/vue.js"></script>
+` }}
+{{ else }}
+{{ $.Scratch.Add "scriptsFooter" `
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+` }}
+{{ end }}
+
+{{ $.Scratch.Add "scriptsFooter" `
 <script src="/assets/scripts/index.js"></script>
 ` }}
 {{ partial "footer.html" . }}
