@@ -1,5 +1,5 @@
 - id: analysisProgress
-  translation: "Analisando <strong id=\"results__current-index\">0</strong> de <strong id=\"results__total\">0</strong> contas."
+  translation: "Analisando {{ .Count }} contas."
 - id: content
   translation: "Conteúdo"
 - id: returnedResults
