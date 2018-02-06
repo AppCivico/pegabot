@@ -1,4 +1,7 @@
-{{ partialCached "header.html" . }}
+{{ $.Scratch.Add "scriptsHeader" `
+<link rel="prefetch" href="https://vuejs.org/js/vue.js" as="script" crossorigin="anonymous">
+<link rel="prefetch" href="/assets/scripts/index.js" as="script">
+` }}{{ partialCached "header.html" . }}
 <main role="main" id="conteudo">
 
 	{{ range where $.Site.Pages "File.TranslationBaseName" "results" }}

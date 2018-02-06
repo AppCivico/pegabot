@@ -1,4 +1,8 @@
-{{ $.Scratch.Add "rootClass" "results-page" }}{{ partial "header.html" . }}
+{{ $.Scratch.Add "scriptsHeader" `
+<link rel="preload" href="https://vuejs.org/js/vue.js" as="script" crossorigin="anonymous">
+<link rel="preload" href="/assets/scripts/index.js" as="script"> `
+}}{{ $.Scratch.Add "rootClass" "results-page" }}{{ partial "header.html" . }}
+
 <article role="main" id="conteudo">
 	<h1>{{ .Title }}</h1>
 

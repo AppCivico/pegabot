@@ -43,11 +43,9 @@
 	{{ partialCached "browserUpdate.html" . }}
 </div><!-- .main-container -->
 
-	<script src="/assets/js/index.js"></script>
-
-	{{ with $.Scratch.Get "scriptsFooter" }}
-		{{ . | safeHTML }}
-	{{ end }}
+{{ with $.Scratch.Get "scriptsFooter" }}
+	{{ . | safeHTML }}
+{{ end }}
 
 </body>
 </html>
