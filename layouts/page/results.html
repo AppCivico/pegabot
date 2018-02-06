@@ -10,44 +10,44 @@
 		{{ . }}
 	{{ end }}
 
-	<form method="get" name="analisys_form" class="analisys-form--rebuild">
-		<fieldset>
-			<p>{{ i18n "returnedResults" "<output id=\"results__count\">0</output>" | safeHTML }}</p>
+	<div id="results__list" hidden>
+		<form method="get" name="analisys_form" class="analisys-form--rebuild">
+			<fieldset>
+				<p>{{ i18n "returnedResults" "<output>{{ profileList.length }}</output>" | safeHTML }}</p>
 
-			<input type="hidden" name="profile" value="">
+				<input type="hidden" name="profile" :value="query.profile">
 
-			<button name="search_for" value="followers" type="submit">{{ i18n "toCatchFollowers" }}</button>
-			<button name="search_for" value="friends" type="submit">{{ i18n "toCatchFriends" }}</button>
-		</fieldset>
-	</form>
+				<button name="search_for" value="followers" type="submit">{{ i18n "toCatchFollowers" }}</button>
+				<button name="search_for" value="friends" type="submit">{{ i18n "toCatchFriends" }}</button>
+			</fieldset>
+		</form>
 
-	<section class="results__list" id="results__list">
-		{{ partial "profile.html" . }}
-		{{ partial "profile.html" . }}
-		{{ partial "profile.html" . }}
-		{{ partial "profile.html" . }}
-		{{ partial "profile.html" . }}
-		{{ partial "profile.html" . }}
-		{{ partial "profile.html" . }}
-		{{ partial "profile.html" . }}
-		{{ partial "profile.html" . }}
-		{{ partial "profile.html" . }}
-		{{ partial "profile.html" . }}
-		{{ partial "profile.html" . }}
-	</section>
+		<section class="results__list">
+			<profile v-for="profileItem in profileList" v-bind:user="profileItem" v-bind:key="profileItem.username"></profile>
+		</section>
 
-	<footer class="results__footer">
-		<p>
-			<a href="." id="results__export" download>
-				{{ i18n "toExportData" }}
-			</a>
-		</p>
+		<footer class="results__footer">
+			<p>
+				<a :href="downloadResults.value" id="results__export" download>
+					{{ i18n "toExportData" }}
+				</a>
+			</p>
 
-		<p class="results__progress" id="results__progress">
-			{{ i18n "analysisProgress" | safeHTML }}
-		</p>
-		<button type="button">{{ i18n "toStop" }}</button>
-	</footer>
+			<p class="results__progress" id="results__progress">
+				{{ i18n "analysisProgress" "<strong>{{ current }} / {{ profileList.length }}</strong>" | safeHTML }}
+			</p>
+			<button type="button">{{ i18n "toStop" }}</button>
+		</footer>
+	</div>
 
 </article>
-{{ partialCached "footer.html" . }}
+
+<script type="text/x-template" id="profile">
+	{{ partial "profile.html" . }}
+</script>
+
+{{ $.Scratch.Add "scriptsFooter" `
+<script src="https://vuejs.org/js/vue.js"></script>
+<script src="/assets/scripts/index.js"></script>
+` }}
+{{ partial "footer.html" . }}

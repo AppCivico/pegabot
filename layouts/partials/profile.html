@@ -3,11 +3,11 @@
 
 	<section class="profile__analysis-summary">
 		<figure class="profile__data">
-			<img data-attr-to-bind-in="src" data-to-bind="profile_avatar" src="" alt="">
-			<figcaption data-to-bind="profile_username">@LorenaIpsum</figcaption>
+			<img data-attr-to-bind-in="src" data-to-bind="profile_avatar" :src="user.avatar" alt="">
+			<figcaption data-to-bind="profile_username">{{ "{{user.username}}"}}</figcaption>
 		</figure>
-		<output class="profile__result">{{ "{{bot_value}}" }}</output>
-		<meter class="profile__meter" max="100" value="50">{{ "{{bot_value}}" }}</meter>
+		<output class="profile__result">{{ "{{user.content.value}}" }}</output>
+		<meter class="profile__meter" max="100" value="50">{{ "{{user.content.value}}" }}</meter>
 	</section>
 
 	<section class="profile__analysis-results">
@@ -17,14 +17,14 @@
 			<div>
 				<dt>{{ i18n "content" }}</dt>
 				<dd data-to-bind="content">
-					{{ "{{content}}" }}
+					{{ "{{user.language_independant.content}}" }}
 				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "sentiment" }}</dt>
 				<dd data-to-bind="sentiment">
-					{{ "{{sentiment}}" }}
+					{{ "{{user.language_independant.sentiment}}" }}
 				</dd>
 			</div>
 		</dl>
@@ -37,28 +37,28 @@
 			<div>
 				<dt>{{ i18n "friend" }}</dt>
 				<dd data-to-bind="friend">
-					{{ "{{friend}}" }}
+					{{ "{{user.language_independant.friend}}" }}
 				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "temporal" }}</dt>
 				<dd data-to-bind="temporal">
-					{{ "{{temporal}}" }}
+					{{ "{{user.language_independant.temporal}}" }}
 				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "network" }}</dt>
 				<dd data-to-bind="network">
-					{{ "{{network}}" }}
+					{{ "{{user.language_independant.network}}" }}
 				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "user" }}</dt>
 				<dd data-to-bind="user">
-					{{ "{{user}}" }}
+					{{ "{{user.language_independant.user}}" }}
 				</dd>
 			</div>
 		</dl>
@@ -71,14 +71,14 @@
 			<div>
 				<dt>{{ i18n "allFeatures" }}</dt>
 				<dd data-to-bind="features">
-					{{ "{{all_features}}" }}
+					{{ "{{user.bot_probability.all_features}}" }}
 				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "languageIndependent" }}</dt>
 				<dd data-to-bind="language_independent">
-					{{ "{{language_independent}}" }}
+					{{ "{{user.bot_probability.language_independent}}" }}
 				</dd>
 			</div>
 		</dl>
@@ -88,25 +88,25 @@
 		<nav>
 			<ul>
 				<li>
-					<a data-attr-to-bind-in="href" data-to-bind="profile_link" href="profileLink" target="_blank">
+					<a data-attr-to-bind-in="href" data-to-bind="profile_link" :href="user.url" target="_blank">
 						{{ i18n "profileLink" }}
 					</a>
 				</li>
 
 				<li>
-					<a data-attr-to-append-to="href" data-to-append="tweet_link" href="tweetItLink" target="_blank">
+					<a data-attr-to-append-to="href" data-to-append="tweet_link" :href="user.share_link_on_social_network" target="_blank">
 						{{ i18n "tweetItLink" }}
 					</a>
 				</li>
 
-				<li>
-					<a data-attr-to-append-to="href" data-to-append="profile_username" href="tweetItLink" target="_blank">
+				<li v-if="user.tweetItLink">
+					<a data-attr-to-append-to="href" data-to-append="profile_username" :href="user.tweetItLink" target="_blank">
 						{{ i18n "tweetItLink" }}
 					</a>
 				</li>
 
-				<li>
-					<a data-attr-to-bind-in="href" data-to-append="feedback_report_link" href="feedbackLink" target="_blank">
+				<li v-if="user.feedback_report_link">
+					<a data-attr-to-bind-in="href" data-to-append="feedback_report_link" :href="user.feedback_report_link" target="_blank">
 						{{ i18n "feedbackLink" }}
 					</a>
 				</li>
