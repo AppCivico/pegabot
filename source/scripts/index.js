@@ -43,8 +43,9 @@ window.$vue = new Vue({
 				.then((response) => {
 					this.loading = false;
 					if (response.status === 200) {
-						this.profileList = response.body.profiles;
-						this.metadata.total = response.body.metadata.count;
+						this.$set(this, 'profileList', response.body.profiles);
+						this.$set(this.metadata, 'total', response.body.metadata.count);
+						this.$set(this.metadata, 'current', response.body.profiles.length);
 					}
 				}, (error) => {
 					alert(error.statusText); // eslint-disable-line no-alert

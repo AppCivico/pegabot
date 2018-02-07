@@ -1,6 +1,6 @@
 {
 	"metadata": {
-		"count": 2,
+		"count": 3,
 		"download": "/valentin/file.csv"
 	},
 	"profiles": [
@@ -53,6 +53,35 @@
 			"bot_probability": {
 				"all_features": 666,
 				"language_independent": 666
+			},
+			"share_link_on_social_network": ".",
+			"user_profile_language": ".",
+			"feedback_report_link": "."
+		},
+		{
+			"username": "Hernani",
+			"url": ".",
+			"avatar": "ivilin.com/avatar",
+			"content": {
+				"value": 1
+			},
+			"language_independant": {
+				"friend": 1,
+				"temporal": 1,
+				"network": 1,
+				"user": 1
+			},
+			"language_dependent": {
+				"content": {
+					"value": 1
+				},
+				"sentiment": {
+					"value": 1
+				}
+			},
+			"bot_probability": {
+				"all_features": 1,
+				"language_independent": 1
 			},
 			"share_link_on_social_network": ".",
 			"user_profile_language": ".",
