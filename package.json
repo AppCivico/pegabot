@@ -12,7 +12,7 @@
     "build:img": "npm-run-all compress:img",
     "build:prod": "npm-run-all build cachebust",
     "posbuild:prod": "cross-env NODE_ENV=production hugo --ignoreCache --cleanDestinationDir",
-    "clean": "rimraf ./static/assets/**/*.{css,img,js,json,png,gif,jpg,map}",
+    "clean": "rimraf ./static/assets/**/*.{css,img,js,png,gif,jpg,map}",
     "cachebust": "npm run cachebust:img && npm run cachebust:cssAndJs",
     "cachebust:content": "hashmark -l 8 /**/*.{gif,jpg,png,svg} {dir}/{name}-{hash}{ext} --cwd content | replaceinfiles -s \"{content,data}/**/*.{md,yaml}\" -d \"{dir}/{base}\"",
     "cachebust:cssAndJs": "hashmark -l 8 assets/**/*.{js,css} {dir}/{name}-{hash}{ext} --cwd static | replaceinfiles -s \"layouts/**/*.html\" -d \"{dir}/{base}\"",

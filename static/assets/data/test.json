@@ -1,0 +1,54 @@
+{
+	"profiles": [
+		{
+			"username": "Laís",
+			"url": ".",
+			"avatar": "valiria.com/avatar",
+			"content": {
+				"value": 0.5
+			},
+			"language_independant": {
+				"friend": 0.5,
+				"temporal": 0.5,
+				"network": 0.5,
+				"user": 0.5
+			},
+			"language_dependent": {
+				"content": 0.5,
+				"sentiment": 0.5
+			},
+			"bot_probability": {
+				"all_features": 0.5,
+				"language_independent": 0.5
+			},
+			"share_link_on_social_network": ".",
+			"user_profile_language": ".",
+			"feedback_report_link": "."
+		},
+		{
+			"username": "Gian",
+			"url": ".",
+			"avatar": "ivilin.com/avatar",
+			"content": {
+				"value": 666
+			},
+			"language_independant": {
+				"friend": 666,
+				"temporal": 666,
+				"network": 666,
+				"user": 666
+			},
+			"language_dependent": {
+				"content": 666,
+				"sentiment": 666
+			},
+			"bot_probability": {
+				"all_features": 666,
+				"language_independent": 666
+			},
+			"share_link_on_social_network": ".",
+			"user_profile_language": ".",
+			"feedback_report_link": "."
+		}
+	]
+}
