@@ -28,13 +28,13 @@
 
 		<footer class="results__footer">
 			<p>
-				<a :href="profilesMeta.downloadResults.value" id="results__export" download>
+				<a :href="metadata.download" id="results__export" download>
 					{{ i18n "toExportData" }}
 				</a>
 			</p>
 
 			<p class="results__progress" id="results__progress">
-				{{ i18n "analysisProgress" "<strong>{{ profilesMeta.current }} / {{ profilesMeta.total }}</strong>" | safeHTML }}
+				{{ i18n "analysisProgress" "<strong>{{ metadata.current }} / {{ metadata.total }}</strong>" | safeHTML }}
 			</p>
 			<button type="button">{{ i18n "toStop" }}</button>
 		</footer>

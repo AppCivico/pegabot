@@ -8,12 +8,10 @@ window.$vue = new Vue({
 		query: {},
 		loading: false,
 		error: null,
-		profilesMeta: {
+		metadata: {
 			current: 0,
 			total: 0,
-			downloadResults: {
-				value: '.',
-			},
+			download: '.',
 		},
 	},
 	components: {
@@ -46,7 +44,7 @@ window.$vue = new Vue({
 					this.loading = false;
 					if (response.status === 200) {
 						this.profileList = response.body.profiles;
-						this.profilesMeta.total = response.body.profiles.length;
+						this.metadata.total = response.body.metadata.count;
 					}
 				}, (error) => {
 					alert(error.statusText); // eslint-disable-line no-alert

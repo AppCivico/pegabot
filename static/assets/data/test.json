@@ -1,4 +1,8 @@
 {
+	"metadata": {
+		"count": 2,
+		"download": "/valentin/file.csv"
+	},
 	"profiles": [
 		{
 			"username": "Laís",
@@ -18,7 +22,7 @@
 				"sentiment": 0.5
 			},
 			"bot_probability": {
-				"all_features": 0.5,
+				"all": 0.5,
 				"language_independent": 0.5
 			},
 			"share_link_on_social_network": ".",
@@ -39,8 +43,12 @@
 				"user": 666
 			},
 			"language_dependent": {
-				"content": 666,
-				"sentiment": 666
+				"content": {
+					"value": 666
+				},
+				"sentiment": {
+					"value": 666
+				}
 			},
 			"bot_probability": {
 				"all_features": 666,
