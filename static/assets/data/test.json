@@ -5,87 +5,73 @@
 	},
 	"profiles": [
 		{
-			"username": "Laís",
-			"url": ".",
-			"avatar": "valiria.com/avatar",
-			"content": {
-				"value": 0.5
-			},
-			"language_independant": {
-				"friend": 0.5,
-				"temporal": 0.5,
-				"network": 0.5,
-				"user": 0.5
-			},
-			"language_dependent": {
-				"content": 0.5,
-				"sentiment": 0.5
-			},
-			"bot_probability": {
-				"all": 0.5,
-				"language_independent": 0.5
-			},
-			"share_link_on_social_network": ".",
-			"user_profile_language": ".",
-			"feedback_report_link": "."
-		},
-		{
-			"username": "Gian",
-			"url": ".",
-			"avatar": "ivilin.com/avatar",
-			"content": {
-				"value": 666
-			},
-			"language_independant": {
-				"friend": 666,
-				"temporal": 666,
-				"network": 666,
-				"user": 666
-			},
+			"username": "lais",
+			"url": "https://t.co/iP91NWzU7D",
+			"avatar": "http://pbs.twimg.com/profile_images/956257046206304258/XucYa3BS_normal.jpg",
 			"language_dependent": {
 				"content": {
-					"value": 666
+					"value": 0.48
 				},
 				"sentiment": {
-					"value": 666
+					"value": 0.21
 				}
 			},
-			"bot_probability": {
-				"all_features": 666,
-				"language_independent": 666
+			"language_independent": {
+				"friend": 0.2,
+				"temporal": 0.15,
+				"network": 0.2,
+				"user": 0.04
 			},
-			"share_link_on_social_network": ".",
-			"user_profile_language": ".",
-			"feedback_report_link": "."
+			"bot_probability": {
+				"all": 0.23,
+				"language_independent": 0.33
+			}
 		},
 		{
-			"username": "Hernani",
-			"url": ".",
-			"avatar": "ivilin.com/avatar",
-			"content": {
-				"value": 1
-			},
-			"language_independant": {
-				"friend": 1,
-				"temporal": 1,
-				"network": 1,
-				"user": 1
-			},
+			"username": "luis",
+			"url": "https://t.co/iP91NWzU7D",
+			"avatar": "http://pbs.twimg.com/profile_images/956257046206304258/XucYa3BS_normal.jpg",
 			"language_dependent": {
 				"content": {
-					"value": 1
+					"value": 0.48
 				},
 				"sentiment": {
-					"value": 1
+					"value": 0.21
 				}
 			},
-			"bot_probability": {
-				"all_features": 1,
-				"language_independent": 1
+			"language_independent": {
+				"friend": 0.2,
+				"temporal": 0.15,
+				"network": 0.2,
+				"user": 0.04
 			},
-			"share_link_on_social_network": ".",
-			"user_profile_language": ".",
-			"feedback_report_link": "."
+			"bot_probability": {
+				"all": 0.23,
+				"language_independent": 0.33
+			}
+		},
+		{
+			"username": "tais",
+			"url": "https://t.co/iP91NWzU7D",
+			"avatar": "http://pbs.twimg.com/profile_images/956257046206304258/XucYa3BS_normal.jpg",
+			"language_dependent": {
+				"content": {
+					"value": 0.48
+				},
+				"sentiment": {
+					"value": 0.21
+				}
+			},
+			"language_independent": {
+				"friend": 0.2,
+				"temporal": 0.15,
+				"network": 0.2,
+				"user": 0.04
+			},
+			"bot_probability": {
+				"all": 0.23,
+				"language_independent": 0.33
+			}
 		}
 	]
 }
