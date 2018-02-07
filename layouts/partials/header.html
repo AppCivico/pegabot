@@ -19,8 +19,6 @@
 
 	<script type="text/javascript">document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, '');</script>
 
-	<link rel="preload" href="/assets/scripts/index.js" as="script">
-
 	<title>{{ if not .IsHome }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
 
 	{{ with $.Site.Params.siteDescription }}<meta name="description" content="{{ . }}">{{ end }}
