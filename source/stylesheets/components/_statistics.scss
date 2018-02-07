@@ -31,9 +31,51 @@
 		position: relative;
 
 		@at-root {
-			@keyframes robot-stat-alternate {
+			@keyframes robot-alternate {
 				0% {
 					opacity: 0;
+				}
+
+				50% {
+					opacity: 0;
+				}
+
+				52.5% {
+					opacity: 1;
+				}
+
+				57.5% {
+					opacity: 0;
+				}
+
+				60% {
+					opacity: 1;
+				}
+
+				62.5% {
+					opacity: 0;
+				}
+
+				65% {
+					opacity: 1;
+				}
+
+				95% {
+					opacity: 1;
+				}
+
+				100% {
+					opacity: 0;
+				}
+			}
+
+			@keyframes stat-alternate {
+				0% {
+					opacity: 1;
+				}
+
+				50% {
+					opacity: 1;
 				}
 
 				75% {
@@ -41,53 +83,84 @@
 				}
 
 				100% {
-					opacity: 1;
+					opacity: 0;
 				}
+			}
+		}
+
+		&:nth-child(1n) {
+			min-width: 124px;
+			min-height: 129px;
+
+			animation-delay: 4s;
+
+			&::before {
+				background-image: image('robot1.png');
+			}
+		}
+
+		&:nth-child(2n) {
+			min-width: 131px;
+			min-height: 131px;
+
+			animation-delay: 0s;
+
+			&::before {
+				background-image: image('robot2.png');
+			}
+		}
+
+		&:nth-child(3n) {
+			min-width: 166px;
+			min-height: 174px;
+
+			animation-delay: 6s;
+
+			&::before {
+				background-image: image('robot3.png');
+			}
+		}
+
+		&:nth-child(4n) {
+			min-width: 119px;
+			min-height: 124px;
+
+			animation-delay: 2s;
+
+			&::before {
+				background-image: image('robot4.png');
 			}
 		}
 
 		dt,
 		dd {
-			animation-name: robot-stat-alternate;
-			animation-duration: 4s;
+			animation-name: stat-alternate;
+			animation-duration: 10s;
 			animation-timing-function: ease;
-			animation-delay: 4s;
+			animation-delay: inherit;
 			animation-iteration-count: infinite;
 			animation-direction: alternate;
 		}
 
-		&:nth-child(odd) {
-			dt,
-			dd {
-				animation-delay: 2s;
-			}
-		}
-
 		&::before {
-			@include placeholder-bg;
-
 			position: absolute;
 			top: 0;
 			right: 0;
 			bottom: 0;
 			left: 0;
 
+			background-position: 50% 50%;
+
 			content: '';
 
 			opacity: 0;
 
-			animation-name: robot-stat-alternate;
-			animation-duration: 4s;
+			animation-name: robot-alternate;
+			animation-duration: 10s;
 			animation-timing-function: ease;
-			animation-delay: 0s;
+			animation-delay: inherit;
 			animation-iteration-count: infinite;
 			animation-direction: alternate;
-		}
-
-		&:nth-child(odd) {
-			&::before {
-				animation-delay: 6s;
-			}
 		}
 	}
 }
