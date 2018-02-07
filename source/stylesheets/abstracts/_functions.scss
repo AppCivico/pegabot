@@ -9,7 +9,7 @@
 /// @param {String} $path - asset path
 /// @return {Url}
 @function asset($base, $type, $path) {
-	@return url($base + $type + $path);
+	@return url(#{$base}#{$type}#{$path});
 }
 
 /// Returns URL to an image based on its path
@@ -19,7 +19,7 @@
 /// @return {Url}
 /// @require {variable} $base-url
 @function image($path, $base: $base-url) {
-	@return asset($base, 'img/', $path);
+	@return asset($base, 'images/', $path);
 }
 
 /// Returns URL to a font based on its path
@@ -29,7 +29,7 @@
 /// @return {Url}
 /// @require {variable} $base-url
 @function font($path, $base: $base-url) {
-	@return asset($base, 'ff/', $path);
+	@return asset($base, 'fonts/', $path);
 }
 
 /// Remove the unit of a length
