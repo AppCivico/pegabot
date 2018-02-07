@@ -3,11 +3,11 @@
 
 	<section class="profile__analysis-summary">
 		<figure class="profile__data">
-			<img data-attr-to-bind-in="src" data-to-bind="profile_avatar" :src="user.avatar" alt="">
+			<img data-attr-to-bind-in="src" data-to-bind="profile_avatar" :src="user.avatar.replace('_normal','')" alt="">
 			<figcaption data-to-bind="profile_username">{{ "{{user.username}}"}}</figcaption>
 		</figure>
-		<output class="profile__result">{{ "{{user.content.value}}" }}</output>
-		<meter class="profile__meter" max="100" value="50">{{ "{{user.content.value}}" }}</meter>
+		<output class="profile__result">{{ "{{user.bot_probability.all}}" }}</output>
+		<meter class="profile__meter" max="100" value="50">{{ "{{user.bot_probability.all}}" }}</meter>
 	</section>
 
 	<section class="profile__analysis-results">
@@ -17,14 +17,14 @@
 			<div>
 				<dt>{{ i18n "content" }}</dt>
 				<dd data-to-bind="content">
-					{{ "{{user.language_independant.content}}" }}
+					{{ "{{user.language_dependent.content.value}}" }}
 				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "sentiment" }}</dt>
 				<dd data-to-bind="sentiment">
-					{{ "{{user.language_independant.sentiment}}" }}
+					{{ "{{user.language_dependent.sentiment.value}}" }}
 				</dd>
 			</div>
 		</dl>
@@ -37,28 +37,28 @@
 			<div>
 				<dt>{{ i18n "friend" }}</dt>
 				<dd data-to-bind="friend">
-					{{ "{{user.language_independant.friend}}" }}
+					{{ "{{user.language_independent.friend}}" }}
 				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "temporal" }}</dt>
 				<dd data-to-bind="temporal">
-					{{ "{{user.language_independant.temporal}}" }}
+					{{ "{{user.language_independent.temporal}}" }}
 				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "network" }}</dt>
 				<dd data-to-bind="network">
-					{{ "{{user.language_independant.network}}" }}
+					{{ "{{user.language_independent.network}}" }}
 				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "user" }}</dt>
 				<dd data-to-bind="user">
-					{{ "{{user.language_independant.user}}" }}
+					{{ "{{user.language_independent.user}}" }}
 				</dd>
 			</div>
 		</dl>
