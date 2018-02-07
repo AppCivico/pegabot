@@ -1,4 +1,4 @@
-baseURL: "dev.pegabots.com.br"
+baseURL: "https://dev.pegabots.com.br"
 languageCode: "pt-br"
 title: "pegaBots"
 defaultContentLanguage: "pt"
