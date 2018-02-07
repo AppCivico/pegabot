@@ -8,10 +8,6 @@
 			{{ with .id }}
 				class="responsibles__item--{{ . }}"
 			{{ end }}
-
-			{{ with .icon }}
-				style="background-image: url({{ . }});"
-			{{ end }}
 			>
 				{{ with .link }}
 					<a href="{{ .link }}" target="_blank">

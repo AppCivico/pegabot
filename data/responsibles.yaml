@@ -1,12 +1,18 @@
 ite:
   id: "ite"
   name: "Instituto Tecnologia & Equidade"
-  icon:
+  icon: "ite.png"
+  iconNegative: "ite--negative.png"
+  iconHeight: 42
+  iconWidth: 131
   link:
   weight: 2
 its:
   id: "its"
   name: "Instituto de Tecnologia & Sociedade do Rio"
-  icon:
+  icon: "its.png"
+  iconNegative: "its--negative.png"
+  iconHeight: 47
+  iconWidth: 114
   link:
   weight: 1

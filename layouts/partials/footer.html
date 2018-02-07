@@ -14,16 +14,35 @@
 
 		{{ if or $.Site.Data.developers $.Site.Data.responsibles }}
 			<div role="contentinfo">
+				{{ with $.Site.Data.responsibles }}
+					<style>
+						{{ range . }}
+							.site-footer .responsibles__item--{{ .id }} {
+								background-image: url(/assets/images/{{ .iconNegative }});
+								min-width: {{ add .iconWidth 30 }}px;
+								min-height: {{ add .iconHeight 30 }}px;
+							}
+						{{ end }}
+					</style>
+				{{ end }}
 				{{ partialCached "responsibles.html" . }}
 
 				{{ with $.Site.Data.developers }}
-					<div class="developers">
-						<h6>{{ i18n "developedBy" }}</h6>
-						<ul>
+				<div class="developers">
+					<h6>{{ i18n "developedBy" }}</h6>
+					<ul>
+						<style>
+							{{ range . }}
+								.site-footer .developers__item--{{ .id }} {
+									background-image: url(/assets/images/{{ .iconNegative }});
+									min-width: {{ add .iconWidth 30 }}px;
+									min-height: {{ add .iconHeight 30 }}px;
+								}
+							{{ end }}
+						</style>
 							{{ range . }}
 								<li
 									{{ with .id }} class="developers__item--{{ . }}" {{ end }}
-									{{ with .icon }} style="background-image: url({{ . }});" {{ end }}
 								>
 									{{ with .link }}
 										<a href="{{ .link }}" target="_blank">

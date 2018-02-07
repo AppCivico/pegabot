@@ -2,7 +2,7 @@ $logo-width: 140px / 16px * 1rem;
 
 %content-info {
 	width: 100%;
-	max-width: $logo-width * 2;
+	max-width: $logo-width * 2.3;
 }
 
 %content-info h6 {
@@ -31,7 +31,6 @@ $logo-width: 140px / 16px * 1rem;
 
 %content-info li {
 	@include image-replacement;
-	@include placeholder-bg;
 
 	float: left;
 
@@ -44,6 +43,8 @@ $logo-width: 140px / 16px * 1rem;
 	padding-bottom: $gutter / 2;
 	margin-right: auto;
 	margin-left: auto;
+
+	background-position: 50% 50%;
 }
 
 %content-info a {

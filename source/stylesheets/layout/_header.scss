@@ -38,13 +38,17 @@
 
 [role='banner'] {
 	@include image-replacement;
-	@include placeholder-bg;
 
-	width: $line-height * 4rem;
-	height: $line-height * 6rem;
+	width: 5rem;
+	height: 15rem;
+	min-width: #{127px + 30px};
+	min-height: #{227px + 30px};
 
 	margin-top: ($line-height * 1rem);
 	margin-bottom: ($line-height * 1rem);
+
+	background-image: image('logotype.png');
+	background-position: 50% 50%;
 }
 
 [role='banner'] a {

@@ -56,6 +56,18 @@
 				{{ end }}
 			{{ end }}
 
+			{{ with $.Site.Data.responsibles }}
+				<style>
+					{{ range . }}
+						.site-header .responsibles__item--{{ .id }} {
+							background-image: url(/assets/images/{{ .icon }});
+							min-width: {{ add .iconWidth 30 }}px;
+							min-height: {{ add .iconHeight 30 }}px;
+						}
+					{{ end }}
+				</style>
+			{{ end }}
+
 			{{ partial "responsibles.html" . }}
 
 			<div role="banner">
