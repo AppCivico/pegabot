@@ -6,8 +6,8 @@
 			<img data-attr-to-bind-in="src" data-to-bind="profile_avatar" :src="user.avatar.replace('_normal','_bigger')" alt="">
 			<figcaption data-to-bind="profile_username">{{ "{{user.username}}"}}</figcaption>
 		</figure>
-		<output class="profile__result">{{ "{{user.bot_probability.all}}" }}</output>
-		<meter class="profile__meter" max="100" value="50">{{ "{{user.bot_probability.all}}" }}</meter>
+		<output class="profile__result">{{ "{{ Math.round(parseFloat(user.bot_probability.all) * 100) + '%' }}" }}</output>
+		<meter class="profile__meter" max="100" value="50">{{ "{{ Math.round(parseFloat(user.bot_probability.all) * 100) + '%' }}" }}</meter>
 	</section>
 
 	<section class="profile__analysis-results">
@@ -17,14 +17,14 @@
 			<div>
 				<dt>{{ i18n "content" }}</dt>
 				<dd data-to-bind="content">
-					{{ "{{user.language_dependent.content.value}}" }}
+					{{ "{{ Math.round(parseFloat(user.language_dependent.content.value) * 100) + '%' }}" }}
 				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "sentiment" }}</dt>
 				<dd data-to-bind="sentiment">
-					{{ "{{user.language_dependent.sentiment.value}}" }}
+					{{ "{{ Math.round(parseFloat(user.language_dependent.sentiment.value) * 100) + '%' }}" }}
 				</dd>
 			</div>
 		</dl>
@@ -37,28 +37,28 @@
 			<div>
 				<dt>{{ i18n "friendship" }}</dt>
 				<dd data-to-bind="friend">
-					{{ "{{user.language_independent.friend}}" }}
+					{{ "{{ Math.round(parseFloat(user.language_independent.friend) * 100) + '%' }}" }}
 				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "temporal" }}</dt>
 				<dd data-to-bind="temporal">
-					{{ "{{user.language_independent.temporal}}" }}
+					{{ "{{ Math.round(parseFloat(user.language_independent.temporal) * 100) + '%' }}" }}
 				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "network" }}</dt>
 				<dd data-to-bind="network">
-					{{ "{{user.language_independent.network}}" }}
+					{{ "{{ Math.round(parseFloat(user.language_independent.network) * 100) + '%' }}" }}
 				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "user" }}</dt>
 				<dd data-to-bind="user">
-					{{ "{{user.language_independent.user}}" }}
+					{{ "{{ Math.round(parseFloat(user.language_independent.user) * 100) + '%' }}" }}
 				</dd>
 			</div>
 		</dl>
@@ -71,14 +71,14 @@
 			<div>
 				<dt>{{ i18n "allFeatures" }}</dt>
 				<dd data-to-bind="features">
-					{{ "{{user.bot_probability.all}}" }}
+					{{ "{{ Math.round(parseFloat(user.bot_probability.all) * 100) + '%' }}" }}
 				</dd>
 			</div>
 
 			<div>
 				<dt>{{ i18n "languageIndependentFeatures" }}</dt>
 				<dd data-to-bind="language_independent">
-					{{ "{{user.bot_probability.language_independent}}" }}
+					{{ "{{ Math.round(parseFloat(user.bot_probability.language_independent) * 100) + '%' }}" }}
 				</dd>
 			</div>
 		</dl>
