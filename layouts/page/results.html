@@ -31,6 +31,7 @@
 			<p>{{ i18n "returnedResults" "<output>{{ metadata.total }}</output>" | safeHTML }}</p>
 
 			<input type="hidden" name="profile" :value="metadata.query.profile">
+			<input type="hidden" name="socialnetwork" :value="metadata.query.socialnetwork">
 
 			<button name="search_for" value="followers" type="submit">{{ i18n "toCatchFollowers" }}</button>
 			<button name="search_for" value="friends" type="submit">{{ i18n "toCatchFriends" }}</button>
