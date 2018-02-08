@@ -18,22 +18,34 @@ window.$vue = new Vue({
 	components: {
 		profile: {
 			template: '#profile',
-			props: [
-				'user',
-			],
+			props: {
+				user: {
+					type: Object,
+					required: false,
+				},
+			},
 		},
 		'results-footer': {
 			template: '#results__footer',
-			props: [
-				'metadata',
-				'cancel-request',
-			],
+			props: {
+				metadata: {
+					type: Object,
+					required: true,
+				},
+				'cancel-request': {
+					type: Function,
+					required: true,
+				},
+			},
 		},
 		'results-form': {
 			template: '#results__form',
-			props: [
-				'metadata',
-			],
+			props: {
+				metadata: {
+					type: Object,
+					required: true,
+				},
+			},
 		},
 	},
 	methods: {
