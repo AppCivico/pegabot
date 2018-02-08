@@ -1,10 +1,50 @@
+- id: allFeatures
+  translation: "Análise completa"
 - id: analysisProgress
   translation: "Analisando {{ .Count }} contas."
+- id: aProjectBy
+  translation: "Um projeto"
+- id: botProbability
+  translation: "Probabilidade de ser um robô"
 - id: content
-  translation: "Conteúdo"
+  translation: "Publicações"
+- id: detailsLink
+  translation: "Detalhamento da análise"
+- id: developedBy
+  translation: "Desenvolvido por"
+- id: englishSpecificFeatures
+  translation: "Análise idiomática"
+- id: feedbackLink
+  translation: "Fornecer parecer"
+- id: friendship
+  translation: "Amizades"
+- id: languageIndependentFeatures
+  translation: "Análise independente de idioma"
+- id: network
+  translation: "Rede"
+- id: profile
+  translation: "Perfil"
+- id: profileLink
+  translation: "Perfil na rede social"
 - id: returnedResults
   translation: "Sua busca retornou {{ .Count }} resultados."
 - id: sentiment
-  translation: "Sentimento"
+  translation: "Emocional"
+- id: socialNetwork
+  translation: "Rede social"
+- id: temporal
+  translation: "Frequência"
+- id: toCatch
+  translation: "Pegar"
+- id: toCatchFollowers
+  translation: "Analisar seguidores"
+- id: toCatchFriends
+  translation: "Analisar amigos"
 - id: toExportData
   translation: "Exportar dados"
+- id: toStop
+  translation: "Parar"
+- id: tweetItLink
+  translation: "Tweetar esse resultado"
+- id: user
+  translation: "Usuário"
