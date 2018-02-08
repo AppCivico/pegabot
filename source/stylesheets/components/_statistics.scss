@@ -94,7 +94,7 @@
 
 			animation-delay: 4s;
 
-			&::before {
+			&::after {
 				background-image: image('robot1.png');
 			}
 		}
@@ -105,7 +105,7 @@
 
 			animation-delay: 0s;
 
-			&::before {
+			&::after {
 				background-image: image('robot2.png');
 			}
 		}
@@ -116,7 +116,7 @@
 
 			animation-delay: 6s;
 
-			&::before {
+			&::after {
 				background-image: image('robot3.png');
 			}
 		}
@@ -127,7 +127,7 @@
 
 			animation-delay: 2s;
 
-			&::before {
+			&::after {
 				background-image: image('robot4.png');
 			}
 		}
@@ -142,7 +142,7 @@
 			animation-direction: alternate;
 		}
 
-		&::before {
+		&::after {
 			position: absolute;
 			top: 0;
 			right: 0;
