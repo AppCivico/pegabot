@@ -5,9 +5,9 @@ window.$vue = new Vue({
 	data: {
 		debug: true,
 		profileList: [],
-		loading: false,
 		error: null,
 		metadata: {
+			loading: false,
 			current: 0,
 			total: 0,
 			download: '.',
@@ -26,6 +26,7 @@ window.$vue = new Vue({
 			template: '#results__footer',
 			props: [
 				'metadata',
+				'cancel-request',
 			],
 		},
 		'results-form': {
@@ -50,23 +51,23 @@ window.$vue = new Vue({
 		},
 		loadProfiles() {
 			this.error = null;
-			this.loading = true;
+			this.metadata.loading = true;
 
 			this.$http.get('/assets/data/test.json', { params: this.metadata.query })
 				.then(
 					(response) => {
-						this.loading = false;
 						if (response.status === 200) {
 							if (Array.isArray(response.body.profiles)) {
-								this.$set(this, 'profileList', response.body.profiles);
-								this.$set(this.metadata, 'current', response.body.profiles.length);
+								this.profileList = response.body.profiles;
+								this.metadata.current = response.body.profiles.length;
 							} else {
-								this.$set(this, 'profileList', [response.body.profiles]);
-								this.$set(this.metadata, 'current', 1);
+								this.profileList = [response.body.profiles];
+								this.metadata.current = 1;
 							}
 
-							this.$set(this.metadata, 'total', response.body.metadata.count);
+							this.metadata.total = response.body.metadata.count;
 						}
+						this.metadata.loading = false;
 					},
 					{
 						beforeSend(xhr) {

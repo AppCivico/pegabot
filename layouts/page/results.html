@@ -20,7 +20,8 @@
 		<section class="results__list">
 			<profile v-for="profileItem in profileList" v-bind:user="profileItem" v-bind:key="profileItem.username"></profile>
 		</section>
-		<results-footer v-bind:metadata="metadata"></results-footer>
+		<results-footer v-bind:metadata="metadata" :cancel-request="cancelRequest"></results-footer>
+
 	</div>
 
 </article>
@@ -41,6 +42,7 @@
 
 <script type="text/x-template" id="results__footer">
 	<footer class="results__footer">
+
 		<p>
 			<a :href="metadata.download" id="results__export" download>
 				{{ i18n "toExportData" }}
@@ -50,7 +52,7 @@
 		<p class="results__progress" id="results__progress">
 			{{ i18n "analysisProgress" "<strong>{{ metadata.current }} / {{ metadata.total }}</strong>" | safeHTML }}
 		</p>
-		<button type="button">{{ i18n "toStop" }}</button>
+		<button type="button" @click="cancelRequest" :disabled="!metadata.loading">{{ i18n "toStop" }}</button>
 	</footer>
 </script>
 
