@@ -51,11 +51,16 @@ window.$vue = new Vue({
 			this.error = null;
 			this.loading = true;
 
-			this.$http.get('/assets/data/test.json', { params: this.metadata.query })
+			this.$http.get('/botometer', { params: this.metadata.query })
 				.then((response) => {
 					this.loading = false;
 					if (response.status === 200) {
-						this.$set(this, 'profileList', response.body.profiles);
+						if (Array.isArray(response.body.profiles)) {
+							this.$set(this, 'profileList', response.body.profiles);
+						} else {
+							this.$set(this, 'profileList', [response.body.profiles]);
+						}
+
 						this.$set(this.metadata, 'total', response.body.metadata.count);
 						this.$set(this.metadata, 'current', response.body.profiles.length);
 					}
