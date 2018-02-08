@@ -1,6 +1,7 @@
-$avatar-width: 9em;
+$avatar-width: 90px;
 $duration: 0.5s;
-$gauge-hand-height: 0.625em;
+$gauge-hand-width: 51px;
+$gauge-hand-height: 8px;
 
 .results-page {
 }
@@ -217,19 +218,20 @@ $gauge-hand-height: 0.625em;
 
 	&::after,
 	&::before {
-		@include placeholder-bg;
-
 		display: block;
+		// background-size: 100% auto;
 
 		content: '';
 	}
 
 	&::after {
-		width: $avatar-width / ms(1) * 1em;
-		height: $avatar-width / ms(1) * 0.5em;
+		width: $avatar-width;
+		height: $avatar-width / 2;
 
 		margin-right: auto;
 		margin-left: auto;
+
+		background-image: image('gauge__display.png');
 	}
 
 	&::before {
@@ -237,10 +239,14 @@ $gauge-hand-height: 0.625em;
 		bottom: #{$gauge-hand-height / -2};
 		left: 50%;
 
-		width: $avatar-width / ms(1) * 0.5em;
+		width: $gauge-hand-width;
 		height: $gauge-hand-height;
 
-		margin-left: $avatar-width / ms(1) * -0.5em;
+		margin-left: $gauge-hand-width * -1;
+
+		background-image: image('gauge__hand.png');
+		background-position: 100% 50%;
+		background-repeat: no-repeat;
 
 		transform: rotate(90deg);
 		transform-origin: 100% #{$gauge-hand-height / 2};
