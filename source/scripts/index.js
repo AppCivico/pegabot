@@ -57,12 +57,13 @@ window.$vue = new Vue({
 					if (response.status === 200) {
 						if (Array.isArray(response.body.profiles)) {
 							this.$set(this, 'profileList', response.body.profiles);
+							this.$set(this.metadata, 'current', response.body.profiles.length);
 						} else {
 							this.$set(this, 'profileList', [response.body.profiles]);
+							this.$set(this.metadata, 'current', 1);
 						}
 
 						this.$set(this.metadata, 'total', response.body.metadata.count);
-						this.$set(this.metadata, 'current', response.body.profiles.length);
 					}
 				}, (error) => {
 					alert(error.statusText); // eslint-disable-line no-alert
