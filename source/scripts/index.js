@@ -13,6 +13,7 @@ window.$vue = new Vue({
 			download: '.',
 			query: {},
 		},
+		xhr_request: [],
 	},
 	components: {
 		profile: {
@@ -51,23 +52,35 @@ window.$vue = new Vue({
 			this.error = null;
 			this.loading = true;
 
-			this.$http.get('/botometer', { params: this.metadata.query })
-				.then((response) => {
-					this.loading = false;
-					if (response.status === 200) {
-						if (Array.isArray(response.body.profiles)) {
-							this.$set(this, 'profileList', response.body.profiles);
-							this.$set(this.metadata, 'current', response.body.profiles.length);
-						} else {
-							this.$set(this, 'profileList', [response.body.profiles]);
-							this.$set(this.metadata, 'current', 1);
-						}
+			this.$http.get('/assets/data/test.json', { params: this.metadata.query })
+				.then(
+					(response) => {
+						this.loading = false;
+						if (response.status === 200) {
+							if (Array.isArray(response.body.profiles)) {
+								this.$set(this, 'profileList', response.body.profiles);
+								this.$set(this.metadata, 'current', response.body.profiles.length);
+							} else {
+								this.$set(this, 'profileList', [response.body.profiles]);
+								this.$set(this.metadata, 'current', 1);
+							}
 
-						this.$set(this.metadata, 'total', response.body.metadata.count);
-					}
-				}, (error) => {
-					alert(error.statusText); // eslint-disable-line no-alert
-				});
+							this.$set(this.metadata, 'total', response.body.metadata.count);
+						}
+					},
+					{
+						beforeSend(xhr) {
+							this.xhr_request.push(xhr);
+						},
+					}, (error) => {
+						alert(error.statusText); // eslint-disable-line no-alert
+					},
+				);
+		},
+		cancelRequest() {
+			for (let i = 0; i < this.xhr_request.length; i += 1) {
+				this.xhr_request.shift().abort();
+			}
 		},
 		showElement() {
 			if (this.$el.hasAttribute('hidden')) {
