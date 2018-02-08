@@ -20,7 +20,7 @@
 .site-header {
 	font-size: ms(-1);
 
-	&:not(.home-page) {
+	html:not(.home-page) & {
 		@media screen and (min-width: breakpoint('tablet')) {
 			background-image: image('robot1.png'), image('robot5.png');
 			background-position: 50% 25%, 30% 15%;
