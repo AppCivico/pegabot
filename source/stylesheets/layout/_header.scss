@@ -21,7 +21,15 @@
 	font-size: ms(-1);
 
 	&:not(.home-page) {
-		background-position: 35% 0;
+		@media screen and (min-width: breakpoint('tablet')) {
+			background-image: image('robot1.png'), image('robot5.png');
+			background-position: 50% 25%, 30% 15%;
+		}
+
+		@media screen and (min-width: breakpoint('desktop')) {
+			background-image: image('robot1.png'), image('robot5.png'), image('header.png');
+			background-position: 65% 25%, 50% 15%, 15% 0;
+		}
 	}
 }
 
