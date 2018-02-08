@@ -1,4 +1,7 @@
 .analisys-form {
+	position: relative;
+
+	z-index: layer('default');
 }
 
 .analisys-form > fieldset {
@@ -179,10 +182,9 @@
 	&::before {
 		padding-right: 0.5em;
 		margin-right: 0.25em;
-		margin-right: 0.25em;
 
 		color: palette('purple');
-		content: image('bullet.png');
+
 		content: image('bullet.png');
 	}
 
