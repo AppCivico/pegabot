@@ -178,10 +178,12 @@
 
 	&::before {
 		padding-right: 0.5em;
+		margin-right: 0.25em;
+		margin-right: 0.25em;
 
 		color: palette('purple');
-
-		content: '> ';
+		content: image('bullet.png');
+		content: image('bullet.png');
 	}
 
 	&:hover,
