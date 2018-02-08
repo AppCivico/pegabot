@@ -18,6 +18,8 @@
 }
 
 .site-header {
+	position: relative;
+
 	font-size: ms(-1);
 
 	@media screen and (min-width: breakpoint('tablet')) {

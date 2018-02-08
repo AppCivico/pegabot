@@ -2,22 +2,70 @@
 	@include inline-block-wrapper;
 	@include justify-last-line;
 
-	padding-top: $gutter;
+	min-height: 151px;
+
+	padding-top: 5rem;
 	padding-right: $gutter / 2;
-	padding-bottom: $gutter;
+	padding-bottom: 5rem;
 	padding-left: $gutter / 2;
 	margin-right: $gutter * -1;
 	margin-left: $gutter * -1;
+
+	overflow: hidden;
 
 	text-align: justify;
 
 	color: palette('white');
 
+	background-image: image('waves--320w.jpg');
+	background-size: auto 100%;
 	background-color: palette('blue', 'dark');
+
+	@media screen and (min-width: breakpoint('phone')) {
+		min-height: 227px;
+
+		background-image: image('waves--480.jpg');
+	}
+	@media screen and (min-width: breakpoint('phablet')) {
+		min-height: 363px;
+
+		background-image: image('waves--768w.jpg');
+	}
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		min-height: 484px;
+
+		padding-top: 10rem;
+
+		background-image: image('waves--1024w.jpg');
+	}
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		min-height: 682px;
+
+		margin-bottom: -4rem;
+
+		background-image: image('waves--1440w.jpg');
+
+		& + p {
+			max-width: 40%;
+		}
+	}
+
+	@media screen and (min-width: breakpoint('wide')) {
+		margin-top: -24rem;
+		margin-bottom: -8rem;
+
+		& + p {
+			max-width: 33.33333%;
+		}
+	}
 }
 
 .statistics__item {
 	@include inline-block-item;
+
+	position: relative;
 
 	width: 50%;
 	max-width: 11em;
@@ -25,11 +73,9 @@
 	padding-right: $gutter / 2;
 	padding-left: $gutter / 2;
 
-	text-align: left;
+	text-align: center;
 
 	@supports (animation: 4s linear 0s infinite alternate robot-alternate) {
-		position: relative;
-
 		@at-root {
 			@keyframes robot-alternate {
 				0% {
@@ -88,60 +134,6 @@
 			}
 		}
 
-		&:nth-child(1n) {
-			min-width: 124px;
-			min-height: 129px;
-
-			animation-delay: 4s;
-
-			&::after {
-				background-image: image('robot1.png');
-			}
-		}
-
-		&:nth-child(2n) {
-			min-width: 131px;
-			min-height: 131px;
-
-			animation-delay: 0s;
-
-			&::after {
-				background-image: image('robot2.png');
-			}
-		}
-
-		&:nth-child(3n) {
-			min-width: 166px;
-			min-height: 174px;
-
-			animation-delay: 6s;
-
-			&::after {
-				background-image: image('robot3.png');
-			}
-		}
-
-		&:nth-child(4n) {
-			min-width: 119px;
-			min-height: 124px;
-
-			animation-delay: 2s;
-
-			&::after {
-				background-image: image('robot4.png');
-			}
-		}
-
-		dt,
-		dd {
-			animation-name: stat-alternate;
-			animation-duration: 10s;
-			animation-timing-function: ease;
-			animation-delay: inherit;
-			animation-iteration-count: infinite;
-			animation-direction: alternate;
-		}
-
 		&::after {
 			position: absolute;
 			top: 0;
@@ -162,6 +154,80 @@
 			animation-iteration-count: infinite;
 			animation-direction: alternate;
 		}
+	}
+
+	&:first-child {
+		top: 0;
+
+		min-width: 124px;
+		min-height: 129px;
+
+		animation-delay: 4s;
+
+		&::after {
+			background-image: image('robot1.png');
+		}
+	}
+
+	&:nth-child(2n) {
+		min-width: 131px;
+		min-height: 131px;
+
+		animation-delay: 0s;
+
+		&::after {
+			background-image: image('robot2.png');
+		}
+
+		@media screen and(min-width: breakpoint('desktop')) {
+			top: 10rem;
+		}
+
+		@media screen and(min-width: breakpoint('wide')) {
+			top: 341px;
+		}
+	}
+
+	&:nth-child(3n) {
+		min-width: 166px;
+		min-height: 174px;
+
+		animation-delay: 6s;
+
+		&::after {
+			background-image: image('robot3.png');
+		}
+
+		@media screen and(min-width: breakpoint('desktop')) {
+			top: 15rem;
+		}
+
+		@media screen and(min-width: breakpoint('wide')) {
+			top: 10rem;
+		}
+	}
+
+	&:last-child {
+		top: 0;
+
+		min-width: 119px;
+		min-height: 124px;
+
+		animation-delay: 2s;
+
+		&::after {
+			background-image: image('robot4.png');
+		}
+	}
+
+	dt,
+	dd {
+		animation-name: stat-alternate;
+		animation-duration: 10s;
+		animation-timing-function: ease;
+		animation-delay: inherit;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
 	}
 }
 
