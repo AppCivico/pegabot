@@ -1,6 +1,15 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+.home-page .site-header {
+	background-image: none;
+
+	@media screen and (min-width: breakpoint('wide')) {
+		background-image: image('robot1.png'), image('robot4.png');
+		background-position: 90% 85%, 15% 55%;
+	}
+}
+
 .home-page [role='banner'] {
 	margin: ($line-height * 1rem) auto;
 }
