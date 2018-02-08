@@ -5,13 +5,13 @@ window.$vue = new Vue({
 	data: {
 		debug: true,
 		profileList: [],
-		query: {},
 		loading: false,
 		error: null,
 		metadata: {
 			current: 0,
 			total: 0,
 			download: '.',
+			query: {},
 		},
 	},
 	components: {
@@ -19,6 +19,18 @@ window.$vue = new Vue({
 			template: '#profile',
 			props: [
 				'user',
+			],
+		},
+		'results-footer': {
+			template: '#results__footer',
+			props: [
+				'metadata',
+			],
+		},
+		'results-form': {
+			template: '#results__form',
+			props: [
+				'metadata',
 			],
 		},
 	},
@@ -39,7 +51,7 @@ window.$vue = new Vue({
 			this.error = null;
 			this.loading = true;
 
-			this.$http.get('/assets/data/test.json', { params: this.query })
+			this.$http.get('/assets/data/test.json', { params: this.metadata.query })
 				.then((response) => {
 					this.loading = false;
 					if (response.status === 200) {
@@ -58,7 +70,7 @@ window.$vue = new Vue({
 		},
 	},
 	created() {
-		this.query = this.getQueryString();
+		this.metadata.query = this.getQueryString();
 	},
 	mounted() {
 		this.loadProfiles();

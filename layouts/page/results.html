@@ -16,36 +16,42 @@
 	{{ end }}
 
 	<div id="results__list" hidden>
-		<form method="get" name="analisys_form" class="analisys-form--rebuild">
-			<fieldset>
-				<p>{{ i18n "returnedResults" "<output>{{ profileList.length }}</output>" | safeHTML }}</p>
-
-				<input type="hidden" name="profile" :value="query.profile">
-
-				<button name="search_for" value="followers" type="submit">{{ i18n "toCatchFollowers" }}</button>
-				<button name="search_for" value="friends" type="submit">{{ i18n "toCatchFriends" }}</button>
-			</fieldset>
-		</form>
-
+		<results-form v-bind:metadata="metadata"></results-form>
 		<section class="results__list">
 			<profile v-for="profileItem in profileList" v-bind:user="profileItem" v-bind:key="profileItem.username"></profile>
 		</section>
-
-		<footer class="results__footer">
-			<p>
-				<a :href="metadata.download" id="results__export" download>
-					{{ i18n "toExportData" }}
-				</a>
-			</p>
-
-			<p class="results__progress" id="results__progress">
-				{{ i18n "analysisProgress" "<strong>{{ metadata.current }} / {{ metadata.total }}</strong>" | safeHTML }}
-			</p>
-			<button type="button">{{ i18n "toStop" }}</button>
-		</footer>
+		<results-footer v-bind:metadata="metadata"></results-footer>
 	</div>
 
 </article>
+
+<script type="text/x-template" id="results__form">
+	<form method="get" name="analisys_form" class="analisys-form--rebuild">
+		<fieldset>
+			<p>{{ i18n "returnedResults" "<output>{{ metadata.total }}</output>" | safeHTML }}</p>
+
+			<input type="hidden" name="profile" :value="metadata.query.profile">
+
+			<button name="search_for" value="followers" type="submit">{{ i18n "toCatchFollowers" }}</button>
+			<button name="search_for" value="friends" type="submit">{{ i18n "toCatchFriends" }}</button>
+		</fieldset>
+	</form>
+</script>
+
+<script type="text/x-template" id="results__footer">
+	<footer class="results__footer">
+		<p>
+			<a :href="metadata.download" id="results__export" download>
+				{{ i18n "toExportData" }}
+			</a>
+		</p>
+
+		<p class="results__progress" id="results__progress">
+			{{ i18n "analysisProgress" "<strong>{{ metadata.current }} / {{ metadata.total }}</strong>" | safeHTML }}
+		</p>
+		<button type="button">{{ i18n "toStop" }}</button>
+	</footer>
+</script>
 
 <script type="text/x-template" id="profile">
 	{{ partial "profile.html" . }}
