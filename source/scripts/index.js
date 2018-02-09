@@ -99,6 +99,7 @@ window.$vue = new Vue({
 								this.metadata.current = 1;
 							}
 
+							this.metadata.download = response.url;
 							this.metadata.total = response.body.metadata.count;
 						}
 						this.metadata.loading = false;
