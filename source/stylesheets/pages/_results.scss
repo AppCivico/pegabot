@@ -32,8 +32,6 @@ $gauge-hand-height: 8px;
 	background-color: palette('purple');
 }
 
-
-
 .results__list {
 	@media screen and (min-width: breakpoint('tablet')) {
 		@include inline-block-wrapper;
@@ -43,12 +41,10 @@ $gauge-hand-height: 8px;
 	}
 }
 
-.results__profile {
+%results__profile {
 	position: relative;
 
 	margin: 0 0 ($line-height * 1em);
-
-	cursor: pointer;
 
 	@media screen and (min-width: breakpoint('tablet')) {
 		@include inline-block-item;
@@ -63,6 +59,28 @@ $gauge-hand-height: 8px;
 	@media screen and (min-width: breakpoint('desktop')) {
 		width: 33.33333%;
 	}
+}
+
+.results__list[aria-busy='true'] {
+	// min-height: 18.75rem;
+	background: none;
+
+	&::after {
+		@extend %results__profile;
+		@extend %loading-bg;
+
+		height: 18.75rem;
+
+		cursor: wait;
+
+		content: '';
+	}
+}
+
+.results__profile {
+	@extend %results__profile;
+
+	cursor: pointer;
 
 	&:focus {
 		z-index: layer('modal');
