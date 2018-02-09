@@ -6,6 +6,12 @@ const toPercentageFilter = function toPercentageFilter(value) {
 
 Vue.filter('toPercentage', toPercentageFilter);
 
+const booleanToStringFilter = function booleanToStringFilter(value, trueText, falseText) {
+	return value ? trueText || 'true' : falseText || 'false';
+};
+
+Vue.filter('booleanToString', booleanToStringFilter);
+
 window.$vue = new Vue({
 	el: '#results__list',
 	data: {
@@ -20,11 +26,6 @@ window.$vue = new Vue({
 			query: {},
 		},
 		xhr_request: [],
-	},
-	filters: {
-		booleanToString(value, trueText, falseText) {
-			return value ? trueText || 'true' : falseText || 'false';
-		},
 	},
 	components: {
 		profile: {
