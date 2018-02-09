@@ -87,7 +87,7 @@ window.$vue = new Vue({
 			this.error = null;
 			this.metadata.loading = true;
 
-			this.$http.get('/assets/data/test.json', { params: this.metadata.query })
+			this.$http.get('/botometer', { params: this.metadata.query })
 				.then(
 					(response) => {
 						if (response.status === 200) {
