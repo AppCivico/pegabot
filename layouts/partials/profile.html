@@ -99,8 +99,8 @@
 					</a>
 				</li>
 
-				<li v-if="user.tweetItLink">
-					<a data-attr-to-append-to="href" data-to-append="profile_username" :href="user.tweetItLink" target="_blank">
+				<li>
+					<a data-attr-to-append-to="href" data-to-append="profile_username" :href="user.username | tweetItLink" target="_blank">
 						{{ i18n "tweetItLink" }}
 					</a>
 				</li>

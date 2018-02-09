@@ -36,6 +36,16 @@ window.$vue = new Vue({
 					required: false,
 				},
 			},
+			filters: {
+				tweetItLink(username) {
+					const via = 'PegaBots';
+					const hashtags = 'pegabots';
+					const title = encodeURIComponent(`Is ${username} a real person?`);
+					const url = encodeURIComponent(window.location.href);
+
+					return `https://twitter.com/intent/tweet?url=${url}&text=${title}&via=${via}&hashtags=${hashtags}`;
+				},
+			},
 		},
 		'results-footer': {
 			template: '#results__footer',
