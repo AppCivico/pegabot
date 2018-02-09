@@ -1,5 +1,11 @@
 /* global Vue */
 
+const toPercentageFilter = function toPercentageFilter(value) {
+	return `${Math.round(parseFloat(value) * 100)}%`;
+};
+
+Vue.filter('toPercentage', toPercentageFilter);
+
 window.$vue = new Vue({
 	el: '#results__list',
 	data: {
