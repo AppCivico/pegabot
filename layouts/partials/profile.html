@@ -93,8 +93,8 @@
 					</a>
 				</li>
 
-				<li>
-					<a data-attr-to-append-to="href" data-to-append="tweet_link" :href="user.share_link_on_social_network" target="_blank">
+				<li v-if="user.details_link">
+					<a data-attr-to-append-to="href" data-to-append="tweet_link" :href="user.details_link" target="_blank">
 						{{ i18n "detailsLink" }}
 					</a>
 				</li>
