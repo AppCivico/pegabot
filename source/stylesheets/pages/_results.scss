@@ -417,6 +417,7 @@ $gauge-hand-height: 8px;
 
 	padding-right: $line-height * 0.5em;
 	padding-left: $line-height * 0.5em;
+	margin-bottom: 0;
 
 	vertical-align: middle;
 
@@ -428,6 +429,8 @@ $gauge-hand-height: 8px;
 	border-radius: $line-height * 1em; // sass-lint:disable-line property-units
 
 	&::before {
+		vertical-align: text-bottom;
+
 		content: '\25a0\a0';
 	}
 }
