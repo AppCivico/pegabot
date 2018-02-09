@@ -42,7 +42,7 @@ window.$vue = new Vue({
 				'remove-profile': {
 					type: Function,
 					required: true,
-			},
+				},
 			},
 			filters: {
 				tweetItLink(username) {
