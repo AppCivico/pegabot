@@ -332,6 +332,27 @@ $gauge-hand-height: 8px;
 	border-left-style: solid;
 }
 
+.test-result--level-1 {
+	border-left-color: palette('gauge', 'level-1');
+}
+
+.test-result--level-2 {
+	border-left-color: palette('gauge', 'level-2');
+}
+
+.test-result--level-3 {
+	border-left-color: palette('gauge', 'level-3');
+}
+
+.test-result--level-4 {
+	border-left-color: palette('gauge', 'level-4');
+}
+
+.test-result--level-5 {
+	border-left-color: palette('gauge', 'level-5');
+}
+
+
 .profile__analysis-results dt,
 .profile__analysis-results dd {
 	display: inline;

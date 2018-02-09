@@ -14,14 +14,14 @@
 		<h3 data-to-prepend="user_profile_language">{{ i18n "englishSpecificFeatures" }}</h3>
 
 		<dl>
-			<div>
+			<div :class="user.language_dependent.content.value | resultLevel">
 				<dt>{{ i18n "content" }}</dt>
 				<dd data-to-bind="content">
 					{{ "{{ user.language_dependent.content.value | toPercentage }}" }}
 				</dd>
 			</div>
 
-			<div>
+			<div :class="user.language_dependent.sentiment.value | resultLevel">
 				<dt>{{ i18n "sentiment" }}</dt>
 				<dd data-to-bind="sentiment">
 					{{ "{{ user.language_dependent.sentiment.value | toPercentage }}" }}
@@ -34,28 +34,28 @@
 		<h3>{{ i18n "languageIndependentFeatures" }}</h3>
 
 		<dl>
-			<div>
+			<div :class="user.language_independent.friend | resultLevel">
 				<dt>{{ i18n "friendship" }}</dt>
 				<dd data-to-bind="friend">
 					{{ "{{ user.language_independent.friend | toPercentage }}" }}
 				</dd>
 			</div>
 
-			<div>
+			<div :class="user.language_independent.temporal | resultLevel">
 				<dt>{{ i18n "temporal" }}</dt>
 				<dd data-to-bind="temporal">
 					{{ "{{ user.language_independent.temporal | toPercentage }}" }}
 				</dd>
 			</div>
 
-			<div>
+			<div :class="user.language_independent.network | resultLevel">
 				<dt>{{ i18n "network" }}</dt>
 				<dd data-to-bind="network">
 					{{ "{{ user.language_independent.network | toPercentage }}" }}
 				</dd>
 			</div>
 
-			<div>
+			<div :class="user.language_independent.user | resultLevel">
 				<dt>{{ i18n "user" }}</dt>
 				<dd data-to-bind="user">
 					{{ "{{ user.language_independent.user | toPercentage }}" }}
@@ -68,14 +68,14 @@
 		<h3>{{ i18n "botProbability" }}</h3>
 
 		<dl>
-			<div>
+			<div :class="user.bot_probability.all | resultLevel">
 				<dt>{{ i18n "allFeatures" }}</dt>
 				<dd data-to-bind="features">
 					{{ "{{ user.bot_probability.all | toPercentage }}" }}
 				</dd>
 			</div>
 
-			<div>
+			<div :class="user.bot_probability.language_independent | resultLevel">
 				<dt>{{ i18n "languageIndependentFeatures" }}</dt>
 				<dd data-to-bind="language_independent">
 					{{ "{{ user.bot_probability.language_independent | toPercentage }}" }}

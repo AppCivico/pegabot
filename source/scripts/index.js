@@ -45,6 +45,23 @@ window.$vue = new Vue({
 
 					return `https://twitter.com/intent/tweet?url=${url}&text=${title}&via=${via}&hashtags=${hashtags}`;
 				},
+				resultLevel(value) {
+					let level = 0;
+
+					if (value <= (1 / 5)) {
+						level = 1;
+					} else if (value <= (1 / 5) * 2) {
+						level = 2;
+					} else if (value <= (1 / 5) * 3) {
+						level = 3;
+					} else if (value <= (1 / 5) * 4) {
+						level = 4;
+					} else {
+						level = 4;
+					}
+
+					return `test-result--level-${level}`;
+				},
 			},
 		},
 		'results-footer': {
