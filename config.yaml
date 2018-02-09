@@ -17,9 +17,9 @@ languageCode: "pt-br"
 metaDataFormat: "yaml"
 params:
   siteDescription: "O pegaBots verifica a atividade de uma conta em rede social e dá uma pontuação baseada na probabilidade dessa conta ser um bot. Maiores pontuações são mais bot-like."
-  tagline: "Por uma comunicação mais limpa e transparente"
+  tagline: "Por mais transparência no uso de bots"
 languages:
   pt:
     params:
       siteDescription: "O pegaBots verifica a atividade de uma conta em rede social e dá uma pontuação baseada na probabilidade dessa conta ser um bot. Maiores pontuações são mais bot-like."
-      tagline: "Por uma comunicação mais limpa e transparente"
+      tagline: "Por mais transparência no uso de bots"
