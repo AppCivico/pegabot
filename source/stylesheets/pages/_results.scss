@@ -233,43 +233,17 @@ $gauge-hand-height: 8px;
 	text-align: center;
 
 	color: palette('black');
-
-	&::after,
-	&::before {
-		display: block;
-		// background-size: 100% auto;
-
-		content: '';
-	}
-
-	&::after {
-		width: $avatar-width;
-		height: $avatar-width / 2;
-
-		margin-right: auto;
-		margin-left: auto;
-
-		background-image: image('gauge__display.png');
-	}
-
-	&::before {
-		position: absolute;
-		bottom: #{$gauge-hand-height / -2};
-		left: 50%;
-
-		width: $gauge-hand-width;
-		height: $gauge-hand-height;
-
-		margin-left: $gauge-hand-width * -1;
-
-		background-image: image('gauge__hand.png');
-		background-position: 100% 50%;
-		background-repeat: no-repeat;
-
-		transform: rotate(90deg);
-		transform-origin: 100% #{$gauge-hand-height / 2};
-	}
 }
+
+.profile__gauge {
+	display: block;
+
+	width: $avatar-width;
+
+	margin-right: auto;
+	margin-left: auto;
+}
+
 
 .profile__meter {
 	@include visually-hidden;
