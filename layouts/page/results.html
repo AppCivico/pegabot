@@ -19,10 +19,9 @@
 		<noscript>{{ i18n "noScriptMessage" }}</noscript>
 		<results-form v-bind:metadata="metadata"></results-form>
 		<section class="results__list" :aria-busy="metadata.loading | booleanToString">
-			<profile v-for="profileItem in profileList" v-bind:user="profileItem" v-bind:key="profileItem.username"></profile>
+			<profile v-for="(profileItem, index) in profileList" v-bind:user="profileItem" v-bind:key="profileItem.username" :index="index" :remove-profile="removeProfile"></profile>
 		</section>
 		<results-footer v-bind:metadata="metadata" :cancel-request="cancelRequest"></results-footer>
-
 	</div>
 
 </article>

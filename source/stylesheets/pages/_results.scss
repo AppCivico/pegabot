@@ -150,6 +150,10 @@ $gauge-hand-height: 8px;
 
 	border: 0;
 
+	.results__profile:focus > & {
+		display: none;
+	}
+
 	&:hover,
 	&:focus {
 		color: palette('purple');

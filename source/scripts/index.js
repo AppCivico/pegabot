@@ -35,6 +35,14 @@ window.$vue = new Vue({
 					type: Object,
 					required: false,
 				},
+				index: {
+					type: Number,
+					required: true,
+				},
+				'remove-profile': {
+					type: Function,
+					required: true,
+			},
 			},
 			filters: {
 				tweetItLink(username) {
@@ -134,6 +142,9 @@ window.$vue = new Vue({
 			for (let i = 0; i < this.xhr_request.length; i += 1) {
 				this.xhr_request.shift().abort();
 			}
+		},
+		removeProfile(index) {
+			this.profileList.splice(index, 1);
 		},
 		showElement() {
 			if (this.$el.hasAttribute('hidden')) {
