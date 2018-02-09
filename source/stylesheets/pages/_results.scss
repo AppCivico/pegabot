@@ -372,10 +372,30 @@ $gauge-hand-height: 8px;
 .profile__links a {
 	@include image-replacement;
 
+	display: block;
+
+	background-position: 50% 50%;
+
 	&:hover,
 	&:focus {
 		background-color: palette('purple');
 	}
+}
+
+.profile__links .profile a {
+	background-image: image('profile-icon.png');
+}
+
+.profile__links .details a {
+	background-image: image('details-icon.png');
+}
+
+.profile__links .share a {
+	background-image: image('share-icon.png');
+}
+
+.profile__links .feedback a {
+	background-image: image('feedback-icon.png');
 }
 
 .results-page .site-footer {

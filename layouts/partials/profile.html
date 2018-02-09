@@ -106,25 +106,25 @@
 	<footer class="profile__links">
 		<nav>
 			<ul>
-				<li>
+				<li class="profile">
 					<a data-attr-to-bind-in="href" data-to-bind="profile_link" :href="user.url" target="_blank">
 						{{ i18n "profileLink" }}
 					</a>
 				</li>
 
-				<li v-if="user.details_link">
+				<li class="details" v-if="user.details_link">
 					<a data-attr-to-append-to="href" data-to-append="tweet_link" :href="user.details_link" target="_blank">
 						{{ i18n "detailsLink" }}
 					</a>
 				</li>
 
-				<li>
+				<li class="share">
 					<a data-attr-to-append-to="href" data-to-append="profile_username" :href="user.username | tweetItLink" target="_blank">
 						{{ i18n "tweetItLink" }}
 					</a>
 				</li>
 
-				<li v-if="user.feedback_report_link">
+				<li class="feedback" v-if="user.feedback_report_link">
 					<a data-attr-to-bind-in="href" data-to-append="feedback_report_link" :href="user.feedback_report_link" target="_blank">
 						{{ i18n "feedbackLink" }}
 					</a>
