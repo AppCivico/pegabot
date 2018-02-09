@@ -13,13 +13,13 @@
 - id: developedBy
   translation: "Desenvolvido por"
 - id: englishSpecificFeatures
-  translation: "Análise idiomática"
+  translation: "Elementos linguísticos"
 - id: feedbackLink
   translation: "Fornecer parecer"
 - id: friendship
   translation: "Amizades"
 - id: languageIndependentFeatures
-  translation: "Análise independente de idioma"
+  translation: "Elementos independentes da linguagem"
 - id: network
   translation: "Rede"
 - id: noScriptMessage
