@@ -22,6 +22,8 @@
   translation: "Análise independente de idioma"
 - id: network
   translation: "Rede"
+- id: noScriptMessage
+  translation: "Essa funcionalidade depende de JavaScript."
 - id: profile
   translation: "Perfil"
 - id: profileLink

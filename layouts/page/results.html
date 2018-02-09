@@ -16,6 +16,7 @@
 	{{ end }}
 
 	<div id="results__list" hidden>
+		<noscript>{{ i18n "noScriptMessage" }}</noscript>
 		<results-form v-bind:metadata="metadata"></results-form>
 		<section class="results__list">
 			<profile v-for="profileItem in profileList" v-bind:user="profileItem" v-bind:key="profileItem.username"></profile>
