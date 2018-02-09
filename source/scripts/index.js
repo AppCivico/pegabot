@@ -15,6 +15,11 @@ window.$vue = new Vue({
 		},
 		xhr_request: [],
 	},
+	filters: {
+		booleanToString(value, trueText, falseText) {
+			return value ? trueText || 'true' : falseText || 'false';
+		},
+	},
 	components: {
 		profile: {
 			template: '#profile',
