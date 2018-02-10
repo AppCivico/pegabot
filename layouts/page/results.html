@@ -29,7 +29,7 @@
 <script type="text/x-template" id="results__form">
 	<form method="get" name="analisys_form" class="analisys-form--rebuild">
 		<fieldset>
-			<p>{{ i18n "returnedResults" "<output>{{ metadata.total }}</output>" | safeHTML }}</p>
+			<p v-show="!metadata.loading || metadata.total > 0">{{ i18n "returnedResults" "<output>{{ metadata.total }}</output>" | safeHTML }}</p>
 
 			<input type="hidden" name="profile" :value="metadata.query.profile">
 			<input type="hidden" name="socialnetwork" :value="metadata.query.socialnetwork">
