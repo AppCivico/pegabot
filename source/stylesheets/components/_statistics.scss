@@ -2,8 +2,6 @@
 	@include inline-block-wrapper;
 	@include justify-last-line;
 
-	min-height: 151px;
-
 	padding-top: 5rem;
 	padding-right: $gutter / 2;
 	padding-bottom: 5rem;
@@ -18,23 +16,18 @@
 	color: palette('white');
 
 	background-image: image('waves--320w.jpg');
-	background-size: auto 100%;
+	background-size: 100% 100%;
 	background-color: palette('blue', 'dark');
 
 	@media screen and (min-width: breakpoint('phone')) {
-		min-height: 227px;
-
 		background-image: image('waves--480.jpg');
 	}
-	@media screen and (min-width: breakpoint('phablet')) {
-		min-height: 363px;
 
+	@media screen and (min-width: breakpoint('phablet')) {
 		background-image: image('waves--768w.jpg');
 	}
 
 	@media screen and (min-width: breakpoint('tablet')) {
-		min-height: 484px;
-
 		padding-top: 10rem;
 
 		background-image: image('waves--1024w.jpg');
@@ -55,6 +48,7 @@
 	@media screen and (min-width: breakpoint('wide')) {
 		margin-top: -24rem;
 		margin-bottom: -8rem;
+
 
 		& + p {
 			max-width: 33.33333%;
@@ -171,7 +165,7 @@
 
 	&:nth-child(2n) {
 		min-width: 131px;
-		min-height: 131px;
+		min-height: 135px;
 
 		animation-delay: 0s;
 
