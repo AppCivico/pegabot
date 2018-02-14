@@ -7,6 +7,8 @@ $height--desktop: $line-height * 3rem;
 .site-footer {
 	@include clearfix;
 
+	clear: both;
+
 	font-size: ms(-1);
 
 	color: palette('white');
