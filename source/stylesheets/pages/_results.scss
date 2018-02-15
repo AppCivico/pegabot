@@ -69,6 +69,8 @@ $gauge-hand-height: 8px;
 		@extend %results__profile;
 		@extend %loading-bg;
 
+		z-index: layer('below');
+
 		height: 18.75rem;
 
 		cursor: wait;
@@ -403,6 +405,11 @@ $gauge-hand-height: 8px;
 }
 
 .results__footer {
+	position: sticky;
+	bottom: 0;
+
+	z-index: layer('dropdown');
+
 	padding: $gutter;
 	margin-right: $gutter * -1;
 	margin-left: $gutter * -1;
