@@ -19,6 +19,9 @@ window.$vue = new Vue({
 		profileList: [],
 		error: null,
 		metadata: {
+			apiURL: (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+				? 'https://dev.pegabots.com.br/botometer'
+				: '/botometer',
 			loading: false,
 			current: 0,
 			total: 0,
