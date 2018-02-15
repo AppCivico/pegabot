@@ -43,7 +43,7 @@
 <script type="text/x-template" id="results__footer">
 	<footer class="results__footer">
 
-		<p>
+		<p v-if="metadata.download !== ''">
 			<a :href="metadata.download" id="results__export" download="resultados.json">
 				{{ i18n "toExportData" }}
 			</a>
