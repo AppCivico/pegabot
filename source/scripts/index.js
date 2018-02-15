@@ -168,6 +168,7 @@ window.$vue = new Vue({
 			for (let i = 0; i < this.xhr_request.length; i += 1) {
 				this.xhr_request.shift().abort();
 			}
+			this.metadata.loading = false;
 		},
 		removeProfile(index) {
 			this.profileList.splice(index, 1);
