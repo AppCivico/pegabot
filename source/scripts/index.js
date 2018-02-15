@@ -27,6 +27,7 @@ window.$vue = new Vue({
 			total: 0,
 			download: '',
 			query: {},
+			limit: 6,
 		},
 		xhr_request: [],
 	},
@@ -129,25 +130,62 @@ window.$vue = new Vue({
 
 			return params;
 		},
-		loadProfiles() {
+		loadResults(params, index = 0) {
 			this.error = null;
 			this.metadata.loading = true;
 
-			this.$http.get('/botometer', { params: this.metadata.query })
+			this.$http.get(this.metadata.apiURL, { params })
+				.then(
+					(response) => {
+						this.metadata.current += 1;
+
+						if (response.status === 200) {
+							this.$set(this.profileList, index, response.body.profiles);
+
+							if (this.metadata.total === 0) {
+								this.metadata.total = response.body.metadata.count;
+							}
+						} else if (response.message) {
+							this.cancelRequest();
+							window.alert(response.message); // eslint-disable-line no-alert
+						}
+
+						this.metadata.loading = false;
+					},
+					{
+						beforeSend(xhr) {
+							this.xhr_request.push(xhr);
+						},
+					}, (error) => {
+						alert(error.statusText); // eslint-disable-line no-alert
+					},
+				);
+		},
+		loadProfiles(params) {
+			this.error = null;
+			this.metadata.loading = true;
+
+			this.$http.get(this.metadata.apiURL, { params })
 				.then(
 					(response) => {
 						if (response.status === 200) {
-							if (Array.isArray(response.body.profiles)) {
-								this.profileList = response.body.profiles;
-								this.metadata.current = response.body.profiles.length;
+							if (this.metadata.limit > 0) {
+								this.profileList = response.body.profiles.slice(0, this.metadata.limit);
 							} else {
-								this.profileList = [response.body.profiles];
-								this.metadata.current = 1;
+								this.profileList = response.body.profiles;
 							}
 
-							this.metadata.download = response.url;
 							this.metadata.total = response.body.metadata.count;
+
+							for (let index = 0; index < this.profileList.length; index += 1) {
+								this.loadResults({
+									socialnetwork: this.metadata.query.socialnetwork,
+									profile: this.profileList[index].username,
+									search_for: 'profile',
+								}, index);
+							}
 						}
+
 						this.metadata.loading = false;
 					},
 					{
@@ -178,7 +216,20 @@ window.$vue = new Vue({
 		this.metadata.query = this.getQueryString();
 	},
 	mounted() {
-		this.loadProfiles();
+		if (this.metadata.query.search_for === 'followers' || this.metadata.query.search_for === 'friends') {
+			this.loadProfiles({
+				socialnetwork: this.metadata.query.socialnetwork,
+				profile: this.metadata.query.profile,
+				search_for: this.metadata.query.search_for,
+			});
+		} else if (this.metadata.query.search_for === 'profile') {
+			this.loadResults({
+				socialnetwork: this.metadata.query.socialnetwork,
+				profile: this.metadata.query.profile,
+				search_for: this.metadata.query.search_for,
+			});
+		}
+
 		this.showElement();
 	},
 });

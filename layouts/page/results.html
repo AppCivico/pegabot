@@ -50,7 +50,7 @@
 		</p>
 
 		<p class="results__progress" id="results__progress">
-			{{ i18n "analysisProgress" "<strong>{{ metadata.current }} / {{ metadata.total }}</strong>" | safeHTML }}
+			{{ i18n "analysisProgress" "<strong>{{ metadata.current }} / {{ metadata.limit || metadata.total }}</strong>" | safeHTML }}
 		</p>
 		<button type="button" @click="cancelRequest" :disabled="!metadata.loading">{{ i18n "toStop" }}</button>
 	</footer>
