@@ -63,6 +63,9 @@ window.$vue = new Vue({
 				},
 			},
 			filters: {
+				profileLink(username) {
+					return `https://twitter.com/${username}`;
+				},
 				tweetItLink(username) {
 					const via = 'PegaBots';
 					const hashtags = 'pegabots';

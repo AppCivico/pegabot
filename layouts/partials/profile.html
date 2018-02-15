@@ -108,7 +108,7 @@
 		<nav>
 			<ul>
 				<li class="profile">
-					<a data-attr-to-bind-in="href" data-to-bind="profile_link" :href="user.url" target="_blank">
+					<a data-attr-to-bind-in="href" data-to-bind="profile_link" :href="user.username | profileLink" target="_blank">
 						{{ i18n "profileLink" }}
 					</a>
 				</li>
