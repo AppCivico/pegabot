@@ -35,6 +35,21 @@ window.$vue = new Vue({
 					type: Object,
 					required: false,
 				},
+				transform: {
+					type: String,
+					required: false,
+					default: '0 43 43',
+				},
+				to: {
+					type: String,
+					required: false,
+					default: '0 43 43',
+				},
+				value: {
+					type: Number,
+					required: false,
+					default: 0,
+				},
 				index: {
 					type: Number,
 					required: true,
