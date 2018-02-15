@@ -1,4 +1,4 @@
-<article class="results__profile profile" tabindex="0">
+<article class="results__profile profile" tabindex="0" :aria-busy="!user.bot_probability | booleanToString">
 	<button type="button" class="profile__close-button" @click="removeProfile(index)">&times;</button>
 
 	<section class="profile__analysis-summary">

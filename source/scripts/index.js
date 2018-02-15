@@ -57,6 +57,11 @@ window.$vue = new Vue({
 					type: Number,
 					required: true,
 				},
+				'aria-busy': {
+					type: String,
+					required: true,
+					default: 'false',
+				},
 				'remove-profile': {
 					type: Function,
 					required: true,
