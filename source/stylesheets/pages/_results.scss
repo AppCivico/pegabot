@@ -410,7 +410,7 @@ $gauge-hand-height: 8px;
 
 	z-index: layer('dropdown');
 
-	padding: $gutter;
+	padding: ($gutter / 2) $gutter;
 	margin-right: $gutter * -1;
 	margin-left: $gutter * -1;
 
@@ -423,6 +423,7 @@ $gauge-hand-height: 8px;
 	background-color: palette('orange');
 
 	@media screen and (min-width: breakpoint('tablet')) {
+		padding: $gutter;
 		margin-right: $gutter / -2;
 		margin-left: $gutter / -2;
 
