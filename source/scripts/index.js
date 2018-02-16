@@ -169,9 +169,10 @@ window.$vue = new Vue({
 				.then(
 					(response) => {
 						if (response.status === 200) {
-							if (this.metadata.limit > 0) {
+							if (this.metadata.limit > 0 && this.metadata.limit < response.body.profiles.length) {
 								this.profileList = response.body.profiles.slice(0, this.metadata.limit);
 							} else {
+								this.metadata.limit = response.body.profiles.length;
 								this.profileList = response.body.profiles;
 							}
 
