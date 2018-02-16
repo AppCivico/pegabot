@@ -227,6 +227,8 @@ window.$vue = new Vue({
 				search_for: this.metadata.query.search_for,
 			});
 		} else if (this.metadata.query.search_for === 'profile') {
+			this.metadata.limit = 1;
+
 			this.loadResults({
 				socialnetwork: this.metadata.query.socialnetwork,
 				profile: this.metadata.query.profile,
