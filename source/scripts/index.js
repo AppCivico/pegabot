@@ -185,6 +185,9 @@ window.$vue = new Vue({
 									search_for: 'profile',
 								}, index);
 							}
+						} else if (response.message) {
+							this.cancelRequest();
+							window.alert(response.message); // eslint-disable-line no-alert
 						}
 
 						this.metadata.loading = false;
