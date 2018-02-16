@@ -17,6 +17,8 @@
 	cursor: wait;
 
 	&::after {
+		@extend %loading-bg;
+
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -55,7 +57,6 @@
 [aria-busy='true'] {
 	> body,
 	&:not(html) {
-		@extend %loading-bg;
 		@extend %loading-el;
 	}
 }

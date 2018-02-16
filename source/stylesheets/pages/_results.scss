@@ -69,7 +69,7 @@ $gauge-hand-height: 8px;
 		@extend %results__profile;
 		@extend %loading-bg;
 
-		z-index: layer('below');
+		z-index: layer('default');
 
 		height: 18.75rem;
 
