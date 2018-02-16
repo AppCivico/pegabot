@@ -169,11 +169,15 @@ window.$vue = new Vue({
 				.then(
 					(response) => {
 						if (response.status === 200) {
-							if (this.metadata.limit > 0 && this.metadata.limit < response.body.profiles.length) {
+							if (this.metadata.limit > 0 && this.metadata.limit < response.body.metadata.count) {
 								this.profileList = response.body.profiles.slice(0, this.metadata.limit);
 							} else {
-								this.metadata.limit = response.body.profiles.length;
+								this.metadata.limit = response.body.metadata.count;
 								this.profileList = response.body.profiles;
+							}
+
+							if (response.body.metadata.error) {
+								window.alert(response[0].message); // eslint-disable-line no-alert
 							}
 
 							this.metadata.total = response.body.metadata.count;
