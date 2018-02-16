@@ -134,76 +134,74 @@ window.$vue = new Vue({
 			this.error = null;
 			this.metadata.loading = true;
 
-			this.$http.get(this.metadata.apiURL, { params })
-				.then(
-					(response) => {
-						this.metadata.current += 1;
+			this.$http.get(this.metadata.apiURL, {
+				params,
+				before(xhr) {
+					this.xhr_request.push(xhr);
+				},
+			}).then((response) => {
+				this.metadata.current += 1;
 
-						if (response.status === 200) {
-							this.$set(this.profileList, index, response.body.profiles);
+				if (response.body.metadata.error) {
+					window.alert(response.body.metadata.error[0].message); // eslint-disable-line no-alert
+				}
 
-							if (this.metadata.total === 0) {
-								this.metadata.total = response.body.metadata.count;
-							}
-						} else if (response[0].message) {
-							this.cancelRequest();
-							window.alert(response[0].message); // eslint-disable-line no-alert
-						}
+				if (response.status === 200) {
+					this.$set(this.profileList, index, response.body.profiles);
 
-						this.metadata.loading = false;
-					},
-					{
-						beforeSend(xhr) {
-							this.xhr_request.push(xhr);
-						},
-					}, (error) => {
-						alert(error.statusText); // eslint-disable-line no-alert
-					},
-				);
+					if (this.metadata.total === 0) {
+						this.metadata.total = response.body.metadata.total || response.body.metadata.count;
+					}
+				} else if (response[0].message) {
+					this.cancelRequest();
+					window.alert(response[0].message); // eslint-disable-line no-alert
+				}
+
+				this.metadata.loading = false;
+			}, (error) => {
+				alert(error.statusText); // eslint-disable-line no-alert
+			});
 		},
 		loadProfiles(params) {
 			this.error = null;
 			this.metadata.loading = true;
 
-			this.$http.get(this.metadata.apiURL, { params })
-				.then(
-					(response) => {
-						if (response.status === 200) {
-							if (this.metadata.limit > 0 && this.metadata.limit < response.body.metadata.count) {
-								this.profileList = response.body.profiles.slice(0, this.metadata.limit);
-							} else {
-								this.metadata.limit = response.body.metadata.count;
-								this.profileList = response.body.profiles;
-							}
+			this.$http.get(this.metadata.apiURL, {
+				params,
+				before(xhr) {
+					this.xhr_request.push(xhr);
+				},
+			}).then((response) => {
+				if (response.body.metadata.error) {
+					window.alert(response.body.metadata.error[0].message); // eslint-disable-line no-alert
+				}
 
-							if (response.body.metadata.error) {
-								window.alert(response[0].message); // eslint-disable-line no-alert
-							}
+				if (response.status === 200) {
+					if (this.metadata.limit > 0 && this.metadata.limit < response.body.metadata.total) {
+						this.profileList = response.body.profiles.slice(0, this.metadata.limit);
+					} else {
+						this.metadata.limit = response.body.metadata.total;
+						this.profileList = response.body.profiles;
+					}
 
-							this.metadata.total = response.body.metadata.count;
+					this.metadata.total = response.body.metadata.total || response.body.metadata.count;
 
-							for (let index = 0; index < this.profileList.length; index += 1) {
-								this.loadResults({
-									socialnetwork: this.metadata.query.socialnetwork,
-									profile: this.profileList[index].username,
-									search_for: 'profile',
-								}, index);
-							}
-						} else if (response[0].message) {
-							this.cancelRequest();
-							window.alert(response[0].message); // eslint-disable-line no-alert
-						}
+					for (let index = 0; index < this.profileList.length; index += 1) {
+						this.loadResults({
+							socialnetwork: this.metadata.query.socialnetwork,
+							profile: this.profileList[index].username,
+							search_for: 'profile',
+						}, index);
+					}
+				} else if (response[0].message) {
+					this.cancelRequest();
+					window.alert(response[0].message); // eslint-disable-line no-alert
+				}
 
-						this.metadata.loading = false;
-					},
-					{
-						beforeSend(xhr) {
-							this.xhr_request.push(xhr);
-						},
-					}, (error) => {
-						alert(error.statusText); // eslint-disable-line no-alert
-					},
-				);
+				this.metadata.loading = false;
+			}, (error) => {
+				alert(error.statusText); // eslint-disable-line no-alert
+			});
 		},
 		cancelRequest() {
 			for (let i = 0; i < this.xhr_request.length; i += 1) {
