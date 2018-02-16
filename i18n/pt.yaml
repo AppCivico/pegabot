@@ -42,6 +42,8 @@
   translation: "Analisar seguidores"
 - id: toCatchFriends
   translation: "Analisar amigos"
+- id: toCatchThatBot
+  translation: "Pegar os bots"
 - id: toExportData
   translation: "Exportar dados"
 - id: toStop
