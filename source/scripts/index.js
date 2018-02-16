@@ -145,9 +145,9 @@ window.$vue = new Vue({
 							if (this.metadata.total === 0) {
 								this.metadata.total = response.body.metadata.count;
 							}
-						} else if (response.message) {
+						} else if (response[0].message) {
 							this.cancelRequest();
-							window.alert(response.message); // eslint-disable-line no-alert
+							window.alert(response[0].message); // eslint-disable-line no-alert
 						}
 
 						this.metadata.loading = false;
@@ -185,9 +185,9 @@ window.$vue = new Vue({
 									search_for: 'profile',
 								}, index);
 							}
-						} else if (response.message) {
+						} else if (response[0].message) {
 							this.cancelRequest();
-							window.alert(response.message); // eslint-disable-line no-alert
+							window.alert(response[0].message); // eslint-disable-line no-alert
 						}
 
 						this.metadata.loading = false;
