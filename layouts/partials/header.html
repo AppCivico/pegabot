@@ -37,9 +37,6 @@
 			<input type="checkbox" id="menu-controller" class="menu-controller" hidden>
 		{{ end }}
 	{{ end }}
-	{{ if eq (getenv "NODE_ENV") "production" }}
-		{{ partialCached "gTranslator.html" . }}
-	{{ end }}
 	<div class="main-container">
 		{{ if ne .Kind "404" }}
 			<nav class="skip-links">
