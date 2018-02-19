@@ -157,10 +157,12 @@ window.$vue = new Vue({
 					window.alert(response[0].message); // eslint-disable-line no-alert
 				}
 
-				if (this.metadata.current === this.metadata.limit || this.metadata.current === this.metadata.total) {
+				if (
+					this.metadata.current === this.metadata.limit ||
+					this.metadata.current === this.metadata.total
+				) {
 					this.metadata.loading = false;
 				}
-
 			}, (error) => {
 				this.metadata.loading = false;
 				alert(error.statusText); // eslint-disable-line no-alert
