@@ -15,6 +15,7 @@
 }
 
 ._about {
+	@include clearfix;
 }
 
 ._about video {
@@ -37,9 +38,6 @@
 
 		margin-left: $gutter * 3;
 	}
-}
-
-main article {
 }
 
 .intro {

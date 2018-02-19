@@ -133,6 +133,14 @@ section {
 	display: block;
 }
 
+article {
+	margin-bottom: $line-height * 2em;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		margin-bottom: $line-height * 4em;
+	}
+}
+
 /*
  * Add the correct display in all browsers.
  */
