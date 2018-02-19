@@ -1,7 +1,7 @@
 - id: allFeatures
   translation: "Análise completa"
 - id: analysisProgress
-  translation: "Analisando {{ .Count }} contas."
+  translation: "{{ .Count }} contas analisadas."
 - id: aProjectBy
   translation: "Um projeto"
 - id: botProbability

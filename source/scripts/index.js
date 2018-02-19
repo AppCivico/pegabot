@@ -157,8 +157,12 @@ window.$vue = new Vue({
 					window.alert(response[0].message); // eslint-disable-line no-alert
 				}
 
-				this.metadata.loading = false;
+				if (this.metadata.current === this.metadata.limit || this.metadata.current === this.metadata.total) {
+					this.metadata.loading = false;
+				}
+
 			}, (error) => {
+				this.metadata.loading = false;
 				alert(error.statusText); // eslint-disable-line no-alert
 			});
 		},
@@ -197,8 +201,6 @@ window.$vue = new Vue({
 					this.cancelRequest();
 					window.alert(response[0].message); // eslint-disable-line no-alert
 				}
-
-				this.metadata.loading = false;
 			}, (error) => {
 				alert(error.statusText); // eslint-disable-line no-alert
 			});
