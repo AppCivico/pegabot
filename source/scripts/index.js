@@ -130,7 +130,7 @@ window.$vue = new Vue({
 
 			return params;
 		},
-		loadResults(params, index = 0) {
+		loadResults(params, currentIndex = 0) {
 			this.error = null;
 			this.metadata.loading = true;
 
@@ -140,71 +140,49 @@ window.$vue = new Vue({
 					this.xhr_request.push(xhr);
 				},
 			}).then((response) => {
-				this.metadata.current += 1;
-
-				if (response.body.metadata.error) {
-					window.alert(response.body.metadata.error[0].message); // eslint-disable-line no-alert
-				}
-
-				if (response.status === 200) {
-					this.$set(this.profileList, index, response.body.profiles);
-
-					if (this.metadata.total === 0) {
-						this.metadata.total = response.body.metadata.total || response.body.metadata.count;
-					}
-				} else if (response[0].message) {
-					this.cancelRequest();
-					window.alert(response[0].message); // eslint-disable-line no-alert
-				}
-
-				if (
-					this.metadata.current === this.metadata.limit ||
-					this.metadata.current === this.metadata.total
-				) {
-					this.metadata.loading = false;
-				}
-			}, (error) => {
-				this.metadata.loading = false;
-				alert(error.statusText); // eslint-disable-line no-alert
-			});
-		},
-		loadProfiles(params) {
-			this.error = null;
-			this.metadata.loading = true;
-
-			this.$http.get(this.metadata.apiURL, {
-				params,
-				before(xhr) {
-					this.xhr_request.push(xhr);
-				},
-			}).then((response) => {
-				if (response.body.metadata.error) {
-					window.alert(response.body.metadata.error[0].message); // eslint-disable-line no-alert
-				}
-
-				if (response.status === 200) {
-					if (this.metadata.limit > 0 && this.metadata.limit < response.body.metadata.total) {
-						this.profileList = response.body.profiles.slice(0, this.metadata.limit);
+				if (response.body.request_url) {
+					window.location = response.body.request_url;
+				} else {
+					if (response.body.metadata.error) {
+						window.alert(response.body.metadata.error[0].message); // eslint-disable-line no-alert
 					} else {
-						this.metadata.limit = response.body.metadata.total;
-						this.profileList = response.body.profiles;
+						this.metadata.current += 1;
 					}
 
-					this.metadata.total = response.body.metadata.total || response.body.metadata.count;
+					if (response.status === 200) {
+						if (response.body.profiles) {
+							const profileList =
+								(this.metadata.limit > 0 && this.metadata.limit < response.body.metadata.total)
+									? response.body.profiles
+									: response.body.profiles.slice(0, this.metadata.limit);
 
-					for (let index = 0; index < this.profileList.length; index += 1) {
-						this.loadResults({
-							socialnetwork: this.metadata.query.socialnetwork,
-							profile: this.profileList[index].username,
-							search_for: 'profile',
-						}, index);
+							if (params.search_for === 'followers' || params.search_for === 'friends') {
+								if (this.metadata.limit > profileList.length) {
+									this.metadata.limit = profileList.length;
+								}
+							}
+
+							for (let index = 0; index < profileList.length; index += 1) {
+								const thisProfile = profileList[index];
+
+								this.$set(this.profileList, currentIndex, thisProfile);
+
+								if (!thisProfile.bot_probability) {
+									const newParams = params;
+									newParams.profile = thisProfile.username;
+									newParams.search_for = 'profile';
+									this.loadResults(newParams, index);
+								}
+							}
+						}
+					} else if (response.status === 425) {
+						window.alert('No Reason Phrase'); // eslint-disable-line no-alert
 					}
-				} else if (response[0].message) {
-					this.cancelRequest();
-					window.alert(response[0].message); // eslint-disable-line no-alert
 				}
 			}, (error) => {
-				alert(error.statusText); // eslint-disable-line no-alert
+				this.error = error.statusText;
+				this.metadata.loading = false;
+				window.alert(error.statusText); // eslint-disable-line no-alert
 			});
 		},
 		cancelRequest() {
@@ -226,23 +204,37 @@ window.$vue = new Vue({
 		this.metadata.query = this.getQueryString();
 	},
 	mounted() {
-		if (this.metadata.query.search_for === 'followers' || this.metadata.query.search_for === 'friends') {
-			this.loadProfiles({
-				socialnetwork: this.metadata.query.socialnetwork,
-				profile: this.metadata.query.profile,
-				search_for: this.metadata.query.search_for,
-			});
-		} else if (this.metadata.query.search_for === 'profile') {
+		this.metadata.loading = true;
+		if (this.metadata.query.search_for === 'profile') {
 			this.metadata.limit = 1;
-
-			this.loadResults({
-				socialnetwork: this.metadata.query.socialnetwork,
-				profile: this.metadata.query.profile,
-				search_for: this.metadata.query.search_for,
-			});
+			this.metadata.total = 1;
 		}
 
+		const params = {
+			socialnetwork: this.metadata.query.socialnetwork,
+			profile: this.metadata.query.profile,
+			search_for: this.metadata.query.search_for,
+		};
+
+		if (this.metadata.query.authenticated) {
+			params.authenticated = this.metadata.query.authenticated;
+		}
+
+		if (this.metadata.query.oauth_token) {
+			params.oauth_token = this.metadata.query.oauth_token;
+		}
+
+		if (this.metadata.query.oauth_verifier) {
+			params.oauth_verifier = this.metadata.query.oauth_verifier;
+		}
+
+		this.loadResults(params);
+
 		this.showElement();
+
+		Promise.all(this.xhr_request).then(() => {
+			this.metadata.loading = false;
+		});
 	},
 });
 

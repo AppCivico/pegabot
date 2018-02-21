@@ -34,6 +34,10 @@
 			<input type="hidden" name="profile" :value="metadata.query.profile">
 			<input type="hidden" name="socialnetwork" :value="metadata.query.socialnetwork">
 
+			<input type="hidden" name="authenticated" :value="metadata.query.authenticated">
+			<input type="hidden" name="oauth_token" :value="metadata.query.oauth_token">
+			<input type="hidden" name="oauth_verifier" :value="metadata.query.oauth_verifier">
+
 			<button name="search_for" value="followers" type="submit">{{ i18n "toCatchFollowers" }}</button>
 			<button name="search_for" value="friends" type="submit">{{ i18n "toCatchFriends" }}</button>
 		</fieldset>
