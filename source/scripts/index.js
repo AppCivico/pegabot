@@ -134,7 +134,7 @@ window.$vue = new Vue({
 			console.log('params', params); // eslint-disable-line no-console
 			this.error = null;
 			this.metadata.loading = true;
-
+			console.log('this.xhr_request', this.xhr_request); // eslint-disable-line no-console
 			this.$http.get(this.metadata.apiURL, {
 				params,
 				before(xhr) {
