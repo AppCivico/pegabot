@@ -167,7 +167,7 @@ window.$vue = new Vue({
 
 								this.$set(this.profileList, currentIndex, thisProfile);
 
-								if (!thisProfile.bot_probability) {
+								if (params.search_for === 'followers' || params.search_for === 'friends') {
 									const newParams = params;
 									newParams.profile = thisProfile.username;
 									newParams.search_for = 'profile';
