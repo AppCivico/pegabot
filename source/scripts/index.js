@@ -155,8 +155,8 @@ window.$vue = new Vue({
 						if (response.body.profiles) {
 							const profileList =
 								(this.metadata.limit > 0 && this.metadata.limit < response.body.metadata.total)
-									? response.body.profiles
-									: response.body.profiles.slice(0, this.metadata.limit);
+									? response.body.profiles.slice(0, this.metadata.limit)
+									: response.body.profiles;
 
 							if (params.search_for === 'followers' || params.search_for === 'friends') {
 								if (this.metadata.limit > profileList.length) {
