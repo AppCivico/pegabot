@@ -131,6 +131,7 @@ window.$vue = new Vue({
 			return params;
 		},
 		loadResults(params, currentIndex = 0) {
+			console.log('params', params); // eslint-disable-line no-console
 			this.error = null;
 			this.metadata.loading = true;
 
@@ -140,6 +141,7 @@ window.$vue = new Vue({
 					this.xhr_request.push(xhr);
 				},
 			}).then((response) => {
+				console.log('response', response); // eslint-disable-line no-console
 				if (response.body.request_url) {
 					window.location = response.body.request_url;
 				} else {
@@ -171,6 +173,9 @@ window.$vue = new Vue({
 									const newParams = params;
 									newParams.profile = thisProfile.username;
 									newParams.search_for = 'profile';
+
+									console.log('newParams', newParams); // eslint-disable-line no-console
+									console.log('index', index); // eslint-disable-line no-console
 									this.loadResults(newParams, index);
 								}
 							}
@@ -233,6 +238,7 @@ window.$vue = new Vue({
 		this.showElement();
 
 		Promise.all(this.xhr_request).then(() => {
+			console.log('requests finished'); // eslint-disable-line no-console
 			this.metadata.loading = false;
 		});
 	},
