@@ -147,8 +147,6 @@ window.$vue = new Vue({
 				} else {
 					if (response.body.metadata.error) {
 						window.alert(response.body.metadata.error[0].message); // eslint-disable-line no-alert
-					} else {
-						this.metadata.current += 1;
 					}
 
 					if (response.status === 200) {
@@ -162,6 +160,8 @@ window.$vue = new Vue({
 								if (this.metadata.limit > profileList.length) {
 									this.metadata.limit = profileList.length;
 								}
+							} else if (params.search_for === 'profile') {
+								this.metadata.current += 1;
 							}
 
 							for (let index = 0; index < profileList.length; index += 1) {
