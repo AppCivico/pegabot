@@ -151,13 +151,12 @@ window.$vue = new Vue({
 
 					if (response.status === 200) {
 						if (response.body.profiles) {
-							const profileList =
-								(this.metadata.limit > 0 && this.metadata.limit < response.body.metadata.total)
-									? response.body.profiles.slice(0, this.metadata.limit)
-									: response.body.profiles;
+							let profileList = response.body.profiles;
 
 							if (params.search_for === 'followers' || params.search_for === 'friends') {
-								if (this.metadata.limit > profileList.length) {
+								if (this.metadata.limit > 0 && this.metadata.limit < profileList.length) {
+									profileList = profileList.slice(0, this.metadata.limit);
+								} else if (this.metadata.limit > profileList.length) {
 									this.metadata.limit = profileList.length;
 								}
 							} else if (params.search_for === 'profile') {
