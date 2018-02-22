@@ -185,6 +185,7 @@ window.$vue = new Vue({
 					}
 				}
 			}, (error) => {
+				console.log('error', error); // eslint-disable-line no-console
 				this.error = error.statusText;
 				this.metadata.loading = false;
 				window.alert(error.statusText); // eslint-disable-line no-alert
