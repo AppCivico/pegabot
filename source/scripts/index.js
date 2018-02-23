@@ -27,7 +27,7 @@ window.$vue = new Vue({
 			total: 0,
 			download: '',
 			query: {},
-			limit: 0,
+			limit: 12,
 		},
 		xhr_request: [],
 	},
