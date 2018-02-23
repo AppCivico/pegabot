@@ -131,17 +131,14 @@ window.$vue = new Vue({
 			return params;
 		},
 		loadResults(params, currentIndex = 0) {
-			console.log('params', params); // eslint-disable-line no-console
 			this.error = null;
 			this.metadata.loading = true;
-			console.log('this.xhr_request', this.xhr_request); // eslint-disable-line no-console
 			this.$http.get(this.metadata.apiURL, {
 				params,
 				before(xhr) {
 					this.xhr_request.push(xhr);
 				},
 			}).then((response) => {
-				console.log('response', response); // eslint-disable-line no-console
 				if (response.body.request_url) {
 					window.location = response.body.request_url;
 				} else {
@@ -154,32 +151,24 @@ window.$vue = new Vue({
 							let profileList = response.body.profiles;
 
 							if (params.search_for === 'followers' || params.search_for === 'friends') {
-								console.log('this.metadata.limit', this.metadata.limit); // eslint-disable-line no-console
-								console.log('profileList.length', profileList.length); // eslint-disable-line no-console
 								if (this.metadata.limit > 0 && this.metadata.limit < profileList.length) {
 									profileList = profileList.slice(0, this.metadata.limit);
 								} else if (this.metadata.limit > profileList.length) {
 									this.metadata.limit = profileList.length;
 								}
-								console.log('this.metadata.limit', this.metadata.limit); // eslint-disable-line no-console
-								console.log('profileList.length', profileList.length); // eslint-disable-line no-console
 							} else if (params.search_for === 'profile') {
 								this.metadata.current += 1;
 							}
-							console.log('profileList', profileList); // eslint-disable-line no-console
+
 							for (let index = 0; index < profileList.length; index += 1) {
 								const thisProfile = profileList[index];
 
 								this.$set(this.profileList, currentIndex, thisProfile);
-								console.log('index', index); // eslint-disable-line no-console
-								console.log('params.search_for', params.search_for); // eslint-disable-line no-console
 								if (params.search_for === 'followers' || params.search_for === 'friends') {
-									// most browser supported way of clone an object
 									const newParams = Object.assign({}, params);
 									newParams.profile = thisProfile.username;
 									newParams.search_for = 'profile';
 
-									console.log('newParams', newParams); // eslint-disable-line no-console
 									this.loadResults(newParams, index);
 								}
 							}
