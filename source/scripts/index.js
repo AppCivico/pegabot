@@ -207,9 +207,12 @@ window.$vue = new Vue({
 	},
 	created() {
 		this.metadata.query = this.getQueryString();
+
+		if (this.metadata.query.search_for) {
+			this.metadata.loading = true;
+		}
 	},
 	mounted() {
-		this.metadata.loading = true;
 		if (this.metadata.query.search_for === 'profile') {
 			this.metadata.limit = 1;
 			this.metadata.total = 1;
