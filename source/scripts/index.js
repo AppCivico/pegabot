@@ -161,19 +161,21 @@ window.$vue = new Vue({
 								this.metadata.current += 1;
 							}
 
-							for (let index = 0; index < profileList.length; index += 1) {
-								const thisProfile = profileList[index];
-
-								console.log('currentIndex', currentIndex); // eslint-disable-line no-console
-								console.log('thisProfile', thisProfile); // eslint-disable-line no-console
+							if (params.search_for === 'profile') {
 								this.$set(this.profileList, currentIndex, thisProfile);
+							} else if (params.search_for === 'followers' || params.search_for === 'friends') {
+								this.profileList = this.profileList.concat(profileList);
 
-								if (params.search_for === 'followers' || params.search_for === 'friends') {
-									const newParams = Object.assign({}, params);
-									newParams.profile = thisProfile.username;
-									newParams.search_for = 'profile';
+								for (let index = 0; index < profileList.length; index += 1) {
+									const thisProfile = profileList[index];
+										this.$set(this.profileList, index, thisProfile);
 
-									this.loadResults(newParams, index);
+										const newParams = Object.assign({}, params);
+										newParams.profile = thisProfile.username;
+										newParams.search_for = 'profile';
+
+										this.loadResults(newParams, index);
+									}
 								}
 							}
 						}
