@@ -22,7 +22,7 @@ window.$vue = new Vue({
 			apiURL: (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
 				? 'https://dev.pegabots.com.br/botometer'
 				: '/botometer',
-			loading: false,
+			loading: true,
 			current: 0,
 			total: 0,
 			download: '',
