@@ -191,7 +191,9 @@ window.$vue = new Vue({
 				this.cancelRequest();
 				this.error = error.statusText;
 				this.metadata.loading = false;
-				window.alert(error.statusText); // eslint-disable-line no-alert
+				if (error.statusText) {
+					window.alert(error.statusText); // eslint-disable-line no-alert
+				}
 			});
 		},
 		cancelRequest() {
