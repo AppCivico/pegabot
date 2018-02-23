@@ -183,11 +183,8 @@ window.$vue = new Vue({
 					}
 				}
 			}, (error) => {
-				if (currentIndex === this.metadata.limit - 1) {
-					this.metadata.loading = false;
-				}
-
 				console.log('error', error); // eslint-disable-line no-console
+				this.cancelRequest();
 				this.error = error.statusText;
 				this.metadata.loading = false;
 				window.alert(error.statusText); // eslint-disable-line no-alert
