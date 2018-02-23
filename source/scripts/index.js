@@ -154,15 +154,19 @@ window.$vue = new Vue({
 							let profileList = response.body.profiles;
 
 							if (params.search_for === 'followers' || params.search_for === 'friends') {
+								console.log('this.metadata.limit', this.metadata.limit); // eslint-disable-line no-console
+								console.log('profileList.length', profileList.length); // eslint-disable-line no-console
 								if (this.metadata.limit > 0 && this.metadata.limit < profileList.length) {
 									profileList = profileList.slice(0, this.metadata.limit);
 								} else if (this.metadata.limit > profileList.length) {
 									this.metadata.limit = profileList.length;
 								}
+								console.log('this.metadata.limit', this.metadata.limit); // eslint-disable-line no-console
+								console.log('profileList.length', profileList.length); // eslint-disable-line no-console
 							} else if (params.search_for === 'profile') {
 								this.metadata.current += 1;
 							}
-
+							console.log('profileList', profileList); // eslint-disable-line no-console
 							for (let index = 0; index < profileList.length; index += 1) {
 								const thisProfile = profileList[index];
 
