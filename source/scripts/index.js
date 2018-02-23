@@ -171,14 +171,14 @@ window.$vue = new Vue({
 								const thisProfile = profileList[index];
 
 								this.$set(this.profileList, currentIndex, thisProfile);
-
+								console.log('index', index); // eslint-disable-line no-console
+								console.log('params.search_for', params.search_for); // eslint-disable-line no-console
 								if (params.search_for === 'followers' || params.search_for === 'friends') {
 									const newParams = params;
 									newParams.profile = thisProfile.username;
 									newParams.search_for = 'profile';
 
 									console.log('newParams', newParams); // eslint-disable-line no-console
-									console.log('index', index); // eslint-disable-line no-console
 									this.loadResults(newParams, index);
 								}
 							}
