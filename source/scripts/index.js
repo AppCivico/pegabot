@@ -164,7 +164,10 @@ window.$vue = new Vue({
 							for (let index = 0; index < profileList.length; index += 1) {
 								const thisProfile = profileList[index];
 
+								console.log('currentIndex', currentIndex); // eslint-disable-line no-console
+								console.log('thisProfile', thisProfile); // eslint-disable-line no-console
 								this.$set(this.profileList, currentIndex, thisProfile);
+
 								if (params.search_for === 'followers' || params.search_for === 'friends') {
 									const newParams = Object.assign({}, params);
 									newParams.profile = thisProfile.username;
