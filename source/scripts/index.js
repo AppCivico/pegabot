@@ -176,8 +176,16 @@ window.$vue = new Vue({
 					} else if (response.status === 425) {
 						window.alert('No Reason Phrase'); // eslint-disable-line no-alert
 					}
+
+					if (currentIndex === this.metadata.limit) {
+						this.metadata.loading = false;
+					}
 				}
 			}, (error) => {
+				if (currentIndex === this.metadata.limit) {
+					this.metadata.loading = false;
+				}
+
 				console.log('error', error); // eslint-disable-line no-console
 				this.error = error.statusText;
 				this.metadata.loading = false;
