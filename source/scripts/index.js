@@ -177,12 +177,12 @@ window.$vue = new Vue({
 						window.alert('No Reason Phrase'); // eslint-disable-line no-alert
 					}
 
-					if (currentIndex === this.metadata.limit) {
+					if (currentIndex === this.metadata.limit - 1) {
 						this.metadata.loading = false;
 					}
 				}
 			}, (error) => {
-				if (currentIndex === this.metadata.limit) {
+				if (currentIndex === this.metadata.limit - 1) {
 					this.metadata.loading = false;
 				}
 
