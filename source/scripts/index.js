@@ -174,7 +174,8 @@ window.$vue = new Vue({
 								console.log('index', index); // eslint-disable-line no-console
 								console.log('params.search_for', params.search_for); // eslint-disable-line no-console
 								if (params.search_for === 'followers' || params.search_for === 'friends') {
-									const newParams = params;
+									// most browser supported way of clone an object
+									const newParams = Object.create(params);
 									newParams.profile = thisProfile.username;
 									newParams.search_for = 'profile';
 
