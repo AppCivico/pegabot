@@ -11,6 +11,10 @@ $gauge-hand-height: 8px;
 	margin-bottom: 0;
 }
 
+.results-page [role='main'] {
+	margin-bottom: 0;
+}
+
 .analisys-form--rebuild {
 	@media screen and (min-width: breakpoint('tablet')) {
 		text-align: right;
