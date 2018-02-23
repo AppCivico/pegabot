@@ -125,7 +125,7 @@
 					</a>
 				</li>
 
-				<li class="feedback" v-if="user.feedback_report_link !== '' && user.feedback_report_link !== '.'">
+				<li class="feedback" v-if="user.feedback_report_link && user.feedback_report_link !== '' && user.feedback_report_link !== '.'">
 					<a data-attr-to-bind-in="href" data-to-append="feedback_report_link" :href="user.feedback_report_link" target="_blank">
 						{{ i18n "feedbackLink" }}
 					</a>
