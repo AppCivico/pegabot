@@ -412,7 +412,7 @@ $gauge-hand-height: 8px;
 	position: sticky;
 	bottom: 0;
 
-	z-index: layer('dropdown');
+	z-index: layer('modal');
 
 	padding: ($gutter / 2) $gutter;
 	margin-right: $gutter * -1;
