@@ -156,6 +156,7 @@ window.$vue = new Vue({
 								} else if (this.metadata.limit > profileList.length) {
 									this.metadata.limit = profileList.length;
 								}
+								this.metadata.total = profileList.length;
 							} else if (params.search_for === 'profile') {
 								this.metadata.current += 1;
 							}
