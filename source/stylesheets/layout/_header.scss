@@ -47,16 +47,24 @@
 [role='banner'] {
 	@include image-replacement;
 
-	width: 5rem;
-	height: 15rem;
-	min-width: #{127px + 30px};
-	min-height: #{227px + 30px};
+	width: 9.375rem;
+	height: 9.375rem;
+	min-width: #{150px + 30px};
+	min-height: #{150px + 30px};
 
 	margin-top: ($line-height * 1rem);
-	margin-bottom: ($line-height * 1rem);
+	margin-bottom: 0;
 
-	background-image: image('logotype.png');
+	background-image: image('logotype--150w.png');
 	background-position: 50% 50%;
+
+	@media screen and (min-width: breakpoint('phablet')) {
+		margin-top: 0;
+	}
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		margin-top: calc(#{$line-height} * -3rem);
+	}
 }
 
 [role='banner'] a {
