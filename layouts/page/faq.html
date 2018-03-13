@@ -1,0 +1,15 @@
+{{ $.Scratch.Add "rootClass" "faq-page" }}{{ partial "header.html" . }}
+<article role="main" id="conteudo">
+	<h1>{{ .Title }}</h1>
+
+	{{ .Content }}
+
+	{{ range where $.Site.RegularPages ".Type" "faq" }}
+		<details id="faq__{{ .File.TranslationBaseName }}">
+			<summary>{{ .Title | safeHTML | markdownify }}</summary>
+			{{ .Content }}
+		</details>
+	{{ end }}
+
+</article>
+{{ partial "footer.html" . }}
