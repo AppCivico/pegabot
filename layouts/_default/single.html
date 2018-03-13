@@ -1,0 +1,11 @@
+{{ $.Scratch.Add "rootClass" "default-page" }}{{ partial "header.html" . }}
+<article role="main" id="conteudo">
+	<h1>{{ .Title }}</h1>
+
+	{{ with .Content }}
+		{{ . }}
+	{{ end }}
+
+</article>
+{{ partial "footer.html" . }}
+
