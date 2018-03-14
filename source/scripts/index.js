@@ -20,7 +20,7 @@ window.$vue = new Vue({
 		error: null,
 		metadata: {
 			apiURL: (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-				? 'https://dev.pegabots.com.br/botometer'
+				? 'https://dev.pegabot.com.br/botometer'
 				: '/botometer',
 			loading: true,
 			current: 0,
@@ -68,8 +68,8 @@ window.$vue = new Vue({
 					return `https://twitter.com/${username}`;
 				},
 				tweetItLink(username) {
-					const via = 'PegaBots';
-					const hashtags = 'pegabots';
+					const via = 'Pegabot';
+					const hashtags = 'Pegabot';
 					const title = encodeURIComponent(`Is ${username} a real person?`);
 					const url = encodeURIComponent(window.location.href);
 
