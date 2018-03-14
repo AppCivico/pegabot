@@ -32,11 +32,6 @@
 	{{ end }}
 </head>
 <body>
-	{{ if ne .Kind "404" }}
-		{{ with .Site.Menus.main }}
-			<input type="checkbox" id="menu-controller" class="menu-controller" hidden>
-		{{ end }}
-	{{ end }}
 	<div class="main-container">
 		{{ if ne .Kind "404" }}
 			<nav class="skip-links">
@@ -47,12 +42,6 @@
 			</nav>
 		{{ end }}
 		<header class="site-header">
-			{{ if ne .Kind "404" }}
-				{{ with .Site.Menus.main }}
-					<label for="menu-controller" onclick>menu</label>
-				{{ end }}
-			{{ end }}
-
 			{{ with $.Site.Data.responsibles }}
 				<style>
 					{{ range . }}
@@ -72,12 +61,5 @@
 					{{ .Site.Title }}
 				</a>
 			</div>
-			{{ if ne .Kind "404" }}
-				{{ with .Site.Menus.main }}
-					<nav class="main-menu" id="menu">
-						{{ partialCached "menu.html" . }}
-					</nav>
-				{{ end }}
-			{{ end }}
 		</header>
 		<div class="content-container">
