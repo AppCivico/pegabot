@@ -1,0 +1,19 @@
+[role='main'] video {
+	display: block;
+
+	width: 100%;
+
+	box-shadow: 0 $gutter ($gutter * 2) palette('shadow');
+	@media screen and (min-width: breakpoint('tablet')) {
+		float: right;
+
+		width: 50%;
+
+		margin-left: $gutter;
+	}
+	@media screen and (min-width: breakpoint('desktop')) {
+		width: 60%;
+
+		margin-left: $gutter * 3;
+	}
+}
