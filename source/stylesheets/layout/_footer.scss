@@ -24,6 +24,16 @@ $height--desktop: $line-height * 3rem;
 	}
 }
 
+.site-footer a {
+	@include link-undercover;
+}
+
+.footer-menu {
+	@media screen and (min-width: breakpoint('tablet')) {
+		float: left;
+	}
+}
+
 .site-footer .site-tagline {
 	margin-bottom: $line-height * 2.5em;
 
