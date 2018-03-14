@@ -4,11 +4,17 @@
 
 	{{ .Content }}
 
-	{{ range where $.Site.RegularPages ".Type" "faq" }}
-		<details id="faq__{{ .File.TranslationBaseName }}">
-			<summary>{{ .Title | safeHTML | markdownify }}</summary>
-			{{ .Content }}
-		</details>
+	{{ with where $.Site.RegularPages ".Type" "faq" }}
+		<dl class="questions">
+			{{ range . }}
+				<div id="faq__{{ .File.TranslationBaseName }}" class="questions__item">
+					<dt>{{ .Title | safeHTML | markdownify }}</dt>
+					<dd>
+						{{ .Content }}
+					</dd>
+				</div>
+			{{ end }}
+		</dl>
 	{{ end }}
 
 </article>
