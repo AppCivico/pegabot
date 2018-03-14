@@ -5,5 +5,5 @@ appCivico:
   iconNegative: "appcivico--negative.png"
   iconHeight: 23
   iconWidth: 138
-  link:
+  link: "http://appcivico.com/"
   weight: 1

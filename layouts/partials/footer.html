@@ -45,7 +45,7 @@
 									{{ with .id }} class="developers__item--{{ . }}" {{ end }}
 								>
 									{{ with .link }}
-										<a href="{{ .link }}" target="_blank">
+										<a href="{{ . }}" target="_blank">
 									{{ end }}
 										{{ .name }}
 									{{ with .link }}
