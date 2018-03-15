@@ -36,10 +36,10 @@
   translation: "Frequência"
 - id: toCatch
   translation: "Pegar"
-- id: toCatchFollowers
-  translation: "Analisar seguidores"
-- id: toCatchFriends
-  translation: "Analisar amigos"
+- id: toCatchMyFollowers
+  translation: "Analisar meus seguidores"
+- id: toCatchMyFriends
+  translation: "Analisar meus amigos"
 - id: toCatchThatBot
   translation: "Pegar os bots"
 - id: toExportData
