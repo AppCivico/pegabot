@@ -50,6 +50,8 @@ $gauge-hand-height: 8px;
 
 	margin: 0 0 ($line-height * 1em);
 
+	text-align: left;
+
 	@media screen and (min-width: breakpoint('tablet')) {
 		@include inline-block-item;
 
@@ -62,6 +64,16 @@ $gauge-hand-height: 8px;
 
 	@media screen and (min-width: breakpoint('desktop')) {
 		width: 33.33333%;
+	}
+
+	&:first-child:last-child {
+		display: block;
+
+		width: 100%;
+		max-width: 36rem;
+
+		margin-right: auto;
+		margin-left: auto;
 	}
 }
 
@@ -297,8 +309,8 @@ $gauge-hand-height: 8px;
 }
 
 .profile__analysis-results {
-	padding-right: $gutter;
-	padding-left: $gutter;
+	padding-right: ($gutter / 2);
+	padding-left: ($gutter / 2);
 
 	font-size: ms(-1);
 	line-height: 2;
