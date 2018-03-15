@@ -86,9 +86,23 @@ $gauge-hand-height: 8px;
 .results__profile {
 	@extend %results__profile;
 
+	top: 0;
+
 	cursor: pointer;
 
+	transition-duration: $duration;
+	transition-property: top, padding;
+
+	&:hover {
+		top: $line-height * -0.5em;
+
+		transition-duration: $duration;
+		transition-property: top, padding;
+	}
+
 	&:focus {
+		top: 0;
+
 		z-index: layer('modal');
 
 		padding: 0;
@@ -97,7 +111,8 @@ $gauge-hand-height: 8px;
 
 		outline: 0;
 
-		transition: padding $duration;
+		transition-duration: $duration;
+		transition-property: top, padding;
 
 		&::after {
 			position: fixed;
@@ -133,10 +148,17 @@ $gauge-hand-height: 8px;
 
 .results__profile > *:not(button):not(footer) {
 	background-color: palette('gray', 'x-light');
+
+	box-shadow: 0 0 0 palette('shadow');
+
+	transition: box-shadow $duration;
 }
 
+.results__profile:hover > *:not(button),
 .results__profile:focus > *:not(button) {
 	box-shadow: 0 ($line-height * 1em) ($line-height * 1em) palette('shadow');
+
+	transition: box-shadow $duration;
 }
 
 .profile__close-button {
