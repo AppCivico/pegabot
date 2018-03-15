@@ -38,8 +38,8 @@
 			<input type="hidden" name="oauth_token" :value="metadata.query.oauth_token">
 			<input type="hidden" name="oauth_verifier" :value="metadata.query.oauth_verifier">
 
-			<button v-show="metadata.query.search_for == 'profile'" name="search_for" value="followers" type="submit">{{ i18n "toCatchFollowers" }}</button>
-			<button v-show="metadata.query.search_for == 'profile'" name="search_for" value="friends" type="submit">{{ i18n "toCatchFriends" }}</button>
+			<button name="search_for" value="followers" type="submit">{{ i18n "toCatchMyFollowers" }}</button>
+			<button name="search_for" value="friends" type="submit">{{ i18n "toCatchMyFriends" }}</button>
 		</fieldset>
 	</form>
 </script>
