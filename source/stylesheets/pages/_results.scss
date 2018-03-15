@@ -288,7 +288,6 @@ $gauge-hand-height: 8px;
 	margin-left: auto;
 }
 
-
 .profile__meter {
 	@include visually-hidden;
 }
@@ -370,7 +369,6 @@ $gauge-hand-height: 8px;
 	border-left-color: palette('gauge', 'level-5');
 }
 
-
 .profile__analysis-results dt,
 .profile__analysis-results dd {
 	display: inline;
@@ -436,10 +434,6 @@ $gauge-hand-height: 8px;
 
 .profile__links .feedback a {
 	background-image: image('feedback-icon.png');
-}
-
-.results-page .site-footer {
-	@include visually-hidden;
 }
 
 .results__footer {
