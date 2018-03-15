@@ -24,8 +24,6 @@
   translation: "Rede"
 - id: noScriptMessage
   translation: "Essa funcionalidade depende de JavaScript."
-- id: profile
-  translation: "Perfil"
 - id: profileLink
   translation: "Perfil na rede social"
 - id: returnedResults
@@ -50,5 +48,7 @@
   translation: "Parar"
 - id: tweetItLink
   translation: "Tweetar esse resultado"
+- id: twitterProfile
+  translation: "perfil no Twitter"
 - id: user
   translation: "Usuário"
