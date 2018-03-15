@@ -123,10 +123,14 @@
 }
 
 .analisys-form__profile {
-	width: 70%;
+	width: 100%;
 
-	@media screen and (min-width: breakpoint('phone')) {
-		width: 80%;
+	.analisys-form__social-network:not([hidden]) + & {
+		width: 70%;
+
+		@media screen and (min-width: breakpoint('phone')) {
+			width: 80%;
+		}
 	}
 }
 
@@ -141,7 +145,19 @@
 }
 
 .analisys-form__profile input {
-	border-radius: 0 ($line-height * 1em) ($line-height * 1em) 0;
+	border-radius: ($line-height * 1em);
+
+	.analisys-form__social-network:not([hidden]) + & {
+		border-radius: 0 ($line-height * 1em) ($line-height * 1em) 0;
+	}
+}
+
+.analisys-form__profile label {
+	padding-left: ($line-height * 1em);
+
+	.analisys-form__social-network:not([hidden]) + & {
+		padding-left: 0;
+	}
 }
 
 .analysis-form__profile-button.analysis-form__profile-button {
