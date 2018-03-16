@@ -407,6 +407,16 @@ $gauge-hand-height: 8px;
 	background-color: palette('blue');
 }
 
+.profile__links nav {
+	width: 100%;
+
+	table-layout: fixed;
+}
+
+.profile__links li {
+	padding: 0;
+}
+
 .profile__links a {
 	@include image-replacement;
 
