@@ -6,3 +6,5 @@ layout: results
 menu:
 slug: "resultados"
 ---
+
+Devido a limites de consulta automatizada ao Twitter, a análise é limitada a **12 perfis**, por enquanto.
