@@ -21,7 +21,6 @@
 			<profile v-for="(profileItem, index) in profileList" v-bind:user="profileItem" v-bind:key="profileItem.username" :index="index" :remove-profile="removeProfile"></profile>
 		</section>
 		<results-form v-bind:metadata="metadata"></results-form>
-		<results-footer v-bind:metadata="metadata" :cancel-request="cancelRequest"></results-footer>
 	</div>
 
 </article>
@@ -42,22 +41,6 @@
 			<button name="search_for" value="friends" type="submit">{{ i18n "toCatchMyFriends" }}</button>
 		</fieldset>
 	</form>
-</script>
-
-<script type="text/x-template" id="results__footer">
-	<footer class="results__footer">
-
-		<p v-if="metadata.download !== '' && metadata.download !== '.'">
-			<a :href="metadata.download" id="results__export" download="resultados.json">
-				{{ i18n "toExportData" }}
-			</a>
-		</p>
-
-		<p class="results__progress" id="results__progress">
-			{{ i18n "analysisProgress" "<strong>{{ metadata.current }} / {{ metadata.limit || metadata.total }}</strong>" | safeHTML }}
-		</p>
-		<button type="button" @click="cancelRequest" v-show="metadata.loading">{{ i18n "toStop" }}</button>
-	</footer>
 </script>
 
 <script type="text/x-template" id="profile">
