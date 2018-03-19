@@ -1,6 +1,7 @@
 ---
 date: 2018-03-13T17:54:29-03:00
 draft: false
+id: "o-pegabot-funciona-com-que-redes-sociais"
 title: "O PegaBot funciona com todas as redes sociais?"
 layout: none
 type: faq

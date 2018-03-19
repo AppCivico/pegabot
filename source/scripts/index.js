@@ -245,8 +245,6 @@ window.$vue = new Vue({
 		this.loadResults(params);
 
 		this.showElement();
-
-		this.metadata.loading = true;
 	},
 });
 

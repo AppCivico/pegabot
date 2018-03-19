@@ -31,6 +31,7 @@
 		<fieldset>
 			<p v-show="!metadata.loading || metadata.total > 0">{{ i18n "returnedResults" "<output>{{ metadata.total }}</output>" | safeHTML }}</p>
 
+
 			<input type="hidden" name="profile" :value="metadata.query.profile">
 			<input type="hidden" name="socialnetwork" :value="metadata.query.socialnetwork">
 
@@ -46,16 +47,13 @@
 
 <script type="text/x-template" id="results__footer">
 	<footer class="results__footer">
-
+		<p>{{ i18n "callToFaqResults" | markdownify }}</p>
 		<p v-if="metadata.download !== '' && metadata.download !== '.'">
 			<a :href="metadata.download" id="results__export" download="resultados.json">
 				{{ i18n "toExportData" }}
 			</a>
 		</p>
 
-		<p class="results__progress" id="results__progress">
-			{{ i18n "analysisProgress" "<strong>{{ metadata.current }} / {{ metadata.limit || metadata.total }}</strong>" | safeHTML }}
-		</p>
 		<button type="button" @click="cancelRequest" v-show="metadata.loading">{{ i18n "toStop" }}</button>
 	</footer>
 </script>

@@ -1,6 +1,7 @@
 ---
 date: 2018-03-13T18:10:01-03:00
 draft: false
+id: "quem-financia-o-pegabot"
 title: "Quem financia o PegaBot?"
 layout: none
 type: faq
