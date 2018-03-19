@@ -245,11 +245,6 @@ window.$vue = new Vue({
 		this.loadResults(params);
 
 		this.showElement();
-
-		Promise.all(this.xhr_request).then(() => {
-			console.log('requests finished'); // eslint-disable-line no-console
-			this.metadata.loading = false;
-		});
 	},
 });
 

@@ -78,7 +78,6 @@ $gauge-hand-height: 8px;
 }
 
 .results__list[aria-busy='true'] {
-	// min-height: 18.75rem;
 	background: none;
 
 	&::after {
@@ -498,7 +497,7 @@ $gauge-hand-height: 8px;
 	background-color: transparent;
 
 	border: $stroke solid palette('white');
-	border-radius: $line-height * 1em; // sass-lint:disable-line property-units
+	border-radius: ($line-height * 1em);
 
 	&::before {
 		vertical-align: text-bottom;
