@@ -1,6 +1,6 @@
 {
   "name": "pega-bots",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Social networks profiles bot-like analyzer",
   "main": "index.html",
   "scripts": {
@@ -13,9 +13,9 @@
     "postbuild": "cross-env NODE_ENV=production hugo --ignoreCache --cleanDestinationDir",
     "clean": "rimraf ./static/assets/**/*.{css,img,js,png,gif,jpg,map}",
     "cachebust": "npm run cachebust:media && npm run cachebust:cssAndJs",
-    "cachebust:content":  "hashmark -l 8 ./**/*.{gif,jpg,png,svg,mp4}      {dir}/{name}-{hash}{ext} --cwd content | replaceinfiles -s \"{content,data}/**/*.{md,yaml}\"                    -d \"{dir}/{base}\"",
+    "cachebust:content": "hashmark -l 8 ./**/*.{gif,jpg,png,svg,mp4}      {dir}/{name}-{hash}{ext} --cwd content | replaceinfiles -s \"{content,data}/**/*.{md,yaml}\"                    -d \"{dir}/{base}\"",
     "cachebust:cssAndJs": "hashmark -l 8 assets/**/*.{js,css}              {dir}/{name}-{hash}{ext} --cwd static  | replaceinfiles -s \"layouts/**/*.html\"                                -d \"{dir}/{base}\"",
-    "cachebust:media":    "hashmark -l 8 assets/**/*.{gif,jpg,png,svg,mp4} {dir}/{name}-{hash}{ext} --cwd static  | replaceinfiles -s \"{content,data,layouts,static}/**/*.{md,html,css}\" -d \"{dir}/{base}\"",
+    "cachebust:media": "hashmark -l 8 assets/**/*.{gif,jpg,png,svg,mp4} {dir}/{name}-{hash}{ext} --cwd static  | replaceinfiles -s \"{content,data,layouts,static}/**/*.{md,html,css}\" -d \"{dir}/{base}\"",
     "compile:sass": "node-sass ./source/stylesheets --output-style compressed --output ./static/assets/styles --source-map true",
     "compress:css": "postcss --use autoprefixer cssnano --safe -r ./static/assets/styles/**/*.css",
     "compress:img": "imagemin \"./source/images/**/*.{gif,jpg,png,svg}\" --out-dir=./static/assets/images",
