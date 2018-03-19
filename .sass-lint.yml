@@ -382,6 +382,7 @@ rules:
           - 'px'
         border-radius:
           - '%'
+          - 'em'
           - 'px'
         border-right:
           - 'px'
