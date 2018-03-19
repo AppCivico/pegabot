@@ -446,11 +446,6 @@ $gauge-hand-height: 8px;
 }
 
 .results__footer {
-	position: sticky;
-	bottom: 0;
-
-	z-index: layer('modal');
-
 	padding: ($gutter / 2) $gutter;
 	margin-right: $gutter * -1;
 	margin-left: $gutter * -1;

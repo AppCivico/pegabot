@@ -21,6 +21,7 @@
 			<profile v-for="(profileItem, index) in profileList" v-bind:user="profileItem" v-bind:key="profileItem.username" :index="index" :remove-profile="removeProfile"></profile>
 		</section>
 		<results-form v-bind:metadata="metadata"></results-form>
+		<results-footer v-bind:metadata="metadata" :cancel-request="cancelRequest"></results-footer>
 	</div>
 
 </article>
@@ -29,6 +30,7 @@
 	<form method="get" name="analisys_form" class="analisys-form--rebuild">
 		<fieldset>
 			<p v-show="!metadata.loading || metadata.total > 0">{{ i18n "returnedResults" "<output>{{ metadata.total }}</output>" | safeHTML }}</p>
+
 
 			<input type="hidden" name="profile" :value="metadata.query.profile">
 			<input type="hidden" name="socialnetwork" :value="metadata.query.socialnetwork">
@@ -41,6 +43,19 @@
 			<button name="search_for" value="friends" type="submit">{{ i18n "toCatchMyFriends" }}</button>
 		</fieldset>
 	</form>
+</script>
+
+<script type="text/x-template" id="results__footer">
+	<footer class="results__footer">
+		<p>{{ i18n "callToFaqResults" | markdownify }}</p>
+		<p v-if="metadata.download !== '' && metadata.download !== '.'">
+			<a :href="metadata.download" id="results__export" download="resultados.json">
+				{{ i18n "toExportData" }}
+			</a>
+		</p>
+
+		<button type="button" @click="cancelRequest" v-show="metadata.loading">{{ i18n "toStop" }}</button>
+	</footer>
 </script>
 
 <script type="text/x-template" id="profile">

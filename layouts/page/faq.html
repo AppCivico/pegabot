@@ -7,7 +7,7 @@
 	{{ with where $.Site.RegularPages ".Type" "faq" }}
 		<dl class="questions">
 			{{ range . }}
-				<div id="faq__{{ .File.TranslationBaseName }}" class="questions__item">
+				<div id="faq__{{ .Params.id }}" class="questions__item">
 					<dt>{{ .Title | safeHTML | markdownify }}</dt>
 					<dd>
 						{{ .Content }}

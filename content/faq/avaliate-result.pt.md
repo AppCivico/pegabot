@@ -1,6 +1,7 @@
 ---
 date: 2018-03-13T18:08:36-03:00
 draft: false
+id: "como-avaliar-o-resultado"
 title: "Como posso avaliar o resultado?"
 layout: none
 type: faq
