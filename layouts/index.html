@@ -11,22 +11,11 @@
 
 	{{ end }}
 
-	<article class="intro" id="intro">
-		{{ with $.Site.Data.botStats }}
-			<dl class="statistics">
-				{{ range .stats }}
-					<div class="statistics__item">
-						<dt>{{ .number }}</dt>
-						<dd>{{ .description }}</dd>
-					</div>
-				{{ end }}
-			</dl>
-		{{ end }}
-
-		{{ with .Content }}
+	{{ with .Content }}
+		<article class="intro" id="intro">
 			{{ . }}
-		{{ end }}
-	</article>
+		</article>
+	{{ end }}
 
 
 	{{ $resources := where (where $.Site.Pages ".Section" "_home") ".Type" "contentResource" }}

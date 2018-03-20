@@ -23,11 +23,75 @@
 	background-image: image('logotype.png');
 }
 
+.home-page main {
+	@include aspect-ratio(320 x 682);
+
+	min-height: 682px;
+
+	padding-top: 0;
+	padding-bottom: 0;
+
+	background-image: image('waves--320w.jpg');
+	background-position: 0 0;
+	background-size: 100% auto;
+
+	> :first-child {
+		padding-top: 50%;
+	}
+
+	@media screen and (min-width: breakpoint('phone')) {
+		@include aspect-ratio(480 x 682);
+
+		min-height: 682px;
+
+		background-image: image('waves--480.jpg');
+	}
+
+	@media screen and (min-width: breakpoint('phablet')) {
+		@include aspect-ratio(768 x 682);
+
+		background-image: image('waves--768w.jpg');
+
+	}
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		@include aspect-ratio(1024 x 484);
+
+		min-height: 484px;
+
+		background-image: image('waves--1024w.jpg');
+
+		> :first-child {
+			padding-top: 25%;
+		}
+	}
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		@include aspect-ratio(1440 x 484);
+
+		min-height: 682px;
+
+		background-image: image('waves--1440w.jpg');
+	}
+}
+
 .intro {
+	clear: both;
+
+	padding-top: $line-height * 1rem;
+
 	text-align: right;
 }
 
 .intro p {
 	margin-right: 0;
 	margin-left: auto;
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		max-width: 40%;
+	}
+
+	@media screen and (min-width: breakpoint('wide')) {
+		max-width: 33.33333%;
+	}
 }

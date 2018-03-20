@@ -2,9 +2,7 @@
 	@include inline-block-wrapper;
 	@include justify-last-line;
 
-	padding-top: 5rem;
 	padding-right: $gutter / 2;
-	padding-bottom: 5rem;
 	padding-left: $gutter / 2;
 	margin-right: $gutter * -1;
 	margin-left: $gutter * -1;
@@ -13,48 +11,7 @@
 
 	text-align: justify;
 
-	color: palette('white');
-
-	background-image: image('waves--320w.jpg');
-	background-size: 100% 100%;
-	background-color: palette('blue', 'dark');
-
-	@media screen and (min-width: breakpoint('phone')) {
-		background-image: image('waves--480.jpg');
-	}
-
-	@media screen and (min-width: breakpoint('phablet')) {
-		background-image: image('waves--768w.jpg');
-	}
-
-	@media screen and (min-width: breakpoint('tablet')) {
-		padding-top: 10rem;
-
-		background-image: image('waves--1024w.jpg');
-	}
-
-	@media screen and (min-width: breakpoint('desktop')) {
-		min-height: 682px;
-
-		margin-bottom: -4rem;
-
-		background-image: image('waves--1440w.jpg');
-		background-size: auto;
-
-		& + p {
-			max-width: 40%;
-		}
-	}
-
-	@media screen and (min-width: breakpoint('wide')) {
-		margin-top: -21rem;
-		margin-bottom: -8rem;
-
-
-		& + p {
-			max-width: 33.33333%;
-		}
-	}
+	//	color: palette('white');
 }
 
 .statistics__item {
