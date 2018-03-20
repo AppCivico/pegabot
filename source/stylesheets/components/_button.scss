@@ -1,4 +1,5 @@
 
+
 /* buttons
 ---------------------------------------------------------------------------- */
 /**
@@ -28,7 +29,6 @@
 
 	text-align: center;
 	text-indent: 0;
-	white-space: nowrap;
 
 	cursor: pointer; /* 2 */
 
@@ -41,7 +41,9 @@
 
 	box-sizing: inherit;
 
-	appearance: button; /* 1 */
+	appearance: button;
+
+	/* 1 */
 
 	&::-moz-focus-inner {
 		/* 4 */

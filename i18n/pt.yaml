@@ -39,9 +39,9 @@
 - id: toCatch
   translation: "Pegar"
 - id: toCatchMyFollowers
-  translation: "Analisar meus seguidores"
+  translation: "Analisar quem segue esse perfil"
 - id: toCatchMyFriends
-  translation: "Analisar meus amigos"
+  translation: "Analisar quem esse perfil segue"
 - id: toCatchThatBot
   translation: "Pegar os bots"
 - id: toExportData
