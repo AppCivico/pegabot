@@ -258,6 +258,11 @@ $gauge-hand-height: 8px;
 }
 
 .profile__data figcaption {
+	// try to prevent linux issues when having transitions
+	position: relative;
+
+	z-index: layer('default');
+
 	:focus & {
 		color: palette('purple');
 	}
@@ -463,6 +468,13 @@ $gauge-hand-height: 8px;
 
 		text-align: right;
 	}
+}
+
+.results__footer a {
+	// try to prevent linux issues when having transitions
+	position: relative;
+
+	z-index: layer('default');
 }
 
 .results__footer p {
