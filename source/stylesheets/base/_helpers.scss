@@ -15,6 +15,7 @@
 	overflow: hidden;
 
 	cursor: wait;
+	position: relative;
 
 	&::after {
 		@extend %loading-bg;

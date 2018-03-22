@@ -78,21 +78,8 @@ $gauge-hand-height: 8px;
 }
 
 .results__list[aria-busy='true'] {
-	background: none;
-
-	&::after {
-		@extend %results__profile;
-		@extend %loading-bg;
-
-		z-index: layer('default');
-
-		height: 18.75rem;
-
-		cursor: wait;
-
-		content: '';
+	min-height: 18.75rem;
 	}
-}
 
 .results__profile {
 	@extend %results__profile;
