@@ -1,4 +1,5 @@
 $avatar-width: 90px;
+$delay: 300ms;
 $duration: 0.5s;
 $gauge-hand-width: 51px;
 $gauge-hand-height: 8px;
@@ -79,7 +80,7 @@ $gauge-hand-height: 8px;
 
 .results__list[aria-busy='true'] {
 	min-height: 18.75rem;
-	}
+}
 
 .results__profile {
 	@extend %results__profile;
@@ -88,14 +89,14 @@ $gauge-hand-height: 8px;
 
 	cursor: pointer;
 
+	transition-delay: $delay;
 	transition-duration: $duration;
 	transition-property: top, padding;
 
 	&:hover {
 		top: $line-height * -0.5em;
 
-		transition-duration: $duration;
-		transition-property: top, padding;
+		transition-delay: 0;
 	}
 
 	&:focus {
@@ -149,14 +150,18 @@ $gauge-hand-height: 8px;
 
 	box-shadow: 0 0 0 palette('shadow');
 
-	transition: box-shadow $duration;
+	transition-delay: $delay;
+	transition-duration: $duration;
+	transition-property: box-shadow;
 }
 
 .results__profile:hover > *:not(button),
 .results__profile:focus > *:not(button) {
 	box-shadow: 0 ($line-height * 1em) ($line-height * 1em) palette('shadow');
 
-	transition: box-shadow $duration;
+	transition-delay: 0;
+	// transition-duration: $duration;
+	// transition-property: box-shadow;
 }
 
 .profile__close-button {
@@ -198,12 +203,14 @@ $gauge-hand-height: 8px;
 	padding-top: $line-height * 1em;
 	padding-bottom: $line-height * 1em;
 
-	transition: padding-top $duration;
+	transition-delay: 0ms;
+	transition-duration: $duration;
+	transition-property: padding-top;
 
 	.profile:focus & {
 		padding-top: 0;
 
-		transition: padding-top $duration;
+		transition-delay: $delay;
 	}
 }
 
