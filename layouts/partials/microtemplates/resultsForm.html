@@ -1,0 +1,16 @@
+<form method="get" name="analisys_form" class="analisys-form--rebuild">
+	<fieldset>
+		<p v-show="!metadata.loading && metadata.total > 1">{{ i18n "returnedResults" "<output>{{ metadata.total }}</output>" | safeHTML }}</p>
+
+
+		<input type="hidden" name="profile" :value="metadata.query.profile">
+		<input type="hidden" name="socialnetwork" :value="metadata.query.socialnetwork">
+
+		<input type="hidden" name="authenticated" :value="metadata.query.authenticated">
+		<input type="hidden" name="oauth_token" :value="metadata.query.oauth_token">
+		<input type="hidden" name="oauth_verifier" :value="metadata.query.oauth_verifier">
+
+		<button name="search_for" value="followers" type="submit">{{ i18n "toCatchMyFollowers" }}</button>
+		<button name="search_for" value="friends" type="submit">{{ i18n "toCatchMyFriends" }}</button>
+	</fieldset>
+</form>

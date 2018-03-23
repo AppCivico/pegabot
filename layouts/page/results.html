@@ -27,39 +27,15 @@
 </article>
 
 <script type="text/x-template" id="results__form">
-	<form method="get" name="analisys_form" class="analisys-form--rebuild">
-		<fieldset>
-			<p v-show="!metadata.loading || metadata.total > 0">{{ i18n "returnedResults" "<output>{{ metadata.total }}</output>" | safeHTML }}</p>
-
-
-			<input type="hidden" name="profile" :value="metadata.query.profile">
-			<input type="hidden" name="socialnetwork" :value="metadata.query.socialnetwork">
-
-			<input type="hidden" name="authenticated" :value="metadata.query.authenticated">
-			<input type="hidden" name="oauth_token" :value="metadata.query.oauth_token">
-			<input type="hidden" name="oauth_verifier" :value="metadata.query.oauth_verifier">
-
-			<button name="search_for" value="followers" type="submit">{{ i18n "toCatchMyFollowers" }}</button>
-			<button name="search_for" value="friends" type="submit">{{ i18n "toCatchMyFriends" }}</button>
-		</fieldset>
-	</form>
+	{{ partial "microtemplates/resultsForm.html" . }}
 </script>
 
 <script type="text/x-template" id="results__footer">
-	<footer class="results__footer">
-		<p>{{ i18n "callToFaqResults" | markdownify }}</p>
-		<p v-if="metadata.download !== '' && metadata.download !== '.'">
-			<a :href="metadata.download" id="results__export" download="resultados.json">
-				{{ i18n "toExportData" }}
-			</a>
-		</p>
-
-		<button type="button" @click="cancelRequest" v-show="metadata.loading">{{ i18n "toStop" }}</button>
-	</footer>
+	{{ partial "microtemplates/resultsFooter.html" . }}
 </script>
 
 <script type="text/x-template" id="profile">
-	{{ partial "profile.html" . }}
+	{{ partial "microtemplates/resultsProfile.html" . }}
 </script>
 
 {{ if eq (getenv "NODE_ENV") "development" }}
