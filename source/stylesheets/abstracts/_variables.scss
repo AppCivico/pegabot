@@ -150,7 +150,10 @@ $palette: (
 		'background': rgb(215, 255, 90),
 	),
 	'quotes': hsl(0, 0%, 34%),
-	'placeholder': hsl(0, 0%, 34%),
+	'placeholder': (
+		'focus': rgb(186, 146, 223),
+		'base': rgb(132, 135, 144),
+	),
 	'selection': rgb(20, 105, 140),
 	'tap-highlight': rgb(255, 94, 153),
 	'target-highlight': rgb(255, 255, 102),
@@ -241,6 +244,7 @@ $base-url: '/assets/' !default;
 	@each $name, $value in $breakpoints {
 		$px-value: if(unit($value) == 'em', $value / 1em * $base-value, $value);
 		$new-breakpoints: map-merge($new-breakpoints, ($name: $px-value));
+
 		@if (unit($value) != 'em' and unit($value) != 'px') {
 			@error 'all media queries units should be either `em` or `px`. `#{unit($value)}` given.';
 		}

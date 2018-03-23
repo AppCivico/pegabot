@@ -143,20 +143,57 @@ form br {
 }
 
 /**
- * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ * Normalize the text style of placeholders
  */
-:-moz-placeholder {
+@mixin placeholder {
 	color: palette('placeholder');
 
 	opacity: 1;
+
+}
+
+@mixin placeholder--focus {
+	color: palette('placeholder', 'focus');
+}
+
+:-moz-placeholder {
+	@include placeholder;
+}
+
+:focus:-moz-placeholder {
+	@include placeholder--focus;
+}
+
+::-moz-placeholder {
+	@include placeholder;
+}
+
+:focus::-moz-placeholder {
+	@include placeholder--focus;
 }
 
 ::-webkit-input-placeholder {
-	color: palette('placeholder');
+	@include placeholder;
+}
+
+:focus::-webkit-input-placeholder {
+	@include placeholder--focus;
 }
 
 :-ms-input-placeholder {
-	color: palette('placeholder');
+	@include placeholder;
+}
+
+:focus:-ms-input-placeholder {
+	@include placeholder--focus;
+}
+
+::placeholder {
+	@include placeholder;
+}
+
+:focus::placeholder {
+	@include placeholder--focus;
 }
 
 
