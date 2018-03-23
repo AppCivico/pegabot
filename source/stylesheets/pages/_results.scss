@@ -38,6 +38,14 @@ $gauge-hand-height: 8px;
 }
 
 .results__list {
+	&[aria-busy='true'] {
+		min-height: 18.75rem;
+
+		&::after {
+			background-color: transparent;
+		}
+	}
+
 	@media screen and (min-width: breakpoint('tablet')) {
 		@include inline-block-wrapper;
 
@@ -76,10 +84,6 @@ $gauge-hand-height: 8px;
 		margin-right: auto;
 		margin-left: auto;
 	}
-}
-
-.results__list[aria-busy='true'] {
-	min-height: 18.75rem;
 }
 
 .results__profile {
