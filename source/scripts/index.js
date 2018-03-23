@@ -58,6 +58,11 @@ window.$vue = new Vue({
 					type: Number,
 					required: true,
 				},
+				focusable: {
+					type: String,
+					required: false,
+					default: '',
+				},
 				'remove-profile': {
 					type: Function,
 					required: true,

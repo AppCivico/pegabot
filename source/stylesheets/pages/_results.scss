@@ -54,12 +54,19 @@ $gauge-hand-height: 8px;
 	}
 }
 
-%results__profile {
+.results__profile {
 	position: relative;
+	top: 0;
 
 	margin: 0 0 ($line-height * 1em);
 
 	text-align: left;
+
+	cursor: pointer;
+
+	transition-delay: $delay;
+	transition-duration: $duration;
+	transition-property: top, padding;
 
 	@media screen and (min-width: breakpoint('tablet')) {
 		@include inline-block-item;
@@ -75,7 +82,7 @@ $gauge-hand-height: 8px;
 		width: 33.33333%;
 	}
 
-	&:first-child:last-child {
+	&:only-child {
 		display: block;
 
 		width: 100%;
@@ -84,25 +91,14 @@ $gauge-hand-height: 8px;
 		margin-right: auto;
 		margin-left: auto;
 	}
-}
 
-.results__profile {
-	@extend %results__profile;
-
-	top: 0;
-
-	cursor: pointer;
-
-	transition-delay: $delay;
-	transition-duration: $duration;
-	transition-property: top, padding;
-
-	&:hover {
+	&:hover:not(:only-child) {
 		top: $line-height * -0.5em;
 
 		transition-delay: 0;
 	}
 
+	&:only-child,
 	&:focus {
 		top: 0;
 
@@ -116,33 +112,33 @@ $gauge-hand-height: 8px;
 
 		transition-duration: $duration;
 		transition-property: top, padding;
+	}
 
-		&::after {
-			position: fixed;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
+	&:focus::after {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
 
-			z-index: layer('below');
+		z-index: layer('below');
 
-			pointer-events: none;
+		pointer-events: none;
 
-			background-color: palette('shadow');
+		background-color: palette('shadow');
 
-			content: '';
+		content: '';
 
-			animation: fade-in $duration;
+		animation: fade-in $duration;
 
-			@at-root {
-				@keyframes fade-in {
-					0% {
-						opacity: 0;
-					}
+		@at-root {
+			@keyframes fade-in {
+				0% {
+					opacity: 0;
+				}
 
-					100% {
-						opacity: 1;
-					}
+				100% {
+					opacity: 1;
 				}
 			}
 		}
@@ -159,13 +155,12 @@ $gauge-hand-height: 8px;
 	transition-property: box-shadow;
 }
 
-.results__profile:hover > *:not(button),
+.results__profile:not(:only-child):hover > *:not(button),
+.results__profile:only-child > *:not(button),
 .results__profile:focus > *:not(button) {
 	box-shadow: 0 ($line-height * 1em) ($line-height * 1em) palette('shadow');
 
 	transition-delay: 0;
-	// transition-duration: $duration;
-	// transition-property: box-shadow;
 }
 
 .profile__close-button {
@@ -173,7 +168,7 @@ $gauge-hand-height: 8px;
 	top: 0;
 	left: $gutter;
 
-	z-index: layer('dropdown');
+	z-index: layer('modal');
 
 	padding: 0;
 
@@ -185,6 +180,7 @@ $gauge-hand-height: 8px;
 
 	border: 0;
 
+	.results__profile:only-child > &,
 	.results__profile:focus > & {
 		display: none;
 	}
@@ -197,10 +193,6 @@ $gauge-hand-height: 8px;
 
 		border: 0;
 	}
-
-	.profile:focus & {
-		z-index: layer('modal');
-	}
 }
 
 .profile__analysis-summary {
@@ -211,7 +203,8 @@ $gauge-hand-height: 8px;
 	transition-duration: $duration;
 	transition-property: padding-top;
 
-	.profile:focus & {
+	.results__profile:only-child &,
+	.results__profile:focus & {
 		padding-top: 0;
 
 		transition-delay: $delay;
@@ -233,7 +226,8 @@ $gauge-hand-height: 8px;
 
 	transition: margin $duration, top $duration;
 
-	.profile:focus & {
+	.results__profile:only-child &,
+	.results__profile:focus & {
 		top: $avatar-width * -0.35;
 
 		margin-bottom: $avatar-width * -0.35;
@@ -258,7 +252,8 @@ $gauge-hand-height: 8px;
 .profile__data figcaption {
 	z-index: layer('default');
 
-	:focus & {
+	.results__profile:only-child &,
+	.results__profile:focus & {
 		color: palette('purple');
 	}
 }
@@ -299,7 +294,8 @@ $gauge-hand-height: 8px;
 
 	transition: max-height $duration;
 
-	:focus > & {
+	.results__profile:only-child > &,
+	.results__profile:focus > & {
 		max-height: 100em;
 
 		transition: max-height $duration;
@@ -388,7 +384,8 @@ $gauge-hand-height: 8px;
 
 	transition: padding-bottom $duration;
 
-	.profile:focus & {
+	.results__profile:only-child &,
+	.results__profile:focus & {
 		padding-bottom: $line-height * 1em;
 
 		transition: padding-bottom $duration;
