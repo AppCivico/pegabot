@@ -5,6 +5,16 @@
 	{{ .Content }}
 
 	{{ with where $.Site.RegularPages ".Type" "faq" }}
+		<ul class="questions-list">
+			{{ range . }}
+				<li class="questions-list__item">
+					<a href="#faq__{{ .Params.id }}">
+						{{ .Title | safeHTML | markdownify }}
+					</a>
+				</li>
+			{{ end }}
+		</ul>
+
 		<dl class="questions">
 			{{ range . }}
 				<div id="faq__{{ .Params.id }}" class="questions__item">
