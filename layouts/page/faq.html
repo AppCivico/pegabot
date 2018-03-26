@@ -5,7 +5,7 @@
 	{{ .Content }}
 
 	{{ with where $.Site.RegularPages ".Type" "faq" }}
-		<ul class="questions-list">
+		<ul class="questions-list" id="indice">
 			{{ range . }}
 				<li class="questions-list__item">
 					<a href="#faq__{{ .Params.id }}">
@@ -21,6 +21,9 @@
 					<dt>{{ .Title | safeHTML | markdownify }}</dt>
 					<dd>
 						{{ .Content }}
+						<footer>
+							<a href="#indice">{{ i18n "index" }}</a>
+						</footer>
 					</dd>
 				</div>
 			{{ end }}

@@ -20,6 +20,8 @@
   translation: "Fornecer parecer"
 - id: friendship
   translation: "Amizades"
+- id: index
+  translation: "Índice"
 - id: languageIndependentFeatures
   translation: "Elementos independentes da linguagem"
 - id: network
