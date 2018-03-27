@@ -36,6 +36,8 @@
   translation: "Perfil na rede social"
 - id: returnedResults
   translation: "Sua busca retornou {{ .Count }} resultados."
+- id: signUpNewsletter
+  translation: "Inscreva-se à lista"
 - id: sentiment
   translation: "Emocional"
 - id: socialNetwork
