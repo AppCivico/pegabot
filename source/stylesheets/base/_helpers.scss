@@ -12,10 +12,11 @@
 }
 
 %loading-el {
+	position: relative;
+
 	overflow: hidden;
 
 	cursor: wait;
-	position: relative;
 
 	&::after {
 		@extend %loading-bg;
@@ -86,7 +87,6 @@ textarea {
 		background-size: auto;
 	}
 }
-
 
 /// Load the Susy grid under the class `grid-debug`
 ///

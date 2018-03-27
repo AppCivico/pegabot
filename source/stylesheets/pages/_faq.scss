@@ -27,6 +27,10 @@
 .questions__item p {
 	margin-right: 0;
 	margin-left: auto;
+
+	@media screen and(min-width: breakpoint('tablet')) {
+		margin-left: 0;
+	}
 }
 
 .questions__item dt {
@@ -63,12 +67,6 @@
 
 	@media screen and(min-width: breakpoint('wide')) {
 		width: 50%;
-	}
-}
-
-.questions__item p {
-	@media screen and(min-width: breakpoint('tablet')) {
-		margin-left: 0;
 	}
 }
 
