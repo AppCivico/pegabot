@@ -1,0 +1,79 @@
+.newsletter {
+	padding-top: $line-height * 4rem;
+	padding-bottom: $line-height * 4rem;
+
+	color: palette('white');
+
+	background-color: palette('blue');
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		position: relative;
+
+		padding-right: 60%;
+	}
+}
+
+.newsletter #mc_embed_signup div.mce_inline_error {
+	background: transparent;
+}
+
+.newsletter h2 {
+	margin-top: 0;
+
+	font-size: ms(3);
+}
+
+.newsletter h4 {
+	margin-bottom: 0;
+
+	font-size: ms(-1);
+
+	color: inherit;
+}
+
+.newsletter form {
+	margin-bottom: 0;
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		position: absolute;
+		top: $line-height * 6rem;
+		right: 0;
+
+		width: 60%;
+	}
+}
+
+.newsletter fieldset {
+	position: relative;
+}
+
+.newsletter label {
+	position: absolute;
+	top: $line-height * -1em;
+}
+
+.newsletter input {
+	padding-right: $gutter * 4;
+
+	background-color: transparent;
+
+	border-color: currentColor;
+}
+
+.newsletter [type='submit'] {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	padding-right: $gutter * 2;
+	padding-left: $gutter * 2;
+	margin-bottom: 0;
+
+	text-transform: uppercase;
+
+	color: palette('blue', 'dark');
+
+	background-color: palette('white');
+
+	border-color: palette('white');
+}

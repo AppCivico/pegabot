@@ -7,29 +7,31 @@
 
 	{{ range where $.Site.Pages "File.TranslationBaseName" "results" }}
 
-		{{ partialCached "analysisForm.html" . }}
+	{{ partialCached "analysisForm.html" . }}
 
 	{{ end }}
 
 	{{ with .Content }}
-		<article class="intro" id="intro">
-			{{ . }}
-		</article>
+	<article class="intro" id="intro">
+		{{ . }}
+	</article>
 	{{ end }}
 
 
 	{{ $resources := where (where $.Site.Pages ".Section" "_home") ".Type" "contentResource" }}
 
 	{{ range $resources }}
-		<article id="{{ .File.TranslationBaseName }}" class="{{ .File.TranslationBaseName }}">
-			<h2>
-				{{ .Title }}
-			</h2>
+	<article id="{{ .File.TranslationBaseName }}" class="{{ .File.TranslationBaseName }}">
+		<h2>
+			{{ .Title }}
+		</h2>
 
-			{{ .Content }}
-		</article>
+		{{ .Content }}
+	</article>
 	{{ end }}
 
-
 </main>
+
+{{ partialCached "newsletter.html" . }}
+
 {{ partialCached "footer.html" . }}

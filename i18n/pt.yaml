@@ -24,6 +24,8 @@
   translation: "Índice"
 - id: languageIndependentFeatures
   translation: "Elementos independentes da linguagem"
+- id: newsletter
+  translation: "Newsletter"
 - id: network
   translation: "Rede"
 - id: noScriptMessage
@@ -36,6 +38,8 @@
   translation: "Emocional"
 - id: socialNetwork
   translation: "Rede social"
+- id: subscribe
+  translation: "Assinar"
 - id: temporal
   translation: "Frequência"
 - id: toCatch

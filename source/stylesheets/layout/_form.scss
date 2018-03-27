@@ -85,7 +85,11 @@ form br {
 %os-element-reset {
 	display: inline-block;
 
-	padding: 1px; /* 2 */ // sass-lint:disable-line property-units
+	padding-top: ($line-height / 2 * 1em);
+	padding-right: ($line-height / 2 * 1em);
+	padding-bottom: ($line-height / 2 * 1em);
+	padding-left: ($line-height / 2 * 1em);
+
 	margin: 0;
 
 	overflow: visible;
@@ -106,7 +110,7 @@ form br {
 	border-width: $stroke;
 	border-style: solid;
 	border-color: palette('border');
-	border-radius: 0;
+	border-radius: $line-height * 1em;
 
 	outline: 0;
 

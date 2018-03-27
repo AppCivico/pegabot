@@ -10,8 +10,6 @@
 
 	width: 100%;
 
-	padding: 0.1em 0.2em 0;
-
 	text-indent: 0.5ex; /* 2 */
 
 	cursor: text;
@@ -29,7 +27,9 @@
 	}
 
 	&:focus {
-		outline: 1px solid;
+		border-color: palette('orange');
+
+		outline: 0;
 	}
 
 	&:focus:required:invalid {
