@@ -4,16 +4,25 @@
 
 $height--desktop: $line-height * 3rem;
 
+.site-footer-container {
+	color: palette('white');
+
+	background-color: palette('blue', 'dark');
+}
+
 .site-footer {
 	@include clearfix;
 
 	clear: both;
 
+	width: $max-width;
+
+	padding-right: $gutter;
+	padding-left: $gutter;
+	margin-right: auto;
+	margin-left: auto;
+
 	font-size: ms(-1);
-
-	color: palette('white');
-
-	background-color: palette('blue', 'dark');
 
 	@media screen and (min-width: breakpoint('tablet')) {
 		letter-spacing: 0.125em;

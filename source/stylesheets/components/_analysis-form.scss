@@ -1,14 +1,50 @@
 .analisys-form {
+	@include aspect-ratio(1443 x 645);
+
 	position: relative;
 
 	z-index: layer('default');
+
+	max-width: none;
+
+	background-image: image('bg-wave--3.png'), image('bg-wave--2.png'), image('bg-wave--1.png');
+	background-position: center bottom;
+	background-position: center bottom 1px, center bottom, center bottom 2px;
+	background-size: 100% auto;
+	background-repeat: repeat-x;
+
+	@media screen and (min-width: breakpoint('wide')) {
+		min-height: 645px;
+
+		background-size: auto;
+
+		+ * {
+			margin-top: $line-height * -5rem;
+		}
+
+		&::before,
+		&::after {
+			content: none;
+		}
+	}
 }
 
 .analisys-form > fieldset {
 	max-width: 33em;
 
+	padding-top: $line-height * 1rem;
+	padding-right: $gutter;
+	padding-left: $gutter;
 	margin-right: auto;
 	margin-left: auto;
+
+	@media screen and (min-width: breakpoint('phablet')) {
+		padding-top: 15%;
+	}
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		padding-top: 15rem;
+	}
 }
 
 .analisys-form legend {
@@ -164,7 +200,7 @@
 	width: auto;
 
 	margin-right: 0;
-	margin-bottom: $line-height * 1em;
+	margin-bottom: 0;
 	margin-left: auto;
 
 	color: palette('white');

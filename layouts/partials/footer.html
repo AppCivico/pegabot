@@ -1,4 +1,5 @@
 	</div><!-- .content-container -->
+<div class="site-footer-container">
 	<footer class="site-footer">
 		{{ with $.Site.Params.tagline }}
 			<div class="site-tagline">{{ . }}</div>
@@ -59,6 +60,7 @@
 			</div>
 		{{ end }}
 	</footer>
+</div>
 	{{ partialCached "browserUpdate.html" . }}
 </div><!-- .main-container -->
 
