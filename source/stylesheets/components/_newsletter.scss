@@ -1,21 +1,33 @@
-.newsletter {
-	padding-top: $line-height * 4rem;
-	padding-bottom: $line-height * 4rem;
-
+.newsletter-container {
 	color: palette('white');
 
+	background-image: image('top-curve--white.svg');
+	background-size: 100% auto;
 	background-color: palette('blue');
+}
+
+.newsletter {
+	max-width: $max-width;
+
+	padding-top: $line-height * 7rem;
+	padding-right: $gutter;
+	padding-bottom: $line-height * 4rem;
+	padding-left: $gutter;
+	margin-right: auto;
+	margin-left: auto;
 
 	@media screen and (min-width: breakpoint('desktop')) {
 		position: relative;
 
-		padding-right: 60%;
+		> * {
+			width: 40%;
+		}
 	}
 }
 
 // sass-lint:disable no-ids class-name-format id-name-format no-qualifying-elements
 .newsletter #mc_embed_signup div.mce_inline_error {
-	background: transparent;
+	background: transparent !important;
 }
 
 // sass-lint:enable no-ids class-name-format id-name-format no-qualifying-elements
@@ -39,8 +51,8 @@
 
 	@media screen and (min-width: breakpoint('desktop')) {
 		position: absolute;
-		top: $line-height * 6rem;
-		right: 0;
+		top: $line-height * 10rem;
+		right: $gutter;
 
 		width: 60%;
 	}
@@ -56,20 +68,20 @@
 }
 
 .newsletter input {
-	padding-right: $gutter * 4;
+	display: block;
+
+	margin-bottom: $line-height * 1rem;
 
 	background-color: transparent;
 
 	border-color: currentColor;
+
+	@media screen and (min-width: breakpoint('phablet')) {
+		padding-right: $gutter * 4;
+	}
 }
 
 .newsletter [type='submit'] {
-	position: absolute;
-	top: 0;
-	right: 0;
-
-	padding-right: $gutter * 2;
-	padding-left: $gutter * 2;
 	margin-bottom: 0;
 
 	text-transform: uppercase;
@@ -79,4 +91,18 @@
 	background-color: palette('white');
 
 	border-color: palette('white');
+
+	&:hover,
+	&:focus {
+		color: palette('orange');
+	}
+
+	@media screen and (min-width: breakpoint('phablet')) {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		padding-right: $gutter * 2;
+		padding-left: $gutter * 2;
+	}
 }

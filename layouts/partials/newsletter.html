@@ -1,4 +1,5 @@
 {{ range where $.Site.Pages "File.TranslationBaseName" "newsletter" }}
+<div class="newsletter-container">
 	<div id="mc_embed_signup" class="newsletter">
 		<h4>
 			{{ i18n "newsletter" }}
@@ -65,4 +66,5 @@
 			}(jQuery)); var $mcj = jQuery.noConflict(true);
 		</script>
 	</div>
+</div>
 {{ end }}
