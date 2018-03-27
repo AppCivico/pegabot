@@ -25,12 +25,12 @@
 	}
 }
 
-// sass-lint:disable no-ids class-name-format id-name-format no-qualifying-elements
+// sass-lint:disable no-ids class-name-format id-name-format no-qualifying-elements no-important
 .newsletter #mc_embed_signup div.mce_inline_error {
 	background: transparent !important;
 }
 
-// sass-lint:enable no-ids class-name-format id-name-format no-qualifying-elements
+// sass-lint:enable no-ids class-name-format id-name-format no-qualifying-elements no-important
 
 .newsletter h2 {
 	margin-top: 0;
