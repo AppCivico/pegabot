@@ -41,6 +41,12 @@
 	background-image: image('logotype.png');
 }
 
+.home-page [role='main'] {
+	max-width: none;
+
+	padding: 0;
+}
+
 .intro {
 	clear: both;
 
