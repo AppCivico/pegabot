@@ -12,14 +12,14 @@
 	background-size: 100% auto;
 	background-repeat: repeat-x;
 
+	@media screen and (min-width: breakpoint('desktop')) {
+		margin-bottom: $line-height * -5rem;
+	}
+
 	@media screen and (min-width: breakpoint('wide')) {
 		min-height: 645px;
 
 		background-size: auto;
-
-		+ * {
-			margin-top: $line-height * -5rem;
-		}
 
 		&::before,
 		&::after {

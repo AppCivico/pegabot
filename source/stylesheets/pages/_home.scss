@@ -3,6 +3,14 @@
 
 	background-image: none;
 
+	@media screen and (min-width: breakpoint('tablet')) {
+		margin-bottom: $line-height * -2rem;
+	}
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		margin-bottom: $line-height * -3rem;
+	}
+
 	@media screen and (min-width: breakpoint('wide')) {
 		background-image: image('robot1.png'), image('robot4.png');
 		background-position: 90% 85%, 15% 55%;

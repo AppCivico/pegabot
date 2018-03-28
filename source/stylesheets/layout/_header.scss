@@ -1,6 +1,3 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
 /**
  * A region that contains mostly site-oriented content, rather than page-specific content.
  *
@@ -22,6 +19,11 @@
 
 .site-header {
 	position: relative;
+
+	max-width: $max-width;
+
+	margin-right: auto;
+	margin-left: auto;
 
 	font-size: ms(-1);
 
