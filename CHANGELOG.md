@@ -9,7 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- minor layout
 - secondary submission buttons labels
+
+### Removed
+
+- search of followers and friends
 
 ## [1.0.0][] - 2018-03-19
 
