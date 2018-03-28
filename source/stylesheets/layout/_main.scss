@@ -9,11 +9,6 @@
  */
 
 .main-container {
-	max-width: $max-width;
-
-	margin-right: auto;
-	margin-left: auto;
-
 	background-color: palette('white');
 }
 
@@ -23,4 +18,9 @@
 
 [role='main'] {
 	@include clearfix;
+
+	max-width: $max-width;
+
+	margin-right: auto;
+	margin-left: auto;
 }
