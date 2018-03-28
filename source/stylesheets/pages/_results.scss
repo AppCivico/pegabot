@@ -455,16 +455,9 @@ $gauge-hand-height: 8px;
 	font-size: 1rem;
 
 	text-align: center;
-	text-align: center;
-
-	// color: palette('white');
-
-	// background-color: palette('orange');
 
 	@media screen and (min-width: breakpoint('tablet')) {
 		padding: $gutter;
-
-		// text-align: right;
 	}
 }
 
@@ -501,9 +494,6 @@ $gauge-hand-height: 8px;
 	background-color: transparent;
 
 	border-color: currentColor;
-
-	// border: $stroke solid palette('white');
-	// border-radius: ($line-height * 1em);
 
 	&::before {
 		vertical-align: text-bottom;
