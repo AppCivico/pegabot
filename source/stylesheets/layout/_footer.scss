@@ -15,7 +15,7 @@ $height--desktop: $line-height * 3rem;
 
 	clear: both;
 
-	width: $max-width;
+	max-width: $max-width;
 
 	padding-right: $gutter;
 	padding-left: $gutter;
