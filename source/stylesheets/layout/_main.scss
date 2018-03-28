@@ -16,11 +16,16 @@
 	padding: $gutter;
 }
 
+.content-container {
+	padding: 0;
+}
+
 [role='main'] {
 	@include clearfix;
 
 	max-width: $max-width;
 
+	padding: $gutter;
 	margin-right: auto;
 	margin-left: auto;
 }
