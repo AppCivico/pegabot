@@ -60,6 +60,9 @@
 				<a href="/">
 					{{ .Site.Title }}
 				</a>
+				{{ with $.Site.Params.tagline }}
+					<div class="site-tagline">{{ $.Site.Params.tagline }}</div>
+				{{ end }}
 			</div>
 		</header>
 		<div class="content-container">

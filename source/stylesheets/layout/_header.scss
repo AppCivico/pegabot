@@ -50,21 +50,23 @@
 }
 
 [role='banner'] {
-	@include image-replacement;
-
-	width: 9.375rem;
-	height: 9.375rem;
+	width: 100%;;
 	min-width: #{150px + 30px};
-	min-height: #{150px + 30px};
 
 	margin-top: ($line-height * 1rem);
+	margin-right: auto;
 	margin-bottom: 0;
+	margin-left: auto;
 
-	background-image: image('logotype--150w.png');
-	background-position: 50% 50%;
+	line-height: 1.25;
+
+	text-align: center;
 
 	@media screen and (min-width: breakpoint('phablet')) {
+		max-width: 20%;
+
 		margin-top: 0;
+		margin-left: 0;
 	}
 
 	@media screen and (min-width: breakpoint('tablet')) {
@@ -73,7 +75,14 @@
 }
 
 [role='banner'] a {
+	@include image-replacement;
+
 	display: block;
 
-	height: 100%;
+	width: 100%;
+	height: 9.375rem;
+	min-height: #{137px + 30px};
+
+	background-image: image('logotype--150w.png');
+	background-position: 50% 50%;
 }

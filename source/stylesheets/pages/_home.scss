@@ -23,20 +23,20 @@
 
 .home-page .content-container {
 	padding-top: 0;
-	padding-right: 0;
 	padding-bottom: 0;
-	padding-left: 0;
 }
 
 .home-page [role='banner'] {
-	width: 12.5rem;
-	height: 12.5rem;
 	min-width: #{200px + 30px};
-	min-height: #{200px + 30px};
 
 	margin: ($line-height * 1rem) auto;
 	margin-top: ($line-height * 1rem);
 	margin-bottom: ($line-height * 1rem);
+}
+
+.home-page [role='banner'] a {
+	height: 12.5rem;
+	min-height: #{200px + 30px};
 
 	background-image: image('logotype.png');
 }
