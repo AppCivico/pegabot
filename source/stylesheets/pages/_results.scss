@@ -28,6 +28,11 @@ $gauge-hand-height: 8px;
 	}
 }
 
+.results {
+	padding-top: $line-height * 3rem;
+	padding-bottom: $line-height * 3rem;
+}
+
 [id='results__count'] {
 	padding-right: 0.25em;
 	padding-left: 0.25em;
@@ -450,15 +455,16 @@ $gauge-hand-height: 8px;
 	font-size: 1rem;
 
 	text-align: center;
+	text-align: center;
 
-	color: palette('white');
+	// color: palette('white');
 
-	background-color: palette('orange');
+	// background-color: palette('orange');
 
 	@media screen and (min-width: breakpoint('tablet')) {
 		padding: $gutter;
 
-		text-align: right;
+		// text-align: right;
 	}
 }
 
@@ -482,7 +488,9 @@ $gauge-hand-height: 8px;
 .results__footer button {
 	display: inline-block;
 
+	padding-top: 0;
 	padding-right: $line-height * 0.5em;
+	padding-bottom: 0;
 	padding-left: $line-height * 0.5em;
 	margin-bottom: 0;
 
@@ -492,8 +500,10 @@ $gauge-hand-height: 8px;
 
 	background-color: transparent;
 
-	border: $stroke solid palette('white');
-	border-radius: ($line-height * 1em);
+	border-color: currentColor;
+
+	// border: $stroke solid palette('white');
+	// border-radius: ($line-height * 1em);
 
 	&::before {
 		vertical-align: text-bottom;
