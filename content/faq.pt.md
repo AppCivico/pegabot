@@ -5,4 +5,5 @@ draft: false
 menu: "main"
 slug: "faq"
 layout: faq
+weight: 2
 ---
