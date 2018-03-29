@@ -48,7 +48,10 @@ legend {
 }
 
 label {
-	padding: 0;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: $line-height * 1rem;
 	margin: 0;
 
 	font-size: small;
