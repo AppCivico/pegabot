@@ -5,10 +5,11 @@ draft: false
 menu: "main"
 slug: "sobre"
 weight: 1
+rootClass: "about-page"
 ---
-# Desarticulando redes estruturais de bots
+{{< video src="/assets/video/pegabot--480x480.mp4">}}
 
-{{< video src="/assets/video/Chatbots2b--480x320.mp4">}}
+# Desarticulando redes estruturais de bots
 
 _Bots_, uma abreviação para robôs, são programas de computador criados para executar tarefas específicas. Os primeiros robôs não tinham intenções maliciosas, e ainda hoje existe os bons _bots_, que têm como propósito exigir prestação de contas de políticos, viralizar causas para a igualdade de gênero ou ajudar a organizar as (muitas) tarefas diárias de seus usuários. Bom, né?
 

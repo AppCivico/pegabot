@@ -1,0 +1,11 @@
+.about-page {
+}
+
+.about-page article {
+	text-align: center;
+
+	> * {
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
