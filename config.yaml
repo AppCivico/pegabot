@@ -12,7 +12,7 @@ disableKinds:
   - "taxonomyTerm"
   - "RSS"
   - "sitemap"
-googleAnalytics: ""
+googleAnalytics: "UA-116653569-1"
 languageCode: "pt-br"
 metaDataFormat: "yaml"
 params:
