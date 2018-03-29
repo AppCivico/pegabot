@@ -27,8 +27,23 @@
 		{{ . | safeHTML }}
 	{{ end }}
 
+	<meta property="og:type" content="product.group">
+	<meta property="og:title" content="Pegabot: descubra se aquele perfil de rede social é bot">
+	<meta property="og:url" content="pegabot.com.br">
+	<meta property="og:image" content="/pegabot-fb-img.jpg">
+\
 	{{ if eq (getenv "NODE_ENV") "production" }}
-		{{ template "_internal/google_analytics.html" . }}
+		{{ with $.Site.GoogleAnalytics }}
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag() { dataLayer.push(arguments); }
+				gtag('js', new Date());
+
+				gtag('config', '{{ . }}');
+			</script>
+		{{ end }}
 	{{ end }}
 </head>
 <body>
