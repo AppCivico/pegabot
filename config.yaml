@@ -15,13 +15,6 @@ disableKinds:
 googleAnalytics: ""
 languageCode: "pt-br"
 metaDataFormat: "yaml"
-menu:
-  main:
-    -
-      identifier: "contact"
-      name: "Contato"
-      url: "https://itsrio2.typeform.com/to/k9FHXq"
-      weight: 111
 params:
   siteDescription: "O Pegabot verifica a atividade de uma conta em rede social e dá uma pontuação baseada na probabilidade dessa conta ser um bot. Maiores pontuações são mais bot-like."
   tagline: "Por mais transparência no uso de bots"

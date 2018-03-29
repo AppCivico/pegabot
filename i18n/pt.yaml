@@ -8,6 +8,8 @@
   translation: "Probabilidade de ser um robô"
 - id: callToFaqResults
   translation: "O que os [resultados significam](/faq#faq__como-interpretar-as-notas)?"
+- id: contact
+  translation: "Contato"
 - id: content
   translation: "Publicações"
 - id: detailsLink
