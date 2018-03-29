@@ -29,7 +29,7 @@ O tratamento de dados pessoais conduzido no âmbito do Pegabot será regido pela
 
 8) O Pegabot não tem como garantir a privacidade e segurança na utilização do mesmo e de seus serviços com relação aos usuários e terceiros, havendo sempre o risco inerente de que terceiros indevidamente consigam inferir de qualquer forma informações sobre condições, características, dados pertinentes aos usuários do Pegabot. Isso, naturalmente, não é responsabilidade do Pegabot, mas da própria arquitetura da internet.
 
-9) O Pegabot não verifica e não possui qualquer obrigação de verificar a identidade dos usuários nem a veracidade, completude, autenticidade dos dados que os usuários fornecem sobre si em qualquer circunstância. O Pegabot somente fornecerá quaisquer  dados relativos a seus usuários para terceiros se solicitada por meio de canais legais em vigor mediante ordem judicial legalmente válida.
+9) O Pegabot não verifica e não possui qualquer obrigação de verificar a identidade dos usuários nem a veracidade, completude, autenticidade dos dados que os usuários fornecem sobre si em qualquer circunstância. O Pegabot somente fornecerá quaisquer dados relativos a seus usuários para terceiros se solicitada por meio de canais legais em vigor mediante ordem judicial legalmente válida.
 
 10) Há um canal através do qual os usuários podem corrigir ou atualizar dados, sempre que necessário, bem como podem solicitar exclusão definitiva de seus dados do Pegabot na hipótese desejarem sair ou de serem excluídos do Pegabot. Para casos excepcionais em que por algum motivo relevante o usuário não conseguir efetuar ele mesmo a remoção, será possível solicitar a remoção através de requisição por meio do canal de contato com a equipe do Pegabot, devendo identificar-se e informar quais conteúdos de sua autoria deseja ter removidos.
 
@@ -37,7 +37,7 @@ O tratamento de dados pessoais conduzido no âmbito do Pegabot será regido pela
 
 ## Da instalação de cookies e da autorização para realização de pesquisas
 
-12) Ao acessar o Pegabot o usuário concorda com a instalação de cookies no dispositivo utilizado para acessar o site, sendo certo que tais cookies serão utilizados com o propósito de analisar a atividade dos usuários para melhorar o funcionamento do site, assim como para armazenar as consultas individuais realizadas por cada usuário com o intuito de possibilitar ao Pegabots a realização de pesquisa baseada nessas consultas.  A realização de pesquisas ocorrerá de forma anonimizada e dependerá de autorização do usuário que realizar as consultas correspondentes por meio de seu perfil na rede social respectiva.
+12) Ao acessar o Pegabot o usuário concorda com a instalação de cookies no dispositivo utilizado para acessar o site, sendo certo que tais cookies serão utilizados com o propósito de analisar a atividade dos usuários para melhorar o funcionamento do site, assim como para armazenar as consultas individuais realizadas por cada usuário com o intuito de possibilitar ao Pegabots a realização de pesquisa baseada nessas consultas. A realização de pesquisas ocorrerá de forma anonimizada e dependerá de autorização do usuário que realizar as consultas correspondentes por meio de seu perfil na rede social respectiva.
 
 ## Das modificações da Política de Privacidade
 
