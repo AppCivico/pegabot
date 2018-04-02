@@ -54,10 +54,13 @@ weight: 12
 
 16) O Pegabot, como qualquer outro site da internet, permite a colocação à disposição dos usuários de links de acesso para outros sites. Esses links podem consistir em banners e logos de apoiadores e parceiros institucionais, botões, diretórios e ferramentas de busca que permitem aos usuários terem acesso a páginas externas, etc. Os resultados dessas ferramentas são de responsabilidade direta dos terceiros por elas responsáveis. A Plataforma Mudamos não controla os resultados dessas ferramentas, que podem direcionar o usuário a páginas com conteúdos ilícitos ou contrários à moral e aos bons costumes. A plataforma Mudamos não oferece nem comercializa por si ou por terceiros qualquer informação, dica, conteúdo ou serviço disponível em páginas externas, nem controla, aprova, recomenda ou supervisiona conteúdos. O PEGABOT DESSA FORMA SE EXIME E SE EXONERA, EM TODA A EXTENSÃO PERMITIDA PELO ORDENAMENTO JURÍDICO BRASILEIRO E QUALQUER OUTRO APLICÁVEL, DE QUALQUER RESPONSABILIDADE PELOS DANOS DE QUALQUER NATUREZA, LUCROS CESSANTES E DANOS EMERGENTES, QUE POSSAM SER OCASIONADOS OU DECORRER:
 
-	(A) DO FUNCIONAMENTO, DISPONIBILIDADE, ACESSIBILIDADE OU CONTINUIDADE DAS PÁGINAS EXTERNAS;
-	(B) DA MANUTENÇÃO DOS SERVIÇOS, INFORMAÇÃO, DADOS, ARQUIVOS, PRODUTOS E QUALQUER TIPO DE MATERIAL EXISTENTE NAS PÁGINAS EXTERNAS;
-	DA PRESTAÇÃO OU TRANSMISSÃO DOS SERVIÇOS, INFORMAÇÃO, DADOS, ARQUIVOS, PRODUTOS E QUALQUER TIPO DE MATERIAL EXISTENTE NOS SITES LINKADOS;
-	(C) DA QUALIDADE, LEGALIDADE, CONFIABILIDADE E UTILIDADE DOS SERVIÇOS, INFORMAÇÃO, DADOS, ARQUIVOS, PRODUTOS E QUALQUER TIPO DE MATERIAL EXISTENTE EM PÁGINAS EXTERNAS, DICAS OU QUALQUER OUTRO CONTEÚDO DO SITE.
+(A) DO FUNCIONAMENTO, DISPONIBILIDADE, ACESSIBILIDADE OU CONTINUIDADE DAS PÁGINAS EXTERNAS;
+
+(B) DA MANUTENÇÃO DOS SERVIÇOS, INFORMAÇÃO, DADOS, ARQUIVOS, PRODUTOS E QUALQUER TIPO DE MATERIAL EXISTENTE NAS PÁGINAS EXTERNAS;
+
+DA PRESTAÇÃO OU TRANSMISSÃO DOS SERVIÇOS, INFORMAÇÃO, DADOS, ARQUIVOS, PRODUTOS E QUALQUER TIPO DE MATERIAL EXISTENTE NOS SITES LINKADOS;
+
+(C) DA QUALIDADE, LEGALIDADE, CONFIABILIDADE E UTILIDADE DOS SERVIÇOS, INFORMAÇÃO, DADOS, ARQUIVOS, PRODUTOS E QUALQUER TIPO DE MATERIAL EXISTENTE EM PÁGINAS EXTERNAS, DICAS OU QUALQUER OUTRO CONTEÚDO DO SITE.
 
 17) O Pegabot não controla o acesso nem a utilização que os usuários fazem de seus serviços e do próprio site. O Pegabot não garante que os usuários estejam em conformidade com a lei, com os presentes termos de uso ou com quaisquer outros instrumentos normativos aplicáveis, ou da moral e dos bons costumes geralmente aceitos pela ordem pública. O Pegabot não verifica e não possui qualquer obrigação de verificar a identidade dos usuários nem a veracidade, completude, autenticidade dos dados que os usuários fornecem sobre si em qualquer circunstância. O Pegabot somente fornecerá quaisquer destes dados mediante ordem judicial legalmente válida. O PEGABOT DESSA FORMA SE EXIME E SE EXONERA, EM TODA A EXTENSÃO PERMITIDA PELO ORDENAMENTO JURÍDICO BRASILEIRO E QUALQUER OUTRO APLICÁVEL, DE QUALQUER RESPONSABILIDADE PELOS DANOS DE QUALQUER NATUREZA, LUCROS CESSANTES E DANOS EMERGENTES, QUE POSSAM SER OCASIONADOS OU DECORRER DA UTILIZAÇÃO DE SEUS SERVIÇOS E DO PRÓPRIO SITE QUE POSSAM OCORRER EM RAZÃO DE PROBLEMAS QUANTO À VERACIDADE, COMPLETUDE E AUTENTICIDADE DA INFORMAÇÃO QUE OS USUÁRIOS FORNECEM SOBRE SI MESMOS EM QUALQUER CIRCUNST NCIA, E NÃO SERÁ RESPONSÁVEL POR QUAISQUER DANOS E PREJUÍZOS DE QUALQUER NATUREZA QUE POSSAM SURGIR DEVIDO À UTILIZAÇÃO INDEVIDA DA PERSONALIDADE DE TERCEIROS EFETUADA POR UM USUÁRIO DO PEGABOT.
 
@@ -69,10 +72,13 @@ weight: 12
 
 19) Todas as notificações por parte de usuários do Pegabot deverão ser feitas única e exclusivamente através do canal de contato com a equipe de administração do site, pelo formulário de contato disponível em https://itsrio2.typeform.com/to/k9FHXq. Todas as notificações e comunicações por parte do Pegabot aos seus usuários, serão consideradas válidas e eficazes, para todos os efeitos, quando se derem através de qualquer das seguintes formas:
 
-	(a) envio de mensagem por correio eletrônico a qualquer endereço eletrônico fornecido pelo usuário;
-	(b) envio de carta ao domicílio do usuário quando este tiver fornecido um endereço ao Pegabot;
-	(c) comunicação telefônica ao número fornecido pelo usuário;
-	(d) através de mensagens postadas no site do Pegabot em locais de acesso habitual do usuário.
+(a) envio de mensagem por correio eletrônico a qualquer endereço eletrônico fornecido pelo usuário;
+
+(b) envio de carta ao domicílio do usuário quando este tiver fornecido um endereço ao Pegabot;
+
+(c) comunicação telefônica ao número fornecido pelo usuário;
+
+(d) através de mensagens postadas no site do Pegabot em locais de acesso habitual do usuário.
 
 Neste sentido, todas as notificações que o Pegabot realizar serão consideradas válidas quando efetuadas empregando os dados e através de qualquer dos meios anteriormente destacados. Para estes efeitos, o usuário declara que todos os dados fornecidos são válidos e corretos, e como tais serão considerados, comprometendo-se a comunicar e atualizar junto ao Pegabot todas as mudanças relativas a seus dados pessoais.
 
