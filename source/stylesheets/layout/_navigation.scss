@@ -55,8 +55,8 @@ menu a,
 nav a {
 	display: block;
 
-	padding-top: $line-height * 1rem;
-	padding-bottom: $line-height * 1rem;
+	padding-top: $line-height * 0.5rem;
+	padding-bottom: $line-height * 0.5rem;
 
 	&:link {
 		text-decoration: none;

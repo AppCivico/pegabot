@@ -2,7 +2,9 @@
 title: "Sobre o Pegabot"
 date: 2018-01-24T11:07:39-02:00
 draft: false
-menu: "main"
+menu:
+  - "main"
+  - "header"
 slug: "sobre"
 weight: 1
 rootClass: "about-page"

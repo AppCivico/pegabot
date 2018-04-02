@@ -22,6 +22,7 @@
 
 	max-width: $max-width;
 
+	padding-top: 0;
 	margin-right: auto;
 	margin-left: auto;
 
@@ -36,6 +37,24 @@
 		background-image: image('robot1.png'), image('robot5.png'), image('header.png');
 		background-position: 65% 25%, 50% 15%, 15% 0;
 	}
+}
+
+.header-menu {
+	display: table;
+
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.header-menu ul {
+	display: table-row;
+}
+
+.header-menu li {
+	display: table-cell;
+
+	padding-right: 0;
+	padding-left: $gutter;
 }
 
 .responsibles {

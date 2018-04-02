@@ -8,7 +8,7 @@
 		{{ if ne .Kind "404" }}
 			{{ with .Site.Menus.main }}
 				<nav class="footer-menu">
-					{{ partialCached "menu.html" . }}
+					{{ partial "menu.html" . }}
 				</nav>
 			{{ end }}
 		{{ end }}

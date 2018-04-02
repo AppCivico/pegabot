@@ -69,7 +69,13 @@
 				</style>
 			{{ end }}
 
-			{{ partial "responsibles.html" . }}
+			{{ if ne .Kind "404" }}
+				{{ with .Site.Menus.header }}
+					<nav class="header-menu">
+						{{ partial "menu.html" . }}
+					</nav>
+				{{ end }}
+			{{ end }}
 
 			<div role="banner">
 				<a href="/">
