@@ -7,9 +7,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- header menu
+- privacy police
+- use terms
+-
+
 ### Fixed
 
+- Firefox navigation link bad alignment
 - footer navigation on narrow screens
+- Non existent profiles error message
 
 ## [1.1.1][] - 2018-03-28
 
@@ -26,7 +35,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Removed
 
-- search of followers and friends
+- search for followers and friends
 
 ## [1.0.0][] - 2018-03-19
 
