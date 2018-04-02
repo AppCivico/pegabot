@@ -148,7 +148,7 @@ window.$vue = new Vue({
 					window.location = response.body.request_url;
 				} else {
 					if (response.body.metadata.error) {
-						window.alert(response.body.metadata.error[0].message); // eslint-disable-line no-alert
+						window.alert(response.body.metadata.error); // eslint-disable-line no-alert
 					}
 
 					if (response.status === 200) {
