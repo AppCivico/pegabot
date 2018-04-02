@@ -2,35 +2,41 @@
 ---------------------------------------------------------------------------- */
 menu,
 nav {
-	display: table;
-
 	font-size: ms(-1);
-	line-height: 5rem;
 
 	white-space: nowrap;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		display: table;
+
+		line-height: 5rem;
+	}
 }
 
 menu ul,
 menu ol,
 nav ul,
 nav ol {
-	display: table-row;
-
 	width: 100%;
 
 	padding: 0;
-	margin: 0;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: $line-height * 1rem;
+	margin-left: 0;
 
 	list-style: none;
 
-	table-layout: fixed;
-	border-collapse: collapse;
+	@media screen and (min-width: breakpoint('tablet')) {
+		display: table-row;
+
+		table-layout: fixed;
+		border-collapse: collapse;
+	}
 }
 
 menu ul li,
 nav ul li {
-	display: table-cell;
-
 	padding: 0 $gutter 0 0;
 	margin: 0;
 
@@ -39,11 +45,18 @@ nav ul li {
 	&::before {
 		content: none;
 	}
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		display: table-cell;
+	}
 }
 
 menu a,
 nav a {
 	display: block;
+
+	padding-top: $line-height * 1rem;
+	padding-bottom: $line-height * 1rem;
 
 	&:link {
 		text-decoration: none;
@@ -53,7 +66,6 @@ nav a {
 .current > a {
 	pointer-events: none;
 }
-
 
 /* access
 ---------------------------------------------------------------------------- */

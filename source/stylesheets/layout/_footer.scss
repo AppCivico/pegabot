@@ -17,8 +17,6 @@ $height--desktop: $line-height * 3rem;
 
 	max-width: $max-width;
 
-	padding-right: $gutter;
-	padding-left: $gutter;
 	margin-right: auto;
 	margin-left: auto;
 
@@ -63,6 +61,8 @@ $height--desktop: $line-height * 3rem;
 }
 
 .site-footer [role='contentinfo'] {
+	clear: left;
+
 	@media screen and (min-width: breakpoint('phablet')) {
 		display: table;
 
