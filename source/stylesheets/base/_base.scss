@@ -389,8 +389,6 @@ a {
 	}
 
 	&:focus {
-		overflow: hidden;
-
 		color: palette('anchor', 'focus');
 
 		outline: 1px dotted;
