@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.2.6][] - 2018-04-03
+
 ### Changed
 
 - Contact email
@@ -82,7 +84,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
-[Unreleased]: undefined/compare/v1.2.5...HEAD
+[Unreleased]: undefined/compare/v1.2.6...HEAD
+[1.2.6]: undefined/compare/v1.2.5...v1.2.6
 [1.2.5]: undefined/compare/v1.2.4...v1.2.5
 [1.2.4]: undefined/compare/v1.2.3...v1.2.4
 [1.2.3]: undefined/compare/v1.2.2...v1.2.3
