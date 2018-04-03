@@ -1,8 +1,8 @@
 <article class="results__profile profile" :tabindex="focusable">
 	<section class="profile__analysis-summary">
 		<figure class="profile__data">
-			<img data-attr-to-bind-in="src" data-to-bind="profile_avatar" :src="user.bot_probability ? user.avatar.replace('_normal','_bigger') : ''" alt="">
-			<figcaption data-to-bind="profile_username">{{ "{{user.username}}"}}</figcaption>
+			<img :src="user.bot_probability ? user.avatar.replace('_normal','_bigger') : ''" alt="">
+			<figcaption>{{ "{{user.username}}"}}</figcaption>
 		</figure>
 		<output class="profile__result">{{ "{{ user.bot_probability ? (user.bot_probability.all || 0) : 0 | toPercentage }}" }}</output>
 
@@ -34,14 +34,14 @@
 		<dl>
 			<div :class="user.language_dependent.content.value | resultLevel">
 				<dt>{{ i18n "content" }}</dt>
-				<dd data-to-bind="content">
+				<dd>
 					{{ "{{ user.language_dependent.content.value | toPercentage }}" }}
 				</dd>
 			</div>
 
 			<div :class="user.language_dependent.sentiment.value | resultLevel">
 				<dt>{{ i18n "sentiment" }}</dt>
-				<dd data-to-bind="sentiment">
+				<dd>
 					{{ "{{ user.language_dependent.sentiment.value | toPercentage }}" }}
 				</dd>
 			</div>
@@ -54,28 +54,28 @@
 		<dl>
 			<div :class="user.language_independent.friend | resultLevel">
 				<dt>{{ i18n "friendship" }}</dt>
-				<dd data-to-bind="friend">
+				<dd>
 					{{ "{{ user.language_independent.friend | toPercentage }}" }}
 				</dd>
 			</div>
 
 			<div :class="user.language_independent.temporal | resultLevel">
 				<dt>{{ i18n "temporal" }}</dt>
-				<dd data-to-bind="temporal">
+				<dd>
 					{{ "{{ user.language_independent.temporal | toPercentage }}" }}
 				</dd>
 			</div>
 
 			<div :class="user.language_independent.network | resultLevel">
 				<dt>{{ i18n "network" }}</dt>
-				<dd data-to-bind="network">
+				<dd>
 					{{ "{{ user.language_independent.network | toPercentage }}" }}
 				</dd>
 			</div>
 
 			<div :class="user.language_independent.user | resultLevel">
 				<dt>{{ i18n "user" }}</dt>
-				<dd data-to-bind="user">
+				<dd>
 					{{ "{{ user.language_independent.user | toPercentage }}" }}
 				</dd>
 			</div>
@@ -88,14 +88,14 @@
 		<dl>
 			<div :class="(user.bot_probability.all || 0) | resultLevel">
 				<dt>{{ i18n "allFeatures" }}</dt>
-				<dd data-to-bind="features">
+				<dd>
 					{{ "{{ (user.bot_probability.all || 0) | toPercentage }}" }}
 				</dd>
 			</div>
 
 			<div :class="user.bot_probability.language_independent | resultLevel">
 				<dt>{{ i18n "languageIndependentFeatures" }}</dt>
-				<dd data-to-bind="language_independent">
+				<dd>
 					{{ "{{ user.bot_probability.language_independent | toPercentage }}" }}
 				</dd>
 			</div>
@@ -106,25 +106,25 @@
 		<nav>
 			<ul>
 				<li class="profile">
-					<a data-attr-to-bind-in="href" data-to-bind="profile_link" :href="user.username | profileLink" target="_blank">
+					<a :href="user.username | profileLink" target="_blank">
 						{{ i18n "profileLink" }}
 					</a>
 				</li>
 
 				<li class="details" v-if="user.details_link">
-					<a data-attr-to-append-to="href" data-to-append="tweet_link" :href="user.details_link" target="_blank">
+					<a :href="user.details_link" target="_blank">
 						{{ i18n "detailsLink" }}
 					</a>
 				</li>
 
 				<li class="share">
-					<a data-attr-to-append-to="href" data-to-append="profile_username" :href="user.username | tweetItLink" target="_blank">
+					<a :href="user.username | tweetItLink" target="_blank">
 						{{ i18n "tweetItLink" }}
 					</a>
 				</li>
 
 				<li class="feedback" v-if="user.feedback_report_link && user.feedback_report_link !== '' && user.feedback_report_link !== '.'">
-					<a data-attr-to-bind-in="href" data-to-append="feedback_report_link" :href="user.feedback_report_link" target="_blank">
+					<a :href="user.feedback_report_link" target="_blank">
 						{{ i18n "feedbackLink" }}
 					</a>
 				</li>
