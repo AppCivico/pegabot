@@ -5,7 +5,7 @@ ite:
   iconNegative: "ite--negative.png"
   iconHeight: 42
   iconWidth: 131
-  link: "https://itsrio.org/"
+  link: "http://tecnologiaequidade.org.br/"
   weight: 2
 its:
   id: "its"
@@ -14,5 +14,5 @@ its:
   iconNegative: "its--negative.png"
   iconHeight: 47
   iconWidth: 114
-  link: "http://tecnologiaequidade.org.br/"
+  link: "https://itsrio.org/"
   weight: 1
