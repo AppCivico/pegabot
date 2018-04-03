@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- improve share message
+- minor layout tweak
+
 ## [1.2.0][] - 2018-04-02
 
 ### Added
@@ -14,7 +19,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - header menu
 - privacy police
 - use terms
--
 
 ### Fixed
 
