@@ -73,12 +73,11 @@ window.$vue = new Vue({
 					return `https://twitter.com/${username}`;
 				},
 				tweetItLink(username) {
-					const via = 'Pegabot';
 					const hashtags = 'Pegabot';
-					const title = encodeURIComponent(`O @pegabots quer saber se ${username} é um bot ou não. Qual a sua opinião?`);
+					const title = encodeURIComponent(`O @pegabots quer saber se @${username} é um bot ou não. Qual a sua opinião?`);
 					const url = encodeURIComponent(window.location.href);
 
-					return `https://twitter.com/intent/tweet?url=${url}&text=${title}&via=${via}&hashtags=${hashtags}`;
+					return `https://twitter.com/intent/tweet?url=${url}&text=${title}&hashtags=${hashtags}`;
 				},
 				resultLevel(value) {
 					let level = 0;
