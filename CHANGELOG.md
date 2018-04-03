@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.2.4][] - 2018-04-03
+
 ### Changed
 
 - OpenGraph image path to avoid caching issues;
@@ -70,7 +72,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
-[Unreleased]: undefined/compare/v1.2.3...HEAD
+[Unreleased]: undefined/compare/v1.2.4...HEAD
+[1.2.4]: undefined/compare/v1.2.3...v1.2.4
 [1.2.3]: undefined/compare/v1.2.2...v1.2.3
 [1.2.2]: undefined/compare/v1.2.1...v1.2.2
 [1.2.1]: undefined/compare/v1.2.0...v1.2.1
