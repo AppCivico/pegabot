@@ -51,10 +51,22 @@ details > summary {
 	break-after: avoid;
 	page-break-after: avoid;
 
-	hyphens: auto;
 	text-transform: uppercase;
 
 	color: palette('orange');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	hyphens: auto;
+
+	@media screen and (min-width: breakpoint('phablet')) {
+		hyphens: none;
+	}
 }
 
 h1 a,
