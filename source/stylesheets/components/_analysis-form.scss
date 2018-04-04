@@ -108,6 +108,11 @@
 
 	box-shadow: 0 6px 0 0 palette('gray', 'base'), 0 20px 10px palette('shadow');
 
+	&:hover,
+	&:focus {
+		box-shadow: 0 6px 0 0 palette('blue', 'dark'), 0 20px 10px palette('shadow');
+	}
+
 	@media screen and (min-width: breakpoint('phablet')) {
 		float: left;
 
@@ -243,6 +248,8 @@
 		color: palette('purple');
 
 		background: transparent;
+
+		box-shadow: none;
 	}
 }
 
