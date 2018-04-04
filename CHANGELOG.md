@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.2.7][] - 2018-04-04
+
 ### Changed
 
 - layout improvements and fixes
@@ -88,7 +90,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
-[Unreleased]: undefined/compare/v1.2.6...HEAD
+[Unreleased]: undefined/compare/v1.2.7...HEAD
+[1.2.7]: undefined/compare/v1.2.6...v1.2.7
 [1.2.6]: undefined/compare/v1.2.5...v1.2.6
 [1.2.5]: undefined/compare/v1.2.4...v1.2.5
 [1.2.4]: undefined/compare/v1.2.3...v1.2.4
