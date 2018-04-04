@@ -32,7 +32,18 @@ $height--desktop: $line-height * 3rem;
 }
 
 .site-footer a {
-	@include link-undercover;
+	&:link,
+	&:visited {
+		color: inherit;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: underline;
+
+		color: inherit;
+	}
 }
 
 .footer-menu {

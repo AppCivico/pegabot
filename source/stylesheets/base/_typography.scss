@@ -16,7 +16,7 @@
  */
 body {
 	font-weight: 700;
-	font-size: 1em;
+	font-size: 0.8em;
 	line-height: $line-height;
 	font-family: $text-font-stack;
 
@@ -54,6 +54,19 @@ details > summary {
 	text-transform: uppercase;
 
 	color: palette('orange');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	hyphens: auto;
+
+	@media screen and (min-width: breakpoint('phablet')) {
+		hyphens: none;
+	}
 }
 
 h1 a,

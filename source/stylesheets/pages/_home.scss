@@ -48,7 +48,11 @@
 }
 
 .intro {
+	position: relative;
+
 	clear: both;
+
+	z-index: layer('default');
 
 	max-width: $max-width;
 
