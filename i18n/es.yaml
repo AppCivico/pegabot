@@ -1,0 +1,68 @@
+- id: allFeatures
+  translation: "Análise completa"
+- id: analysisProgress
+  translation: "{{ .Count }} contas analisadas."
+- id: aProjectBy
+  translation: "Um projeto"
+- id: botProbability
+  translation: "Probabilidade de ser um robô"
+- id: callToFaqResults
+  translation: "O que os [resultados significam](/faq#faq__como-interpretar-as-notas)?"
+- id: contact
+  translation: "Contato"
+- id: content
+  translation: "Publicações"
+- id: detailsLink
+  translation: "Detalhamento da análise"
+- id: developedBy
+  translation: "Desenvolvido por"
+- id: email
+  translation: "E-mail"
+- id: englishSpecificFeatures
+  translation: "Elementos linguísticos"
+- id: feedbackLink
+  translation: "Fornecer parecer"
+- id: friendship
+  translation: "Amizades"
+- id: index
+  translation: "Índice"
+- id: languageIndependentFeatures
+  translation: "Elementos independentes da linguagem"
+- id: newsletter
+  translation: "Newsletter"
+- id: network
+  translation: "Rede"
+- id: noScriptMessage
+  translation: "Essa funcionalidade depende de JavaScript."
+- id: profileLink
+  translation: "Perfil na rede social"
+- id: returnedResults
+  translation: "Sua busca retornou {{ .Count }} resultados."
+- id: signUpNewsletter
+  translation: "Inscreva-se à lista"
+- id: sentiment
+  translation: "Emocional"
+- id: socialNetwork
+  translation: "Rede social"
+- id: subscribe
+  translation: "Assinar"
+- id: temporal
+  translation: "Frequência"
+- id: toCatch
+  translation: "Pegar"
+- id: toCatchMyFollowers
+  translation: "Analisar quem segue esse perfil"
+- id: toCatchMyFriends
+  translation: "Analisar quem esse perfil segue"
+- id: toCatchThatBot
+  translation: "Pegar os bots"
+- id: toExportData
+  translation: "Exportar dados"
+- id: toStop
+  translation: "Parar"
+- id: tweetItLink
+  translation: "Tweetar esse resultado"
+- id: twitterProfile
+  translation: "perfil no Twitter"
+- id: user
+  translation: "Usuário"
