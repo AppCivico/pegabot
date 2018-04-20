@@ -55,6 +55,8 @@ Then you can run `npm install` or `yarn`, to install the dependencies, and then 
 
 To run `npm run build` will deploy every site version to the `./public` folder under a language coded directory.
 
+Pushs to the `develop` branch trigger the deploy on develop and tests environment. To deploy on production, the merge commit on master needs to have a version tag. The process can be done using [`npm version`](https://docs.npmjs.com/cli/version) CLI command.
+
 ## Translation instructions
 
 Files which need to be edited or added:
