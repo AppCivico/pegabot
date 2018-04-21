@@ -1,68 +1,135 @@
 - id: allFeatures
-  translation: "Análise completa"
+
+  translation:: "Análisis completo"
+
 - id: analysisProgress
-  translation: "{{ .Count }} contas analisadas."
+
+  translation:: "{{ .Count }} cuentas analizadas."
+
 - id: aProjectBy
-  translation: "Um projeto"
+
+  translation:: "Un proyecto de"
+
 - id: botProbability
-  translation: "Probabilidade de ser um robô"
+
+  translation:: "Probabilidades de ser un bot"
+
 - id: callToFaqResults
-  translation: "O que os [resultados significam](/faq#faq__como-interpretar-as-notas)?"
+
+  translation: "Lo que los [resultados significan](/faq#faq__cómo-interpretar-los-resultados)?"
+
 - id: contact
-  translation: "Contato"
+
+  translation: "Contacto"
+
 - id: content
-  translation: "Publicações"
+
+  translation: "Publicaciones"
+
 - id: detailsLink
-  translation: "Detalhamento da análise"
+
+  translation: "Detalle del análisis"
+
 - id: developedBy
-  translation: "Desenvolvido por"
+
+  translation: "Desarrollado por"
+
 - id: email
-  translation: "E-mail"
+
+  translation: "Correo electrónico"
+
 - id: englishSpecificFeatures
-  translation: "Elementos linguísticos"
+
+  translation: "Elementos lingüísticos"
+
 - id: feedbackLink
-  translation: "Fornecer parecer"
+
+  translation: "Feedback"
+
 - id: friendship
-  translation: "Amizades"
+
+  translation: "Amistad"
+
 - id: index
+
   translation: "Índice"
+
 - id: languageIndependentFeatures
-  translation: "Elementos independentes da linguagem"
+
+  translation: "Elementos independientes del lenguaje"
+
 - id: newsletter
-  translation: "Newsletter"
+
+  translation: "Boletín"
+
 - id: network
-  translation: "Rede"
+
+  translation: "Red"
+
 - id: noScriptMessage
-  translation: "Essa funcionalidade depende de JavaScript."
+
+  translation: "Esta funcionalidad depende de JavaScript."
+
 - id: profileLink
-  translation: "Perfil na rede social"
+
+  translation: "Perfil en la red social"
+
 - id: returnedResults
-  translation: "Sua busca retornou {{ .Count }} resultados."
+
+  translation: "Su búsqueda arrojó {{ .Count }} resultados."
+
 - id: signUpNewsletter
-  translation: "Inscreva-se à lista"
+
+  translation: "Suscribirse a la lista"
+
 - id: sentiment
+
   translation: "Emocional"
+
 - id: socialNetwork
-  translation: "Rede social"
+
+  translation: "Red social"
+
 - id: subscribe
-  translation: "Assinar"
+
+  translation: "Suscribirse"
+
 - id: temporal
-  translation: "Frequência"
+
+  translation: "Frecuencia"
+
 - id: toCatch
-  translation: "Pegar"
+
+  translation: "Analizar"
+
 - id: toCatchMyFollowers
-  translation: "Analisar quem segue esse perfil"
+
+  translation: "Analizar quién sigue a este perfil"
+
 - id: toCatchMyFriends
-  translation: "Analisar quem esse perfil segue"
+
+  translation: "Analizar a quién sigue este perfil"
+
 - id: toCatchThatBot
-  translation: "Pegar os bots"
+
+  translation: "Atrapar bots"
+
 - id: toExportData
-  translation: "Exportar dados"
+
+  ttranslation: "Exportar datos"
+
 - id: toStop
+
   translation: "Parar"
+
 - id: tweetItLink
-  translation: "Tweetar esse resultado"
+
+  translation: "Tuitear este resultado"
+
 - id: twitterProfile
-  translation: "perfil no Twitter"
+
+  translation: "perfil en Twitter"
+
 - id: user
-  translation: "Usuário"
+
+  translation: "Usuario"
