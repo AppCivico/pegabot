@@ -1,6 +1,3 @@
-baseURL: "https://pegabot.com.br"
-languageCode: "pt-br"
-title: "Pegabot"
 defaultContentLanguage: "pt"
 enableGitInfo: true
 enableMissingTranslationPlaceholders: true
@@ -22,6 +19,18 @@ params:
   tagline: "Por mais transparência no uso de bots"
 languages:
   pt:
+    languageCode: "pt-br"
+    baseURL: "https://pegabot.com.br"
+    languageName: Portuguese
+    title: Pegabot
+    params:
+      siteDescription: "O Pegabot verifica a atividade de uma conta em rede social e dá uma pontuação baseada na probabilidade dessa conta ser um bot. Maiores pontuações são mais bot-like."
+      tagline: "Por mais transparência no uso de bots"
+  es:
+    languageCode: "es-mx"
+    baseURL: "https://atrapabot.com.br"
+    languageName: Portuguese
+    title: Pegabot
     params:
       siteDescription: "O Pegabot verifica a atividade de uma conta em rede social e dá uma pontuação baseada na probabilidade dessa conta ser um bot. Maiores pontuações são mais bot-like."
       tagline: "Por mais transparência no uso de bots"
