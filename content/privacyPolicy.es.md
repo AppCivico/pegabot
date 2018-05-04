@@ -6,39 +6,41 @@ menu: "main"
 slug: "privacidade"
 weight: 10
 ---
+## Política de privacidad
 
-O tratamento de dados pessoais conduzido no âmbito do Pegabot será regido pela presente Política de Privacidade, ficando os usuários cientes de que o acesso às funcionalidades do Pegabot configura consentimento para tratamento de seus dados pessoais na forma estabelecida nesta Política de Privacidade.
+El tratamiento de los datos personales por parte de Atrapabot se regirá por la siguiente política de privacidad. 
 
-## Dos registros de acesso
+La política de privacidad establece los usos y las características de Atrapabot. El acceso a las funcionalidades de Atrapabot implica el consentimiento por parte del usuario para el tratamiento de sus datos en la forma definida por esta política. 
 
-1) Ao acessar este site, independente de cadastro, certas informações sobre o visitante como o protocolo de Internet (IP), navegação através do site, o software utilizado e o tempo gasto, junto com outras informações semelhantes, serão armazenados em servidores do Pegabot. Este registro não irá identificar especificamente o usuário. A informação será utilizada apenas internamente para análise de tráfego no website.
+## Sobre los registros de acesso
 
-2) Essas informações serão armazenadas e somente serão fornecidas a terceiros na forma da Lei e mediante ordem judicial.
+Al acceder a este sitio, independientemente del registro, cierta información sobre el visitante, como el protocolo de Internet (IP), la navegación por el sitio, el software utilizado o el tiempo del navegación, junto con otras informaciones adicionales, serán almacenadas en el servidor de Atrapabot. Este registro no podrá identificar específicamente al usuario. La información se utilizará únicamente para el análisis del tráfico del sitio web.
 
-## Disposições sobre o tratamento de dados pessoais
+Esta información será almacenada y únicamente se proporcionará a terceros a través del marco determinado por la ley mediante una orden judicial.  
 
-3) Para o correto desempenho de suas finalidades, o Pegabot pode solicitar ou obter dados pessoais (aqui denominados "dados") dos seus usuários. Esses dados serão criptografados e o seu tratamento será governado pelos Termos de Uso do Pegabot, bem como pela presente política de privacidade.
+## Disposiciones sobre el tratamiento de los datos personales
 
-4) O Pegabot jamais utilizará os dados solicitados para outras finalidades que não aquelas relativas à administração do site, que inclui, dentre outras, realização de estatísticas e estudos, porém jamais venderá os dados. Não se inclui nessa vedação o armazenamento de dados relativos aos perfis pesquisados para fins de estatística bem como para análise de padrões de pesquisa. O Pegabot também jamais fornecerá os dados obtidos junto aos usuários a terceiros, exceto se houver autorização expressa do usuário ou na hipótese de ordem judicial determinando o fornecimento de tais dados. E o Pegabot também não utilizará esses dados para envio de spam, prática com relação à qual é terminantemente contra, ou para qualquer outra prática semelhante ao spam com relação a seus usuários. Não se considera spam o envio de informações sobre atualização do Pegabot, bem como sobre o oferecimento de novos serviços e funcionalidades.
+Para corregir el desempeño de sus funcionalidades, Atrapabot puede solicitar u obtener datos (aquí denominados “datos") de sus usuarios. Esos datos serán cifrados y su tratamiento estará regido por los Términos de Uso de Atrapabot, así como por la presente política de privacidad.
 
-5) Os dados dos usuários também poderão ser utilizados para administração, gestão, ampliação e melhoramento das funcionalidades do Pegabot, bem como para a customização dos serviços. Os usuários poderão eventualmente ser contatados pela equipe do Pegabot, caso isso se faça necessário.
+Atrapabot jamás utilizará los datos solicitados para otras finalidades que no sean las que se refieren a la administración del sitio, que incluye, entre otras, la realización de estudios y estatísticas. Atrapabot jamás venderá los datos. No se incluye en esa recolección o almacenamiento datos relativos a los perfiles para fines estadísticos o para análisis de los patrones de investigación.  Atrapabot jamás suministrará los datos obtenidos a terceros, con excepción de que existiera una autorización expresa del usuario o una orden judicial que determine la entrega de esos datos. Atrapabot tampoco utilizará esos datos para envío de spam, práctica con la cual se declara en contra, o para cualquier otra práctica semejante al spam. No se considerará spam el envío de información sobre la actualización de Atrapabot o sobre la oferta de nuevos servicios y funcionalidades. 
 
-6) O usuário do Pegabot garante que os dados pessoais fornecidos para o Pegabot são verdadeiros e atuais, bem como garante que irá atualizar seus dados sempre houver qualquer modificação neles.
+Los datos de los usuarios también pueden ser utilizados para la administración, gestión, ampliación y mejoramiento de las funcionalidades de Atrapabot o para la customización de los servicios. Los usuarios podrán ser contactados eventualmente por el equipo de Atrapabot en caso de que fuera necesario.
 
-7) Para acessar e utilizar certos serviços do Pegabot, pode ser necessário que os usuários tenham que forneçar previamente alguns dados pessoais. O Pegabot adota níveis de segurança dentro dos requisitos legais para a proteção dos dados pessoais, tais como a criptografia. Entretanto, é importante que o usuário tenha ciência de que pela própria natureza e características técnicas da Internet, essa proteção não é infalível e encontra-se sujeita à violação pelas mais diversas práticas maliciosas.
+El usuario de Atrapabot garantiza que los datos personales suministrados a Atrapabot son verdeamos y actuales, así como que irá actualizando los datos siempre que hubiera alguna modificación.
+Para acceder y utilizar ciertos servicios de Atrapabot, puede ser necesario que los usuarios tengan que suministrar previamente algunos datos personales. Atrapabot adopta niveles de seguridad dentro de los requisitos legales para la protección de los datos personales, tales como la encriptación. Mientras tanto, es importante que el usuario tenga conciencia de que por la propia naturaleza y características técnicas de Internet, esa protección no es infalible y está sujeta a la vulnerabilidad por las más diversas prácticas maliciosas.
 
-8) O Pegabot não tem como garantir a privacidade e segurança na utilização do mesmo e de seus serviços com relação aos usuários e terceiros, havendo sempre o risco inerente de que terceiros indevidamente consigam inferir de qualquer forma informações sobre condições, características, dados pertinentes aos usuários do Pegabot. Isso, naturalmente, não é responsabilidade do Pegabot, mas da própria arquitetura da internet.
+Atrapabot no tiene cómo garantizar la privacidad y seguridad en la utilización misma de sus servicios con relación a los usuarios y terceros, habiendo siempre el riesgo inherente de que terceros indebidamente consigan interferir de cualquier forma informaciones sobre condiciones, características, datos pertinente a os usuarios de Atrapabot. Eso, naturalmente, no es responsabilidad de Atrapabot, sino de la propia arquitectura de Internet. 
 
-9) O Pegabot não verifica e não possui qualquer obrigação de verificar a identidade dos usuários nem a veracidade, completude, autenticidade dos dados que os usuários fornecem sobre si em qualquer circunstância. O Pegabot somente fornecerá quaisquer dados relativos a seus usuários para terceiros se solicitada por meio de canais legais em vigor mediante ordem judicial legalmente válida.
+Atrapabot no verifica y no posee la obligación de verificar la identidad de los usuarios en términos de veracidad, completud, autenticidad de los dato que los usuarios suministra sobre sí en cualquier circunstancias. Atrapabot solamente suministrará cualquier dato relativos a sus usuarios a terceros si es solicitada por medio e canales legales en vigor mediante una orden judicial legalmente válida.
 
-10) Há um canal através do qual os usuários podem corrigir ou atualizar dados, sempre que necessário, bem como podem solicitar exclusão definitiva de seus dados do Pegabot na hipótese desejarem sair ou de serem excluídos do Pegabot. Para casos excepcionais em que por algum motivo relevante o usuário não conseguir efetuar ele mesmo a remoção, será possível solicitar a remoção através de requisição por meio do canal de contato com a equipe do Pegabot, devendo identificar-se e informar quais conteúdos de sua autoria deseja ter removidos.
+Existe un canal a través del cual los usuarios pueden corregir o actualizar los atos, siempre que sea necesarios, así como solicitar la exclusión definitiva de sus datos de Atrapabot en la hipótesis e que desearan ser excluidos de Atrapabot. Para casos excepticiales en que por algún motivo relevante el usuario no consiga efectuar por sí mismo la remoción de los datos, será posible solicitada a través de una solecitos por medio del canal de contacto con el equipo e Atrapbot, debiendo identificarse e informar qué contenidos de su autoría desea remover. 
 
-11) O Pegabot jamais fornecerá os dados obtidos junto aos usuários a terceiros fora de sua estrutura organizacional - salvo se necessário ao seu correto funcionamento, exceto se houver autorização expressa do usuário ou mediante ordem judicial na forma da Lei.
+Atrapabot jamás suministrará los datos obtenidos de los usuarios a terceros fuera de su estructura organizacional, salvo que sea necesario a su funcionamiento, y si hubiera una autorización expresa el usuario o mediante una orden judicial. 
 
-## Da instalação de cookies e da autorização para realização de pesquisas
+Sobre la instalación e cookies y la autorización para la realización de investigación. 
+Al acceder a Atrapabot el usuario está de acuerdo con la instalación de cookies en el dispositivo utilizado para acceder al sitio. Estas cookies serán utilizadas para analizar las actividades de los usuarios para mejorar el funcionamiento del sitio, así como para almacenar las consultas individuales realizadas por cada usuario con la intención de posibilitar a Atrapabots la realización de investigación basada en esas consultas. La realización de esos estudios ocurrirá de manera anonimizada y dependerá de la autorización del usuario la posibilidad de realizar las consultas correspondientes por medio de su perfil en la red social respectiva. 
 
-12) Ao acessar o Pegabot o usuário concorda com a instalação de cookies no dispositivo utilizado para acessar o site, sendo certo que tais cookies serão utilizados com o propósito de analisar a atividade dos usuários para melhorar o funcionamento do site, assim como para armazenar as consultas individuais realizadas por cada usuário com o intuito de possibilitar ao Pegabots a realização de pesquisa baseada nessas consultas. A realização de pesquisas ocorrerá de forma anonimizada e dependerá de autorização do usuário que realizar as consultas correspondentes por meio de seu perfil na rede social respectiva.
+## De las modificaciones de la Política de privacidad
+Las condiciones especificadas en esta Política de Privacidad pueden ser modificadas en cualquier momento. En caso de que esas modificaciones sean significativas o afecten los derechos y deberes de los usuarios de Atrapabot, estas serán divulgadas de forma clara en el sitio de Atrapabot o enviadas por correo electrónico. Los usuarios pueden verificar regularmente el sito de Atrapabot para buscar actualizaciones.
 
-## Das modificações da Política de Privacidade
-
-13) As condições especificadas nesta Política de Privacidade poderão ser modificadas a qualquer momento. Caso essas modificações sejam significativas ou afetem, de forma concreta, os direitos e deveres dos usuários do Pegabot, estas serão divulgadas, de forma clara, no site do Pegabot ou enviadas por email, cabendo aos usuários verificar regularmente o site do Pegabot para buscar atualizações.
+ 

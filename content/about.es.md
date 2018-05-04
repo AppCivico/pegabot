@@ -1,22 +1,6 @@
----
-title: "Sobre o Pegabot"
-date: 2018-01-24T11:07:39-02:00
-draft: false
-menu:
-  - "main"
-  - "header"
-slug: "sobre"
-weight: 1
-rootClass: "about-page"
----
-{{< video src="/assets/video/pegabot--480x480.mp4">}}
+# Desarrollando redes estructurales de bots
 
-# Desarticulando redes estruturais de bots
+Bots, una abreviatura para robots, son programas computacionales creados para realizar tareas específicas. Los primeros robots no tenían intenciones maliciosas, y aún hoy existen los buenos bots, que tienen como propósito exigir rendición de cuentas de políticos, defender causas como la equidad de género o ayudar a organizar las (muchas) tareas diarias de sus usuarios. Pero a finales de la década de 1990, los bots comenzaron a desarrollar una reputación negativa. Algunos bots han sido usados en el envío de spam por correo electrónico, el robo de datos personales de usuarios, fraudes de tarjetas de crédito y ataques de desinformación para distorsionar la esfera pública. Estos bots tienen como objetivo esparcir mentiras para influenciar narrativas, un fenómeno que desde 2014 viene ganando escala global. Estos bots están por ahí y casi nadie sabe cómo funcionan, quién los desarrolla y por quién son financiados. Para ayudar a combatir este problema, lanzamos el Atrapabot, una herramienta que trae más transparencia para el uso de los bots en América Latina.
+En esta plataforma, el usuario puede comprobar la actividad de una cuenta de red social para saber la probabilidad de que el perfil sea un bot. Cuanto mayor sea la calificación, mayor será la probabilidad de ser un bot. Por el momento, la plataforma se integra a Twitter, pero pronto daremos soporte a otros medios sociales.
 
-_Bots_, uma abreviação para robôs, são programas de computador criados para executar tarefas específicas. Os primeiros robôs não tinham intenções maliciosas, e ainda hoje existe os bons _bots_, que têm como propósito exigir prestação de contas de políticos, viralizar causas para a igualdade de gênero ou ajudar a organizar as (muitas) tarefas diárias de seus usuários. Bom, né?
-
-Mas no final da década de 1990, os _bots_ começaram a desenvolver uma reputação negativa. Alguns _bots_ têm sido usados no envio de SPAMs por e-mail, no roubo de dados pessoais de usuários, em fraudes de cartão de crédito e em ataques de desinformação para manipulação da esfera pública. Estes _bots_ têm como objetivo espalhar mentiras para influenciar narrativas, um fenômeno que desde 2014 vem ganhando escala global. Esses _bots_ estão por aí e quase ninguém sabe como eles funcionam, quem os desenvolve e por quem são financiados. Para ajudar a combater esse problema, lançamos o **PegaBot**, uma ferramenta que traz mais transparência para o uso dos _bots_ no Brasil.
-
-Nesta plataforma, o usuário pode verificar a atividade de uma conta de rede social para saber a probabilidade do perfil ser de um bot. Quanto maior a nota, maior a chance de ser um bot. Por enquanto, a plataforma é integrada ao Twitter, mas em breve daremos suporte a outras mídias sociais.
-
-O **PegaBot** é um projeto do [Instituto do Tecnologia e Sociedade do Rio de Janeiro (ITS Rio)](https://itsrio.org/) e do [Instituto Equidade &amp; Tecnologia](http://tecnologiaequidade.org.br/). A plataforma foi lançada em março de 2018 e está em fase de testes.
+Atrapabot es un proyecto del Instituto de Tecnología y Sociedad de Río de Janeiro (ITS Rio) y del Instituto Equidad & Tecnología. La plataforma fue lanzada en marzo de 2018 y está en fase piloto. En México, el proyecto se realiza con la colaboración del colectivo Enjambre Digital y de Openlabs, del Tecnológico de Monterrey. 
