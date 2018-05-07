@@ -7,6 +7,7 @@ layout: none
 type: faq
 weight: 8
 ---
-O PegaBot é desenvolvido pelo Instituto Tecnologia &amp; Equidade (IT&amp;E) e Instituto de Tecnologia e Sociedade do Rio de Janeiro (ITS Rio). O projeto foi construído a partir da plataforma [botometer](https://botometer.iuni.iu.edu/), criada pela [Indiana University Network Science Institute (IUNI)](https://iuni.iu.edu/) e [Center for Complex Networks and Systems Research (CNetS)](https://cnets.indiana.edu/). Nossa equipe trabalhou no código aberto, o incrementou e o treinou para análise em português.
+O PegaBot é desenvolvido pelo Instituto Tecnologia & Equidade (IT&E) e Instituto de Tecnologia e Sociedade do Rio de Janeiro (ITS Rio). Para as análises não linguísticas utilizamos a API do Botometer [https://market.mashape.com/OSoMe/botometer-pro], o qual é um projeto desenvolvido entre a Indiana University Network Science Institute (IUNI)[https://iuni.iu.edu/] e o Center for Complex Networks and Systems Research (CNetS)[https://cnets.indiana.edu/]. A marca, bem como os códigos fontes da API, são de propriedade da IUNI e CNetS e o Pegabot não tem acesso nem disponibiliza qualquer parte do código proprietário em nosso repositório público do github [https://github.com/AppCivico/pegabot]. Nosso repositório contém APENAS OS CÓDIGOS FONTE REFERENTES À CAMADA DE FRONT-END do Pegabot, o qual pode ser livremente estudado, alterado, distribuído e utilizado para qualquer fim.
 
-Você pode baixar o código fonte a partir do [nosso repositório no Github](https://github.com/AppCivico/pegabot).
+NOSSAS AVALIAÇÕES DE PERFIS ROBÔS UTILIZAM OS RESULTADOS OBTIDOS ATRAVÉS DO SERVIÇO OFERECIDO PELO SERVIÇO BOTOMETER, MAS NÃO SE LIMITAM A ELES PARA APRESENTAR O RESULTADO FINAL, PODENDO INCLUIR NOVOS CRITÉRIOS E AJUSTAR OS RESULTADOS CONFORME O CONTEXTO REGIONAL E LINGUÍSTICO.
+
