@@ -7,9 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-### Added
+### Changed
 
-- Spanish version
+- FAQ content
 
 ## [1.2.7][] - 2018-04-04
 
