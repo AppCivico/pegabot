@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.2.8][] - 2018-05-07
+
 ### Changed
 
 - FAQ content
@@ -94,7 +96,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
-[Unreleased]: undefined/compare/v1.2.7...HEAD
+[Unreleased]: undefined/compare/v1.2.8...HEAD
+[1.2.8]: undefined/compare/v1.2.7...v1.2.8
 [1.2.7]: undefined/compare/v1.2.6...v1.2.7
 [1.2.6]: undefined/compare/v1.2.5...v1.2.6
 [1.2.5]: undefined/compare/v1.2.4...v1.2.5
