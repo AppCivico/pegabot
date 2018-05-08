@@ -1,6 +1,6 @@
 {
   "name": "pega-bots",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "description": "Social networks profiles bot-like analyzer",
   "main": "index.html",
   "scripts": {

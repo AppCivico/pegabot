@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.2.11][] - 2018-05-08
+
 ### Fixed
 
 - potential security vulnerability in lock dependencies file
@@ -112,7 +114,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
-[Unreleased]: undefined/compare/v1.2.10...HEAD
+[Unreleased]: undefined/compare/v1.2.11...HEAD
+[1.2.11]: undefined/compare/v1.2.10...v1.2.11
 [1.2.10]: undefined/compare/v1.2.9...v1.2.10
 [1.2.9]: undefined/compare/v1.2.8...v1.2.9
 [1.2.8]: undefined/compare/v1.2.7...v1.2.8
