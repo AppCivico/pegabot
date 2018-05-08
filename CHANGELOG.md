@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.2.12][] - 2018-05-08
+
 ### Fixed
 
 - markdown links on FAQ
@@ -118,7 +120,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
-[Unreleased]: undefined/compare/v1.2.11...HEAD
+[Unreleased]: undefined/compare/v1.2.12...HEAD
+[1.2.12]: undefined/compare/v1.2.11...v1.2.12
 [1.2.11]: undefined/compare/v1.2.10...v1.2.11
 [1.2.10]: undefined/compare/v1.2.9...v1.2.10
 [1.2.9]: undefined/compare/v1.2.8...v1.2.9
