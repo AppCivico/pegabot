@@ -57,7 +57,7 @@
 - id: toCatchThatBot
   translation: "Atrapar bots"
 - id: toExportData
-  ttranslation: "Exportar datos"
+  translation: "Exportar datos"
 - id: toStop
   translation: "Parar"
 - id: tweetItLink
