@@ -1,135 +1,68 @@
 - id: allFeatures
-
-  translation:: "Análisis completo"
-
+  translation: "Análisis completo"
 - id: analysisProgress
-
-  translation:: "{{ .Count }} cuentas analizadas."
-
+  translation: "{{ .Count }} cuentas analizadas."
 - id: aProjectBy
-
-  translation:: "Un proyecto de"
-
+  translation: "Un proyecto de"
 - id: botProbability
-
-  translation:: "Probabilidades de ser un bot"
-
+  translation: "Probabilidades de ser un bot"
 - id: callToFaqResults
-
   translation: "Lo que los [resultados significan](/faq#faq__cómo-interpretar-los-resultados)?"
-
 - id: contact
-
   translation: "Contacto"
-
 - id: content
-
   translation: "Publicaciones"
-
 - id: detailsLink
-
   translation: "Detalle del análisis"
-
 - id: developedBy
-
   translation: "Desarrollado por"
-
 - id: email
-
   translation: "Correo electrónico"
-
 - id: englishSpecificFeatures
-
   translation: "Elementos lingüísticos"
-
 - id: feedbackLink
-
   translation: "Feedback"
-
 - id: friendship
-
   translation: "Amistad"
-
 - id: index
-
   translation: "Índice"
-
 - id: languageIndependentFeatures
-
   translation: "Elementos independientes del lenguaje"
-
 - id: newsletter
-
   translation: "Boletín"
-
 - id: network
-
   translation: "Red"
-
 - id: noScriptMessage
-
   translation: "Esta funcionalidad depende de JavaScript."
-
 - id: profileLink
-
   translation: "Perfil en la red social"
-
 - id: returnedResults
-
   translation: "Su búsqueda arrojó {{ .Count }} resultados."
-
 - id: signUpNewsletter
-
   translation: "Suscribirse a la lista"
-
 - id: sentiment
-
   translation: "Emocional"
-
 - id: socialNetwork
-
   translation: "Red social"
-
 - id: subscribe
-
   translation: "Suscribirse"
-
 - id: temporal
-
   translation: "Frecuencia"
-
 - id: toCatch
-
   translation: "Analizar"
-
 - id: toCatchMyFollowers
-
   translation: "Analizar quién sigue a este perfil"
-
 - id: toCatchMyFriends
-
   translation: "Analizar a quién sigue este perfil"
-
 - id: toCatchThatBot
-
   translation: "Atrapar bots"
-
 - id: toExportData
-
   ttranslation: "Exportar datos"
-
 - id: toStop
-
   translation: "Parar"
-
 - id: tweetItLink
-
   translation: "Tuitear este resultado"
-
 - id: twitterProfile
-
   translation: "perfil en Twitter"
-
 - id: user
-
   translation: "Usuario"
