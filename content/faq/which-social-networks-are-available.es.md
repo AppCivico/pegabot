@@ -7,4 +7,4 @@ layout: none
 type: faq
 weight: 1
 ---
-Por enquanto, não. Neste primeiro release, temos acesso apenas ao Twitter. Facebook, WhatsApp e outras redes sociais impõem mais barreiras de acesso à API, por isso ainda estamos trabalhando para que as próximas versões do PegaBot já estejam integradas a essas plataformas.
+Por ahora no. En este primer lanzamiento, solamente tenemos acceso a Twitter. Facebook, WhatsApp y otras redes sociales imponen más barreras de acceso a la API, por lo que todavía estamos trabajando para que las próximas versiones de Atrapabot estén integradas a otras plataformas.
