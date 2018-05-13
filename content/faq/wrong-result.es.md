@@ -7,4 +7,4 @@ layout: none
 type: faq
 weight: 6
 ---
-O PegaBot ainda está em fase de testes, a precisão dos resultados vai melhorar com o tempo. Em breve, você poderá submeter esse erro para analisar e corrigir o erro. Dito isso, detectar bots é mesmo uma tarefa difícil (se fosse fácil as empresas de mídias sociais já teriam solucionado todo o problema). Nossa plataforma funciona reconhecendo padrões comportamentais. Por isso, os resultados devem servir para complementar, e não substituir, a sua própria opinião.
+Atrapabot se encuentra en fase piloto. La precisión de los resultados mejorará con el tiempo. En breve, podrá enviar los errores para ser analizados y corregidos. Dicho esto, detectar bots es incluso una tarea difícil (si fuera fácil, las empresas de medios sociales ya habrían solucionado todo el problema). Nuestra plataforma funciona reconociendo patrones de comportamiento. Por eso, los resultados deben servir para complementar, y no sustituir, su propia opinión.
