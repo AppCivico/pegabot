@@ -7,4 +7,4 @@ layout: none
 type: faq
 weight: 3
 ---
-Não! Nossos algoritmos acessam a API pública do Twitter, que não está de nenhuma forma vinculada à sua conta. Não acessamos ou armazenamos informações privadas, nem tuitamos em seu nome. Suas chaves API privadas nunca são transmitidas aos nossos servidores. Isso significa que não temos a capacidade de fazer pedidos em seu nome, de jeito nenhum.
+¡No! Nuestros algoritmos acceden a la API pública de Twitter, que no está vinculada a su cuenta. No accedemos o almacenamos información privada, ni tuitearemos jamás en su nombre. Sus claves de API privadas nunca se transmiten a nuestros servidores. Esto significa que no tenemos la capacidad de hacer peticiones en su nombre.  
