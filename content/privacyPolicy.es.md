@@ -1,5 +1,5 @@
 ---
-title: "Política de Privacidade"
+title: "Política de Privacidad"
 date: 2018-03-29T18:42:22-03:00
 draft: false
 menu: "main"
