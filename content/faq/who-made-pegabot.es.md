@@ -2,7 +2,7 @@
 date: 2018-03-13T18:09:27-03:00
 draft: false
 id: "quem-desenvolveu-o-pegabot"
-title: "Quem desenvolveu o PegaBot?"
+title: "¿Quién desarrollo Atrapabot"
 layout: none
 type: faq
 weight: 8
