@@ -1,5 +1,5 @@
 ---
-title: "Termos de uso"
+title: "Terminos de uso"
 date: 2018-03-29T18:42:07-03:00
 draft: false
 menu: "main"
