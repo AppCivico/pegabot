@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- force clean up of distribution folder
+
+
 ## [1.2.12][] - 2018-05-08
 
 ### Fixed
