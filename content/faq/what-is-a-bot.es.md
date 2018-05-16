@@ -2,7 +2,7 @@
 date: 2018-03-13T17:51:20-03:00
 draft: false
 id: "o-que-e-um-twitter-bot"
-title: "¿Qué es un Twitter bot"
+title: "¿Qué es un Twitter bot?"
 layout: none
 type: faq
 weight: 2
