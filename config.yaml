@@ -33,4 +33,4 @@ languages:
     title: Atrapabot
     params:
       siteDescription: "Atrapabot verifica la actividad de cuentas de Twitter y da una puntuación basada en la probabilidad de que esta cuenta sea un bot."
-      tagline: "Por mais transparência no uso de bots"
+      tagline: "Por una mayor transparencia en el uso de bots."
