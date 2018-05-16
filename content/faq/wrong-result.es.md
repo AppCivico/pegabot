@@ -2,7 +2,7 @@
 date: 2018-03-13T18:07:28-03:00
 draft: false
 id: "o-resultado-está-errado"
-title: "¡El resultado es incorrecto! y Estoy seguro de que una cuenta es bot / humana"
+title: "¡El resultado es incorrecto! Estoy seguro de que una cuenta es bot/humana."
 layout: none
 type: faq
 weight: 6
