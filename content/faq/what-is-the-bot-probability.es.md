@@ -2,7 +2,7 @@
 date: 2018-03-13T18:04:04-03:00
 draft: false
 id: "o-que-a-nota-significa"
-title: "¿Qué significa los resultados?"
+title: "¿Qué significan los resultados?"
 layout: none
 type: faq
 weight: 4
