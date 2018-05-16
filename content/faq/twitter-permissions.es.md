@@ -2,7 +2,7 @@
 date: 2018-03-13T18:01:06-03:00
 draft: true
 id: "twitter-permissões"
-title: "Preciso estar logado no Twitter ou conceder permissões ao PegaBot?"
+title: "¿Necesito estar registrado en Twitter o conceder permisos a Atrapabot?"
 layout: none
 type: faq
 weight: 3
