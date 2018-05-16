@@ -2,7 +2,7 @@
 date: 2018-03-13T18:08:36-03:00
 draft: false
 id: "como-avaliar-o-resultado"
-title: "Como posso avaliar o resultado?"
+title: "¿Cómo puedo evaluar el resultado?"
 layout: none
 type: faq
 weight: 7
