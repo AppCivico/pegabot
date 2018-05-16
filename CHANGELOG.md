@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - force clean up of distribution folder
 
+### Fixed
+
+- alignment on list
 
 ## [1.2.12][] - 2018-05-08
 

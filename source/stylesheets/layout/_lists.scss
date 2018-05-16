@@ -15,10 +15,17 @@ ol {
 	counter-reset: li;
 }
 
+article ul,
+article ol {
+	max-width: 33em;
+
+	margin-left: auto;
+}
+
 /**
- * Chrome and Firefox have different UA values of text-align for li. It can
- * result in different alignment of text in li depending on the direction of text (LTR/RTL)
- * @see https://github.com/necolas/normalize.css/issues/334
+* Chrome and Firefox have different UA values of text-align for li. It can
+* result in different alignment of text in li depending on the direction of text (LTR/RTL)
+* @see https://github.com/necolas/normalize.css/issues/334
  */
 article li {
 	position: relative;
