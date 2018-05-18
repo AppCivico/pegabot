@@ -38,11 +38,18 @@
 	height: 12.5rem;
 	min-height: #{200px + 30px};
 
-	background-image: image('logotype.png');
+	[lang='pt-br'] & {
+		background-image: image('logotype.png');
+	}
 
-	.es-mx {
+	[lang='es-mx'] & {
 		background-image: image('logotype-es.png');
 	}
+
+}
+
+.home-page [role='banner'] a.es-mx {
+
 }
 
 .home-page [role='main'] {
