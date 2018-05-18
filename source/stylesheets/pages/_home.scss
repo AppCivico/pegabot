@@ -39,16 +39,12 @@
 	min-height: #{200px + 30px};
 
 	[lang='pt-br'] & {
-		background-image: image('logotype.png');
+		background-image: image('logotype.png') !important;
 	}
 
 	[lang='es-mx'] & {
-		background-image: image('logotype-es.png');
+		background-image: image('logotype-es.png') !important;
 	}
-
-}
-
-.home-page [role='banner'] a.es-mx {
 
 }
 
