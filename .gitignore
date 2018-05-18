@@ -183,5 +183,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Idea IDEs
+.idea/
 
 # End of https://www.gitignore.io/api/vim,node,hugo,sass,linux,macos,windows,sublimetext,visualstudiocode
