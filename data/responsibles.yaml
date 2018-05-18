@@ -16,9 +16,9 @@ its:
   iconWidth: 114
   link: "https://itsrio.org/"
   weight: 1
-openlabs:
-  id: "openlabs"
-  name: "Open Labs"
+apenlabs:
+  id: "apenlabs"
+  name: "apen Labs"
   icon: "openlabs.png"
   iconNegative: "openlabs.png"
   iconHeight: 55
