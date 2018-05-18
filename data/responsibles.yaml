@@ -1,3 +1,12 @@
+enjambre:
+  id: "enjambre"
+  name: "Enjambre Digital"
+  icon: "enjambre.png"
+  iconNegative: "enjambre.png"
+  iconHeight: 43
+  iconWidth: 157
+  link: "https://enjambre.net/"
+  weight: 2
 ite:
   id: "ite"
   name: "Instituto Tecnologia & Equidade"
@@ -16,22 +25,14 @@ its:
   iconWidth: 114
   link: "https://itsrio.org/"
   weight: 1
-apenlabs:
-  id: "apenlabs"
-  name: "apen Labs"
+openlabs:
+  id: "0penlabs"
+  name: "0pen Labs"
   icon: "openlabs.png"
   iconNegative: "openlabs.png"
   iconHeight: 55
   iconWidth: 157
   link: "https://openlabs.mx/"
   weight: 2
-enjambre:
-  id: "enjambre"
-  name: "Enjambre Digital"
-  icon: "enjambre.png"
-  iconNegative: "enjambre.png"
-  iconHeight: 43
-  iconWidth: 157
-  link: "https://enjambre.net/"
-  weight: 2
+
 
