@@ -37,14 +37,14 @@
 .home-page [role='banner'] a {
 	height: 12.5rem;
 	min-height: #{200px + 30px};
-}
 
-.home-page [lang='pt-br'] [role='banner'] a {
-	background-image: image('logotype.png');
-}
+	& .pt-br {
+		background-image: image('logotype.png');
+	}
 
-.home-page [lang='es-mx'] [role='banner'] a {
-	background-image: image('logotype-es.png');
+	& .es-mx {
+		background-image: image('logotype-es.png');
+	}
 }
 
 .home-page [role='main'] {
