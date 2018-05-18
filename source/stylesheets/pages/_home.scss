@@ -38,7 +38,14 @@
 	height: 12.5rem;
 	min-height: #{200px + 30px};
 
-	background-image: image('logotype.png');
+	&.pt-br {
+		background-image: image('logotype.png');
+	}
+
+	&.es-mx {
+		background-image: image('logotype-es.png');
+	}
+
 }
 
 .home-page [role='main'] {

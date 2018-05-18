@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## Added
+
+- Spanish metadata and i18n
+
+### Changed
+
+- force clean up of distribution folder
+- render of menu partials
+
+### Fixed
+
+- alignment on list
+
 ## [1.2.12][] - 2018-05-08
 
 ### Fixed

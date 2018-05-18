@@ -8,7 +8,14 @@
 		{{ if ne .Kind "404" }}
 			{{ with .Site.Menus.main }}
 				<nav class="footer-menu">
-					{{ partial "menu.html" . }}
+					<ul>
+						{{ partial "menu.html" . }}
+						<li>
+							<a href="{{ $.Site.Params.typeform }}" target="_blank">
+								{{ i18n "contact" }}
+							</a>
+						</li>
+					</ul>
 				</nav>
 			{{ end }}
 		{{ end }}

@@ -2,9 +2,9 @@
 date: 2018-03-13T18:08:36-03:00
 draft: false
 id: "como-avaliar-o-resultado"
-title: "Como posso avaliar o resultado?"
+title: "¿Cómo puedo evaluar el resultado?"
 layout: none
 type: faq
 weight: 7
 ---
-Ao ter um indicativo que uma conta pode ser ou não um Bot é importante que você faça uma análise subjetiva do perfil que está tentando analisar. Isso quer dizer, verifique os possíveis fins que o determinado perfil está tentando atingir. Se você identificar que o perfil serve só para divulgar a mensagem de outra pessoa, ou que na maioria das vezes esse perfil existe para atacar alguém ou um grupo específico, mas chances desse perfil se confirmar ser um bot aumentam muito. Nesse caso, vale questionar os possíveis beneficiados pela atuação daquele bot se o perfil realmente é um bot e por que a pessoa beneficiada está se utilizando desse recurso. Se for um político, por exemplo, pergunte diretamente ao político se ele sabe que existe um bot trabalhando para ele e se ele acha correto o comportamento que o bot está tendo.
+Al tener un indicador que una cuenta puede ser o no un bot, es importante que usted haga un análisis del perfil que está tratando de analizar. Esto quiere decir que es necesario que compruebe los posibles fines que el determinado perfil está tratando de alcanzar. Si usted identifica que el perfil solamente sirve para divulgar el mensaje de otra persona o que la mayoría de las veces este perfil existe para atacar a alguien o a un grupo específico, se incrementan las posibilidades de que ese perfil sea un bot. En ese caso, vale cuestionarse sobre los posibles beneficiarios de la acción de ese bot si el perfil realmente es un bot y por qué la persona beneficiada está utilizando de ese recurso. Si es un político, por ejemplo, pregunte directamente al político si él sabe que hay un bot trabajando para él y si él cree correcto el comportamiento que el bot está teniendo.

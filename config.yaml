@@ -26,11 +26,13 @@ languages:
     params:
       siteDescription: "O Pegabot verifica a atividade de uma conta em rede social e dá uma pontuação baseada na probabilidade dessa conta ser um bot. Maiores pontuações são mais bot-like."
       tagline: "Por mais transparência no uso de bots"
+      typeform: https://itsrio2.typeform.com/to/k9FHXq
   es:
     languageCode: "es-mx"
-    baseURL: "https://atrapabot.com.br"
-    languageName: Portuguese
-    title: Pegabot
+    baseURL: "https://atrapabot.org"
+    languageName: Español
+    title: Atrapabot
     params:
-      siteDescription: "O Pegabot verifica a atividade de uma conta em rede social e dá uma pontuação baseada na probabilidade dessa conta ser um bot. Maiores pontuações são mais bot-like."
-      tagline: "Por mais transparência no uso de bots"
+      siteDescription: "Atrapabot verifica la actividad de cuentas de Twitter y da una puntuación basada en la probabilidad de que esta cuenta sea un bot."
+      tagline: "Por una mayor transparencia en el uso de bots."
+      typeform: https://itsrio2.typeform.com/to/uC2R0P
