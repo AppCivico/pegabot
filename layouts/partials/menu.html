@@ -7,7 +7,8 @@
 		</li>
 	{{ end }}
 	<li>
-		{{ if eq .Site.LanguageCode "pt-br" }}
+		{{ $currentLang := .Site.LanguageCode }}
+		{{ if eq $currentLang "pt-br" }}
 		<a href="https://itsrio2.typeform.com/to/k9FHXq" target="_blank" data-lang="{{ .Site.LanguageCode }}">
 			{{ i18n "contact" }}
 		</a>
