@@ -1,9 +1,9 @@
 ---
-title: "Terminos de uso"
+title: "Términos de uso"
 date: 2018-03-29T18:42:07-03:00
 draft: false
 menu: "main"
-slug: "termos-de-uso"
+slug: "terminos-de-uso"
 weight: 12
 ---
 
