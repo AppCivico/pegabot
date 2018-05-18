@@ -7,7 +7,7 @@
 - id: botProbability
   translation: "Probabilidades de ser un bot"
 - id: callToFaqResults
-  translation: "Lo que los [resultados significan](/faq#faq__cómo-interpretar-los-resultados)?"
+  translation: "Lo que[significan los resultados](/faq#faq__cómo-interpretar-los-resultados)?"
 - id: contact
   translation: "Contacto"
 - id: content
