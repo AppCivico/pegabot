@@ -7,15 +7,14 @@
 		</li>
 	{{ end }}
 	<li>
-		{{ $currentLang := .Site.LanguageCode }}
-		{{ if eq $currentLang "pt-br" }}
-		<a href="https://itsrio2.typeform.com/to/k9FHXq" target="_blank" data-lang="{{ .Site.LanguageCode }}">
-			{{ i18n "contact" }}
-		</a>
+		{{ if eq .Site.LanguageCode "pt-br" }}
+			$currentFormSlug := "k9FHXq"
 		{{ else }}
-		<a href="https://itsrio2.typeform.com/to/uC2R0P" target="_blank">
+			$currentFormSlug := "uC2R0P"
+		{{ end }}
+		
+		<a href="https://itsrio2.typeform.com/to/{{ $currentFormSlug }}" target="_blank" data-lang="{{ .Site.LanguageCode }}">
 			{{ i18n "contact" }}
 		</a>
-		{{ end }}
 	</li>
 </ul>
