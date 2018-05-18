@@ -104,11 +104,11 @@
 
 	background-position: 50% 50%;
 
-	& .pt-br {
+	.pt-br & {
 		background-image: image('logotype--150w.png');
 	}
 
-	& .es-mx {
+	.es-mx & {
 		background-image: image('logotype--150w-es.png');
 	}
 }
