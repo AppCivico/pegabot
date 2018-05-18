@@ -1,3 +1,14 @@
+its:
+  id: "enjambre"
+  name: "Enjambre Digital"
+  icon: "enjambre.png"
+  iconNegative: "enjambre.png"
+  iconHeight: 47
+  iconWidth: 114
+  link: "https://enjambre.net/"
+  weight: 3
+
+
 ite:
   id: "ite"
   name: "Instituto Tecnologia & Equidade"
