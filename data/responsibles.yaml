@@ -6,7 +6,7 @@ openlabs:
   iconHeight: 55
   iconWidth: 157
   link: "http://openlabs.mx/"
-  weight: 2
+  weight: 1
 enjambre:
   id: "enjambre"
   name: "Enjambre Digital"
