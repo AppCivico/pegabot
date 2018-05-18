@@ -93,7 +93,7 @@
 	}
 }
 
-[role='banner'] a {
+:not(.home-page) [role='banner'] a {
 	@include image-replacement;
 
 	display: block;
