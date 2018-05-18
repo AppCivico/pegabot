@@ -3,8 +3,8 @@ openlabs:
   name: "0pen Labs"
   icon: "openlabs.png"
   iconNegative: "openlabs--negative.png"
-  iconHeight: 55
-  iconWidth: 150
+  iconHeight: 45
+  iconWidth: 125
   link: "http://openlabs.mx/"
   weight: 3
 zenjambre:
@@ -12,8 +12,8 @@ zenjambre:
   name: "Enjambre Digital"
   icon: "enjambre.png"
   iconNegative: "enjambre.png"
-  iconHeight: 43
-  iconWidth: 157
+  iconHeight: 25
+  iconWidth: 114
   link: "https://enjambre.net/"
   weight: 3
 ite:
