@@ -1,12 +1,3 @@
-enjambre:
-  id: "enjambre"
-  name: "Enjambre Digital"
-  icon: "enjambre.png"
-  iconNegative: "enjambre.png"
-  iconHeight: 43
-  iconWidth: 157
-  link: "https://enjambre.net/"
-  weight: 1
 openlabs:
   id: "0penlabs"
   name: "0pen Labs"
@@ -34,6 +25,15 @@ its:
   iconWidth: 114
   link: "https://itsrio.org/"
   weight: 2
+enjambre:
+  id: "enjambre"
+  name: "Enjambre Digital"
+  icon: "enjambre.png"
+  iconNegative: "enjambre.png"
+  iconHeight: 43
+  iconWidth: 157
+  link: "https://enjambre.net/"
+  weight: 1
 
 
 
