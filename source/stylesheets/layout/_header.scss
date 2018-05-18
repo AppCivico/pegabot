@@ -93,7 +93,7 @@
 	}
 }
 
-:not(.home-page) [role='banner'] a {
+[role='banner'] a {
 	@include image-replacement;
 
 	display: block;
@@ -104,11 +104,11 @@
 
 	background-position: 50% 50%;
 
-	[lang='pt-br'] & {
+	& [lang='pt-br'] {
 		background-image: image('logotype--150w.png');
 	}
 
-	[lang='es-mx'] & {
+	& [lang='es-mx'] {
 		background-image: image('logotype--150w-es.png');
 	}
 }
