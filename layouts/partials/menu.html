@@ -7,7 +7,11 @@
 		</li>
 	{{ end }}
 	<li>
+		{{ if eq .Site.LanguageCode "pt-br" }}
+		<a href="https://itsrio2.typeform.com/to/k9FHXq" target="_blank">
+		{{ else }}
 		<a href="https://itsrio2.typeform.com/to/uC2R0P" target="_blank">
+		{{ end }}
 			{{ i18n "contact" }}
 		</a>
 	</li>
