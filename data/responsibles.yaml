@@ -7,8 +7,8 @@ openlabs:
   iconWidth: 150
   link: "http://openlabs.mx/"
   weight: 3
-enjambre:
-  id: "enjambre"
+zenjambre:
+  id: "zenjambre"
   name: "Enjambre Digital"
   icon: "enjambre.png"
   iconNegative: "enjambre.png"
