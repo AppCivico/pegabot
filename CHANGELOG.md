@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.3.0][] - 2018-05-18
+
 ## Added
 
 - Spanish metadata and i18n
@@ -133,7 +135,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
-[Unreleased]: undefined/compare/v1.2.12...HEAD
+[Unreleased]: undefined/compare/v1.3.0...HEAD
+[1.3.0]: undefined/compare/v1.2.12...v1.3.0
 [1.2.12]: undefined/compare/v1.2.11...v1.2.12
 [1.2.11]: undefined/compare/v1.2.10...v1.2.11
 [1.2.10]: undefined/compare/v1.2.9...v1.2.10
