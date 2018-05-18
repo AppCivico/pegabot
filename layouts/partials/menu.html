@@ -1,20 +1,8 @@
-<ul>
-	{{ range . }}
-		<li>
-			<a href="{{ .URL }}">
-				{{ .Name }}
-			</a>
-		</li>
-	{{ end }}
+{{ range . }}
 	<li>
-		{{ if eq $.Site.LanguageCode "pt-br" }}
-		<a href="https://itsrio2.typeform.com/to/k9FHXq" target="_blank">
-			{{ i18n "contact" }}
+		<a href="{{ .URL }}">
+			{{ .Name }}
 		</a>
-		{{ else }}
-		<a href="https://itsrio2.typeform.com/to/uC2R0P" target="_blank">
-			{{ i18n "contact" }}
-		</a>
-		{{ end }}
 	</li>
-</ul>
+{{ end }}
+
