@@ -2,9 +2,9 @@ openlabs:
   id: "0penlabs"
   name: "0pen Labs"
   icon: "openlabs.png"
-  iconNegative: "openlabs.png"
+  iconNegative: "openlabs--negative.png"
   iconHeight: 55
-  iconWidth: 157
+  iconWidth: 150
   link: "http://openlabs.mx/"
   weight: 3
 enjambre:
