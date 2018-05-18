@@ -103,14 +103,14 @@
 	min-height: #{137px + 30px};
 
 	background-position: 50% 50%;
-}
 
-[lang='pt-br'] [role='banner'] a {
-	background-image: image('logotype--150w.png');
-}
+	& .pt-br {
+		background-image: image('logotype--150w.png');
+	}
 
-[lang='es-mx'] [role='banner'] a {
-	background-image: image('logotype--150w-es.png');
+	& .es-mx {
+		background-image: image('logotype--150w-es.png');
+	}
 }
 
 .site-header .site-tagline {
