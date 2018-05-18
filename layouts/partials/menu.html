@@ -7,7 +7,13 @@
 		</li>
 	{{ end }}
 	<li>
-		<a href="https://itsrio2.typeform.com/to/x" target="_blank" data-lang="{{ .Site.LanguageCode }}">
+		{{ if eq $.Site.LanguageCode "pt-br" }}
+		$currentFormSlug := "k9FHXq"
+		{{ else }}
+		$currentFormSlug := "uC2R0P"
+		{{ end }}
+
+		<a href="https://itsrio2.typeform.com/to/{{ $currentFormSlug }}" target="_blank">
 			{{ i18n "contact" }}
 		</a>
 	</li>
