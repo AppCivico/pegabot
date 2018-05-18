@@ -6,7 +6,7 @@ enjambre:
   iconHeight: 43
   iconWidth: 157
   link: "https://enjambre.net/"
-  weight: 3
+  weight: 1
 openlabs:
   id: "0penlabs"
   name: "0pen Labs"
