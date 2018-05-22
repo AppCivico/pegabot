@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.4.0][] - 2018-05-22
+
 ## [1.3.0][] - 2018-05-18
 
 ## Added
@@ -135,7 +137,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
+<<<<<<< Updated upstream
 [Unreleased]: undefined/compare/v1.3.0...HEAD
+=======
+[Unreleased]: undefined/compare/v1.4.0...HEAD
+[1.4.0]: undefined/compare/v1.4.0...v1.4.0
+[1.4.0]: undefined/compare/v1.4.0...v1.4.0
+[1.4.0]: undefined/compare/v1.3.0...v1.4.0
+>>>>>>> Stashed changes
 [1.3.0]: undefined/compare/v1.2.12...v1.3.0
 [1.2.12]: undefined/compare/v1.2.11...v1.2.12
 [1.2.11]: undefined/compare/v1.2.10...v1.2.11
