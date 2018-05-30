@@ -18,3 +18,6 @@ Atrapabot analiza el historial de mensajes del perfil de la red social que usted
 |  Amigos | Incluye estadísticas relativas a los contactos sociales, como la media, los momentos y la entropía de la distribución del número de seguidos, seguidores y posts. Se analizan las relaciones seguido-seguidores, los retuits y las menciones. Para cada campo se extraen las características sobre el uso el lenguaje, tiempo local, popularidad.   |
 |  Red |  La estructura de la red muestra varias dimensiones de los patrones de difusión de la información. El sistema reconstruye tres tipos de redes: retuits, menciones y co-ocurrencia de hashtags. Todas las redes se pesan de acuerdo con la frecuencia de la interacción o las co-ocurrencias.  |
 | Tiempo | La característica del tiempo captura los patrones relacionados con la actividad del usuario. Incluye el periodo promedio en la generación de contenido (tuits) y el consumo (retuits), el tiempo entre dos publicaciones.   |
+
+Ferrara, E., Varol, O., Davis, C., Menczer, F. & Flammini, A.  (2016) The Rise of Social Bots. Communications of the ACM. DOI: 10.1145/2818717.
+Varol, O., Ferrara, E., Davis, C., Menczer, F. & Flammini, A. (2017). Online Human-Bot Interactions: Detection, Estimation, and Characterization. arXiv preprint arXiv:1703.03107.
