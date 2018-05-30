@@ -20,4 +20,5 @@ Atrapabot analiza el historial de mensajes del perfil de la red social que usted
 | Tiempo | La característica del tiempo captura los patrones relacionados con la actividad del usuario. Incluye el periodo promedio en la generación de contenido (tuits) y el consumo (retuits), el tiempo entre dos publicaciones.   |
 
 Ferrara, E., Varol, O., Davis, C., Menczer, F. & Flammini, A.  (2016) The Rise of Social Bots. Communications of the ACM. DOI: 10.1145/2818717.
+
 Varol, O., Ferrara, E., Davis, C., Menczer, F. & Flammini, A. (2017). Online Human-Bot Interactions: Detection, Estimation, and Characterization. arXiv preprint arXiv:1703.03107.
