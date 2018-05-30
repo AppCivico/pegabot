@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Update info about Bot probability on FAQ
+
 ## [1.3.1][] - 2018-05-22
 
 ### Changed
