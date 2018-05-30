@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.3.2][] - 2018-05-30
+
 ### Changed
 
 - Update info about Bot probability on FAQ
@@ -145,7 +147,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
-[Unreleased]: undefined/compare/v1.3.1...HEAD
+[Unreleased]: undefined/compare/v1.3.2...HEAD
+[1.3.2]: undefined/compare/v1.3.1...v1.3.2
 [1.3.1]: undefined/compare/v1.3.0...v1.3.1
 [1.3.0]: undefined/compare/v1.2.12...v1.3.0
 [1.2.12]: undefined/compare/v1.2.11...v1.2.12
