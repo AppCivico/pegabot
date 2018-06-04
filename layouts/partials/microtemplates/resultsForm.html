@@ -10,6 +10,8 @@
 		<input type="hidden" name="oauth_token" :value="metadata.query.oauth_token">
 		<input type="hidden" name="oauth_verifier" :value="metadata.query.oauth_verifier">
 
+		<input type="hidden" name="limit" value="{{ $.Site.Params.searchlimit | default 12 }}" />
+
 		<button name="search_for" value="followers" type="submit">{{ i18n "toCatchMyFollowers" }}</button>
 		<button name="search_for" value="friends" type="submit">{{ i18n "toCatchMyFriends" }}</button>
 	</fieldset>

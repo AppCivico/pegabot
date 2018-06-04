@@ -223,16 +223,18 @@ window.$vue = new Vue({
 		}
 	},
 	mounted() {
-		if (this.metadata.query.search_for === 'profile') {
-			this.metadata.limit = 1;
-			this.metadata.total = 1;
-		}
-
 		const params = {
 			socialnetwork: this.metadata.query.socialnetwork,
 			profile: this.metadata.query.profile,
 			search_for: this.metadata.query.search_for,
+			limit: (this.metadata.query.limit || 12),
 		};
+
+		if (this.metadata.query.search_for === 'profile') {
+			this.metadata.limit = 1;
+			this.metadata.total = 1;
+			params.limit = 1;
+		}
 
 		if (this.metadata.query.authenticated) {
 			params.authenticated = this.metadata.query.authenticated;

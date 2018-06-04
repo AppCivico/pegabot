@@ -15,6 +15,7 @@ metaDataFormat: "yaml"
 blackfriday:
   smartypants: false
 params:
+  searchLimit: 12
 languages:
   pt:
     languageCode: "pt-br"
