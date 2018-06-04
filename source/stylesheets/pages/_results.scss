@@ -17,15 +17,9 @@ $gauge-hand-height: 8px;
 }
 
 .analisys-form--rebuild {
-	@media screen and (min-width: breakpoint('tablet')) {
-		text-align: right;
-	}
 }
 
 .analisys-form--rebuild p {
-	@media screen and (min-width: breakpoint('tablet')) {
-		float: left;
-	}
 }
 
 .results {
