@@ -86,14 +86,14 @@
 		<h3>{{ i18n "botProbability" }}</h3>
 
 		<dl>
-			<div :class="(user.bot_probability.all || 0) | resultLevel">
+			<div :class="(user.bot_probability.all || 0) | resultLevel" v-if="user.bot_probability.all">
 				<dt>{{ i18n "allFeatures" }}</dt>
 				<dd>
 					{{ "{{ (user.bot_probability.all || 0) | toPercentage }}" }}
 				</dd>
 			</div>
 
-			<div :class="user.bot_probability.language_independent | resultLevel">
+			<div :class="user.bot_probability.language_independent | resultLevel" v-if="user.bot_probability.language_independent">
 				<dt>{{ i18n "languageIndependentFeatures" }}</dt>
 				<dd>
 					{{ "{{ user.bot_probability.language_independent | toPercentage }}" }}
