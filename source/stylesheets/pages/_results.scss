@@ -144,6 +144,12 @@ $gauge-hand-height: 8px;
 	}
 }
 
+.results__fieldset {
+
+	text-align: center;
+
+}
+
 .results__profile > *:not(button):not(footer) {
 	background-color: palette('gray', 'x-light');
 
