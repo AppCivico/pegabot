@@ -7,6 +7,13 @@ layout: none
 type: faq
 weight: 8
 ---
-O PegaBot é desenvolvido pelo Instituto Tecnologia & Equidade (IT&E) e Instituto de Tecnologia e Sociedade do Rio de Janeiro (ITS Rio). Para as análises não linguísticas utilizamos a API do [Botometer](https://market.mashape.com/OSoMe/botometer-pro), o qual é um projeto desenvolvido entre a [Indiana University Network Science Institute (IUNI)](https://iuni.iu.edu/) e o [Center for Complex Networks and Systems Research (CNetS)](https://cnets.indiana.edu/). A marca, bem como os códigos fontes da API, são de propriedade da IUNI e CNetS e o Pegabot não tem acesso nem disponibiliza qualquer parte do código proprietário em nosso repositório público do [github](https://github.com/AppCivico/pegabot). Nosso repositório contém APENAS OS CÓDIGOS FONTE REFERENTES À CAMADA DE FRONT-END do Pegabot, o qual pode ser livremente estudado, alterado, distribuído e utilizado para qualquer fim.
+O PegaBot é desenvolvido pelo Instituto Tecnologia & Equidade (IT&E) e o Instituto de Tecnologia e Sociedade do Rio de Janeiro (ITS Rio). O motor de análises é um software livre e pode ser livremente utilizado, estudado, modificado e redistribuído. Seu código está disponível no [Github](https://github.com/AppCivico/spottingbot).
 
-NOSSAS AVALIAÇÕES DE PERFIS ROBÔS UTILIZAM OS RESULTADOS OBTIDOS ATRAVÉS DO SERVIÇO OFERECIDO PELO SERVIÇO BOTOMETER, MAS NÃO SE LIMITAM A ELES PARA APRESENTAR O RESULTADO FINAL, PODENDO INCLUIR NOVOS CRITÉRIOS E AJUSTAR OS RESULTADOS CONFORME O CONTEXTO REGIONAL E LINGUÍSTICO.
+Por que é importante um sistema de detecção de bot ser construído em software livre?
+
+Os sistemas em software livre concedem ao usuário a liberdade de modificar um código. Entendemos que ter um código aberto permite a participação da sociedade na sua construção e melhoria como forma de produzir um conhecimento mais democrático às tecnologias livres. Além de possibilitar que as pessoas troquem informações de forma horizontal, fortalece ações junto às plataformas digitais, suas políticas de uso, e principalmente como redes de desinformação podem funcionar com uso dessas técnicas.
+
+Essa iniciativa também está alinhada ao White Paper ["Recomendações Sistêmicas para combater a desinformação nas eleições do Brasil"](https://tecnologiaequidade.org.br/projects/desinformacao-em-eleicoes/), realizado pelo Instituto Tecnologia e Equidade (IT&E).
+
+No tópico 5 do documento, há a informação: CRIAR NOVOS CICLOS DE FEEDBACK DE AJUSTE - em Recomendações 2019-2020.  nesse item, o Instituto acredita que "Demandar das Academias e dos Institutos de Pesquisa: desenvolvimento de tecnologias livres para detecção de robôs, perfis falsos, haters e desinformação" é um ponto de alavancagem ao combate dos desequilíbrios apresentados no sistema eleitoral.
+
