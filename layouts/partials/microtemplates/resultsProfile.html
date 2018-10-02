@@ -52,28 +52,28 @@
 		<h3>{{ i18n "languageIndependentFeatures" }}</h3>
 
 		<dl>
-			<div :class="user.language_independent.friend | resultLevel">
+			<div v-if="user.language_independent.friend" :class="user.language_independent.friend | resultLevel">
 				<dt>{{ i18n "friendship" }}</dt>
 				<dd>
 					{{ "{{ user.language_independent.friend | toPercentage }}" }}
 				</dd>
 			</div>
 
-			<div :class="user.language_independent.temporal | resultLevel">
+			<div v-if="user.language_independent.temporal" :class="user.language_independent.temporal | resultLevel">
 				<dt>{{ i18n "temporal" }}</dt>
 				<dd>
 					{{ "{{ user.language_independent.temporal | toPercentage }}" }}
 				</dd>
 			</div>
 
-			<div :class="user.language_independent.network | resultLevel">
+			<div v-if="user.language_independent.network" :class="user.language_independent.network | resultLevel">
 				<dt>{{ i18n "network" }}</dt>
 				<dd>
 					{{ "{{ user.language_independent.network | toPercentage }}" }}
 				</dd>
 			</div>
 
-			<div :class="user.language_independent.user | resultLevel">
+			<div v-if="user.language_independent.user" :class="user.language_independent.user | resultLevel">
 				<dt>{{ i18n "user" }}</dt>
 				<dd>
 					{{ "{{ user.language_independent.user | toPercentage }}" }}
