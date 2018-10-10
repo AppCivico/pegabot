@@ -8,3 +8,6 @@ slug: "resultados"
 ---
 
 Devido a limites de consulta automatizada ao Twitter, analisamos o máximo de **12 perfis**, por enquanto.
+
+A avaliação final não é a média das outras, mas resulta de nosso próprio algoritmo. Para mais informações, por favor, confira a documentação no [repositório no github](
+https://github.com/AppCivico/spottingbot/tree/master/documentation).
