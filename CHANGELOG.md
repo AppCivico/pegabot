@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.4.2][] - 2018-10-10
+
 ### Added
 
 - Info regarding algorithm
@@ -175,7 +177,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
-[Unreleased]: undefined/compare/v1.4.1...HEAD
+[Unreleased]: undefined/compare/v1.4.2...HEAD
+[1.4.2]: undefined/compare/v1.4.1...v1.4.2
 [1.4.1]: undefined/compare/v1.4.0...v1.4.1
 [1.4.0]: undefined/compare/v1.3.2...v1.4.0
 [1.3.2]: undefined/compare/v1.3.1...v1.3.2
