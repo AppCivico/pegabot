@@ -38,6 +38,11 @@
 		<meta http-equiv="Last-Modified" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}" />
 	{{ end }}
 
+	{{ $packageJson := getJSON "./package.json" }}
+	{{ with $packageJson.version }}
+		<meta name="version" content="{{ . }}">
+	{{ end }}
+
 	{{ if eq (getenv "NODE_ENV") "production" }}
 		{{ with $.Site.GoogleAnalytics }}
 			<!-- Global site tag (gtag.js) - Google Analytics -->
