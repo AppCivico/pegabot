@@ -18,7 +18,7 @@
 	<div id="results__list" class="results" hidden>
 		<noscript>{{ i18n "noScriptMessage" }}</noscript>
 		<section class="results__list" :aria-busy="(metadata.loading && profileList.length === 0) | booleanToString">
-			<profile v-for="(profileItem, index) in profileList" v-bind:user="profileItem" v-bind:key="profileItem.username" :index="index" :remove-profile="removeProfile" :focusable="profileList.length > 1 ? '0' : false"></profile>
+			<profile v-for="(profileItem, index) in profileList" v-bind:user="profileItem" v-bind:key="profileItem.username" :index="index" :remove-profile="removeProfile" :focusable="profileList.length > 1 ? '0' : false"/>
 		</section>
 		<results-form v-if="(metadata.query.search_for=='profile')" v-bind:metadata="metadata"></results-form>
 		<results-footer v-bind:metadata="metadata" :cancel-request="cancelRequest"></results-footer>
