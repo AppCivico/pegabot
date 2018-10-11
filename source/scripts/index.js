@@ -214,6 +214,53 @@ window.$vue = new Vue({
 				this.$el.removeAttribute('hidden');
 			}
 		},
+		toApprove(index) {
+			return this.submitApproval('approve', index);
+		},
+		toDisapprove(index) {
+			return this.submitApproval('disapprove', index);
+		},
+		submitApproval(value = 'approve', index) {
+			const params = {
+				opinion: value,
+				profile: this.data.profileList[index],
+			};
+
+			if (!this.data.profileList[index]) {
+				throw Error('unknown profile submited');
+			}
+
+			if (value !== 'approve' && value !== 'disapprove') {
+				throw Error('unknown approval value submited');
+			}
+
+			this.$http.post(`${this.metadata.apiURL}/feedback`, {
+				params,
+				before(xhr) {
+					this.xhr_request.push(xhr);
+				},
+			}).then((response) => {
+				if (response.ok) {
+					return response;
+				}
+				const error = new Error(response.body);
+				error.name = response.status;
+
+				if (response.status === 425) {
+					window.alert('No Reason Phrase'); // eslint-disable-line no-alert
+				}
+
+				return Promise.reject(error);
+			}).then(() => {
+				Vue.$set(this.data.profileList[index].opinionSubmited, true);
+			}).catch((error) => {
+				this.cancelRequest();
+				this.error = error.message;
+				this.metadata.loading = false;
+				window.alert(error.message); // eslint-disable-line no-alert
+				throw error;
+			});
+		},
 	},
 	created() {
 		this.metadata.query = this.getQueryString();
