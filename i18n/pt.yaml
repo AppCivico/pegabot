@@ -48,6 +48,8 @@
   translation: "Assinar"
 - id: temporal
   translation: "Frequência"
+- id: toApprove
+  translation: Aprovar
 - id: toCatch
   translation: "Pegar"
 - id: toCatchMyFollowers
@@ -56,6 +58,8 @@
   translation: "Analisar quem esse perfil segue"
 - id: toCatchThatBot
   translation: "Pegar os bots"
+- id: toDisapprove
+  translation: Desaprovar
 - id: toExportData
   translation: "Exportar dados"
 - id: toStop
