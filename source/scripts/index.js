@@ -63,7 +63,15 @@ window.$vue = new Vue({
 					required: false,
 					default: '',
 				},
-				'remove-profile': {
+				removeProfile: {
+					type: Function,
+					required: true,
+				},
+				toApprove: {
+					type: Function,
+					required: true,
+				},
+				toDisapprove: {
 					type: Function,
 					required: true,
 				},
@@ -223,10 +231,10 @@ window.$vue = new Vue({
 		submitApproval(value = 'approve', index) {
 			const params = {
 				opinion: value,
-				profile: this.data.profileList[index],
+				profile: this.profileList[index],
 			};
 
-			if (!this.data.profileList[index]) {
+			if (!this.profileList[index]) {
 				throw Error('unknown profile submited');
 			}
 
@@ -252,7 +260,7 @@ window.$vue = new Vue({
 
 				return Promise.reject(error);
 			}).then(() => {
-				Vue.$set(this.data.profileList[index].opinionSubmited, true);
+				Vue.$set(this.profileList[index].opinionSubmited, true);
 			}).catch((error) => {
 				this.cancelRequest();
 				this.error = error.message;
