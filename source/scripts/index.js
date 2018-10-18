@@ -20,8 +20,8 @@ window.$vue = new Vue({
 		error: null,
 		metadata: {
 			apiURL: (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-				? 'https://dev.pegabot.com.br/botometer'
-				: '/botometer',
+				? 'https://dev.pegabot.com.br'
+				: '',
 			loading: true,
 			current: 0,
 			total: 0,
@@ -145,7 +145,7 @@ window.$vue = new Vue({
 		loadResults(params, currentIndex = 0) {
 			this.error = null;
 			this.metadata.loading = true;
-			this.$http.get(this.metadata.apiURL, {
+			this.$http.get(`${this.metadata.apiURL}/botometer`, {
 				params,
 				before(xhr) {
 					this.xhr_request.push(xhr);
