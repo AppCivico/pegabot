@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Profile analysis feedback
+
 ### Fixed
 
 - Focusable results avaliation
@@ -39,7 +43,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - check for analysis types presence before render them
 - check for language independent analysis presence before render them
-
 
 ## [1.3.2][] - 2018-05-30
 
