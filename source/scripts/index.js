@@ -229,11 +229,6 @@ window.$vue = new Vue({
 			return this.submitApproval('disapprove', index);
 		},
 		submitApproval(value = 'approve', index) {
-			const params = {
-				opinion: value,
-				profile: this.profileList[index],
-			};
-
 			if (!this.profileList[index]) {
 				throw Error('unknown profile submited');
 			}
@@ -243,7 +238,8 @@ window.$vue = new Vue({
 			}
 
 			this.$http.post(`${this.metadata.apiURL}/feedback`, {
-				params,
+				opinion: value,
+				profile: this.profileList[index],
 				before(xhr) {
 					this.xhr_request.push(xhr);
 				},
