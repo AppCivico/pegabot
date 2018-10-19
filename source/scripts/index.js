@@ -59,9 +59,9 @@ window.$vue = new Vue({
 					required: true,
 				},
 				focusable: {
-					type: String,
+					type: Boolean,
 					required: false,
-					default: '',
+					default: false,
 				},
 				removeProfile: {
 					type: Function,

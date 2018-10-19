@@ -1,4 +1,4 @@
-<article class="results__profile profile" :tabindex="focusable">
+<article class="results__profile profile" :tabindex="focusable ? '0' : false">
 	<section class="profile__analysis-summary">
 		<figure class="profile__data">
 			<img :src="user.bot_probability ? user.avatar.replace('_normal','_bigger').replace('http:','https:') : ''" alt="">
