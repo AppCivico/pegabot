@@ -256,7 +256,7 @@ window.$vue = new Vue({
 
 				return Promise.reject(error);
 			}).then(() => {
-				Vue.$set(this.profileList[index].opinionSubmited, true);
+				this.$set(this.profileList[index], 'opinionSubmited', true);
 			}).catch((error) => {
 				this.cancelRequest();
 				this.error = error.message;
