@@ -237,6 +237,9 @@ window.$vue = new Vue({
 				throw Error('unknown approval value submited');
 			}
 
+			this.$set(this.profileList[index], 'loading', true);
+
+
 			this.$http.post(`${this.metadata.apiURL}/feedback`, {
 				opinion: value,
 				profile: this.profileList[index],
@@ -257,7 +260,9 @@ window.$vue = new Vue({
 				return Promise.reject(error);
 			}).then(() => {
 				this.$set(this.profileList[index], 'opinionSubmited', true);
+				this.$set(this.profileList[index], 'loading', false);
 			}).catch((error) => {
+				this.$set(this.profileList[index], 'loading', false);
 				this.cancelRequest();
 				this.error = error.message;
 				this.metadata.loading = false;
