@@ -456,6 +456,15 @@ $gauge-hand-height: 8px;
 	overflow: hidden;
 
 	text-overflow: ellipsis;
+
+	&:disabled {
+		color: palette('disabled', 'foreground');
+
+		&:hover,
+		&:focus {
+			background-color: transparent;
+		}
+	}
 }
 
 .profile__links a {
