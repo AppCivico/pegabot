@@ -30,8 +30,11 @@
 		z-index: layer('modal');
 
 		content: '';
+
+		opacity: 0.75;
 	}
 }
+
 
 /// Content which loads **after** the page does, should be informed to user.
 ///
