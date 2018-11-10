@@ -1,0 +1,72 @@
+- id: allFeatures
+ translation: "Full analysis"
+- id: analysisProgress
+ translation: "{{ .Count }} assessed accounts."
+- id: aProjectBy
+ translation: "A project"
+- id: botProbability
+ translation: "Probability of being a bot"
+- id: callToFaqResults
+ translation: "What do the [results mean](/faq#faq__como-interpretar-as-notas)?"
+- id: contact
+ translation: "Contact"
+- id: content
+ translation: "Publications"
+- id: detailsLink
+ translation: "Detailed analysis"
+- id: developedBy
+ translation: "Developed by"
+- id: email
+ translation: "E-mail"
+- id: englishSpecificFeatures
+ translation: "Linguistic elements"
+- id: feedbackLink
+ translation: "Provide a technical report"
+- id: friendship
+ translation: "Friends"
+- id: index
+ translation: "Index"
+- id: languageIndependentFeatures
+ translation: "Language independent features"
+- id: newsletter
+ translation: "Newsletter"
+- id: network
+ translation: "Network"
+- id: noScriptMessage
+ translation: "This funcionality requires JavaScript."
+- id: profileLink
+ translation: "Social media profile"
+- id: returnedResults
+ translation: "Your search returned {{ .Count }} results."
+- id: signUpNewsletter
+ translation: "Sign-up"
+- id: sentiment
+ translation: "Emotional"
+- id: socialNetwork
+ translation: "Social network"
+- id: subscribe
+ translation: "Subscribe"
+- id: temporal
+ translation: "Frequency"
+- id: toApprove
+ translation: "Approve"
+- id: toCatch
+ translation: "Spot"
+- id: toCatchMyFollowers
+ translation: "Analyse profile's followers"
+- id: toCatchMyFriends
+ translation: "Analyse profile's followers"
+- id: toCatchThatBot
+ translation: "Spot bots"
+- id: toDisapprove
+ translation: "Disapprove"
+- id: toExportData
+ translation: "Export data"
+- id: toStop
+ translation: "Stop"
+- id: tweetItLink
+ translation: "Tweet this result"
+- id: twitterProfile
+ translation: "Twitter user"
+- id: user
+ translation: "User"
