@@ -1,0 +1,97 @@
+/*
+  # Only connect to this site and subdomains via HTTPS for the next one year
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+  # Block site from being framed with X-Frame-Options and CSP
+  Content-Security-Policy: frame-ancestors 'self'
+
+  # X-Frame-Options tells the browser whether you want to allow your site to be framed or not. By preventing a browser from framing your site you can defend against attacks like clickjacking.
+  X-Frame-Options: SAMEORIGIN
+
+  # Prevent browsers from incorrectly detecting non-scripts as scripts
+  X-Content-Type-Options: nosniff
+
+  # Don't load any resource type not explicitly enabled
+  # Disable plugins like Flash or Silverlight
+  # Load images, scripts, stylesheets and fonts from self
+  Content-Security-Policy: upgrade-insecure-requests;
+
+  # X-XSS-Protection sets the configuration for the cross-site scripting filter built into most browsers.
+  X-XSS-Protection: 1; mode=block
+
+  # Referrer Policy is a new header that allows a site to control how much information the browser includes with navigations away from a document and should be set by all sites.
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Expire rules for static content
+
+# cache.appcache, your document html and data
+/*manifest
+  Cache-Control: max-age=0, public
+/*.appcache
+  Cache-Control: max-age=0, public
+/*.html
+  Cache-Control: max-age=0, public
+/*.xml
+  Cache-Control: max-age=0, public
+/*.json
+  Cache-Control: max-age=0, public
+
+
+# Feed
+/*.rss
+  Cache-Control: max-age=3600, public
+/*.atom
+  Cache-Control: max-age=3600, public
+
+
+# Media: images, icons, video, audio, HTC
+/*.jpg
+  Cache-Control: max-age=2592000, public
+/*.jpeg
+  Cache-Control: max-age=2592000, public
+/*.gif
+  Cache-Control: max-age=2592000, public
+/*.png
+  Cache-Control: max-age=2592000, public
+/*.ico
+  Cache-Control: max-age=2592000, public
+/*.cur
+  Cache-Control: max-age=2592000, public
+/*.gz
+  Cache-Control: max-age=2592000, public
+/*.svg
+  Cache-Control: max-age=2592000, public
+/*.mp4
+  Cache-Control: max-age=2592000, public
+/*.ogg
+  Cache-Control: max-age=2592000, public
+/*.ogv
+  Cache-Control: max-age=2592000, public
+/*.webm
+  Cache-Control: max-age=2592000, public
+/*.htc
+  Cache-Control: max-age=2592000, public
+/*.svgz
+  Cache-Control: max-age=2592000, public
+
+
+# CSS and Javascript
+/*.css
+  Cache-Control: max-age=31536000, public
+/*.js
+  Cache-Control: max-age=31536000, public
+
+
+# WebFonts
+/*.ttf
+  Cache-Control: max-age=2592000, public
+/*.ttc
+  Cache-Control: max-age=2592000, public
+/*.otf
+  Cache-Control: max-age=2592000, public
+/*.eot
+  Cache-Control: max-age=2592000, public
+/*.woff
+  Cache-Control: max-age=2592000, public
+/*.woff2
+  Cache-Control: max-age=2592000, public
