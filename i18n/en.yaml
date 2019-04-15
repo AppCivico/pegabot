@@ -1,72 +1,72 @@
 - id: allFeatures
- translation: "Full analysis"
+  translation: "Full analysis"
 - id: analysisProgress
- translation: "{{ .Count }} assessed accounts."
+  translation: "{{ .Count }} assessed accounts."
 - id: aProjectBy
- translation: "A project"
+  translation: "A project"
 - id: botProbability
- translation: "Probability of being a bot"
+  translation: "Probability of being a bot"
 - id: callToFaqResults
- translation: "What do the [results mean](/faq#faq__como-interpretar-as-notas)?"
+  translation: "What do the [results mean](/faq#faq__como-interpretar-as-notas)?"
 - id: contact
- translation: "Contact"
+  translation: "Contact"
 - id: content
- translation: "Publications"
+  translation: "Publications"
 - id: detailsLink
- translation: "Detailed analysis"
+  translation: "Detailed analysis"
 - id: developedBy
- translation: "Developed by"
+  translation: "Developed by"
 - id: email
- translation: "E-mail"
+  translation: "E-mail"
 - id: englishSpecificFeatures
- translation: "Linguistic elements"
+  translation: "Linguistic elements"
 - id: feedbackLink
- translation: "Provide a technical report"
+  translation: "Provide a technical report"
 - id: friendship
- translation: "Friends"
+  translation: "Friends"
 - id: index
- translation: "Index"
+  translation: "Index"
 - id: languageIndependentFeatures
- translation: "Language independent features"
+  translation: "Language independent features"
 - id: newsletter
- translation: "Newsletter"
+  translation: "Newsletter"
 - id: network
- translation: "Network"
+  translation: "Network"
 - id: noScriptMessage
- translation: "This funcionality requires JavaScript."
+  translation: "This funcionality requires JavaScript."
 - id: profileLink
- translation: "Social media profile"
+  translation: "Social media profile"
 - id: returnedResults
- translation: "Your search returned {{ .Count }} results."
+  translation: "Your search returned {{ .Count }} results."
 - id: signUpNewsletter
- translation: "Sign-up"
+  translation: "Sign-up"
 - id: sentiment
- translation: "Emotional"
+  translation: "Emotional"
 - id: socialNetwork
- translation: "Social network"
+  translation: "Social network"
 - id: subscribe
- translation: "Subscribe"
+  translation: "Subscribe"
 - id: temporal
- translation: "Frequency"
+  translation: "Frequency"
 - id: toApprove
- translation: "Approve"
+  translation: "Approve"
 - id: toCatch
- translation: "Spot"
+  translation: "Spot"
 - id: toCatchMyFollowers
- translation: "Analyse profile's followers"
+  translation: "Analyse profile's followers"
 - id: toCatchMyFriends
- translation: "Analyse profile's followers"
+  translation: "Analyse profile's followers"
 - id: toCatchThatBot
- translation: "Spot bots"
+  translation: "Spot bots"
 - id: toDisapprove
- translation: "Disapprove"
+  translation: "Disapprove"
 - id: toExportData
- translation: "Export data"
+  translation: "Export data"
 - id: toStop
- translation: "Stop"
+  translation: "Stop"
 - id: tweetItLink
- translation: "Tweet this result"
+  translation: "Tweet this result"
 - id: twitterProfile
- translation: "Twitter user"
+  translation: "Twitter user"
 - id: user
- translation: "User"
+  translation: "User"
