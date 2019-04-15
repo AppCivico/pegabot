@@ -1,2 +1,12 @@
 /botometer/* https://api.pegabots.com.br 200
 /feedback/* https://api.pegabots.com.br 200
+
+# *** Warning! Your custom domain is not using HTTPS yet ***
+# These rules will change if you change your site’s custom domains or HTTPS settings
+
+# Redirect domain aliases to primary domain
+http://pegabots.com.br/* http://pegabot.com.br/:splat 301!
+http://www.pegabots.com.br/* http://pegabot.com.br/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+http://brave-kare-15be24.netlify.com/* http://pegabot.com.br/:splat 301!
