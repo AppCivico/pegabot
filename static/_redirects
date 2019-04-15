@@ -5,8 +5,14 @@
 # These rules will change if you change your site’s custom domains or HTTPS settings
 
 # Redirect domain aliases to primary domain
-http://pegabots.com.br/* http://pegabot.com.br/:splat 301!
-http://www.pegabots.com.br/* http://pegabot.com.br/:splat 301!
+http://pegabots.com.br/* https://pegabot.com.br/:splat 301!
+http://www.pegabots.com.br/* https://pegabot.com.br/:splat 301!
+https://pegabots.com.br/* https://pegabot.com.br/:splat 301!
+https://www.pegabots.com.br/* https://pegabot.com.br/:splat 301!
 
 # Optional: Redirect default Netlify subdomain to primary domain
 http://brave-kare-15be24.netlify.com/* http://pegabot.com.br/:splat 301!
+
+# http and https need separate rules if you don't force_ssl!
+http://pegabot.com.br/* https://pegabot.com.br/:splat 301!
+http://www.pegabot.com.br/* https://pegabot.com.br/:splat 301!

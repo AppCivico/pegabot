@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Netlify HTTPS redirects
+
 ## [1.5.1][] - 2019-04-15
 
 ### Added
