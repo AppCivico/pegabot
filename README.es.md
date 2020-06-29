@@ -2,6 +2,8 @@
 
 Analizador de perfiles de redes sociales tipo bot.
 
+Para obtener instrucciones de instalación en inglés -> [here](README.md)
+
 ## Modelador de contenido
 
 ### Perfil
