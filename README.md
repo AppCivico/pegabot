@@ -2,7 +2,7 @@
 
 Social networks profiles bot-like analyzer.
 
-Spanish version of this file can be found [here](README.md)
+Spanish version of this file can be found [here](README.es.md)
 
 ## Content modelling
 
