@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - node-sass by sass and update dependencies
+### Fixed
+
+- error in case of undefined `user.language_dependent.content`
 
 ### Removed
 

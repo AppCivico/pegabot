@@ -35,14 +35,20 @@
 		<h3 data-to-prepend="user_profile_language">{{ i18n "englishSpecificFeatures" }}</h3>
 
 		<dl>
-			<div :class="user.language_dependent.content.value | resultLevel">
+			<div
+				v-if="user.language_dependent.content && user.language_dependent.content.value"
+				:class="user.language_dependent.content.value | resultLevel"
+			>
 				<dt>{{ i18n "content" }}</dt>
 				<dd>
 					{{ "{{ user.language_dependent.content.value | toPercentage }}" }}
 				</dd>
 			</div>
 
-			<div :class="user.language_dependent.sentiment.value | resultLevel">
+			<div
+				v-if="user.language_dependent.sentiment && user.language_dependent.sentiment.value"
+				:class="user.language_dependent.sentiment.value | resultLevel"
+			>
 				<dt>{{ i18n "sentiment" }}</dt>
 				<dd>
 					{{ "{{ user.language_dependent.sentiment.value | toPercentage }}" }}
