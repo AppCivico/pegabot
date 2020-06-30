@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- node-sass by sass and update dependencies
+
 ## [1.5.5][] - 2020-06-26
 
 ## [1.5.4][] - 2019-04-15
