@@ -597,11 +597,11 @@ $no-viewport: false !default;
 			} @else {
 				$fallback-units: join($fallback-units, unit($value));
 			}
-		} @elseif $fallbacks == null {
+		} @else if $fallbacks == null {
 			@error 'fallback values, the 3rd parameter, are required for everything except `rem` numbers';
-		} @elseif str-index($value, 'calc') {
+		} @else if str-index($value, 'calc') {
 			$fallback-units: join($fallback-units, 'calc');
-		} @elseif str-index($value, 'gradient') {
+		} @else if str-index($value, 'gradient') {
 			$fallback-units: join($fallback-units, 'gradient');
 		}
 
@@ -616,7 +616,9 @@ $no-viewport: false !default;
 		$i: $i + 1;
 	}
 
-	$print-fallback: _print-fallback($fallback-units);
+	@if length($fallback-units) {
+		$print-fallback: _print-fallback($fallback-units);
+	}
 
 	// sass-lint:disable-block indentation brace-style
 	@if (index($fallback-units, 'alpha') != null and $no-alpha != false) or
@@ -828,9 +830,9 @@ $no-viewport: false !default;
 @mixin aspect-ratio ($ratio) {
 	@if type-of($ratio) != list {
 		@error '`aspect-ratio` function expecting a list for `$ratio`; `#{type-of($ratio)}` given.';
-	} @elseif length($ratio) == 3 and nth($ratio, 2) != 'x' {
+	} @else if length($ratio) == 3 and nth($ratio, 2) != 'x' {
 		@error 'when using 3 values length list, `aspect-ratio` function expects the second to be `x`; #{nth($ratio, 2)} given.';
-	} @elseif length($ratio) < 2 and length($ratio) > 3 {
+	} @else if length($ratio) < 2 and length($ratio) > 3 {
 		@error '`aspect-ratio` function expecting a list with 2 or 3 items for `$ratio`; `#{length($ratio)}` given.';
 	}
 
@@ -839,13 +841,13 @@ $no-viewport: false !default;
 
 	@if type-of($w) != 'number' {
 		@error 'the value sent to `width` isn\'t a `number`.';
-	} @elseif not unitless($w) {
+	} @else if not unitless($w) {
 		@error 'the value sent to `width` **must** be unitless.';
 	}
 
 	@if type-of($h) != 'number' {
 		@error 'the value sent to `height` isn\'t a `number`.';
-	} @elseif not unitless($h) {
+	} @else if not unitless($h) {
 		@error 'the value sent to `height` **must** be unitless.';
 	}
 
