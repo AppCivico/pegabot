@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - node-sass by sass and update dependencies
 
+### Removed
+
+- deprecated `.Page.URL` Hugo variable
+
 ## [1.5.5][] - 2020-06-26
 
 ## [1.5.4][] - 2019-04-15
