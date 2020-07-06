@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.5.7][] - 2020-07-06
+
 ### Fixed
 
 - sharing thumbnails path
@@ -238,7 +240,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
-[Unreleased]: undefined/compare/v1.5.6...HEAD
+[Unreleased]: undefined/compare/v1.5.7...HEAD
+[1.5.7]: undefined/compare/v1.5.6...v1.5.7
 [1.5.6]: undefined/compare/v1.5.5...v1.5.6
 [1.5.5]: undefined/compare/v1.5.4...v1.5.5
 [1.5.4]: undefined/compare/v1.5.3...v1.5.4
