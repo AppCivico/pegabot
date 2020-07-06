@@ -26,7 +26,7 @@ languages:
       siteDescription: "O Pegabot verifica a atividade de uma conta em rede social e dá uma pontuação baseada na probabilidade dessa conta ser um bot. Maiores pontuações são mais bot-like."
       tagline: "Por mais transparência no uso de bots"
       typeform: https://itsrio2.typeform.com/to/k9FHXq
-      ogImage: "pegabot-fb-img.jpg"
+      ogImage: "/pegabot-fb-img.jpg"
       ogTitle: "descubra se aquele perfil de rede social é bot"
   es:
     languageCode: "es-mx"
@@ -48,8 +48,5 @@ languages:
       siteDescription: "Bot Spotter verifies social media profiles and gives a score after an assessment of its activities, analysing the probability of the account being a bot. Highest scores are more bot-like."
       tagline: "For more transparency in the use of bots"
       typeform: https://itsrio2.typeform.com/to/k9FHXq
-      ogImage: "pegabot-fb-img.jpg"
+      ogImage: "/pegabot-fb-img.jpg"
       ogTitle: "Find out if a social media profile is a bot"
-
-
-    
