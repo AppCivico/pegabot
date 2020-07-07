@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Spanish sharing thumbnails image
+- Spanish sharing title
+
 ## [1.5.7][] - 2020-07-06
 
 ### Fixed

@@ -26,8 +26,8 @@ languages:
       siteDescription: "O Pegabot verifica a atividade de uma conta em rede social e dá uma pontuação baseada na probabilidade dessa conta ser um bot. Maiores pontuações são mais bot-like."
       tagline: "Por mais transparência no uso de bots"
       typeform: https://itsrio2.typeform.com/to/k9FHXq
-      ogImage: "/pegabot-fb-img.jpg"
-      ogTitle: "descubra se aquele perfil de rede social é bot"
+      ogImage: "/pegabot-fb-img__pt.jpg"
+      ogTitle: "Descubra se aquele perfil de rede social é bot"
   es:
     languageCode: "es-mx"
     baseURL: "https://atrapabot.org"
@@ -37,8 +37,8 @@ languages:
       siteDescription: "Atrapabot verifica la actividad de cuentas de Twitter y da una puntuación basada en la probabilidad de que esta cuenta sea un bot."
       tagline: "Por una mayor transparencia en el uso de bots."
       typeform: https://itsrio2.typeform.com/to/uC2R0P
-      ogImage: ""
-      ogTitle: ""
+      ogImage: "/pegabot-fb-img__es.jpg"
+      ogTitle: "Descubre las chances de que ese perfil bombado sea un bot"
   en:
     languageCode: "en-us"
     baseURL: "https://pegabot.com.br"
