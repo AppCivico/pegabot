@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.5.10][] - 2020-07-08
+
 ### Fixed
 
 - Spanish version domain
@@ -257,7 +259,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
-[Unreleased]: undefined/compare/v1.5.9...HEAD
+[Unreleased]: undefined/compare/v1.5.10...HEAD
+[1.5.10]: undefined/compare/v1.5.9...v1.5.10
 [1.5.9]: undefined/compare/v1.5.8...v1.5.9
 [1.5.8]: undefined/compare/v1.5.7...v1.5.8
 [1.5.7]: undefined/compare/v1.5.6...v1.5.7
