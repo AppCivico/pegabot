@@ -32,13 +32,13 @@ languages:
     languageCode: "es-mx"
     baseURL: "https://atrapabot.org"
     languageName: Español
-    title: Atrapabot
+    title: AtrapaBot
     params:
-      siteDescription: "Atrapabot verifica la actividad de cuentas de Twitter y da una puntuación basada en la probabilidad de que esta cuenta sea un bot."
+      siteDescription: "El AtrapaBot verifica la actividad de una determinada cuenta en la red social y le atribuye una puntuación basada en la probabilidad de que sea un bot. Las puntuaciones mayores son más bot-like."
       tagline: "Por una mayor transparencia en el uso de bots."
       typeform: https://itsrio2.typeform.com/to/uC2R0P
       ogImage: "/pegabot-fb-img__es.jpg"
-      ogTitle: "Descubre las chances de que ese perfil bombado sea un bot"
+      ogTitle: "Descubra las chances de que aquel perfil tan exitoso sea un bot."
   en:
     languageCode: "en-us"
     baseURL: "https://pegabot.com.br"
