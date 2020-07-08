@@ -30,7 +30,7 @@ languages:
       ogTitle: "Descubra se aquele perfil de rede social é bot"
   es:
     languageCode: "es-mx"
-    baseURL: "https://atrapabot.org"
+    baseURL: "https://es.pegabot.com.br"
     languageName: Español
     title: AtrapaBot
     params:
