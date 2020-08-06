@@ -1,0 +1,18 @@
+backend:
+  name: github
+  branch: master # Branch to update (optional; defaults to master)
+  repo: AppCivico/pegabot
+  site_domain: pegabot.com.br
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+locale: 'pt'
+sortableFields: ['commit_date', 'title', 'commit_author', 'language']
+logo_url: /source/images/logotype.png
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
