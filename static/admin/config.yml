@@ -5,11 +5,10 @@ backend:
   site_domain: pegabot.com.br
   base_url: https://api.netlify.com
   auth_endpoint: auth
-
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
-locale: 'pt'
-sortableFields: ['commit_date', 'title', 'commit_author', 'language']
+media_folder: "content/uploads"
+public_folder: "/uploads"
+locale: "pt"
+sortableFields: ["commit_date", "title", "commit_author", "language"]
 logo_url: /source/images/logotype.png
 slug:
   encoding: "ascii"
@@ -29,10 +28,10 @@ collections:
   view_filters:
   - label: "Português"
     field: language
-    pattern: 'pt'
+    pattern: "pt"
   - label: "Español"
     field: language
-    pattern: 'en'
+    pattern: "en"
   fields:
   - {label: "Language", name: "language", widget: "select", options: ["es", "pt"]}
   - name: "title"
