@@ -5,6 +5,7 @@ id: "twitter-permissões"
 title: "¿Necesito estar registrado en Twitter o conceder permisos a Atrapabot?"
 layout: none
 type: faq
+language: es
 weight: 3
 ---
-¡No! Nuestros algoritmos acceden a la API pública de Twitter, que no está vinculada a su cuenta. No accedemos o almacenamos información privada, ni tuitearemos jamás en su nombre. Sus claves de API privadas nunca se transmiten a nuestros servidores. Esto significa que no tenemos la capacidad de hacer peticiones en su nombre.  
+¡No! Nuestros algoritmos acceden a la API pública de Twitter, que no está vinculada a su cuenta. No accedemos o almacenamos información privada, ni tuitearemos jamás en su nombre. Sus claves de API privadas nunca se transmiten a nuestros servidores. Esto significa que no tenemos la capacidad de hacer peticiones en su nombre.

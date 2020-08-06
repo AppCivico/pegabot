@@ -16,3 +16,36 @@ slug:
   clean_accents: true
   sanitize_replacement: "-"
 
+collections:
+- name: "faq_pt"
+  label: "Perguntas frequentes"
+  label_singular: "Pergunta frequente"
+  folder: "content/faq"
+  # identifier_field: "slug"
+  slug: "{{slug}}.{{language}}"
+  preview_path: "/faq#{{slug}}"
+  create: true
+  extension: md
+  view_filters:
+  - label: "Português"
+    field: language
+    pattern: 'pt'
+  - label: "Español"
+    field: language
+    pattern: 'en'
+  fields:
+  - {label: "Language", name: "language", widget: "select", options: ["es", "pt"]}
+  - name: "title"
+    label: "Título"
+    widget: "string"
+  - name: "slug"
+    label: "Âncora"
+    widget: "string"
+    required: false
+  - name: "date"
+    label: "Data"
+    widget: "datetime"
+    format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - name: "body"
+    label: "Conteúdo"
+    widget: "markdown"
