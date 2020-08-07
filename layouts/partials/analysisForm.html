@@ -22,6 +22,25 @@
 
 		<input type="hidden" name="limit" value="{{ $.Site.Params.searchlimit | default 12 }}" />
 
-		<button name="search_for" value="profile" type="submit" class="analysis-form__profile-button">{{ i18n "toCatch" }}</button>
+		<button name="search_for" value="profile" type="submit" class="analysis-form__profile-button" id="analysis-form__profile-button">{{ i18n "toCatch" }}</button>
 	</fieldset>
 </form>
+
+<script>
+	var profile = document.getElementById('profile');
+
+	profile.addEventListener('blur', function(e){
+		var value = e.target.value;
+
+		var regex = /(?:https?:\/\/)?(?:www)?\.(:?twitter\.com\/)/gi;
+
+		value = value.replace(regex, '');
+
+		if (value.indexOf('@') !== 0){
+			value = '@'+value;
+		}
+
+		e.target.value = value;
+	}, false);
+
+</script>
