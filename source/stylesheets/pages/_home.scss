@@ -1,19 +1,20 @@
 .home-page .site-header {
 	padding-bottom: 0;
 
-	background-image: none;
+	background-color: white;
+
+	box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.09);
 
 	@media screen and (min-width: breakpoint('tablet')) {
-		margin-bottom: $line-height * -2rem;
+
 	}
 
 	@media screen and (min-width: breakpoint('desktop')) {
-		margin-bottom: $line-height * -3rem;
+
 	}
 
 	@media screen and (min-width: breakpoint('wide')) {
-		background-image: image('robot1.png'), image('robot4.png');
-		background-position: 90% 85%, 15% 55%;
+
 	}
 }
 
@@ -27,23 +28,15 @@
 }
 
 .home-page [role='banner'] {
-	min-width: #{200px + 30px};
-
-	margin: ($line-height * 1rem) auto;
-	margin-top: ($line-height * 1rem);
-	margin-bottom: ($line-height * 1rem);
 }
 
 .home-page [role='banner'] a {
-	height: 12.5rem;
-	min-height: #{200px + 30px};
-
 	&.pt-br {
-		background-image: image('logotype.png');
+
 	}
 
 	&.es-mx {
-		background-image: image('logotype-es.png');
+
 	}
 
 }
@@ -55,13 +48,15 @@
 }
 
 .intro {
+	@include aspect-ratio(1443 x 645);
+
 	position: relative;
 
 	clear: both;
 
 	z-index: layer('default');
 
-	max-width: $max-width;
+	min-height: 744px;
 
 	padding-top: $line-height * 1rem;
 	padding-right: $gutter;
@@ -70,6 +65,15 @@
 	margin-left: auto;
 
 	text-align: right;
+
+	background-image: image('bg-wave--3.png'), image('bg-wave--2.png'), image('bg-wave--1.png');
+	background-position: left 0 bottom 1px, left 0 bottom, left 0 bottom 2px;
+	background-size: 100% auto;
+	background-repeat: repeat-x;
+
+	transition-delay: 0;
+	// transition-duration: 300ms;
+	transition-property: background-position;
 }
 
 .intro p {

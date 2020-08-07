@@ -79,28 +79,29 @@
 					{{ end }}
 				</style>
 			{{ end }}
+			<div class="header-menu-and-banner">
+				<div role="banner">
+					<a href="/" class="{{ .Site.LanguageCode }}">
+						{{ .Site.Title }}
+					</a>
+					{{ with $.Site.Params.tagline }}
+						<div class="site-tagline">{{ . }}</div>
+					{{ end }}
+				</div>
 
-			{{ if ne .Kind "404" }}
-				{{ with .Site.Menus.header }}
-					<nav class="header-menu">
-						<ul>
-							{{ partial "menu.html" . }}
-							<li>
-								<a href="{{ $.Site.Params.typeform }}" target="_blank">
-									{{ i18n "contact" }}
-								</a>
-							</li>
-						</ul>
-					</nav>
-				{{ end }}
-			{{ end }}
-
-			<div role="banner">
-				<a href="/" class="{{ .Site.LanguageCode }}">
-					{{ .Site.Title }}
-				</a>
-				{{ with $.Site.Params.tagline }}
-					<div class="site-tagline">{{ . }}</div>
+				{{ if ne .Kind "404" }}
+					{{ with .Site.Menus.header }}
+						<nav class="header-menu">
+							<ul>
+								{{ partial "menu.html" . }}
+								<li>
+									<a href="{{ $.Site.Params.typeform }}" target="_blank">
+										{{ i18n "contact" }}
+									</a>
+								</li>
+							</ul>
+						</nav>
+					{{ end }}
 				{{ end }}
 			</div>
 		</header>
