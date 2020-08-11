@@ -91,20 +91,20 @@ textarea {
 	}
 }
 
-/// Load the Susy grid under the class `grid-debug`
+/// Load the Susy grid under the class `grid`
 ///
 /// @author Sobral
 /// @group helpers
 ///
 /// @example markup
 ///
-/// <html class="grid-debug">
+/// <html class="grid">
 /// 	<body>
 /// 		[...]
 /// 	</body>
 /// </html>
 ///
-.grid-debug {
+.grid {
 	&::after {
 		position: fixed;
 		top: 0;
