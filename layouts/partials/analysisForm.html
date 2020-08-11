@@ -1,9 +1,16 @@
-<form action="{{ .RelPermalink }}#results__list" method="get" name="analisys_form" class="analisys-form">
+<form
+	action="{{ .RelPermalink }}#results__list"
+	method="get"
+	name="analisys_form"
+	class="fancy-form"
+>
 	<fieldset>
 		<legend>{{ i18n "toCatchThatBot" }}</legend>
 
-		<fieldset class="analysis-form__search-fields">
-			<p class="analisys-form__social-network" hidden>
+		<fieldset
+			class="fancy-form__search-fields"
+		>
+			<p class="fancy-form__social-network" hidden>
 				<label for="social-network">
 					{{ i18n "socialNetwork" }}
 				</label>
@@ -12,7 +19,9 @@
 				</select>
 			</p>
 
-			<p class="analisys-form__profile">
+			<p
+				class="fancy-form__input-wrapper"
+			>
 				<input
 					required
 					type="search"
@@ -32,7 +41,15 @@
 
 		<input type="hidden" name="limit" value="{{ $.Site.Params.searchlimit | default 12 }}" />
 
-		<button name="search_for" value="profile" type="submit" class="analysis-form__profile-button" id="analysis-form__profile-button">{{ i18n "toCatch" }}</button>
+		<button
+			name="search_for"
+			value="profile"
+			type="submit"
+			class="fancy-form__button"
+			id="fancy-form__button"
+		>
+			{{ i18n "toCatch" }}
+		</button>
 	</fieldset>
 </form>
 

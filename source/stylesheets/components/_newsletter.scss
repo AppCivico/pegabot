@@ -19,10 +19,6 @@
 
 	@media screen and (min-width: breakpoint('desktop')) {
 		position: relative;
-
-		> * {
-			width: 40%;
-		}
 	}
 }
 
@@ -52,54 +48,5 @@
 		right: $gutter;
 
 		width: 60%;
-	}
-}
-
-.newsletter fieldset {
-	position: relative;
-}
-
-.newsletter label {
-	position: absolute;
-	top: $line-height * -1em;
-}
-
-.newsletter input {
-	display: block;
-
-	margin-bottom: $line-height * 1rem;
-
-	background-color: transparent;
-
-	border-color: currentColor;
-
-	@media screen and (min-width: breakpoint('phablet')) {
-		padding-right: $gutter * 4;
-	}
-}
-
-.newsletter [type='submit'] {
-	margin-bottom: 0;
-
-	text-transform: uppercase;
-
-	color: palette('blue', 'dark');
-
-	background-color: palette('white');
-
-	border-color: palette('white');
-
-	&:hover,
-	&:focus {
-		color: palette('orange');
-	}
-
-	@media screen and (min-width: breakpoint('phablet')) {
-		position: absolute;
-		top: 0;
-		right: 0;
-
-		padding-right: $gutter * 2;
-		padding-left: $gutter * 2;
 	}
 }

@@ -1,4 +1,4 @@
-.analisys-form {
+.fancy-form {
 	position: relative;
 
 	z-index: layer('default');
@@ -18,7 +18,7 @@
 	}
 }
 
-.analisys-form > fieldset {
+.fancy-form > fieldset {
 	max-width: 33em;
 	min-height: 2.5rem; // 40px
 
@@ -39,20 +39,20 @@
 	}
 }
 
-.analisys-form legend {
+.fancy-form legend {
 	@include visually-hidden;
 }
 
-.analisys-form :placeholder-shown + label {
+.fancy-form :placeholder-shown + label {
 	bottom: 2.5rem; // 40px
 
 	transform: translateY(50%);
 }
 
-.analisys-form label,
-.analisys-form :hover + label,
-.analisys-form :focus + label,
-.analisys-form label:hover {
+.fancy-form label,
+.fancy-form :hover + label,
+.fancy-form :focus + label,
+.fancy-form label:hover {
 	position: absolute;
 	top: -1.25rem;
 	right: 0;
@@ -80,9 +80,9 @@
 	}
 }
 
-.analisys-form input,
-.analisys-form select,
-.analisys-form button {
+.fancy-form input,
+.fancy-form select,
+.fancy-form button {
 	display: block;
 
 	width: 100%;
@@ -110,7 +110,7 @@
 	}
 }
 
-.analysis-form__search-fields {
+.fancy-form__search-fields {
 	@include clearfix;
 
 	height: 100%;
@@ -139,7 +139,7 @@
 	}
 }
 
-.analysis-form__search-fields p {
+.fancy-form__search-fields p {
 	position: relative;
 
 	float: left;
@@ -149,7 +149,7 @@
 	margin: 0;
 }
 
-.analisys-form button {
+.fancy-form button {
 	padding-right: ($line-height * 1em);
 	padding-left: ($line-height * 1em);
 
@@ -161,8 +161,8 @@
 	white-space: nowrap;
 }
 
-.analysis-form__search-fields input,
-.analysis-form__search-fields select {
+.fancy-form__search-fields input,
+.fancy-form__search-fields select {
 	font-weight: 400;
 	font-size: ms(-1);
 
@@ -176,7 +176,7 @@
 	}
 }
 
-.analisys-form__social-network {
+.fancy-form__social-network {
 	width: 30%;
 
 	@media screen and (min-width: breakpoint('phone')) {
@@ -184,10 +184,10 @@
 	}
 }
 
-.analisys-form__profile {
+.fancy-form__input-wrapper {
 	width: 100%;
 
-	.analisys-form__social-network:not([hidden]) + & {
+	.fancy-form__social-network:not([hidden]) + & {
 		width: 70%;
 
 		@media screen and (min-width: breakpoint('phone')) {
@@ -196,7 +196,7 @@
 	}
 }
 
-.analisys-form__social-network select {
+.fancy-form__social-network select {
 	padding-right: $line-height * 1em;
 
 	color: palette('purple');
@@ -206,25 +206,29 @@
 	border-radius: ($line-height * 1em) 0 0 ($line-height * 1em);
 }
 
-.analisys-form__profile input {
+.fancy-form__input-wrapper input {
 	padding-left: 1.875em;
 
 	border-radius: ($line-height * 1em);
 
-	.analisys-form__social-network:not([hidden]) + & {
+	.fancy-form__social-network:not([hidden]) + & {
 		border-radius: 0 ($line-height * 1em) ($line-height * 1em) 0;
 	}
 }
 
-.analisys-form__profile label {
+.fancy-form__input-wrapper label {
 	padding-left: ($line-height * 1em);
 
-	.analisys-form__social-network:not([hidden]) + & {
+	text-transform: lowercase;
+
+	color: palette('text', 'dark');
+
+	.fancy-form__social-network:not([hidden]) + & {
 		padding-left: 0;
 	}
 }
 
-.analysis-form__profile-button.analysis-form__profile-button {
+.fancy-form__button.fancy-form__button {
 	width: auto;
 
 	margin-right: 0;
@@ -249,8 +253,8 @@
 	}
 }
 
-.analysis-form__followers-button.analysis-form__followers-button,
-.analysis-form__friends-button.analysis-form__friends-button {
+.fancy-form__followers-button.fancy-form__followers-button,
+.fancy-form__friends-button.fancy-form__friends-button {
 	padding: 0;
 	margin-bottom: 0;
 
@@ -279,8 +283,8 @@
 	}
 }
 
-.analysis-form__followers-button.analysis-form__followers-button {
+.fancy-form__followers-button.fancy-form__followers-button {
 }
 
-.analysis-form__friends-button.analysis-form__friends-button {
+.fancy-form__friends-button.fancy-form__friends-button {
 }
