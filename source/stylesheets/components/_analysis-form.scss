@@ -6,12 +6,9 @@
 	max-width: none;
 
 	@media screen and (min-width: breakpoint('desktop')) {
-		margin-bottom: $line-height * -5rem;
 	}
 
 	@media screen and (min-width: breakpoint('wide')) {
-		min-height: 645px;
-
 		background-size: auto;
 
 		&::before,
@@ -22,8 +19,8 @@
 }
 
 .analisys-form > fieldset {
-	height: 40px;
 	max-width: 33em;
+	min-height: 2.5rem; // 40px
 
 	padding-top: $line-height * 1rem;
 	padding-right: $gutter;
@@ -34,11 +31,11 @@
 	box-sizing: content-box;
 
 	@media screen and (min-width: breakpoint('phablet')) {
-		padding-top: 15%;
+		// padding-top: 15%;
 	}
 
 	@media screen and (min-width: breakpoint('desktop')) {
-		padding-top: 15rem;
+		// padding-top: 15rem;
 	}
 }
 
@@ -46,16 +43,41 @@
 	@include visually-hidden;
 }
 
-.analisys-form label {
+.analisys-form :placeholder-shown + label {
+	bottom: 2.5rem; // 40px
+
+	transform: translateY(50%);
+}
+
+.analisys-form label,
+.analisys-form :hover + label,
+.analisys-form :focus + label,
+.analisys-form label:hover {
 	position: absolute;
-	top: -2em;
+	top: -1.25rem;
 	right: 0;
 	left: 0;
 
+	height: 2.5rem; // 40px
+
 	overflow: hidden;
+
+	font-weight: 900;
+	font-size: ms(-1);
+	line-height: 2.5rem; // 40px
 
 	text-overflow: ellipsis;
 	white-space: nowrap;
+
+	transform: translateY(-50%);
+
+	transition-duration: 0.5s;
+	transition-property: transform;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+	&::before {
+		content: '@';
+	}
 }
 
 .analisys-form input,
@@ -64,14 +86,13 @@
 	display: block;
 
 	width: 100%;
-	height: 100%;
+	height: 2.5rem; // 40px
 
 	padding-top: ($line-height / 4 * 1em);
 	padding-right: ($line-height / 4 * 1em);
 	padding-bottom: ($line-height / 4 * 1em);
 	padding-left: ($line-height / 4 * 1em);
 
-	font-size: 1em;
 	line-height: $line-height;
 
 	background-color: transparent;
@@ -102,11 +123,11 @@
 
 	border-radius: $border-radius;
 
-	box-shadow: 0 6px 0 0 palette('gray', 'base'), 0 20px 10px palette('shadow');
+	box-shadow: 0 4px 0 0 palette('gray', 'base');
 
 	&:hover,
 	&:focus {
-		box-shadow: 0 6px 0 0 palette('blue', 'dark'), 0 20px 10px palette('shadow');
+		box-shadow: 0 4px 0 0 palette('blue', 'dark');
 	}
 
 	@media screen and (min-width: breakpoint('phablet')) {
@@ -134,12 +155,17 @@
 
 	overflow: hidden;
 
+	font-weight: 900;
+
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
 
 .analysis-form__search-fields input,
 .analysis-form__search-fields select {
+	font-weight: 400;
+	font-size: ms(-1);
+
 	&:hover,
 	&:focus {
 		color: palette('white');
@@ -181,6 +207,8 @@
 }
 
 .analisys-form__profile input {
+	padding-left: 1.875em;
+
 	border-radius: ($line-height * 1em);
 
 	.analisys-form__social-network:not([hidden]) + & {
@@ -209,11 +237,11 @@
 
 	background-color: palette('orange');
 
-	box-shadow: 0 6px 0 0 palette('orange', 'dark'), 0 20px 10px palette('shadow');
+	box-shadow: 0 4px 0 0 palette('orange', 'dark');
 
 	&:hover,
 	&:focus {
-		box-shadow: 0 6px 0 0 palette('blue', 'dark'), 0 20px 10px palette('shadow');
+		box-shadow: 0 4px 0 0 palette('blue', 'dark');
 	}
 
 	@media screen and (min-width: breakpoint('phablet')) {

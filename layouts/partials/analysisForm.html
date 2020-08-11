@@ -13,10 +13,20 @@
 			</p>
 
 			<p class="analisys-form__profile">
-				<label for="profile">
+				<input
+					required
+					type="search"
+					name="profile"
+					id="profile"
+					placeholder=" "
+					aria-labelledby="profile-label"
+				>
+				<label
+					for="profile"
+					id="profile-label"
+				>
 					{{ i18n "twitterProfile" }}
 				</label>
-				<input required type="search" name="profile" id="profile" placeholder="Ex.: itsriodejaneiro" title="Insira o nome do perfil que quer investigar e clique em **Pegar**">
 			</p>
 		</fieldset>
 
