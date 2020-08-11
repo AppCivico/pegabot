@@ -36,8 +36,8 @@
 
 		value = value.replace(regex, '');
 
-		if (value.indexOf('@') !== 0){
-			value = '@'+value;
+		if (!!value && value.indexOf('@') !== 0){
+			value = '@' + value;
 		}
 
 		e.target.value = value;
