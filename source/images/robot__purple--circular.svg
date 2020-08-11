@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="55px" height="58px" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M 0 0  L 103.76 0  L 103.76 109.29  L 0 109.29  Z " fill-rule="evenodd" fill="black" id="path16" />
+    <clipPath id="clip17">
+      <use xlink:href="#path16" />
+    </clipPath>
+    <defs>
+      <style>.cls-1{fill:#3b2461;}.cls-2{fill:#683c96;}.cls-3,.cls-4,.cls-5,.cls-6,.cls-7{fill:none;stroke:#f58723;}.cls-3,.cls-4,.cls-5,.cls-6{stroke-miterlimit:10;}.cls-3{stroke-width:3px;}.cls-4{stroke-width:4px;}.cls-5{stroke-width:2.47px;}.cls-6,.cls-7{stroke-width:2.76px;}.cls-7{stroke-linecap:round;stroke-linejoin:round;}</style>
+    </defs>
+    <circle class="cls-1" cx="51.38" cy="57.91" r="51.38" />
+    <circle class="cls-2" cx="52.38" cy="51.38" r="51.38" />
+    <path class="cls-3" d="M65.7,74.89,38.44,74.7a4.09,4.09,0,0,1-3.93-3.11L28.73,47.87a4.08,4.08,0,0,1,4-5H72.08A4.09,4.09,0,0,1,76,48l-6.36,23.9A4,4,0,0,1,65.7,74.89Z" />
+    <circle class="cls-4" cx="40.97" cy="53.46" r="4.15" />
+    <circle class="cls-4" cx="63.13" cy="53.46" r="4.15" />
+    <circle class="cls-5" cx="52.75" cy="31.59" r="3.72" />
+    <line class="cls-6" x1="52.75" y1="42.83" x2="52.75" y2="35.31" />
+    <path class="cls-7" d="M45,65.21a11.44,11.44,0,0,0,14.47,0" />
+    <filter x="-50.00%" y="-50.00%" width="200.00%" height="200.00%" filterUnits="objectBoundingBox" id="filter18">
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0  " in="SourceGraphic" />
+    </filter>
+    <filter x="1077px" y="280px" width="55px" height="58px" filterUnits="userSpaceOnUse" id="filter19">
+      <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetInner" />
+      <feGaussianBlur stdDeviation="1" in="shadowOffsetInner" result="shadowGaussian" />
+      <feComposite in2="shadowGaussian" operator="atop" in="SourceAlpha" result="shadowComposite" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.76078431372549  0 0 0 0 0.756862745098039  0 0 0 0 0.756862745098039  0 0 0 0.929411764705882 0  " in="shadowComposite" />
+    </filter>
+    <g id="widget20">
+      <g transform="matrix(0.491518889745567 0 0 0.491518889745567 1077 280.140950269854 )" clip-path="url(#clip17)" filter="url(#filter18)">
+        <circle class="cls-1" cx="51.38" cy="57.91" r="51.38" />
+        <circle class="cls-2" cx="52.38" cy="51.38" r="51.38" />
+        <path class="cls-3" d="M65.7,74.89,38.44,74.7a4.09,4.09,0,0,1-3.93-3.11L28.73,47.87a4.08,4.08,0,0,1,4-5H72.08A4.09,4.09,0,0,1,76,48l-6.36,23.9A4,4,0,0,1,65.7,74.89Z" />
+        <circle class="cls-4" cx="40.97" cy="53.46" r="4.15" />
+        <circle class="cls-4" cx="63.13" cy="53.46" r="4.15" />
+        <circle class="cls-5" cx="52.75" cy="31.59" r="3.72" />
+        <line class="cls-6" x1="52.75" y1="42.83" x2="52.75" y2="35.31" />
+        <path class="cls-7" d="M45,65.21a11.44,11.44,0,0,0,14.47,0" />
+      </g>
+    </g>
+  </defs>
+  <g transform="matrix(1 0 0 1 -1077 -280 )">
+    <use xlink:href="#widget20" filter="url(#filter19)" />
+    <use xlink:href="#widget20" />
+  </g>
+</svg>

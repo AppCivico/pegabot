@@ -1,3 +1,20 @@
+.home-page {
+	overflow: hidden;
+}
+
+.home-page body {
+	height: 100vh;
+
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	background-image: image('robot__purple--circular.svg');
+	background-position: right 100px top 384px;
+
+	perspective: 1px;
+	transform-style: preserve-3d;
+}
+
 .home-page .site-header {
 	padding-bottom: 0;
 
@@ -6,20 +23,37 @@
 	box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.09);
 
 	@media screen and (min-width: breakpoint('tablet')) {
-
 	}
 
 	@media screen and (min-width: breakpoint('desktop')) {
-
 	}
 
 	@media screen and (min-width: breakpoint('wide')) {
-
 	}
 }
 
 .home-page .main-container {
 	max-width: none;
+
+	transform-style: preserve-3d;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		z-index: -1;
+
+		width: 100vw;
+		height: 100vh;
+
+		background-image: image('robot__purple--square.svg');
+		background-position: 96px 192px;
+
+		content: '';
+
+		transform: translateZ(-1px) scale(2);
+	}
 }
 
 .home-page .content-container {
@@ -38,7 +72,6 @@
 	&.es-mx {
 
 	}
-
 }
 
 .home-page [role='main'] {
@@ -48,21 +81,19 @@
 }
 
 .intro {
-	@include aspect-ratio(1443 x 645);
-
 	position: relative;
 
 	clear: both;
 
 	z-index: layer('default');
 
-	min-height: 744px;
-
 	padding-top: $line-height * 1rem;
 	padding-right: $gutter;
 	padding-left: $gutter;
 	margin-right: auto;
 	margin-left: auto;
+
+	font-size: ms(-2);
 
 	text-align: right;
 
@@ -72,12 +103,21 @@
 	background-repeat: repeat-x;
 
 	transition-delay: 0;
-	// transition-duration: 300ms;
 	transition-property: background-position;
+
+	&::after {
+		display: block;
+
+		min-height: 464px;
+
+		content: '';
+	}
 }
 
 .intro p {
-	margin-right: 0;
+	max-width: 33em;
+
+	margin-right: calc(20% + #{$gutter} * #{20% / 100%});
 	margin-left: auto;
 
 	@media screen and (min-width: breakpoint('desktop')) {
