@@ -18,9 +18,9 @@
 .home-page .site-header {
 	padding-bottom: 0;
 
-	background-color: white;
+	background-color: palette('white');
 
-	box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.09);
+	box-shadow: 1px 1px 4px 0 palette('shadow');
 
 	@media screen and (min-width: breakpoint('tablet')) {
 	}
