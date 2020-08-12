@@ -31,8 +31,8 @@
 				}
 			}
 
-			function callback() {
-				var scrollHeight = document.documentElement.scrollTop;
+			function updateBgPosition() {
+				var scrollHeight = document.body.scrollTop;
 
 				var newPosition = 'left ' + scrollHeight + 'px bottom 1px,'
 					+'left ' + scrollHeight + 'px bottom,'
@@ -40,8 +40,8 @@
 				target.style.backgroundPosition = newPosition;
 			}
 
-			// window.addEventListener('scroll', throttle(callback, 300));
-			window.addEventListener('scroll', callback);
+			window.addEventListener('load', updateBgPosition);
+			window.document.body.addEventListener('scroll', updateBgPosition);
 		</script>
 
 	{{ end }}
