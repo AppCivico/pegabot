@@ -50,13 +50,63 @@
 	{{ $resources := where (where $.Site.Pages ".Section" "_home") ".Type" "contentResource" }}
 
 	{{ range $resources }}
-	<article id="{{ .File.TranslationBaseName }}" class="{{ .File.TranslationBaseName }}">
-		<h2>
-			{{ .Title }}
-		</h2>
+		<article id="{{ .File.TranslationBaseName }}" class="{{ .File.TranslationBaseName }}">
+			<h2>
+				{{ .Title }}
+			</h2>
 
-		{{ .Content }}
-	</article>
+			{{ .Content }}
+		</article>
+	{{ end }}
+
+	{{ $.Scratch.Set "count" 0 }}
+
+	{{ range where (where $.Site.Pages ".Type" "transparency") ".Params.homepage" true }}
+		<article
+			id="home-section--{{ ($.Scratch.Get "count") }}"
+			class="
+				delayed-entrance
+
+				{{ if eq (mod ($.Scratch.Get "count") 2) 0 -}}
+					delayed-entrance__left
+				{{- else -}}
+					delayed-entrance__right
+				{{- end -}}
+			"
+		>
+			<div role="doc-subtitle">{{ i18n "transparency" }}</div>
+			<h2>
+				{{ .Title }}
+			</h2>
+
+			{{ .Content }}
+
+		</article>
+		{{ $.Scratch.Add "count" 1 }}
+	{{ end }}
+
+	{{ range where (where $.Site.Pages ".Type" "analysis") ".Params.homepage" true }}
+		<article
+			id="home-section--{{ ($.Scratch.Get "count") }}"
+			class="
+				delayed-entrance
+
+				{{ if eq (mod ($.Scratch.Get "count") 2) 0 -}}
+					delayed-entrance__left
+				{{- else -}}
+					delayed-entrance__right
+				{{- end -}}
+			"
+		>
+			<div role="doc-subtitle">{{ i18n "analysis" }}</div>
+			<h2>
+				{{ .Title }}
+			</h2>
+
+			{{ .Content }}
+
+		</article>
+		{{ $.Scratch.Add "count" 1 }}
 	{{ end }}
 
 </main>
