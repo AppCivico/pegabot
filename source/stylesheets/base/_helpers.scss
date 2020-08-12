@@ -142,3 +142,27 @@ textarea {
 		}
 	}
 }
+
+.delayed-entrance {
+	transform: translateX(0);
+
+	transition-duration: 0.5s;
+	transition-property: transform;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.delayed-entrance__left {
+	transform: translateX(-100%);
+
+	@media screen and (min-width: $max-width) {
+		transform: translateX(-50vw + #{$max-width} - 100%);
+	}
+}
+
+.delayed-entrance__right {
+	transform: translateX(100%);
+
+	@media screen and (min-width: $max-width) {
+		transform: translateX(50vw - #{$max-width} + 100%);
+	}
+}

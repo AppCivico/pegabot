@@ -75,5 +75,46 @@
 	{{ . | safeHTML }}
 {{ end }}
 
+<script>
+	var delayedEls = document.querySelectorAll('[class*="delayed-entrance"]');
+
+	function checkVisible(elm, threshold, mode) {
+		threshold = threshold || 0;
+		mode = mode || 'visible';
+
+		var rect = elm.getBoundingClientRect();
+		var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+		var above = rect.bottom - threshold < 0;
+		var below = rect.top - viewHeight + threshold >= 0;
+
+		return mode === 'above' ? above : (mode === 'below' ? below : !above && !below);
+	}
+
+	function throttle(fn, wait) {
+		var time = Date.now();
+		return function() {
+			if ((time + wait - Date.now()) < 0) {
+				fn();
+				time = Date.now();
+			}
+		}
+	}
+
+	function removeClass() {
+		for (let index = 0; index < delayedEls.length; index++) {
+			const element = delayedEls[index];
+			console.debug('element', element)
+			if (checkVisible(element)) {
+				element.className = element.className
+					.replace('delayed-entrance__left', '')
+					.replace('delayed-entrance__right', '');
+			}
+		}
+	}
+
+	window.addEventListener('load', removeClass);
+	window.document.body.addEventListener('scroll', throttle(removeClass, 300));
+</script>
+
 </body>
 </html>
