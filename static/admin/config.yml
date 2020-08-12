@@ -80,3 +80,34 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
+
+- name: "transparency"
+  label: "Transparência"
+  folder: "content/transparency"
+  slug: "{{slug}}.{{language}}"
+  preview_path: "/transparency#{{slug}}"
+  create: true
+  extension: md
+  view_filters:
+  - label: "Português"
+    field: language
+    pattern: "pt"
+  - label: "Español"
+    field: language
+    pattern: "en"
+  fields:
+  - {label: "Language", name: "language", widget: "select", options: ["es", "pt"]}
+  - name: "title"
+    label: "Título"
+    widget: "string"
+  - name: "slug"
+    label: "Âncora"
+    widget: "string"
+    required: false
+  - name: "date"
+    label: "Data"
+    widget: "datetime"
+    format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - name: "body"
+    label: "Conteúdo"
+    widget: "markdown"
