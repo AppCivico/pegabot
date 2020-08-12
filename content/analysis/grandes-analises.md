@@ -1,7 +1,7 @@
 ---
 title: "O Pegabot nasceu com o intuito de fazer grandes análises"
 date: 2020-08-11T16:27:19-03:00
-draft: true
+draft: false
 menu:
 slug: ""
 layout: none

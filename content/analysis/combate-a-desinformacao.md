@@ -1,7 +1,7 @@
 ---
 title: "Atualmente é utilizado por várias empresas, para ajuda-las ao combate da  desinformação digital e a conscientização midiática"
 date: 2020-08-11T16:30:31-03:00
-draft: true
+draft: false
 menu:
 slug: ""
 layout: none
