@@ -16,7 +16,7 @@ slug:
   sanitize_replacement: "-"
 
 collections:
-- name: "faq_pt"
+- name: "faq"
   label: "Perguntas frequentes"
   label_singular: "Pergunta frequente"
   folder: "content/faq"
