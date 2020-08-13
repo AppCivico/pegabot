@@ -1,5 +1,7 @@
 - id: allFeatures
   translation: "Análisis completo"
+- id: analysis
+  translation: "Análisis"
 - id: analysisProgress
   translation: "{{ .Count }} cuentas analizadas."
 - id: aProjectBy

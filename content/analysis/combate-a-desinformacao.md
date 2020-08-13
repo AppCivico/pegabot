@@ -6,7 +6,7 @@ menu:
 slug: ""
 layout: none
 type: transparency
-weight: 0
+weight: 2
 homepage: true
 ---
 O PegaBot tem o objetivo de ajudar a combater esse problema e deixar o debate sobre bots no Brasil mais transparente e informado.
