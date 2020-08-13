@@ -138,3 +138,32 @@ collections:
     label: "Link"
     widget: "string"
     required: false
+
+- name: "callToAction"
+  label: "Chamadas"
+  folder: "content/call-to-action"
+  create: true
+  delete: true
+  slug: "{{slug}}"
+  fields:
+  - name: "title"
+    label: "Título"
+    widget: "string"
+    tagname: "h3"
+  - name: "date"
+    label: "Data"
+    widget: "datetime"
+    format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - name: "type"
+    label: "type"
+    widget: "hidden"
+    default: "callToAction"
+  - name: "body"
+    label: "Conteúdo"
+    widget: "markdown"
+  - name: "weight"
+    label: "Ordem"
+    widget: "number"
+    default: 1
+    valueType: "int"
+    min: 0
