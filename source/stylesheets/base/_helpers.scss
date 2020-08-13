@@ -148,7 +148,7 @@ textarea {
 
 	transition-duration: 0.5s;
 	transition-property: transform;
-	transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	transition-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
 }
 
 .delayed-entrance__left {
@@ -165,4 +165,17 @@ textarea {
 	@media screen and (min-width: $max-width) {
 		transform: translateX(50vw - #{$max-width} + 100%);
 	}
+}
+
+.container {
+	max-width: $max-width;
+
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.snapping-section {
+	scroll-snap-align: start;
 }
