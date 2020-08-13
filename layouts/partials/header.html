@@ -84,9 +84,6 @@
 					<a href="/" class="{{ .Site.LanguageCode }}">
 						{{ .Site.Title }}
 					</a>
-					{{ with $.Site.Params.tagline }}
-						<div class="site-tagline">{{ . }}</div>
-					{{ end }}
 				</div>
 
 				{{ if ne .Kind "404" }}

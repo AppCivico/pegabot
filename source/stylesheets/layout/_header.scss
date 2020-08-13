@@ -23,6 +23,7 @@
 	flex-wrap: wrap;
 
 	width: 100%;
+	height: 4rem;
 	max-width: 80rem;
 
 	padding-right: 30px;
@@ -53,6 +54,7 @@
 	display: table;
 
 	width: auto;
+	height: 100%;
 	max-width: 80rem;
 
 	margin-right: 0;
@@ -73,6 +75,8 @@
 
 	padding-right: 0;
 	padding-left: $gutter;
+
+	vertical-align: middle;
 }
 
 .responsibles {
@@ -87,21 +91,14 @@
 }
 
 [role='banner'] {
-	margin-top: ($line-height * 1rem);
+	margin-top: 0;
 	margin-right: auto;
 	margin-bottom: 0;
-	margin-left: auto;
+	margin-left: 0;
 
 	line-height: 1.25;
 
-	@media screen and (min-width: breakpoint('phablet')) {
-		margin-top: 0;
-		margin-left: 0;
-	}
 
-	@media screen and (min-width: breakpoint('tablet')) {
-		margin-top: calc(#{$line-height} * -3rem);
-	}
 }
 
 [role='banner'] a {
@@ -109,7 +106,19 @@
 
 	display: block;
 
+	width: 100%;
+	height: 100%;
+	min-width: 150px;
+	min-height: 45px;
+
+	background-image: image('logotype.svg');
 	background-position: 50% 50%;
+	background-size: 37px 36px;
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		background-image: image('logotype__horizontal.svg');
+		background-size: 150px 45px;
+	}
 
 	[lang='pt-br'] & {
 
