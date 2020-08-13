@@ -1,0 +1,27 @@
+<div class="curved-section curved-section--{{ with .File }}{{ .TranslationBaseName }}{{ end }}">
+	<div class="curved-section__container">
+		<div class="curved-section__content">
+			{{ if eq .Type "bookmark"}}
+				<div role="doc-subtitle" class="curved-section__subtitle">
+					{{ i18n "doYouWantToKnowMore" }}
+				</div>
+			{{ end }}
+
+			<h2 class="curved-section__title">{{ .Title }}</h2>
+
+			{{ .Content }}
+
+			{{ with .Params.author }}
+				<p class="curved-section__author">{{ . }}</p>
+			{{ end }}
+
+			{{ with .Params.link }}
+				<p><a href="{{ . }}" class="curved-section__button">{{ i18n "readFullContent" }}</a><p>
+			{{ end }}
+		</div>
+
+		{{ with .Params.Image }}
+			<img src="{{ . }}" class="curved-section__image" width="487" height="272" />
+		{{ end }}
+	</div>
+</div>

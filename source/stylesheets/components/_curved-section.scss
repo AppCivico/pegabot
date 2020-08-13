@@ -1,0 +1,143 @@
+.curved-section {
+	padding-top: $gutter * 3;
+	padding-bottom: $gutter * 2.5;
+
+	background-image: image('curved-mask__top.svg'), image('curved-mask__bottom.svg');
+	background-position: top center, bottom center;
+	background-size: 100% auto, 100% auto;
+}
+
+.curved-section--twitter {
+	color: palette('purple');
+
+	background-color: palette('yellow');
+
+	@media screen and (min-width: breakpoint('desktop')) {
+	}
+}
+
+.curved-section--collaborate {
+	color: palette('white');
+
+	background-color: palette('orange');
+
+	@media screen and (min-width: breakpoint('desktop')) {
+	}
+}
+
+.curved-section__container {
+	display: flex;
+
+	align-items: center;
+	flex-wrap: wrap;
+
+	max-width: 43rem; // 688px
+
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@function selectAllFrom($n, $selector) {
+	$classes: ();
+
+	@for $i from 1 through $n {
+		$className: if($i==1, #{$selector}, #{'~ ' + $selector});
+		$classes: join($classes, unquote($className), space);
+	}
+
+	@return $classes;
+}
+
+
+.curved-section__content {
+	flex-basis: 50%;
+	flex-grow: 1;
+
+	#{selectAllFrom(2, '.active')} & {
+		order: 2;
+	}
+
+	&:only-child {
+		text-align: center;
+	}
+}
+
+.curved-section__author {
+	font-style: italic;
+	font-size: ms(-1);
+}
+
+.curved-section__image {
+	flex-basis: 50%;
+	flex-grow: 1;
+
+	height: auto;
+	max-width: 100%;
+
+	border-radius: 8px;
+
+
+	#{selectAllFrom(2, '.active')} & {
+		order: 1;
+	}
+}
+
+.curved-section__title {
+	margin-top: 0;
+
+	font-size: ms(6);
+	font-family: $title-font-stack;
+
+	color: inherit;
+}
+
+.curved-section__subtitle {
+	font-size: ms(-2);
+
+	text-transform: uppercase;
+
+	color: palette('orange');
+}
+
+.curved-section p:last-child a:only-child {
+	display: block;
+
+	width: max-content;
+	height: 2.5rem; // 40px
+
+	padding-top: ($line-height / 4 * 1em);
+	padding-right: ($line-height * 1em);
+	padding-bottom: ($line-height / 4 * 1em);
+	padding-left: ($line-height * 1em);
+	margin-right: auto;
+	margin-left: auto;
+
+	overflow: hidden;
+
+	font-weight: 900;
+	line-height: $line-height;
+
+	text-decoration: none;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+	white-space: nowrap;
+
+	color: palette('white');
+
+	background-color: palette('purple');
+
+	border: 0;
+	border-radius: ($line-height * 1em);
+
+	box-shadow: 0 4px 0 0 palette('purple', 'dark');
+	box-sizing: border-box;
+
+	&:hover,
+	&:focus {
+		color: palette('white');
+
+		background-color: palette('blue', 'dark');
+
+		box-shadow: 0 4px 0 0 palette('blue', 'x-dark');
+	}
+}
