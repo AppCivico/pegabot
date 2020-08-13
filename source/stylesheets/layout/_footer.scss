@@ -5,6 +5,8 @@
 $height--desktop: $line-height * 3rem;
 
 .site-footer-container {
+	font-family: $title-font-stack;
+
 	color: palette('white');
 
 	background-color: palette('blue', 'dark');
@@ -47,17 +49,32 @@ $height--desktop: $line-height * 3rem;
 }
 
 .footer-menu {
+	margin-bottom: $line-height * 2.5em;
+
+	font-size: ms(-1);
+
+	color: palette('orange');
+
 	@media screen and (min-width: breakpoint('tablet')) {
 		float: left;
+
+		margin-bottom: $line-height * 5em;
 	}
 }
 
+.site-footer__contact,
 .site-footer .site-tagline {
-	margin-bottom: $line-height * 2.5em;
+	font-size: ms(-1);
+	line-height: 2;
 
-	@media screen and (min-width: breakpoint('tablet')) {
-		margin-bottom: $line-height * 5em;
-	}
+	text-transform: uppercase;
+}
+
+.site-footer .site-tagline {
+}
+
+.site-footer__contact {
+	color: palette('yellow');
 }
 
 /**
@@ -68,73 +85,74 @@ $height--desktop: $line-height * 3rem;
 * Within any `document` or `application`, the author **SHOULD** mark no more than one element with the `contentinfo` role.
 */
 [role='contentinfo'] {
-	@extend %content-info;
 }
 
 .site-footer [role='contentinfo'] {
 	clear: left;
-
-	@media screen and (min-width: breakpoint('phablet')) {
-		display: table;
-
-		width: 100%;
-		max-width: 100%;
-
-		table-layout: fixed;
-	}
-
-	@media screen and (min-width: breakpoint('desktop')) {
-		width: auto;
-
-		margin-right: 0;
-		margin-left: auto;
-
-		text-align: right;
-		vertical-align: middle;
-
-		table-layout: auto;
-	}
 }
 
-.site-footer [role='contentinfo'] * {
-	vertical-align: inherit;
-}
+.site-footer [role='contentinfo'] .responsibles {
+	@include clearfix;
 
-.site-footer [role='contentinfo'] > div {
+	@extend %content-info;
+
+	margin-right: auto;
 	margin-bottom: $line-height * 1em;
+	margin-left: 0;
+
+	vertical-align: inherit;
 
 	@media screen and (min-width: breakpoint('phablet')) {
-		display: table-cell;
+		// display: table;
 
-		width: 50%;
+		// width: 100%;
+		// max-width: 100%;
 
-		padding-right: $gutter / 2;
-		padding-left: $gutter / 2;
+		// table-layout: fixed;
+		// display: table-cell;
 
-		&:nth-child(odd) {
-			padding-left: 0;
-		}
+		// width: 50%;
 
-		&:nth-child(even) {
-			padding-right: 0;
-		}
+		// padding-right: $gutter / 2;
+		// padding-left: $gutter / 2;
+
+		// &:nth-child(odd) {
+		// 	padding-left: 0;
+		// }
+
+		// &:nth-child(even) {
+		// 	padding-right: 0;
+		// }
 	}
 
 	@media screen and (min-width: breakpoint('desktop')) {
-		width: auto;
-		max-width: none;
+		// width: auto;
 
-		padding: 0;
+		// margin-right: 0;
+		// margin-left: auto;
 
-		white-space: nowrap;
+		// text-align: right;
+		// vertical-align: middle;
 
-		border-spacing: $gutter;
+		// table-layout: auto;
+		// width: auto;
+		// max-width: none;
 
-		border-collapse: separate;
+		// padding: 0;
+
+		// white-space: nowrap;
+
+		// border-collapse: separate;
+		// border-spacing: $gutter;
 	}
 }
 
-.site-footer [role='contentinfo'] h6 {
+.site-footer .responsibles h6 {
+	font-size: ms(1);
+	font-family: inherit;
+
+	color: inherit;
+
 	@media screen and (min-width: breakpoint('desktop')) {
 		float: left;
 
@@ -142,16 +160,40 @@ $height--desktop: $line-height * 3rem;
 	}
 }
 
-.site-footer [role='contentinfo'] ul {
+.site-footer .responsibles ul {
+	display: flex;
+
+	flex-wrap: wrap;
+
 	text-align: center;
 
 	@media screen and (min-width: breakpoint('desktop')) {
-		float: left;
+
 	}
 }
 
-.site-footer [role='contentinfo'] li {
+.site-footer .responsibles li {
 	@media screen and (min-width: breakpoint('desktop')) {
 		width: auto;
 	}
+}
+
+.site-footer .developers {
+	font-weight: normal;
+	font-size: ms(-2);
+	line-height: $line-height * 2;
+	font-family: $text-font-stack;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	color: palette('orange');
+
+	background-color: palette('blue');
+}
+
+.site-footer .developers * {
+	display: inline;
+
+	padding: 0;
 }

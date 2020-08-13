@@ -40,18 +40,9 @@
 				{{ partialCached "responsibles.html" . }}
 
 				{{ with $.Site.Data.developers }}
-				<div class="developers">
-					<h6>{{ i18n "developedBy" }}</h6>
-					<ul>
-						<style>
-							{{ range . }}
-								.site-footer .developers__item--{{ .id }} {
-									background-image: url(/assets/images/{{ .iconNegative }});
-									min-width: {{ add .iconWidth 30 }}px;
-									min-height: {{ add .iconHeight 30 }}px;
-								}
-							{{ end }}
-						</style>
+					<div class="developers">
+						<h6>{{ i18n "developedBy" }}</h6>
+						<ul>
 							{{ range . }}
 								<li
 									{{ with .id }} class="developers__item--{{ . }}" {{ end }}
