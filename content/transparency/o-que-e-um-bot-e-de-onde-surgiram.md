@@ -6,7 +6,7 @@ menu:
 slug: ""
 layout: none
 type: transparency
-weight: 0
+weight: 1
 homepage: true
 ---
 Bots, uma abreviação para robôs, são programas de computador criados para executar tarefas específicas.

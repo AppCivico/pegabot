@@ -7,7 +7,7 @@ menu:
 slug: ""
 layout: none
 type: transparency
-weight: 0
+weight: 4
 homepage: true
 ---
 Vamos entender como o Pegabot analisa os perfis de forma rápida e fácil. Mas caso queira conhece mais o nosso trabalho para dar vida ao Pegabot, bastas Clicar aqui

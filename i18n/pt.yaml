@@ -64,6 +64,8 @@
   translation: "Exportar dados"
 - id: toStop
   translation: "Parar"
+- id: transparency
+  translation: "Tranparência"
 - id: tweetItLink
   translation: "Tweetar esse resultado"
 - id: twitterProfile
