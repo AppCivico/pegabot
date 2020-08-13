@@ -13,10 +13,12 @@
 
 .main-container > * {
 	padding: $gutter;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
 }
 
 .content-container {
-	padding: 0;
 }
 
 [role='main'] {
@@ -27,4 +29,6 @@
 	padding: $gutter;
 	margin-right: auto;
 	margin-left: auto;
+
+	scroll-snap-type: y mandatory;
 }
