@@ -27,19 +27,57 @@
 }
 
 progress {
+	@include progress-bar-fg { // sass-lint:disable-line mixins-before-declarations
+		background: linear-gradient(90deg, transparent 50%, palette('button', 'submit') 50%) center/50px 50px transparent;
+	}
+	@include progress-bar-bg { // sass-lint:disable-line mixins-before-declarations
+		background: linear-gradient(90deg, transparent 50%, palette('button', 'base') 50%) center/50px 50px transparent;
+	}
+
 	width: 100%;
 	height: $line-height * 1em;
 
 	color: palette('button', 'submit');
-
 	// Get rid of default border in Firefox.
+
 	border: 0;
+}
 
-	@include progress-bar-fg { // sass-lint:disable-line mixins-before-declarations
-		background: linear-gradient(90deg, transparent 50%, palette('button', 'submit') 50%) center/50px 50px transparent;
-	}
+.progress-bar {
+	color: palette('gray', 'dark');
 
-	@include progress-bar-bg { // sass-lint:disable-line mixins-before-declarations
-		background: linear-gradient(90deg, transparent 50%, palette('button', 'base') 50%) center/50px 50px transparent;
+	background-color: palette('gray', 'base');
+}
+
+.progress-bar span {
+	display: block;
+
+	height: 0.75rem;
+
+	margin-right: auto;
+	margin-left: 0;
+
+	&::before {
+		display: block;
+
+		height: 0.75rem;
+
+		background-color: currentColor;
+
+		content: '';
+
+		animation: progress 3s ease-in-out forwards;
+
+		@at-root {
+			@keyframes progress {
+				from {
+					width: 0;
+				}
+
+				to {
+					width: 100%;
+				}
+			}
+		}
 	}
 }
