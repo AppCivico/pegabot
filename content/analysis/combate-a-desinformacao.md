@@ -5,7 +5,7 @@ draft: false
 menu:
 slug: ""
 layout: none
-type: transparency
+type: analysis
 weight: 2
 homepage: true
 ---
