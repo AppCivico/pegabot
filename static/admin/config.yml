@@ -5,6 +5,7 @@ backend:
   site_domain: pegabot.com.br
   base_url: https://api.netlify.com
   auth_endpoint: auth
+  squash_merges: true
 media_folder: "content/uploads"
 public_folder: "/uploads"
 locale: "pt"
