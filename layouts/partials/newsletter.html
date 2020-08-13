@@ -1,17 +1,19 @@
 {{ range where $.Site.Pages "File.TranslationBaseName" "newsletter" }}
-<div class="newsletter-container">
+<div class="newsletter-wrapper">
 	<div id="mc_embed_signup" class="newsletter">
-		<h4>
-			{{ i18n "newsletter" }}
-		</h4>
+		<div class="newsletter__content">
+			<div  role="doc-subtitle">
+				{{ i18n "newsletter" }}
+			</div>
 
-		{{ with .Title }}
-			<h2>
-				{{ . }}
-			</h2>
-		{{ end }}
+			{{ with .Title }}
+				<h2>
+					{{ . }}
+				</h2>
+			{{ end }}
 
-		{{ .Content }}
+			{{ .Content }}
+		</div>
 
 		<form
 			action="https://pegabot.us12.list-manage.com/subscribe/post?u=6c682f04f1aa3afaa0c48b7c6&amp;id=d3164920dd"
