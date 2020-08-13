@@ -116,8 +116,10 @@
 		}
 	}
 
-	window.addEventListener('load', removeClass);
-	window.document.body.addEventListener('scroll', throttle(removeClass, 300));
+	if (delayedEls.length){
+		window.addEventListener('load', removeClass);
+		window.document.body.addEventListener('scroll', throttle(removeClass, 300));
+	}
 </script>
 
 </body>
