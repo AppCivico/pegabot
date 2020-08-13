@@ -112,3 +112,29 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
+
+- name: bookmarks
+  label: Favoritos
+  slug: "{{slug}}"
+  folder: "content/bookmarks"
+  create: true
+  delete: true
+  fields:
+  - name: "title"
+    label: "Título"
+    widget: "hidden"
+    default: "{{slug}}"
+  - name: "author"
+    label: "Autor(es)"
+    widget: "string"
+  - name: "date"
+    label: "Data"
+    widget: "datetime"
+    format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - name: "image"
+    label: "Imagem (.svg)"
+    widget: "image"
+  - name: "link"
+    label: "Link"
+    widget: "string"
+    required: false
