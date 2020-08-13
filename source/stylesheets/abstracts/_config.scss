@@ -76,6 +76,17 @@ $modularscale: (
 	base: 1em,
 	ratio: 1.2,
 );
+
+// ms(5)  2.488em (39.81px)
+// ms(4)  2.074em (33.18px)
+// ms(3)  1.728em (27.65px)
+// ms(2)  1.44em  (23.04px)
+// ms(1)  1.2em   (19.20px)
+// ms(0)  1em     (16.00px)
+// ms(-1) 0.833em (13.33px)
+// ms(-2) 0.694em (11.11px)
+// ms(-3) 0.579em (9.26px)
+
 $_purple: rgb(108, 23, 188);
 $_blue--dark: rgb(43, 1, 106);
 $_blue--base: rgb(93, 27, 192);
