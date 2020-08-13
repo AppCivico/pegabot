@@ -25,6 +25,7 @@ languages:
     params:
       siteDescription: "O Pegabot verifica a atividade de uma conta em rede social e dá uma pontuação baseada na probabilidade dessa conta ser um bot. Maiores pontuações são mais bot-like."
       tagline: "Por mais transparência no uso de bots"
+      email: pegabot@itsrio.org
       typeform: https://itsrio2.typeform.com/to/k9FHXq
       ogImage: "/pegabot-fb-img__pt.jpg"
       ogTitle: "Descubra se aquele perfil de rede social é bot"
@@ -36,6 +37,7 @@ languages:
     params:
       siteDescription: "El AtrapaBot verifica la actividad de una determinada cuenta en la red social y le atribuye una puntuación basada en la probabilidad de que sea un bot. Las puntuaciones mayores son más bot-like."
       tagline: "Por una mayor transparencia en el uso de bots."
+      email:
       typeform: https://itsrio2.typeform.com/to/uC2R0P
       ogImage: "/pegabot-fb-img__es.jpg"
       ogTitle: "Descubra las chances de que aquel perfil tan exitoso sea un bot."
@@ -47,6 +49,7 @@ languages:
     params:
       siteDescription: "Bot Spotter verifies social media profiles and gives a score after an assessment of its activities, analysing the probability of the account being a bot. Highest scores are more bot-like."
       tagline: "For more transparency in the use of bots"
+      email:
       typeform: https://itsrio2.typeform.com/to/k9FHXq
       ogImage: "/pegabot-fb-img.jpg"
       ogTitle: "Find out if a social media profile is a bot"

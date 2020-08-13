@@ -2,7 +2,16 @@
 <div class="site-footer-container">
 	<footer class="site-footer">
 		{{ with $.Site.Params.tagline }}
-			<div class="site-tagline">{{ . }}</div>
+		<div class="site-tagline">{{ . }}</div>
+		{{ end }}
+
+		{{ with $.Site.Params.email }}
+		<div class="site-footer__contact">
+			<a href="mailto:{{ . }}" target="_blank">
+				{{ i18n "contact" }}: {{ . }}
+			</a>
+		</div>
+
 		{{ end }}
 
 		{{ if ne .Kind "404" }}
@@ -10,11 +19,6 @@
 				<nav class="footer-menu">
 					<ul>
 						{{ partial "menu.html" . }}
-						<li>
-							<a href="{{ $.Site.Params.typeform }}" target="_blank">
-								{{ i18n "contact" }}
-							</a>
-						</li>
 					</ul>
 				</nav>
 			{{ end }}
