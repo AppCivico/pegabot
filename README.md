@@ -69,6 +69,6 @@ Logotypes can be added to the `_header.scss` file, using the language prefix ins
 
 ```sass
 	[lang='es-mx'] & {
-		background-image: image('logotype--mx--150w.png');
+		background-image: image('logotype__mx--150w.png');
 	}
 ```
