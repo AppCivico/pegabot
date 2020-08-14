@@ -5,11 +5,7 @@
 <link rel="prefetch" src="/assets/scripts/index.js"> ` }}{{ partial "header.html" . }}
 <main role="main" id="conteudo">
 
-	{{ range where $.Site.Pages "File.TranslationBaseName" "results" }}
-
 	{{ partialCached "analysisForm.html" . }}
-
-	{{ end }}
 
 	{{ with .Content }}
 		<article class="intro" id="intro">
