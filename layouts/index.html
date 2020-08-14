@@ -93,6 +93,11 @@
 		{{ $.Scratch.Add "count" 1 }}
 	{{ end }}
 
+
+	{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "twitter") }}
+		{{ .Render "curved-section" }}
+	{{ end }}
+
 	{{ range where (where $.Site.Pages ".Type" "analysis") ".Params.homepage" true }}
 		<article
 			id="home-section--{{ ($.Scratch.Get "count") }}"
@@ -121,6 +126,11 @@
 			</div>
 		</article>
 		{{ $.Scratch.Add "count" 1 }}
+	{{ end }}
+
+	{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "collaborate") }}
+		{{ .Render "curved-section" }}
+		</div>
 	{{ end }}
 
 </main>
