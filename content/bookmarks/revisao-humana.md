@@ -5,7 +5,7 @@ title: "Revisao Humana"
 layout: none
 type: bookmark
 author: Por Priscilla Silva e Juliana Medeiros
-link: "#"
+link: "/"
 imageSrc: /uploads/captcha.jpg
 imageAlt:
 weight: 2

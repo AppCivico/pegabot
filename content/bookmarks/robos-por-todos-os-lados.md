@@ -5,7 +5,7 @@ title: "Robôs Por Todos Os Lados"
 layout: none
 type: bookmark
 author: Diego Cerqueira
-link: "#"
+link: "/"
 imageSrc: /uploads/robos-por-toda-parte.jpg
 imageAlt:
 weight: 1
