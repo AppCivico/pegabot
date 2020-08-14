@@ -6,7 +6,8 @@ layout: none
 type: bookmark
 author: Por Priscilla Silva e Juliana Medeiros
 link: "#"
-image: /uploads/captcha.jpg
+imageSrc: /uploads/captcha.jpg
+imageAlt:
 weight: 2
 ---
 A polêmica da revisão (humana) sobre decisões automatizadas

@@ -20,8 +20,16 @@
 			{{ end }}
 		</div>
 
-		{{ with .Params.Image }}
-			<img src="{{ . }}" class="curved-section__image" width="487" height="272" />
+		{{ if .Params.imageSrc }}
+			<img
+				src="{{ .Params.imageSrc }}"
+				class="curved-section__image"
+				width="487"
+				height="272"
+				{{ with .Params.imageAlt }}
+					alt="{{ . }}"
+				{{ end }}
+			/>
 		{{ end }}
 	</div>
 </div>

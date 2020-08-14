@@ -6,7 +6,8 @@ layout: none
 type: bookmark
 author: Diego Cerqueira
 link: "#"
-image: /uploads/robos-por-toda-parte.jpg
+imageSrc: /uploads/robos-por-toda-parte.jpg
+imageAlt:
 weight: 1
 ---
 Eu vejo robôs e eles estão por toda parte: (quase) tudo que você precisa saber sobre bots e metodologias para detecção de automação

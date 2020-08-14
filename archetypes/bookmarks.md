@@ -5,6 +5,8 @@ title: "{{ replace .TranslationBaseName "-" " " | title }}"
 layout: none
 type: bookmark
 author:
+imageSrc:
+imageAlt:
 link:
 weight: 0
 ---
