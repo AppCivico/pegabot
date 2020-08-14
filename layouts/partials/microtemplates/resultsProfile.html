@@ -5,7 +5,7 @@
 	<section class="profile__analysis-summary">
 		<figure class="profile__data">
 			<img :src="user.bot_probability ? user.avatar.replace('_normal','_bigger').replace('http:','https:') : ''" alt="">
-			<figcaption>{{ "{{user.username}}"}}</figcaption>
+			<figcaption>@{{ "{{user.username}}"}}</figcaption>
 		</figure>
 		<output class="profile__result">{{ "{{ user.bot_probability ? (user.bot_probability.all || 0) : 0 | toPercentage }}" }}</output>
 
@@ -31,17 +31,61 @@
 
 	</section>
 
-	<section class="profile__analysis-results" v-if="user.language_dependent">
-		<h3 data-to-prepend="user_profile_language">{{ i18n "englishSpecificFeatures" }}</h3>
+	<section class="profile__analysis-results profile__analysis-results--compiled" v-if="user.bot_probability">
+		<h3>{{ i18n "botProbability" }}</h3>
 
 		<dl>
-			<div
-				v-if="user.language_dependent.content && user.language_dependent.content.value"
-				:class="user.language_dependent.content.value | resultLevel"
-			>
-				<dt>{{ i18n "content" }}</dt>
+			<div :class="(user.bot_probability.all || 0) | resultLevel" v-if="user.bot_probability.all">
+				<dt>{{ i18n "allFeatures" }}</dt>
 				<dd>
-					{{ "{{ user.language_dependent.content.value | toPercentage }}" }}
+					{{ "{{ (user.bot_probability.all || 0) | toPercentage }}" }}
+				</dd>
+				<dd class="progress-bar">
+					<span class="progress-value js-progress-value"
+						:style="{
+							width: Math.round(parseFloat(user.bot_probability.all) * 100) + '%'
+						}"
+					></span>
+				</dd>
+			</div>
+		</dl>
+	</section>
+
+
+	<section class="profile__analysis-results" v-if="user.language_independent">
+		<h3>{{ i18n "profileAnalysis" }}</h3>
+
+		<dl>
+			<div v-if="user.language_independent.user" :class="user.language_independent.user | resultLevel">
+				<dt>
+					{{ i18n "profileOf" }}
+					{{ "{{user.username}}" }}
+				</dt>
+				<dd>
+					{{ "{{ user.language_independent.user | toPercentage }}" }}
+				</dd>
+
+				<dd class="progress-bar">
+					<span class="progress-value js-progress-value"
+						:style="{
+							width: Math.round(parseFloat(user.language_independent.user) * 100) + '%'
+						}"
+					></span>
+				</dd>
+			</div>
+
+			<div v-if="user.language_independent.network" :class="user.language_independent.network | resultLevel">
+				<dt>{{ i18n "network" }}</dt>
+				<dd>
+					{{ "{{ user.language_independent.network | toPercentage }}" }}
+				</dd>
+
+				<dd class="progress-bar">
+					<span class="progress-value js-progress-value"
+						:style="{
+							width: Math.round(parseFloat(user.language_independent.network) * 100) + '%'
+						}"
+					></span>
 				</dd>
 			</div>
 
@@ -53,105 +97,62 @@
 				<dd>
 					{{ "{{ user.language_dependent.sentiment.value | toPercentage }}" }}
 				</dd>
-			</div>
-		</dl>
-	</section>
-
-	<section class="profile__analysis-results" v-if="user.language_independent">
-		<h3>{{ i18n "languageIndependentFeatures" }}</h3>
-
-		<dl>
-			<div v-if="user.language_independent.friend" :class="user.language_independent.friend | resultLevel">
-				<dt>{{ i18n "friendship" }}</dt>
-				<dd>
-					{{ "{{ user.language_independent.friend | toPercentage }}" }}
-				</dd>
-			</div>
-
-			<div v-if="user.language_independent.temporal" :class="user.language_independent.temporal | resultLevel">
-				<dt>{{ i18n "temporal" }}</dt>
-				<dd>
-					{{ "{{ user.language_independent.temporal | toPercentage }}" }}
-				</dd>
-			</div>
-
-			<div v-if="user.language_independent.network" :class="user.language_independent.network | resultLevel">
-				<dt>{{ i18n "network" }}</dt>
-				<dd>
-					{{ "{{ user.language_independent.network | toPercentage }}" }}
-				</dd>
-			</div>
-
-			<div v-if="user.language_independent.user" :class="user.language_independent.user | resultLevel">
-				<dt>{{ i18n "user" }}</dt>
-				<dd>
-					{{ "{{ user.language_independent.user | toPercentage }}" }}
+				<dd class="progress-bar">
+					<span class="progress-value js-progress-value"
+						:style="{
+								width: Math.round(parseFloat(user.language_dependent.sentiment.value) * 100) + '%'
+							}"
+					></span>
 				</dd>
 			</div>
 		</dl>
 	</section>
 
-	<section class="profile__analysis-results profile__analysis-results--compiled" v-if="user.bot_probability">
-		<h3>{{ i18n "botProbability" }}</h3>
-
-		<dl>
-			<div :class="(user.bot_probability.all || 0) | resultLevel" v-if="user.bot_probability.all">
-				<dt>{{ i18n "allFeatures" }}</dt>
-				<dd>
-					{{ "{{ (user.bot_probability.all || 0) | toPercentage }}" }}
-				</dd>
-			</div>
-
-			<div :class="user.bot_probability.language_independent | resultLevel" v-if="user.bot_probability.language_independent">
-				<dt>{{ i18n "languageIndependentFeatures" }}</dt>
-				<dd>
-					{{ "{{ user.bot_probability.language_independent | toPercentage }}" }}
-				</dd>
-			</div>
-		</dl>
-	</section>
 
 	<footer class="profile__links">
 		<nav>
+			<p>{{ i18n "shareResults" }}</p>
 			<ul>
-				<li class="profile">
-					<a :href="user.username | profileLink" target="_blank">
-						{{ i18n "profileLink" }}
-					</a>
-				</li>
-
-				<li class="details" v-if="user.details_link">
-					<a :href="user.details_link" target="_blank">
-						{{ i18n "detailsLink" }}
-					</a>
-				</li>
-
-				<li class="share">
+				<li class="share share__tweet">
 					<a :href="user.username | tweetItLink" target="_blank">
 						{{ i18n "tweetItLink" }}
 					</a>
 				</li>
 
-				<li class="feedback" v-if="user.feedback_report_link && user.feedback_report_link !== '' && user.feedback_report_link !== '.'">
-					<a :href="user.feedback_report_link" target="_blank">
+				<li class="share share__whatsapp">
+					<a :href="user.username | whatsAppItLink" target="_blank">
+						{{ i18n "whatsAppItLink" }}
+					</a>
+				</li>
+
+				<li class="share share__facebook">
+					<a :href="user.username | facebookItLink" target="_blank">
+						{{ i18n "facebookItLink" }}
+					</a>
+				</li>
+
+				<li class="share share__permalink">
+					<a :href="user.username | permalink" target="_blank">
 						{{ i18n "feedbackLink" }}
 					</a>
 				</li>
 
-				<li>
-					<button type="button"
-						@click="toApprove(index)" :disabled="user.opinionSubmited">
-						{{ i18n "toApprove" }}
-					</button>
-				</li>
-
-				<li>
-					<button type="button"
-						@click="toDisapprove(index)" :disabled="user.opinionSubmited">
-						{{ i18n "toDisapprove" }}
-					</button>
-				</li>
 			</ul>
 		</nav>
+		<ul class="profile__buttons">
+			<li>
+				<button type="button"
+					@click="toApprove(index)" :disabled="user.opinionSubmited">
+					{{ i18n "toApprove" }}
+				</button>
+			</li>
+
+			<li>
+				<button type="button"
+					@click="toDisapprove(index)" :disabled="user.opinionSubmited">
+					{{ i18n "toDisapprove" }}
+				</button>
+			</li>
+		</ul>
 	</footer>
 </article>

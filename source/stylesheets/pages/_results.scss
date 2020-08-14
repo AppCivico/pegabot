@@ -255,6 +255,11 @@ $gauge-hand-height: 8px;
 .profile__data figcaption {
 	z-index: layer('default');
 
+	font-size: ms(2);
+	font-family: $title-font-stack;
+
+	color: palette('gauge', 'level-1');
+
 	.results__profile:only-child &,
 	.results__profile:focus & {
 		color: palette('purple');
@@ -269,7 +274,8 @@ $gauge-hand-height: 8px;
 	margin-right: auto;
 	margin-left: auto;
 
-	font-size: ms(1);
+	font-size: ms(2);
+	font-family: $title-font-stack;
 
 	text-align: center;
 
@@ -314,8 +320,7 @@ $gauge-hand-height: 8px;
 }
 
 .profile__analysis-results h3 {
-	font-weight: inherit;
-	font-size: 1em;
+	font-size: ms(0);
 
 	text-align: center;
 	text-transform: none;
@@ -324,76 +329,78 @@ $gauge-hand-height: 8px;
 }
 
 .profile__analysis-results dl {
-	@include clearfix;
-
-	margin-bottom: 0;
 }
 
 .profile__analysis-results dl > div {
-	float: left;
+	display: flex;
 
-	width: 50%;
+	flex-wrap: wrap;
 
-	padding-right: 0.5em;
-	padding-left: 0.5em;
-
-	overflow: hidden;
-
-	background-color: palette('gray', 'light');
-
-	border-left-width: 4px;
-	border-left-style: solid;
-}
-
-.test-result--level-1 {
-	border-left-color: palette('gauge', 'level-1');
-}
-
-.test-result--level-2 {
-	border-left-color: palette('gauge', 'level-2');
-}
-
-.test-result--level-3 {
-	border-left-color: palette('gauge', 'level-3');
-}
-
-.test-result--level-4 {
-	border-left-color: palette('gauge', 'level-4');
-}
-
-.test-result--level-5 {
-	border-left-color: palette('gauge', 'level-5');
+	font-weight: 700;
+	font-size: ms(-1);
 }
 
 .profile__analysis-results dt,
 .profile__analysis-results dd {
-	display: inline;
+	color: palette('blue', 'dark');
+}
+
+.profile__analysis-results dt {
+	flex-grow: 1;
+
+	font-size: ms(-1);
 }
 
 .profile__analysis-results dd {
+	margin-bottom: 0;
+
 	font-weight: 900;
 }
 
-.profile__analysis-results--compiled dl > div {
-	float: none;
-
-	width: 100%;
+.profile__analysis-results .progress-bar {
+	flex-basis: 100%;
 }
 
-.profile__analysis-results--compiled {
-	padding-bottom: 0;
+.progress-value::before {
+	.test-result--level-1 & {
+		color: palette('gauge', 'level-1');
+	}
 
-	transition: padding-bottom $duration;
+	.test-result--level-2 & {
+		color: palette('gauge', 'level-2');
+	}
 
-	.results__profile:only-child &,
-	.results__profile:focus & {
-		padding-bottom: $line-height * 1em;
+	.test-result--level-3 & {
+		color: palette('gauge', 'level-3');
+	}
 
-		transition: padding-bottom $duration;
+	.test-result--level-4 & {
+		color: palette('gauge', 'level-4');
+	}
+
+	.test-result--level-5 & {
+		color: palette('gauge', 'level-5');
 	}
 }
 
+.profile__analysis-results--compiled {
+	border-bottom: 1px solid palette('gray');
+}
+
+.profile__analysis-results--compiled dd {
+	font-size: ms(0);
+}
+
 .profile__links {
+	display: flex;
+
+	align-items: flex-end;
+
+	width: 100%;
+
+	padding-right: 24px;
+	padding-left: 24px;
+
 	line-height: $line-height * 2;
 
 	text-overflow: ellipsis;
@@ -405,21 +412,38 @@ $gauge-hand-height: 8px;
 }
 
 .profile__links nav {
+	display: block;
+}
+
+.profile__links ul {
 	display: table;
 
-	width: 100%;
+	margin-bottom: 0;
 
 	table-layout: fixed;
 }
 
-.profile__links ul {
-	display: table-row;
+.profile__buttons {
+	display: table-cell;
+}
+
+.profile__links p {
+	margin: 0;
+
+	font-weight: 700;
+	font-size: ms(-1);
+
+	color: palette('orange');
 }
 
 .profile__links li {
 	display: table-cell;
 
 	padding: 0;
+
+	&::before {
+		content: none;
+	}
 }
 
 .profile__links button,
@@ -431,6 +455,8 @@ $gauge-hand-height: 8px;
 	width: 100%;
 	height: 100%;
 
+	padding-top: 0;
+	padding-bottom: 0;
 	margin: 0;
 
 	line-height: inherit;
@@ -455,6 +481,9 @@ $gauge-hand-height: 8px;
 .profile__links button {
 	overflow: hidden;
 
+	font-weight: 900;
+
+	text-decoration: underline;
 	text-overflow: ellipsis;
 
 	&:disabled {
@@ -469,6 +498,8 @@ $gauge-hand-height: 8px;
 
 .profile__links a {
 	@include image-replacement;
+
+	background-position: 0 50%;
 }
 
 .profile__links .profile a {
@@ -481,6 +512,19 @@ $gauge-hand-height: 8px;
 
 .profile__links .share a {
 	background-image: image('share-icon.png');
+	background-size: 18px 18px;
+}
+
+.profile__links .share__tweet a {
+	background-image: image('share__twitter.svg');
+}
+
+.profile__links .share__whatsapp a {
+	background-image: image('share__whatsapp.svg');
+}
+
+.profile__links .share__facebook a {
+	background-image: image('share__facebook.svg');
 }
 
 .profile__links .feedback a {

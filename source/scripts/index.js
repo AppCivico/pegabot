@@ -80,6 +80,21 @@ window.$vue = new Vue({
 				profileLink(username) {
 					return `https://twitter.com/${username}`;
 				},
+				permalink(username) {
+					return `https://dev.pegabot.com.br/resultados/?socialnetwork=twitter&profile=${username}&search_for=profile`;
+				},
+				whatsAppItLink(username) {
+					const url = encodeURIComponent(window.location.href);
+					const title = encodeURIComponent(`O @pegabots quer saber se @${username} é um bot ou não. Qual a sua opinião?`);
+
+					return `https://api.whatsapp.com/send?text=${title}%20${url}`;
+				},
+				facebookItLink(username) {
+					const url = encodeURIComponent(window.location.href);
+					const title = encodeURIComponent(`O @pegabots quer saber se @${username} é um bot ou não. Qual a sua opinião?`);
+
+					return `https://www.facebook.com/sharer.php?u=${url}&t=${title}`;
+				},
 				tweetItLink(username) {
 					const hashtags = 'Pegabot';
 					const title = encodeURIComponent(`O @pegabots quer saber se @${username} é um bot ou não. Qual a sua opinião?`);
