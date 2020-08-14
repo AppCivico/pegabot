@@ -19,7 +19,7 @@
 }
 
 .fancy-form > fieldset {
-	max-width: 33em;
+	max-width: 33.75rem;
 	min-height: 2.5rem; // 40px
 
 	padding-top: $line-height * 1rem;
@@ -80,6 +80,7 @@
 	}
 }
 
+.fancy-form__button,
 .fancy-form input,
 .fancy-form select,
 .fancy-form button {
@@ -149,6 +150,7 @@
 	margin: 0;
 }
 
+.fancy-form__button,
 .fancy-form button {
 	padding-right: ($line-height * 1em);
 	padding-left: ($line-height * 1em);
