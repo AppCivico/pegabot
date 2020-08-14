@@ -18,6 +18,8 @@
   translation: "Detalle del análisis"
 - id: developedBy
   translation: "Desarrollado por"
+- id: doYouWantToKnowMore
+  translation: "Desea saber más?"
 - id: email
   translation: "Correo electrónico"
 - id: englishSpecificFeatures
@@ -28,6 +30,8 @@
   translation: "Amistad"
 - id: index
   translation: "Índice"
+- id: iWantToCollaborate
+  translation: "Quiero colaborar!"
 - id: languageIndependentFeatures
   translation: "Elementos independientes del lenguaje"
 - id: newsletter
@@ -36,10 +40,16 @@
   translation: "Red"
 - id: noScriptMessage
   translation: "Esta funcionalidad depende de JavaScript."
+- id: profileAnalysis
+  translation: "Análisis de perfil"
 - id: profileLink
   translation: "Perfil en la red social"
+- id: readFullContent
+  translation: "Leer el contenido completo"
 - id: returnedResults
   translation: "Su búsqueda arrojó {{ .Count }} resultados."
+- id: shareResults
+  translation: "Compartir resultados"
 - id: signUpNewsletter
   translation: "Suscribirse a la lista"
 - id: sentiment
