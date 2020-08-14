@@ -52,8 +52,8 @@
 
 	{{ range $resources }}
 		<article
-			id="{{ .File.TranslationBaseName }}"
-			class="{{ .File.TranslationBaseName }} snapping-section"
+			id="{{ with .File }}{{ .TranslationBaseName }}{{ end }}"
+			class="{{ with .File }}{{ .TranslationBaseName }}{{ end }} snapping-section"
 		>
 			<div class="container">
 				<h2>
