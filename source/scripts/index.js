@@ -20,7 +20,7 @@ window.$vue = new Vue({
 		error: null,
 		metadata: {
 			apiURL: (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-				? 'https://dev.pegabot.com.br'
+				? 'http://localhost:8010/proxy'
 				: '',
 			loading: true,
 			current: 0,
