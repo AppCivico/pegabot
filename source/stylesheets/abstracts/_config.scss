@@ -108,15 +108,20 @@ $palette: (
 	),
 	'white': rgb(255, 255, 255),
 	'black': rgb(0, 0, 0),
+	'yellow': hsl(52, 98%, 77%),
 	'orange': (
 		'dark': rgb(170, 68, 18),
 		'base': rgb(255, 142, 9)
 	),
 	'blue': (
+		'x-dark': shade($_blue--dark, 35%),
 		'dark': $_blue--dark,
 		'base': $_blue--base,
 	),
-	'purple': $_purple,
+	'purple': (
+		'dark': shade($_blue--dark, 25%),
+		'base': $_purple,
+	),
 	'shadow': rgba(18, 0, 42, 0.5),
 	'debug': rgb(255, 0, 0),
 	'anchor': (
