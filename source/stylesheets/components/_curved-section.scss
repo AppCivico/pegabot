@@ -16,6 +16,18 @@
 	}
 }
 
+.curved-section--robos-por-todos-os-lados {
+	color: palette('white');
+
+	background-color: palette('blue', 'dark');
+}
+
+.curved-section--revisao-humana {
+	color: palette('white');
+
+	background-color: palette('purple');
+}
+
 .curved-section--collaborate {
 	color: palette('white');
 
@@ -81,12 +93,14 @@
 }
 
 .curved-section__title {
-	margin-top: 0;
-
 	font-size: ms(6);
 	font-family: $title-font-stack;
 
 	color: inherit;
+
+	&:first-child {
+		margin-top: 0;
+	}
 }
 
 .curved-section__subtitle {
@@ -97,7 +111,7 @@
 	color: palette('orange');
 }
 
-.curved-section p:last-child a:only-child {
+.curved-section p a:only-child {
 	display: block;
 
 	width: max-content;
