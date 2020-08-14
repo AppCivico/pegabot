@@ -92,13 +92,13 @@ $height--desktop: $line-height * 3rem;
 }
 
 .site-footer [role='contentinfo'] .responsibles {
-	@include clearfix;
-
 	@extend %content-info;
 
 	margin-right: auto;
 	margin-bottom: $line-height * 1em;
 	margin-left: 0;
+
+	overflow: hidden;
 
 	vertical-align: inherit;
 
