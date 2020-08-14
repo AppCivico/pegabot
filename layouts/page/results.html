@@ -34,6 +34,53 @@
 
 </article>
 
+{{ range .Resources.ByType "page" }}
+	<article>
+		<div class="container">
+			<h2>{{ .Title }}</h2>
+			{{ .Content }}
+		</div>
+	</article>
+{{ end }}
+
+
+	{{ range first 1 (where $.Site.Pages ".Type" "bookmark") }}
+		{{ .Render "curved-section" }}
+	{{ end }}
+
+{{ range where $.Site.RegularPages "Section" "criteria" }}
+	<article>
+		<div class="container">
+			<h2>
+				{{ .Title }}
+			</h2>
+
+			{{ .Content }}
+
+			{{ $reusablePages := .Resources.ByType "page" }}
+
+			{{ range $reusablePages }}
+				<section>
+					<h3>
+						{{ .Title }}
+					</h3>
+
+					{{ .Content }}
+				</section>
+			{{ end }}
+		</div>
+	</article>
+{{ end }}
+
+
+	{{ range first 1 (after 1 (where $.Site.Pages ".Type" "bookmark")) }}
+		{{ .Render "curved-section" }}
+	{{ end }}
+
+
+
+
+
 <script type="text/x-template" id="results__form">
 	{{ partial "microtemplates/resultsForm.html" . }}
 </script>
