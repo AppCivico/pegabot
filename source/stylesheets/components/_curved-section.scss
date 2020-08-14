@@ -37,23 +37,22 @@
 	margin-left: auto;
 }
 
-@function selectAllFrom($n, $selector) {
+@function select-all-from($n, $selector) {
 	$classes: ();
 
 	@for $i from 1 through $n {
-		$className: if($i==1, #{$selector}, #{'~ ' + $selector});
-		$classes: join($classes, unquote($className), space);
+		$class: if($i==1, #{$selector}, #{'~ ' + $selector});
+		$classes: join($classes, unquote($class), space);
 	}
 
 	@return $classes;
 }
 
-
 .curved-section__content {
 	flex-basis: 50%;
 	flex-grow: 1;
 
-	#{selectAllFrom(2, '.active')} & {
+	#{select-all-from(2, '.active')} & {
 		order: 2;
 	}
 
@@ -76,8 +75,7 @@
 
 	border-radius: 8px;
 
-
-	#{selectAllFrom(2, '.active')} & {
+	#{select-all-from(2, '.active')} & {
 		order: 1;
 	}
 }
