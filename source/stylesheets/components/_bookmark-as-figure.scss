@@ -1,0 +1,103 @@
+.bookmark-as-figure {
+	@include clearfix;
+
+	position: relative;
+
+	padding: $gutter * 0.5;
+
+	background-color: palette('white');
+
+	border-radius: 10px;
+
+	box-shadow: 2px 2px 8px 0 palette('shadow');
+}
+
+.bookmark-as-figure__image {
+	float: right;
+
+	margin-bottom: $gutter;
+	margin-left: $gutter * 0.5;
+}
+
+.bookmark-as-figure__title {
+	margin-top: 0;
+	margin-bottom: $gutter;
+
+	font-size: ms(2);
+	font-family: $title-font-stack;
+
+	text-align: left;
+
+	color: palette('purple');
+}
+
+.bookmark-as-figure__caption {
+	position: absolute;
+	top: -1.5em;
+
+	font-size: ms(-2);
+
+	color: palette('purple');
+}
+
+.bookmark-as-figure__excerpt {
+	clear: both;
+
+	margin-top: $gutter;
+	margin-bottom: $gutter;
+
+	font-size: ms(-1);
+
+	color: inherit;
+
+}
+
+.bookmark-as-figure__button {
+	display: block;
+
+	width: max-content;
+	height: 2.5rem; // 40px
+
+	padding-top: ($line-height / 4 * 1em);
+	padding-right: ($line-height * 1em);
+	padding-bottom: ($line-height / 4 * 1em);
+	padding-left: ($line-height * 1em);
+	margin-top: $gutter;
+	margin-right: auto;
+	margin-left: auto;
+
+	overflow: hidden;
+
+	font-weight: 900;
+	line-height: $line-height;
+
+	text-decoration: none;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+	white-space: nowrap;
+
+	color: palette('white');
+
+	background-color: palette('orange');
+
+	border: 0;
+	border-radius: ($line-height * 1em);
+
+	box-shadow: 0 4px 0 0 palette('orange', 'dark');
+
+	&:link,
+	&:visited {
+		text-decoration: none;
+
+		color: palette('white');
+	}
+
+	&:hover,
+	&:focus {
+		color: palette('white');
+
+		background-color: palette('blue', 'dark');
+
+		box-shadow: 0 4px 0 0 palette('blue', 'x-dark');
+	}
+}
