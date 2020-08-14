@@ -73,19 +73,19 @@ $line-lengths: (
 ///
 /// @link https://type-scale.com/?size=16&scale=1.200&text=A%20Visual%20Type%20Scale&font=Poppins&fontweight=400&bodyfont=Poppins&bodyfontweight=400&lineheight=1.65&backgroundcolor=white&fontcolor=%23333&preview=false
 $modularscale: (
-	base: 1em,
+	base: 1rem,
 	ratio: 1.2,
 );
 
-// ms(5)  2.488em (39.81px)
-// ms(4)  2.074em (33.18px)
-// ms(3)  1.728em (27.65px)
-// ms(2)  1.44em  (23.04px)
-// ms(1)  1.2em   (19.20px)
-// ms(0)  1em     (16.00px)
-// ms(-1) 0.833em (13.33px)
-// ms(-2) 0.694em (11.11px)
-// ms(-3) 0.579em (9.26px)
+// ms(5)  2.488rem (39.81px)
+// ms(4)  2.074rem (33.18px)
+// ms(3)  1.728rem (27.65px)
+// ms(2)  1.44rem  (23.04px)
+// ms(1)  1.2rem   (19.20px)
+// ms(0)  1rem     (16.00px)
+// ms(-1) 0.833rem (13.33px)
+// ms(-2) 0.694rem (11.11px)
+// ms(-3) 0.579rem (9.26px)
 
 $_purple: rgb(108, 23, 188);
 $_blue--dark: rgb(43, 1, 106);
