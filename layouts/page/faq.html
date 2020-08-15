@@ -2,7 +2,10 @@
 <article role="main" id="conteudo">
 	<h1>{{ .Title }}</h1>
 
-	{{ .Content }}
+	{{ $input := "(Pegabot)" }}
+	{{ $output := "<b>$1$2</b>" }}
+	{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+	{{ $finalContent }}
 
 	{{ with where $.Site.RegularPages ".Type" "faq" }}
 		<ul class="questions-list" id="indice">
@@ -20,7 +23,10 @@
 				<div id="faq__{{ .Params.id }}" class="questions__item">
 					<dt>{{ .Title | safeHTML | markdownify }}</dt>
 					<dd>
-						{{ .Content }}
+						{{ $input := "(Pegabot)" }}
+						{{ $output := "<b>$1$2</b>" }}
+						{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+						{{ $finalContent }}
 						<footer>
 							<a href="#indice">{{ i18n "index" }}</a>
 						</footer>

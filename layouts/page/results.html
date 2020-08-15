@@ -12,7 +12,10 @@
 	<h1>{{ .Title }}</h1>
 
 	{{ with .Content }}
-		{{ . }}
+		{{ $input := "(Pegabot)" }}
+		{{ $output := "<b>$1$2</b>" }}
+		{{ $finalContent := . | replaceRE $input $output | safeHTML }}
+		{{ $finalContent }}
 	{{ end }}
 
 	<div id="results__list" class="results" hidden>
@@ -38,7 +41,10 @@
 	<article>
 		<div class="container">
 			<h2>{{ .Title }}</h2>
-			{{ .Content }}
+			{{ $input := "(Pegabot)" }}
+			{{ $output := "<b>$1$2</b>" }}
+			{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+			{{ $finalContent }}
 		</div>
 	</article>
 {{ end }}

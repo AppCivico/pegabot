@@ -9,7 +9,10 @@
 
 			<h2 class="curved-section__title">{{ .Title }}</h2>
 
-			{{ .Content }}
+			{{ $input := "(Pegabot)" }}
+			{{ $output := "<b>$1$2</b>" }}
+			{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+			{{ $finalContent }}
 
 			{{ with .Params.author }}
 				<p class="curved-section__author">{{ . }}</p>

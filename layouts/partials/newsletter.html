@@ -12,7 +12,10 @@
 				</h2>
 			{{ end }}
 
-			{{ .Content }}
+			{{ $input := "(Pegabot)" }}
+			{{ $output := "<b>$1$2</b>" }}
+			{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+			{{ $finalContent }}
 		</div>
 
 		<form

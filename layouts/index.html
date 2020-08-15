@@ -10,7 +10,10 @@
 	{{ with .Content }}
 		<article class="intro" id="intro">
 			<div class="container">
-				{{ . }}
+				{{ $input := "(Pegabot)" }}
+				{{ $output := "<b>$1$2</b>" }}
+				{{ $finalContent := . | replaceRE $input $output | safeHTML }}
+				{{ $finalContent }}
 			</div>
 		</article>
 
@@ -56,7 +59,10 @@
 					{{ .Title }}
 				</h2>
 
-				{{ .Content }}
+				{{ $input := "(Pegabot)" }}
+				{{ $output := "<b>$1$2</b>" }}
+				{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+				{{ $finalContent }}
 			</div>
 		</article>
 	{{ end }}
@@ -83,7 +89,10 @@
 					{{ .Title }}
 				</h2>
 
-				{{ .Content }}
+				{{ $input := "(Pegabot)" }}
+				{{ $output := "<b>$1$2</b>" }}
+				{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+				{{ $finalContent }}
 			</div>
 		</article>
 		{{ $.Scratch.Add "count" 1 }}
@@ -118,7 +127,10 @@
 					{{ .Title }}
 				</h2>
 
-				{{ .Content }}
+				{{ $input := "(Pegabot)" }}
+				{{ $output := "<b>$1$2</b>" }}
+				{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+				{{ $finalContent }}
 			</div>
 		</article>
 		{{ $.Scratch.Add "count" 1 }}
