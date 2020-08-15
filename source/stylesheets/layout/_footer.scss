@@ -19,6 +19,7 @@ $height--desktop: $line-height * 3rem;
 
 	max-width: $max-width;
 
+	padding-top: $gutter;
 	margin-right: auto;
 	margin-left: auto;
 
@@ -36,6 +37,8 @@ $height--desktop: $line-height * 3rem;
 .site-footer a {
 	&:link,
 	&:visited {
+		text-decoration: none;
+
 		color: inherit;
 	}
 
@@ -196,4 +199,6 @@ $height--desktop: $line-height * 3rem;
 	display: inline;
 
 	padding: 0;
+
+	font: inherit;
 }
