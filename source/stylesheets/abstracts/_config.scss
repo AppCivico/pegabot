@@ -12,7 +12,7 @@
 ///
 /// @example scss
 /// $text-font-stack: ComicSans, $native-font-stack;
-$text-font-stack: 'Roboto', sans-serif !default;
+$text-font-stack: 'Montserrat', $roboto-font-stack !default;
 
 /// Title font stack
 ///
@@ -22,7 +22,7 @@ $text-font-stack: 'Roboto', sans-serif !default;
 ///
 /// @example scss
 /// $title-font-stack: ComicSans, $basic-title-font-stack;
-$title-font-stack: 'Roboto', sans-serif !default;
+$title-font-stack: 'Changa One', $roboto-font-stack !default;
 
 /// Code (monospace) font stack
 ///
