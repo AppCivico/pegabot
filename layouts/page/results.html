@@ -54,28 +54,6 @@
 		{{ .Render "curved-section" }}
 	{{ end }}
 
-{{ range where $.Site.RegularPages "Section" "criteria" }}
-	<article>
-		<div class="container">
-			<h2>
-				{{ .Title }}
-			</h2>
-
-			{{ .Content }}
-
-			{{ $reusablePages := .Resources.ByType "page" }}
-
-			{{ range $reusablePages }}
-				<section>
-					<h3>
-						{{ .Title }}
-					</h3>
-
-					{{ .Content }}
-				</section>
-			{{ end }}
-		</div>
-	</article>
 {{ end }}
 
 
@@ -84,6 +62,8 @@
 	{{ end }}
 
 
+{{ with .Site.GetPage "/transparency/criteria" }}
+	{{ .Render "article-with-resources" }}
 
 
 

@@ -1,0 +1,77 @@
+<article
+	class="
+		delayed-entrance
+		delayed-entrance__bottom
+	"
+>
+	<div
+		class="container"
+	>
+		<h2>
+			{{ .Title }}
+		</h2>
+
+		{{ $input := "(Pegabot)" }}
+		{{ $output := "<b>$1$2</b>" }}
+		{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+		{{ $finalContent }}
+
+		{{ with .Resources.ByType "page" }}
+			<section class="criteria__section-list">
+				{{ range . }}
+					<article
+						class="
+							criteria__section
+							criteria__section--{{ .File.TranslationBaseName }}
+							delayed-entrance
+							delayed-entrance__bottom
+						"
+					>
+						<h3>
+							{{ .Title }}
+						</h3>
+
+						{{ $input := "(Pegabot)" }}
+						{{ $output := "<b>$1$2</b>" }}
+						{{ $finalContent := .Content | truncate 160 | replaceRE $input $output | safeHTML }}
+						{{ $finalContent }}
+
+						<p>
+							<a href="#{{ .Title | urlize }}" class="read-more">{{ i18n "readMore" }}</a>
+						</p>
+
+						<section
+							class="modal--show"
+							id="{{ .Title | urlize }}"
+							tabindex="-1"
+							role="dialog"
+							aria-labelledby="modal-label"
+							aria-hidden="true"
+						>
+							<div
+								class="modal-inner"
+							>
+								<header id="modal-label">
+									{{ .Title }}
+								</header>
+								<div class="modal-content">
+									{{ $input := "(Pegabot)" }}
+									{{ $output := "<b>$1$2</b>" }}
+									{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+									{{ $finalContent }}
+								</div>
+							</div>
+
+							<a href="#!"
+								class="modal-close"
+								title="{{ i18n "closeThisModal" }}"
+								data-close="{{ i18n "close" }}"
+								data-dismiss="modal"
+							>?</a>
+						</section>
+					</article>
+				{{ end }}
+			</section>
+		{{ end }}
+	</div>
+</article>

@@ -1,0 +1,70 @@
+.criteria__section-list[class] {
+	display: flex;
+
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	max-width: none;
+
+	font-size: ms(-1);
+
+	text-align: center;
+}
+
+.criteria__section {
+	flex-basis: 33%;
+
+	width: auto;
+
+	&::before {
+		display: block;
+
+		margin-right: auto;
+		margin-left: auto;
+
+		background-position: center;
+
+		content: '';
+	}
+}
+
+.criteria__section h3 {
+	color: palette('purple');
+}
+
+.criteria__section--profile {
+	&::before {
+		min-width: 30px;
+		min-height: 36px;
+
+		background-image: image('criteria__profile.svg');
+	}
+}
+
+.criteria__section--network {
+	&::before {
+		min-width: 30px;
+		min-height: 30px;
+
+		background-image: image('criteria__network.svg');
+	}
+}
+
+.criteria__section--emotions {
+	&::before {
+		min-width: 30px;
+		min-height: 30px;
+
+		background-image: image('criteria__emotions.svg');
+	}
+}
+
+.read-more {
+	font-weight: 900;
+	font-size: 1rem;
+
+	&:link,
+	&:visited {
+		color: palette('orange');
+	}
+}
