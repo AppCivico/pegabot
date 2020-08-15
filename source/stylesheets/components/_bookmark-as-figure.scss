@@ -3,20 +3,34 @@
 
 	position: relative;
 
+	float: right;
+
 	padding: $gutter * 0.5;
+
+	text-align: right;
 
 	background-color: palette('white');
 
 	border-radius: 10px;
 
 	box-shadow: 2px 2px 8px 0 palette('shadow');
+
+	article:nth-of-type(even) & {
+		float: left;
+
+		text-align: left;
+	}
 }
 
 .bookmark-as-figure__image {
-	float: right;
+	float: left;
 
 	margin-bottom: $gutter;
 	margin-left: $gutter * 0.5;
+
+	article:nth-of-type(even) & {
+		float: right;
+	}
 }
 
 .bookmark-as-figure__title {
@@ -26,18 +40,23 @@
 	font-size: ms(2);
 	font-family: $title-font-stack;
 
-	text-align: left;
-
 	color: palette('purple');
 }
 
 .bookmark-as-figure__caption {
 	position: absolute;
 	top: -1.5em;
+	right: 0;
+	left: auto;
 
 	font-size: ms(-2);
 
 	color: palette('purple');
+
+	article:nth-of-type(even) & {
+		right: auto;
+		left: 0;
+	}
 }
 
 .bookmark-as-figure__excerpt {
@@ -49,7 +68,6 @@
 	font-size: ms(-1);
 
 	color: inherit;
-
 }
 
 .bookmark-as-figure__button {
@@ -71,6 +89,7 @@
 	font-weight: 900;
 	line-height: $line-height;
 
+	text-align: center;
 	text-decoration: none;
 	text-overflow: ellipsis;
 	text-transform: uppercase;
