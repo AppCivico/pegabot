@@ -74,7 +74,6 @@
 		{{ $.Scratch.Add "count" 1 }}
 	{{ end }}
 
-
 	{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "twitter") }}
 		{{ .Render "curved-section" }}
 	{{ end }}
@@ -84,18 +83,13 @@
 			id="home-section--{{ ($.Scratch.Get "count") }}"
 			class="
 				snapping-section
-				"
-			>
+			"
+		>
 			<div
 				class="
 					container
 					delayed-entrance
-
-					{{ if eq (mod ($.Scratch.Get "count") 2) 0 -}}
-						delayed-entrance__right
-					{{- else -}}
-						delayed-entrance__left
-					{{- end -}}
+					delayed-entrance__bottom
 				"
 			>
 				<div role="doc-subtitle">{{ i18n "analysis" }}</div>
