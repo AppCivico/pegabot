@@ -2,6 +2,7 @@
 
 // 2. Vendors
 @import
+'../../node_modules/css-modal/modal.scss',
 '../../node_modules/modularscale-sass/stylesheets/modularscale';
 
 // '../../node_modules/susy/sass/susy',
@@ -14,6 +15,10 @@
 'abstracts/functions',
 'abstracts/config',
 'abstracts/mixins';
+
+// 2. Vendors
+@import
+'vendor/css-modal';
 
 // 3. Base stuff
 @import

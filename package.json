@@ -79,5 +79,8 @@
     "sass-lint": "^1.12.1",
     "uglify-js": "^3.3.8",
     "version-changelog": "^2.1.0"
+  },
+  "dependencies": {
+    "css-modal": "^1.5.0"
   }
 }

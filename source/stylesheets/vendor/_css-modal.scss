@@ -1,0 +1,37 @@
+.modal-inner {
+	text-align: left;
+
+	border-radius: 8px;
+}
+
+.modal--fade header,
+.modal--show header {
+	font-weight: 700;
+
+	text-transform: uppercase;
+
+	color: palette('purple');
+
+	border-bottom: 0;
+}
+
+.modal--fade .modal-inner,
+.modal--show .modal-inner {
+	padding: $gutter * 0.5;
+}
+
+.modal--fade .modal-close,
+.modal--show .modal-close {
+	&::before {
+		opacity: 0.75;
+	}
+
+	&::after {
+		top: 60px;
+
+		font-weight: 900;
+		font-size: 2em;
+
+		color: palette('purple');
+	}
+}
