@@ -3,7 +3,7 @@
 	<h1>{{ .Title }}</h1>
 
 	{{ $input := "(Pegabot)" }}
-	{{ $output := "<b>$1$2</b>" }}
+	{{ $output := "<b>$1</b>" }}
 	{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
 	{{ $finalContent }}
 
@@ -24,7 +24,7 @@
 					<dt>{{ .Title | safeHTML | markdownify }}</dt>
 					<dd>
 						{{ $input := "(Pegabot)" }}
-						{{ $output := "<b>$1$2</b>" }}
+						{{ $output := "<b>$1</b>" }}
 						{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
 						{{ $finalContent }}
 						<footer>
