@@ -187,6 +187,11 @@ textarea {
 	margin-left: auto;
 }
 
+body {
+	scroll-snap-type: y proximity;
+}
+
+main,
 .snapping-section {
 	scroll-snap-align: start;
 }
