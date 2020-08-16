@@ -4,8 +4,7 @@ date: 2020-08-14T00:22:30-03:00
 draft: false
 weight: 1
 ---
-
-![Captura do mostrador de resultados](/uploads/results.jpg)
+{{< figure src="/uploads/results.jpg" title="Captura do mostrador de resultados" >}}
 
 O pegabot analisa inúmeros critérios, os principais são: perfil do usuário, rede, análise sentimental. A nota vem da junção de todos os sub-critérios analisados por cada parte desta.
 
