@@ -8,9 +8,14 @@ layout: none
 type: analysis
 weight: 2
 homepage: true
+bookmark:
+  title: "Oito matérias para você entender bots, fake news e mídias sociais"
+  excerpt: "O caso envolvendo o Facebook e a empresa Cambridge Analytica mostrou a necessidade de entendermos melhor a forma como bots atuam criando tendências e influenciando debates políticos…"
+  src: "/uploads/materias.jpg"
+  link: "/"
+  alt: ""
+  caption: "Análises atuais do Pegabot"
 ---
-{{< bookmark title="Oito matérias para você entender bots, fake news e mídias sociais" excerpt="O caso envolvendo o Facebook e a empresa Cambridge Analytica mostrou a necessidade de entendermos melhor a forma como bots atuam criando tendências e influenciando debates políticos…" src="/uploads/materias.jpg" link="/" caption="Análises atuais do Pegabot" >}}
-
 O PegaBot tem o objetivo de ajudar a combater esse problema e deixar o debate sobre bots no Brasil mais transparente e informado.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend luctus augue, nec rhoncus ex molestie faucibus. Curabitur ut tellus lectus.
