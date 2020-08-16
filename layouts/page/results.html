@@ -55,12 +55,18 @@
 	</article>
 {{ end }}
 
+{{ with .Site.GetPage "transparency/criteria" }}
+	{{ .Render "article-with-resources" }}
+{{ end }}
+
 {{ range first 1 (where $.Site.Pages ".Type" "bookmark") }}
 	{{ .Render "curved-section" }}
 {{ end }}
 
 {{ range where (.Resources.Match "methodology*") ".Kind" "page" }}
-	<article>
+	<article
+		class="{{ with .File }}{{ .TranslationBaseName }}{{ end }} alternate-paragraphs"
+	>
 		<div class="container">
 			<h2>{{ .Title }}</h2>
 			{{ $input := "(Pegabot)" }}
@@ -71,10 +77,6 @@
 	</article>
 {{ end }}
 
-
-{{ with .Site.GetPage "transparency/criteria" }}
-	{{ .Render "article-with-resources" }}
-{{ end }}
 
 {{ range first 1 (after 1 (where $.Site.Pages ".Type" "bookmark")) }}
 	{{ .Render "curved-section" }}
