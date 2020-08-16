@@ -124,10 +124,10 @@ section {
 }
 
 article {
-	margin-bottom: $line-height * 2em;
+	margin-bottom: $line-height * 1em;
 
 	@media screen and (min-width: breakpoint('tablet')) {
-		margin-bottom: $line-height * 4em;
+		margin-bottom: $line-height * 2em;
 	}
 }
 
