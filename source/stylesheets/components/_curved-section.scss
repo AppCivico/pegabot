@@ -2,9 +2,28 @@
 	padding-top: $gutter * 3;
 	padding-bottom: $gutter * 2.5;
 
-	background-image: image('curved-mask__top.svg'), image('curved-mask__bottom.svg');
-	background-position: top center, bottom center;
-	background-size: 100% auto, 100% auto;
+	background-image: image('curved-mask__top.svg'),
+	image('curved-mask__bottom.svg');
+	background-position: center top,
+	center bottom,
+
+	calc(50% + 300px) 75%,
+	calc(50% + 350px) 25%,
+	calc(50% + 450px) 55%,
+
+	calc(50% - 300px) 25%,
+	calc(50% - 350px) 75%,
+	calc(50% - 450px) 55%;
+	background-size: 100% auto,
+	100% auto,
+
+	54px auto,
+	36px auto,
+	36px auto,
+
+	54px auto,
+	36px auto,
+	36px auto;
 }
 
 .curved-section--twitter {
