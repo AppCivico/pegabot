@@ -80,6 +80,7 @@
 	}
 }
 
+.fancy-button,
 .fancy-form__button,
 .fancy-form input,
 .fancy-form select,
@@ -153,6 +154,7 @@
 	margin: 0;
 }
 
+.fancy-button,
 .fancy-form__button,
 .fancy-form button {
 	padding-right: ($line-height * 1em);
@@ -233,6 +235,7 @@
 	}
 }
 
+.fancy-button,
 .fancy-form__button.fancy-form__button {
 	width: auto;
 

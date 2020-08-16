@@ -46,11 +46,17 @@ $gauge-hand-height: 8px;
 	}
 
 	@media screen and (min-width: breakpoint('tablet')) {
-		@include inline-block-wrapper;
-
 		margin-right: $gutter / -2;
 		margin-left: $gutter / -2;
 	}
+}
+
+.results__data {
+	display: flex;
+
+	align-items: stretch;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .results__profile {
@@ -68,17 +74,18 @@ $gauge-hand-height: 8px;
 	transition-property: top, padding;
 
 	@media screen and (min-width: breakpoint('tablet')) {
-		@include inline-block-item;
-
 		width: 50%;
 
 		padding: 0 ($gutter / 2);
-
-		transition: padding $duration;
 	}
 
 	@media screen and (min-width: breakpoint('desktop')) {
-		width: 33.33333%;
+		display: flex;
+
+		flex-basis: 30%;
+		flex-direction: column;
+
+		width: 100%;
 	}
 
 	&:only-child {
@@ -144,6 +151,17 @@ $gauge-hand-height: 8px;
 	}
 }
 
+.profile__analysis-results-wrapper {
+	display: flex;
+
+	flex-basis: 60%;
+	flex-direction: column;
+	justify-content: stretch;
+
+	margin-bottom: $line-height * 1em;
+}
+
+
 .results__fieldset {
 	text-align: center;
 }
@@ -158,13 +176,6 @@ $gauge-hand-height: 8px;
 	transition-property: box-shadow;
 }
 
-.results__profile:not(:only-child):hover > *:not(button),
-.results__profile:only-child > *:not(button),
-.results__profile:focus > *:not(button) {
-	box-shadow: 0 ($line-height * 1em) ($line-height * 1em) palette('shadow');
-
-	transition-delay: 0;
-}
 
 .profile__close-button {
 	position: absolute;
@@ -199,19 +210,14 @@ $gauge-hand-height: 8px;
 }
 
 .profile__analysis-summary {
+	display: flex;
+
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: space-between;
+
 	padding-top: $line-height * 1em;
 	padding-bottom: $line-height * 1em;
-
-	transition-delay: 0ms;
-	transition-duration: $duration;
-	transition-property: padding-top;
-
-	.results__profile:only-child &,
-	.results__profile:focus & {
-		padding-top: 0;
-
-		transition-delay: $delay;
-	}
 }
 
 .profile__data {
@@ -245,6 +251,7 @@ $gauge-hand-height: 8px;
 	width: $avatar-width;
 	height: $avatar-width;
 
+	margin-top: -72px;
 	margin-right: auto;
 	margin-bottom: $line-height * 1em;
 	margin-left: auto;
@@ -293,22 +300,6 @@ $gauge-hand-height: 8px;
 
 .profile__meter {
 	@include visually-hidden;
-}
-
-.profile__analysis-results,
-.profile__links {
-	max-height: 0;
-
-	overflow: hidden;
-
-	transition: max-height $duration;
-
-	.results__profile:only-child > &,
-	.results__profile:focus > & {
-		max-height: 100em;
-
-		transition: max-height $duration;
-	}
 }
 
 .profile__analysis-results {
@@ -383,11 +374,11 @@ $gauge-hand-height: 8px;
 	}
 }
 
-.profile__analysis-results--compiled {
+.profile__analysis-results--consolidated {
 	border-bottom: 1px solid palette('gray');
 }
 
-.profile__analysis-results--compiled dd {
+.profile__analysis-results--consolidated dd {
 	font-size: ms(0);
 }
 
@@ -423,8 +414,46 @@ $gauge-hand-height: 8px;
 	table-layout: fixed;
 }
 
-.profile__buttons {
+.profile__buttons-list {
+	display: table;
+
+	justify-content: space-evenly;
+
+	width: 100%;
+	max-width: none;
+
+	padding: 0;
+	margin: 0;
+}
+
+.profile__buttons-item {
 	display: table-cell;
+
+	flex-grow: 1;
+
+	&::before {
+		content: none;
+	}
+}
+
+.profile__buttons {
+	text-overflow: ellipsis;
+
+	&:disabled {
+		color: palette('disabled', 'foreground');
+
+		&:hover,
+		&:focus {
+			background-color: transparent;
+		}
+	}
+}
+
+.profile__buttons button {
+	width: auto;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .profile__links p {
@@ -432,6 +461,8 @@ $gauge-hand-height: 8px;
 
 	font-weight: 700;
 	font-size: ms(-1);
+
+	white-space: normal;
 
 	color: palette('orange');
 }
@@ -448,6 +479,8 @@ $gauge-hand-height: 8px;
 
 .profile__links button,
 .profile__links a {
+	@include image-replacement;
+
 	position: static;
 
 	display: block;
@@ -478,28 +511,7 @@ $gauge-hand-height: 8px;
 	}
 }
 
-.profile__links button {
-	overflow: hidden;
-
-	font-weight: 900;
-
-	text-decoration: underline;
-	text-overflow: ellipsis;
-
-	&:disabled {
-		color: palette('disabled', 'foreground');
-
-		&:hover,
-		&:focus {
-			background-color: transparent;
-		}
-	}
-}
-
 .profile__links a {
-	@include image-replacement;
-
-	background-position: 0 50%;
 }
 
 .profile__links .profile a {
