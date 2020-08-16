@@ -29,6 +29,16 @@
 .curved-section--twitter {
 	color: palette('purple');
 
+	background-image: image('curved-mask__top.svg'),
+	image('curved-mask__bottom.svg'),
+
+	image('twitter__crimson--flipped.svg'),
+	image('twitter__purple--flipped.svg'),
+	image('twitter__dark-blue.svg'),
+
+	image('twitter__crimson.svg'),
+	image('twitter__purple.svg'),
+	image('twitter__dark-blue--flipped.svg');
 	background-color: palette('yellow');
 
 	@media screen and (min-width: breakpoint('desktop')) {
