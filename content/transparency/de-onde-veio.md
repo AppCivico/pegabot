@@ -3,7 +3,6 @@ title: "De onde veio o Pegabot?"
 date: 2020-08-11T16:19:01-03:00
 draft: false
 layout: none
-type: transparency
 weight: 2
 homepage: true
 ---

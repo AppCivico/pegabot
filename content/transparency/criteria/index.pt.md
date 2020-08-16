@@ -4,9 +4,7 @@ title: "Como idealizamos os critérios
 date: 2020-08-11T16:23:28-03:00
 draft: false
 menu:
-slug: ""
 layout: none
-type: transparency
 weight: 4
 homepage: true
 ---
