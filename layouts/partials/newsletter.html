@@ -13,7 +13,7 @@
 			{{ end }}
 
 			{{ $input := "(Pegabot)" }}
-			{{ $output := "<b>$1$2</b>" }}
+			{{ $output := "<b>$1</b>" }}
 			{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
 			{{ $finalContent }}
 		</div>
