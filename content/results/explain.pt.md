@@ -3,7 +3,6 @@ title: "Como interpretar os principais resultados? é muito simples, veja!"
 date: 2020-08-14T00:22:30-03:00
 draft: false
 weight: 1
-headless: true
 ---
 
 ![Captura do mostrador de resultados](/uploads/results.jpg)
