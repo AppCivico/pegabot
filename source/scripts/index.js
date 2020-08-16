@@ -33,7 +33,7 @@ window.$vue = new Vue({
 	},
 	components: {
 		profile: {
-			template: '#profile',
+			template: '#results__profile',
 			props: {
 				user: {
 					type: Object,

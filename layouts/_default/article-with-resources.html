@@ -37,12 +37,12 @@
 						{{ $finalContent }}
 
 						<p>
-							<a href="#{{ .Title | urlize }}" class="read-more">{{ i18n "readMore" }}</a>
+							<a href="#section--{{ .File.TranslationBaseName }}" class="read-more">{{ i18n "readMore" }}</a>
 						</p>
 
 						<section
 							class="modal--show"
-							id="{{ .Title | urlize }}"
+							id="section--{{ .File.TranslationBaseName }}"
 							tabindex="-1"
 							role="dialog"
 							aria-labelledby="modal-label"

@@ -37,7 +37,7 @@
 				:focusable="profileList.length > 1 ? true : false"
 				:to-approve="toApprove"
 				:to-disapprove="toDisapprove"
-			/>
+			></profile>
 		</section>
 		<results-footer v-bind:metadata="metadata" :cancel-request="cancelRequest"></results-footer>
 	</div>
@@ -96,7 +96,7 @@
 	{{ partial "microtemplates/resultsFooter.html" . }}
 </script>
 
-<script type="text/x-template" id="profile">
+<script type="text/x-template" id="results__profile">
 	{{ partial "microtemplates/resultsProfile.html" . }}
 </script>
 
