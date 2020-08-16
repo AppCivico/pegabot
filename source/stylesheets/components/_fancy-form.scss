@@ -103,6 +103,9 @@
 
 	box-sizing: border-box;
 
+}
+
+.fancy-form button {
 	&:hover,
 	&:focus {
 		color: palette('white');
