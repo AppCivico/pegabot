@@ -10,6 +10,10 @@
   translation: "Probabilidade de ser um robô"
 - id: callToFaqResults
   translation: "O que os [resultados significam](/faq#faq__como-interpretar-as-notas)?"
+- id: close
+  translation: "Fechar"
+- id: closeThisModal
+  translation: "Fechar esse modal"
 - id: contact
   translation: "Contato"
 - id: content

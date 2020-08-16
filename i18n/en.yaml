@@ -10,6 +10,10 @@
   translation: "Probability of being a bot"
 - id: callToFaqResults
   translation: "What do the [results mean](/faq#faq__como-interpretar-as-notas)?"
+- id: close
+  translation: "Close"
+- id: closeThisModal
+  translation: "Close this modal"
 - id: contact
   translation: "Contact"
 - id: content
