@@ -20,6 +20,7 @@
 	@media screen and (min-width: breakpoint('desktop')) {
 		display: flex;
 
+		align-items: center;
 		flex-wrap: wrap;
 	}
 }
@@ -30,6 +31,8 @@
 }
 
 .newsletter [role='doc-subtitle'] {
+	position: absolute;
+
 	color: palette('white');
 }
 
@@ -60,4 +63,21 @@
 	@media screen and (min-width: breakpoint('desktop')) {
 		width: 60%;
 	}
+}
+
+.newsletter-wrapper .fancy-form > fieldset {
+	padding-bottom: $gutter;
+}
+
+[id='mc_embed_signup_scroll'] {
+	margin-bottom: 0;
+}
+
+#mc_embed_signup div.mce_inline_error {
+	position: absolute;
+	right: ($line-height * 1em);
+	left: ($line-height * 1em);
+
+	font-weight: normal;
+	font-size: ms(-1);
 }
