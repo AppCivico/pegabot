@@ -81,6 +81,22 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
+  - label: "Favorito"
+    name: "bookmark"
+    widget: "object"
+    collapsed: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Trecho", name: "excerpt", widget: "string"}
+      - {label: "Imagem", name: "src", widget: "image"}
+      - {label: "Descrição", name: "alt", widget: "string"}
+      - {label: "Legenda", name: "caption", widget: "string"}
+      - label: "Link"
+        name: "link"
+        widget: "string"
+        pattern:
+        - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
+        - "Use a valid URL"
 
 - name: "transparency"
   label: "Transparência"
