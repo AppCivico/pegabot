@@ -46,6 +46,8 @@
   translation: "Esta funcionalidad depende de JavaScript."
 - id: profileAnalysis
   translation: "Análisis de perfil"
+- id: profileOf
+  translation: "Perfil de"
 - id: profileLink
   translation: "Perfil en la red social"
 - id: readFullContent

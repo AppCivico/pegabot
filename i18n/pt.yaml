@@ -44,6 +44,8 @@
   translation: "Rede"
 - id: noScriptMessage
   translation: "Essa funcionalidade depende de JavaScript."
+- id: profileOf
+  translation: "Perfil de"
 - id: profileAnalysis
   translation: "Análise de perfil"
 - id: profileLink
