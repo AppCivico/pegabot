@@ -171,7 +171,7 @@
 	}
 }
 
-.home-page article {
+.home-page main > article {
 	padding-right: $gutter;
 	padding-left: $gutter;
 
@@ -227,5 +227,4 @@
 		image('robot__yellow--rounded.svg'),
 		image('robot__orange--circular.svg');
 	}
-
 }
