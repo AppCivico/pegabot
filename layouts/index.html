@@ -82,30 +82,7 @@
 	{{ end }}
 
 	{{ range where (where $.Site.Pages ".Type" "analysis") ".Params.homepage" true }}
-		<article
-			id="home-section--{{ ($.Scratch.Get "count") }}"
-			class="
-				snapping-section
-			"
-		>
-			<div
-				class="
-					container
-					delayed-entrance
-					delayed-entrance__bottom
-				"
-			>
-				<div role="doc-subtitle">{{ i18n "analysis" }}</div>
-				<h2>
-					{{ .Title }}
-				</h2>
-
-				{{ $input := "(Pegabot)" }}
-				{{ $output := "<b>$1</b>" }}
-				{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
-				{{ $finalContent }}
-			</div>
-		</article>
+		{{ .Render "analysis" }}
 		{{ $.Scratch.Add "count" 1 }}
 	{{ end }}
 
