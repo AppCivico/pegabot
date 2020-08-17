@@ -259,6 +259,17 @@
 	@media screen and (min-width: breakpoint('phablet')) {
 		width: 28%;
 	}
+
+	&.fancy-button--purple {
+		background-color: palette('purple');
+
+		box-shadow: 0 4px 0 0 palette('purple', 'dark');
+
+		&:hover,
+		&:focus {
+			background-color: palette('blue', 'dark');
+		}
+	}
 }
 
 .fancy-form__followers-button.fancy-form__followers-button,

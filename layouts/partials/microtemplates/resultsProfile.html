@@ -83,6 +83,7 @@
 					</dd>
 				</div>
 			</dl>
+			<p>{{ "{{ user.bot_probability.info }}" }}</p>
 		</section>
 
 		<section class="profile__analysis-results" v-if="user.language_independent">
@@ -147,7 +148,7 @@
 					class="profile__buttons-item"
 				>
 					<button type="button"
-						class="fancy-button"
+						class="fancy-button fancy-button--purple"
 						@click="toApprove(index)" :disabled="user.opinionSubmited"
 					>
 						{{ i18n "toApprove" }}
@@ -158,7 +159,7 @@
 					class="profile__buttons-item"
 				>
 					<button type="button"
-						class="fancy-button"
+						class="fancy-button fancy-button--purple"
 						@click="toDisapprove(index)" :disabled="user.opinionSubmited"
 					>
 						{{ i18n "toDisapprove" }}

@@ -2,6 +2,14 @@
   translation: "Análise completa"
 - id: analysis
   translation: "Análise"
+- id: analisysLoading-1
+  translation: Aguarde. O Pegabot está analisando.
+- id: analisysLoading-2
+  translation: O Pegabot analisa os tuites do perfil pesquisado.
+- id: analisysLoading-3
+  translation: O Pegabot analisa a rede do perfil pesquisado.
+- id: analisysLoading-4
+  translation: O Pegabot utiliza análise sentimental para avaliar sua probabilidade de ser um robô.
 - id: analysisProgress
   translation: "{{ .Count }} contas analisadas."
 - id: aProjectBy
@@ -50,6 +58,8 @@
   translation: "Análise de perfil"
 - id: profileLink
   translation: "Perfil na rede social"
+- id: readMore
+  translation: "Continuar lendo"
 - id: readFullContent
   translation: "Ler conteúdo completo"
 - id: returnedResults
