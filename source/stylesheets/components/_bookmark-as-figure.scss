@@ -6,6 +6,8 @@
 	float: right;
 
 	padding: $gutter * 0.5;
+	margin-right: 0;
+	margin-left: $gutter;
 
 	text-align: right;
 
@@ -15,8 +17,11 @@
 
 	box-shadow: 2px 2px 8px 0 palette('shadow');
 
-	article:nth-of-type(even) & {
+	article:nth-of-type(2n) & {
 		float: left;
+
+		margin-right: $gutter;
+		margin-left: 0;
 
 		text-align: left;
 	}
@@ -28,7 +33,7 @@
 	margin-bottom: $gutter;
 	margin-left: $gutter * 0.5;
 
-	article:nth-of-type(even) & {
+	article:nth-of-type(2n) & {
 		float: right;
 	}
 }

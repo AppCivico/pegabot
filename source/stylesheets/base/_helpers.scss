@@ -182,7 +182,9 @@ textarea {
 	max-width: $max-width;
 
 	padding-top: $line-height * 2em;
+	padding-right: $gutter;
 	padding-bottom: $line-height * 2em;
+	padding-left: $gutter;
 	margin-right: auto;
 	margin-left: auto;
 }
