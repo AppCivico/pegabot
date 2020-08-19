@@ -1,0 +1,142 @@
+{{ $.Scratch.Add "rootClass" "analysis-page" }}{{ partial "header.html" . }}
+{{ if eq (getenv "NODE_ENV") "development" }} {{ $.Scratch.Add "scriptsHeader" `
+<link rel="prefetch" src="https://vuejs.org/js/vue.js" crossorigin="anonymous"> ` }}{{ else }}{{ $.Scratch.Add "scriptsHeader" `
+<link rel="prefetch" src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js" crossorigin="anonymous"> ` }}{{ end }}{{ $.Scratch.Add "scriptsHeader" `
+<link rel="prefetch" src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5" crossorigin="anonymous">
+<link rel="prefetch" src="/assets/scripts/index.js"> ` }}{{ partial "header.html" . }}
+<div role="main">
+	<div class="wave-ornament" id="wave-ornament">
+		<div class="container">
+			<div class="jumbotron">
+				<h1>{{ .Title }}</h1>
+
+				{{ .Content }}
+
+				<a href="artigo" class="jumbotron__link">{{ i18n "readMore" }}</a>
+			</div>
+
+			<div class="bubble-text">
+				<div class="bubble-text__item">
+					<div class="bubble-text__image">
+						<img src="/assets/images/clock.svg" alt="">
+					</div>
+					<div class="bubble-text__text">
+						<p>
+							Os robôs trabalham 24hrs por dia de forma a atingir diferentes tipos de público em horários variados
+						</p>
+					</div>
+				</div>
+				<div class="bubble-text__item">
+					<div class="bubble-text__image">
+						<img src="/assets/images/twitter__white.svg" alt="">
+					</div>
+					<div class="bubble-text__text">
+						<p>
+							Os robôs trabalham 24hrs por dia de forma a atingir diferentes tipos de público em horários variados
+						</p>
+					</div>
+				</div>
+				<div class="bubble-text__item">
+					<div class="bubble-text__image">
+						<img src="/assets/images/globe.svg" alt="">
+					</div>
+					<div class="bubble-text__text">
+						<p>
+							Os robôs trabalham 24hrs por dia de forma a atingir diferentes tipos de público em horários variados
+						</p>
+					</div>
+				</div>
+				<div class="bubble-text__item">
+					<div class="bubble-text__image">
+						<img src="/assets/images/user.svg" alt="">
+					</div>
+					<div class="bubble-text__text">
+						<p>
+							Os robôs trabalham 24hrs por dia de forma a atingir diferentes tipos de público em horários variados
+						</p>
+					</div>
+				</div>
+			</div>
+
+			{{ range where $.Site.Pages ".Type" "analysis" }}
+				{{ .Render "analysis" }}
+			{{ end }}
+
+		</div>
+
+	</div>
+
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Leia o que descobrimos com as nossas investigacões</h1>
+
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+			</p>
+		</div>
+
+		<div class="link-boxes">
+			<div class="link-boxes__box">
+				<h2>As # mais compartilhadas no ano de 2019. E como elas interferiram na vida das pessoas.</h2>
+				<a href="#aa" class="button">Baixar análise</a>
+			</div>
+			<div class="link-boxes__box">
+				<h2>As # mais compartilhadas no ano de 2019. E como elas interferiram na vida das pessoas.</h2>
+				<a href="#aa" class="button">Baixar análise</a>
+			</div>
+			<div class="link-boxes__box">
+				<h2>As # mais compartilhadas no ano de 2019. E como elas interferiram na vida das pessoas.</h2>
+				<a href="#aa" class="button">Baixar análise</a>
+			</div>
+			<div class="link-boxes__box">
+				<h2>As # mais compartilhadas no ano de 2019. E como elas interferiram na vida das pessoas.</h2>
+				<a href="#aa" class="button">Baixar análise</a>
+			</div>
+			<div class="link-boxes__box">
+				<h2>As # mais compartilhadas no ano de 2019. E como elas interferiram na vida das pessoas.</h2>
+				<a href="#aa" class="button">Baixar análise</a>
+			</div>
+			<div class="link-boxes__box">
+				<h2>As # mais compartilhadas no ano de 2019. E como elas interferiram na vida das pessoas.</h2>
+				<a href="#aa" class="button">Baixar análise</a>
+			</div>
+			<div class="link-boxes__box">
+				<h2>As # mais compartilhadas no ano de 2019. E como elas interferiram na vida das pessoas.</h2>
+				<a href="#aa" class="button">Baixar análise</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<script>
+	var target = document.getElementById('wave-ornament');
+
+	target.style.transitionProperty = 'background-position';
+
+	function throttle(fn, wait) {
+		var time = Date.now();
+		return function() {
+			if ((time + wait - Date.now()) < 0) {
+				fn();
+				time = Date.now();
+			}
+		}
+	}
+
+	function updateBgPosition() {
+		console.log('scroll');
+		var scrollHeight = document.body.scrollTop;
+
+		var newPosition = 'left ' + scrollHeight + 'px bottom 1px,'
+			+'left ' + scrollHeight + 'px bottom,'
+			+'left '+ scrollHeight + 'px bottom 2px';
+		target.style.backgroundPosition = newPosition;
+	}
+
+	window.addEventListener('load', updateBgPosition);
+	window.addEventListener('scroll', updateBgPosition);
+</script>
+
+{{ partial "footer.html" . }}

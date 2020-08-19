@@ -2,7 +2,7 @@
 
 // 2. Vendors
 @import
-'../../node_modules/css-modal/modal.scss',
+'../../node_modules/css-modal/modal',
 '../../node_modules/modularscale-sass/stylesheets/modularscale';
 
 // '../../node_modules/susy/sass/susy',
@@ -57,14 +57,18 @@
 'components/curved-section',
 'components/bookmark-as-figure',
 'components/criteria',
-'components/statistics';
+'components/statistics',
+'components/bubble-text',
+'components/jumbotron',
+'components/link-boxes';
 
 // 6. Page-specific styles
 @import
 'pages/about',
 'pages/faq',
 'pages/results',
-'pages/home';
+'pages/home',
+'pages/analysis';
 
 // 7. Themes
 @import

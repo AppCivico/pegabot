@@ -1,0 +1,22 @@
+.jumbotron {
+	max-width: 43.75rem;
+	margin-right: auto;
+	margin-bottom: 4rem;
+	margin-left: auto;
+	text-align: center;
+}
+
+.jumbotron h1 {
+	max-width: 100%;
+	color: palette('purple');
+}
+
+.jumbotron p {
+	max-width: 100%;
+}
+
+.jumbotron__link {
+	display: block;
+	font-weight: bold;
+	text-align: right;
+}

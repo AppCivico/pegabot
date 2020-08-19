@@ -77,6 +77,10 @@
 	padding-left: $gutter;
 
 	vertical-align: middle;
+
+	&:first-child {
+		padding-left: 0;
+	}
 }
 
 .responsibles {
