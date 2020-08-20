@@ -11,6 +11,10 @@
 	color: palette('purple');
 }
 
+.jumbotron--alt-title h1 {
+	color: palette('orange');
+}
+
 .jumbotron p {
 	max-width: 100%;
 }
@@ -20,3 +24,9 @@
 	font-weight: bold;
 	text-align: right;
 }
+
+.jumbotron__link--center {
+	text-align: center;
+	color: palette('orange');
+}
+

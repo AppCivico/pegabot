@@ -2,6 +2,8 @@
   translation: "Análise completa"
 - id: analysis
   translation: "Análise"
+- id: analisysDownload
+  translation: Baixar análise
 - id: analisysLoading-1
   translation: Aguarde. O Pegabot está analisando.
 - id: analisysLoading-2
@@ -12,6 +14,8 @@
   translation: O Pegabot utiliza análise sentimental para avaliar sua probabilidade de ser um robô.
 - id: analysisProgress
   translation: "{{ .Count }} contas analisadas."
+- id: analyzeAProfile
+  translation: "Analisar um perfil"
 - id: aProjectBy
   translation: "Um projeto"
 - id: botProbability
@@ -64,6 +68,14 @@
   translation: "Ler conteúdo completo"
 - id: returnedResults
   translation: "Sua busca retornou {{ .Count }} resultados."
+- id: robotProfiles
+  translation: "15% do total de 330 milhões de perfis do Twitter eram falsos e compostos por bots"
+- id: robotResponsable
+  translation: "Bots são responsáveis por 66% dos links compartilhados no Twitter"
+- id: robotTime
+  translation: "Os robôs trabalham 24hrs por dia de forma a atingir diferentes tipos de público em horários variados"
+- id: robotTraffic
+  translation: "Em 2016 os bots corresponderam a mais de 50% do tráfego total da Internet"
 - id: shareResults
   translation: "Compartilhe o resultado"
 - id: signUpNewsletter
@@ -100,3 +112,6 @@
   translation: "perfil no Twitter"
 - id: user
   translation: "Usuário"
+- id: usePegabot
+  translation: "Agora que você já viu o que pode ser feito com o Pegabot, use a ferramenta. Ela foi feita pra você!"
+

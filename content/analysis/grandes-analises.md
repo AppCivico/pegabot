@@ -4,6 +4,7 @@ date: 2020-08-11T16:27:19-03:00
 draft: false
 menu:
 slug: ""
+file: "http://africau.edu/images/default/sample.pdf"
 layout: none
 type: analysis
 weight: 1

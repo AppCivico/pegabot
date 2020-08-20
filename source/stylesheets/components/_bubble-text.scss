@@ -86,6 +86,9 @@ $duration: 0.6s;
 }
 
 .bubble-text__item p {
+	display: flex;
+	align-items: center;
+	min-height: 2.875rem;
 	padding: 0.4rem 0.6rem;
 	margin-bottom: 0;
 	background-color: $_blue--dark;
