@@ -101,6 +101,35 @@ collections:
       - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
       - "Use a valid URL"
 
+
+- name: "investigations"
+  label: "Investigações"
+  label_singular: "Investigação"
+  folder: "content/investigations"
+  slug: "{{slug}}.{{language}}"
+  preview_path: "/investigations#{{slug}}"
+  create: true
+  extension: md
+  view_filters:
+  - label: "Português"
+    field: language
+    pattern: "pt"
+  - label: "Español"
+    field: language
+    pattern: "en"
+  fields:
+  - {label: "Language", name: "language", widget: "select", options: ["es", "pt"]}
+  - name: "title"
+    label: "Título"
+    widget: "string"
+  - name: "file"
+    label: "Arquivo para download"
+    widget: "file"
+  - name: "date"
+    label: "Data"
+    widget: "datetime"
+    format: "YYYY-MM-DDTHH:mm:ss[Z]"
+
 - name: "transparency"
   label: "Transparência"
   folder: "content/transparency"

@@ -1,0 +1,18 @@
+{{ $list := where $.Site.Pages ".Type" "investigations" }}
+{{ $len := (len $list) }}
+{{ $len := (sub $len 1) }}
+
+{
+	"contents": [
+		{{ range $index, $element := $list }}
+			{
+				"title": "{{ .Title }}",
+				"file": "{{ .Params.file }}"
+			}
+
+			{{ if ne $index $len }}
+				,
+			{{ end }}
+		{{ end }}
+	]
+}

@@ -63,7 +63,7 @@
 		</div>
 
 		<div class="link-boxes">
-			{{ range where $.Site.Pages ".Type" "analysis" }}
+			{{ range where $.Site.Pages ".Type" "investigations" }}
 				<div class="link-boxes__box">
 					<h2>{{ .Title }}</h2>
 					<a href="{{ .Params.file }}" target="_blank" class="button">{{ i18n "analisysDownload" }}</a>

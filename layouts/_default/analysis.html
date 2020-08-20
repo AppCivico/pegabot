@@ -1,0 +1,73 @@
+<article
+	class="snapping-section"
+>
+	<div class="container">
+		<div role="doc-subtitle">{{ i18n "analysis" }}</div>
+		<h2 class="article__title">{{ .Title }}</h2>
+		{{ with .Params.bookmark }}
+			<figure
+				class="
+					bookmark-as-figure
+				"
+			>
+				{{ if .src }}
+					{{ with .link }}
+						<a href="{{ . }}">
+					{{ end }}
+					<img
+						class="bookmark-as-figure__image"
+						src="{{ .src }}"
+						alt="{{ .alt }}"
+						width="172"
+						height="153"
+					/>
+					{{ with .link }}
+						</a>
+					{{ end }}
+				{{ end }}
+
+				{{ with .title }}
+					<h4
+						class="bookmark-as-figure__title"
+					>{{ . }}</h4>
+				{{ end }}
+
+				{{ with .caption }}
+					<figcaption
+						class="bookmark-as-figure__caption"
+					>
+						{{ . }}
+					</figcaption>
+				{{ end }}
+
+				{{ with .excerpt }}
+					<p
+						class="bookmark-as-figure__excerpt"
+					>
+						{{ . }}
+					</p>
+				{{ end }}
+
+				{{ with .link }}
+					<p
+						class="bookmark-as-figure__button-wrapper"
+					>
+						<a
+							href="{{ . }}"
+							class="bookmark-as-figure__button"
+						>
+							{{ i18n "readFullContent" }}
+						</a>
+					</p>
+				{{ end }}
+			</figure>
+		{{ end }}
+
+		<div class="article__content">
+			{{ $input := "(Pegabot)" }}
+			{{ $output := "<b>$1</b>" }}
+			{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+			{{ $finalContent }}
+		</div>
+	</div>
+</article>
