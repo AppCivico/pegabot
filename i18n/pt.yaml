@@ -50,6 +50,8 @@
   translation: "Eu quero colaborar!"
 - id: languageIndependentFeatures
   translation: "Elementos independentes da linguagem"
+- id: loadMoreAnalysis
+  translation: "Conhecer mais análises"
 - id: newsletter
   translation: "Newsletter"
 - id: network

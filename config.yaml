@@ -4,11 +4,14 @@ enableMissingTranslationPlaceholders: true
 enableRobotsTXT: true
 disableHugoGeneratorInject: true
 disableKinds:
-  - "section"
   - "taxonomy"
   - "taxonomyTerm"
   - "RSS"
   - "sitemap"
+outputs:
+  section:
+    - html
+    - json
 googleAnalytics: "UA-116653569-1"
 languageCode: "pt-br"
 metaDataFormat: "yaml"

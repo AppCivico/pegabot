@@ -1,0 +1,29 @@
+{{ $list :=  .RegularPages }}
+{{ $paginator := .Paginate $list 3 }}
+
+{{ $len := (len $paginator.Pages) }}
+{{ $len := (sub $len 1) }}
+
+{{ if $paginator.HasNext }}
+	{{ .Scratch.Set "next" $paginator.Next.URL }}
+{{ else }}
+	{{ .Scratch.Set "next" "" }}
+{{ end }}
+
+
+{{ with $paginator.Pages }}
+{
+	"next_page": "{{ $.Scratch.Get "next" }}",
+	"content": [
+		{{ range $index, $element := . }}
+			{
+				"title": "{{ .Title }}",
+				"file": "{{ .Params.file }}"
+			}
+			{{ if ne $index $len }}
+				,
+			{{ end }}
+		{{ end }}
+	]
+}
+{{ end }}
