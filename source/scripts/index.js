@@ -286,6 +286,10 @@ window.$vue = new Vue({
 			limit: (this.metadata.query.limit || 12),
 		};
 
+		if (this.metadata.query.verbose) {
+			params.verbose = this.metadata.query.verbose;
+		}
+
 		if (this.metadata.query.search_for === 'profile') {
 			this.metadata.limit = 1;
 			this.metadata.total = 1;
@@ -309,4 +313,3 @@ window.$vue = new Vue({
 		this.showElement();
 	},
 });
-
