@@ -153,6 +153,20 @@ window.$vue = new Vue({
 			}).then((response) => {
 				if (response.body.request_url) {
 					window.location = response.body.request_url;
+				} else if (response.headers.get('content-type')
+					&& response.headers.get('content-type').indexOf('application/octet-stream') !== -1
+				) {
+					const url = window.URL.createObjectURL(new Blob([response.body]));
+					const link = document.createElement('a');
+					const filename = response.headers.get('content-disposition')
+						.split('filename=')[1]
+						.split(';')[0]
+						.replace('"', '');
+
+					link.href = url;
+					link.setAttribute('download', filename);
+					document.body.appendChild(link);
+					link.click();
 				} else {
 					if (response.body.metadata.error) {
 						window.alert(response.body.metadata.error); // eslint-disable-line no-alert
@@ -198,6 +212,8 @@ window.$vue = new Vue({
 						this.metadata.loading = false;
 					}
 				}
+
+				this.metadata.loading = false;
 			}, (error) => {
 				console.log('error', error); // eslint-disable-line no-console
 				this.cancelRequest();
@@ -288,6 +304,7 @@ window.$vue = new Vue({
 
 		if (this.metadata.query.verbose) {
 			params.verbose = this.metadata.query.verbose;
+			params.responseType = 'blob';
 		}
 
 		if (this.metadata.query.search_for === 'profile') {
