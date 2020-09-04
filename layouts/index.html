@@ -98,6 +98,10 @@
 		{{ .Render "curved-section" }}
 	{{ end }}
 
+	{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "pegabot") }}
+		{{ .Render "curved-section" }}
+	{{ end }}
+
 </main>
 
 {{ partialCached "newsletter.html" . }}
