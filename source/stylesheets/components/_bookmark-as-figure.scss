@@ -3,13 +3,9 @@
 
 	position: relative;
 
-	float: right;
-
 	padding: $gutter * 0.5;
-	margin-right: 0;
-	margin-left: $gutter;
 
-	text-align: right;
+	text-align: center;
 
 	background-color: palette('white');
 
@@ -17,24 +13,57 @@
 
 	box-shadow: 2px 2px 8px 0 palette('shadow');
 
-	article:nth-of-type(2n) & {
-		float: left;
+	@media screen and (min-width: breakpoint('tablet')) {
+		float: right;
 
-		margin-right: $gutter;
-		margin-left: 0;
+		width: calc(50% - #{$gutter * 0.5});
 
-		text-align: left;
+		margin-top: 0;
+		margin-right: 0;
+		margin-left: $gutter;
+
+		text-align: right;
+
+		article:nth-of-type(2n) & {
+			float: left;
+
+			margin-right: $gutter;
+			margin-left: 0;
+
+			text-align: left;
+		}
+	}
+
+	@media screen and (min-width: breakpoint('wide')) {
+		width: calc(50% - #{$gutter * 0.5});
 	}
 }
 
 .bookmark-as-figure__image {
-	float: left;
+	display: block;
+
+	width: auto;
 
 	margin-bottom: $gutter;
-	margin-left: $gutter * 0.5;
 
-	article:nth-of-type(2n) & {
-		float: right;
+	object-fit: cover;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		float: left;
+
+		max-width: calc(50% - #{$gutter * 0.5});
+		min-width: 173px;
+		min-height: 153px;
+
+		margin-right: $gutter * 0.5;
+		margin-left: 0;
+
+		article:nth-of-type(2n) & {
+			float: right;
+
+			margin-right: 0;
+			margin-left: $gutter * 0.5;
+		}
 	}
 }
 
@@ -50,7 +79,7 @@
 
 .bookmark-as-figure__caption {
 	position: absolute;
-	top: -1.5em;
+	top: $gutter * -1;
 	right: 0;
 	left: auto;
 
@@ -73,6 +102,16 @@
 	font-size: ms(-1);
 
 	color: inherit;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		margin-right: 0;
+		margin-left: auto;
+
+		article:nth-of-type(2n) & {
+			margin-right: auto;
+			margin-left: 0;
+		}
+	}
 }
 
 .bookmark-as-figure__button {
