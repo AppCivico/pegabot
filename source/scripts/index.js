@@ -188,6 +188,9 @@ window.$vue = new Vue({
 					}
 
 					if (response.status === 200) {
+						if (response.body.analysis_id) {
+							this.analysisId = response.body.analysis_id;
+						}
 						if (response.body.profiles) {
 							let profileList = response.body.profiles;
 
@@ -273,7 +276,7 @@ window.$vue = new Vue({
 
 			this.$http.post(`${this.metadata.apiURL}/feedback`, {
 				opinion: value,
-				profile: this.profileList[index],
+				analysis_id: this.profileList[index].analysis_id,
 				before(xhr) {
 					this.xhr_request.push(xhr);
 				},
