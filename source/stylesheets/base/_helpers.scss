@@ -105,11 +105,10 @@ textarea {
 /// </html>
 ///
 .grid {
+	&::before,
 	&::after {
 		position: fixed;
 		top: 0;
-		right: 0;
-		bottom: 0;
 		left: 0;
 
 		z-index: layer('modal');
@@ -117,6 +116,39 @@ textarea {
 		font-size: 1rem;
 
 		pointer-events: none;
+	}
+
+	&::before {
+		padding: 0.5em;
+
+		font-weight: bold;
+
+		border-width: 0 1px 1px 0;
+		border-style: solid;
+		border-color: palette('debug');
+
+		content: 'mobile';
+
+		@media screen and(min-width: breakpoint('phablet')) {
+			content: 'phablet';
+		}
+
+		@media screen and(min-width: breakpoint('tablet')) {
+			content: 'tablet';
+		}
+
+		@media screen and(min-width: breakpoint('desktop')) {
+			content: 'desktop';
+		}
+
+		@media screen and(min-width: breakpoint('wide')) {
+			content: 'wide';
+		}
+	}
+
+	&::after {
+		right: 0;
+		bottom: 0;
 
 		background-image: grid-image(2);
 		background-position: center top;
