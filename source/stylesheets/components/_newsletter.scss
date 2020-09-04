@@ -2,8 +2,8 @@
 	color: palette('white');
 
 	background-image: image('top-curve--white.svg');
-	background-position: 50% 0;
-	background-size: 102% auto;
+	background-position: 50% -1%;
+	background-size: 101% auto;
 	background-color: palette('blue');
 }
 
@@ -26,10 +26,10 @@
 }
 
 .newsletter__content {
-  position: relative;
+	position: relative;
 
 	flex-basis: 40%;
-  flex-grow: 1;
+	flex-grow: 1;
 }
 
 .newsletter [role='doc-subtitle'] {
