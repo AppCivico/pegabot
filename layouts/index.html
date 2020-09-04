@@ -74,6 +74,13 @@
 
 	{{ range where (where $.Site.Pages ".Type" "transparency") ".Params.homepage" true }}
 		{{ .Render "article-with-resources" }}
+
+		{{ if eq ($.Scratch.Get "count") 2 }}
+			{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "ue") }}
+				{{ .Render "curved-section" }}
+			{{ end }}
+		{{ end }}
+
 		{{ $.Scratch.Add "count" 1 }}
 	{{ end }}
 

@@ -4,16 +4,16 @@
 
 	background-image: image('curved-mask__top.svg'),
 	image('curved-mask__bottom.svg');
-	background-position: center top,
-	center bottom,
+	background-position: 50% 0,
+	50% 100%,
 
-	calc(50% + 300px) 75%,
-	calc(50% + 350px) 25%,
-	calc(50% + 450px) 55%,
+	calc(50vw + 300px) 85%,
+	calc(50vw + 350px) 25%,
+	calc(50vw + 450px) 55%,
 
-	calc(50% - 300px) 25%,
-	calc(50% - 350px) 75%,
-	calc(50% - 450px) 55%;
+	calc(50vw - 300px - 54px) 15%,
+	calc(50vw - 350px - 36px) 75%,
+	calc(50vw - 450px - 36px) 45%;
 	background-size: 100% auto,
 	100% auto,
 
@@ -24,6 +24,34 @@
 	54px auto,
 	36px auto,
 	36px auto;
+
+	border-radius: 100% 100% 100% 100% / 12px 12px 12px 12px;
+}
+
+.curved-section--ue {
+	color: palette('orange');
+
+	background-image: image('curved-mask__top.svg'),
+	image('curved-mask__bottom.svg'),
+
+	image('star.svg'),
+	image('star.svg'),
+	image('star.svg'),
+
+	image('star.svg'),
+	image('star.svg'),
+	image('star.svg');
+	background-size: 100% auto,
+	100% auto,
+
+	49px auto,
+	40px auto,
+	40px auto,
+
+	49px auto,
+	40px auto,
+	40px auto;
+	background-color: palette('blue');
 }
 
 .curved-section--twitter {
