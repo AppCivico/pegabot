@@ -26,12 +26,15 @@
 }
 
 .newsletter__content {
+  position: relative;
+
 	flex-basis: 40%;
-	flex-grow: 1;
+  flex-grow: 1;
 }
 
 .newsletter [role='doc-subtitle'] {
 	position: absolute;
+	top: $gutter * -1;
 
 	color: palette('white');
 }
