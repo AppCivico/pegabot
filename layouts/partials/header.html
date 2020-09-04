@@ -89,6 +89,17 @@
 					{{ with .Site.Menus.header }}
 						<nav class="header-menu">
 							<ul>
+								<li>
+								{{ if $.IsHome }}
+									<a href="#s" target="_blank">
+										{{ i18n "toCatch" }}
+									</a>
+								{{ else }}
+									<a href="/#s" target="_blank">
+										{{ i18n "toCatch" }}
+									</a>
+								{{ end}}
+								</li>
 								{{ partial "menu.html" . }}
 								<li>
 									<a href="{{ $.Site.Params.typeform }}" target="_blank">
