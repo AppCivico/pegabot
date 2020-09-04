@@ -11,15 +11,21 @@
 	vertical-align: inherit; /* 2 */
 }
 
+html {
+	font-family: $text-font-stack;
+
+	color: palette('text', 'dark');
+}
+
 /**
  * Basic typography style for copy text
  */
 body {
 	font-size: 0.8em;
 	line-height: normal;
-	font-family: $text-font-stack;
+	font-family: inherit;
 
-	color: palette('text', 'dark');
+	color: inherit;
 
 	@media screen and (min-width: breakpoint('tablet')) {
 		font-size: $body-font-size;
