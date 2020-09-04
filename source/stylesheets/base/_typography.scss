@@ -174,13 +174,14 @@ p {
 	margin-left: 0;
 }
 
-/**
-* @see: http://demosthenes.info/blog/946/Controlling-Widows--Orphans
-*/
-article > .container > * {
+article h2,
+article p {
 	max-width: 31.25rem;
 }
 
+/**
+* @see: http://demosthenes.info/blog/946/Controlling-Widows--Orphans
+*/
 article p {
 	max-width: 33em;
 
