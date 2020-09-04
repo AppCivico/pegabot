@@ -12,7 +12,7 @@ homepage: true
 bookmark:
   title: "Bots e participação nas campanhas eleitorais do México"
   excerpt: "Em suma, podemos assegurar que hoje não há consenso sobre qual intervalo de confiança pode ser definido para garantir se uma conta é bot ou não, sem revisar qualitativamente o conteúdo dos posts…"
-  src: "/uploads/mexico.jpg"
+  src: "/uploads/mexico.png"
   link: "/"
   alt: "/"
   caption: "A primeira grande análise do Pegabot"

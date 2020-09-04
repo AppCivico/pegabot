@@ -12,7 +12,7 @@ homepage: true
 bookmark:
   title: "Oito matérias para você entender bots, fake news e mídias sociais"
   excerpt: "O caso envolvendo o Facebook e a empresa Cambridge Analytica mostrou a necessidade de entendermos melhor a forma como bots atuam criando tendências e influenciando debates políticos…"
-  src: "/uploads/materias.jpg"
+  src: "/uploads/materias.png"
   link: "/"
   alt: ""
   caption: "Análises atuais do Pegabot"
