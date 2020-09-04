@@ -88,7 +88,6 @@
 
 	{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "collaborate") }}
 		{{ .Render "curved-section" }}
-		</div>
 	{{ end }}
 
 </main>
