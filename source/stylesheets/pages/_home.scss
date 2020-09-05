@@ -1,13 +1,4 @@
-.home-page {
-	overflow: hidden;
-}
-
 .home-page body {
-	height: 100vh;
-
-	overflow-x: hidden;
-	overflow-y: auto;
-
 	perspective: 1px;
 	transform-style: preserve-3d;
 }
@@ -163,6 +154,7 @@
 		.container > .article__content,
 		.container > p {
 			max-width: 31.25rem;
+
 			margin-right: auto;
 			margin-left: 0;
 		}
