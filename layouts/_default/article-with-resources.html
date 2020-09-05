@@ -20,6 +20,8 @@
 			<section class="criteria__section-list">
 				{{ range . }}
 					<article
+						id="section--{{ .File.TranslationBaseName }}"
+
 						class="
 							criteria__section
 							criteria__section--{{ .File.TranslationBaseName }}
@@ -37,12 +39,12 @@
 						{{ $finalContent }}
 
 						<p>
-							<a href="#section--{{ .File.TranslationBaseName }}" class="read-more">{{ i18n "readMore" }}</a>
+							<a href="#section__modal--{{ .File.TranslationBaseName }}" class="read-more">{{ i18n "readMore" }}</a>
 						</p>
 
 						<section
 							class="modal--show"
-							id="section--{{ .File.TranslationBaseName }}"
+							id="section__modal--{{ .File.TranslationBaseName }}"
 							tabindex="-1"
 							role="dialog"
 							aria-labelledby="modal-label"
@@ -62,7 +64,7 @@
 								</div>
 							</div>
 
-							<a href="#!"
+							<a href="#section--{{ .File.TranslationBaseName }}"
 								class="modal-close"
 								title="{{ i18n "closeThisModal" }}"
 								data-close="{{ i18n "close" }}"
