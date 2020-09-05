@@ -42,6 +42,8 @@
 	font-size: ms(-1);
 	font-family: $title-font-stack;
 
+	background-color: palette('white');
+
 	@media screen and (min-width: breakpoint('tablet')) {
 
 	}

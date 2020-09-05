@@ -159,8 +159,13 @@
 }
 
 .curved-section__title {
+	margin-right: auto;
+	margin-left: auto;
+
 	font-size: ms(6);
 	font-family: $title-font-stack;
+
+	text-align: inherit;
 
 	color: inherit;
 
@@ -180,11 +185,20 @@
 }
 
 .curved-section__subtitle {
+	margin-right: auto;
+	margin-left: auto;
+
 	font-size: ms(-2);
 
+	text-align: inherit;
 	text-transform: uppercase;
 
 	color: palette('orange');
+}
+
+.curved-section p {
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .curved-section p a:only-child {
@@ -242,4 +256,17 @@
 	text-decoration: underline;
 
 	color: palette('orange');
+}
+
+.curved-section--faq-contact .curved-section__button {
+	color: palette('white');
+
+	background-color: palette('orange');
+
+	box-shadow: 0 4px 0 0 palette('orange', 'dark');
+
+	&:hover,
+	&:focus {
+		box-shadow: 0 4px 0 0 palette('blue', 'dark');
+	}
 }

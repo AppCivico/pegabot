@@ -24,9 +24,9 @@ main {
 	padding: $gutter;
 	margin-right: auto;
 	margin-left: auto;
-	}
+}
 
-[role='main'] > article,
+[role='main'] > article:not(.intro),
 main > article {
 	@media screen and (min-width: breakpoint('tablet')) {
 		.container > h2,

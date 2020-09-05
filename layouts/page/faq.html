@@ -8,32 +8,25 @@
 	{{ $finalContent }}
 
 	{{ with where $.Site.RegularPages ".Type" "faq" }}
-		<ul class="questions-list" id="indice">
+		<section class="questions">
 			{{ range . }}
-				<li class="questions-list__item">
-					<a href="#faq__{{ .Params.id }}">
-						{{ .Title | safeHTML | markdownify }}
-					</a>
-				</li>
-			{{ end }}
-		</ul>
-
-		<dl class="questions">
-			{{ range . }}
-				<div id="faq__{{ .Params.id }}" class="questions__item">
-					<dt>{{ .Title | safeHTML | markdownify }}</dt>
-					<dd>
+				<details id="faq__{{ .Params.id }}" class="questions__item">
+					<summary class="questions__question">{{ .Title | safeHTML | markdownify }}</summary>
+					<div
+						class="questions__answer"
+					>
 						{{ $input := "(Pegabot)" }}
 						{{ $output := "<b>$1</b>" }}
 						{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
 						{{ $finalContent }}
-						<footer>
-							<a href="#indice">{{ i18n "index" }}</a>
-						</footer>
-					</dd>
-				</div>
+					</div>
+				</details>
 			{{ end }}
-		</dl>
+		</section>
+	{{ end }}
+
+	{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "faq-contact") }}
+		{{ .Render "curved-section" }}
 	{{ end }}
 
 </article>
