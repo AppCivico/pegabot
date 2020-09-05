@@ -1,5 +1,5 @@
 <footer class="results__footer">
-	<p>{{ i18n "callToFaqResults" | markdownify }}</p>
+
 	<p v-if="metadata.download !== '' && metadata.download !== '.'">
 		<a :href="metadata.download" id="results__export" download="resultados.json">
 			{{ i18n "toExportData" }}
