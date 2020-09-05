@@ -1,0 +1,150 @@
+{{ $.Scratch.Add "rootClass" "analysis-page" }}{{ partial "header.html" . }}
+<div role="main">
+	<div class="wave-ornament" id="wave-ornament">
+		<div class="container">
+			<div class="
+				jumbotron
+				jumbotron--full
+				jumbotron--image
+				jumbotron--to-left
+				jumbotron--collaborate
+			">
+				<h1>{{ .Title }}</h1>
+
+				{{ .Content }}
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="jumbotron-alternate delayed-entrance delayed-entrance__bottom">
+			{{ range where $.Site.RegularPages "Section" "collaborate" }}
+				<div
+					class="
+						delayed-entrance
+						delayed-entrance__bottom
+						jumbotron
+						jumbotron--alt-title
+						jumbotron--full
+						jumbotron--image
+					"
+					style="background-image: url('{{ .Params.imageSrc }}'), url('{{ .Params.bottomImageSrc }}')">
+
+					<h1>{{ .Title }}</h1>
+					<p>
+						{{ .Content }}
+					</p>
+					<a href="{{ .Params.link }}" target="_blank" class="button">{{ i18n "iWantToCollaborate" }}</a>
+				</div>
+			{{ end }}
+		</div>
+	</div>
+</div>
+
+<script>
+	const button = document.querySelector('#js-load-more-investigations');
+	const boxContainer = document.querySelector('#js-link-boxes');
+	let page = 2; //first page is already loaded
+
+
+	if (button) {
+		button.addEventListener('click', loadMore);
+	}
+
+	function firstCheckOnButton() {
+		return fetch('/investigations/index.json')
+			.then(response => response.json())
+			.then(data => {
+				if(data.next_page) {
+					button.removeAttribute('hidden');
+				}
+			})
+			.catch((error) => {
+				console.error('Error:', error);
+			});
+	}
+
+	function loadMore() {
+		fetch(`/investigations/page/${page}/index.json`)
+			.then(response => response.json())
+			.then(data => {
+				if(!data.next_page) {
+					button.setAttribute('hidden', true);
+				}
+				if(data.content) {
+					data.content.forEach((item, i) => {
+						i++;
+						const translate = 30;
+						const box = document.createElement('div');
+						const bigScreen = window.matchMedia('(min-width: 768px)').matches;
+
+						box.classList.add('link-boxes__box');
+						box.style.opacity = 0;
+						if(bigScreen) {
+							box.style.transform = "translateY(100px)";
+						}
+
+						box.innerHTML = `
+							<h2>${item.title}</h2>
+							<a href="${item.file}" target="_blank" class="button">
+								{{ i18n "analisysDownload" }}
+							</a>
+						`;
+
+						boxContainer.append(box);
+
+						if(i === 1) {
+							window.scrollTo({
+								top: box.offsetTop,
+								behavior: "smooth"
+							});
+						}
+
+						setTimeout(()=> {
+							box.style.opacity = 1;
+
+							if(bigScreen) {
+								box.style.transform = `translateY(${translate * i}px)`;
+							}
+						}, i*300);
+					})
+					page++;
+				}
+			})
+			.catch((error) => {
+				console.error('Error:', error);
+			});
+	}
+
+	firstCheckOnButton();
+</script>
+
+<script>
+	var target = document.getElementById('wave-ornament');
+
+	target.style.transitionProperty = 'background-position';
+
+	function throttle(fn, wait) {
+		var time = Date.now();
+		return function() {
+			if ((time + wait - Date.now()) < 0) {
+				fn();
+				time = Date.now();
+			}
+		}
+	}
+
+	function updateBgPosition() {
+		var scrollHeight = document.body.scrollTop;
+
+		var newPosition = 'left ' + scrollHeight + 'px bottom 1px,'
+			+'left ' + scrollHeight + 'px bottom,'
+			+'left '+ scrollHeight + 'px bottom 2px';
+		target.style.backgroundPosition = newPosition;
+	}
+
+	window.addEventListener('load', updateBgPosition);
+	window.addEventListener('scroll', updateBgPosition);
+</script>
+
+{{ partial "footer.html" . }}
