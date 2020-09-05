@@ -49,6 +49,8 @@ $gauge-hand-height: 8px;
 
 		min-height: 90vh;
 
+		color: palette('purple');
+
 		&::before,
 		&::after {
 			position: static;
