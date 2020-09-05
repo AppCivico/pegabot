@@ -147,46 +147,7 @@
 }
 
 .home__main > article {
-	scroll-snap-align: start;
-
 	@media screen and (min-width: breakpoint('tablet')) {
-		.container > h2,
-		.container > .article__content,
-		.container > p {
-			max-width: 31.25rem;
-
-			margin-right: auto;
-			margin-left: 0;
-		}
-
-		// starting at 2nd
-		&:nth-of-type(n + 2) {
-			min-height: 590px;
-
-			background-size: 213px 223px,
-			81px 84px,
-			102px 108px;
-		}
-
-		// even
-		&:nth-of-type(2n) {
-			text-align: right;
-
-			background-position: $gutter 185px;
-
-			.container > h2,
-			.container > .article__content,
-			.container > p {
-				margin-right: 0;
-				margin-left: auto;
-			}
-		}
-
-		// starting at 3rd
-		&:nth-of-type(2n + 1) {
-			background-position: right $gutter top 176px;
-		}
-
 		// second
 		&:nth-of-type(2) {
 			background-image: image('robot__orange--circular.svg');
@@ -204,20 +165,6 @@
 	}
 
 	@media screen and (min-width: breakpoint('desktop')) {
-		// even
-		&:nth-of-type(2n) {
-			background-position: calc(50vw - 213px - 86px) 185px,
-			calc(50vw - 81px - 366px) 398px,
-			calc(50vw - 102px - 398px) 150px;
-		}
-
-		// starting at 3rd
-		&:nth-of-type(2n + 1) {
-			background-position: calc(50vw + 96px) 176px,
-			calc(50vw + 376px) 384px,
-			calc(50vw + 406px) 139px;
-		}
-
 		// second
 		&:nth-of-type(2) {
 			background-image: image('robot__orange--circular.svg'),
