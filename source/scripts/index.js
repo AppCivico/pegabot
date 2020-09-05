@@ -81,7 +81,7 @@ window.$vue = new Vue({
 					return `https://twitter.com/${username}`;
 				},
 				permalink(username) {
-					return `https://dev.pegabot.com.br/resultados/?socialnetwork=twitter&profile=${username}&search_for=profile`;
+					return `${window.location.origin}${window.location.pathname}?socialnetwork=twitter&profile=${username}&search_for=profile`;
 				},
 				whatsAppItLink(username) {
 					const url = encodeURIComponent(window.location.href);
@@ -160,6 +160,7 @@ window.$vue = new Vue({
 		loadResults(params, currentIndex = 0) {
 			this.error = null;
 			this.metadata.loading = true;
+
 			this.$http.get(`${this.metadata.apiURL}/botometer`, {
 				params,
 				before(xhr) {
