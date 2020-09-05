@@ -108,6 +108,7 @@
 	if (delayedEls.length){
 		window.addEventListener('load', removeClass);
 		window.document.body.addEventListener('scroll', throttle(removeClass, 300));
+		window.document.addEventListener('scroll', throttle(removeClass, 300));
 	}
 </script>
 
