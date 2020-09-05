@@ -98,7 +98,7 @@
 	function removeClass() {
 		for (let index = 0; index < delayedEls.length; index++) {
 			const element = delayedEls[index];
-			console.debug('element', element)
+
 			if (checkVisible(element, 150)) {
 				element.className = element.className.replace('delayed-entrance__bottom', '');
 			}
