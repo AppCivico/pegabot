@@ -27,7 +27,7 @@
 }
 
 .curved-section--ue {
-	color: palette('orange');
+	color: palette('white');
 
 	background-image: image('curved-mask__top.svg'),
 	image('curved-mask__bottom.svg'),
@@ -156,6 +156,10 @@
 	&:first-child {
 		margin-top: 0;
 	}
+}
+
+.curved-section--ue .curved-section__title {
+	color: palette('orange');
 }
 
 .curved-section--pegabot .curved-section__title {
