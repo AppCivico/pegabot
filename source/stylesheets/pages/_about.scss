@@ -2,13 +2,13 @@
 }
 
 .about-page .content-container {
-	padding-top: $gutter * 10;
+	padding-top: $gutter * 8;
 
 	background-image: image('logotype__horizontal.svg');
 	background-position: 50% $gutter;
 	background-size: 75% auto;
 
-	@media screen and (min-width: 550px) {
+	@media screen and (min-width: 640px) {
 		background-size: 495px auto,
 		62px 66px,
 		55px 58px,
