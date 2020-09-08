@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="51px" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="62px" height="66px" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <path d="M 0 0  L 183.46 0  L 183.46 194.55  L 0 194.55  Z " fill-rule="evenodd" fill="black" id="path110" />
-    <clipPath id="clip111">
-      <use xlink:href="#path110" />
+    <path d="M 0 0  L 183.46 0  L 183.46 194.55  L 0 194.55  Z " fill-rule="evenodd" fill="black" id="path26" />
+    <clipPath id="clip27">
+      <use xlink:href="#path26" />
     </clipPath>
     <defs>
       <style>.cls-1{fill:#aa4425;}.cls-2{fill:#f68e28;}.cls-3{fill:none;stroke:#522e87;stroke-miterlimit:10;stroke-width:5px;}</style>
@@ -21,17 +21,17 @@
     <path class="cls-3" d="M105.05,118.34H79.26a6.17,6.17,0,0,0-6.15,6.15v9.89H111.2v-9.89A6.17,6.17,0,0,0,105.05,118.34Z" />
     <path class="cls-3" d="M110.78,73.77a6.17,6.17,0,0,0-6.15-6.15H78.83a6.16,6.16,0,0,0-6.14,6.15v3h38.09Z" />
     <line class="cls-3" x1="91.73" y1="60.29" x2="91.73" y2="67.62" />
-    <filter x="-50.00%" y="-50.00%" width="200.00%" height="200.00%" filterUnits="objectBoundingBox" id="filter112">
+    <filter x="-50.00%" y="-50.00%" width="200.00%" height="200.00%" filterUnits="objectBoundingBox" id="filter28">
       <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0  " in="SourceGraphic" />
     </filter>
-    <filter x="280px" y="328px" width="48px" height="51px" filterUnits="userSpaceOnUse" id="filter113">
+    <filter x="936px" y="88px" width="62px" height="66px" filterUnits="userSpaceOnUse" id="filter29">
       <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetInner" />
       <feGaussianBlur stdDeviation="1" in="shadowOffsetInner" result="shadowGaussian" />
       <feComposite in2="shadowGaussian" operator="atop" in="SourceAlpha" result="shadowComposite" />
       <feColorMatrix type="matrix" values="0 0 0 0 0.76078431372549  0 0 0 0 0.756862745098039  0 0 0 0 0.756862745098039  0 0 0 0.929411764705882 0  " in="shadowComposite" />
     </filter>
-    <g id="widget114">
-      <g transform="matrix(0.239834296304372 0 0 0.239834296304372 280 328.170118826992 )" clip-path="url(#clip111)" filter="url(#filter112)">
+    <g id="widget30">
+      <g transform="matrix(0.316145208764853 0 0 0.316145208764853 936 88.2469748173989 )" clip-path="url(#clip27)" filter="url(#filter28)">
         <rect class="cls-1" y="11.09" width="183.46" height="183.46" rx="73.69" />
         <rect class="cls-2" width="183.46" height="183.46" rx="73.69" />
         <line class="cls-3" x1="53.61" y1="98.26" x2="65.72" y2="98.26" />
@@ -48,8 +48,8 @@
       </g>
     </g>
   </defs>
-  <g transform="matrix(1 0 0 1 -280 -328 )">
-    <use xlink:href="#widget114" filter="url(#filter113)" />
-    <use xlink:href="#widget114" />
+  <g transform="matrix(1 0 0 1 -936 -88 )">
+    <use xlink:href="#widget30" filter="url(#filter29)" />
+    <use xlink:href="#widget30" />
   </g>
 </svg>
