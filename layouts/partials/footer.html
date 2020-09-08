@@ -1,4 +1,6 @@
-	</div><!-- .content-container -->
+
+	{{ partialCached "newsletter.html" . }}
+</div><!-- .content-container -->
 <div class="site-footer-container">
 	<footer class="site-footer">
 		{{ with $.Site.Params.tagline }}
