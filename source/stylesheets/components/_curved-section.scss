@@ -207,24 +207,19 @@
 	width: max-content;
 	height: 2.5rem; // 40px
 
+	padding-top: ($line-height / 4 * 1em);
+	padding-right: ($line-height * 1em);
+	padding-bottom: ($line-height / 4 * 1em);
+	padding-left: ($line-height * 1em);
 	margin-right: auto;
 	margin-left: auto;
 
 	overflow: hidden;
 
 	font-weight: 900;
-
-	text-align: center;
-}
-
-.curved-section:not(.curved-section--pegabot) p a:only-child {
-	padding-top: ($line-height / 4 * 1em);
-	padding-right: ($line-height * 1em);
-	padding-bottom: ($line-height / 4 * 1em);
-	padding-left: ($line-height * 1em);
-
 	line-height: $line-height;
 
+	text-align: center;
 	text-decoration: none;
 	text-overflow: ellipsis;
 	text-transform: uppercase;
@@ -256,9 +251,25 @@
 	text-decoration: underline;
 
 	color: palette('orange');
+
+	background-color: transparent;
+
+	border-radius: 0;
+
+	box-shadow: none;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: palette('purple');
+
+		background-color: transparent;
+
+		box-shadow: none;
+	}
 }
 
-.curved-section--faq-contact .curved-section__button {
+.curved-section--faq-contact p a:only-child {
 	color: palette('white');
 
 	background-color: palette('orange');
