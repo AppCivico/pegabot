@@ -68,9 +68,27 @@
 
 img,
 embed {
-	@extend %loading-bg;
+	position: relative;
 
 	background-size: auto;
+
+	::before {
+		@extend %loading-bg;
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		z-index: layer('modal');
+
+		cursor: wait;
+
+		content: '';
+
+		opacity: 0.75;
+	}
 
 	&::after {
 		/*
