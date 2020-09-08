@@ -89,11 +89,13 @@
 }
 
 .questions__item {
+	width: 100%;
+
 	padding-right: $gutter * 0.5;
 	padding-left: $gutter * 0.5;
 	margin-bottom: $line-height * 2rem;
 
-	@media screen and (min-width: breakpoint('tablet')) {
+	@media screen and (min-width: breakpoint('phablet')) {
 		width: 50%;
 
 		padding-right: $gutter * 0.5;
@@ -123,6 +125,7 @@
 
 	width: 100%;
 
+	text-align: center;
 	vertical-align: bottom;
 
 	color: palette('purple');
