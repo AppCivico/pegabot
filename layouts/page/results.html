@@ -50,11 +50,27 @@
 			"
 		>
 			<div class="container">
-				<h2>{{ .Title }}</h2>
-				{{ $input := "(Pegabot)" }}
-				{{ $output := "<b>$1</b>" }}
-				{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
-				{{ $finalContent }}
+				<h2
+					class="article__title"
+				>
+					{{ .Title }}
+				</h2>
+
+				{{ with .Params.figure }}
+					<figure>
+						<img src="{{ .src }}">
+						<figcaption>
+							<h4>{{ .caption }}</h4>
+						</figcaption>
+					</figure>
+				{{ end }}
+
+				<div class="article__content">
+					{{ $input := "(Pegabot)" }}
+					{{ $output := "<b>$1</b>" }}
+					{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+					{{ $finalContent }}
+				</div>
 			</div>
 		</article>
 	{{ end }}
@@ -77,11 +93,18 @@
 			"
 		>
 			<div class="container">
-				<h2>{{ .Title }}</h2>
-				{{ $input := "(Pegabot)" }}
-				{{ $output := "<b>$1</b>" }}
-				{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
-				{{ $finalContent }}
+				<h2
+					class="article__title"
+				>
+					{{ .Title }}
+				</h2>
+
+				<div class="article__content">
+					{{ $input := "(Pegabot)" }}
+					{{ $output := "<b>$1</b>" }}
+					{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+					{{ $finalContent }}
+				</div>
 			</div>
 		</article>
 	{{ end }}

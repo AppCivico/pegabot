@@ -59,14 +59,18 @@
 			class="{{ with .File }}{{ .TranslationBaseName }}{{ end }} snapping-section"
 		>
 			<div class="container">
-				<h2>
+				<h2
+					class="article__title"
+				>
 					{{ .Title }}
 				</h2>
 
-				{{ $input := "(Pegabot)" }}
-				{{ $output := "<b>$1</b>" }}
-				{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
-				{{ $finalContent }}
+				<div class="article__content">
+					{{ $input := "(Pegabot)" }}
+					{{ $output := "<b>$1</b>" }}
+					{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+					{{ $finalContent }}
+				</div>
 			</div>
 		</article>
 	{{ end }}

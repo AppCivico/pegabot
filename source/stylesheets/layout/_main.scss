@@ -26,18 +26,8 @@ main {
 	margin-left: auto;
 }
 
-[role='main'] > article:not(.intro),
-main > article {
+[role='main'] > article {
 	@media screen and (min-width: breakpoint('tablet')) {
-		.container > h2,
-		.container > .article__content,
-		.container > p {
-			max-width: 31.25rem;
-
-			margin-right: auto;
-			margin-left: 0;
-		}
-
 		// starting at 2nd
 		&:nth-of-type(n + 2) {
 			min-height: 590px;
@@ -49,18 +39,8 @@ main > article {
 
 		// even
 		&:nth-of-type(2n) {
-			text-align: right;
-
 			background-position: $gutter 185px;
-
-			.container > h2,
-			.container > .article__content,
-			.container > p {
-				margin-right: 0;
-				margin-left: auto;
-			}
 		}
-
 	}
 
 	@media screen and (min-width: breakpoint('desktop')) {
@@ -80,5 +60,29 @@ main > article {
 	}
 }
 
-.content-container > article ~ article {
+.article__content {
+	@media screen and (min-width: breakpoint('tablet')) {
+		max-width: 31.25rem;
+
+		margin-right: auto;
+		margin-left: 0;
+
+		figure {
+			float: right;
+		}
+
+		// even
+		article:nth-of-type(2n) & {
+			margin-right: 0;
+			margin-left: auto;
+
+			text-align: right;
+
+			background-position: $gutter 185px;
+
+			figure {
+				float: left;
+			}
+		}
+	}
 }

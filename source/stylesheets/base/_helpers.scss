@@ -239,8 +239,11 @@ textarea {
 	margin-left: auto;
 }
 
-.alternate-paragraphs {
-	text-align: right;
+.alternate-paragraphs .article__content {
+	max-width: none;
+
+	margin-right: 0;
+	margin-left: 0;
 }
 
 .alternate-paragraphs p:nth-of-type(2n) {
@@ -256,6 +259,8 @@ textarea {
 
 	margin-right: 0;
 	margin-left: auto;
+
+	text-align: right;
 }
 
 body {

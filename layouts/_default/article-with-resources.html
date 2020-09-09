@@ -7,14 +7,18 @@
 	<div
 		class="container"
 	>
-		<h2>
+		<h2
+			class="article__title"
+		>
 			{{ .Title }}
 		</h2>
 
-		{{ $input := "(Pegabot)" }}
-		{{ $output := "<b>$1</b>" }}
-		{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
-		{{ $finalContent }}
+		<div class="article__content">
+			{{ $input := "(Pegabot)" }}
+			{{ $output := "<b>$1</b>" }}
+			{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+			{{ $finalContent }}
+		</div>
 
 		{{ with .Resources.ByType "page" }}
 			<section class="criteria__section-list">
