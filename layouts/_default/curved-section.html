@@ -1,4 +1,10 @@
-<div class="curved-section curved-section--{{ with .File }}{{ .TranslationBaseName }}{{ end }}">
+<div
+	class="
+		curved-section
+		curved-section--{{ with .File }}{{ .TranslationBaseName }}{{ end }}
+		snapping-section
+	"
+>
 	<div class="curved-section__container">
 		<div class="curved-section__content">
 			{{ if eq .Type "bookmark"}}
