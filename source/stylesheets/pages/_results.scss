@@ -374,6 +374,11 @@ $gauge-hand-height: 8px;
 	margin-left: auto;
 
 	border-radius: 50%;
+
+	&:-moz-broken,
+	&:-moz-loading {
+		visibility: hidden;
+	}
 }
 
 .profile__data figcaption {
