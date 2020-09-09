@@ -6,7 +6,7 @@
 		<div class="profile__analysis-summary">
 			<figure class="profile__data">
 				<img :src="user.bot_probability ? user.avatar.replace('_normal','_bigger').replace('http:','https:') : ''" alt="">
-				<figcaption>@{{ "{{user.username}}"}}</figcaption>
+				<figcaption>{{ "{{user.username}}"}}</figcaption>
 			</figure>
 			<output class="profile__result">{{ "{{ user.bot_probability ? (user.bot_probability.all || 0) : 0 | toPercentage }}" }}</output>
 
