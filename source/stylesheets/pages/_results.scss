@@ -158,6 +158,7 @@ $gauge-hand-height: 8px;
 
 	cursor: pointer;
 
+	will-change: top, padding;
 	transition-delay: $delay;
 	transition-duration: $duration;
 	transition-property: top, padding;
