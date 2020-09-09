@@ -1,7 +1,9 @@
+$faq-bg: hsl(269, 31%, 47%);
+
 .faq-page {
 	background-image: image('robot-pattern.png');
 	background-repeat: repeat;
-	background-color: rgb(120, 83, 159);
+	background-color: $faq-bg;
 }
 
 .faq-page .content-container {
