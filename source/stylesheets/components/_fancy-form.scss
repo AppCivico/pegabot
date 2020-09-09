@@ -1,3 +1,5 @@
+$duration: 0.5s;
+
 .fancy-form {
 	position: relative;
 
@@ -106,6 +108,10 @@
 
 	box-sizing: border-box;
 
+	will-change: background-color box-shadow color;
+	transition-duration: $duration;
+	transition-property: background-color box-shadow color;
+	transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
 .fancy-form button {
