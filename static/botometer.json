@@ -1,0 +1,26 @@
+{
+	"metadata": {
+		"count": 1
+	},
+	"profiles": [{
+		"username": "robsonsobral",
+		"url": "https://twitter.com/robsonsobral",
+		"avatar": "http://pbs.twimg.com/profile_images/1285555141052190720/03pVlASf_normal.jpg",
+		"language_dependent": {
+			"sentiment": {
+				"value": 0.45
+			}
+		},
+		"language_independent": {
+			"friend": null,
+			"temporal": 0.040324332014233175,
+			"network": 0.38724069063265043,
+			"user": 0.14943484472516733
+		},
+		"bot_probability": {
+			"info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aenean euismod bibendum laoreet.Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.Proin sodales pulvinar tempor.",
+			"all": 0.20539997347441016
+		},
+		"user_profile_language": null
+	}]
+}
