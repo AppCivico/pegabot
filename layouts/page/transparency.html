@@ -1,0 +1,72 @@
+{{ if eq (getenv "NODE_ENV") "development" }} {{ $.Scratch.Add "scriptsHeader" `
+<link rel="prefetch" src="https://vuejs.org/js/vue.js" crossorigin="anonymous"> ` }}{{ else }}{{ $.Scratch.Add "scriptsHeader" `
+<link rel="prefetch" src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js" crossorigin="anonymous"> ` }}{{ end }}{{ $.Scratch.Add "scriptsHeader" `
+<link rel="prefetch" src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5" crossorigin="anonymous">
+<link rel="prefetch" src="/assets/scripts/index.js"> ` }}{{ partial "header.html" . }}
+
+<main
+	role="main"
+	id="{{ i18n "content" }}"
+	class="home__main"
+>
+
+
+	<article class="
+		jumbotron
+		jumbotron--full
+		jumbotron--text-right
+		jumbotron--alt-title
+		jumbotron--video
+	">
+
+		<video src="/assets/video/pegabot--480x480.mp4" poster autoplay loop playsinline></video>
+
+
+		<div class="jumboton--video__text">
+			<h1>{{ .Title }}</h1>
+
+			{{ .Content }}
+		</div>
+	</article>
+
+	{{ range where (where .Site.RegularPages ".Type" "transparency") ".Params.transparency" true }}
+		{{ .Render "article" }}
+	{{ end }}
+
+	{{ with .Site.GetPage "transparency/criteria" }}
+		{{ .Render "article-with-resources" }}
+	{{ end }}
+
+	{{ range first 1 (where $.Site.Pages ".Type" "bookmark") }}
+		{{ .Render "curved-section" }}
+	{{ end }}
+
+	<div>
+		{{ with .Site.GetPage "results" }}
+			{{ range where (.Resources.Match "explain*") ".Kind" "page" }}
+				<article
+					class="
+						delayed-entrance
+						delayed-entrance__bottom
+					"
+				>
+					<div class="container">
+						<h2>{{ .Title }}</h2>
+						{{ $input := "(Pegabot)" }}
+						{{ $output := "<b>$1</b>" }}
+						{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+						{{ $finalContent }}
+					</div>
+				</article>
+			{{ end }}
+		{{ end }}
+	</div>
+
+	{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "pegabot") }}
+		{{ .Render "curved-section" }}
+	{{ end }}
+</main>
+
+{{ partialCached "newsletter.html" . }}
+
+{{ partialCached "footer.html" . }}

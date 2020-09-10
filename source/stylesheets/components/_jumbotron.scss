@@ -17,7 +17,8 @@
 	}
 }
 
-.jumbotron-alternate .jumbotron:nth-child(odd) {
+.jumbotron-alternate .jumbotron:nth-child(odd),
+.jumbotron--to-right {
 	text-align: right;
 
 	@media screen and (min-width: breakpoint('desktop')) {
@@ -42,6 +43,32 @@
 		padding-top: 4rem;
 		padding-bottom: 4rem;
 		margin-bottom: 8rem;
+	}
+}
+
+.jumbotron--video {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: right;
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		text-align: left;
+	}
+}
+
+.jumbotron--video video {
+	display: none;
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		display: block;
+		max-width: 40%;
+	}
+}
+
+.jumboton--video__text {
+	@media screen and (min-width: breakpoint('desktop')) {
+		max-width: 60%;
+		padding-left: $gutter * 2;
 	}
 }
 

@@ -1,0 +1,19 @@
+<article
+	class="
+		delayed-entrance
+		delayed-entrance__bottom
+	"
+>
+	<div
+		class="container"
+	>
+		<h2>
+			{{ .Title }}
+		</h2>
+
+		{{ $input := "(Pegabot)" }}
+		{{ $output := "<b>$1</b>" }}
+		{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+		{{ $finalContent }}
+	</div>
+</article>

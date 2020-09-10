@@ -1,0 +1,105 @@
+<div class="jumbotron jumbotron--alt-title">
+	<h1>Leia o que descobrimos com as nossas investigacões</h1>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+	</p>
+</div>
+
+<div class="link-boxes">
+	<div class="link-boxes__container" id="js-link-boxes">
+		{{ range first 3 (where $.Site.RegularPages "Section" "investigations") }}
+			<div class="link-boxes__box">
+				<h2>{{ .Title }}</h2>
+				<a href="{{ .Params.file }}" target="_blank" class="button">{{ i18n "analisysDownload" }}</a>
+			</div>
+		{{ end }}
+	</div>
+	<button type="button" class="button link-boxes__load-more" id="js-load-more-investigations" hidden>
+		{{ i18n "loadMoreAnalysis" }}
+	</button>
+</div>
+
+<div class="jumbotron jumbotron">
+	<h1>{{ i18n "usePegabot" }}</h1>
+
+	<a href="/" class="jumbotron__link jumbotron__link--center">{{ i18n "analyzeAProfile" }}</a>
+</div>
+
+<script>
+	const button = document.querySelector('#js-load-more-investigations');
+	const boxContainer = document.querySelector('#js-link-boxes');
+	let page = 2; //first page is already loaded
+
+
+	if (button) {
+		button.addEventListener('click', loadMore);
+	}
+
+	function firstCheckOnButton() {
+		return fetch('/investigations/index.json')
+			.then(response => response.json())
+			.then(data => {
+				if(data.next_page) {
+					button.removeAttribute('hidden');
+				}
+			})
+			.catch((error) => {
+				console.error('Error:', error);
+			});
+	}
+
+	function loadMore() {
+		fetch(`/investigations/page/${page}/index.json`)
+			.then(response => response.json())
+			.then(data => {
+				if(!data.next_page) {
+					button.setAttribute('hidden', true);
+				}
+				if(data.content) {
+					data.content.forEach((item, i) => {
+						i++;
+						const translate = 30;
+						const box = document.createElement('div');
+						const bigScreen = window.matchMedia('(min-width: 768px)').matches;
+
+						box.classList.add('link-boxes__box');
+						box.style.opacity = 0;
+						if(bigScreen) {
+							box.style.transform = "translateY(100px)";
+						}
+
+						box.innerHTML = `
+							<h2>${item.title}</h2>
+							<a href="${item.file}" target="_blank" class="button">
+								{{ i18n "analisysDownload" }}
+							</a>
+						`;
+
+						boxContainer.append(box);
+
+						if(i === 1) {
+							window.scrollTo({
+								top: box.offsetTop,
+								behavior: "smooth"
+							});
+						}
+
+						setTimeout(()=> {
+							box.style.opacity = 1;
+
+							if(bigScreen) {
+								box.style.transform = `translateY(${translate * i}px)`;
+							}
+						}, i*300);
+					})
+					page++;
+				}
+			})
+			.catch((error) => {
+				console.error('Error:', error);
+			});
+	}
+
+	firstCheckOnButton();
+</script>
