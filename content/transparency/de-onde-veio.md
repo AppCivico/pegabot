@@ -5,6 +5,7 @@ draft: false
 layout: none
 weight: 2
 homepage: true
+transparency: true
 ---
 Alguns têm sido usados no envio de SPAMs por e-mail, no roubo de dados pessoais de usuários, em fraudes de cartão de crédito e em ataques de desinformação para manipulação da esfera pública.
 

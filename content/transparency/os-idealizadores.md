@@ -7,6 +7,7 @@ slug: ""
 layout: none
 weight: 3
 homepage: true
+transparency: true
 ---
 O PegaBot é um projeto do Instituto do Tecnologia e Sociedade do Rio de Janeiro (ITS Rio) e do Instituto Equidade & Tecnologia.
 
