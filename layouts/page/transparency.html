@@ -30,7 +30,15 @@
 	</article>
 
 	{{ range where (where .Site.RegularPages ".Type" "transparency") ".Params.transparency" true }}
-		{{ .Render "article" }}
+		{{ .Render "article-with-resources" }}
+
+		{{ if eq ($.Scratch.Get "count") 2 }}
+			{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "ue") }}
+				{{ .Render "curved-section" }}
+			{{ end }}
+		{{ end }}
+
+		{{ $.Scratch.Add "count" 1 }}
 	{{ end }}
 
 	{{ with .Site.GetPage "transparency/criteria" }}
@@ -67,6 +75,4 @@
 	{{ end }}
 </main>
 
-{{ partialCached "newsletter.html" . }}
-
-{{ partialCached "footer.html" . }}
+{{ partial "footer.html" . }}
