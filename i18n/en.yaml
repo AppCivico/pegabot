@@ -46,6 +46,8 @@
   translation: "I want to collaborate!"
 - id: languageIndependentFeatures
   translation: "Language independent features"
+- id: menu
+  translation: "Menu"
 - id: newsletter
   translation: "Newsletter"
 - id: network

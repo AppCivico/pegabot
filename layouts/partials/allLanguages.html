@@ -1,0 +1,16 @@
+{{ with .Site.Language }}
+	<!-- {{ printf "%#v" . }} -->
+	<button
+		type="button"
+		href="{{ .Params.BaseURL }}">{{ .LanguageName }} / {{ .Lang }}</button>
+{{ end }}
+<ul
+	id="#languagesMenu"
+>
+	{{ range $.Site.Home.AllTranslations }}
+		<!-- {{ printf "%#v" . }} -->
+		<li>
+			<a href="{{ .Permalink }}">{{ .Language.LanguageName }} / {{ .Lang }}</a>
+		</li>
+	{{ end }}
+</ul>

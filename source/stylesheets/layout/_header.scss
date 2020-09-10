@@ -6,6 +6,8 @@
  * Within any `document` or `application`, the author **SHOULD** mark no more than one element with the `banner` role.
  */
 
+$duration: 0.5s;
+
 .skip-links {
 	padding: 0;
 	margin: 0;
@@ -19,8 +21,6 @@
 
 .header-menu-and-banner {
 	display: flex;
-
-	flex-wrap: wrap;
 
 	width: 100%;
 	height: 4rem;
@@ -44,45 +44,300 @@
 
 	background-color: palette('white');
 
-	@media screen and (min-width: breakpoint('tablet')) {
+	@media screen and (min-width: breakpoint('desktop')) {
+	}
+}
 
+[for='menu-opener'] {
+	position: relative;
+
+	z-index: layer('default');
+
+	width: $gutter * 1.5;
+	height: 100%;
+
+	padding: 0;
+	margin-right: 0;
+	margin-left: auto;
+
+	overflow: hidden;
+
+	&::before {
+		display: block;
+
+		height: 100%;
+
+		background-image: image('mobile-menu-button.svg');
+		background-position: 50% 100%;
+
+		content: '';
 	}
 
-	@media screen and (min-width: breakpoint('desktop')) {
+	@media screen and (min-width: breakpoint('tablet')) {
+		display: none;
+	}
+}
 
+.languages-and-header-menus {
+	position: fixed;
+	top: 4rem;
+	right: 0;
+	bottom: 0;
+
+	display: flex;
+	z-index: layer('dropdown');
+
+	flex-direction: column;
+
+	max-width: 0;
+
+	padding-right: 0;
+	padding-left: 0;
+
+	overflow: hidden;
+
+	font-size: ms(1);
+
+	text-align: right;
+
+	color: palette('orange');
+
+	background-color: palette('blue', 'dark');
+
+	transition-duration: $duration;
+	transition-property: max-width, padding-right, padding-left;
+
+	&::before {
+		position: fixed;
+		top: 4rem;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		z-index: layer('below');
+
+		background-color: palette('shadow');
+
+		content: '';
+
+		opacity: 0;
+
+		transition-duration: $duration;
+		transition-property: opacity;
+	}
+
+	[id='menu-opener']:checked + div & {
+		max-width: 100%;
+
+		padding-right: $gutter;
+		padding-left: $gutter;
+
+		overflow: visible;
+
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		position: static;
+
+		max-width: none;
+
+		margin-right: 0;
+		margin-left: auto;
+
+		overflow: visible;
+
+		font-size: inherit;
+
+		background-color: transparent;
+
+		&::before {
+			content: none;
+		}
+
+		[id='menu-opener']:checked + div & {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+}
+
+.languages-and-header-menus li {
+	padding-top: $gutter * 0.5;
+	padding-right: 0;
+	padding-bottom: $gutter * 0.5;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		padding-top: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+	}
+}
+
+.languages-and-header-menus a {
+	display: inline;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: palette('white');
+	}
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		display: block;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: palette('orange');
+		}
 	}
 }
 
 .header-menu {
-	display: table;
+	flex-grow: 1;
+	order: -1;
 
-	width: auto;
-	height: 100%;
-	max-width: 80rem;
-
+	margin-top: 0;
 	margin-right: 0;
+	margin-bottom: 0;
 	margin-left: auto;
+
+	font-size: inherit;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		clear: right;
+
+		display: table;
+
+		order: unset;
+
+		width: auto;
+		max-width: 80rem;
+
+		margin-top: auto;
+		margin-bottom: auto;
+
+		color: palette('blue');
+	}
 }
 
 .header-menu ul {
-	display: table-row;
+	margin-bottom: 0;
 
-	width: auto;
+	@media screen and (min-width: breakpoint('tablet')) {
+		display: table-row;
 
-	margin-right: 0;
-	margin-left: auto;
+		width: auto;
+
+		margin-right: 0;
+		margin-left: auto;
+	}
 }
 
 .header-menu li {
-	display: table-cell;
+	@media screen and (min-width: breakpoint('tablet')) {
+		display: table-cell;
 
-	padding-right: 0;
-	padding-left: $gutter;
+		padding-right: 0;
+		padding-left: $gutter;
 
-	vertical-align: middle;
+		vertical-align: middle;
 
-	&:first-child {
-		padding-left: 0;
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+}
+
+.languages-menu {
+	position: relative;
+
+	display: block;
+
+	margin-top: auto;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: auto;
+
+	font-size: inherit;
+
+	border-top: 1px solid palette('white');
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		margin-top: auto;
+		margin-bottom: auto;
+
+		color: palette('text', 'dark');
+
+		border: 0;
+	}
+}
+
+.languages-menu button {
+	display: none;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		display: block;
+
+		&:focus {
+			pointer-events: none;
+
+			outline: 1px dotted;
+		}
+	}
+}
+
+.languages-menu ul {
+	display: block;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	margin: 0;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		position: absolute;
+
+		max-height: 0;
+
+		padding-right: $gutter * 0.25;
+		padding-left: $gutter * 0.25;
+
+		overflow: hidden;
+
+		text-align: left;
+
+		background-color: palette('white');
+
+		box-shadow: 2px 2px 8px 0 palette('shadow');
+
+		will-change: box-shadow, max-height;
+		transition-duration: $duration;
+		transition-property: box-shadow, max-height;
+	}
+}
+
+@media screen and (min-width: breakpoint('tablet')) {
+	.languages-menu:hover > ul,
+	.languages-menu :focus + ul {
+		max-height: 500px;
+
+		box-shadow: 2px 2px 8px 0 palette('shadow');
+	}
+}
+
+.languages-menu li {
+	display: block;
+
+	padding-top: $gutter * 0.25;
+	padding-bottom: $gutter * 0.25;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		& + li {
+			border-top: 1px solid;
+		}
 	}
 }
 
@@ -98,14 +353,14 @@
 }
 
 [role='banner'] {
+	float: left;
+
 	margin-top: 0;
 	margin-right: auto;
 	margin-bottom: 0;
 	margin-left: 0;
 
 	line-height: 1.25;
-
-
 }
 
 [role='banner'] a {
@@ -141,4 +396,12 @@
 
 	margin-right: auto;
 	margin-left: auto;
+}
+
+[id='menu-opener']:checked + .main-container {
+	height: 100%;
+
+	padding: 0;
+
+	overflow: hidden;
 }

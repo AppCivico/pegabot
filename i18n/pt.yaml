@@ -52,6 +52,8 @@
   translation: "Elementos independentes da linguagem"
 - id: loadMoreAnalysis
   translation: "Conhecer mais análises"
+- id: menu
+  translation: "Menu"
 - id: newsletter
   translation: "Newsletter"
 - id: network

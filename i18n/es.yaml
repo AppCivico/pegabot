@@ -46,6 +46,8 @@
   translation: "Quiero colaborar!"
 - id: languageIndependentFeatures
   translation: "Elementos independientes del lenguaje"
+- id: menu
+  translation: "Menú"
 - id: newsletter
   translation: "Boletín"
 - id: network

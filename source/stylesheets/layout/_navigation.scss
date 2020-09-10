@@ -20,7 +20,7 @@ nav ol {
 	padding: 0;
 	margin-top: 0;
 	margin-right: 0;
-	margin-bottom: $line-height * 1rem;
+	margin-bottom: 0;
 	margin-left: 0;
 
 	list-style: none;
@@ -33,6 +33,7 @@ nav ol {
 	}
 }
 
+nav [type='button'],
 menu ul li,
 nav ul li {
 	padding: 0 $gutter 0 0;
@@ -47,17 +48,52 @@ nav ul li {
 	}
 }
 
+nav [type='button'] {
+	background-image: image('chevron.svg');
+	background-position: 95% 50%;
+	background-size: 13px 8px;
+
+	border: 0;
+	border-radius: 0;
+}
+
+nav [type='button'],
 menu a,
 nav a {
 	display: block;
 
-	padding-top: $line-height * 0.5rem;
-	padding-bottom: $line-height * 0.5rem;
-
 	overflow: hidden;
 
-	&:link {
-		text-decoration: none;
+	color: inherit;
+
+	background-color: transparent;
+
+	&:link,
+	&:visited {
+		text-decoration: inherit;
+
+		color: inherit;
+
+		background-color: transparent;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: inherit;
+
+		color: inherit;
+
+		background-color: transparent;
+	}
+}
+
+menu a,
+nav a {
+	&:hover,
+	&:focus,
+	&:active {
+		color: palette('black');
 	}
 }
 

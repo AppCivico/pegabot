@@ -23,7 +23,7 @@ languages:
   pt:
     languageCode: "pt-br"
     baseURL: "https://pegabot.com.br"
-    languageName: Portuguese
+    languageName: Português
     title: Pegabot
     params:
       siteDescription: "O Pegabot verifica a atividade de uma conta em rede social e dá uma pontuação baseada na probabilidade dessa conta ser um bot. Maiores pontuações são mais bot-like."
