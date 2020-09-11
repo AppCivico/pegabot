@@ -59,15 +59,15 @@
 	profile.addEventListener('blur', function(e){
 		var value = e.target.value;
 
-		var regex = /(?:https?:\/\/)?(?:www)?\.(:?twitter\.com\/)/gi;
+		var regex = /(https?:\/\/)?(www\.)?(twitter\.com\/)/gi;
 
-		value = value.replace(regex, '');
+		var cleanValue = value.replace(regex, '');
 
-		if (!!value && value.indexOf('@') !== 0){
-			value = '@' + value;
+		if (!!cleanValue && cleanValue.indexOf('@') !== 0){
+			cleanValue = '@' + cleanValue;
 		}
 
-		e.target.value = value;
+		e.target.value = cleanValue;
 	}, false);
 
 </script>
