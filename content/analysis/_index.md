@@ -1,1 +1,0 @@
-tite: "Anális"
