@@ -44,15 +44,3 @@ languages:
       typeform: https://itsrio2.typeform.com/to/uC2R0P
       ogImage: "/pegabot-fb-img__es.jpg"
       ogTitle: "Descubra las chances de que aquel perfil tan exitoso sea un bot."
-  en:
-    languageCode: "en-us"
-    baseURL: "https://pegabot.com.br"
-    languageName: English
-    title: Bot Spotter
-    params:
-      siteDescription: "Bot Spotter verifies social media profiles and gives a score after an assessment of its activities, analysing the probability of the account being a bot. Highest scores are more bot-like."
-      tagline: "For more transparency in the use of bots"
-      email:
-      typeform: https://itsrio2.typeform.com/to/k9FHXq
-      ogImage: "/pegabot-fb-img.jpg"
-      ogTitle: "Find out if a social media profile is a bot"
