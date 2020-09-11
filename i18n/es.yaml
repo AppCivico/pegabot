@@ -54,6 +54,8 @@
   translation: "Red"
 - id: noScriptMessage
   translation: "Esta funcionalidad depende de JavaScript."
+- id: notFound
+  translation: "No encontrada"
 - id: profileAnalysis
   translation: "Análisis de perfil"
 - id: profileOf
@@ -66,6 +68,8 @@
   translation: "Sigue leyendo"
 - id: returnedResults
   translation: "Su búsqueda arrojó {{ .Count }} resultados."
+- id: returnToHome
+  translation: "Regresar a la página principal."
 - id: shareResults
   translation: "Compartir resultados"
 - id: signUpNewsletter

@@ -54,6 +54,8 @@
   translation: "Network"
 - id: noScriptMessage
   translation: "This funcionality requires JavaScript."
+- id: notFound
+  translation: "Not found"
 - id: profileOf
   translation: "Profile of"
 - id: profileAnalysis
@@ -66,6 +68,8 @@
   translation: "Read full content"
 - id: returnedResults
   translation: "Your search returned {{ .Count }} results."
+- id: returnToHome
+  translation: "Return to home-page."
 - id: shareResults
   translation: "Share results"
 - id: signUpNewsletter

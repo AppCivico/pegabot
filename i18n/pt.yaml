@@ -60,6 +60,8 @@
   translation: "Rede"
 - id: noScriptMessage
   translation: "Essa funcionalidade depende de JavaScript."
+- id: notFound
+  translation: "Não encontrado."
 - id: profileOf
   translation: "Perfil de"
 - id: profileAnalysis
@@ -72,6 +74,8 @@
   translation: "Ler conteúdo completo"
 - id: returnedResults
   translation: "Sua busca retornou {{ .Count }} resultados."
+- id: returnToHome
+  translation: "Retornar à página inicial."
 - id: robotProfiles
   translation: "15% do total de 330 milhões de perfis do Twitter eram falsos e compostos por bots"
 - id: robotResponsable
@@ -118,4 +122,3 @@
   translation: "Usuário"
 - id: usePegabot
   translation: "Agora que você já viu o que pode ser feito com o Pegabot, use a ferramenta. Ela foi feita pra você!"
-
