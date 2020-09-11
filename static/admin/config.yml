@@ -1,16 +1,19 @@
 backend:
   name: github
+  # @see https://www.netlifycms.org/docs/test-backend/
+  # name: test-repo
   branch: dev # Branch to update (optional; defaults to master)
   repo: AppCivico/pegabot
-  site_domain: dev.pegabot.com.br
+  site_domain: pegabot.com.br
   base_url: https://api.netlify.com
   auth_endpoint: auth
   squash_merges: true
+  api_root: https://api.github.com
 media_folder: "content/uploads"
-public_folder: "/uploads"
+public_folder: "uploads"
 locale: "pt"
 sortableFields: ["commit_date", "title", "commit_author", "language"]
-logo_url: /source/images/logotype.png
+logo_url: /images/logotype.png
 slug:
   encoding: "ascii"
   clean_accents: true
