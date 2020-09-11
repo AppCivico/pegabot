@@ -1,8 +1,10 @@
 .jumbotron {
 	max-width: 43.75rem;
+
 	margin-right: auto;
 	margin-bottom: 4rem;
 	margin-left: auto;
+
 	text-align: center;
 }
 
@@ -12,6 +14,7 @@
 
 	@media screen and (min-width: breakpoint('desktop')) {
 		padding-right: 40%;
+
 		background-position: 80% 100%, 100% 0;
 		background-size: auto 140px;
 	}
@@ -23,6 +26,7 @@
 
 	@media screen and (min-width: breakpoint('desktop')) {
 		padding-left: 40%;
+
 		background-position: 0 0, 10% 100%;
 		background-size: auto 140px;
 	}
@@ -35,6 +39,7 @@
 .jumbotron--image {
 	padding-top: 6rem;
 	padding-bottom: 6rem;
+
 	background-position: top left, bottom right;
 	background-size: auto 65px;
 	background-repeat: no-repeat;
@@ -48,7 +53,9 @@
 
 .jumbotron--video {
 	display: flex;
+
 	flex-wrap: wrap;
+
 	text-align: right;
 
 	@media screen and (min-width: breakpoint('desktop')) {
@@ -61,6 +68,7 @@
 
 	@media screen and (min-width: breakpoint('desktop')) {
 		display: block;
+
 		max-width: 40%;
 	}
 }
@@ -68,13 +76,14 @@
 .jumboton--video__text {
 	@media screen and (min-width: breakpoint('desktop')) {
 		max-width: 60%;
+
 		padding-left: $gutter * 2;
 	}
 }
 
 .jumbotron--collaborate {
 	background-image: image('robot__purple--square.svg'), image('robot__orange--square.svg'), image('logotype.svg');
-	background-position: 80% 0%, 100% 100%, 40% 100%;
+	background-position: 80% 0, 100% 100%, 40% 100%;
 	background-size: auto, auto, 108px;
 
 	@media screen and (min-width: breakpoint('desktop')) {
@@ -85,7 +94,14 @@
 
 .jumbotron h1 {
 	max-width: 100%;
+
 	color: palette('purple');
+
+	br {
+		display: block;
+
+		margin-bottom: $gutter;
+	}
 }
 
 .jumbotron--alt-title h1 {
@@ -98,13 +114,19 @@
 
 .jumbotron__link {
 	display: block;
+
 	font-weight: bold;
+
 	text-align: right;
 }
 
 .jumbotron__link--center {
 	text-align: center;
-	color: palette('orange');
+
+	&:link,
+	&:visited {
+		color: palette('orange');
+	}
 }
 
 .jumbotron .button {

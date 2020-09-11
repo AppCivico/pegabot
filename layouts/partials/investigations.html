@@ -21,9 +21,11 @@
 </div>
 
 <div class="jumbotron jumbotron">
-	<h1>{{ i18n "usePegabot" }}</h1>
+	<h1>{{ i18n "usePegabot" | safeHTML }}</h1>
 
-	<a href="/" class="jumbotron__link jumbotron__link--center">{{ i18n "analyzeAProfile" }}</a>
+	<a href="/#s" class="jumbotron__link jumbotron__link--center">
+		{{ i18n "analyzeAProfile" }}
+	</a>
 </div>
 
 <script>
