@@ -4,8 +4,8 @@ date: 2020-08-14T00:22:30-03:00
 draft: false
 figure:
   src: "/uploads/results.jpg"
-  caption: "Captura do mostrador de resultados"
-  alt: ""
+  caption: ""
+  alt: "Captura do mostrador de resultados"
 weight: 1
 ---
 
