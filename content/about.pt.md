@@ -3,8 +3,10 @@ title: "Desarticulando redes estruturais de bots"
 date: 2018-01-24T11:07:39-02:00
 draft: false
 menu:
-  - "main"
-  - "header"
+  main:
+    name: Sobre
+  header:
+    name: Sobre
 slug: "sobre"
 weight: 1
 layout: "about"
