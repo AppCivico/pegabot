@@ -57,25 +57,9 @@ progress {
 	margin-right: auto;
 	margin-left: 0;
 
-	will-change: width;
-	animation: progress-out;
-	animation-duration: 0.3s;
-	animation-timing-function: ease-out;
-	animation-delay: 0.5s;
-	animation-fill-mode: forwards;
-
-	@at-root {
-		@keyframes progress-out {
-			from {
-				width: 100%;
-			}
-		}
-	}
-
 	&::before {
 		display: block;
 
-		width: 100%;
 		height: 0.75rem;
 
 		background-color: currentColor;
@@ -83,12 +67,16 @@ progress {
 		content: '';
 
 		will-change: width;
-		animation: progress-in 0.5s ease-in forwards;
+		animation: progress 0.5s ease-in-out forwards;
 
 		@at-root {
-			@keyframes progress-in {
+			@keyframes progress {
 				from {
 					width: 0;
+				}
+
+				to {
+					width: 100%;
 				}
 			}
 		}
