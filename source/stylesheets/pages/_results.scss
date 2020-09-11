@@ -98,60 +98,76 @@ $gauge-hand-height: 8px;
 				opacity: 0;
 			}
 
-			12.5% {
+			10% {
 				opacity: 1;
 			}
 
-			25% {
+			20% {
 				content: attr(data-loading-1);
 
 				opacity: 0;
 			}
 
-			26% {
+			21% {
 				content: attr(data-loading-2);
 
 				opacity: 0;
 			}
 
-			37.5% {
+			30% {
 				opacity: 1;
+			}
+
+			40% {
+				content: attr(data-loading-2);
+
+				opacity: 0;
+			}
+
+			41% {
+				content: attr(data-loading-3);
+
+				opacity: 0;
 			}
 
 			50% {
-				content: attr(data-loading-2);
-
-				opacity: 0;
-			}
-
-			51% {
-				content: attr(data-loading-3);
-
-				opacity: 0;
-			}
-
-			62.5% {
 				opacity: 1;
 			}
 
-			75% {
+			60% {
 				content: attr(data-loading-3);
 
 				opacity: 0;
 			}
 
-			76% {
+			61% {
 				content: attr(data-loading-4);
 
 				opacity: 0;
 			}
 
-			87.5% {
+			70% {
+				opacity: 1;
+			}
+
+			80% {
+				content: attr(data-loading-4);
+
+				opacity: 0;
+			}
+
+			81% {
+				content: attr(data-loading-5);
+
+				opacity: 0;
+			}
+
+			90% {
 				opacity: 1;
 			}
 
 			100% {
-				content: attr(data-loading-4);
+				content: attr(data-loading-5);
 
 				opacity: 0;
 			}

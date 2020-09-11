@@ -1,5 +1,5 @@
 ---
-title: "O Pegabot nasceu com o intuito de fazer grandes análises"
+title: "O PegaBot é uma ferramenta de educação midiática"
 date: 2020-08-11T16:27:19-03:00
 draft: false
 menu:
@@ -17,8 +17,4 @@ bookmark:
   alt: "/"
   caption: "A primeira grande análise do Pegabot"
 ---
-O PegaBot tem o objetivo de ajudar a combater esse problema e deixar o debate sobre bots no Brasil mais transparente e informado.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend luctus augue, nec rhoncus ex molestie faucibus. Curabitur ut tellus lectus.
-
-Integer ultricies consectetur erat, in finibus nulla tristique eu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque ac felis aliquet, eleifend enim vitae, sagittis dui. Donec interdum lectus in risus vehicula, sit amet rhoncus magna commodo. Phasellus imperdiet arcu vel tincidunt aliquet.
+Por meio do uso de um algoritmo que promove a transparência no comportamento dos robôs nas mídias sociais, o projeto visa fortalecer organizações da sociedade civil, jornalistas, governos e cidadãos, como um todo, na identificação e contextualização de campanhas de desinformação.

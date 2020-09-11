@@ -5,13 +5,20 @@ draft: false
 menu:
 weight: 3
 slug: ""
+intro: "Os algoritmos do PegaBot  selecionam uma amostra de até 100 tweets mais recentes publicados pelo perfil analisado. O objetivo é identificar a neutralidade do perfil analisado. Quanto mais neutro, menor a chance de ser considerado um bot."
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac ullamcorper arcu, a euismod dolor. Cras vitae varius ipsum. Vivamus lacinia, felis vel hendrerit molestie, felis mi maximus augue, non tincidunt leo dui eu massa. Mauris semper sit amet erat non porttitor. Aliquam augue elit, aliquam id sollicitudin eu, tempus vel sem. Sed non lobortis est. Curabitur porttitor nisi ullamcorper ex tempor, id aliquam quam maximus. Vivamus feugiat enim orci, quis volutpat felis vulputate ac. Donec varius tincidunt nisl, mollis vulputate purus placerat nec.
+Os algoritmos do PegaBot  selecionam uma amostra de até 100 tweets mais recentes publicados pelo perfil analisado. O objetivo é identificar a neutralidade do perfil analisado. Quanto mais neutro, menor a chance de ser considerado um bot.
 
-Nunc tempor auctor lectus. Integer dignissim enim turpis, sit amet ultricies massa suscipit in. Sed at finibus arcu, ut tincidunt lectus. Aliquam dignissim egestas magna nec congue. Suspendisse efficitur, tellus a interdum luctus, dui est sodales nibh, id varius magna justo vel dolor. Donec quam lacus, hendrerit condimentum sapien at, condimentum cursus odio. Sed sit amet mi cursus, elementum sapien accumsan, consectetur nisl.
+Após coletar os dados, os algoritmos do PegaBot fornecem uma pontuação, em uma escada de -5 a 5, de cada uma das palavras dos tweets coletados. A classificação se baseia em uma biblioteca, onde, cada uma das palavras possui uma pontuação, sendo considerada mais ou menos negativa. Assim, ao final da classificação, calcula-se a pontuação média para a quantidade de palavras positivas, negativas e neutras utilizadas pelo usuário.
 
-Proin placerat felis justo, quis luctus purus condimentum non. Cras aliquam consectetur enim, ut rhoncus tortor placerat vitae. Morbi a pretium leo, non facilisis turpis. Cras lorem ex, scelerisque venenatis metus vitae, molestie congue ex. Quisque non dictum magna. Vestibulum non faucibus dolor, at tristique purus. Aliquam lacinia justo nisl, sit amet rutrum lorem tempor in. Mauris arcu dui, ullamcorper sit amet turpis sed, tempus auctor dui. Phasellus placerat dictum turpis, non mattis quam tincidunt quis. Mauris pulvinar non elit vel ultricies. Integer pellentesque, metus at vestibulum scelerisque, metus arcu vehicula lorem, in dapibus purus neque ut nulla. Sed ullamcorper eu velit non egestas. Pellentesque ut auctor lorem, et lacinia metus. Phasellus tempus posuere dolor sed gravida. Ut mattis, neque quis euismod venenatis, mi lectus porttitor ex, at consectetur odio orci et eros.
+Como o PegaBot prepara os dados:
 
-Cras in lectus tellus. Pellentesque tincidunt ut tortor eu accumsan. Duis porta feugiat leo. Etiam vitae felis eget felis viverra convallis. Fusce eros elit, commodo eu augue id, laoreet tincidunt nulla. Integer ex dui, tincidunt vitae tellus ac, euismod ornare lectus. Vivamus semper felis tellus, eu hendrerit est ullamcorper sed. Sed egestas orci id lectus pretium fermentum. Maecenas ultrices magna in tortor dictum egestas at at mauris. Proin fringilla sem quis feugiat lobortis. Nullam non lacinia lectus. Pellentesque feugiat sapien ipsum, vel dictum magna lacinia eget. Donec sed magna id ex rutrum dictum. In neque nunc, venenatis et tincidunt sit amet, vestibulum et justo. Suspendisse pellentesque purus eu mi semper tincidunt. Phasellus quis enim sollicitudin, tincidunt metus quis, iaculis nunc.
+- Seleciona os últimos tweets publicados pelo usuário (até 100);
+- Pontua o discurso de cada tweet baseado em uma dicionário de sentimento, onde cada palavra é pontuada de acordo com uma classificação;
+- Pontuações variam de -5 a 5, sendo -5 mais negativas e 5 mais positivas
+- Palavras neutras são avaliadas com uma pontuação zero;
+- É realizada uma ponderação das pontuações obtidas por cada tweet;
 
-Suspendisse potenti. Nulla semper feugiat vestibulum. Nulla quis lorem id velit rhoncus egestas. Fusce bibendum malesuada erat, nec rutrum nunc interdum eget. Aliquam ut placerat dolor. In ultricies ipsum a tristique sodales. Curabitur vel lectus eget sapien ultrices efficitur.
+**Observações**
+
+Ao calcular as médias entre palavras neutras, negativas e positivas, observamos uma tendência de, quanto menos neutro o sentimento, maiores são as probabilidades do usuário receber uma pontuação maior, assemelhando-se mais a um comportamento de bot.

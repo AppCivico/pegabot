@@ -6,6 +6,8 @@ title: "Quem financia o PegaBot?"
 layout: none
 type: faq
 language: pt
-weight: 9
+weight: 6
 ---
-O Pegabot é uma iniciativa do Instituto Tecnologia e Sociedade do Rio e do Instituto Tecnologia &amp; Equidade. Ambas as organizações vêm utilizando recursos próprios para o desenvolvimento desse projeto, por entender que a disponibilização de uma ferramenta como esta é fundamental para a democracia brasileira. Caso você também queira apoiar o projeto, escreva para pegabot@itsrio.org.
+O Pegabot é financiado pela União Europeia, por meio do projeto “Exposing Bot Disinformation in Brazil”, selecionado no escopo do edital “Instrumento para Democracia e Direitos Humanos” lançado em 2018. Após passar por rigoroso processo de avaliação, o projeto foi escolhido para receber recursos para seu desenvolvimento. Além disso, a versão em espanhol da ferramenta, “Atrapabot”, foi financiada pelo National Democratic Institute também por meio de um processo de edital de seleção.
+
+Antes da obtenção desse financiamento, o projeto foi custeado de maneira independente, a partir de recursos próprios do Instituto Tecnologia e Sociedade do Rio e do Instituto Tecnologia & Equidade.

@@ -6,6 +6,6 @@ title: "O PegaBot funciona com todas as redes sociais?"
 layout: none
 type: faq
 language: pt
-weight: 1
+weight: 3
 ---
-Por enquanto, não. Neste primeiro release, temos acesso apenas ao Twitter. Facebook, WhatsApp e outras redes sociais impõem mais barreiras de acesso à API, por isso ainda estamos trabalhando para que as próximas versões do PegaBot já estejam integradas a essas plataformas.
+Por enquanto, não. Facebook, Instagram, WhatsApp e outras redes sociais impõem mais barreiras de acesso à API (interface de integração entre serviços e programas), por isso,  o PegaBot só funciona no Twitter. Existem outras metodologias e ferramentas para verificar o uso da automação nas demais plataformas.

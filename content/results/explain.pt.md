@@ -1,5 +1,5 @@
 ---
-title: "Como interpretar os principais resultados? é muito simples, veja!"
+title: "Saiba como interpretar os resultados do PegaBot"
 date: 2020-08-14T00:22:30-03:00
 draft: false
 figure:
@@ -8,11 +8,4 @@ figure:
   alt: "Captura do mostrador de resultados"
 weight: 1
 ---
-
-O pegabot analisa inúmeros critérios, os principais são: perfil do usuário, rede, análise sentimental. A nota vem da junção de todos os sub-critérios analisados por cada parte desta.
-
-A pontuação total do bot não é uma média simples dos outros subtotais, é ponderada de acordo com a importância do índice e também com o contexto…
-
-Então, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae porttitor libero, in molestie purus. Aenean vehicula lectus et augue luctus commodo. Sed ut velit ipsum. Nunc ac lacus a ex pretium gravida eu id erat. Nunc id sagittis nisi. Sed nec lectus in nulla viverra hendrerit at sed odio.
-
-É muito importante que vocês aprovem o resultado da análise para que a gente consiga verificar se o algoritmo está funcionando perfeitamente.
+O PegaBot indica o percentual de probabilidade de um perfil do Twitter ser um bot. Quanto maior a nota, maior a chance daquela conta não ser de uma pessoa real. Cada perfil pesquisado ocupa uma zona do medidor: verde, amarela ou roxa. Se o perfil pesquisado estiver na zona roxa, a chance de ser um bot é alta, ou seja, essa conta possui um comportamento bastante similar ao de um robô. Muitos resultados são classificados na zona amarela, o que significa que existem elementos para suspeitar de uso de automação, mas em menor nível. Neste caso, pode ser que seja um perfil usado com pouca frequência, um uso humano muito repetitivo ou um perfil institucional que utiliza plataformas para agendamento de tweets. Se é verde, provavelmente é humano, ou seja, o índice de comportamento similar ao de um robô é baixo.

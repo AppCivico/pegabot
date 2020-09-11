@@ -5,76 +5,29 @@ draft: false
 menu:
 slug: ""
 weight: 1
+intro: "Algumas das informações públicas dos perfis consideradas na análise do PegaBot são o nome do perfil do usuário, e quantos caracteres ele possui, quantidade de perfis seguidos (following) e seguidores (followers), texto da descrição do perfil, número de postagens (tweets) e favoritos."
 ---
-Dados a serem coletados: Nome Nome da tela Descrição Etiqueta de verificação do Twitter Foto do perfil Número de seguidores Número de amigos Data de criação Número de Tweets Número de Favoritos
+Algumas das informações públicas dos perfis consideradas na análise do PegaBot são o nome do perfil do usuário, e quantos caracteres ele possui, quantidade de perfis seguidos (following) e seguidores (followers), texto da descrição do perfil, número de postagens (tweets) e favoritos.
+Após coletar as informações, os algoritmos do PegaBot processam e transformam  os dados recebidos em variáveis que compõem o cálculo final de probabilidade.
 
-Preparação dos dados: conte o número de caracteres no nome. Conte o número de caracteres no nome da tela. Tente encontrar a subcadeia "bot" no nome ou no nome da tela. Remova todo o espaço e o sublinhado no nome e no nome da tela. semelhança do nome e do nome da tela Conte o número de caracteres na descrição Faça uma proporção do número de amigos no número de seguidores Transforme a data de criação na idade do dia da conta Calcule o número de tweets publicados por dia
+Como o PegaBot prepara os dados:
 
-Lista de subíndice:
+- Conta o número de caracteres no nome do usuário (arroba/handle);
+- Conta o número de caracteres do nome do perfil do usuário;
+- Realiza uma busca da palavra "bot" no nome do usuário;
+- Realiza comparações entre o nome do usuário (arroba/handle) com seu nome de perfil e busca similaridades em número de caracteres.
 
-Semelhança de nome e nome de tela
-Número de dígitos no nome da tela
-Comprimento do nome
-Comprimento do nome da tela
-Comprimento da descrição
-Era
-Tweets por dia
-Favorito
-Foto do perfil
-Proporção de amigos / seguidores
-Cálculo da probabilidade:
+O que o PegaBot analisa:
+- **Semelhança de nome do usuário e nome**: compara cada uma das letras que compõe o nome do usuário (arroba/handle) e o nome que aparece no perfil. Caso exista a palavra "bot", um peso maior será adicionado.
+- **Número de dígitos no nome do usuário**: Busca por uma composição de nome de perfil que contenha letras e números. Caso existam uma quantidade superior a dois dígitos na composição, maior peso é adicionado.
+- **Comprimento do nome**: pesos maiores são adicionados em nomes que possuem uma quantidade superior a 15 caracteres.
+- **Comprimento do nome  do usuário (ou arroba)**: pesos maiores são adicionados em nomes que possuem uma quantidade superior a 10 caracteres.
+- **Comprimento da descrição do perfil**: pesos maiores são adicionados em descrições de perfil que possuem uma quantidade de caracteres inferior a 10.
+- **Idade do perfil**: Perfis com uma data de criação inferior a 3 meses (90 dias) ganham uma pontuação maior.
+- **Número de Tweets**: Perfis que tuitam muito em um curto intervalo de tempo recebem uma pontuação maior.
+- **Favoritos**: A quantidade de favoritos de um perfil também é considerada. Perfis com maior quantidade de favoritos recebem uma pontuação maior.
+- **Foto do perfil**: Verificamos a existência de uma foto de perfil. Perfis que não possuem, recebem uma pontuação maior.
 
-Se a conta for confirmada pelo Twitter, o resultado final será sempre sempre 0
+**Observações**
 
-Valor base de cada subíndice: 0,
-
-A pontuação de similaridade é calculada comparando o número de letras e cada letra em comum, o intervalo é entre 0 e 1. Se o nome ou o nome da tela contiver a subcadeia “bot”, esse valor será 1
-
-Número de dígitos: se for maior que 2, o número de dígitos será multiplicado por 0,12; o máximo será 1; caso contrário, o valor base será mantido.
-
-Comprimento do nome: se for maior que 15, o comprimento será multiplicado por 0,009, o máximo será 1; caso contrário, o valor base será mantido
-
-Comprimento do nome da tela: se for maior que 10, o comprimento será multiplicado por 0,012; o máximo será 1; caso contrário, o valor base será mantido.
-
-Comprimento da descrição: se for menor que 10, o comprimento é multiplicado por 0,1 e removido de 1; o mínimo é 0; caso contrário, o valor base é mantido
-
-Idade: se for mais de 90 (3 meses), a idade é multiplicada por 0,001 e removida de 1, o máximo é 0, caso contrário, 1 é usado
-
-Tweets por dia: Número de tweets por dia multiplicado por 0,01 (sem limite máximo)
-
-Favorito: o número de favoritos é multiplicado por 0,01 e removido de 1, no mínimo em 0
-
-Foto do perfil: se existe uma foto do perfil, a pontuação é a pontuação base; caso contrário, é 10 Proporção de amigos / seguidores: Removemos a proporção de 1, no mínimo, a 0
-
-Em seguida, uma média de todo o subíndice é calculada e usada para a pontuação do usuário.
-
-Mais explicações: Uma conta verificada no Twitter (etiqueta azul) significa que a conta foi verificada por um agente humano, que confirmou que a conta é autêntica. A conta teve que fornecer muitas informações e validá-las com um número de telefone. Podemos supor que um especialista para avaliar uma conta sempre será melhor do que um algoritmo para localizar se uma conta é humana ou bot.
-
-O valor base pode ser 0, mas significa que começamos considerando todos os perfis como humanos. Isso não é muito bom. Pode ser 1, então começamos assumindo que todas as contas verificadas são bot, é o pior. O número oficial do Twitter é 15% das contas são bot. Então, usamos esse valor base (0,15) para nossos cálculos
-
-Na maioria das vezes, os seres humanos criarão um nome de tela semelhante ao seu nome. Um bot pode, às vezes, gerar dois nomes totalmente diferentes para isso. Existem alguns bot oficiais que colocam "bot" em seu nome. Se for verdade, a Similaridade será igual a 1.
-
-Um nome longo ou nome de tela é suspeito, um humano normalmente não precisa de tanto personagem. Mas se o bot gerar um nome aleatório, pode ser longo às vezes.
-
-Para a descrição, é o oposto: é mais provável que um bot faça uma descrição vazia, ou muito curta, do que longa.
-
-O número usual de dígitos (se usado) em um nome é geralmente dois para um ser humano, que pode representar os dois primeiros números de um CEP, uma idade ou um ano de nascimento. Mais de 2, torna-se suspeito e pode deixar pensar que o nome foi gerado aleatoriamente
-
-Se você precisar verificar uma nova conta no Twitter (menos de três meses), podemos considerar essa conta suspeita. Então, usamos o valor de 1 (certamente um bot) para a média, após 3 meses. A pontuação começa a diminuir, com um mínimo de 0, para cada dia mais na idade.
-
-Tweets por dia é a única pontuação que não tem um máximo, se um usuário pode postar mais de 5.000 tweets em um dia, é quase certamente um bot, portanto, o score máximo não se limita a influenciar mais a média
-
-A maioria dos bot não tem uma foto de perfil, então o valor de 1 é usado no caso de nenhuma imagem.
-
-Existem muitos tipos de bots, às vezes eles estão trabalhando sozinhos e apenas tentam seguir muitas pessoas para obter muitos seguidores em troca e serem mais influentes. Às vezes, os bots são seguidos automaticamente por todos os outros bot da mesma rede. Um usuário humano normal geralmente possui um número de seguidores próximo ao número de amigos. Quanto mais a proporção estiver longe de 1, mais a conta será considerada como bot
-
-Teste / Exemplos:
-
-Perfil Nosso resultado Índice de usuários do botômetro
-resultado
-Realidade
-@ solneversets100 68% 61% Bot
-@ Betelgeuse_3 42% 47% Bot
-@infinite_scream 41% 44% Bot
-@tinycarebot 45% 35% Bot
-@Tremor de terra
+A presença do selo de verificação oferecido pelo Twitter influencia positivamente nos resultados, uma vez que a plataforma possui um procedimento manual para validar a identidade desses usuários.

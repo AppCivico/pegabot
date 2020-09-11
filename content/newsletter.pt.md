@@ -1,5 +1,5 @@
 ---
-title: "Deixe o seu e-mail para receber próximas análises Pegabot "
+title: "Deixe seu email para acompanhar as novidades sobre o PegaBot."
 date: 2018-03-26T15:21:11-03:00
 draft: false
 menu:

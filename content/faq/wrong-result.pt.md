@@ -2,10 +2,10 @@
 date: 2018-03-13T18:07:28-03:00
 draft: false
 id: "o-resultado-está-errado"
-title: "O resultado está errado! Tenho certeza de que uma conta é bot/humana."
+title: "O resultado está errado!..."
 layout: none
 type: faq
 language: pt
-weight: 6
+weight: 10
 ---
-O PegaBot ainda está em fase de testes, a precisão dos resultados vai melhorar com o tempo. Em breve, você poderá submeter esse erro para analisar e corrigir o erro. Dito isso, detectar bots é mesmo uma tarefa difícil (se fosse fácil as empresas de mídias sociais já teriam solucionado todo o problema). Nossa plataforma funciona reconhecendo padrões comportamentais. Por isso, os resultados devem servir para complementar, e não substituir, a sua própria opinião.
+A precisão dos resultados do Pegabot é um ponto de aprimoramento contínuo. De toda forma, você pode submeter este erro para que nosso time analise e corrija o equívoco. Dito isso, detectar bots é mesmo uma tarefa difícil (se fosse fácil as empresas de mídias sociais já teriam solucionado todo o problema). **Nossa plataforma funciona reconhecendo padrões comportamentais.** Por isso, os resultados devem servir para complementar e não substituir a sua própria opinião. [**Saiba como reportar um erro nas análises do PegaBot aqui**](/collaborate).

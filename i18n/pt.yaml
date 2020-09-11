@@ -5,13 +5,15 @@
 - id: analisysDownload
   translation: Baixar análise
 - id: analisysLoading-1
-  translation: Aguarde. O Pegabot está analisando.
+  translation: Aguarde enquanto o PegaBot realiza a análise
 - id: analisysLoading-2
-  translation: O Pegabot analisa os tuites do perfil pesquisado.
+  translation: O Pegabot analisa os tweets do perfil.
 - id: analisysLoading-3
-  translation: O Pegabot analisa a rede do perfil pesquisado.
+  translation: O Pegabot analisa a frequência de tweets.
 - id: analisysLoading-4
-  translation: O Pegabot utiliza análise sentimental para avaliar sua probabilidade de ser um robô.
+  translation: O Pegabot analisa a linguagem do perfil.
+- id: analisysLoading-5
+  translation: O Pegabot analisa a rede do perfil.
 - id: analysisProgress
   translation: "{{ .Count }} contas analisadas."
 - id: analyzeAProfile
@@ -57,15 +59,15 @@
 - id: newsletter
   translation: "Newsletter"
 - id: network
-  translation: "Rede"
+  translation: "Rede (seguidores e seguidos)"
 - id: noScriptMessage
   translation: "Essa funcionalidade depende de JavaScript."
 - id: notFound
   translation: "Não encontrado."
 - id: profileOf
-  translation: "Perfil de"
+  translation: "Perfil de usuário"
 - id: profileAnalysis
-  translation: "Análise de perfil"
+  translation: "Análise por critérios"
 - id: profileLink
   translation: "Perfil na rede social"
 - id: readMore
@@ -89,7 +91,7 @@
 - id: signUpNewsletter
   translation: "Inscreva-se à lista"
 - id: sentiment
-  translation: "Emocional"
+  translation: "Linguagem utilizada nos tweets"
 - id: socialNetwork
   translation: "Rede social"
 - id: subscribe
@@ -121,4 +123,4 @@
 - id: user
   translation: "Usuário"
 - id: usePegabot
-  translation: "Agora que você já viu o que pode ser feito com o Pegabot, use a ferramenta. <br /> Ela foi feita pra você!"
+  translation: "Agora que você já viu o que pode ser feito com o PegaBot,<br /> analise a probabilidade de um perfil do Twitter ser um bot"

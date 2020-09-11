@@ -6,6 +6,13 @@ title: "O que a nota significa?"
 layout: none
 type: faq
 language: pt
-weight: 4
+weight: 7
 ---
-O **Pegabot** analisa o histórico de postagens do perfil da rede social que você pede para ser analisado. Neste momento o **Pegabot** se baseia em padrões de comportamento para identificar se é mais provável um humano que utilize aquele perfil, ou um robô. Os critérios para fazer essa avaliação são o intervalo de tempo entre cada postagem (um intervalo pequeno entre cada postagem, 2 segundos por exemplo, podem indicar que a postagem foi feita por um robô); a frequência e a aleatoriedade no tempo em que as postagens são feitas (postagens feitas sempre no mesmo horário, às 10 horas da manhã, por exemplo, podem ter sido feitas por um robô); e a pessoalidade dada aos textos postados (textos repetidos ou extraídos de outras publicações, pré-formatados, são um indicativo de ele ter sido feito por um robô). Com base na média geral das postagens do perfil, o **Pegabot** dá uma nota, que indica a probabilidade daquele perfil ser ou não um robô.
+O algoritmo do PegaBot utiliza informações públicas dos perfis no Twitter para realizar suas análises. O objetivo é identificar características que ajudem a determinar se o perfil é mais ou menos bot. Neste momento o PegaBot se baseia em padrões de comportamento para identificar se é mais provável que um humano utilize aquele perfil ou um robô. Utilizamos os seguintes critérios:
+
+- **Perfil do Usuário**: Algumas das informações públicas dos perfis consideradas na análise do PegaBot são o nome do perfil do usuário e quantos caracteres ele possui, quantidade de perfis seguidos (following) e seguidores (followers), texto da descrição do perfil, número de postagens (tweets) e favoritos. Aqui, elementos como a ausência de imagem de perfil e descrição, por exemplo, aumentam a probabilidade da conta ser um robô.
+- **Frequência e horário**: Perfis que tuitam muito em um curto intervalo de tempo recebem uma pontuação maior, pois este é um comportamento mais parecido ao de bots (bot-likeness). Um intervalo pequeno entre cada postagem, 2 segundos por exemplo, podem indicar que a postagem foi feita por um robô. A frequência e a aleatoriedade no tempo em que as postagens são feitas também apontam características do comportamento: postagens feitas sempre no mesmo horário, às 10 horas da manhã, por exemplo, podem ter sido feitas por um robô.
+- **Rede**: O algoritmo do PegaBot coleta uma amostra da linha do tempo do usuário, identificando hashtags utilizadas e menções ao perfil para realizar suas análises. O objetivo é identificar características de distribuição de informação na rede da conta analisada.
+- **Análise de sentimento**: Os algoritmos do PegaBot  selecionam uma amostra de até 100 tweets mais recentes publicados pelo perfil analisado. O objetivo é identificar palavras que tornam o que é publicado pelo usuário mais ou menos negativo (sentimento).
+
+Para uma explicação completa dos critérios, acesse a página Transparência.
