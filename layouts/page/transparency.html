@@ -53,11 +53,10 @@
 		{{ with .Site.GetPage "results" }}
 			{{ range where (.Resources.Match "explain*") ".Kind" "page" }}
 			<article
-			   class="
-			   delayed-entrance
-			   delayed-entrance__bottom
-			   snapping-section
-			   "
+				class="
+					delayed-entrance
+					delayed-entrance__bottom
+				"
 			>
 				<div class="container">
 					<h2
