@@ -1,0 +1,25 @@
+{{ with $.Site.Data.sponsors }}
+	<div class="sponsors">
+		<h6>{{ i18n "sponsors" }}</h6>
+		<ul>
+			{{ range . }}
+				<li
+					{{ with .id }} class="sponsorship__item--{{ . }}" {{ end }}
+				>
+					{{ with .link }}
+						<a href="{{ . }}" target="_blank">
+					{{ end }}
+					<img
+						src="/assets/images/{{ .iconNegative }}"
+						width="{{ .iconWidth }}"
+						height="{{ .iconHeight }}"
+						alt="{{ .name }}"
+					/>
+					{{ with .link }}
+						</a>
+					{{ end }}
+				</li>
+			{{ end }}
+		</ul>
+	</div>
+{{ end }}

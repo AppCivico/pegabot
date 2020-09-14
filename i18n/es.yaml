@@ -78,6 +78,8 @@
   translation: "Emocional"
 - id: socialNetwork
   translation: "Red social"
+- id: sponsorship
+  translation: "Financiación"
 - id: subscribe
   translation: "Suscribirse"
 - id: temporal

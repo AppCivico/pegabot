@@ -54,7 +54,8 @@ $height--desktop: $line-height * 3rem;
 }
 
 .footer-menu {
-	margin-bottom: $line-height * 2.5em;
+	margin-top: $line-height * 1rem;
+	margin-bottom: $line-height * 1rem;
 
 	font-size: ms(-1);
 
@@ -94,16 +95,35 @@ $height--desktop: $line-height * 3rem;
 
 .site-footer [role='contentinfo'] {
 	clear: left;
+
+	display: flex;
+
+	flex-wrap: wrap;
+
+	&::before {
+		flex-basis: 100%;
+		order: 1;
+
+		content: '';
+	}
+
+	> * {
+		flex-basis: 0;
+		flex-grow: 1;
+	}
 }
 
+.site-footer [role='contentinfo'] .sponsors,
 .site-footer [role='contentinfo'] .responsibles {
 	@extend %content-info;
+
+	display: flex;
+
+	align-items: center;
 
 	margin-right: auto;
 	margin-bottom: $line-height * 1em;
 	margin-left: 0;
-
-	overflow: hidden;
 
 	vertical-align: inherit;
 
@@ -152,22 +172,34 @@ $height--desktop: $line-height * 3rem;
 	}
 }
 
+.site-footer [role='contentinfo'] .sponsors {
+	flex-grow: 1;
+}
+
+.site-footer [role='contentinfo'] .responsibles {
+	flex-grow: 2;
+}
+
+.site-footer .sponsors h6,
 .site-footer .responsibles h6 {
 	font-size: ms(1);
-	font-family: inherit;
+	font-family: $title-font-stack;
+
+	text-align: left;
 
 	color: inherit;
 
 	@media screen and (min-width: breakpoint('desktop')) {
 		float: left;
 
-		line-height: $height--desktop;
 	}
 }
 
+.site-footer .sponsors ul,
 .site-footer .responsibles ul {
 	display: flex;
 
+	flex-grow: 1;
 	flex-wrap: wrap;
 
 	text-align: center;
@@ -177,21 +209,29 @@ $height--desktop: $line-height * 3rem;
 	}
 }
 
+.site-footer .sponsors li,
 .site-footer .responsibles li {
 	@media screen and (min-width: breakpoint('desktop')) {
 		width: auto;
 	}
 }
 
+.site-footer [role='contentinfo'] .sponsors li {
+	&:last-child {
+		margin-right: 0;
+		margin-left: auto;
+	}
+}
+
 .site-footer .developers {
-	position: relative;
-	right: 50%;
-	left: 50%;
+	clear: both;
 
-	width: 100vw;
+	flex-basis: 100%;
 
-	margin-right: -50vw;
-	margin-left: -50vw;
+	min-width: 100vw;
+
+	margin-right: $gutter * -1;
+	margin-left: $gutter * -1;
 
 	font-weight: normal;
 	font-size: ms(-2);

@@ -1,0 +1,9 @@
+eU:
+  id: "europeanUnion"
+  name: "European Union"
+  icon: "Flag_of_Europe.svg"
+  iconNegative: "Flag_of_Europe.svg"
+  iconHeight: 132
+  iconWidth: 197
+  link: "https://europa.eu/"
+  weight: 0

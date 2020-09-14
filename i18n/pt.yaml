@@ -94,6 +94,8 @@
   translation: "Linguagem utilizada nos tweets"
 - id: socialNetwork
   translation: "Rede social"
+- id: sponsorship
+  translation: "Financiamento"
 - id: subscribe
   translation: "Assinar"
 - id: temporal

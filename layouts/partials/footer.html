@@ -1,70 +1,44 @@
 
-	{{ partialCached "newsletter.html" . }}
-</div><!-- .content-container -->
-<div class="site-footer-container">
-	<footer class="site-footer">
-		{{ with $.Site.Params.tagline }}
-		<div class="site-tagline">{{ . }}</div>
-		{{ end }}
-
-		{{ with $.Site.Params.email }}
-		<div class="site-footer__contact">
-			<a href="mailto:{{ . }}" target="_blank">
-				{{ i18n "contact" }}: {{ . }}
-			</a>
-		</div>
-
-		{{ end }}
-
-		{{ if ne .Kind "404" }}
-			{{ with .Site.Menus.main }}
-				<nav class="footer-menu">
-					<ul>
-						{{ partial "menu.html" . }}
-					</ul>
-				</nav>
+		{{ partialCached "newsletter.html" . }}
+	</div><!-- .content-container -->
+	<div class="site-footer-container">
+		<footer class="site-footer">
+			{{ with $.Site.Params.tagline }}
+			<div class="site-tagline">{{ . }}</div>
 			{{ end }}
-		{{ end }}
 
-		{{ if or $.Site.Data.developers $.Site.Data.responsibles }}
-			<div role="contentinfo">
-				{{ with $.Site.Data.responsibles }}
-					<style>
-						{{ range . }}
-							.site-footer .responsibles__item--{{ .id }} {
-								background-image: url(/assets/images/{{ .iconNegative }});
-								min-width: {{ add .iconWidth 30 }}px;
-								min-height: {{ add .iconHeight 30 }}px;
-							}
-						{{ end }}
-					</style>
-				{{ end }}
-				{{ partialCached "responsibles.html" . }}
-
-				{{ with $.Site.Data.developers }}
-					<div class="developers">
-						<h6>{{ i18n "developedBy" }}</h6>
-						<ul>
-							{{ range . }}
-								<li
-									{{ with .id }} class="developers__item--{{ . }}" {{ end }}
-								>
-									{{ with .link }}
-										<a href="{{ . }}" target="_blank">
-									{{ end }}
-										{{ .name }}
-									{{ with .link }}
-										</a>
-									{{ end }}
-								</li>
-							{{ end }}
-						</ul>
-					</div>
-				{{ end }}
+			{{ with $.Site.Params.email }}
+			<div class="site-footer__contact">
+				<a href="mailto:{{ . }}" target="_blank">
+					{{ i18n "contact" }}: {{ . }}
+				</a>
 			</div>
-		{{ end }}
-	</footer>
-</div>
+
+			{{ end }}
+
+			{{ if ne .Kind "404" }}
+				{{ with .Site.Menus.main }}
+					<nav class="footer-menu">
+						<ul>
+							{{ partial "menu.html" . }}
+						</ul>
+					</nav>
+				{{ end }}
+			{{ end }}
+
+			{{ if or $.Site.Data.sponsors (or $.Site.Data.developers $.Site.Data.responsibles) }}
+				<div role="contentinfo">
+
+					{{ partialCached "responsibles.html" . }}
+
+					{{ partialCached "sponsors.html" . }}
+
+					{{ partialCached "developers.html" . }}
+
+				</div>
+			{{ end }}
+		</footer>
+	</div>
 	{{ partialCached "browserUpdate.html" . }}
 </div><!-- .main-container -->
 

@@ -5,14 +5,19 @@
 	<ul>
 		{{ range . }}
 			<li
-			{{ with .id }}
-				class="responsibles__item--{{ . }}"
-			{{ end }}
+				{{ with .id }}
+					class="responsibles__item--{{ . }}"
+				{{ end }}
 			>
 				{{ with .link }}
 					<a href="{{ . }}" target="_blank">
 				{{ end }}
-				{{ .name }}
+				<img
+					src="/assets/images/{{ .iconNegative }}"
+					width="{{ .iconWidth }}"
+					height="{{ .iconHeight }}"
+					alt="{{ .name }}"
+				/>
 				{{ with .link }}
 					</a>
 				{{ end }}

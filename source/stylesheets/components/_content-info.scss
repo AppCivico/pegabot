@@ -1,4 +1,3 @@
-$logo-width: 140px / 16px * 1rem;
 
 %content-info {
 	width: 100%;
@@ -29,12 +28,9 @@ $logo-width: 140px / 16px * 1rem;
 }
 
 %content-info li {
-	@include image-replacement;
-
 	float: left;
 
 	width: 50%;
-	height: $height--desktop;
 	max-width: 140px;
 	min-width: 80px;
 
@@ -50,4 +46,9 @@ $logo-width: 140px / 16px * 1rem;
 	display: block;
 
 	height: 100%;
+}
+
+%content-info img {
+	width: auto;
+	max-height: 47px;
 }

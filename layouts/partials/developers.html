@@ -1,0 +1,20 @@
+{{ with $.Site.Data.developers }}
+	<div class="developers">
+		<h6>{{ i18n "developedBy" }}</h6>
+		<ul>
+			{{ range . }}
+				<li
+					{{ with .id }} class="developers__item--{{ . }}" {{ end }}
+				>
+					{{ with .link }}
+						<a href="{{ . }}" target="_blank">
+					{{ end }}
+						{{ .name }}
+					{{ with .link }}
+						</a>
+					{{ end }}
+				</li>
+			{{ end }}
+		</ul>
+	</div>
+{{ end }}
