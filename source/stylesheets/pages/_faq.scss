@@ -61,8 +61,6 @@ $faq-bg: hsl(269, 31%, 47%);
 }
 
 .questions {
-	position: relative;
-
 	display: flex;
 
 	align-items: baseline;
@@ -91,11 +89,11 @@ $faq-bg: hsl(269, 31%, 47%);
 }
 
 .questions__item {
-	width: 100%;
+	position: relative;
 
 	padding-right: $gutter * 0.5;
 	padding-left: $gutter * 0.5;
-	margin-bottom: $line-height * 2rem;
+	margin: 0 0 $line-height * 2rem 0;
 
 	@media screen and (min-width: breakpoint('phablet')) {
 		width: 50%;
@@ -125,7 +123,10 @@ $faq-bg: hsl(269, 31%, 47%);
 .questions__question {
 	display: inline-block;
 
-	width: 100%;
+	width: calc(100% - #{$gutter});
+
+	padding-right: $gutter * 0.5;
+	padding-left: $gutter * 0.5;
 
 	text-align: center;
 	vertical-align: bottom;
@@ -138,24 +139,54 @@ $faq-bg: hsl(269, 31%, 47%);
 	&::before {
 		content: none;
 	}
+
+	&:focus {
+		outline: 0;
+	}
 }
 
 .questions__answer {
-	display: inline-block;
+	position: absolute;
+	right: $gutter;
+	left: $gutter;
 
-	width: 100%;
+	display: inline-block;
+	z-index: layer('dropdown');
+
+	width: calc(100% - 2 * #{$gutter});
 	max-height: 0;
 
+	padding: $gutter * 0.5;
+
+	overflow: hidden;
+
+	line-height: normal;
+
+	text-align: left;
 	vertical-align: top;
 
-	[open] & {
-		max-height: 100%;
+	background-color: palette('white');
 
-		overflow: hidden;
+	border-radius: 0;
+
+	box-shadow: 2px 2px 8px 0 palette('shadow');
+	box-sizing: border-box;
+
+	transition: border-radius, max-height, opacity here-comes-the-detail 0.5s ease-in-out;
+
+	:last-child {
+		margin-bottom: 0;
+	}
+
+	[open] & {
+		overflow-x: hidden;
+		overflow-y: auto;
+
+		border-radius: 0 0 $gutter * 0.5 $gutter * 0.5;
 
 		opacity: 1;
 
-		animation: here-comes-the-detail 0.5s ease-in-out;
+		animation: here-comes-the-detail 0.5s ease-in-out forwards;
 
 		@at-root {
 			@keyframes here-comes-the-detail {
@@ -166,7 +197,7 @@ $faq-bg: hsl(269, 31%, 47%);
 				}
 
 				100% {
-					max-height: 100%;
+					max-height: 400%;
 
 					opacity: 1;
 				}
