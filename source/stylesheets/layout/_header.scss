@@ -68,7 +68,7 @@ $duration: 0.5s;
 		height: 100%;
 
 		background-image: image('mobile-menu-button.svg');
-		background-position: 50% 100%;
+		background-position: 50% 50%;
 
 		content: '';
 	}
@@ -107,25 +107,6 @@ $duration: 0.5s;
 	transition-duration: $duration;
 	transition-property: max-width, padding-right, padding-left;
 
-	&::before {
-		position: fixed;
-		top: 4rem;
-		right: 0;
-		bottom: 0;
-		left: 0;
-
-		z-index: layer('below');
-
-		background-color: palette('shadow');
-
-		content: '';
-
-		opacity: 0;
-
-		transition-duration: $duration;
-		transition-property: opacity;
-	}
-
 	[id='menu-opener']:checked + div & {
 		max-width: 100%;
 
@@ -135,7 +116,22 @@ $duration: 0.5s;
 		overflow: visible;
 
 		&::before {
+			position: fixed;
+			top: 4rem;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			z-index: layer('below');
+
+			background-color: palette('shadow');
+
+			content: '';
+
 			opacity: 1;
+
+			transition-duration: $duration;
+			transition-property: opacity;
 		}
 	}
 
