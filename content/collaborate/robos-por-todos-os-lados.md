@@ -4,8 +4,8 @@ draft: false
 title: "Quer multiplicar o conhecimento sobre bots no Twitter?"
 layout: none
 type: collaborate
-imageSrc: /uploads/twitter-letter.svg
-bottomImageSrc: /uploads/twitter-bird.svg
+imageSrc: /uploads/twitter-letter-bg.png
+bottomImageSrc: /uploads/twitter-bird-bg.png
 link: https://t.me/joinchat/AOHjCkUyx1zPuNzhf36mEw
 weight: 2
 ---

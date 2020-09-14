@@ -4,8 +4,8 @@ draft: false
 title: "Você é um desenvolvedor e quer ajudar a melhorar o algoritmo do PegaBot?"
 layout: none
 type: collaborate
-imageSrc: /uploads/globe.svg
-bottomImageSrc: /uploads/file.svg
+imageSrc: /uploads/globe-bg.png
+bottomImageSrc: /uploads/file-bg.png
 link: https://github.com/AppCivico/pegabot-backend/
 weight: 3
 ---

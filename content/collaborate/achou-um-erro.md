@@ -4,8 +4,8 @@ draft: false
 title: "Achou um erro ou quer sugerir uma melhoria?"
 layout: none
 type: collaborate
-imageSrc: /uploads/plus-sign.svg
-bottomImageSrc: /uploads/bug.svg
+imageSrc: /uploads/plus-sign-bg.png
+bottomImageSrc: /uploads/bug-bg.png
 link: 'https://itsrio2.typeform.com/to/uGFw4zDc'
 weight: 2
 ---
