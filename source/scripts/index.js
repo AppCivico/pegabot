@@ -274,10 +274,9 @@ window.$vue = new Vue({
 
 			this.$set(this.profileList[index], 'loading', true);
 
-
 			this.$http.post(`${this.metadata.apiURL}/feedback`, {
 				opinion: value,
-				analysis_id: this.profileList[index].analysis_id,
+				analysis_id: this.analysisId,
 				before(xhr) {
 					this.xhr_request.push(xhr);
 				},
