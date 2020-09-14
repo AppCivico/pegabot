@@ -4,7 +4,7 @@
 
 	{{ $input := "(Pegabot)" }}
 	{{ $output := "<b>$1</b>" }}
-	{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+	{{ $finalContent := .Content | replaceRE $input $output | replaceRE "<p>" "<p class='delayed-entrance delayed-entrance__bottom'>" | safeHTML }}
 	{{ $finalContent }}
 
 </article>
