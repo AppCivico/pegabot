@@ -59,6 +59,9 @@ main {
 	}
 }
 
+
+.article__title,
+[role='doc-subtitle'],
 .article__content {
 	@media screen and (min-width: breakpoint('tablet')) {
 		max-width: 31.25rem;
