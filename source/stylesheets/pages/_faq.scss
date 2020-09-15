@@ -96,18 +96,15 @@ $faq-bg: hsl(269, 31%, 47%);
 	margin: 0 0 $line-height * 2rem 0;
 
 	@media screen and (min-width: breakpoint('phablet')) {
-		width: 50%;
-
-		padding-right: $gutter * 0.5;
-		padding-bottom: $line-height * 1rem;
+		flex-basis: 50%;
 	}
 
 	@media screen and (min-width: breakpoint('desktop')) {
-		width: 25%;
+		flex-basis: 25%;
 	}
 
 	@media screen and (min-width: breakpoint('wide')) {
-		width: 20%;
+		flex-basis: 20%;
 	}
 }
 
@@ -122,8 +119,6 @@ $faq-bg: hsl(269, 31%, 47%);
 
 .questions__question {
 	display: inline-block;
-
-	width: calc(100% - #{$gutter});
 
 	padding-right: $gutter * 0.5;
 	padding-left: $gutter * 0.5;
@@ -147,13 +142,14 @@ $faq-bg: hsl(269, 31%, 47%);
 
 .questions__answer {
 	position: absolute;
+	top: 100%;
 	right: $gutter;
 	left: $gutter;
 
 	display: inline-block;
 	z-index: layer('dropdown');
+	// width: calc(100% - #{$gutter});
 
-	width: calc(100% - 2 * #{$gutter});
 	max-height: 0;
 
 	padding: $gutter * 0.5;
@@ -172,7 +168,7 @@ $faq-bg: hsl(269, 31%, 47%);
 	box-shadow: 2px 2px 8px 0 palette('shadow');
 	box-sizing: border-box;
 
-	transition: border-radius, max-height, opacity here-comes-the-detail 0.5s ease-in-out;
+	transition-property: border-radius max-height opacity 0.5s ease-in-out;
 
 	:last-child {
 		margin-bottom: 0;
