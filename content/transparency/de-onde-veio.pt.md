@@ -6,6 +6,7 @@ layout: none
 weight: 2
 homepage: true
 transparency: true
+language: pt
 ---
 No final da década de 1990, os bots começaram a desenvolver uma reputação negativa, ao serem usados no envio de SPAMs por e-mail, roubos de dados pessoais e fraudes, por exemplo. A partir de 2014, um fenômeno ganhou escala global e se tornou cada vez mais frequente: o uso de bots em campanhas de desinformação e manipulação do discurso na esfera pública.
 

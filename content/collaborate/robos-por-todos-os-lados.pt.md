@@ -8,5 +8,6 @@ imageSrc: /uploads/twitter-letter-bg.png
 bottomImageSrc: /uploads/twitter-bird-bg.png
 link: https://t.me/joinchat/AOHjCkUyx1zPuNzhf36mEw
 weight: 2
+language: pt
 ---
 Mais do que uma  ferramenta para detecção de bots, o PegaBot é um projeto para ajudar as pessoas a entenderem mais sobre o uso de contas automatizadas na circulação de  desinformação nas redes sociais. Compartilhe conhecimento e ajude no debate sobre o uso de bots no Twitter!

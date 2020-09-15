@@ -6,6 +6,7 @@ title: "Por que é importante um sistema de detecção de bot ser construído em
 layout: none
 type: faq
 weight: 5
+language: es
 ---
 Os sistemas em software livre concedem ao usuário a liberdade de modificar um código. Entendemos que ter um código aberto permite a participação da sociedade na sua construção e melhoria como forma de produzir um conhecimento mais democrático às tecnologias livres. Além de possibilitar que as pessoas troquem informações de forma horizontal, fortalece ações junto às plataformas digitais, suas políticas de uso e principalmente como redes de desinformação podem funcionar com uso dessas técnicas.
 

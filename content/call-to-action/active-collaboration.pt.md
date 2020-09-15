@@ -5,5 +5,6 @@ title: "Quer parar de forma ativa no Pegabot? Seja um colaborador."
 layout: none
 type: callToAction
 weight: 0
+language: pt
 ---
 [Quero colaborar]('#')

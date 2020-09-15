@@ -7,6 +7,7 @@ slug: ""
 weight: 1
 homepage: true
 transparency: true
+language: pt
 ---
 Bot, uma abreviação para robô em inglês, é um programa de computador ou _script_ criado para realizar algum tipo de automação. Afinal, ao contrário de nós humanos, computadores são ótimos para operar tarefas repetitivas.
 

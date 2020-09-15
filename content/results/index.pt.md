@@ -5,4 +5,5 @@ draft: false
 layout: results
 menu:
 slug: "resultados"
+language: pt
 ---

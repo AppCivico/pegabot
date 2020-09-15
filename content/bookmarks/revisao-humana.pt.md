@@ -9,5 +9,6 @@ link: "/"
 imageSrc: /uploads/captcha.jpg
 imageAlt:
 weight: 2
+language: pt
 ---
 A polêmica da revisão (humana) sobre decisões automatizadas

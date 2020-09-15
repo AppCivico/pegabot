@@ -9,4 +9,5 @@ layout: none
 type: investigations
 weight: 2
 homepage: false
+language: pt
 ---

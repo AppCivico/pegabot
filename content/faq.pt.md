@@ -8,4 +8,5 @@ menu:
 slug: "faq"
 layout: faq
 weight: 2
+language: pt
 ---

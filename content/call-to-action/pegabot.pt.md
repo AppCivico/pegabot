@@ -5,6 +5,6 @@ title: "Agora você já viu o que pode ser feito com o Pegabot"
 layout: none
 type: callToAction
 weight: 0
+language: pt
 ---
-
 [Usar a ferramenta](#s)

@@ -16,5 +16,6 @@ bookmark:
   link: "/"
   alt: ""
   caption: "Análises atuais do Pegabot"
+language: pt
 ---
 A partir das análises realizadas com a ferramenta PegaBot, é possível identificar, por exemplo, se um assunto desinformativo nos “Trending topics” do Twitter está sendo impulsionado por robôs. Ou mesmo se ataques realizados a um perfil foram coordenados e realizados por bots e como tomar as melhores decisões para enfrentar esse cenário.

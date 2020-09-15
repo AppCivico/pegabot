@@ -6,6 +6,7 @@ menu:
 weight: 3
 slug: ""
 intro: "Os algoritmos do PegaBot  selecionam uma amostra de até 100 tweets mais recentes publicados pelo perfil analisado. O objetivo é identificar a neutralidade do perfil analisado. Quanto mais neutro, menor a chance de ser considerado um bot."
+language: pt
 ---
 Os algoritmos do PegaBot  selecionam uma amostra de até 100 tweets mais recentes publicados pelo perfil analisado. O objetivo é identificar a neutralidade do perfil analisado. Quanto mais neutro, menor a chance de ser considerado um bot.
 

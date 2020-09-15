@@ -16,5 +16,6 @@ bookmark:
   link: "/"
   alt: "/"
   caption: "A primeira grande análise do Pegabot"
+language: pt
 ---
 Por meio do uso de um algoritmo que promove a transparência no comportamento dos robôs nas mídias sociais, o projeto visa fortalecer organizações da sociedade civil, jornalistas, governos e cidadãos, como um todo, na identificação e contextualização de campanhas de desinformação.

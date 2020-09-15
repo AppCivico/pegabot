@@ -37,7 +37,7 @@ collections:
     field: language
     pattern: "en"
   fields:
-  - {label: "Language", name: "language", widget: "select", options: ["es", "pt"]}
+  - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - name: "title"
     label: "Título"
     widget: "string"
@@ -69,7 +69,7 @@ collections:
     field: language
     pattern: "en"
   fields:
-  - {label: "Language", name: "language", widget: "select", options: ["es", "pt"]}
+  - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - name: "title"
     label: "Título"
     widget: "string"
@@ -121,7 +121,7 @@ collections:
     field: language
     pattern: "en"
   fields:
-  - {label: "Language", name: "language", widget: "select", options: ["es", "pt"]}
+  - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - name: "title"
     label: "Título"
     widget: "string"
@@ -148,7 +148,7 @@ collections:
     field: language
     pattern: "en"
   fields:
-  - {label: "Language", name: "language", widget: "select", options: ["es", "pt"]}
+  - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - name: "title"
     label: "Título"
     widget: "string"

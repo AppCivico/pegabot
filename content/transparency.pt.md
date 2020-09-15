@@ -9,5 +9,6 @@ slug: "transparência"
 linkTitle: Transparência
 layout: transparency
 weight: 2
+language: pt
 ---
 Nesta seção você terá acesso às informações de como surgiu o PegaBot, quem são os realizadores e financiadores do projeto, como o algoritmo da ferramenta foi construído e orientações para interpretar os resultados das análises. Além disso, identificar bots não é uma tarefa fácil e demanda cuidados, portanto, você poderá se aprofundar em alguns textos que separamos para você com mais detalhes sobre metodologias para detecção de automação em redes sociais. Boa leitura!

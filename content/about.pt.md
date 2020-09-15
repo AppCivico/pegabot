@@ -10,6 +10,7 @@ menu:
 slug: "sobre"
 weight: 1
 layout: "about"
+language: pt
 ---
 Bots, uma abreviação para robôs, são programas de computador criados para executar tarefas específicas. Os primeiros robôs não tinham intenções maliciosas e, ainda hoje, existem bots com objetivos de interesse público como exigir prestação de contas de políticos, viralizar causas para a igualdade de gênero ou ajudar a organizar as (muitas) tarefas diárias de seus usuários. Bom, né?
 

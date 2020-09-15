@@ -9,5 +9,6 @@ link: "/"
 imageSrc: /uploads/robos-por-toda-parte.jpg
 imageAlt:
 weight: 1
+language: pt
 ---
 Eu vejo robôs e eles estão por toda parte: (quase) tudo que você precisa saber sobre bots e metodologias para detecção de automação
