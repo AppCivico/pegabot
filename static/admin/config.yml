@@ -4,7 +4,7 @@ backend:
   # name: test-repo
   branch: dev # Branch to update (optional; defaults to master)
   repo: AppCivico/pegabot
-  site_domain: pegabot.com.br
+  site_domain: dev.pegabot.com.br
   base_url: https://api.netlify.com
   auth_endpoint: auth
   squash_merges: true
