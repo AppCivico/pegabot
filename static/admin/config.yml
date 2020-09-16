@@ -20,39 +20,6 @@ slug:
   sanitize_replacement: "-"
 
 collections:
-- name: "faq"
-  label: "Perguntas frequentes"
-  label_singular: "Pergunta frequente"
-  folder: "content/faq"
-  # identifier_field: "slug"
-  slug: "{{slug}}.{{language}}"
-  preview_path: "/faq#{{slug}}"
-  create: true
-  extension: md
-  view_filters:
-  - label: "Português"
-    field: language
-    pattern: "pt"
-  - label: "Español"
-    field: language
-    pattern: "en"
-  fields:
-  - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - name: "title"
-    label: "Título"
-    widget: "string"
-  - name: "slug"
-    label: "Âncora"
-    widget: "string"
-    required: false
-  - name: "date"
-    label: "Data"
-    widget: "datetime"
-    format: "YYYY-MM-DDTHH:mm:ss[Z]"
-  - name: "body"
-    label: "Conteúdo"
-    widget: "markdown"
-
 - name: "analysis"
   label: "Análises"
   label_singular: "Análise"
@@ -104,6 +71,138 @@ collections:
       - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
       - "Use a valid URL"
 
+- name: bookmarks
+  label: Favoritos
+  slug: "{{slug}}"
+  folder: "content/bookmarks"
+  create: true
+  delete: true
+  fields:
+  - name: "title"
+    label: "Título"
+    widget: "hidden"
+    default: "{{slug}}"
+  - name: "author"
+    label: "Autor(es)"
+    widget: "string"
+  - name: "date"
+    label: "Data"
+    widget: "datetime"
+    format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - name: "image"
+    label: "Imagem (.svg)"
+    widget: "image"
+  - label: "Link"
+    name: "link"
+    widget: "string"
+    required: false
+    pattern:
+    - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
+    - "Use a valid URL"
+
+- name: "callToAction"
+  label: "Chamadas"
+  folder: "content/call-to-action"
+  create: true
+  delete: true
+  slug: "{{slug}}"
+  fields:
+  - name: "title"
+    label: "Título"
+    widget: "string"
+    tagname: "h3"
+  - name: "date"
+    label: "Data"
+    widget: "datetime"
+    format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - name: "type"
+    label: "type"
+    widget: "hidden"
+    default: "callToAction"
+  - name: "body"
+    label: "Conteúdo"
+    widget: "markdown"
+  - name: "weight"
+    label: "Ordem"
+    widget: "number"
+    default: 1
+    valueType: "int"
+    min: 0
+
+- name: "collaborate"
+  label: "Chamadas a colaborar"
+  folder: "content/collaborate"
+  create: true
+  delete: true
+  slug: "{{slug}}"
+  fields:
+  - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
+  - name: "title"
+    label: "Título"
+    widget: "string"
+    tagname: "h3"
+  - name: "date"
+    label: "Data"
+    widget: "datetime"
+    format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - name: "type"
+    label: "type"
+    widget: "hidden"
+    default: "collaborate"
+  - name: "body"
+    label: "Conteúdo"
+    widget: "markdown"
+  - name: "weight"
+    label: "Ordem"
+    widget: "number"
+    default: 1
+    valueType: "int"
+    min: 0
+  - name: "imageSrc"
+    label: "Imagem"
+    widget: "image"
+  - name: "bottomImageSrc"
+    label: "Imagem inferior"
+    widget: "image"
+  - label: "Link"
+    name: "link"
+    widget: "string"
+    pattern:
+    - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
+    - "Use a valid URL"
+
+- name: "faq"
+  label: "Perguntas frequentes"
+  label_singular: "Pergunta frequente"
+  folder: "content/faq"
+  # identifier_field: "slug"
+  slug: "{{slug}}.{{language}}"
+  preview_path: "/faq#{{slug}}"
+  create: true
+  extension: md
+  view_filters:
+  - label: "Português"
+    field: language
+    pattern: "pt"
+  - label: "Español"
+    field: language
+    pattern: "en"
+  fields:
+  - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
+  - name: "title"
+    label: "Título"
+    widget: "string"
+  - name: "slug"
+    label: "Âncora"
+    widget: "string"
+    required: false
+  - name: "date"
+    label: "Data"
+    widget: "datetime"
+    format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - name: "body"
+    label: "Conteúdo"
+    widget: "markdown"
 
 - name: "investigations"
   label: "Investigações"
@@ -132,6 +231,87 @@ collections:
     label: "Data"
     widget: "datetime"
     format: "YYYY-MM-DDTHH:mm:ss[Z]"
+
+- name: "pages"
+  label: "Páginas"
+  folder: "content"
+  slug: "{{slug}}.{{language}}"
+  preview_path: "/{{slug}}"
+  create: true
+  extension: md
+  view_filters:
+  - label: "Português"
+    field: language
+    pattern: "pt"
+  - label: "Español"
+    field: language
+    pattern: "en"
+  fields:
+  - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
+  - name: "title"
+    label: "Título"
+    widget: "string"
+  - name: "date"
+    label: "Data"
+    widget: "datetime"
+    format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - name: "body"
+    label: "Conteúdo"
+    widget: "markdown"
+
+- name: results
+  label: "Seção de resultados"
+  folder: "content/results"
+  extension: md
+  slug: "{{slug}}.{{language}}"
+  view_filters:
+  - label: "Português"
+    field: language
+    pattern: "pt"
+  - label: "Español"
+    field: language
+    pattern: "en"
+  fields:
+  - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
+  - name: "title"
+    label: "Título"
+    widget: "string"
+  - name: "figure"
+    widget: "object"
+    fields:
+    - name: "src"
+      widget: file
+      required: true
+    - name: "caption"
+      label: "Legenda"
+      widget: "string"
+    - name: "alt"
+      label: "Descrição"
+      widget: "string"
+      required: true
+  - name: "weight"
+    label: "Ordem"
+    default: 0
+
+- name: supporters
+  label: "Apoiadores"
+  slug: "{{slug}}"
+  files:
+  - name: "supporters"
+    label: "Apoiadores"
+    file: "data/supporters.json"
+    fields:
+    - name: "title"
+      label: "Título"
+      widget: "string"
+    - name: "image"
+      label: "Logo (svg)"
+      widget: "image"
+    - name: "url"
+      label: "url"
+    - name: "weight"
+      label: "Ordem"
+      default: 0
 
 - name: "transparency"
   label: "Transparência"
@@ -163,78 +343,3 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
-
-- name: supporters
-  label: "Apoiadores"
-  slug: "{{slug}}"
-  files:
-  - name: "supporters"
-    label: "Apoiadores"
-    file: "data/supporters.json"
-    fields:
-    - name: "title"
-      label: "Título"
-      widget: "string"
-    - name: "image"
-      label: "Logo (svg)"
-      widget: "image"
-    - name: "url"
-      label: "url"
-    - name: "weight"
-      label: "Ordem"
-      default: 0
-
-- name: bookmarks
-  label: Favoritos
-  slug: "{{slug}}"
-  folder: "content/bookmarks"
-  create: true
-  delete: true
-  fields:
-  - name: "title"
-    label: "Título"
-    widget: "hidden"
-    default: "{{slug}}"
-  - name: "author"
-    label: "Autor(es)"
-    widget: "string"
-  - name: "date"
-    label: "Data"
-    widget: "datetime"
-    format: "YYYY-MM-DDTHH:mm:ss[Z]"
-  - name: "image"
-    label: "Imagem (.svg)"
-    widget: "image"
-  - name: "link"
-    label: "Link"
-    widget: "string"
-    required: false
-
-- name: "callToAction"
-  label: "Chamadas"
-  folder: "content/call-to-action"
-  create: true
-  delete: true
-  slug: "{{slug}}"
-  fields:
-  - name: "title"
-    label: "Título"
-    widget: "string"
-    tagname: "h3"
-  - name: "date"
-    label: "Data"
-    widget: "datetime"
-    format: "YYYY-MM-DDTHH:mm:ss[Z]"
-  - name: "type"
-    label: "type"
-    widget: "hidden"
-    default: "callToAction"
-  - name: "body"
-    label: "Conteúdo"
-    widget: "markdown"
-  - name: "weight"
-    label: "Ordem"
-    widget: "number"
-    default: 1
-    valueType: "int"
-    min: 0
