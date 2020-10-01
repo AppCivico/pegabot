@@ -4,6 +4,7 @@ date: 2020-08-11T16:23:28-03:00
 draft: false
 menu:
 layout: none
+slug: criterios
 weight: 4
 homepage: true
 language: pt

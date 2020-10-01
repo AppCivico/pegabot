@@ -4,6 +4,7 @@ draft: false
 title: "Não encontrou uma resposta para sua pergunta?"
 layout: none
 type: callToAction
+slug: "faq"
 weight: 0
 language: pt
 ---

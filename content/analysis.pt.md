@@ -5,7 +5,7 @@ draft: false
 menu:
   - "main"
   - "header"
-slug: "analysis"
+slug: "analise"
 layout: analysis
 weight: 2
 language: pt

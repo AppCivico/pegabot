@@ -5,7 +5,7 @@ draft: false
 menu:
   - "main"
   - "header"
-slug: "transparência"
+slug: "transparencia"
 linkTitle: Transparência
 layout: transparency
 weight: 2

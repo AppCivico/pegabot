@@ -6,7 +6,7 @@ menu:
   - "main"
   - "header"
 linkTitle: Quero Colaborar
-slug: "collaborate"
+slug: "colaborar"
 layout: collaborate
 weight: 2
 language: pt
