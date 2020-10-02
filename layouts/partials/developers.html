@@ -1,4 +1,5 @@
-{{ with $.Site.Data.developers }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ with $data.developers }}
 	<div class="developers">
 		<h6>{{ i18n "developedBy" }}</h6>
 		<ul>

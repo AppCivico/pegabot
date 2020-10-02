@@ -26,18 +26,16 @@
 				{{ end }}
 			{{ end }}
 
-			{{ if or $.Site.Data.sponsors (or $.Site.Data.developers $.Site.Data.responsibles) }}
-				<div role="contentinfo">
-					<div class="responsibles-and-sponsors-wrapper">
-						{{ partialCached "responsibles.html" . }}
+			<div role="contentinfo">
+				<div class="responsibles-and-sponsors-wrapper">
+					{{ partialCached "responsibles.html" . }}
 
-						{{ partialCached "sponsors.html" . }}
-					</div>
-
-					{{ partialCached "developers.html" . }}
-
+					{{ partialCached "sponsors.html" . }}
 				</div>
-			{{ end }}
+
+				{{ partialCached "developers.html" . }}
+
+			</div>
 		</footer>
 	</div>
 	{{ partialCached "browserUpdate.html" . }}

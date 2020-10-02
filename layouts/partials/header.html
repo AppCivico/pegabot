@@ -77,7 +77,8 @@
 			</nav>
 		{{ end }}
 		<header class="site-header">
-			{{ with $.Site.Data.responsibles }}
+			{{ $data := index .Site.Data .Site.Language.Lang }}
+			{{ with $data.responsibles }}
 				<style>
 					{{ range . }}
 						.site-header .responsibles__item--{{ .id }} {

@@ -1,4 +1,5 @@
-{{ with $.Site.Data.responsibles }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ with $data.responsibles }}
 <div class="responsibles">
 	<h6>{{ i18n "aProjectBy" }}</h6>
 

@@ -21,6 +21,7 @@ params:
   searchLimit: 12
 languages:
   pt:
+    contentDir: content/portugues
     languageCode: "pt-br"
     baseURL: "https://pegabot.com.br"
     languageName: Português
@@ -33,6 +34,7 @@ languages:
       ogImage: "/pegabot-fb-img__pt.jpg"
       ogTitle: "Descubra se aquele perfil de rede social é bot"
   es:
+    contentDir: content/spanish
     languageCode: "es-mx"
     baseURL: "https://es.pegabot.com.br"
     languageName: Español
