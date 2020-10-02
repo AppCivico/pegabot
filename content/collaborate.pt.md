@@ -8,7 +8,7 @@ menu:
 linkTitle: Quero Colaborar
 slug: "colaborar"
 layout: collaborate
-weight: 2
+weight: 4
 language: pt
 ---
 Você pode contribuir com o PegaBot sendo um multiplicador das análises, ajudando a melhorar o código da ferramenta ou mesmo identificando erros nas análises e sugerindo melhorias. De todas as formas, você contribuirá a dar mais transparência ao uso de bots no Brasil. Conheça as possibilidades!

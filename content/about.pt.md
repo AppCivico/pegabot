@@ -4,11 +4,11 @@ date: 2018-01-24T11:07:39-02:00
 draft: false
 menu:
   main:
-    name: Sobre
+    name: Sobre o Pegabot
   header:
-    name: Sobre
+    name: Sobre o Pegabot
 slug: "sobre"
-weight: 1
+weight: 5
 layout: "about"
 language: pt
 ---
