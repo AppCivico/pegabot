@@ -28,10 +28,11 @@
 
 			{{ if or $.Site.Data.sponsors (or $.Site.Data.developers $.Site.Data.responsibles) }}
 				<div role="contentinfo">
+					<div class="responsibles-and-sponsors-wrapper">
+						{{ partialCached "responsibles.html" . }}
 
-					{{ partialCached "responsibles.html" . }}
-
-					{{ partialCached "sponsors.html" . }}
+						{{ partialCached "sponsors.html" . }}
+					</div>
 
 					{{ partialCached "developers.html" . }}
 
