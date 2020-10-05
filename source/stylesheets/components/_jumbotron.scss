@@ -165,7 +165,8 @@
 	}
 
 	&:hover,
-	&:focus {
+	&:focus,
+	&:hover {
 		color: palette('white');
 
 		background-color: palette('blue', 'dark');

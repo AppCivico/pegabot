@@ -6,33 +6,38 @@
 
 <main
 	role="main"
-	class="home__main"
 >
 
 	<article
 		class="
 			wave-ornament
-			jumbotron
-			jumbotron--full
-			jumbotron--text-right
-			jumbotron--alt-title
-			jumbotron--video
 		"
 	>
+		<div
+			class="
+				jumbotron
+				jumbotron--full
+				jumbotron--text-right
+				jumbotron--alt-title
+				jumbotron--video
+				container
+			"
+		>
+			{{ $video := resources.Get "video/pegabot--480x480.mp4" | resources.Fingerprint "sha512" }}
 
-{{ $video := resources.Get "video/pegabot--480x480.mp4" | resources.Fingerprint "sha512" }}
+			<video
+				src="{{ $video.Permalink }}"
+				integrity="{{ $video.Data.Integrity }}"
+				poster autoplay loop playsinline
+			></video>
 
-		<video
-			src="{{ $video.Permalink }}"
-			integrity="{{ $video.Data.Integrity }}"
-			poster autoplay loop playsinline
-		></video>
+			<div class="jumboton--video__text">
+				<h1>{{ .Title }}</h1>
 
-		<div class="jumboton--video__text">
-			<h1>{{ .Title }}</h1>
-
-			{{ .Content }}
+				{{ .Content }}
+			</div>
 		</div>
+
 	</article>
 
 	{{ range where (where .Site.RegularPages ".Type" "transparency") ".Params.transparency" true }}
