@@ -82,7 +82,7 @@
 .about-page hr {
 	display: block;
 
-	max-width: 738px;
+	max-width: 46.125rem; /* 738px */
 
 	margin-top: $gutter * 2;
 	margin-bottom: $gutter * 2;
@@ -95,6 +95,8 @@
 .about-page hr ~ p > img {
 	display: inline-block;
 
+	max-width: 35rem; /* 560px */
+
 	margin-right: $gutter;
 	margin-left: $gutter;
 
@@ -105,4 +107,11 @@
 	&:last-child {
 		margin-right: auto;
 	}
+}
+
+.about-page hr + div {
+	max-width: 35rem; /* 560px */
+
+	margin-right: auto;
+	margin-left: auto;
 }
