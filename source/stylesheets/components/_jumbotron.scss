@@ -64,7 +64,8 @@
 	@media screen and (min-width: breakpoint('desktop')) {
 		display: block;
 
-		max-width: 40%;
+		width: 40%;
+		max-width: 480px;
 	}
 }
 
