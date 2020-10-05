@@ -71,8 +71,8 @@
 		{{ if ne .Kind "404" }}
 			<nav class="skip-links">
 				<ul>
-					<li class="to-content"><a href="#conteudo">conteúdo</a></li>
-					<li class="to-menu"><a href="#menu">menu</a></li>
+					<li class="to-content"><a href="#{{ i18n "content" | urlize }}">conteúdo</a></li>
+					<li class="to-menu"><a href="#{{ i18n "menu" | urlize }}">menu</a></li>
 				</ul>
 			</nav>
 		{{ end }}
