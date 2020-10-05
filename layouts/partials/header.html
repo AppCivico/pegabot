@@ -106,7 +106,10 @@
 						</nav>
 
 						{{ with .Site.Menus.header }}
-							<nav class="header-menu">
+							<nav
+								class="header-menu"
+								id="{{ i18n "menu" | urlize }}"
+							>
 								<ul>
 									<li>
 									{{ if $.IsHome }}
