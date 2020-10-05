@@ -1,5 +1,7 @@
 <article
+	id="{{ with .File }}{{ .TranslationBaseName }}{{ end }}"
 	class="
+		{{ with .File }}{{ .TranslationBaseName }}{{ end }}
 		delayed-entrance
 		delayed-entrance__bottom
 	"
@@ -7,13 +9,26 @@
 	<div
 		class="container"
 	>
-		<h2>
+		<h2
+			class="article__title"
+		>
 			{{ .Title }}
 		</h2>
 
-		{{ $input := "(Pegabot)" }}
-		{{ $output := "<b>$1</b>" }}
-		{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
-		{{ $finalContent }}
+		{{ with .Params.figure }}
+			<figure>
+				<img src="{{ .src }}">
+				<figcaption>
+					<h4>{{ .caption }}</h4>
+				</figcaption>
+			</figure>
+		{{ end }}
+
+		<div class="article__content">
+			{{ $input := "(Pegabot)" }}
+			{{ $output := "<b>$1</b>" }}
+			{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+			{{ $finalContent }}
+		</div>
 	</div>
 </article>
