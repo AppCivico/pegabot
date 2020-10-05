@@ -2,6 +2,7 @@ $faq-bg: hsl(269, 31%, 47%);
 
 .faq-page {
 	background-image: image('robot-pattern.png');
+	background-position: 0 -56px;
 	background-repeat: repeat;
 	background-color: $faq-bg;
 }
@@ -9,7 +10,7 @@ $faq-bg: hsl(269, 31%, 47%);
 .faq-page .content-container {
 	position: relative;
 
-	padding-top: $gutter * 10;
+	padding-top: $gutter * 5;
 }
 
 .faq-page [role='main'] {
@@ -61,6 +62,8 @@ $faq-bg: hsl(269, 31%, 47%);
 }
 
 .questions {
+	position: relative;
+
 	display: flex;
 
 	align-items: baseline;
