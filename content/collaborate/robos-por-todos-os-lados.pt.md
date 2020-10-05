@@ -6,7 +6,7 @@ layout: none
 type: collaborate
 imageSrc: /uploads/twitter-letter-bg.png
 bottomImageSrc: /uploads/twitter-bird-bg.png
-link: https://t.me/joinchat/AOHjCkUyx1zPuNzhf36mEw
+link: https://itsrio2.typeform.com/to/uGFw4zDc
 weight: 2
 language: pt
 ---

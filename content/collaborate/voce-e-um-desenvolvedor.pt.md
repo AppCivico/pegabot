@@ -6,7 +6,7 @@ layout: none
 type: collaborate
 imageSrc: /uploads/globe-bg.png
 bottomImageSrc: /uploads/file-bg.png
-link: https://github.com/AppCivico/pegabot-backend/
+link: https://itsrio2.typeform.com/to/uGFw4zDc
 weight: 3
 language: pt
 ---
