@@ -54,7 +54,7 @@ article ul > li::before {
 }
 
 article ol > li::before {
-	left: 1em;
+	left: -1em;
 
 	content: counter(li)'.\00a0';
 	counter-increment: li;
