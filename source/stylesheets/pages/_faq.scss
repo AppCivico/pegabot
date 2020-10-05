@@ -178,7 +178,7 @@ $faq-bg: hsl(269, 31%, 47%);
 	transition-property: border-radius max-height opacity 0.5s ease-in-out;
 
 	:last-child {
-		margin-bottom: 0;
+		margin-bottom: $gutter * 0.5;
 	}
 
 	[open] & {
