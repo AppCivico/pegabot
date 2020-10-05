@@ -1,0 +1,26 @@
+.back-to-top,
+.back-to-top__link {
+	display: block;
+}
+
+.back-to-top {
+	max-width: $max-width;
+
+	padding-right: $gutter;
+	padding-left: $gutter;
+}
+
+
+.back-to-top__link {
+	text-align: right;
+}
+
+.back-to-top__image {
+	display: inline-block;
+
+	margin-right: 10px;
+
+	border-radius: 100%;
+
+	box-shadow: 2px 2px 8px 0 palette('shadow');
+}

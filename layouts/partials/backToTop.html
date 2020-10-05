@@ -1,0 +1,17 @@
+{{ $img := resources.Get "images/back-to-top.svg" | resources.Fingerprint "sha512" }}
+
+<nav
+	class="back-to-top"
+>
+	<a
+		href="#{{ i18n "content" | urlize }}"
+		class="back-to-top__link"
+	>
+		<img
+			class="back-to-top__image"
+			src="{{ $img.Permalink }}"
+			integrity="{{ $img.Data.Integrity }}"
+			alt="{{ i18n "backToTop" }}"
+		/>
+	</a>
+</nav>

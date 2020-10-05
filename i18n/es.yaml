@@ -14,6 +14,8 @@
   translation: Pegabot utiliza el análisis sentimental para evaluar su probabilidad de ser un robot.
 - id: aProjectBy
   translation: "Un proyecto de"
+- id: backToTop
+  translation: "Volver al principio"
 - id: botProbability
   translation: "Probabilidades de ser un bot"
 - id: callToFaqResults
@@ -25,7 +27,7 @@
 - id: contact
   translation: "Contacto"
 - id: content
-  translation: "Publicaciones"
+  translation: "Contenido"
 - id: detailsLink
   translation: "Detalle del análisis"
 - id: developedBy

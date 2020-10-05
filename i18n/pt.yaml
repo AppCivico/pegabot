@@ -20,6 +20,8 @@
   translation: "Analisar um perfil"
 - id: aProjectBy
   translation: "Um projeto"
+- id: backToTop
+  translation: "Voltar ao topo"
 - id: botProbability
   translation: "Probabilidade de ser um robô"
 - id: callToFaqResults
@@ -31,7 +33,7 @@
 - id: contact
   translation: "Contato"
 - id: content
-  translation: "Publicações"
+  translation: "Conteúdo"
 - id: detailsLink
   translation: "Detalhamento da análise"
 - id: developedBy

@@ -1,5 +1,5 @@
 {{ $.Scratch.Add "rootClass" "faq-page" }}{{ partial "header.html" . }}
-<article role="main" id="conteudo">
+<article role="main">
 	<h1>{{ .Title }}</h1>
 
 	{{ $input := "(Pegabot)" }}
@@ -30,4 +30,5 @@
 	{{ end }}
 
 </article>
+
 {{ partial "footer.html" . }}

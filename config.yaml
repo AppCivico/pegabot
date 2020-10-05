@@ -14,6 +14,7 @@ outputs:
     - json
 googleAnalytics: "UA-116653569-1"
 languageCode: "pt-br"
+removePathAccents: true
 metaDataFormat: "yaml"
 blackfriday:
   smartypants: false

@@ -8,7 +8,7 @@
 <link rel="preload" src="/assets/scripts/index.js">
 ` }}{{ $.Scratch.Add "rootClass" "results-page" }}{{ partial "header.html" . }}
 
-<article role="main" id="conteudo">
+<article role="main">
 	<h1>{{ .Title }}</h1>
 
 	{{ with .Content }}
@@ -150,4 +150,5 @@
 <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5"></script>
 <script src="/assets/scripts/index.js"></script>
 ` }}
+
 {{ partial "footer.html" . }}

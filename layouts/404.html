@@ -1,13 +1,15 @@
 {{ $.Scratch.Add "rootClass" "not-found-page" }}{{ partial "header.html" . }}
-<article role="main" id="conteudo">
+<article role="main">
 	<h1>{{ i18n "notFound" | title }}</h1>
 
 	<p>
 		<a href="/">{{ i18n "returnToHome" }}?</a>
 	</p>
+
 </article>
 </div>
 </div>
+{{ partial "backToTop.html" . }}
 </body>
 
 </html>
