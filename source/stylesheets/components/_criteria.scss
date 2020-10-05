@@ -19,6 +19,9 @@
 	&::before {
 		display: block;
 
+		min-width: 30px;
+		min-height: 36px;
+
 		margin-right: auto;
 		margin-left: auto;
 
@@ -34,27 +37,18 @@
 
 .criteria__section--profile {
 	&::before {
-		min-width: 30px;
-		min-height: 36px;
-
 		background-image: image('criteria__profile.svg');
 	}
 }
 
 .criteria__section--network {
 	&::before {
-		min-width: 30px;
-		min-height: 30px;
-
 		background-image: image('criteria__network.svg');
 	}
 }
 
 .criteria__section--emotions {
 	&::before {
-		min-width: 30px;
-		min-height: 30px;
-
 		background-image: image('criteria__emotions.svg');
 	}
 }
