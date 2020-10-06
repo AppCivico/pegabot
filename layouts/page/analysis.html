@@ -1,5 +1,5 @@
 {{ $.Scratch.Add "rootClass" "analysis-page" }}{{ partial "header.html" . }}
-<div role="main">
+<article role="main">
 	<div class="wave-ornament" id="wave-ornament">
 		<div class="container">
 			<div class="jumbotron">
@@ -13,7 +13,12 @@
 			<div class="bubble-text">
 				<div class="bubble-text__item">
 					<div class="bubble-text__image">
-						<img src="/assets/images/clock-7ce6988d.svg" alt="">
+						{{ $img := resources.Get "images/clock.svg" | resources.Fingerprint "sha512" }}
+						<img
+							src="{{ $img.Permalink }}"
+							integrity="{{ $img.Data.Integrity }}"
+							alt=""
+						>
 					</div>
 					<div class="bubble-text__text">
 						<p>{{ i18n "robotTime" }} </p>
@@ -21,7 +26,12 @@
 				</div>
 				<div class="bubble-text__item">
 					<div class="bubble-text__image">
-						<img src="/assets/images/twitter__white-41543e63.svg" alt="">
+						{{ $img := resources.Get "images/twitter__white.svg" | resources.Fingerprint "sha512" }}
+						<img
+							src="{{ $img.Permalink }}"
+							integrity="{{ $img.Data.Integrity }}"
+							alt=""
+						>
 					</div>
 					<div class="bubble-text__text">
 						<p>{{ i18n "robotResponsable" }} </p>
@@ -29,7 +39,12 @@
 				</div>
 				<div class="bubble-text__item">
 					<div class="bubble-text__image">
-						<img src="/assets/images/globe-badb2bb0.svg" alt="">
+						{{ $img := resources.Get "images/globe.svg" | resources.Fingerprint "sha512" }}
+						<img
+							src="{{ $img.Permalink }}"
+							integrity="{{ $img.Data.Integrity }}"
+							alt=""
+						>
 					</div>
 					<div class="bubble-text__text">
 						<p>{{ i18n "robotTraffic" }} </p>
@@ -37,7 +52,12 @@
 				</div>
 				<div class="bubble-text__item">
 					<div class="bubble-text__image">
-						<img src="/assets/images/user-893bb037.svg" alt="">
+						{{ $img := resources.Get "images/user.svg" | resources.Fingerprint "sha512" }}
+						<img
+							src="{{ $img.Permalink }}"
+							integrity="{{ $img.Data.Integrity }}"
+							alt=""
+						>
 					</div>
 					<div class="bubble-text__text">
 						<p>{{ i18n "robotProfiles" }} </p>
@@ -51,12 +71,11 @@
 		{{ .Render "analysis" }}
 	{{ end }}
 
-
 	<div class="container">
 		{{ partial "investigations" . }}
 	</div>
 
-</div>
+</article>
 
 <script>
 	var target = document.getElementById('wave-ornament');

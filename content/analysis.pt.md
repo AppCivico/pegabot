@@ -1,13 +1,15 @@
 ---
-title: "Análises"
-date: 2018-03-13T18:17:00-03:00
+title: "Entender como bots são usados nas redes sociais é urgente"
+date: 2018-01-24T13:51:23-02:00
 draft: false
-menu:
-  - "main"
-  - "header"
 slug: "analise"
 layout: analysis
 weight: 3
+menu:
+  main:
+    name: Análises
+  header:
+    name: Análises
 language: pt
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Desde 2016, diferentes atores se debruçam para investigar e compreender os variados usos das redes sociais como estratégia de influência e manipulação da opinião pública. Quando falamos sobre automação nas redes sociais, nem sempre ela é ruim ou proibida pelos termos de uso das plataformas. No entanto, dar transparência ao uso indevido de bots nestas redes significa olhar, principalmente, para o comportamento inautêntico como agente de ataques coordenados e viralização de conteúdo.
