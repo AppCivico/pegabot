@@ -7,7 +7,7 @@ ul,
 ol {
 	@include fallback('margin', 0 0 1.5rem);
 
-	padding-left: 1em;
+	padding-left: 0;
 	margin: 0;
 }
 
@@ -18,8 +18,6 @@ ol {
 article ul,
 article ol {
 	max-width: 33em;
-
-	margin-left: auto;
 }
 
 /**
@@ -37,7 +35,7 @@ article li {
 
 	&::before {
 		position: absolute;
-		left: -0.5em;
+		right: 100%;
 
 		z-index: layer('default'); // required to prevent Blink clipping issues on columns
 
@@ -54,7 +52,7 @@ article ul > li::before {
 }
 
 article ol > li::before {
-	left: -1em;
+	text-align: right;
 
 	content: counter(li)'.\00a0';
 	counter-increment: li;
