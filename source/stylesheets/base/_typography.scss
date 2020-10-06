@@ -28,6 +28,10 @@ body {
 	color: inherit;
 
 	@media screen and (min-width: breakpoint('tablet')) {
+		font-size: ms(-1);
+	}
+
+	@media screen and (min-width: breakpoint('x-wide')) {
 		font-size: $body-font-size;
 	}
 }
