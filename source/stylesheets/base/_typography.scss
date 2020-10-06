@@ -127,7 +127,8 @@ h1 {
 }
 
 h2 {
-	article &:first-child {
+	article > * > &:first-child,
+	article > &:first-child {
 		font-size: ms(2);
 
 		text-transform: uppercase;
