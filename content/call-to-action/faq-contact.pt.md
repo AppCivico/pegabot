@@ -11,4 +11,4 @@ language: pt
 
 Entre em contato conosco para obter detalhes sobre o projeto e para tirar suas dúvidas personalizadas.
 
-[Entrar em contato](https://itsrio2.typeform.com/to/k9FHXq)
+[Entrar em contato](https://itsrio2.typeform.com/to/uGFw4zDc)

@@ -30,7 +30,7 @@ languages:
       siteDescription: "O Pegabot verifica a atividade de uma conta em rede social e dá uma pontuação baseada na probabilidade dessa conta ser um bot. Maiores pontuações são mais bot-like."
       tagline: "Por mais transparência no uso de bots"
       email: pegabot@itsrio.org
-      typeform: https://itsrio2.typeform.com/to/k9FHXq
+      typeform: https://itsrio2.typeform.com/to/uGFw4zDc
       ogImage: "/pegabot-fb-img__pt.jpg"
       ogTitle: "Descubra se aquele perfil de rede social é bot"
   es:
