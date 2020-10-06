@@ -21,7 +21,7 @@
 			{{ $video := resources.Get "video/pegabot--480x480.mp4" | resources.Fingerprint "sha512" }}
 
 			<video
-				src="{{ $video.Permalink }}"
+				src="{{ $video.RelPermalink }}"
 				integrity="{{ $video.Data.Integrity }}"
 				poster autoplay loop playsinline
 			></video>

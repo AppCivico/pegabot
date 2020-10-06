@@ -16,7 +16,7 @@
 					<div class="bubble-text__image">
 						{{ $img := resources.Get "images/clock.svg" | resources.Fingerprint "sha512" }}
 						<img
-							src="{{ $img.Permalink }}"
+							src="{{ $img.RelPermalink }}"
 							integrity="{{ $img.Data.Integrity }}"
 							alt=""
 						>
@@ -29,7 +29,7 @@
 					<div class="bubble-text__image">
 						{{ $img := resources.Get "images/twitter__white.svg" | resources.Fingerprint "sha512" }}
 						<img
-							src="{{ $img.Permalink }}"
+							src="{{ $img.RelPermalink }}"
 							integrity="{{ $img.Data.Integrity }}"
 							alt=""
 						>
@@ -42,7 +42,7 @@
 					<div class="bubble-text__image">
 						{{ $img := resources.Get "images/globe.svg" | resources.Fingerprint "sha512" }}
 						<img
-							src="{{ $img.Permalink }}"
+							src="{{ $img.RelPermalink }}"
 							integrity="{{ $img.Data.Integrity }}"
 							alt=""
 						>
@@ -55,7 +55,7 @@
 					<div class="bubble-text__image">
 						{{ $img := resources.Get "images/user.svg" | resources.Fingerprint "sha512" }}
 						<img
-							src="{{ $img.Permalink }}"
+							src="{{ $img.RelPermalink }}"
 							integrity="{{ $img.Data.Integrity }}"
 							alt=""
 						>
