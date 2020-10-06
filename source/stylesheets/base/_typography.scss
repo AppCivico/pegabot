@@ -179,6 +179,11 @@ article p {
 	max-width: 31.25rem;
 }
 
+.article__content h2,
+.article__content p {
+	max-width: none;
+}
+
 /**
 * @see: http://demosthenes.info/blog/946/Controlling-Widows--Orphans
 */
