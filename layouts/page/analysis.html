@@ -65,7 +65,7 @@
 		</div>
 	</div>
 
-	{{ range .Pages }}
+	{{ range where (where $.Site.Pages ".Type" "analysis") ".Kind" "page" }}
 		{{ .Render "analysis" }}
 	{{ end }}
 
