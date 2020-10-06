@@ -1,0 +1,41 @@
+.transparency__main > article {
+	@media screen and (min-width: breakpoint('tablet')) {
+		// second
+		&:nth-of-type(2) {
+			background-image: image('robot__orange--circular.svg');
+		}
+
+		// third
+		&:nth-of-type(3) {
+			background-image: image('robot__yellow--rounded.svg');
+		}
+
+		// forth
+		&:nth-of-type(4) {
+			background-image: image('robot__purple--square.svg');
+		}
+	}
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		// second
+		&:nth-of-type(2) {
+			background-image: image('robot__orange--circular.svg'),
+			image('robot__purple--square.svg'),
+			image('robot__yellow--rounded.svg');
+		}
+
+		// third
+		&:nth-of-type(3) {
+			background-image: image('robot__yellow--rounded.svg'),
+			image('robot__orange--circular.svg'),
+			image('robot__purple--square.svg');
+		}
+
+		// forth
+		&:nth-of-type(4) {
+			background-image: image('robot__purple--square.svg'),
+			image('robot__yellow--rounded.svg'),
+			image('robot__orange--circular.svg');
+		}
+	}
+}
