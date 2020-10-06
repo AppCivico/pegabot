@@ -36,6 +36,7 @@ $duration: 0.5s;
 	position: relative;
 
 	padding-top: 0;
+	padding-bottom: 0;
 	margin-right: 0;
 	margin-left: 0;
 
@@ -44,7 +45,10 @@ $duration: 0.5s;
 
 	background-color: palette('white');
 
+	box-shadow: 2px 2px 8px 0 palette('shadow');
+
 	@media screen and (min-width: breakpoint('desktop')) {
+		box-shadow: 1px 1px 4px 0 palette('shadow');
 	}
 }
 

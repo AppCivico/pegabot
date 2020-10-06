@@ -3,24 +3,6 @@
 	transform-style: preserve-3d;
 }
 
-.home-page .site-header {
-	padding-bottom: 0;
-
-	background-color: palette('white');
-
-	box-shadow: 2px 2px 8px 0 palette('shadow');
-
-	@media screen and (min-width: breakpoint('tablet')) {
-	}
-
-	@media screen and (min-width: breakpoint('desktop')) {
-		box-shadow: 1px 1px 4px 0 palette('shadow');
-	}
-
-	@media screen and (min-width: breakpoint('wide')) {
-	}
-}
-
 .home-page .main-container {
 	max-width: none;
 
