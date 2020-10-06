@@ -2,7 +2,7 @@
 <article role="main">
 	<h1>{{ .Title }}</h1>
 
-	{{ $input := "(Pegabot)" }}
+	{{ $input := "(?i)(Pegabot)" }}
 	{{ $output := "<b>$1</b>" }}
 	{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
 	{{ $finalContent }}
@@ -15,7 +15,7 @@
 					<div
 						class="questions__answer"
 					>
-						{{ $input := "(Pegabot)" }}
+						{{ $input := "(?i)(Pegabot)" }}
 						{{ $output := "<b>$1</b>" }}
 						{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
 						{{ $finalContent }}

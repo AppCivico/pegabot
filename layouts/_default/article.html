@@ -25,7 +25,7 @@
 		{{ end }}
 
 		<div class="article__content">
-			{{ $input := "(Pegabot)" }}
+			{{ $input := "(?i)(Pegabot)" }}
 			{{ $output := "<b>$1</b>" }}
 			{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
 			{{ $finalContent }}

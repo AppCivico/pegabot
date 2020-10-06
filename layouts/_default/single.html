@@ -3,7 +3,7 @@
 	<h1>{{ .Title }}</h1>
 
 	{{ with .Content }}
-		{{ $input := "(Pegabot)" }}
+		{{ $input := "(?i)(Pegabot)" }}
 		{{ $output := "<b>$1</b>" }}
 		{{ $finalContent := . | replaceRE $input $output | safeHTML }}
 		{{ $finalContent }}

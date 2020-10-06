@@ -11,7 +11,10 @@
 			">
 				<h1>{{ .Title }}</h1>
 
-				{{ .Content }}
+				{{ $input := "(?i)(Pegabot)" }}
+				{{ $output := "<b>$1</b>" }}
+				{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+				{{ $finalContent }}
 			</div>
 		</div>
 	</div>
@@ -31,9 +34,14 @@
 					style="background-image: url('{{ .Params.imageSrc }}'), url('{{ .Params.bottomImageSrc }}')">
 
 					<h1>{{ .Title }}</h1>
+
+					{{ $input := "(?i)(Pegabot)" }}
+					{{ $output := "<b>$1</b>" }}
+					{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
 					<p>
-						{{ .Content }}
+						{{ $finalContent }}
 					</p>
+
 					<a href="{{ .Params.link }}" target="_blank" class="button">{{ i18n "iWantToCollaborate" }}</a>
 				</div>
 			{{ end }}

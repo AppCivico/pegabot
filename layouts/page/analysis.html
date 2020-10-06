@@ -5,7 +5,10 @@
 			<div class="jumbotron">
 				<h1>{{ .Title }}</h1>
 
-				{{ .Content }}
+				{{ $input := "(?i)(Pegabot)" }}
+				{{ $output := "<b>$1</b>" }}
+				{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
+				{{ $finalContent }}
 			</div>
 
 			<div class="bubble-text">

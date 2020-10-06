@@ -16,7 +16,7 @@
 		</h2>
 
 		<div class="article__content">
-			{{ $input := "(Pegabot)" }}
+			{{ $input := "(?i)(Pegabot)" }}
 			{{ $output := "<b>$1</b>" }}
 			{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
 			{{ $finalContent }}
@@ -39,7 +39,7 @@
 							{{ .Title }}
 						</h3>
 
-						{{ $input := "(Pegabot)" }}
+						{{ $input := "(?i)(Pegabot)" }}
 						{{ $output := "<b>$1</b>" }}
 						{{ $finalContent := .Content | truncate 160 | replaceRE $input $output | safeHTML }}
 						{{ $finalContent }}
@@ -63,7 +63,7 @@
 									{{ .Title }}
 								</header>
 								<div class="modal-content">
-									{{ $input := "(Pegabot)" }}
+									{{ $input := "(?i)(Pegabot)" }}
 									{{ $output := "<b>$1</b>" }}
 									{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
 									{{ $finalContent }}

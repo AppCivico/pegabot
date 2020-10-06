@@ -2,7 +2,7 @@
 <article role="main">
 	<h1>{{ .Title }}</h1>
 
-	{{ $input := "(Pegabot)" }}
+	{{ $input := "(?i)(Pegabot)" }}
 	{{ $output := "<b>$1</b>" }}
 	{{ $finalContent := .Content | replaceRE $input $output | replaceRE "<p>" "<p class='delayed-entrance delayed-entrance__bottom'>" | safeHTML }}
 	{{ $finalContent }}
