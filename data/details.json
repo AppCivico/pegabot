@@ -1,0 +1,112 @@
+{
+  "root": {
+    "profile": {
+      "handle": "albudebora",
+      "link": "https://twitter.com/albudebora",
+      "figure": "/Screenshot_2020-10-06 Debora Albu ( AlbuDebora) Twitter.png",
+      "description": "Caso você tenha dúvidas ou discorde do resultado, você pode informar AQUI. Caso você queira analisar nosso código e sugerir melhorias, você pode acessar o repositório no GitHub",
+      "analysis": [
+        {
+          "title": "Semelhança de nome do usuário e nome de perfil",
+          "descripton": "Compara cada uma das letras que compõe o nome do usuário(arroba / handle) e o nome que aparece no perfil.Caso exista a palavra \"bot\", um peso maior será adicionado",
+          "summary": "O nome de usuário(@albudebora) e o nome de perfil(Debora Albu) são 95 % iguais",
+          "conclusion": 5
+        },
+        {
+          "title": "Número de dígitos no nome do usuário",
+          "description": "Busca por uma composição de nome de perfil que contenha letras e números. Caso existam uma quantidade superior a dois dígitos na composição, maior peso é adicionado.",
+          "summary": "O nome do usuário(@albudebora98789) possui 15 dígitos",
+          "conclusion": 33.4
+        },
+        {
+          "title": "Comprimento do nome do perfil",
+          "description": "Pesos maiores são adicionados em nomes que possuem uma quantidade superior a 15 caracteres.",
+          "summary": "O nome do perfil(Debora Albu) possui 73, 3 % menos que 15 caracteres",
+          "conclusion": 26.7
+        },
+        {
+          "title": "Comprimento do nome do usuário (ou arroba)",
+          "description": "Pesos maiores são adicionados em nomes de usuários que possuem uma quantidade superior a 10 caracteres",
+          "summary": "O nome do usuário(@albudebora) possui X % igual a 10 caracteres",
+          "conclusion": 0
+        }
+      ],
+      "chart": "X'eu ver o melhor formato disso"
+    },
+    "network": {
+      "analysis": [
+        {
+          "title": "STRING",
+          "description": "STRING",
+          "summary": "HTML",
+          "conclusion": "FLOAT",
+          "hashtags": [
+            "rightscon",
+            "hablatam",
+            "plfakenews",
+            "covid19",
+            "pelavidadasmulheres",
+            "genderbaseviolence",
+            "disinformation",
+            "atr",
+            "pldasfakenews",
+            "dianacionaldaciencia",
+            "hrc44",
+            "naovotaplfakenews",
+            "pl2630",
+            "novotaplfakenews",
+            "pl2630nao",
+            "brasileiro",
+            "vaw",
+            "cooptv",
+            "youthskills"
+          ],
+          "mentions": [
+            {
+              "avatar": "STRING",
+              "handle": "STRING"
+            }
+          ],
+          "tweetsByNumbers": {
+            "replies": 14,
+            "withMentions": 86,
+            "withHashtags": 33,
+            "retweets": 60,
+            "withLinks": 32,
+            "withMedia": 2
+          }
+        }
+      ]
+    },
+    "emotions": {
+      "handle": "STRING",
+      "link": "STRING",
+      "figure": "SCREEN CAPTURE (você tá fodido para fazer isso!)",
+      "analysis": [
+        {
+          "title": "STRING",
+          "description": "STRING",
+          "summary": "HTML",
+          "conclusion": "FLOAT",
+          "samples": {
+            "title": "Veja aqui o exemplo de 3 tweets do usuários que foram classificados como neutros na análise de sentimento",
+            "list": [
+              {
+                "capture": "/Screenshot_2020-10-06 Debora Albu on Twitter.png",
+                "caption": "Exemplo de palavras positivas: “feliz”, “parceria”"
+              },
+              {
+                "capture": "/Screenshot_2020-10-06 Debora Albu on Twitter.png",
+                "caption": "Exemplo de palavras positivas: “feliz”, “parceria”"
+              },
+              {
+                "capture": "/Screenshot_2020-10-06 Debora Albu on Twitter.png",
+                "caption": "Exemplo de palavras positivas: “feliz”, “parceria”"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
