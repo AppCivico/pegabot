@@ -15,6 +15,7 @@ Vue.filter('booleanToString', booleanToStringFilter);
 window.$vue = new Vue({
 	el: '#results__list',
 	data: {
+		profileDetails: null,
 		debug: true,
 		profileList: [],
 		error: null,
@@ -138,6 +139,15 @@ window.$vue = new Vue({
 			template: '#results__form',
 			props: {
 				metadata: {
+					type: Object,
+					required: true,
+				},
+			},
+		},
+		'results-detail': {
+			template: '#results__detail',
+			props: {
+				item: {
 					type: Object,
 					required: true,
 				},

@@ -18,80 +18,30 @@
 		{{ $finalContent }}
 	{{ end }}
 
-	<div id="results__list" class="results" hidden>
+	<div id="result-detail" >
 		<noscript>{{ i18n "noScriptMessage" }}</noscript>
 		<section
-			class="results__list"
-			:aria-busy="(metadata.loading && profileList.length === 0) | booleanToString"
+			class="results-details"
+			:aria-busy="(metadata.loading && profileDetails.length === 0) | booleanToString"
 			data-loading-1="{{ i18n "analisysLoading-1" }}"
 			data-loading-2="{{ i18n "analisysLoading-2" }}"
 			data-loading-3="{{ i18n "analisysLoading-3" }}"
 			data-loading-4="{{ i18n "analisysLoading-4" }}"
 			data-loading-5="{{ i18n "analisysLoading-5" }}"
 		>
-			<profile
-				v-for="(profileItem, index) in profileList"
-				:user="profileItem"
-				:key="profileItem.username"
-				:index="index"
-				:remove-profile="removeProfile"
-				:focusable="profileList.length > 1 ? true : false"
-				:to-approve="toApprove"
-				:to-disapprove="toDisapprove"
-			></profile>
+
+			{{ range $.Site.Data.details.root }}
+				{{ partial "microtemplates/resultsDetails.html" . }}
+			{{ end }}
+
+			<detail
+				v-for="(item, key) in profileDetails"
+				:item="item"
+			/>
 		</section>
-		<results-footer v-bind:metadata="metadata" :cancel-request="cancelRequest"></results-footer>
+
 	</div>
 
-	{{ range where (.Resources.Match "explain*") ".Kind" "page" }}
-		{{ .Render "article" }}
-	{{ end }}
-
-	{{ with .Site.GetPage "transparency/criteria" }}
-		{{ .Render "article-with-resources" }}
-	{{ end }}
-
-	{{ range first 1 (where $.Site.Pages ".Type" "bookmark") }}
-		{{ .Render "curved-section" }}
-	{{ end }}
-
-	{{ range where (.Resources.Match "methodology*") ".Kind" "page" }}
-		<article
-			class="
-				{{ with .File }}{{ .TranslationBaseName }}{{ end }}
-				alternate-paragraphs
-				delayed-entrance
-				delayed-entrance__bottom
-			"
-		>
-			<div class="container">
-				<h2
-					class="article__title"
-				>
-					{{ .Title }}
-				</h2>
-
-				<div class="article__content">
-					{{ $input := "(?i)(Pegabot)" }}
-					{{ $output := "<b>$1</b>" }}
-					{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
-					{{ $finalContent }}
-				</div>
-			</div>
-		</article>
-	{{ end }}
-
-	{{ range first 1 (after 1 (where $.Site.Pages ".Type" "bookmark")) }}
-		{{ .Render "curved-section" }}
-	{{ end }}
-
-	{{ range where $.Site.Pages ".Type" "analysis" }}
-		{{ .Render "analysis" }}
-	{{ end }}
-
-	{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "active-collaboration") }}
-		{{ .Render "curved-section" }}
-	{{ end }}
 </article>
 
 <script type="text/x-template" id="results__form">
@@ -104,6 +54,10 @@
 
 <script type="text/x-template" id="results__profile">
 	{{ partial "microtemplates/resultsProfile.html" . }}
+</script>
+
+<script type="text/x-template" id="results__detail">
+	{{ partial "microtemplates/resultsDetails.html" . }}
 </script>
 
 {{ if eq (getenv "NODE_ENV") "development" }}
