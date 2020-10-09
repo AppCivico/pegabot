@@ -1,7 +1,7 @@
 <article
 	class="results-details__item"
 	:aria-busy="String(loading)"
-	:class="`results-details__item--${key}`"
+	:class="`results-details__item--${propertyName}`"
 >
 	<div
 		role="doc-subtitle"
@@ -15,15 +15,15 @@
 	>
 		<h2
 			class="results-details__title"
-			:class="`results-details__title--${key}`"
+			:class="`results-details__title--${propertyName}`"
 		>
-			{{ "{{ key }}" }}
+			{{ "{{ propertyName }}" }}
 		</h2>
 
 		<p
 			class="results-details__description"
 		>
-			{{ i18n "detailsIntro" }}
+			{{ "{{ item.description }}" }}
 		</p>
 
 		<dl
@@ -44,6 +44,7 @@
 	</div>
 
 	<img
+		v-if="item.figure"
 		:src="item.figure"
 		:alt="item.handle"
 		aria-hidden="true"
@@ -84,7 +85,7 @@
 		</dl>
 
 		<div
-			v-if="analyze.hashtags.length"
+			v-if="analyze.hashtags && analyze.hashtags.length"
 			class="results-details__hashtags results-details__card"
 		>
 			<h3>
@@ -99,7 +100,7 @@
 		</div>
 
 		<div
-			v-if="analyze.mentions.length"
+			v-if="analyze.mentions && analyze.mentions.length"
 			class="results-details__mentions results-details__card"
 		>
 			<h3>
@@ -118,7 +119,7 @@
 		</div>
 
 		<div
-			v-if="analyze.tweetsByNumbers.length"
+			v-if="analyze.tweetsByNumbers && analyze.tweetsByNumbers.length"
 			class="results-details__tweets results-details__card"
 		>
 			<h3>
@@ -135,12 +136,12 @@
 
 		<div
 			class="results-details__samples"
-			v-if="analyze.samples.length"
+			v-if="analyze.samples && analyze.samples.list && analyze.samples.list.length"
 		>
 			<h4>{{ "{{ samples.titles }}" }}</h4>
 
 			<figure
-				v-for="(sample, j) samples.list"
+				v-for="(sample, j) in samples.list"
 				:key="j"
 			>
 				<img

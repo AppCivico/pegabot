@@ -12,8 +12,153 @@ const booleanToStringFilter = function booleanToStringFilter(value, trueText, fa
 
 Vue.filter('booleanToString', booleanToStringFilter);
 
+const components = {};
+
+if (document.querySelector('#results__profile')) {
+	components.profile = {
+		template: '#results__profile',
+		props: {
+			user: {
+				type: Object,
+				required: false,
+			},
+			transform: {
+				type: String,
+				required: false,
+				default: '0 43 43',
+			},
+			to: {
+				type: String,
+				required: false,
+				default: '0 43 43',
+			},
+			value: {
+				type: Number,
+				required: false,
+				default: 0,
+			},
+			index: {
+				type: Number,
+				required: true,
+			},
+			focusable: {
+				type: Boolean,
+				required: false,
+				default: false,
+			},
+			removeProfile: {
+				type: Function,
+				required: true,
+			},
+			toApprove: {
+				type: Function,
+				required: true,
+			},
+			toDisapprove: {
+				type: Function,
+				required: true,
+			},
+		},
+		filters: {
+			profileLink(username) {
+				return `https://twitter.com/${username.replace('@', '')}`;
+			},
+			permalink(username) {
+				return `${window.location.origin}${window.location.pathname}?socialnetwork=twitter&profile=${username.replace('@', '')}&search_for=profile`;
+			},
+			whatsAppItLink(username) {
+				const url = encodeURIComponent(window.location.href);
+				const title = encodeURIComponent(`O @pegabots quer saber se @${username.replace('@', '')} é um bot ou não. Qual a sua opinião?`);
+
+				return `https://api.whatsapp.com/send?text=${title}%20${url}`;
+			},
+			facebookItLink(username) {
+				const url = encodeURIComponent(window.location.href);
+				const title = encodeURIComponent(`O @pegabots quer saber se @${username.replace('@', '')} é um bot ou não. Qual a sua opinião?`);
+
+				return `https://www.facebook.com/sharer.php?u=${url}&t=${title}`;
+			},
+			tweetItLink(username) {
+				const hashtags = 'Pegabot';
+				const title = encodeURIComponent(`O @pegabots quer saber se @${username.replace('@', '')} é um bot ou não. Qual a sua opinião?`);
+				const url = encodeURIComponent(window.location.href);
+
+				return `https://twitter.com/intent/tweet?url=${url}&text=${title}&hashtags=${hashtags}`;
+			},
+			resultLevel(value) {
+				let level = 0;
+
+				if (value <= (1 / 5)) {
+					level = 1;
+				} else if (value <= (1 / 5) * 2) {
+					level = 2;
+				} else if (value <= (1 / 5) * 3) {
+					level = 3;
+				} else if (value <= (1 / 5) * 4) {
+					level = 4;
+				} else {
+					level = 4;
+				}
+
+				return `test-result--level-${level}`;
+			},
+		},
+	};
+}
+
+if (document.querySelector('#results__footer')) {
+	components['results-footer'] = {
+		template: '#results__footer',
+		props: {
+			metadata: {
+				type: Object,
+				required: true,
+			},
+			'cancel-request': {
+				type: Function,
+				required: true,
+			},
+		},
+	};
+}
+
+if (document.querySelector('#results__form')) {
+	components['results-form'] = {
+		template: '#results__form',
+		props: {
+			metadata: {
+				type: Object,
+				required: true,
+			},
+		},
+	};
+}
+
+if (document.querySelector('#results__detail')) {
+	components['results-detail'] = {
+		template: '#results__detail',
+		props: {
+			item: {
+				type: Object,
+				required: true,
+				default: () => ({}),
+			},
+			loading: {
+				type: Boolean,
+				required: true,
+				default: false,
+			},
+			propertyName: {
+				type: String,
+				required: true,
+				default: '',
+			},
+		},
+	};
+}
+
 window.$vue = new Vue({
-	el: '#results__list',
+	el: '#app',
 	data: {
 		profileDetails: null,
 		debug: true,
@@ -32,126 +177,10 @@ window.$vue = new Vue({
 		},
 		xhr_request: [],
 	},
-	components: {
-		profile: {
-			template: '#results__profile',
-			props: {
-				user: {
-					type: Object,
-					required: false,
-				},
-				transform: {
-					type: String,
-					required: false,
-					default: '0 43 43',
-				},
-				to: {
-					type: String,
-					required: false,
-					default: '0 43 43',
-				},
-				value: {
-					type: Number,
-					required: false,
-					default: 0,
-				},
-				index: {
-					type: Number,
-					required: true,
-				},
-				focusable: {
-					type: Boolean,
-					required: false,
-					default: false,
-				},
-				removeProfile: {
-					type: Function,
-					required: true,
-				},
-				toApprove: {
-					type: Function,
-					required: true,
-				},
-				toDisapprove: {
-					type: Function,
-					required: true,
-				},
-			},
-			filters: {
-				profileLink(username) {
-					return `https://twitter.com/${username.replace('@', '')}`;
-				},
-				permalink(username) {
-					return `${window.location.origin}${window.location.pathname}?socialnetwork=twitter&profile=${username.replace('@', '')}&search_for=profile`;
-				},
-				whatsAppItLink(username) {
-					const url = encodeURIComponent(window.location.href);
-					const title = encodeURIComponent(`O @pegabots quer saber se @${username.replace('@', '')} é um bot ou não. Qual a sua opinião?`);
-
-					return `https://api.whatsapp.com/send?text=${title}%20${url}`;
-				},
-				facebookItLink(username) {
-					const url = encodeURIComponent(window.location.href);
-					const title = encodeURIComponent(`O @pegabots quer saber se @${username.replace('@', '')} é um bot ou não. Qual a sua opinião?`);
-
-					return `https://www.facebook.com/sharer.php?u=${url}&t=${title}`;
-				},
-				tweetItLink(username) {
-					const hashtags = 'Pegabot';
-					const title = encodeURIComponent(`O @pegabots quer saber se @${username.replace('@', '')} é um bot ou não. Qual a sua opinião?`);
-					const url = encodeURIComponent(window.location.href);
-
-					return `https://twitter.com/intent/tweet?url=${url}&text=${title}&hashtags=${hashtags}`;
-				},
-				resultLevel(value) {
-					let level = 0;
-
-					if (value <= (1 / 5)) {
-						level = 1;
-					} else if (value <= (1 / 5) * 2) {
-						level = 2;
-					} else if (value <= (1 / 5) * 3) {
-						level = 3;
-					} else if (value <= (1 / 5) * 4) {
-						level = 4;
-					} else {
-						level = 4;
-					}
-
-					return `test-result--level-${level}`;
-				},
-			},
-		},
-		'results-footer': {
-			template: '#results__footer',
-			props: {
-				metadata: {
-					type: Object,
-					required: true,
-				},
-				'cancel-request': {
-					type: Function,
-					required: true,
-				},
-			},
-		},
-		'results-form': {
-			template: '#results__form',
-			props: {
-				metadata: {
-					type: Object,
-					required: true,
-				},
-			},
-		},
-		'results-detail': {
-			template: '#results__detail',
-			props: {
-				item: {
-					type: Object,
-					required: true,
-				},
-			},
+	components,
+	computed: {
+		isDetailedView() {
+			return window.document.documentElement.className.indexOf('details-page') !== 1;
 		},
 	},
 	methods: {
@@ -171,7 +200,9 @@ window.$vue = new Vue({
 			this.error = null;
 			this.metadata.loading = true;
 
-			this.$http.get(`${this.metadata.apiURL}/botometer`, {
+			// this.$http.get(`${this.metadata.apiURL}/botometer`, {
+			// this.$http.get('/botometer.json', {
+			this.$http.get('/details.json', {
 				params,
 				before(xhr) {
 					this.xhr_request.push(xhr);
@@ -194,7 +225,7 @@ window.$vue = new Vue({
 					document.body.appendChild(link);
 					link.click();
 				} else {
-					if (response.body.metadata.error) {
+					if (response.body.metadata && response.body.metadata.error) {
 						window.alert(response.body.metadata.error); // eslint-disable-line no-alert
 					}
 
@@ -202,6 +233,11 @@ window.$vue = new Vue({
 						if (response.body.analysis_id) {
 							this.analysisId = response.body.analysis_id;
 						}
+
+						if (this.isDetailedView) {
+							this.profileDetails = response.body.root;
+						}
+
 						if (response.body.profiles) {
 							let profileList = response.body.profiles;
 
@@ -336,6 +372,14 @@ window.$vue = new Vue({
 		}
 
 		if (this.metadata.query.search_for === 'profile') {
+			this.metadata.limit = 1;
+			this.metadata.total = 1;
+			params.limit = 1;
+		}
+
+		if (this.isDetailedView) {
+			params.wantsDocument = 1;
+			params.wants_document = 1;
 			this.metadata.limit = 1;
 			this.metadata.total = 1;
 			params.limit = 1;

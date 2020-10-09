@@ -6,7 +6,7 @@
 ` }}{{ end }}{{ $.Scratch.Add "scriptsHeader" `
 <link rel="preload" src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5" crossorigin="anonymous">
 <link rel="preload" src="/assets/scripts/index.js">
-` }}{{ $.Scratch.Add "rootClass" "results-page" }}{{ partial "header.html" . }}
+` }}{{ $.Scratch.Add "rootClass" "details-page" }}{{ partial "header.html" . }}
 
 <article role="main">
 	<h1>{{ .Title }}</h1>
@@ -18,43 +18,32 @@
 		{{ $finalContent }}
 	{{ end }}
 
-	<div id="result-detail" >
+	<div id="app" hidden>
 		<noscript>{{ i18n "noScriptMessage" }}</noscript>
 		<section
 			class="results-details"
-			:aria-busy="(metadata.loading && profileDetails.length === 0) | booleanToString"
+			:aria-busy="(metadata.loading && !profileDetails) | booleanToString"
 			data-loading-1="{{ i18n "analisysLoading-1" }}"
 			data-loading-2="{{ i18n "analisysLoading-2" }}"
 			data-loading-3="{{ i18n "analisysLoading-3" }}"
 			data-loading-4="{{ i18n "analisysLoading-4" }}"
 			data-loading-5="{{ i18n "analisysLoading-5" }}"
 		>
-
-			{{ range $.Site.Data.details.root }}
-				{{ partial "microtemplates/resultsDetails.html" . }}
-			{{ end }}
-
-			<detail
-				v-for="(item, key) in profileDetails"
-				:item="item"
-			/>
+			<template
+				v-if="profileDetails"
+			>
+				<results-detail
+					v-for="(item, propertyName) in profileDetails"
+					:item="item"
+					:property-name="propertyName"
+					:key="propertyName"
+					:loading="metadata.loading"
+				/>
+			</template>
 		</section>
-
 	</div>
 
 </article>
-
-<script type="text/x-template" id="results__form">
-	{{ partial "microtemplates/resultsForm.html" . }}
-</script>
-
-<script type="text/x-template" id="results__footer">
-	{{ partial "microtemplates/resultsFooter.html" . }}
-</script>
-
-<script type="text/x-template" id="results__profile">
-	{{ partial "microtemplates/resultsProfile.html" . }}
-</script>
 
 <script type="text/x-template" id="results__detail">
 	{{ partial "microtemplates/resultsDetails.html" . }}
