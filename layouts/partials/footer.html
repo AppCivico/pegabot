@@ -48,6 +48,18 @@
 	{{ . | safeHTML }}
 {{ end }}
 
+{{ if eq (getenv "NODE_ENV") "development" }}
+	<script src="https://vuejs.org/js/vue.js"></script>
+{{ else }}
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+{{ end }}
+
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5"></script>
+
+{{ $js := resources.Get "scripts/index.js" | js.Build | resources.Fingerprint "sha512" }}
+
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+
 <script>
 	var target = document.querySelector('.wave-ornament');
 

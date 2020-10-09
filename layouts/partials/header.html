@@ -9,20 +9,15 @@
 
 	<meta content="width=device-width,initial-scale=1.0" name="viewport">
 
-	{{ $css := resources.Get "stylesheets/index.scss" | resources.ToCSS (dict "enableSourceMap" true) }}
-
-	{{- if eq hugo.Environment "production" -}}
-		{{ $css := $css | resources.PostCSS (dict "config" "postcss.config.js") | resources.Fingerprint "sha512" }}
-	{{- else -}}
-		{{ $css := $css | resources.Fingerprint "sha512" }}
-	{{- end }}
+	{{ $css := resources.Get "stylesheets/index.scss" | resources.ToCSS (dict "enableSourceMap" true) | resources.PostCSS (dict "config" "postcss.config.js") | resources.Fingerprint "sha512" }}
 
 	<link
 		rel="stylesheet"
 		href="{{ $css.RelPermalink }}"
 		integrity="{{ $css.Data.Integrity }}"
 		media="all"
-	>
+		crossorigin="anonymous"
+	/>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -39,7 +34,8 @@
 			href="{{ $qa.RelPermalink }}"
 			integrity="{{ $qa.Data.Integrity }}"
 			media="all"
-		>
+			crossorigin="anonymous"
+		/>
 	{{ end }}
 
 	<link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Montserrat:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
@@ -49,6 +45,14 @@
 	<title>{{ if not .IsHome }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
 
 	{{ with $.Site.Params.siteDescription }}<meta name="description" content="{{ . }}">{{ end }}
+
+{{ if eq (getenv "NODE_ENV") "development" }}
+	<link rel="preload" src="https://vuejs.org/js/vue.js" crossorigin="anonymous">
+{{ else }}
+	<link rel="preload" src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js" crossorigin="anonymous">
+{{ end }}
+
+<link rel="preload" src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5" crossorigin="anonymous">
 
 	{{ with $.Scratch.Get "scriptsHeader" }}
 		{{ . | safeHTML }}
