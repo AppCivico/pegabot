@@ -9,7 +9,13 @@
 
 	<meta content="width=device-width,initial-scale=1.0" name="viewport">
 
-	{{ $css := resources.Get "stylesheets/index.scss" | resources.ToCSS | resources.PostCSS (dict "config" "postcss.config.js") | resources.Fingerprint "sha512" }}
+	{{ $css := resources.Get "stylesheets/index.scss" | resources.ToCSS (dict "enableSourceMap" true) }}
+
+	{{- if eq hugo.Environment "production" -}}
+		{{ $css := $css | resources.PostCSS (dict "config" "postcss.config.js") | resources.Fingerprint "sha512" }}
+	{{- else -}}
+		{{ $css := $css | resources.Fingerprint "sha512" }}
+	{{- end }}
 
 	<link
 		rel="stylesheet"
