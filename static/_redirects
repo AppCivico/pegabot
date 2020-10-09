@@ -1,3 +1,4 @@
+/analyze/* https://api.pegabot.com.br/analyze/:splat 200
 /botometer/* https://api.pegabot.com.br/botometer/:splat 200
 /feedback/* https://api.pegabot.com.br/feedback/:splat 200
 
