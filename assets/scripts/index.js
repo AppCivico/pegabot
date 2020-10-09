@@ -180,7 +180,7 @@ window.$vue = new Vue({
 	components,
 	computed: {
 		isDetailedView() {
-			return window.document.documentElement.className.indexOf('details-page') !== 1;
+			return window.document.documentElement.className.indexOf('details-page') !== -1;
 		},
 	},
 	methods: {
