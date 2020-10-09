@@ -112,13 +112,20 @@
 				{{ i18n "mostUsedTags" }}
 			</h3>
 			<ul
-				class="results-details__hashtags-list"
+				class="results-details__list"
 			>
 				<li
-					class="results-details__hashtags-item"
+					class="results-details__list-item"
 					v-for="(tag, j) in analysis.hashtags"
-					:key="m"
-				>{{ "{{ tag }}" }}</li>
+					:key="j"
+				>
+					<a
+						class="results-details__list-link"
+						:href="`https://twitter.com/hashtag/${tag}`"
+					>
+						#{{ "{{ tag }}" }}
+					</a>
+				</li>
 			</ul>
 		</div>
 
@@ -132,19 +139,19 @@
 				{{ i18n "mentions" }}
 			</h3>
 			<ul
-				class="results-details__mentions-list"
+				class="results-details__list"
 			>
 				<li
-					v-for="(mention, j) in analysis.mentions.length"
-					class="results-details__mentions-item"
+					v-for="(mention, j) in analysis.mentions"
+					class="results-details__list-item"
+					:key="j"
 				>
-					<img
-						class="results-details__mentions-avatar"
-						:src="mention.avatar"
-						:alt="mention.handle"
-						width="66"
-						height="66"
-					/>
+					<a
+						class="results-details__list-link"
+						:href="`https://twitter/${mention.screen_name}`"
+					>
+						@{{ "{{ mention.screen_name }}" }}
+					</a>
 				</li>
 			</ul>
 		</div>

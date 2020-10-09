@@ -125,10 +125,6 @@
 
 }
 
-.results-details__description {
-
-}
-
 .results-details__conclusion {
 
 }
@@ -151,13 +147,13 @@
 
 }
 
-.results-details__hashtags-list {
+.results-details__list {
 	@include clearfix;
 
 	color: palette('orange');
 }
 
-.results-details__hashtags-item {
+.results-details__list-item {
 	float: left;
 
 	white-space: nowrap;
@@ -165,34 +161,16 @@
 	list-style-type: none;
 
 	&::before {
-		position: static;
-
-		font-weight: normal;
-
-		content: '#';
+		content: '';
 	}
+}
+
+.results-details__list-link {
+	@include link-undercover;
 }
 
 .results-details__mentions {
 
-}
-
-.results-details__mentions-list {
-	@include clearfix;
-
-	white-space: normal;
-
-	color: palette('orange');
-}
-
-.results-details__mentions-item {
-	float: left;
-
-	list-style-type: none;
-
-	&::before {
-		content: none;
-	}
 }
 
 .results-details__mentions-avatar {
