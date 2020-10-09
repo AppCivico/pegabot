@@ -1,6 +1,6 @@
-/analyze/* https://api.pegabot.com.br/analyze/:splat 200
-/botometer/* https://api.pegabot.com.br/botometer/:splat 200
-/feedback/* https://api.pegabot.com.br/feedback/:splat 200
+/analyze/* https://dev-api.pegabot.com.br/analyze/:splat 200
+/botometer/* https://dev-api.pegabot.com.br/botometer/:splat 200
+/feedback/* https://dev-api.pegabot.com.br/feedback/:splat 200
 
 # *** Warning! Your custom domain is not using HTTPS yet ***
 # These rules will change if you change your site’s custom domains or HTTPS settings
