@@ -15,7 +15,7 @@
     "clean:assets": "rimraf ./static/assets/**/*.{css,img,js,png,gif,jpg,map}",
     "clean:dist": "rimraf ./public/**/*.*",
     "clean:testResults": "rimraf ./testResults/**/*.xml",
-    "cachebust": "npm run cachebust:media && npm run cachebust:cssAndJs",
+    "cachebust": "npm run cachebust:media",
     "cachebust:content": "hashmark -l 8 ./**/*.{gif,jpg,png,svg,mp4}      {dir}/{name}-{hash}{ext} --cwd content | replaceinfiles -s \"{content,data}/**/*.{md,yaml}\"                    -d \"{dir}/{base}\"",
     "cachebust:media": "hashmark -l 8 assets/**/*.{gif,jpg,png,svg,mp4} {dir}/{name}-{hash}{ext} --cwd static  | replaceinfiles -s \"{content,data,layouts,static}/**/*.{md,html,css}\" -d \"{dir}/{base}\"",
     "compile:sass": "sass source/stylesheets/:static/assets/styles",
