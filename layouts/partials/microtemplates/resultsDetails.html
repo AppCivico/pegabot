@@ -32,7 +32,7 @@
 				class="results-details__handle"
 			>
 				<dt>{{ i18n "handle" }}</dt>
-				<dd>{{ "{{ item.handle }}" }}</dd>
+				<dd>@{{ "{{ item.handle }}" }}</dd>
 			</dl>
 
 			<dl
@@ -40,7 +40,14 @@
 				class="results-details__link"
 			>
 				<dt>{{ i18n "link" }}</dt>
-				<dd>{{ "{{ item.link }}" }}</dd>
+				<dd>
+					<a
+						:href="`https://twitter.com/${item.link}`"
+						target="_blank"
+					>
+						{{ "{{ item.link }}" }}
+					</a>
+				</dd>
 			</dl>
 		</div>
 
@@ -56,15 +63,15 @@
 
 	<section
 		class="results-details__analysis"
-		v-for="(analyze, i) in item.analysis"
+		v-for="(analysis, i) in item.analyses"
 		:key="i"
 	>
 		<h4
 			class="results-details__analysis-title"
-		>{{ "{{ analyze.title }}" }}</h4>
+		>{{ "{{ analysis.title }}" }}</h4>
 
 		<div class="results-details__description"
-			v-html="analyze.description"
+			v-html="analysis.description"
 		></div>
 
 		<dl
@@ -73,10 +80,10 @@
 			<dt
 				class="results-details__analysis-subtitle"
 			>
-				{{ i18n "analyze" }}
+				{{ i18n "analysis" }}
 			</dt>
 			<dd
-				v-html="analyze.summary"
+				v-html="analysis.summary"
 			></dd>
 		</dl>
 
@@ -91,12 +98,12 @@
 
 			<dd
 			>
-				{{ "{{ Number.parseFloat(analyze.conclusion * 100).toFixed(2) }}%" }}
+				{{ "{{ Number.parseFloat(analysis.conclusion * 100).toFixed(2) }}%" }}
 			</dd>
 		</dl>
 
 		<div
-			v-if="analyze.hashtags && analyze.hashtags.length"
+			v-if="analysis.hashtags && analysis.hashtags.length"
 			class="results-details__hashtags results-details__card"
 		>
 			<h3
@@ -104,16 +111,19 @@
 			>
 				{{ i18n "mostUsedTags" }}
 			</h3>
-			<ul>
+			<ul
+				class="results-details__hashtags-list"
+			>
 				<li
-					v-for="(tag, j) in analyze.hashtags"
+					class="results-details__hashtags-item"
+					v-for="(tag, j) in analysis.hashtags"
 					:key="m"
 				>{{ "{{ tag }}" }}</li>
 			</ul>
 		</div>
 
 		<div
-			v-if="analyze.mentions && analyze.mentions.length"
+			v-if="analysis.mentions && analysis.mentions.length"
 			class="results-details__mentions results-details__card"
 		>
 			<h3
@@ -121,20 +131,26 @@
 			>
 				{{ i18n "mentions" }}
 			</h3>
-			<ul>
+			<ul
+				class="results-details__mentions-list"
+			>
 				<li
-					v-for="(mention, j) in analyze.mentions.length"
+					v-for="(mention, j) in analysis.mentions.length"
+					class="results-details__mentions-item"
 				>
 					<img
+						class="results-details__mentions-avatar"
 						:src="mention.avatar"
 						:alt="mention.handle"
+						width="66"
+						height="66"
 					/>
 				</li>
 			</ul>
 		</div>
 
 		<div
-			v-if="analyze.tweetsByNumbers && analyze.tweetsByNumbers.length"
+			v-if="analysis.tweetsByNumbers && analysis.tweetsByNumbers.length"
 			class="results-details__tweets results-details__card"
 		>
 			<h3
@@ -143,7 +159,7 @@
 				{{ i18n "100TweetsAnalyzed" }}
 			</h3>
 			<dl
-				v-for="(number, j) in analyze.tweetsByNumbers"
+				v-for="(number, j) in analysis.tweetsByNumbers"
 				:key="j"
 			>
 				<dt>{{ "{{ j }}" }}</dt>
@@ -153,7 +169,7 @@
 
 		<div
 			class="results-details__samples"
-			v-if="analyze.samples && analyze.samples.list && analyze.samples.list.length"
+			v-if="analysis.samples && analysis.samples.list && analysis.samples.list.length"
 		>
 			<h4>{{ "{{ samples.titles }}" }}</h4>
 

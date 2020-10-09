@@ -17,13 +17,14 @@
 
 	margin-right: $gutter * 0.5;
 	margin-left: $gutter * 0.5;
-
-	outline: 1px dotted red;
 }
 
 .results-details__intro--network {
 	&::after {
 		flex-basis: calc(100% / 3 - #{$gutter});
+
+		max-width: 320px;
+		min-height: 245px;
 
 		background-image: image('detail-network.png');
 		background-size: contain;
@@ -32,19 +33,18 @@
 	}
 }
 
-
 .results-details__profile-capture {
 	flex-basis: 33%;
 	flex-grow: 1;
 
-	outline: 1px dotted red;
+	border-radius: 6px;
+
+	box-shadow: 5px 5px 5px 0 palette('shadow');
 }
 
 .results-details__intro-container {
 	flex-basis: 66%;
 	flex-grow: 2;
-
-	outline: 1px dotted red;
 }
 
 .results-details__subtitle[role='doc-subtitle'][class] {
@@ -68,6 +68,8 @@
 .results-details__handle dt {
 	float: left;
 
+	margin-right: 0.25em;
+
 	font-weight: normal;
 
 	color: palette('orange');
@@ -84,6 +86,8 @@
 .results-details__link dt {
 	float: left;
 
+	margin-right: 0.25em;
+
 	font-weight: normal;
 
 	color: palette('orange');
@@ -98,8 +102,6 @@
 	flex-grow: 1;
 
 	margin: $gutter * 0.5;
-
-	outline: 1px dotted red;
 }
 
 .results-details__analysis--chart {
@@ -107,6 +109,8 @@
 }
 
 .results-details__analysis-title {
+	margin-top: 0;
+
 	font-size: ms(0);
 
 	text-transform: uppercase;
@@ -140,15 +144,62 @@
 }
 
 .results-details__analysis-subtitle--card {
-	font-weight: inherit;
+	font: inherit;
 }
 
 .results-details__hashtags {
 
 }
 
+.results-details__hashtags-list {
+	@include clearfix;
+
+	color: palette('orange');
+}
+
+.results-details__hashtags-item {
+	float: left;
+
+	white-space: nowrap;
+
+	list-style-type: none;
+
+	&::before {
+		position: static;
+
+		font-weight: normal;
+
+		content: '#';
+	}
+}
+
 .results-details__mentions {
 
+}
+
+.results-details__mentions-list {
+	@include clearfix;
+
+	white-space: normal;
+
+	color: palette('orange');
+}
+
+.results-details__mentions-item {
+	float: left;
+
+	list-style-type: none;
+
+	&::before {
+		content: none;
+	}
+}
+
+.results-details__mentions-avatar {
+	display: block;
+
+	min-width: 66px;
+	min-height: 66px;
 }
 
 .results-details__tweets {
