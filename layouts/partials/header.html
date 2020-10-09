@@ -9,7 +9,14 @@
 
 	<meta content="width=device-width,initial-scale=1.0" name="viewport">
 
-	<link rel="stylesheet" href="/assets/styles/index.css" media="all">
+	{{ $css := resources.Get "stylesheets/index.scss" | resources.ToCSS | resources.PostCSS (dict "config" "postcss.config.js") | resources.Fingerprint "sha512" }}
+
+	<link
+		rel="stylesheet"
+		href="{{ $css.RelPermalink }}"
+		integrity="{{ $css.Data.Integrity }}"
+		media="all"
+	>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -20,8 +27,15 @@
 	<meta name="theme-color" content="#ffffff">
 
 	{{ if eq (getenv "NODE_ENV") "development" }}
-		<link rel="stylesheet" href="/assets/styles/qa.css" media="all">
+		{{ $qa := resources.Get "stylesheets/qa.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint "sha512" }}
+		<link
+			rel="stylesheet"
+			href="{{ $qa.RelPermalink }}"
+			integrity="{{ $qa.Data.Integrity }}"
+			media="all"
+		>
 	{{ end }}
+
 	<link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Montserrat:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
 
 	<script type="text/javascript">document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, '');</script>
