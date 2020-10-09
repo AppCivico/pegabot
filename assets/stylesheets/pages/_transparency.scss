@@ -3,16 +3,19 @@
 		// second
 		&:nth-of-type(2) {
 			background-image: image('robot__orange--circular.svg');
+			background-size: 170px;
 		}
 
 		// third
 		&:nth-of-type(3) {
 			background-image: image('robot__yellow--rounded.svg');
+			background-position: right;
 		}
 
 		// forth
 		&:nth-of-type(4) {
 			background-image: image('robot__purple--square.svg');
+			background-position: left;
 		}
 	}
 
@@ -22,6 +25,10 @@
 			background-image: image('robot__orange--circular.svg'),
 			image('robot__purple--square.svg'),
 			image('robot__yellow--rounded.svg');
+			background-position: calc(60% - 213px - 86px) 185px,
+			calc(60% - 81px - 366px) 398px,
+			calc(60% - 102px - 398px) 150px;
+			background-size: auto;
 		}
 
 		// third
@@ -29,6 +36,9 @@
 			background-image: image('robot__yellow--rounded.svg'),
 			image('robot__orange--circular.svg'),
 			image('robot__purple--square.svg');
+			background-position: calc(50vw + 96px) 176px,
+			calc(50vw + 376px) 384px,
+			calc(50vw + 406px) 139px;
 		}
 
 		// forth
@@ -36,6 +46,42 @@
 			background-image: image('robot__purple--square.svg'),
 			image('robot__yellow--rounded.svg'),
 			image('robot__orange--circular.svg');
+			background-position: calc(50vw - 213px - 86px) 185px,
+			calc(50vw - 81px - 366px) 398px,
+			calc(50vw - 102px - 398px) 150px;
+		}
+	}
+
+	@media screen and (min-width: breakpoint('wide')) {
+		// second
+		&:nth-of-type(2) {
+			background-image: image('robot__orange--circular.svg'),
+			image('robot__purple--square.svg'),
+			image('robot__yellow--rounded.svg');
+
+			background-position: calc(37.5vw - 213px - 86px) 185px,
+			calc(37.5vw - 81px - 366px) 398px,
+			calc(37.5vw - 102px - 398px) 150px;
+		}
+
+		// third
+		&:nth-of-type(3) {
+			background-image: image('robot__yellow--rounded.svg'),
+			image('robot__orange--circular.svg'),
+			image('robot__purple--square.svg');
+			background-position: calc(60% + 200px) 176px,
+			calc(60% + 376px) 384px,
+			calc(60% + 406px) 139px;
+		}
+
+		// forth
+		&:nth-of-type(4) {
+			background-image: image('robot__purple--square.svg'),
+			image('robot__yellow--rounded.svg'),
+			image('robot__orange--circular.svg');
+			background-position: calc(50% - 213px - 86px) 185px,
+			calc(50% - 81px - 366px) 398px,
+			calc(50% - 102px - 398px) 150px;
 		}
 	}
 }
