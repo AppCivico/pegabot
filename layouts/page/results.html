@@ -47,32 +47,6 @@
 		{{ .Render "curved-section" }}
 	{{ end }}
 
-	{{ range where (.Resources.Match "methodology*") ".Kind" "page" }}
-		<article
-			class="
-				{{ with .File }}{{ .TranslationBaseName }}{{ end }}
-				alternate-paragraphs
-				delayed-entrance
-				delayed-entrance__bottom
-			"
-		>
-			<div class="container">
-				<h2
-					class="article__title"
-				>
-					{{ .Title }}
-				</h2>
-
-				<div class="article__content">
-					{{ $input := "(?i)(Pegabot)" }}
-					{{ $output := "<b>$1</b>" }}
-					{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
-					{{ $finalContent }}
-				</div>
-			</div>
-		</article>
-	{{ end }}
-
 	{{ range first 1 (after 1 (where $.Site.Pages ".Type" "bookmark")) }}
 		{{ .Render "curved-section" }}
 	{{ end }}
