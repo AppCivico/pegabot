@@ -20,7 +20,7 @@
     "cachebust:media": "hashmark -l 8 assets/**/*.{gif,jpg,png,svg,mp4} {dir}/{name}-{hash}{ext} --cwd static  | replaceinfiles -s \"{content,data,layouts,static}/**/*.{md,html,css}\" -d \"{dir}/{base}\"",
     "compile:sass": "sass source/stylesheets/:static/assets/styles",
     "compress:css": "postcss --use autoprefixer cssnano --safe -r ./static/assets/styles/**/*.css",
-    "compress:img": "imagemin \"./source/images/**/*.{gif,jpg,png,svg}\" --out-dir=./static/assets/images",
+    "compress:img": "imagemin \"./source/images/**/*.{gif,jpg,svg}\" --out-dir=./static/assets/images",
     "compile:js": "browserify ./source/scripts/index.js -o ./static/assets/scripts/index.js -t [ babelify ]",
     "prelint": "rimraf ./testResults/**/*.xml",
     "lint": "npm-run-all --parallel lint:*",
