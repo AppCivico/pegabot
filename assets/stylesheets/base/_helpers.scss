@@ -200,9 +200,9 @@ textarea {
 	transition-property: opacity, transform;
 	transition-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
 
-	& + & {
-		transition-delay: 0.3s;
-	}
+	// & + & {
+	// 	transition-delay: 0.3s;
+	// }
 
 	&:nth-child(2):nth-last-child(2) {
 		transition-delay: 0.6s;
@@ -237,6 +237,10 @@ textarea {
 	padding-left: $gutter;
 	margin-right: auto;
 	margin-left: auto;
+
+	& + & {
+		margin-bottom: 0;
+	}
 }
 
 .alternate-paragraphs .article__content {
