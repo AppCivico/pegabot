@@ -4,57 +4,64 @@
 	:class="`results-details__item--${propertyName}`"
 >
 	<div
-		role="doc-subtitle"
-		class="results-details__subtitle"
-	>
-		{{ i18n "aboutThisProfile" }}
-	</div>
-
-	<div
 		class="results-details__intro"
+		:class="`results-details__intro--${propertyName}`"
 	>
-		<h2
-			class="results-details__title"
-			:class="`results-details__title--${propertyName}`"
-		>
-			{{ "{{ propertyName }}" }}
-		</h2>
+		<div class="results-details__intro-container">
+			<div
+				role="doc-subtitle"
+				class="results-details__subtitle"
+			>
+				{{ i18n "aboutThisProfile" }}
+			</div>
 
-		<p
-			class="results-details__description"
-		>
-			{{ "{{ item.description }}" }}
-		</p>
+			<h2
+				class="results-details__title"
+				:class="`results-details__title--${propertyName}`"
+			>
+				{{ "{{ propertyName }}" }}
+			</h2>
 
-		<dl
-			v-if="item.handle"
-			class="results-details__handle"
-		>
-			<dt>{{ i18n "handle" }}</dt>
-			<dd>{{ "{{ item.handle }}" }}</dd>
-		</dl>
+			<div
+				class="results-details__description"
+				v-html="item.description"
+			></div>
 
-		<dl
-			v-if="item.link"
-			class="results-details__link"
-		>
-			<dt>{{ i18n "link" }}</dt>
-			<dd>{{ "{{ item.link }}" }}</dd>
-		</dl>
+			<dl
+				v-if="item.handle"
+				class="results-details__handle"
+			>
+				<dt>{{ i18n "handle" }}</dt>
+				<dd>{{ "{{ item.handle }}" }}</dd>
+			</dl>
+
+			<dl
+				v-if="item.link"
+				class="results-details__link"
+			>
+				<dt>{{ i18n "link" }}</dt>
+				<dd>{{ "{{ item.link }}" }}</dd>
+			</dl>
+		</div>
+
+		<img
+			v-if="item.figure"
+			:src="item.figure"
+			:alt="item.handle"
+			class="results-details__profile-capture"
+			aria-hidden="true"
+			width="480"
+		/>
 	</div>
-
-	<img
-		v-if="item.figure"
-		:src="item.figure"
-		:alt="item.handle"
-		aria-hidden="true"
-	/>
 
 	<section
+		class="results-details__analysis"
 		v-for="(analyze, i) in item.analysis"
 		:key="i"
 	>
-		<h4>{{ "{{ analyze.title }}" }}</h4>
+		<h4
+			class="results-details__analysis-title"
+		>{{ "{{ analyze.title }}" }}</h4>
 
 		<div class="results-details__description"
 			v-html="analyze.description"
@@ -63,7 +70,9 @@
 		<dl
 			class="results-details__description"
 		>
-			<dt>
+			<dt
+				class="results-details__analysis-subtitle"
+			>
 				{{ i18n "analyze" }}
 			</dt>
 			<dd
@@ -74,13 +83,15 @@
 		<dl
 			class="results-details__conclusion"
 		>
-			<dt>
+			<dt
+				class="results-details__analysis-subtitle"
+			>
 				{{ i18n "result" }}
 			</dt>
 
 			<dd
 			>
-				{{ "{{ analyze.conclusion }}" }}
+				{{ "{{ Number.parseFloat(analyze.conclusion * 100).toFixed(2) }}%" }}
 			</dd>
 		</dl>
 
@@ -88,7 +99,9 @@
 			v-if="analyze.hashtags && analyze.hashtags.length"
 			class="results-details__hashtags results-details__card"
 		>
-			<h3>
+			<h3
+				class="results-details__analysis-subtitle results-details__analysis-subtitle--card"
+			>
 				{{ i18n "mostUsedTags" }}
 			</h3>
 			<ul>
@@ -103,7 +116,9 @@
 			v-if="analyze.mentions && analyze.mentions.length"
 			class="results-details__mentions results-details__card"
 		>
-			<h3>
+			<h3
+				class="results-details__analysis-subtitle results-details__analysis-subtitle--card"
+			>
 				{{ i18n "mentions" }}
 			</h3>
 			<ul>
@@ -122,7 +137,9 @@
 			v-if="analyze.tweetsByNumbers && analyze.tweetsByNumbers.length"
 			class="results-details__tweets results-details__card"
 		>
-			<h3>
+			<h3
+				class="results-details__analysis-subtitle results-details__analysis-subtitle--card"
+			>
 				{{ i18n "100TweetsAnalyzed" }}
 			</h3>
 			<dl
@@ -151,12 +168,11 @@
 				<figcaption>{{ "{{ caption }}" }}</figcaption>
 			</figure>
 		</div>
-
 	</section>
 
 	<section
 		v-if=item.chart
-		class="results-details__chart"
+		class="results-details__analysis results-details__analysis--chart"
 	>
 		{{ "{{ item.chart }}" }}
 	</section>

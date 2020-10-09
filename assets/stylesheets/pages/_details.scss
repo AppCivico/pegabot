@@ -1,0 +1,164 @@
+.results-details__item {
+	display: flex;
+
+	flex-wrap: wrap;
+
+	margin-right: $gutter * -0.5;
+	margin-left: $gutter * -0.5;
+
+	font-size: ms(-1);
+}
+
+.results-details__intro {
+	display: flex;
+
+	flex-basis: 100%;
+	flex-wrap: wrap;
+
+	margin-right: $gutter * 0.5;
+	margin-left: $gutter * 0.5;
+
+	outline: 1px dotted red;
+}
+
+.results-details__intro--network {
+	&::after {
+		flex-basis: calc(100% / 3 - #{$gutter});
+
+		background-image: image('detail-network.png');
+		background-size: contain;
+
+		content: '';
+	}
+}
+
+
+.results-details__profile-capture {
+	flex-basis: 33%;
+	flex-grow: 1;
+
+	outline: 1px dotted red;
+}
+
+.results-details__intro-container {
+	flex-basis: 66%;
+	flex-grow: 2;
+
+	outline: 1px dotted red;
+}
+
+.results-details__subtitle[role='doc-subtitle'][class] {
+	margin: 0;
+
+	text-align: left;
+}
+
+.results-details__title {
+
+}
+
+.results-details__description {
+	margin-bottom: $gutter;
+}
+
+.results-details__handle {
+	margin: 0;
+}
+
+.results-details__handle dt {
+	float: left;
+
+	font-weight: normal;
+
+	color: palette('orange');
+
+	&::after {
+		content: ': ';
+	}
+}
+
+.results-details__link {
+	margin: 0;
+}
+
+.results-details__link dt {
+	float: left;
+
+	font-weight: normal;
+
+	color: palette('orange');
+
+	&::after {
+		content: ': ';
+	}
+}
+
+.results-details__analysis {
+	flex-basis: calc(100% / 3 - #{$gutter});
+	flex-grow: 1;
+
+	margin: $gutter * 0.5;
+
+	outline: 1px dotted red;
+}
+
+.results-details__analysis--chart {
+	flex-basis: calc(100% / 3 * 2 - #{$gutter});
+}
+
+.results-details__analysis-title {
+	font-size: ms(0);
+
+	text-transform: uppercase;
+
+	color: palette('purple');
+}
+
+.results-details__analysis-subtitle {
+	font-size: ms(0);
+
+	color: inherit;
+
+}
+
+.results-details__description {
+
+}
+
+.results-details__conclusion {
+
+}
+
+.results-details__card {
+	padding: $gutter * 0.5;
+
+	background-color: palette('white');
+
+	border-radius: 6px;
+
+	box-shadow: 5px 5px 5px 0 palette('shadow');
+}
+
+.results-details__analysis-subtitle--card {
+	font-weight: inherit;
+}
+
+.results-details__hashtags {
+
+}
+
+.results-details__mentions {
+
+}
+
+.results-details__tweets {
+
+}
+
+.results-details__samples {
+
+}
+
+.results-details__chart {
+
+}
