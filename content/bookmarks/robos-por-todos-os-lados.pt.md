@@ -6,7 +6,7 @@ layout: none
 type: bookmark
 author: Diego Cerqueira
 link: "/"
-imageSrc: /uploads/robos-por-toda-parte.jpg
+imageSrc: /uploads/vejo-robos-por-toda-parte.jpg
 imageAlt:
 weight: 1
 language: pt
