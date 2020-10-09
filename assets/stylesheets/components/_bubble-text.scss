@@ -11,6 +11,8 @@ $bubble-radius: 1.9rem;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 
+	margin-bottom: $gutter;
+
 	@media screen and (min-width: breakpoint('desktop')) {
 		flex-direction: row;
 	}

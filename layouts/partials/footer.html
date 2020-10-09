@@ -109,7 +109,7 @@
 		for (let index = 0; index < delayedEls.length; index++) {
 			const element = delayedEls[index];
 
-			if (checkVisible(element, 150)) {
+			if (checkVisible(element, 50)) {
 				element.className = element.className.replace('delayed-entrance__bottom', '');
 			}
 		}
