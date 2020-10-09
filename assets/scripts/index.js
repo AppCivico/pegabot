@@ -197,14 +197,18 @@ window.$vue = new Vue({
 			return params;
 		},
 		loadResults(params, currentIndex = 0) {
+			const endPoint = this.isDetailedView
+				? `${this.metadata.apiURL}/analyze`
+				: `${this.metadata.apiURL}/botometer`;
+
 			this.error = null;
 			this.metadata.loading = true;
 
-			// this.$http.get(`${this.metadata.apiURL}/botometer`, {
+			this.$http.get(endPoint, {
 			// dev only on /results
 			// this.$http.get('/botometer.json', {
 			// dev only on /details
-			this.$http.get('/details.json', {
+			// this.$http.get('/details.json', {
 				params,
 				before(xhr) {
 					this.xhr_request.push(xhr);
