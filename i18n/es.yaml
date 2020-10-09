@@ -1,9 +1,9 @@
+- id: 100TweetsAnalyzed
+  translation: "100 tweets analizados"
+- id: aboutThisProfile
+  translation: "Acerca de este perfil"
 - id: allFeatures
   translation: "Análisis completo"
-- id: analysis
-  translation: "Análisis"
-- id: analysisProgress
-  translation: "{{ .Count }} cuentas analizadas."
 - id: analisysLoading-1
   translation: Espere. Pegabot está analizando.
 - id: analisysLoading-2
@@ -12,6 +12,12 @@
   translation: Pegabot analiza la red del perfil investigado.
 - id: analisysLoading-4
   translation: Pegabot utiliza el análisis sentimental para evaluar su probabilidad de ser un robot.
+- id: analysis
+  translation: "Análisis"
+- id: analysisProgress
+  translation: "{{ .Count }} cuentas analizadas."
+- id: analyze
+  translation: "Analizar"
 - id: aProjectBy
   translation: "Un proyecto de"
 - id: backToTop
@@ -42,42 +48,52 @@
   translation: "Feedback"
 - id: friendship
   translation: "Amistad"
+- id: handle
+  translation: "Handle"
 - id: index
   translation: "Índice"
 - id: iWantToCollaborate
   translation: "Quiero colaborar!"
 - id: languageIndependentFeatures
   translation: "Elementos independientes del lenguaje"
+- id: link
+  translation: "Enlace"
+- id: mentions
+  translation: "Menciones"
 - id: menu
   translation: "Menú"
-- id: newsletter
-  translation: "Boletín"
+- id: mostUsedTags
+  translation: "Etiquetas más usadas"
 - id: network
   translation: "Red"
+- id: newsletter
+  translation: "Boletín"
 - id: noScriptMessage
   translation: "Esta funcionalidad depende de JavaScript."
 - id: notFound
   translation: "No encontrada"
 - id: profileAnalysis
   translation: "Análisis de perfil"
-- id: profileOf
-  translation: "Perfil de"
 - id: profileLink
   translation: "Perfil en la red social"
+- id: profileOf
+  translation: "Perfil de"
 - id: readFullContent
   translation: "Leer el contenido completo"
 - id: readMore
   translation: "Sigue leyendo"
+- id: result
+  translation: "Resultado"
 - id: returnedResults
   translation: "Su búsqueda arrojó {{ .Count }} resultados."
 - id: returnToHome
   translation: "Regresar a la página principal."
+- id: sentiment
+  translation: "Emocional"
 - id: shareResults
   translation: "Compartir resultados"
 - id: signUpNewsletter
   translation: "Suscribirse a la lista"
-- id: sentiment
-  translation: "Emocional"
 - id: socialNetwork
   translation: "Red social"
 - id: sponsorship

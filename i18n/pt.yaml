@@ -1,7 +1,9 @@
+- id: 100TweetsAnalyzed
+  translation: 100 tweets analisados
+- id: aboutThisProfile
+  translation: sobre este perfil
 - id: allFeatures
   translation: "Análise completa"
-- id: analysis
-  translation: "Análise"
 - id: analisysDownload
   translation: Baixar análise
 - id: analisysLoading-1
@@ -14,8 +16,12 @@
   translation: O Pegabot analisa a linguagem do perfil.
 - id: analisysLoading-5
   translation: O Pegabot analisa a rede do perfil.
+- id: analysis
+  translation: "Análise"
 - id: analysisProgress
   translation: "{{ .Count }} contas analisadas."
+- id: analyze
+  translation: Analisar
 - id: analyzeAProfile
   translation: "Analisar um perfil"
 - id: aProjectBy
@@ -48,34 +54,44 @@
   translation: "Fornecer parecer"
 - id: friendship
   translation: "Amizades"
+- id: handle
+  translation: Handle
 - id: index
   translation: "Índice"
 - id: iWantToCollaborate
   translation: "Eu quero colaborar!"
 - id: languageIndependentFeatures
   translation: "Elementos independentes da linguagem"
+- id: link
+  translation: link
 - id: loadMoreAnalysis
   translation: "Conhecer mais análises"
+- id: mentions
+  translation: Menções
 - id: menu
   translation: "Menu"
-- id: newsletter
-  translation: "Newsletter"
+- id: mostUsedTags
+  translation: Tags mais usadas
 - id: network
   translation: "Rede (seguidores e seguidos)"
+- id: newsletter
+  translation: "Newsletter"
 - id: noScriptMessage
   translation: "Essa funcionalidade depende de JavaScript."
 - id: notFound
   translation: "Não encontrado."
-- id: profileOf
-  translation: "Perfil de usuário"
 - id: profileAnalysis
   translation: "Análise por critérios"
 - id: profileLink
   translation: "Perfil na rede social"
-- id: readMore
-  translation: "Continuar lendo"
+- id: profileOf
+  translation: "Perfil de usuário"
 - id: readFullContent
   translation: "Ler conteúdo completo"
+- id: readMore
+  translation: "Continuar lendo"
+- id: result
+  translation: Resultado
 - id: returnedResults
   translation: "Sua busca retornou {{ .Count }} resultados."
 - id: returnToHome
@@ -88,12 +104,12 @@
   translation: "Os robôs trabalham 24hrs por dia de forma a atingir diferentes tipos de público em horários variados"
 - id: robotTraffic
   translation: "Em 2016 os bots corresponderam a mais de 50% do tráfego total da Internet"
+- id: sentiment
+  translation: "Linguagem utilizada nos tweets"
 - id: shareResults
   translation: "Compartilhe o resultado"
 - id: signUpNewsletter
   translation: "Inscreva-se à lista"
-- id: sentiment
-  translation: "Linguagem utilizada nos tweets"
 - id: socialNetwork
   translation: "Rede social"
 - id: sponsorship
@@ -124,7 +140,7 @@
   translation: "Tweetar esse resultado"
 - id: twitterProfile
   translation: "perfil no Twitter"
-- id: user
-  translation: "Usuário"
 - id: usePegabot
   translation: "Agora que você já viu o que pode ser feito com o PegaBot,<br /> analise a probabilidade de um perfil do Twitter ser um bot"
+- id: user
+  translation: "Usuário"
