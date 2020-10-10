@@ -8,4 +8,4 @@ type: callToAction
 weight: 0
 language: pt
 ---
-[Quero colaborar]('#')
+[Quero colaborar](colaborar)
