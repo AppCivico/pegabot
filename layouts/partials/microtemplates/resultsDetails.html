@@ -32,7 +32,7 @@
 				class="results-details__handle"
 			>
 				<dt>{{ i18n "handle" }}</dt>
-				<dd>@{{ "{{ item.handle }}" }}</dd>
+				<dd>{{ "{{ item.handle }}" }}</dd>
 			</dl>
 
 			<dl
@@ -65,6 +65,7 @@
 		class="results-details__analysis"
 		v-for="(analysis, i) in item.analyses"
 		:key="i"
+		:class="{'results-details__analysis--chart': analysis.chart}"
 	>
 		<h4
 			class="results-details__analysis-title"
@@ -103,6 +104,13 @@
 				{{ "{{ Number.parseFloat(analysis.conclusion * 100).toFixed(2) }}%" }}
 			</dd>
 		</dl>
+
+		<div
+			v-if="analysis.chart && analysis.chart.length"
+			class="results-details__analysis results-details__analysis--chart"
+		>
+			{{ "{{ analysis.chart }}" }}
+		</div>
 
 		<div
 			v-if="analysis.hashtags && analysis.hashtags.length"
@@ -195,11 +203,6 @@
 		</div>
 	</section>
 
-	<section
-		v-if=item.chart
-		class="results-details__analysis results-details__analysis--chart"
-	>
-		{{ "{{ item.chart }}" }}
-	</section>
+
 
 </article>
