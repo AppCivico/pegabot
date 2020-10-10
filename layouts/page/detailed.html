@@ -13,7 +13,7 @@
 	<div id="app" hidden>
 		<noscript>{{ i18n "noScriptMessage" }}</noscript>
 		<section
-			class="results-details"
+			class="results-details results-loading"
 			:aria-busy="(metadata.loading && !profileDetails) | booleanToString"
 			data-loading-1="{{ i18n "analisysLoading-1" }}"
 			data-loading-2="{{ i18n "analisysLoading-2" }}"

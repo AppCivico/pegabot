@@ -2,6 +2,8 @@
 // This file contains CSS helper classes.
 // -----------------------------------------------------------------------------
 
+$duration: 0.5s;
+
 /* CLASSES
 ============================================================================ */
 %loading-bg {
@@ -311,5 +313,144 @@ body {
 		min-height: 464px;
 
 		content: '';
+	}
+}
+
+.results-loading {
+	min-height: 0;
+
+	transition-duration: $duration;
+	transition-property: min-height;
+
+	&[aria-busy='true'] {
+		display: flex;
+
+		flex-direction: column;
+
+		min-height: 90vh;
+
+		color: palette('purple');
+
+		&::before,
+		&::after {
+			position: static;
+
+			flex-basis: 0;
+			flex-grow: 1;
+
+			width: 100%;
+			max-width: 24em;
+
+			margin-right: auto;
+			margin-left: auto;
+
+			background-color: transparent;
+		}
+
+		&::before {
+			background-image: image('spinner.svg');
+			background-position: 50% 75%;
+			background-repeat: no-repeat;
+
+			content: '';
+		}
+
+		&::after {
+			text-align: center;
+
+			background-image: none;
+
+			content: attr(data-loading-1);
+
+			opacity: 0;
+
+			animation-name: loading;
+			animation-duration: $duration * 24;
+			animation-iteration-count: infinite;
+		}
+	}
+
+	@at-root {
+		@keyframes loading {
+			0% {
+				content: attr(data-loading-1);
+
+				opacity: 0;
+			}
+
+			10% {
+				opacity: 1;
+			}
+
+			20% {
+				content: attr(data-loading-1);
+
+				opacity: 0;
+			}
+
+			21% {
+				content: attr(data-loading-2);
+
+				opacity: 0;
+			}
+
+			30% {
+				opacity: 1;
+			}
+
+			40% {
+				content: attr(data-loading-2);
+
+				opacity: 0;
+			}
+
+			41% {
+				content: attr(data-loading-3);
+
+				opacity: 0;
+			}
+
+			50% {
+				opacity: 1;
+			}
+
+			60% {
+				content: attr(data-loading-3);
+
+				opacity: 0;
+			}
+
+			61% {
+				content: attr(data-loading-4);
+
+				opacity: 0;
+			}
+
+			70% {
+				opacity: 1;
+			}
+
+			80% {
+				content: attr(data-loading-4);
+
+				opacity: 0;
+			}
+
+			81% {
+				content: attr(data-loading-5);
+
+				opacity: 0;
+			}
+
+			90% {
+				opacity: 1;
+			}
+
+			100% {
+				content: attr(data-loading-5);
+
+				opacity: 0;
+			}
+		}
 	}
 }
