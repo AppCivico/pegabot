@@ -40,6 +40,8 @@
   translation: "Contato"
 - id: content
   translation: "Conteúdo"
+- id: details
+  translation: "Detalhes"
 - id: detailsLink
   translation: "Detalhamento da análise"
 - id: developedBy
