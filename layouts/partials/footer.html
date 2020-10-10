@@ -57,7 +57,18 @@
 <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
 
-{{ $js := resources.Get "scripts/index.js" | js.Build | resources.Fingerprint "sha512" }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
+
+{{ $vc := "module.exports = window.vue-chartjs" | resources.FromString "js/shims/vue-chartjs.js" }}
+{{/* Call RelPermalink unnecessarily to generate JS files */}}
+{{ $placebo := slice $vc.RelPermalink }}
+
+{{ $externals := slice "vue-chartjs" }}
+
+{{ $opts := dict "externals" $externals }}
+
+{{ $js := resources.Get "scripts/index.js" | js.Build $opts | resources.Fingerprint "sha512" }}
 
 <script
 	src="{{ $js.RelPermalink }}"

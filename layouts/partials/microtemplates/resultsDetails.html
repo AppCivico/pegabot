@@ -105,12 +105,13 @@
 			</dd>
 		</dl>
 
-		<div
-			v-if="analysis.chart && analysis.chart.length"
+
+		<the-chart
+			v-if="analysis.chart"
 			class="results-details__analysis results-details__analysis--chart"
-		>
-			{{ "{{ analysis.chart }}" }}
-		</div>
+			:chart-data="analysis.chart.data"
+			:chart-labels="analysis.chart.labels"
+		/>
 
 		<div
 			v-if="analysis.hashtags && analysis.hashtags.length"

@@ -1,5 +1,7 @@
 /* global Vue */
 
+import chart from './TheChart';
+
 const toPercentageFilter = function toPercentageFilter(value) {
 	return `${Math.round(parseFloat(value) * 100)}%`;
 };
@@ -11,6 +13,8 @@ const booleanToStringFilter = function booleanToStringFilter(value, trueText, fa
 };
 
 Vue.filter('booleanToString', booleanToStringFilter);
+
+Vue.component('the-chart', chart);
 
 const components = {};
 

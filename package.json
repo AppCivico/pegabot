@@ -81,5 +81,8 @@
   },
   "dependencies": {
     "css-modal": "^1.5.0"
+  },
+  "browser": {
+    "vue-chartjs": "./public/js/shims/vue-chartjs.js"
   }
 }
