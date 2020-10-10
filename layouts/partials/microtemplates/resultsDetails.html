@@ -75,6 +75,7 @@
 		></div>
 
 		<dl
+			v-if="analysis.summary"
 			class="results-details__description"
 		>
 			<dt
@@ -88,6 +89,7 @@
 		</dl>
 
 		<dl
+			v-if="analysis.conclusion"
 			class="results-details__conclusion"
 		>
 			<dt
