@@ -51,7 +51,7 @@
 		{{ .Render "curved-section" }}
 	{{ end }}
 
-	{{ range where $.Site.Pages ".Type" "analysis" }}
+	{{ range where $.Site.RegularPages ".Type" "analysis" }}
 		{{ .Render "analysis" }}
 	{{ end }}
 
