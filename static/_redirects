@@ -2,7 +2,7 @@ https://pegabot.com.br/analyze/* https://api.pegabot.com.br/analyze/:splat 200
 https://pegabot.com.br/botometer/* https://api.pegabot.com.br/botometer/:splat 200
 https://pegabot.com.br/feedback/* https://api.pegabot.com.br/feedback/:splat 200
 
-https://dev.pegabot.com.br/analyze/* https://dev-api.pegabot.com.br/analyze/:splat 200
+https://dev.pegabot.com.br/analyze/* https://api.pegabot.com.br/analyze/:splat 200
 https://dev.pegabot.com.br/botometer/* https://api.pegabot.com.br/botometer/:splat 200
 https://dev.pegabot.com.br/feedback/* https://api.pegabot.com.br/feedback/:splat 200
 
