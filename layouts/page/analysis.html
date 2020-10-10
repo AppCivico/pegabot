@@ -17,7 +17,6 @@
 						{{ $img := resources.Get "images/clock.svg" | resources.Fingerprint "sha512" }}
 						<img
 							src="{{ $img.RelPermalink }}"
-							integrity="{{ $img.Data.Integrity }}"
 							alt=""
 						>
 					</div>
@@ -30,7 +29,6 @@
 						{{ $img := resources.Get "images/twitter__white.svg" | resources.Fingerprint "sha512" }}
 						<img
 							src="{{ $img.RelPermalink }}"
-							integrity="{{ $img.Data.Integrity }}"
 							alt=""
 						>
 					</div>
@@ -43,7 +41,6 @@
 						{{ $img := resources.Get "images/globe.svg" | resources.Fingerprint "sha512" }}
 						<img
 							src="{{ $img.RelPermalink }}"
-							integrity="{{ $img.Data.Integrity }}"
 							alt=""
 						>
 					</div>
@@ -56,7 +53,6 @@
 						{{ $img := resources.Get "images/user.svg" | resources.Fingerprint "sha512" }}
 						<img
 							src="{{ $img.RelPermalink }}"
-							integrity="{{ $img.Data.Integrity }}"
 							alt=""
 						>
 					</div>
