@@ -17,6 +17,11 @@
 
 	margin-right: $gutter * 0.5;
 	margin-left: $gutter * 0.5;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		// because of chrome
+		flex-wrap: nowrap;
+	}
 }
 
 .results-details__intro--network {
@@ -47,19 +52,21 @@
 	}
 }
 
+.results-details__intro-container {
+	flex-basis: calc(100% / 3 * 2 - #{$gutter});
+	flex-grow: 2;
+}
+
 .results-details__profile-capture {
 	align-self: flex-start;
-	flex-basis: 33%;
+	flex-basis: calc(100 / 3 - #{$gutter});
 	flex-grow: 1;
+
+	max-height: none;
 
 	border-radius: 6px;
 
 	box-shadow: 5px 5px 5px 0 palette('shadow');
-}
-
-.results-details__intro-container {
-	flex-basis: 66%;
-	flex-grow: 2;
 }
 
 .results-details__subtitle[role='doc-subtitle'][class] {
