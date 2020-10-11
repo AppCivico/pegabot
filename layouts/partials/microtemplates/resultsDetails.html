@@ -58,6 +58,7 @@
 			class="results-details__profile-capture"
 			aria-hidden="true"
 			width="480"
+			height="520"
 		/>
 	</div>
 
@@ -188,17 +189,19 @@
 			class="results-details__samples"
 			v-if="analysis.samples && analysis.samples.list && analysis.samples.list.length"
 		>
-			<h4>{{ "{{ samples.titles }}" }}</h4>
+			<h4>{{ "{{ analysis.samples.title }}" }}</h4>
 
 			<figure
-				v-for="(sample, j) in samples.list"
+				v-for="(sample, j) in analysis.samples.list"
 				:key="j"
 			>
 				<img
-					src="sample.capture"
+					:src="sample.capture"
 					alt=""
+					width="480"
+					height="520"
 				/>
-				<figcaption>{{ "{{ caption }}" }}</figcaption>
+				<figcaption>{{ "{{ sample.caption }}" }}</figcaption>
 			</figure>
 		</div>
 	</section>
