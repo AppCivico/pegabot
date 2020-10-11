@@ -1,5 +1,7 @@
 /* global VueChartJs */
 
+import options from './chartOptions';
+
 const { Line } = VueChartJs;
 
 export default {
@@ -7,20 +9,29 @@ export default {
 	extends: Line,
 
 	props: {
-		chartData: {
-			type: Array,
-			default: () => ([]),
-		},
-		chartLabels: {
-			type: Array,
-			default: () => ([]),
+		data: {
+			type: Object,
+			default: () => ({}),
 		},
 	},
 
 	mounted() {
-		const { chartData: dataset, chartLabels: labels } = this;
+		const { labels, datasets = [], data } = this.data;
 
-		this.renderChart({ labels, dataset });
+		if (!datasets.length) {
+			if (data) {
+				datasets.push({
+					data,
+					label: 'Tweets',
+					backgroundColor: 'rgb(26, 145, 208)',
+					borderWidth: 0, // <-- set this for a plain legend
+				});
+			} else {
+				throw new Error('unexpected data layout');
+			}
+		}
+
+		this.renderChart({ labels, datasets }, options);
 	},
 
 	beforeDestroy() {
