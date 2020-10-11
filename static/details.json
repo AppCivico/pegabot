@@ -284,7 +284,29 @@
     },
     "emotions": {
       "description": "Aṕos coletar os dados, os algoritmos do PEGABOT fornecem uma pontuação, em uma escada de -5 a 5m de cada uma das palavras dos tweets coletados. A classificação se baseia em uma biblioteca, onde, cada uma das palavras possui uma pontuação, sendo considerada mais ou menos negativa, positiva ou neutra. Assim, ao final da classificação, calcula-se a pontuação média para a quantidade de palavras positivas, negativas e neutras utilizadas pelo usuário.",
-      "analyses": []
+      "analyses": [
+        {
+          "summary": "<p>o perfil tem pontuação de 0.46, classificando-se como positivo.</p>",
+          "conclusion": 0.46,
+          "samples": {
+            "title": "VEJA AQUI O EXEMPLO DE 3 TWEETS DO USUÁRIO",
+            "list": [
+              {
+                "caption": "Exemplo de tweet neutro",
+                "capture": "https://puppeteer-as-http.appcivico.com/i.jpg?u=https%3A%2F%2Ftwitter.com%2F%40xicosa%2Fstatus%2F1315295043746500609&w=480&h=520&a=e4bad4358024f5f211b403c06896bcbb"
+              },
+              {
+                "caption": "Exemplo de tweet positivo",
+                "capture": "https://puppeteer-as-http.appcivico.com/i.jpg?u=https%3A%2F%2Ftwitter.com%2F%40xicosa%2Fstatus%2F1315298682170994690&w=480&h=520&a=36de0ac021805081527177237bf634ec"
+              },
+              {
+                "caption": "Exemplo de tweet negativo",
+                "capture": "https://puppeteer-as-http.appcivico.com/i.jpg?u=https%3A%2F%2Ftwitter.com%2F%40xicosa%2Fstatus%2F1315298682170994690&w=480&h=520&a=36de0ac021805081527177237bf634ec"
+              }
+            ]
+          }
+        }
+      ]
     }
   }
 }

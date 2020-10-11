@@ -32,6 +32,7 @@
 		min-height: 245px;
 
 		background-image: image('detail-network.png');
+		background-position: 50% 50%;
 		background-size: contain;
 
 		content: '';
@@ -46,6 +47,7 @@
 		min-height: 286px;
 
 		background-image: image('detail-emotions.png');
+		background-position: 50% 50%;
 		background-size: contain;
 
 		content: '';
@@ -252,7 +254,52 @@
 }
 
 .results-details__samples {
+}
 
+.results-details__samples-title {
+	font-size: ms(1);
+
+	text-align: center;
+
+	color: palette('purple');
+}
+
+.results-details__samples-list {
+	display: flex;
+
+	flex-wrap: wrap;
+
+	margin-right: $gutter * -0.5;
+	margin-left: $gutter * -0.5;
+
+	text-align: center;
+}
+
+.results-details__samples-list::after,
+.results-details__samples-item {
+	flex-basis: 0;
+	flex-grow: 1;
+
+	width: calc(100% / 3 - #{$gutter});
+	min-width: 300px;
+
+	margin: $gutter * 0.5;
+
+	content: '';
+}
+
+.results-details__sample-image {
+	display: block;
+
+	width: 100%;
+
+	margin-bottom: $gutter;
+
+	font-size: ms(-1);
+
+	border-radius: 6px;
+
+	box-shadow: 3px 3px 9px 0 palette('shadow');
 }
 
 .results-details__chart {
