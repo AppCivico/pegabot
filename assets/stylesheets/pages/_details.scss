@@ -7,6 +7,16 @@
 	margin-left: $gutter * -0.5;
 
 	font-size: ms(-1);
+
+	&::after {
+		flex-basis: 100%;
+		flex-grow: 3;
+
+		max-width: calc(100% / 3 * 2);
+		min-width: calc(100% / 3);
+
+		content: '';
+	}
 }
 
 .results-details__intro {
