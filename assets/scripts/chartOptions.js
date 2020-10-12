@@ -44,6 +44,13 @@ export default {
 			backgroundColor: 'rgb(26, 145, 208)',
 		},
 	},
+
+	title: {
+		display: true,
+		text: 'Atividade de tweets - tweets',
+		fontColor: '#bdbdbd',
+	},
+
 	// datasets: {
 	// 	line: {
 	// 		borderWidth: 0,
