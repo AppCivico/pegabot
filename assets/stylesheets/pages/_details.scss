@@ -36,9 +36,10 @@
 
 .results-details__intro--network {
 	&::after {
-		flex-basis: calc(100% / 3 - #{$gutter});
+		flex-basis: 320px;
+		flex-grow: 1;
 
-		max-width: 320px;
+		max-width: 100%;
 		min-height: 245px;
 
 		background-image: image('detail-network.png');
@@ -46,14 +47,19 @@
 		background-size: contain;
 
 		content: '';
+
+		@media screen and (min-width: breakpoint('tablet')) {
+			flex-grow: 2;
+		}
 	}
 }
 
 .results-details__intro--emotions {
 	&::after {
-		flex-basis: calc(100% / 3 - #{$gutter});
+		flex-basis: 388px;
+		flex-grow: 1;
 
-		max-width: 388px;
+		max-width: 100%;
 		min-height: 286px;
 
 		background-image: image('detail-emotions.png');
@@ -61,12 +67,20 @@
 		background-size: contain;
 
 		content: '';
+
+		@media screen and (min-width: breakpoint('tablet')) {
+			flex-grow: 1;
+		}
 	}
 }
 
 .results-details__intro-container {
 	flex-basis: calc(100% / 3 * 2 - #{$gutter});
 	flex-grow: 2;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		flex-grow: 1;
+	}
 }
 
 .results-details__profile-capture {
