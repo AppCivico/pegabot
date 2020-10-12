@@ -195,8 +195,31 @@
 	margin: $gutter * 0.5;
 }
 
-.results-details__analysis--chart {
-	flex-basis: calc(100% / 3 * 2 - #{$gutter});
+.results-details__analysis--chart,
+.results-details__analysis--samples {
+	display: flex;
+
+	flex-basis: 100%;
+	flex-wrap: wrap;
+
+	max-width: 100%;
+
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.results-details__analysis-container {
+	min-width: $min-width;
+}
+
+.results-details__analysis-container--chart {
+	flex-grow: 1;
+
+	width: calc(100% / 3 - #{$gutter});
+	max-width: 100%;
+
+	margin-right: $gutter * 0.5;
+	margin-left: $gutter * 0.5;
 }
 
 .results-details__analysis-title {
@@ -213,11 +236,9 @@
 	font-size: ms(0);
 
 	color: inherit;
-
 }
 
 .results-details__conclusion {
-
 }
 
 .results-details__card {
@@ -235,7 +256,6 @@
 }
 
 .results-details__hashtags {
-
 }
 
 .results-details__list {
@@ -263,7 +283,6 @@
 }
 
 .results-details__mentions {
-
 }
 
 .results-details__mentions-avatar {
@@ -274,10 +293,10 @@
 }
 
 .results-details__tweets {
-
 }
 
 .results-details__samples {
+  width: 100%;
 }
 
 .results-details__samples-title {
@@ -301,11 +320,11 @@
 
 .results-details__samples-list::after,
 .results-details__samples-item {
-	flex-basis: 0;
+	flex-basis: calc(100% / 3 - #{$gutter});
 	flex-grow: 1;
 
-	width: calc(100% / 3 - #{$gutter});
-	min-width: 300px;
+	width: 100%;
+	min-width: $min-width;
 
 	margin: $gutter * 0.5;
 
@@ -327,5 +346,18 @@
 }
 
 .results-details__chart {
+	flex-grow: 1;
 
+	width: calc(100% / 3 * 2 - #{$gutter});
+	max-width: 100%;
+	min-width: $min-width;
+
+	margin-right: $gutter * 0.5;
+	margin-left: $gutter * 0.5;
+
+	overflow: hidden;
+
+	@media screen and (min-width: #{$min-width} / 1rem * 3em ) {
+		order: -1;
+	}
 }

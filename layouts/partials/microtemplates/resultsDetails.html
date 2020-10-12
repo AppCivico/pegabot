@@ -66,50 +66,58 @@
 		class="results-details__analysis"
 		v-for="(analysis, i) in item.analyses"
 		:key="i"
-		:class="{'results-details__analysis--chart': analysis.chart}"
+		:class="{
+			'results-details__analysis--chart': analysis.chart,
+			'results-details__analysis--samples': analysis.samples && analysis.samples.list && analysis.samples.list.length,
+		}"
 	>
-		<h4
-			class="results-details__analysis-title"
-		>{{ "{{ analysis.title }}" }}</h4>
-
-		<div class="results-details__description"
-			v-html="analysis.description"
-		></div>
-
-		<dl
-			v-if="analysis.summary"
-			class="results-details__description"
+		<div
+			class="results-details__analysis-container"
+			:class="{'results-details__analysis-container--chart': analysis.chart}"
 		>
-			<dt
-				class="results-details__analysis-subtitle"
-			>
-				{{ i18n "analysis" }}
-			</dt>
-			<dd
-				v-html="analysis.summary"
-			></dd>
-		</dl>
+			<h4
+				class="results-details__analysis-title"
+			>{{ "{{ analysis.title }}" }}</h4>
 
-		<dl
-			v-if="analysis.conclusion"
-			class="results-details__conclusion"
-		>
-			<dt
-				class="results-details__analysis-subtitle"
-			>
-				{{ i18n "result" }}
-			</dt>
+			<div class="results-details__description"
+				v-html="analysis.description"
+			></div>
 
-			<dd
+			<dl
+				v-if="analysis.summary"
+				class="results-details__description"
 			>
-				{{ "{{ Number.parseFloat(analysis.conclusion * 100).toFixed(2) }}%" }}
-			</dd>
-		</dl>
+				<dt
+					class="results-details__analysis-subtitle"
+				>
+					{{ i18n "analysis" }}
+				</dt>
+				<dd
+					v-html="analysis.summary"
+				></dd>
+			</dl>
+
+			<dl
+				v-if="analysis.conclusion"
+				class="results-details__conclusion"
+			>
+				<dt
+					class="results-details__analysis-subtitle"
+				>
+					{{ i18n "result" }}
+				</dt>
+
+				<dd
+				>
+					{{ "{{ Number.parseFloat(analysis.conclusion * 100).toFixed(2) }}%" }}
+				</dd>
+			</dl>
+		</div>
 
 
 		<the-chart
 			v-if="analysis.chart"
-			class="results-details__analysis results-details__analysis--chart"
+			class="results-details__chart"
 			:data="analysis.chart"
 		/>
 
