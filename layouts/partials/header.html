@@ -104,7 +104,7 @@
 				<style>
 					{{ range . }}
 						.site-header .responsibles__item--{{ .id }} {
-							background-image: url(/assets/images/{{ .icon }});
+							background-image: url({{ .icon }});
 							min-width: {{ add .iconWidth 30 }}px;
 							min-height: {{ add .iconHeight 30 }}px;
 						}

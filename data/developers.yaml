@@ -2,7 +2,7 @@ appCivico:
   id: "app-civico"
   name: "AppCívico"
   icon: "appcivico.png"
-  iconNegative: "appcivico--negative.png"
+  iconNegative: "/assets/images/appcivico--negative.png"
   iconHeight: 23
   iconWidth: 138
   link: "http://appcivico.com/"

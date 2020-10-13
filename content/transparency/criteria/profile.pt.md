@@ -3,6 +3,7 @@ title: "Perfil de usuário"
 date: 2020-08-14T00:38:52-03:00
 draft: false
 menu:
+layout: none
 slug: ""
 weight: 1
 intro: "Algumas das informações públicas dos perfis consideradas na análise do PegaBot são o nome do perfil do usuário, e quantos caracteres ele possui, quantidade de perfis seguidos (following) e seguidores (followers), texto da descrição do perfil, número de postagens (tweets) e favoritos."
