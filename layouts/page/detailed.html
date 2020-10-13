@@ -41,6 +41,11 @@
 	{{ partial "microtemplates/resultsDetails.html" . }}
 </script>
 
+{{ .Scratch.Set "notBackToTop" true }}
 {{ .Scratch.Set "notNewsletter" true }}
 
+{{ partial "backToTop.html" . }}
+{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "check-another-one") }}
+	{{ .Render "curved-section" }}
+{{ end }}
 {{ partial "footer.html" . }}

@@ -1,4 +1,6 @@
-		{{ partial "backToTop.html" . }}
+		{{ if eq (.Scratch.Get "notBackToTop" | default false) false }}
+			{{ partial "backToTop.html" . }}
+		{{ end }}
 
 		{{ if eq (.Scratch.Get "notNewsletter" | default false) false }}
 			{{ partialCached "newsletter.html" . }}
