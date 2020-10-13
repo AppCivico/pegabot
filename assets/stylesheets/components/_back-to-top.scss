@@ -4,10 +4,13 @@
 }
 
 .back-to-top {
-	max-width: $max-width;
+	width: 100%;
+	max-width: #{$max-width + $gutter * 2};
 
 	padding-right: $gutter;
 	padding-left: $gutter;
+	margin-right: auto;
+	margin-left: auto;
 
 	background-color: palette('white');
 }
@@ -15,6 +18,12 @@
 
 .back-to-top__link {
 	text-align: right;
+
+	@media screen and (min-width: $max-width / 1rem * 1em ) {
+		position: fixed;
+		top: 50vh;
+		right: calc((50vw - #{$max-width / 2}) / 2);
+	}
 }
 
 .back-to-top__image {
