@@ -2,6 +2,7 @@
 	class="
 		curved-section
 		curved-section--{{ with .File }}{{ .TranslationBaseName }}{{ end }}
+		curved-section--{{ with .Params.theme }}{{ . }}{{ end }}
 	"
 >
 	<div class="curved-section__container">

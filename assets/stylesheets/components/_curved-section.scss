@@ -36,6 +36,12 @@
 	54px auto,
 	36px auto,
 	36px auto;
+
+	.content-container > &:last-child {
+		margin-bottom: 0;
+
+		background-image: image('curved-mask__top.svg');
+	}
 }
 
 .curved-section--faq-contact {
@@ -91,12 +97,14 @@
 	background-color: palette('blue', 'dark');
 }
 
+.curved-section--purple,
 .curved-section--revisao-humana {
 	color: palette('white');
 
 	background-color: palette('purple');
 }
 
+.curved-section--orange,
 .curved-section--collaborate {
 	color: palette('white');
 
@@ -177,6 +185,7 @@
 	}
 }
 
+.curved-section--purple,
 .curved-section--faq-contact .curved-section__title,
 .curved-section--ue .curved-section__title {
 	color: palette('orange');
@@ -205,7 +214,7 @@
 	margin-left: auto;
 }
 
-.curved-section p a:only-child {
+.curved-section p > a:only-child {
 	display: block;
 
 	width: max-content;
@@ -249,7 +258,7 @@
 	}
 }
 
-.curved-section--pegabot p a:only-child {
+.curved-section--pegabot p > a:only-child {
 	line-height: normal;
 
 	text-decoration: underline;
@@ -273,6 +282,7 @@
 	}
 }
 
+.curved-section--purple p > a:only-child,
 .curved-section--faq-contact p a:only-child {
 	color: palette('white');
 
