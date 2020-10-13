@@ -1,3 +1,7 @@
+.details-page [role='main'] > p {
+	max-width: 43.75em;
+}
+
 .results-details__item {
 	display: flex;
 
@@ -26,6 +30,7 @@
 	flex-wrap: wrap;
 
 	margin-right: $gutter * 0.5;
+	margin-bottom: $gutter * 2;
 	margin-left: $gutter * 0.5;
 
 	@media screen and (min-width: breakpoint('tablet')) {
@@ -252,6 +257,8 @@
 }
 
 .results-details__analysis-subtitle--card {
+	margin-top: 0;
+
 	font: inherit;
 }
 
