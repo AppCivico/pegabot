@@ -10,7 +10,7 @@
 						<a href="{{ . }}" target="_blank">
 					{{ end }}
 					<img
-						src="/assets/images/{{ .iconNegative }}"
+						src="/assets/images/{{ .iconNegative | default .icon }}"
 						width="{{ .iconWidth }}"
 						height="{{ .iconHeight }}"
 						alt="{{ .name }}"
