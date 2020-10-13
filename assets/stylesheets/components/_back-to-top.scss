@@ -17,12 +17,16 @@
 
 
 .back-to-top__link {
+	overflow: visible;
+
 	text-align: right;
 
 	@media screen and (min-width: $max-width / 1rem * 1em ) {
 		position: fixed;
 		top: 50vh;
 		right: calc((50vw - #{$max-width / 2}) / 2);
+
+		z-index: layer('default');
 	}
 }
 
