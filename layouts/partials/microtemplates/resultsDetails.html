@@ -114,13 +114,38 @@
 			</dl>
 		</div>
 
-
 		<the-chart
 			v-if="analysis.chart"
 			class="results-details__chart"
 			:data="analysis.chart"
 		/>
-
+		<div
+			v-if="analysis.stats && analysis.stats.length"
+			class="results-details__stats results-details__card"
+		>
+			<table
+				class="results-details__stats-table no-responsive"
+			>
+				<tbody>
+					<tr
+						v-for="(stat, i) in analysis.stats"
+						:key="i"
+						class="results-details__stats-item"
+					>
+						<th
+							class="results-details__stats-title"
+						>
+							{{ "{{ stat.title }}" }}
+						</th>
+						<td
+							class="results-details__stats-value"
+						>
+							{{ "{{ stat.value }}" }}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 		<div
 			v-if="analysis.hashtags && analysis.hashtags.length"
 			class="results-details__hashtags results-details__card"

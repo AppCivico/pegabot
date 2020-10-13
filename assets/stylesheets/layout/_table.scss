@@ -11,6 +11,7 @@ td {
 	height: auto;
 
 	font-size: 1em;
+	font-family: inherit;
 
 	vertical-align: top;
 
@@ -104,10 +105,6 @@ tfoot th:first-child {
 
 thead > tr:nth-last-of-type(odd) > th,
 thead > tr:nth-last-of-type(odd) > td {
-}
-
-tbody {
-	font-family: mono-space, monospace;
 }
 
 tbody th {

@@ -111,6 +111,38 @@
           }
         },
         {
+          "title": "Hashtags e menções",
+          "description": "A quantidade de favoritos de um perfil também é considerada. Perfis com maior quantidade de favoritos recebem uma pontuação maior.",
+          "summary": "<p>O perfil tem 3388 favoritos.</p>",
+          "conclusion": 0,
+          "stats": [
+            {
+              "title": "Replies (respostas)",
+              "value": "14"
+            },
+            {
+                "title": "Tweets com @menções",
+              "value": "86"
+            },
+            {
+                "title": "Tweets com #hashtags",
+              "value": "33"
+            },
+            {
+              "title": "Retweets",
+              "value": "60"
+            },
+            {
+              "title": "Tweets com links",
+              "value": "32"
+            },
+            {
+              "title": "Tweets com mídia",
+              "value": "2"
+            }
+          ]
+        },
+        {
           "title": "FAVORITOS",
           "description": "A quantidade de favoritos de um perfil também é considerada. Perfis com maior quantidade de favoritos recebem uma pontuação maior.",
           "summary": "<p>O perfil tem 3388 favoritos.</p>",

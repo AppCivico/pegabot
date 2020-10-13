@@ -415,3 +415,31 @@
 		order: -1;
 	}
 }
+
+.results-details__stats {
+}
+
+.results-details__stats-table {
+	width: 100%;
+
+	font-weight: bold;
+}
+
+.results-details__stats-item {
+}
+
+.results-details__stats-title {
+	text-align: left;
+
+	color: palette('orange');
+}
+
+.results-details__stats-value {
+	text-align: right;
+
+	&::after {
+		font-weight: normal;
+
+		content: '/ 100';
+	}
+}
