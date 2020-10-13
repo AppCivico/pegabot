@@ -17,9 +17,30 @@ td {
 	background-color: transparent;
 
 	border: 0;
+}
 
-	@media screen and (max-width: #{breakpoint('toggle-table-layout') - 0.01em}) {
+@media screen and (max-width: #{breakpoint('toggle-table-layout') - 0.01em}) {
+	table:not(.no-responsive) {
 		display: block;
+
+		> tr {
+			display: block;
+		}
+
+		> thead,
+		> tbody,
+		> tfoot {
+			display: block;
+
+			> tr {
+				display: block;
+
+				> th,
+				> td {
+					display: block;
+				}
+			}
+		}
 	}
 }
 
