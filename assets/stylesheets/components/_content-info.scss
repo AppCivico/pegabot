@@ -3,9 +3,6 @@
 %content-info h6 {
 	margin: 0;
 
-	font-weight: inherit;
-	font-size: 1em;
-
 	@media screen and (min-width: breakpoint('tablet')) {
 		font-size: ms(-2);
 	}
