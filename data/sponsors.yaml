@@ -7,3 +7,12 @@ eU:
   iconWidth: 197
   link: "https://europa.eu/"
   weight: 0
+ndi:
+  id: "nationalDemocraticInstitute"
+  name: "National Democratic Institute"
+  icon: "NDI.svg"
+  iconNegative: "NDI--negative.svg"
+  iconHeight: 65
+  iconWidth: 200
+  link: "https://www.ndi.org/"
+  weight: 1
