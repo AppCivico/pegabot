@@ -1,8 +1,9 @@
 ---
 date: {{ .Date }}
-draft: true
+draft: false
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 layout: none
 type: callToAction
-weight: 0
+language: ""
+slug: "{{ .TranslationBaseName }}"
 ---
