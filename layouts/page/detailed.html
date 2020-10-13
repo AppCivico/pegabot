@@ -41,4 +41,6 @@
 	{{ partial "microtemplates/resultsDetails.html" . }}
 </script>
 
+{{ .Scratch.Set "notNewsletter" true }}
+
 {{ partial "footer.html" . }}

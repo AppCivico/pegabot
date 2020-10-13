@@ -1,6 +1,9 @@
 		{{ partial "backToTop.html" . }}
 
-		{{ partialCached "newsletter.html" . }}
+		{{ if eq (.Scratch.Get "notNewsletter" | default false) false }}
+			{{ partialCached "newsletter.html" . }}
+		{{ end }}
+
 	</div><!-- .content-container -->
 	<div class="site-footer-container">
 		<footer class="site-footer">
