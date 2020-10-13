@@ -1,38 +1,44 @@
 {{ $.Scratch.Add "rootClass" "details-page" }}{{ partial "header.html" . }}
 
 <article role="main">
-	<h1>{{ .Title }}</h1>
+	<header class="details-page__wave-header">
+		<div class="container">
+			<h1>{{ .Title }}</h1>
 
-	{{ with .Content }}
-		{{ $input := "(?i)(Pegabot)" }}
-		{{ $output := "<b>$1</b>" }}
-		{{ $finalContent := . | replaceRE $input $output | safeHTML }}
-		{{ $finalContent }}
-	{{ end }}
+			{{ with .Content }}
+				{{ $input := "(?i)(Pegabot)" }}
+				{{ $output := "<b>$1</b>" }}
+				{{ $finalContent := . | replaceRE $input $output | safeHTML }}
+				{{ $finalContent }}
+			{{ end }}
+		</div>
+	</header>
 
-	<div id="app" hidden>
-		<noscript>{{ i18n "noScriptMessage" }}</noscript>
-		<section
-			class="results-details results-loading"
-			:aria-busy="(metadata.loading && !profileDetails) | booleanToString"
-			data-loading-1="{{ i18n "analisysLoading-1" }}"
-			data-loading-2="{{ i18n "analisysLoading-2" }}"
-			data-loading-3="{{ i18n "analisysLoading-3" }}"
-			data-loading-4="{{ i18n "analisysLoading-4" }}"
-			data-loading-5="{{ i18n "analisysLoading-5" }}"
-		>
-			<template
-				v-if="profileDetails"
+	<div class="container">
+		<div id="app" hidden>
+			<noscript>{{ i18n "noScriptMessage" }}</noscript>
+			<section
+				class="results-details results-loading"
+				:aria-busy="(metadata.loading && !profileDetails) | booleanToString"
+				data-loading-1="{{ i18n "analisysLoading-1" }}"
+				data-loading-2="{{ i18n "analisysLoading-2" }}"
+				data-loading-3="{{ i18n "analisysLoading-3" }}"
+				data-loading-4="{{ i18n "analisysLoading-4" }}"
+				data-loading-5="{{ i18n "analisysLoading-5" }}"
 			>
-				<results-detail
-					v-for="(item, propertyName) in profileDetails"
-					:item="item"
-					:property-name="propertyName"
-					:key="propertyName"
-					:loading="metadata.loading"
-				/>
-			</template>
-		</section>
+				<template
+					v-if="profileDetails"
+				>
+					<results-detail
+						v-for="(item, propertyName) in profileDetails"
+						:item="item"
+						:property-name="propertyName"
+						:key="propertyName"
+						:loading="metadata.loading"
+					/>
+				</template>
+			</section>
+		</div>
 	</div>
 
 </article>
