@@ -357,7 +357,7 @@
 
 	overflow: hidden;
 
-	@media screen and (min-width: #{$min-width} / 1rem * 3em ) {
+	@media screen and (min-width: $min-width / 1rem * 3em ) {
 		order: -1;
 	}
 }

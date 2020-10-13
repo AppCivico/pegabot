@@ -240,7 +240,7 @@ $breakpoints: map-merge($breakpoints, $toggle-breakpoints);
 /// Container's maximum width
 /// @type number
 $max-width: #{breakpoint('wide') / 1em * 1rem - $gutter} !default;
-$min-width: #{300px / 16px * 1rem - $gutter} !default;
+$min-width: 300px / 16px * 1rem - $gutter !default;
 
 
 /// Z-indexes map, gathering all Z layers of the application. Avoid to edit it.
