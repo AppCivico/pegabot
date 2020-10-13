@@ -18,7 +18,7 @@ td {
 
 	border: 0;
 
-	@media screen and (min-width: #{map-get($breakpoints, 'toggle-table-layout')}) {
+	@media screen and (max-width: #{breakpoint('toggle-table-layout') - 0.01em}) {
 		display: block;
 	}
 }
@@ -43,7 +43,7 @@ caption {
 }
 
 tr {
-	@media screen and (min-width: #{map-get($breakpoints, 'toggle-table-layout')}) {
+	@media screen and (max-width: #{breakpoint('toggle-table-layout') - 0.01em}) {
 		@include fallback('margin', 0 0 1.5rem);
 
 		&:last-child {
@@ -59,7 +59,7 @@ th {
 td {
 	font-family: inherit;
 
-	@media screen and (min-width: #{map-get($breakpoints, 'toggle-table-layout')}) {
+	@media screen and (max-width: #{breakpoint('toggle-table-layout') - 0.01em}) {
 		&:empty {
 			display: none;
 		}
@@ -71,7 +71,7 @@ thead td {
 	text-align: right;
 	vertical-align: bottom;
 
-	@media screen and (min-width: #{map-get($breakpoints, 'toggle-table-layout')}) {
+	@media screen and (max-width: #{breakpoint('toggle-table-layout') - 0.01em}) {
 		display: none;
 	}
 }
@@ -96,7 +96,9 @@ tbody th {
 tbody td {
 	text-align: right;
 
-	@media screen and (min-width: #{map-get($breakpoints, 'toggle-table-layout')}) {
+	font-variant-numeric: lining-nums oldstyle-nums;
+
+	@media screen and (max-width: #{breakpoint('toggle-table-layout') - 0.01em}) {
 		text-align: left;
 
 		&[title] {
@@ -111,8 +113,6 @@ tbody td {
 			}
 		}
 	}
-
-	font-variant-numeric: lining-nums oldstyle-nums;
 }
 
 td img {
@@ -122,7 +122,7 @@ td img {
 tbody tr:nth-of-type(odd) > th,
 tbody tr:nth-of-type(odd) > td {
 
-	@media screen and (min-width: #{map-get($breakpoints, 'toggle-table-layout')}) {
+	@media screen and (max-width: #{breakpoint('toggle-table-layout') - 0.01em}) {
 		background-color: transparent;
 	}
 }
