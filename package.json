@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "prebuild": "npm-run-all --parallel lint clean",
-    "build:assets": "npm-run-all --parallel build:img",
+    "build:assets": "npm-run-all --parallel build:js",
     "build:js": "npm-run-all compile:js",
     "build": "npm-run-all build:assets",
     "postbuild": "cross-env NODE_ENV=production hugo --ignoreCache --cleanDestinationDir",
