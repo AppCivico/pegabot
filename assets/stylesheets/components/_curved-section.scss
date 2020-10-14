@@ -100,26 +100,34 @@
 	background-color: palette('blue', 'dark');
 }
 
-.curved-section--robos-por-todos-os-lados .curved-section__container {
-	max-width: 70rem;
-
-	padding: $gutter * 2;
-}
-
-.curved-section--robos-por-todos-os-lados .curved-section__image {
-	flex-grow: 0;
-
-	width: auto;
-
-	margin-right: auto;
-	margin-left: auto;
-}
 
 .curved-section--purple,
 .curved-section--revisao-humana {
 	color: palette('white');
 
 	background-color: palette('purple');
+}
+
+.curved-section--revisao-humana {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.curved-section--robos-por-todos-os-lados .curved-section__container,
+.curved-section--revisao-humana .curved-section__container {
+	max-width: 70rem;
+
+	padding: $gutter * 2;
+}
+
+.curved-section--robos-por-todos-os-lados .curved-section__image,
+.curved-section--revisao-humana .curved-section__image {
+	flex-grow: 0;
+
+	width: auto;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .curved-section--orange,

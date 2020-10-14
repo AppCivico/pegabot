@@ -47,12 +47,12 @@
 		{{ .Render "curved-section" }}
 	{{ end }}
 
-	{{ range first 1 (after 1 (where $.Site.Pages ".Type" "bookmark")) }}
-		{{ .Render "curved-section" }}
-	{{ end }}
-
 	{{ range where $.Site.RegularPages ".Type" "analysis" }}
 		{{ .Render "analysis" }}
+	{{ end }}
+
+	{{ range first 1 (after 1 (where $.Site.Pages ".Type" "bookmark")) }}
+		{{ .Render "curved-section" }}
 	{{ end }}
 
 	{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "active-collaboration") }}

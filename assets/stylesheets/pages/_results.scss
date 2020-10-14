@@ -23,8 +23,8 @@ $gauge-hand-height: 8px;
 }
 
 .results {
-	padding-top: $line-height * 3rem;
-	padding-bottom: $line-height * 3rem;
+	padding-top: $line-height * 2rem;
+	padding-bottom: 0;
 }
 
 [id='results__count'] {
@@ -42,6 +42,7 @@ $gauge-hand-height: 8px;
 	align-items: stretch;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin-bottom: 0;
 
 	@media screen and (min-width: breakpoint('phablet')) {
 		margin-right: $gutter * -0.5;
