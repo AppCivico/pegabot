@@ -17,7 +17,7 @@
     "lint:es": "eslint --ext .es,.js \"./source/scripts/**\" --format junit --output-file ./testResults/esLint.xml",
     "lint:sass": "sass-lint \"./assets/stylesheets/**/*.scss\" --verbose --no-exit --format junit --output ./testResults/sassLint.xml",
     "dev": "npm run serve",
-    "serve": "npm-run-all build:assets start:*",
+    "serve": "npm-run-all start:*",
     "start:hugo": "cross-env NODE_ENV=development hugo server --verbose --noHTTPCache=true --ignoreCache --templateMetrics --templateMetricsHints --disableFastRender --path-warnings --log --debug --baseURL=http://192.168.1.32:1313",
     "start:proxy": "lcp --proxyUrl https://dev.pegabot.com.br",
     "pretest": "npm run lint",
