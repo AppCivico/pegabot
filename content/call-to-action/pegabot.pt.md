@@ -8,4 +8,4 @@ type: callToAction
 weight: 0
 language: pt
 ---
-[Analise a probabilidade de um perfil do Twitter ser um bot](/analise)
+[Analise a probabilidade de um perfil do Twitter ser um bot](/#s)
