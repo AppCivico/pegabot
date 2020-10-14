@@ -7,9 +7,7 @@
     "prebuild": "npm-run-all --parallel lint clean",
     "build:assets": "npm-run-all --parallel build:img",
     "build:js": "npm-run-all compile:js",
-    "build:css": "npm-run-all compile:sass compress:css",
     "build": "npm-run-all build:assets",
-    "build:img": "npm-run-all compress:img",
     "postbuild": "cross-env NODE_ENV=production hugo --ignoreCache --cleanDestinationDir",
     "clean": "npm-run-all --parallel clean:*",
     "clean:assets": "rimraf ./static/assets/**/*.{css,img,js,png,gif,jpg,map}",
@@ -18,9 +16,6 @@
     "cachebust": "npm run cachebust:media",
     "cachebust:content": "hashmark -l 8 ./**/*.{gif,jpg,png,svg,mp4}      {dir}/{name}-{hash}{ext} --cwd content | replaceinfiles -s \"{content,data}/**/*.{md,yaml}\"                    -d \"{dir}/{base}\"",
     "cachebust:media": "hashmark -l 8 assets/**/*.{gif,jpg,png,svg,mp4} {dir}/{name}-{hash}{ext} --cwd static | replaceinfiles -s \"{content,data,layouts,static}/**/*.{md,html,css,yaml}\" -d \"{dir}/{base}\"",
-    "compile:sass": "sass source/stylesheets/:static/assets/styles",
-    "compress:css": "postcss --use autoprefixer cssnano --safe -r ./static/assets/styles/**/*.css",
-    "compress:img": "imagemin \"./source/images/**/*.{gif,jpg,svg}\" --out-dir=./static/assets/images",
     "compile:js": "browserify ./source/scripts/index.js -o ./static/assets/scripts/index.js -t [ babelify ]",
     "prelint": "rimraf ./testResults/**/*.xml",
     "lint": "npm-run-all --parallel lint:*",
@@ -36,9 +31,7 @@
     "version": "version-changelog CHANGELOG.md && git add CHANGELOG.md",
     "postversion": "git checkout dev && git merge master",
     "watch": "npm-run-all --parallel watch:*",
-    "watch:sass": "onchange \"./source/stylesheets/**/*.scss\" -- npm run build:css",
-    "watch:es6": "onchange \"./source/scripts/**/*.{es,js,json}\" -- npm run build:js",
-    "watch:img": "onchange \"./source/images/**/*.{gif,jpg,png,svg}\" -- npm run build:img"
+    "watch:es6": "onchange \"./source/scripts/**/*.{es,js,json}\" -- npm run build:js"
   },
   "repository": {
     "type": "git",
@@ -67,7 +60,6 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "hashmark": "^5.0.0",
-    "imagemin-cli": "^3.0.0",
     "local-cors-proxy": "^1.1.0",
     "modularscale-sass": "^3.0.10",
     "npm-run-all": "^4.1.2",
