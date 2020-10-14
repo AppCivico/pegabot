@@ -8,6 +8,9 @@ const toPercentageFilter = function toPercentageFilter(value) {
 
 Vue.filter('toPercentage', toPercentageFilter);
 
+Vue.prototype.window = window;
+
+
 const booleanToStringFilter = function booleanToStringFilter(value, trueText, falseText) {
 	return value ? trueText || 'true' : falseText || 'false';
 };
