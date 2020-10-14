@@ -83,7 +83,7 @@
 					</dd>
 				</div>
 			</dl>
-			<p>{{ "{{ user.bot_probability.info }}" }}</p>
+			<div v-html="user.bot_probability.info"></div>
 		</section>
 
 		<section class="profile__analysis-results" v-if="user.language_independent">
