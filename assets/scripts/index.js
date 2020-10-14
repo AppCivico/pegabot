@@ -161,6 +161,8 @@ if (document.querySelector('#results__detail')) {
 	};
 }
 
+if (!document.getElementById('app')) throw new Error('exit');
+
 window.$vue = new Vue({
 	el: '#app',
 	data: {
