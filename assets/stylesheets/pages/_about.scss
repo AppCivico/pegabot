@@ -4,7 +4,7 @@
 .about-page .content-container {
 	padding-top: $gutter * 12;
 
-	background-image: image('logotype__horizontal.svg');
+	background-image: image('logos/logotype__horizontal.svg');
 	background-position: 50% $gutter;
 	background-size: 75% auto;
 
@@ -17,7 +17,7 @@
 	}
 
 	@media screen and (min-width: breakpoint('desktop')) {
-		background-image: image('logotype__horizontal.svg'),
+		background-image: image('logos/logotype__horizontal.svg'),
 		image('robot__orange--square.svg'),
 		image('robot__purple--circular.svg'),
 		image('robot__purple--square.svg'),
@@ -94,6 +94,7 @@
 
 .about-page iframe {
 	max-width: none;
+
 	margin-top: 0;
 }
 

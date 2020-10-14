@@ -13,7 +13,7 @@ media_folder: "content/uploads"
 public_folder: "uploads"
 locale: "pt"
 sortableFields: ["commit_date", "title", "commit_author", "language"]
-logo_url: /images/logotype--no-text.png
+logo_url: /assets/images/logos/logotype--no-text.png
 slug:
   encoding: "ascii"
   clean_accents: true

@@ -258,8 +258,8 @@ $layers: (
 /// @todo Customize it to match your setup.
 /// @type String
 /// @example scss - When using a CDN
-///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/assets/' !default;
+///   $base-url: 'http://cdn.example.com/assets';
+$base-url: '/assets' !default;
 
 @function _im-to-px($breakpoints, $base-value: 16px) {
 	$new-breakpoints: ();
