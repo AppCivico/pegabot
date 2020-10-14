@@ -5,10 +5,7 @@
   "main": "index.html",
   "scripts": {
     "prebuild": "npm-run-all --parallel lint clean",
-    "build:assets": "npm-run-all --parallel build:js",
-    "build:js": "npm-run-all compile:js",
-    "build": "npm-run-all build:assets",
-    "postbuild": "cross-env NODE_ENV=production hugo --ignoreCache --cleanDestinationDir",
+    "build": "cross-env NODE_ENV=production hugo --ignoreCache --cleanDestinationDir",
     "clean": "npm-run-all --parallel clean:*",
     "clean:assets": "rimraf ./static/assets/**/*.{css,img,js,png,gif,jpg,map}",
     "clean:dist": "rimraf ./public/**/*.*",
@@ -16,7 +13,6 @@
     "cachebust": "npm run cachebust:media",
     "cachebust:content": "hashmark -l 8 ./**/*.{gif,jpg,png,svg,mp4}      {dir}/{name}-{hash}{ext} --cwd content | replaceinfiles -s \"{content,data}/**/*.{md,yaml}\"                    -d \"{dir}/{base}\"",
     "cachebust:media": "hashmark -l 8 assets/**/*.{gif,jpg,png,svg,mp4} {dir}/{name}-{hash}{ext} --cwd static | replaceinfiles -s \"{content,data,layouts,static}/**/*.{md,html,css,yaml}\" -d \"{dir}/{base}\"",
-    "compile:js": "browserify ./source/scripts/index.js -o ./static/assets/scripts/index.js -t [ babelify ]",
     "prelint": "rimraf ./testResults/**/*.xml",
     "lint": "npm-run-all --parallel lint:*",
     "lint:es": "eslint --ext .es,.js \"./source/scripts/**\" --format junit --output-file ./testResults/esLint.xml",
@@ -29,10 +25,7 @@
     "test": "jest",
     "preversion": "changelog-verify CHANGELOG.md && git checkout master && git merge dev",
     "version": "version-changelog CHANGELOG.md && git add CHANGELOG.md",
-    "postversion": "git checkout dev && git merge master",
-    "watch": "npm-run-all --parallel watch:*",
-
-    "watch:es6": "onchange \"./source/scripts/**/*.{es,js,json}\" -- npm run build:js"
+    "postversion": "git checkout dev && git merge master"
   },
   "repository": {
     "type": "git",
