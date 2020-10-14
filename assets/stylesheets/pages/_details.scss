@@ -41,7 +41,8 @@
 	margin-bottom: 4rem;
 
 	background-image: image('bg-wave--4.svg');
-	background-position: center bottom;
+	background-position: 50% 101%;
+	background-size: 101% auto;
 	background-color: $_blue--opacity;
 }
 
