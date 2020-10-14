@@ -7,7 +7,6 @@
     "prebuild": "npm-run-all --parallel lint clean",
     "build": "cross-env NODE_ENV=production hugo --ignoreCache --cleanDestinationDir",
     "clean": "npm-run-all --parallel clean:*",
-    "clean:assets": "rimraf ./static/assets/**/*.{css,img,js,png,gif,jpg,map}",
     "clean:dist": "rimraf ./public/**/*.*",
     "clean:testResults": "rimraf ./testResults/**/*.xml",
     "cachebust": "npm run cachebust:media",
