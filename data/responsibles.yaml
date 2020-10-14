@@ -1,8 +1,8 @@
 ite:
   id: "ite"
   name: "Instituto Tecnologia & Equidade"
-  icon: "/assets/images/ite.png"
-  iconNegative: "/assets/images/ite--negative.png"
+  icon: "/assets/images/logos/ite.png"
+  iconNegative: "/assets/images/logos/ite--negative.png"
   iconHeight: 42
   iconWidth: 131
   link: "http://tecnologiaequidade.org.br/"
@@ -10,8 +10,8 @@ ite:
 its:
   id: "its"
   name: "Instituto de Tecnologia & Sociedade do Rio"
-  icon: "/assets/images/its.png"
-  iconNegative: "/assets/images/its--negative.png"
+  icon: "/assets/images/logos/its.png"
+  iconNegative: "/assets/images/logos/its--negative.png"
   iconHeight: 47
   iconWidth: 114
   link: "https://itsrio.org/"

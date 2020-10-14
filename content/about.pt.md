@@ -28,8 +28,8 @@ Você pode contribuir com o projeto de diversas formas: sendo um multiplicador d
 
 A plataforma foi lançada em março de 2018 e segue em constante aprimoramento. O projeto é financiado pela União Europeia. Sua versão em espanhol foi financiada pelo National Democratic Institute (NDI).
 
-![União Européia](/assets/images/Flag_of_Europe.svg)
-![National Democratic Institute](/assets/images/NDI.svg)
+![União Européia](/assets/images/logos/Flag_of_Europe.svg)
+![National Democratic Institute](/assets/images/logos/NDI.svg)
 
 ---
 
