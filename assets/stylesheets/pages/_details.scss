@@ -1,6 +1,8 @@
 .details-page [role='main'] {
 	position: relative;
+
 	max-width: none;
+
 	padding-top: 0;
 	padding-right: 0;
 	padding-left: 0;
@@ -10,10 +12,14 @@
 			position: absolute;
 			top: 4rem;
 			right: 1.5rem;
+
 			display: block;
+
 			width: 20rem;
 			height: 20rem;
+
 			background-image: image('logotype.svg');
+
 			content: '';
 		}
 
@@ -29,9 +35,11 @@
 
 .details-page__wave-header {
 	position: relative;
+
 	padding-top: $gutter * 2;
 	padding-bottom: 15rem;
 	margin-bottom: 4rem;
+
 	background-image: image('bg-wave--4.svg');
 	background-position: center bottom;
 	background-color: $_blue--opacity;
@@ -350,7 +358,7 @@
 }
 
 .results-details__samples {
-  width: 100%;
+	width: 100%;
 }
 
 .results-details__samples-title {
