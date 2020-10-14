@@ -92,6 +92,11 @@
 	border-color: currentColor;
 }
 
+.about-page iframe {
+	max-width: none;
+	margin-top: 0;
+}
+
 .about-page hr ~ p > img {
 	display: inline-block;
 
@@ -110,7 +115,9 @@
 }
 
 .about-page hr + div {
-	max-width: 35rem; /* 560px */
+	// max-width: 35rem; /* 560px */
+	max-width: 62.7rem;
+	min-height: 12.5rem;
 
 	margin-right: auto;
 	margin-left: auto;
