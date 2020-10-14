@@ -19,7 +19,7 @@
 				class="results-details__title"
 				:class="`results-details__title--${propertyName}`"
 			>
-				{{ "{{ propertyName }}" }}
+				{{ "{{ item.label || propertyName }}" }}
 			</h2>
 
 			<div
