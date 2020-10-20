@@ -104,7 +104,7 @@ if (document.querySelector('#results__profile')) {
 				} else if (value <= (1 / 5) * 4) {
 					level = 4;
 				} else {
-					level = 4;
+					level = 5;
 				}
 
 				return `test-result--level-${level}`;
