@@ -60,6 +60,8 @@
   translation: Handle
 - id: index
   translation: "Índice"
+- id: investigationsTitle
+  translation: "Veja algumas descobertas que foram possíveis com o PegaBot"
 - id: iWantToCollaborate
   translation: "Eu quero colaborar!"
 - id: languageIndependentFeatures
