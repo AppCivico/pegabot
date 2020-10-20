@@ -1,11 +1,13 @@
 ---
-date: 2020-08-15T23:43:41-03:00
 draft: false
-title: "Quer parar de forma ativa no Pegabot? Seja um colaborador."
 layout: none
-slug: "colaboracao-ativa"
+slug: colaboracao-ativa
+title: QUER FAZER PARTE DO PROJETO?
+date: 2020-08-15T23:43:41-03:00
 type: callToAction
 weight: 0
 language: pt
 ---
+Você pode contribuir com o **PegaBot** sendo um multiplicador das análises, ajudando a melhorar o código da ferramenta ou mesmo identificando erros nas análises e sugerindo melhorias. De todas as formas, você contribuirá a dar mais transparência ao uso de bots no Brasil.
+
 [Quero colaborar](colaborar)
