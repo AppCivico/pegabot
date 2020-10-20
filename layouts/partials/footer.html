@@ -142,7 +142,7 @@
 </script>
 
 <script>
-var fragmentLinks = document.querySelectorAll('a[href^="#"]');
+var fragmentLinks = document.querySelectorAll('a:not(.modal-link):not(.modal-close)[href^="#"]');
 
 function isTallerThanView(el) {
 	var elemHeight = el.clientHeight;

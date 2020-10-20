@@ -122,7 +122,6 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
-    required: false
   - name: "weight"
     label: "Ordem"
     widget: "number"
