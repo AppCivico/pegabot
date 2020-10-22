@@ -8,9 +8,9 @@ bookmark:
   alt: teste
   caption: Análises atuais do Pegabot
   excerpt: >-
-    teste O caso envolvendo o Facebook e a empresa Cambridge Analytica mostrou a
-    necessidade de entendermos melhor a forma como bots atuam criando tendências
-    e influenciando debates políticos…
+    teste teste O caso envolvendo o Facebook e a empresa Cambridge Analytica
+    mostrou a necessidade de entendermos melhor a forma como bots atuam criando
+    tendências e influenciando debates políticos…
   link: 'http://www.com.br'
   src: /uploads/materias.png
   title: 'teste Oito matérias para você entender bots, fake news e mídias sociais'
