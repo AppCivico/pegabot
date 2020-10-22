@@ -199,7 +199,7 @@ $border-radius: $line-height * 1em !default;
 
 /// border default width
 /// @type number
-$stroke: 2px !default;
+$stroke: 1px !default;
 
 @function _im-to-em($breakpoints, $base-value: 16px) {
 	$new-breakpoints: ();

@@ -264,7 +264,7 @@ $duration: 0.5s;
 
 	font-size: inherit;
 
-	border-top: 1px solid palette('white');
+	border-top: $stroke solid palette('white');
 
 	@media screen and (min-width: breakpoint('tablet')) {
 		margin-top: auto;
@@ -285,7 +285,7 @@ $duration: 0.5s;
 		&:focus {
 			pointer-events: none;
 
-			outline: 1px dotted;
+			outline: $stroke dotted;
 		}
 	}
 }
@@ -336,7 +336,7 @@ $duration: 0.5s;
 
 	@media screen and (min-width: breakpoint('tablet')) {
 		& + li {
-			border-top: 1px solid;
+			border-top: $stroke solid;
 		}
 	}
 }

@@ -91,5 +91,5 @@ button,
 */
 button:-moz-focusring,
 input:-moz-focusring {
-	outline: 1px dotted ButtonText;
+	outline: $stroke dotted ButtonText;
 }

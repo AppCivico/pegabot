@@ -92,7 +92,6 @@ form br {
 	padding-right: ($line-height / 2 * 1em);
 	padding-bottom: ($line-height / 2 * 1em);
 	padding-left: ($line-height / 2 * 1em);
-
 	margin: 0;
 
 	overflow: visible;
@@ -123,7 +122,7 @@ form br {
 	}
 
 	&:focus {
-		outline: 1px dotted palette('black'); /* 5 */
+		outline: $stroke dotted palette('black'); /* 5 */
 		outline-offset: 0; /* 6 */
 	}
 }
@@ -379,7 +378,7 @@ form br {
 
 	background-color: palette('button'); /* 2 */
 
-	border-width: 1px; /* 3 */
+	border-width: $stroke; /* 3 */
 	border-style: solid; /* 3 */
 	border-color: palette('border'); /* 3 */
 
@@ -396,7 +395,7 @@ form br {
 
 :focus::-webkit-color-swatch,
 :focus::-webkit-file-upload-button {
-	outline: 1px dotted palette('black');
+	outline: $stroke dotted palette('black');
 }
 
 /**
@@ -404,7 +403,7 @@ form br {
  */
 
 ::-ms-browse {
-	border-width: 1px; /* 1 */
+	border-width: $stroke; /* 1 */
 	border-style: solid; /* 1 */
 	border-color: palette('border'); /* 1 */
 
@@ -418,7 +417,7 @@ form br {
  */
 
 :focus::-ms-browse {
-	outline: 1px dotted palette('black');
+	outline: $stroke dotted palette('black');
 }
 
 

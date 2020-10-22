@@ -202,7 +202,7 @@ template {
  */
 hr {
 	/* line-height */
-	@include fallback('margin', calc(1.5em - 1px) 0 1.5em, 1.5em 0);
+	@include fallback('margin', calc(1.5em - $stroke) 0 1.5em, 1.5em 0);
 
 	clear: both;
 
@@ -217,7 +217,7 @@ hr {
 	color: palette('gray');
 
 	border: 0;
-	border-top: 1px solid palette('gray');
+	border-top: $stroke solid palette('gray');
 
 	box-sizing: content-box; /* 1 */
 }
@@ -397,7 +397,7 @@ a {
 	&:focus {
 		color: palette('anchor', 'focus');
 
-		outline: 1px dotted;
+		outline: $stroke dotted;
 		outline-offset: 2px;
 	}
 

@@ -233,7 +233,7 @@ article fieldset > p:first-child {
 
 		cursor: help; /* 1 */
 
-		border-bottom: 1px dotted;
+		border-bottom: $stroke dotted;
 
 		@supports (text-decoration: dotted underline) {
 			text-decoration: dotted underline; /* 2 */

@@ -42,6 +42,7 @@ $gauge-hand-height: 8px;
 	align-items: stretch;
 	flex-wrap: wrap;
 	justify-content: space-between;
+
 	margin-bottom: 0;
 
 	@media screen and (min-width: breakpoint('phablet')) {
@@ -341,7 +342,6 @@ $gauge-hand-height: 8px;
 
 .profile__analysis-results h3 {
 	font-weight: 400;
-
 	font-size: ms(2);
 
 	text-transform: none;
@@ -419,7 +419,7 @@ $gauge-hand-height: 8px;
 }
 
 .profile__analysis-results--consolidated {
-	border-bottom: 1px solid palette('gray');
+	border-bottom: $stroke solid palette('gray');
 }
 
 .profile__analysis-results--consolidated dd {
@@ -503,6 +503,7 @@ $gauge-hand-height: 8px;
 
 	text-align: center;
 	text-decoration: none;
+
 	color: palette('white');
 }
 
