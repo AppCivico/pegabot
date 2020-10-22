@@ -39,9 +39,30 @@
 				</template>
 			</section>
 		</div>
-	</div>
+		{{ with .Resources.ByType "page" }}
+			{{ range . }}
+				<footer
+					id="section-footer"
+					class="footer"
+				>
+					{{ with .Title }}
+						<h2 class="article__title">
+							{{ . }}
+						</h2>
+					{{ end }}
 
+					{{ with .Content }}
+						{{ $input := "(?i)(Pegabot)" }}
+						{{ $output := "<b>$1</b>" }}
+						{{ $finalContent := . | replaceRE $input $output | safeHTML }}
+						{{ $finalContent }}
+					{{ end }}
+				</footer>
+			{{ end }}
+		{{ end }}
+	</div>
 </article>
+
 
 <script type="text/x-template" id="results__detail">
 	{{ partial "microtemplates/resultsDetails.html" . }}

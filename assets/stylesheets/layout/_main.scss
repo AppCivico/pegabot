@@ -100,3 +100,13 @@ main {
 		}
 	}
 }
+
+article footer {
+	column-width: 22rem;
+	column-count: 2;
+	column-fill: balance;
+	column-gap: $gutter;
+	column-rule: $stroke solid palette('gray', 'x-light');
+	orphans: 2;
+	widows: 2;
+}
