@@ -14,6 +14,6 @@ bookmark:
   link: >-
     https://dev.pegabot.com.br/admin/#/collections/analysis/entries/grandes-analises.pt
   src: /uploads/mexico.png
-  title: 2Bots e participação nas campanhas eleitorais do México
+  title: Bots e participação nas campanhas eleitorais do México
 ---
 Por meio do uso de um algoritmo que promove a transparência no comportamento dos robôs nas mídias sociais, o projeto visa fortalecer organizações da sociedade civil, jornalistas, governos e cidadãos, como um todo, na identificação e contextualização de campanhas de desinformação.
