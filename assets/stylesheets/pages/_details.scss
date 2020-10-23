@@ -450,10 +450,4 @@
 
 .results-details__stats-value {
 	text-align: right;
-
-	&::after {
-		font-weight: normal;
-
-		content: '/ 100';
-	}
 }
