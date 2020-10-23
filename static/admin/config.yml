@@ -19,6 +19,7 @@ slug:
   clean_accents: true
   sanitize_replacement: "-"
 
+
 collections:
 - name: "analysis"
   label: "Análises"
@@ -70,6 +71,12 @@ collections:
       pattern:
       - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
       - "Use a valid URL"
+  - {name: "weight", label: "Ordem", default: 0}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
+  - {name: "layout", widget: "hidden", default: "none"}
+  - {name: "type", widget: "hidden", default: "analysis"}
+
 
 - name: bookmarks
   label: Favoritos
@@ -89,9 +96,13 @@ collections:
     label: "Data"
     widget: "datetime"
     format: "YYYY-MM-DDTHH:mm:ss[Z]"
-  - name: "image"
+  - name: "imageSrc"
     label: "Imagem (.svg)"
     widget: "image"
+  - label: "imageAlt"
+    name: "Image description"
+    widget: "string"
+    required: false
   - label: "Link"
     name: "link"
     widget: "string"
@@ -99,6 +110,11 @@ collections:
     pattern:
     - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
     - "Use a valid URL"
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {name: "layout", widget: "hidden", default: "none"}
+  - {name: "type", widget: "hidden", default: "bookmark"}
+  - {name: "weight", label: "Ordem", default: 0}
+
 
 - name: "callToAction"
   label: "Chamadas"
@@ -107,6 +123,7 @@ collections:
   delete: true
   slug: "{{slug}}"
   fields:
+  - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - name: "title"
     label: "Título"
     widget: "string"
@@ -122,12 +139,17 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
+    required: false
   - name: "weight"
     label: "Ordem"
     widget: "number"
-    default: 1
+    default: 0
     valueType: "int"
     min: 0
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {name: "layout", widget: "hidden", default: "none"}
+  - {name: "type", widget: "hidden", default: "callToAction"}
+
 
 - name: "collaborate"
   label: "Chamadas a colaborar"
@@ -152,6 +174,7 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
+  - {label: "Menus", name: "menu", widget: "select", options: [{ label: "Top", value: "header" }, { label: "Bottom", value: "main" }]}
   - name: "weight"
     label: "Ordem"
     widget: "number"
@@ -170,6 +193,7 @@ collections:
     pattern:
     - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
     - "Use a valid URL"
+
 
 - name: "faq"
   label: "Perguntas frequentes"
@@ -203,6 +227,11 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {name: "weight", label: "Ordem", default: 0}
+  - {name: "layout", widget: "hidden", default: "none"}
+  - {name: "type", widget: "hidden", default: "faq"}
+
 
 - name: "investigations"
   label: "Investigações"
@@ -232,6 +261,7 @@ collections:
     widget: "datetime"
     format: "YYYY-MM-DDTHH:mm:ss[Z]"
 
+
 - name: "pages"
   label: "Páginas"
   folder: "content"
@@ -258,6 +288,7 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
+
 
 - name: results
   label: "Seção de resultados"
@@ -293,6 +324,7 @@ collections:
     label: "Ordem"
     default: 0
 
+
 - name: supporters
   label: "Apoiadores"
   slug: "{{slug}}"
@@ -312,6 +344,7 @@ collections:
     - name: "weight"
       label: "Ordem"
       default: 0
+
 
 - name: "transparency"
   label: "Transparência"
@@ -343,3 +376,7 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
+  - {name: "weight", label: "Ordem", default: 0}
+  - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {name: "layout", widget: "hidden", default: "none"}
