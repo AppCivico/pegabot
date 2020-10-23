@@ -292,8 +292,18 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
-
-
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {name: "layout", widget: "select", options:[ "analysis", "collaborate", "detailed", "faq", "results", "transparency", "about" ]}
+  - name: menu
+    label: Menu
+    widget: "object"
+    fields:
+    - name: "header"
+      label: "Header"
+      widget: string
+    - name: "main"
+      label: "Footer"
+      widget: "string"
 - name: results
   label: "Seção de resultados"
   folder: "content/results"
