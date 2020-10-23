@@ -42,7 +42,7 @@ collections:
   - name: "title"
     label: "Título"
     widget: "string"
-  - {label: "Slug", name: "slug", widget: "string"}
+  - {label: "Slug", name: "slug", widget: "string", required: false}
   - name: "date"
     label: "Data"
     widget: "datetime"
@@ -85,7 +85,7 @@ collections:
     label: "Título"
     widget: "hidden"
     default: "{{slug}}"
-  - {label: "Slug", name: "slug", widget: "string"}
+  - {label: "Slug", name: "slug", widget: "string", required: false}
   - name: "author"
     label: "Autor(es)"
     widget: "string"
@@ -125,7 +125,7 @@ collections:
     label: "Título"
     widget: "string"
     tagname: "h3"
-  - {label: "Slug", name: "slug", widget: "string"}
+  - {label: "Slug", name: "slug", widget: "string", required: false}
   - name: "date"
     label: "Data"
     widget: "datetime"
@@ -210,7 +210,7 @@ collections:
   - name: "title"
     label: "Título"
     widget: "string"
-  - {label: "Slug", name: "slug", widget: "string"}
+  - {label: "Slug", name: "slug", widget: "string", required: false}
   - name: "date"
     label: "Data"
     widget: "datetime"
@@ -244,7 +244,7 @@ collections:
   - name: "title"
     label: "Título"
     widget: "string"
-  - {label: "Slug", name: "slug", widget: "string"}
+  - {label: "Slug", name: "slug", widget: "string", required: false}
   - name: "file"
     label: "Arquivo para download"
     widget: "file"
