@@ -86,13 +86,13 @@ collections:
     widget: "hidden"
     default: "{{slug}}"
   - {label: "Slug", name: "slug", widget: "string", required: false}
-  - name: "author"
-    label: "Autor(es)"
-    widget: "string"
   - name: "date"
     label: "Data"
     widget: "datetime"
     format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - name: "author"
+    label: "Autor(es)"
+    widget: "string"
   - name: "imageSrc"
     label: "Imagem (.svg)"
     widget: "image"
@@ -140,6 +140,7 @@ collections:
     required: false
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "callToAction"}
+  - {name: "weight", valueType: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
 
 
 - name: "collaborate"
@@ -246,13 +247,13 @@ collections:
     label: "Título"
     widget: "string"
   - {label: "Slug", name: "slug", widget: "string", required: false}
-  - name: "file"
-    label: "Arquivo para download"
-    widget: "file"
   - name: "date"
     label: "Data"
     widget: "datetime"
     format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - name: "file"
+    label: "Arquivo para download"
+    widget: "file"
   - {name: "weight", valueType: "int", label: "Ordem", default: 1, min: 0, required: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "investigations"}
@@ -324,6 +325,13 @@ collections:
     label: "Título"
     widget: "string"
   - {label: "Slug", name: "slug", widget: "string", required: false}
+  - name: "date"
+    label: "Data"
+    widget: "datetime"
+    format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - name: "body"
+    label: "Conteúdo"
+    widget: "markdown"
   - name: "figure"
     widget: "object"
     fields:
