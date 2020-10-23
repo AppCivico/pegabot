@@ -155,7 +155,7 @@ collections:
     label: "Título"
     widget: "string"
     tagname: "h3"
-  - {label: "Slug", name: "slug", widget: "string"}
+  - {label: "Slug", name: "slug", widget: "string", required: false}
   - name: "date"
     label: "Data"
     widget: "datetime"
@@ -323,7 +323,7 @@ collections:
   - name: "title"
     label: "Título"
     widget: "string"
-  - {label: "Slug", name: "slug", widget: "string"}
+  - {label: "Slug", name: "slug", widget: "string", required: false}
   - name: "figure"
     widget: "object"
     fields:
