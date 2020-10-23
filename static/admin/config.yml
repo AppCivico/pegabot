@@ -300,10 +300,16 @@ collections:
     fields:
     - name: "header"
       label: "Header"
-      widget: string
+      widget: object
+      fields:
+      - name: name
+        widget: string
     - name: "main"
       label: "Footer"
-      widget: "string"
+      widget: "object"
+      fields:
+      - name: name
+        widget: string
 - name: results
   label: "Seção de resultados"
   folder: "content/results"
