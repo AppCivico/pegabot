@@ -71,7 +71,7 @@ collections:
       pattern:
       - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
       - "Use a valid URL"
-  - {name: "weight", label: "Ordem", default: 0}
+  - {name: "weight", widget: "hidden", label: "Ordem", default: 0}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
@@ -113,7 +113,7 @@ collections:
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "bookmark"}
-  - {name: "weight", label: "Ordem", default: 0}
+  - {name: "weight", widget: "hidden", label: "Ordem", default: 0}
 
 
 - name: "callToAction"
@@ -142,7 +142,7 @@ collections:
     required: false
   - name: "weight"
     label: "Ordem"
-    widget: "number"
+    widget: "hidden"
     default: 0
     valueType: "int"
     min: 0
@@ -177,7 +177,7 @@ collections:
   - {label: "Menus", name: "menu", widget: "select", options: [{ label: "Top", value: "header" }, { label: "Bottom", value: "main" }]}
   - name: "weight"
     label: "Ordem"
-    widget: "number"
+    widget: "hidden"
     default: 1
     valueType: "int"
     min: 0
@@ -260,7 +260,11 @@ collections:
     label: "Data"
     widget: "datetime"
     format: "YYYY-MM-DDTHH:mm:ss[Z]"
-
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {name: "weight", label: "Ordem", default: 0}
+  - {name: "layout", widget: "hidden", default: "none"}
+  - {name: "type", widget: "hidden", default: "investigations"}
+  - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
 
 - name: "pages"
   label: "Páginas"
@@ -322,6 +326,7 @@ collections:
       required: true
   - name: "weight"
     label: "Ordem"
+    widget: "hidden"
     default: 0
 
 
@@ -343,6 +348,7 @@ collections:
       label: "url"
     - name: "weight"
       label: "Ordem"
+      widget: "hidden"
       default: 0
 
 
@@ -376,7 +382,7 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
-  - {name: "weight", label: "Ordem", default: 0}
+  - {name: "weight", widget: "hidden", label: "Ordem", default: 0}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
