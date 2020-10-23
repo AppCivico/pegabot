@@ -343,6 +343,7 @@ collections:
     widget: "hidden"
     default: 1
     min: 0
+  - {name: "layout", widget: "select", options:[ "results", "none" ]}
 
 
 # - name: supporters
