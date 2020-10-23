@@ -330,26 +330,26 @@ collections:
     default: 0
 
 
-- name: supporters
-  label: "Apoiadores"
-  slug: "{{slug}}"
-  files:
-  - name: "supporters"
-    label: "Apoiadores"
-    file: "data/supporters.json"
-    fields:
-    - name: "title"
-      label: "Título"
-      widget: "string"
-    - name: "image"
-      label: "Logo (svg)"
-      widget: "image"
-    - name: "url"
-      label: "url"
-    - name: "weight"
-      label: "Ordem"
-      widget: "hidden"
-      default: 0
+# - name: supporters
+#   label: "Apoiadores"
+#   slug: "{{slug}}"
+#   files:
+#   - name: "supporters"
+#     label: "Apoiadores"
+#     file: "data/supporters.json"
+#     fields:
+#     - name: "title"
+#       label: "Título"
+#       widget: "string"
+#     - name: "image"
+#       label: "Logo (svg)"
+#       widget: "image"
+#     - name: "url"
+#       label: "url"
+#     - name: "weight"
+#       label: "Ordem"
+#       widget: "hidden"
+#       default: 0
 
 
 - name: "transparency"
