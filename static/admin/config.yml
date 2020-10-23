@@ -38,7 +38,7 @@ collections:
     pattern: "en"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false, required: false}
   - name: "title"
     label: "Título"
     widget: "string"
@@ -80,7 +80,7 @@ collections:
   delete: true
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false, required: false}
   - name: "title"
     label: "Título"
     widget: "hidden"
@@ -120,7 +120,7 @@ collections:
   slug: "{{slug}}"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false, required: false}
   - name: "title"
     label: "Título"
     widget: "string"
@@ -138,12 +138,6 @@ collections:
     label: "Conteúdo"
     widget: "markdown"
     required: false
-  - name: "weight"
-    label: "Ordem"
-    widget: "hidden"
-    default: 1
-    valueType: "int"
-    min: 0
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "callToAction"}
 
@@ -156,7 +150,7 @@ collections:
   slug: "{{slug}}"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false, required: false}
   - name: "title"
     label: "Título"
     widget: "string"
@@ -212,7 +206,7 @@ collections:
     pattern: "en"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false, required: false}
   - name: "title"
     label: "Título"
     widget: "string"
@@ -246,7 +240,7 @@ collections:
     pattern: "en"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false, required: false}
   - name: "title"
     label: "Título"
     widget: "string"
@@ -279,7 +273,7 @@ collections:
     pattern: "en"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false, required: false}
   - name: "title"
     label: "Título"
     widget: "string"
@@ -386,7 +380,7 @@ collections:
     pattern: "en"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false, required: false}
   - name: "title"
     label: "Título"
     widget: "string"
