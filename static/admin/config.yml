@@ -43,9 +43,6 @@ collections:
     label: "Título"
     widget: "string"
   - {label: "Slug", name: "slug", widget: "string"}
-  - name: "file"
-    label: "Arquivo para download"
-    widget: "file"
   - name: "date"
     label: "Data"
     widget: "datetime"
