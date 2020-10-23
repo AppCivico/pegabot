@@ -66,7 +66,7 @@ collections:
       pattern:
       - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
       - "Use a valid URL"
-  - {name: "weight", widget: "hidden", label: "Ordem", default: 1}
+  - {name: "weight", valueType: "int", widget: "hidden", label: "Ordem", default: 1}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "analysis"}
@@ -109,7 +109,7 @@ collections:
     - "Use a valid URL"
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "bookmark"}
-  - {name: "weight", widget: "hidden", label: "Ordem", default: 1}
+  - {name: "weight", valueType: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
 
 
 - name: "callToAction"
@@ -219,7 +219,7 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
-  - {name: "weight", label: "Ordem", default: 1, required: false}
+  - {name: "weight", valueType: "int", label: "Ordem", default: 1, min: 0, required: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "faq"}
 
@@ -253,7 +253,7 @@ collections:
     label: "Data"
     widget: "datetime"
     format: "YYYY-MM-DDTHH:mm:ss[Z]"
-  - {name: "weight", label: "Ordem", default: 1, required: false}
+  - {name: "weight", valueType: "int", label: "Ordem", default: 1, min: 0, required: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "investigations"}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
@@ -303,7 +303,7 @@ collections:
       fields:
       - name: name
         widget: string
-  - {name: "weight", label: "Ordem no menu", default: 1, required: false}
+  - {name: "weight", valueType: "int", label: "Ordem no menu", default: 1, min: 0}
 
 
 - name: results
@@ -338,10 +338,11 @@ collections:
       widget: "string"
       required: true
   - name: "weight"
+    valueType: "int"
     label: "Ordem"
     widget: "hidden"
     default: 1
-    required: false
+    min: 0
 
 
 # - name: supporters
@@ -361,10 +362,12 @@ collections:
 #     - name: "url"
 #       label: "url"
 #     - name: "weight"
+#       valueType: "int"
 #       label: "Ordem"
 #       widget: "hidden"
 #       default: 1
 #       required: false
+#       min: 0
 
 
 - name: "transparency"
@@ -398,6 +401,6 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
-  - {name: "weight", widget: "hidden", label: "Ordem", default: 1, required: false}
+  - {name: "weight", valueType: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
