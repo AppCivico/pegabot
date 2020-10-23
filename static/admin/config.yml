@@ -311,6 +311,7 @@ collections:
       fields:
       - name: name
         widget: string
+  - {name: "weight", label: "Ordem no menu", default: 1}
 
 
 - name: results
