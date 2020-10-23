@@ -38,16 +38,14 @@ collections:
     pattern: "en"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - name: "title"
     label: "Título"
     widget: "string"
+  - {label: "Slug", name: "slug", widget: "string"}
   - name: "file"
     label: "Arquivo para download"
     widget: "file"
-  - name: "slug"
-    label: "Âncora"
-    widget: "string"
-    required: false
   - name: "date"
     label: "Data"
     widget: "datetime"
@@ -72,7 +70,6 @@ collections:
       - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
       - "Use a valid URL"
   - {name: "weight", widget: "hidden", label: "Ordem", default: 1}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "analysis"}
@@ -85,10 +82,13 @@ collections:
   create: true
   delete: true
   fields:
+  - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - name: "title"
     label: "Título"
     widget: "hidden"
     default: "{{slug}}"
+  - {label: "Slug", name: "slug", widget: "string"}
   - name: "author"
     label: "Autor(es)"
     widget: "string"
@@ -110,7 +110,6 @@ collections:
     pattern:
     - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
     - "Use a valid URL"
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "bookmark"}
   - {name: "weight", widget: "hidden", label: "Ordem", default: 1}
@@ -124,10 +123,12 @@ collections:
   slug: "{{slug}}"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - name: "title"
     label: "Título"
     widget: "string"
     tagname: "h3"
+  - {label: "Slug", name: "slug", widget: "string"}
   - name: "date"
     label: "Data"
     widget: "datetime"
@@ -146,7 +147,6 @@ collections:
     default: 1
     valueType: "int"
     min: 0
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "callToAction"}
 
@@ -159,10 +159,12 @@ collections:
   slug: "{{slug}}"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - name: "title"
     label: "Título"
     widget: "string"
     tagname: "h3"
+  - {label: "Slug", name: "slug", widget: "string"}
   - name: "date"
     label: "Data"
     widget: "datetime"
@@ -193,7 +195,6 @@ collections:
     pattern:
     - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
     - "Use a valid URL"
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
 
 
 - name: "faq"
@@ -214,13 +215,11 @@ collections:
     pattern: "en"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - name: "title"
     label: "Título"
     widget: "string"
-  - name: "slug"
-    label: "Âncora"
-    widget: "string"
-    required: false
+  - {label: "Slug", name: "slug", widget: "string"}
   - name: "date"
     label: "Data"
     widget: "datetime"
@@ -228,7 +227,6 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {name: "weight", label: "Ordem", default: 1}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "faq"}
@@ -251,9 +249,11 @@ collections:
     pattern: "en"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - name: "title"
     label: "Título"
     widget: "string"
+  - {label: "Slug", name: "slug", widget: "string"}
   - name: "file"
     label: "Arquivo para download"
     widget: "file"
@@ -261,7 +261,6 @@ collections:
     label: "Data"
     widget: "datetime"
     format: "YYYY-MM-DDTHH:mm:ss[Z]"
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {name: "weight", label: "Ordem", default: 1}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "investigations"}
@@ -283,9 +282,11 @@ collections:
     pattern: "en"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - name: "title"
     label: "Título"
     widget: "string"
+  - {label: "Slug", name: "slug", widget: "string"}
   - name: "date"
     label: "Data"
     widget: "datetime"
@@ -293,7 +294,6 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {name: "layout", widget: "select", options:[ "analysis", "collaborate", "detailed", "faq", "results", "transparency", "about" ]}
   - name: menu
     label: Menu
@@ -331,6 +331,7 @@ collections:
   - name: "title"
     label: "Título"
     widget: "string"
+  - {label: "Slug", name: "slug", widget: "string"}
   - name: "figure"
     widget: "object"
     fields:
@@ -388,6 +389,7 @@ collections:
     pattern: "en"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - name: "title"
     label: "Título"
     widget: "string"
@@ -404,5 +406,4 @@ collections:
     widget: "markdown"
   - {name: "weight", widget: "hidden", label: "Ordem", default: 1}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
