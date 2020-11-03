@@ -1,9 +1,8 @@
-.back-to-top,
-.back-to-top__link {
-	display: block;
-}
-
 .back-to-top {
+	$duration: 0.5s;
+
+	display: none;
+
 	width: 100%;
 	max-width: #{$max-width + $gutter * 2};
 
@@ -12,21 +11,56 @@
 	margin-right: auto;
 	margin-left: auto;
 
-	background-color: palette('white');
+	opacity: 0;
+
+	animation-name: fadeInAndMount;
+	animation-duration: $duration;
+	animation-direction: reverse;
+
+	.below-fold & {
+		display: block;
+
+		opacity: 1;
+
+		animation-direction: normal;
+	}
+
+	@keyframes fadeInAndMount {
+		from {
+			display: none;
+
+			opacity: 0;
+		}
+
+		1% {
+			display: block;
+
+			opacity: 0;
+		}
+
+		to {
+			display: block;
+
+			opacity: 1;
+		}
+	}
 }
 
-
 .back-to-top__link {
+	position: fixed;
+	top: 75vh;
+	right: $gutter;
+
+	display: block;
+	z-index: layer('default');
+
 	overflow: visible;
 
 	text-align: right;
 
 	@media screen and (min-width: $max-width / 1rem * 1em ) {
-		position: fixed;
 		top: 50vh;
-		right: calc((50vw - #{$max-width / 2}) / 2);
-
-		z-index: layer('default');
+		right: calc(50vw - #{$max-width / 2} + #{$gutter});
 	}
 }
 

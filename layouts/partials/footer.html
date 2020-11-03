@@ -1,5 +1,5 @@
 		{{ if eq (.Scratch.Get "notBackToTop" | default false) false }}
-			{{ partial "backToTop.html" . }}
+			{{ partialCached "backToTop.html" . }}
 		{{ end }}
 
 		{{ if eq (.Scratch.Get "notNewsletter" | default false) false }}
@@ -115,6 +115,7 @@ function throttle(fn, wait) {
 
 <script>
 	var delayedEls = document.querySelectorAll('[class*="delayed-entrance"]');
+	var backToTop = document.querySelector('.back-to-top');
 
 	function checkVisible(elem, threshold, mode) {
 		threshold = threshold || 0;
@@ -128,6 +129,19 @@ function throttle(fn, wait) {
 		return mode === 'above' ? above : (mode === 'below' ? below : !above && !below);
 	}
 
+	function toggleFoldClass() {
+		var viewportHeight = "innerHeight" in window
+			? window.innerHeight
+			: document.documentElement.offsetHeight;
+		var elem = window.document.documentElement;
+
+		if (elem.scrollTop > viewportHeight) {
+			if (elem.className.indexOf(' below-fold') === -1) {
+				elem.className = elem.className + ' below-fold';
+			}
+		} else {
+			if (elem.className.indexOf(' below-fold') !== -1) {
+				elem.className = elem.className.replace(' below-fold', '');
 			}
 		}
 	}
@@ -145,6 +159,11 @@ function throttle(fn, wait) {
 	if (delayedEls.length){
 		window.addEventListener('load', removeClass);
 		window.document.addEventListener('scroll', throttle(removeClass, 300));
+	}
+
+	if (backToTop){
+		window.addEventListener('load', toggleFoldClass);
+		window.document.addEventListener('scroll', throttle(toggleFoldClass, 300));
 	}
 </script>
 

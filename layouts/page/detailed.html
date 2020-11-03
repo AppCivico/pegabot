@@ -63,15 +63,14 @@
 	</div>
 </article>
 
-
 <script type="text/x-template" id="results__detail">
 	{{ partial "microtemplates/resultsDetails.html" . }}
 </script>
 
 {{ .Scratch.Set "notBackToTop" true }}
 {{ .Scratch.Set "notNewsletter" true }}
+{{ partialCached "backToTop.html" . }}
 
-{{ partial "backToTop.html" . }}
 {{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "check-another-one") }}
 	{{ .Render "curved-section" }}
 {{ end }}
