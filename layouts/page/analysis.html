@@ -74,32 +74,4 @@
 
 </article>
 
-<script>
-	var target = document.getElementById('wave-ornament');
-
-	target.style.transitionProperty = 'background-position';
-
-	function throttle(fn, wait) {
-		var time = Date.now();
-		return function() {
-			if ((time + wait - Date.now()) < 0) {
-				fn();
-				time = Date.now();
-			}
-		}
-	}
-
-	function updateBgPosition() {
-		var scrollHeight = document.body.scrollTop;
-
-		var newPosition = 'left ' + scrollHeight + 'px bottom 1px,'
-			+'left ' + scrollHeight + 'px bottom,'
-			+'left '+ scrollHeight + 'px bottom 2px';
-		target.style.backgroundPosition = newPosition;
-	}
-
-	window.addEventListener('load', updateBgPosition);
-	window.addEventListener('scroll', updateBgPosition);
-</script>
-
 {{ partial "footer.html" . }}

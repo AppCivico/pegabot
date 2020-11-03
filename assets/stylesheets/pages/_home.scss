@@ -1,12 +1,6 @@
-.home-page body {
-	perspective: 1px;
-	transform-style: preserve-3d;
-}
 
 .home-page .main-container {
 	max-width: none;
-
-	transform-style: preserve-3d;
 
 	&::before,
 	&::after {
@@ -26,15 +20,11 @@
 	&::before {
 		background-image: image('robot__purple--square.svg');
 		background-position: $gutter 192px;
-
-		transform: translateZ(-2px) scale(3);
 	}
 
 	&::after {
 		background-image: image('robot__purple--circular.svg');
 		background-position: right $gutter top 384px;
-
-		transform: translateZ(-1px) scale(2);
 	}
 
 	@media screen and (min-width: breakpoint('desktop')) {

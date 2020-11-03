@@ -72,13 +72,19 @@ textarea,
  * 4. Prevents iOS text size adjust after orientation change, without disabling user zoom
  * www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
  */
-html {
+
+html,
+body {
 	height: 100%; /* 2 */
 
 	padding: 0;
 	margin: 0;
+}
 
+html {
 	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
 
 	font-size: 100.01%; /* 1 */
 
@@ -89,18 +95,6 @@ html {
 	box-sizing: border-box;
 
 	tab-size: 4;
-
-	scroll-behavior: smooth;
-}
-
-body {
-	height: 100vh;
-	min-height: 100%;
-
-	margin: 0;
-
-	overflow-x: hidden;
-	overflow-y: auto;
 
 	scroll-behavior: smooth;
 }

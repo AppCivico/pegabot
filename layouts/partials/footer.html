@@ -80,10 +80,24 @@
 ></script>
 
 <script>
+function throttle(fn, wait) {
+	console.debug(fn, wait);
+
+	var time = Date.now();
+	return function() {
+		if ((time + wait - Date.now()) < 0) {
+			fn();
+			time = Date.now();
+		}
+	}
+}
+</script>
+
+<script>
 	var target = document.querySelector('.wave-ornament');
 
 	function updateBgPosition() {
-		var scrollHeight = document.body.scrollTop;
+		var scrollHeight = document.documentElement.scrollTop;
 
 		var newPosition = 'left ' + scrollHeight + 'px bottom 1px,'
 			+'left ' + scrollHeight + 'px bottom,'
@@ -95,18 +109,18 @@
 		target.style.transitionProperty = 'background-position';
 
 		window.addEventListener('load', updateBgPosition);
-		window.document.body.addEventListener('scroll', updateBgPosition);
+		window.document.addEventListener('scroll', throttle(updateBgPosition, 0));
 	}
 </script>
 
 <script>
 	var delayedEls = document.querySelectorAll('[class*="delayed-entrance"]');
 
-	function checkVisible(elm, threshold, mode) {
+	function checkVisible(elem, threshold, mode) {
 		threshold = threshold || 0;
 		mode = mode || 'visible';
 
-		var rect = elm.getBoundingClientRect();
+		var rect = elem.getBoundingClientRect();
 		var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
 		var above = rect.bottom - threshold < 0;
 		var below = rect.top - viewHeight + threshold >= 0;
@@ -114,12 +128,6 @@
 		return mode === 'above' ? above : (mode === 'below' ? below : !above && !below);
 	}
 
-	function throttle(fn, wait) {
-		var time = Date.now();
-		return function() {
-			if ((time + wait - Date.now()) < 0) {
-				fn();
-				time = Date.now();
 			}
 		}
 	}
@@ -136,8 +144,7 @@
 
 	if (delayedEls.length){
 		window.addEventListener('load', removeClass);
-		window.document.body.addEventListener('scroll', throttle(removeClass, 0));
-		window.document.addEventListener('scroll', throttle(removeClass, 0));
+		window.document.addEventListener('scroll', throttle(removeClass, 300));
 	}
 </script>
 
