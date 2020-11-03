@@ -5,7 +5,7 @@
 
 	{{ with .Content }}
 		{{ $input := "(?i)(Pegabot)" }}
-		{{ $output := "<b>$1</b>" }}
+		{{ $output := "<b>PEGABOT</b>" }}
 		{{ $finalContent := . | replaceRE $input $output | safeHTML }}
 		{{ $finalContent }}
 	{{ end }}

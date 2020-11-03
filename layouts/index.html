@@ -14,7 +14,7 @@
 		<article class="intro wave-ornament" id="intro">
 			<div class="container">
 				{{ $input := "(?i)(Pegabot)" }}
-				{{ $output := "<b>$1</b>" }}
+				{{ $output := "<b>PEGABOT</b>" }}
 				{{ $finalContent := . | replaceRE $input $output | safeHTML }}
 				{{ $finalContent }}
 			</div>
@@ -37,7 +37,7 @@
 
 				<div class="article__content">
 					{{ $input := "(?i)(Pegabot)" }}
-					{{ $output := "<b>$1</b>" }}
+					{{ $output := "<b>PEGABOT</b>" }}
 					{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
 					{{ $finalContent }}
 				</div>

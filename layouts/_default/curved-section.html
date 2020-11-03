@@ -16,7 +16,7 @@
 			<h2 class="curved-section__title">{{ .Title }}</h2>
 
 			{{ $input := "(?i)(Pegabot)" }}
-			{{ $output := "<b>$1</b>" }}
+			{{ $output := "<b>PEGABOT</b>" }}
 			{{ $finalContent := .Content | replaceRE $input $output | safeHTML }}
 			{{ $finalContent }}
 
