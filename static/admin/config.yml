@@ -139,7 +139,6 @@ collections:
     widget: "markdown"
     required: false
   - {name: "layout", widget: "hidden", default: "none"}
-  - {name: "type", widget: "hidden", default: "callToAction"}
   - {name: "weight", valueType: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
 
 
