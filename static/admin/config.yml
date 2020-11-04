@@ -11,6 +11,7 @@ backend:
   api_root: https://api.github.com
 media_folder: "content/uploads"
 public_folder: "uploads"
+publish_mode: editorial_workflow
 locale: "pt"
 sortableFields: ["commit_date", "title", "commit_author", "language"]
 logo_url: /assets/images/logos/logotype--no-text.png
