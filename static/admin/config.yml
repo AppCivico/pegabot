@@ -96,12 +96,12 @@ collections:
   - name: "imageSrc"
     label: "Imagem (.svg)"
     widget: "image"
-  - label: "imageAlt"
-    name: "Image description"
+  - name: "Image description"
+    label: "imageAlt"
     widget: "string"
     required: false
-  - label: "Link"
-    name: "link"
+  - name: "link"
+    label: "Link"
     widget: "string"
     required: false
     pattern:
