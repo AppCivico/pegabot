@@ -326,8 +326,7 @@ body {
 		display: flex;
 
 		flex-direction: column;
-
-		min-height: 90vh;
+		flex-grow: 1;
 
 		color: palette('purple');
 
@@ -348,6 +347,8 @@ body {
 		}
 
 		&::before {
+			min-height: 96px;
+
 			background-image: image('spinner.svg');
 			background-position: 50% 75%;
 			background-repeat: no-repeat;
