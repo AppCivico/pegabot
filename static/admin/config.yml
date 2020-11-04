@@ -21,6 +21,7 @@ slug:
 
 
 collections:
+
 - name: "analysis"
   label: "Análises"
   label_singular: "Análise"
@@ -78,6 +79,13 @@ collections:
   folder: "content/bookmarks"
   create: true
   delete: true
+  view_filters:
+  - label: "Português"
+    field: language
+    pattern: "pt"
+  - label: "Español"
+    field: language
+    pattern: "en"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
@@ -118,6 +126,13 @@ collections:
   create: true
   delete: true
   slug: "{{slug}}"
+  view_filters:
+  - label: "Português"
+    field: language
+    pattern: "pt"
+  - label: "Español"
+    field: language
+    pattern: "en"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
@@ -148,6 +163,13 @@ collections:
   create: true
   delete: true
   slug: "{{slug}}"
+  view_filters:
+  - label: "Português"
+    field: language
+    pattern: "pt"
+  - label: "Español"
+    field: language
+    pattern: "en"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
@@ -257,6 +279,7 @@ collections:
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "investigations"}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
+
 
 - name: "pages"
   label: "Páginas"
