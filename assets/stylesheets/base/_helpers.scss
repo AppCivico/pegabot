@@ -167,14 +167,20 @@ textarea {
 	}
 
 	&::after {
-		right: 0;
 		bottom: 0;
+		left: 50%;
+
+		width: 100%;
+		max-width: $max-width;
 
 		background-image: grid-image(2);
 		background-position: center top;
+		background-size: 100%;
 		background-repeat: repeat-y;
 
 		content: '';
+
+		transform: translateX(-50%);
 
 		@media screen and(min-width: breakpoint('phablet')) {
 			background-image: grid-image(3);
@@ -190,7 +196,6 @@ textarea {
 
 		@media screen and(min-width: breakpoint('wide')) {
 			background-image: grid-image(6);
-			background-size: $max-width 100%;
 		}
 	}
 }
