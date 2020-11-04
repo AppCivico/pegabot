@@ -287,7 +287,7 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
-  - {name: "layout", widget: "select", options:[ "analysis", "collaborate", "detailed", "faq", "results", "transparency", "about" ]}
+  - {name: "layout", widget: "select", options: [ "analysis", "collaborate", "detailed", "faq", "results", "transparency", "about" ]}
   - name: menu
     label: Menu
     widget: "object"
@@ -351,7 +351,7 @@ collections:
     widget: "hidden"
     default: 1
     min: 0
-  - {name: "layout", widget: "select", options:[ "results", "none" ]}
+  - {name: "layout", widget: "select", options: [ "results", "none" ]}
 
 
 # - name: supporters
