@@ -27,37 +27,27 @@ collections:
   label: "Análises"
   label_singular: "Análise"
   folder: "content/analysis"
-  slug: "{{slug}}.{{language}}"
   preview_path: "/analysis#{{slug}}"
+  slug: "{{slug}}.{{language}}"
+  format: frontmatter
+  extension: "md"
   create: true
-  extension: md
   view_filters:
-  - label: "Português"
-    field: language
-    pattern: "pt"
-  - label: "Español"
-    field: language
-    pattern: "es"
+  - {label: "Português", field: language, pattern: "pt"}
+  - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
-  - name: "title"
-    label: "Título"
-    widget: "string"
+  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
-  - name: "date"
-    label: "Data"
-    widget: "datetime"
-    format: "YYYY-MM-DDTHH:mm:ss[Z]"
-  - name: "body"
-    label: "Conteúdo"
-    widget: "markdown"
+  - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Conteúdo", name: "body", widget: "markdown"}
   - label: "Favorito"
     name: "bookmark"
     widget: "object"
     collapsed: true
     fields:
-    - {label: "Título", name: "title", widget: "string"}
+    - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
     - {label: "Trecho", name: "excerpt", widget: "string"}
     - {label: "Imagem", name: "src", widget: "image"}
     - {label: "Descrição", name: "alt", widget: "string"}
@@ -76,29 +66,23 @@ collections:
 
 - name: bookmarks
   label: Favoritos
-  slug: "{{slug}}"
   folder: "content/bookmarks"
+  preview_path: "{{dirname}}/{{filename}}.{{extension}}"
+  slug: "{{slug}}.{{language}}"
+  format: frontmatter
+  extension: "md"
   create: true
   delete: true
   view_filters:
-  - label: "Português"
-    field: language
-    pattern: "pt"
-  - label: "Español"
-    field: language
-    pattern: "es"
+  - {label: "Português", field: language, pattern: "pt"}
+  - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
-  - name: "title"
-    label: "Título"
-    widget: "hidden"
-    default: "{{slug}}"
+  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
-  - name: "date"
-    label: "Data"
-    widget: "datetime"
-    format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Conteúdo", name: "body", widget: "markdown"}
   - name: "author"
     label: "Autor(es)"
     widget: "string"
@@ -124,36 +108,29 @@ collections:
 - name: "callToAction"
   label: "Chamadas"
   folder: "content/call-to-action"
+  preview_path: "{{dirname}}/{{filename}}.{{extension}}"
+  slug: "{{slug}}.{{language}}"
+  format: frontmatter
+  extension: "md"
   create: true
   delete: true
-  slug: "{{slug}}"
   view_filters:
-  - label: "Português"
-    field: language
-    pattern: "pt"
-  - label: "Español"
-    field: language
-    pattern: "es"
+  - {label: "Português", field: language, pattern: "pt"}
+  - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
-  - name: "title"
-    label: "Título"
-    widget: "string"
-    tagname: "h3"
+  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
-  - name: "date"
-    label: "Data"
-    widget: "datetime"
-    format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - label: "Conteúdo"
+    name: "body"
+    widget: "markdown"
+    required: false
   - name: "type"
     label: "type"
     widget: "hidden"
     default: "callToAction"
-  - name: "body"
-    label: "Conteúdo"
-    widget: "markdown"
-    required: false
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "weight", value_type: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
 
@@ -161,35 +138,26 @@ collections:
 - name: "collaborate"
   label: "Chamadas a colaborar"
   folder: "content/collaborate"
+  preview_path: "{{dirname}}/{{filename}}.{{extension}}"
+  slug: "{{slug}}.{{language}}"
+  format: frontmatter
+  extension: "md"
   create: true
   delete: true
-  slug: "{{slug}}"
   view_filters:
-  - label: "Português"
-    field: language
-    pattern: "pt"
-  - label: "Español"
-    field: language
-    pattern: "es"
+  - {label: "Português", field: language, pattern: "pt"}
+  - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
-  - name: "title"
-    label: "Título"
-    widget: "string"
-    tagname: "h3"
+  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
-  - name: "date"
-    label: "Data"
-    widget: "datetime"
-    format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Conteúdo", name: "body", widget: "markdown"}
   - name: "type"
     label: "type"
     widget: "hidden"
     default: "collaborate"
-  - name: "body"
-    label: "Conteúdo"
-    widget: "markdown"
   - {label: "Menus", name: "menu", widget: "select", options: [{ label: "Top", value: "header" }, { label: "Bottom", value: "main" }]}
   - name: "weight"
     label: "Ordem"
@@ -216,32 +184,21 @@ collections:
   label: "Perguntas frequentes"
   label_singular: "Pergunta frequente"
   folder: "content/faq"
-  # identifier_field: "slug"
-  slug: "{{slug}}.{{language}}"
   preview_path: "/faq#{{slug}}"
+  slug: "{{slug}}.{{language}}"
+  format: frontmatter
+  extension: "md"
   create: true
-  extension: md
   view_filters:
-  - label: "Português"
-    field: language
-    pattern: "pt"
-  - label: "Español"
-    field: language
-    pattern: "es"
+  - {label: "Português", field: language, pattern: "pt"}
+  - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
-  - name: "title"
-    label: "Título"
-    widget: "string"
+  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
-  - name: "date"
-    label: "Data"
-    widget: "datetime"
-    format: "YYYY-MM-DDTHH:mm:ss[Z]"
-  - name: "body"
-    label: "Conteúdo"
-    widget: "markdown"
+  - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Conteúdo", name: "body", widget: "markdown"}
   - {name: "weight", value_type: "int", label: "Ordem", default: 1, min: 0, required: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "faq"}
@@ -251,28 +208,21 @@ collections:
   label: "Investigações"
   label_singular: "Investigação"
   folder: "content/investigations"
-  slug: "{{slug}}.{{language}}"
   preview_path: "/investigations#{{slug}}"
+  slug: "{{slug}}.{{language}}"
+  format: frontmatter
+  extension: "md"
   create: true
-  extension: md
   view_filters:
-  - label: "Português"
-    field: language
-    pattern: "pt"
-  - label: "Español"
-    field: language
-    pattern: "es"
+  - {label: "Português", field: language, pattern: "pt"}
+  - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
-  - name: "title"
-    label: "Título"
-    widget: "string"
+  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
-  - name: "date"
-    label: "Data"
-    widget: "datetime"
-    format: "YYYY-MM-DDTHH:mm:ss[Z]"
+  - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Conteúdo", name: "body", widget: "markdown"}
   - name: "file"
     label: "Arquivo para download"
     widget: "file"
@@ -285,31 +235,21 @@ collections:
 - name: "pages"
   label: "Páginas"
   folder: "content"
+  preview_path: "{{dirname}}/{{filename}}.{{extension}}"
   slug: "{{slug}}.{{language}}"
-  preview_path: "/{{slug}}"
+  format: frontmatter
+  extension: "md"
   create: true
-  extension: md
   view_filters:
-  - label: "Português"
-    field: language
-    pattern: "pt"
-  - label: "Español"
-    field: language
-    pattern: "es"
+  - {label: "Português", field: language, pattern: "pt"}
+  - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
-  - name: "title"
-    label: "Título"
-    widget: "string"
+  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string"}
-  - name: "date"
-    label: "Data"
-    widget: "datetime"
-    format: "YYYY-MM-DDTHH:mm:ss[Z]"
-  - name: "body"
-    label: "Conteúdo"
-    widget: "markdown"
+  - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Conteúdo", name: "body", widget: "markdown"}
   - {name: "layout", widget: "select", options: [ "analysis", "collaborate", "detailed", "faq", "results", "transparency", "about" ]}
   - name: menu
     label: Menu
@@ -333,28 +273,19 @@ collections:
 - name: results
   label: "Seção de resultados"
   folder: "content/results"
-  extension: md
+  preview_path: "{{dirname}}/{{filename}}.{{extension}}"
   slug: "{{slug}}.{{language}}"
+  format: frontmatter
+  extension: "md"
   view_filters:
-  - label: "Português"
-    field: language
-    pattern: "pt"
-  - label: "Español"
-    field: language
-    pattern: "es"
+  - {label: "Português", field: language, pattern: "pt"}
+  - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - name: "title"
-    label: "Título"
-    widget: "string"
+  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
-  - name: "date"
-    label: "Data"
-    widget: "datetime"
-    format: "YYYY-MM-DDTHH:mm:ss[Z]"
-  - name: "body"
-    label: "Conteúdo"
-    widget: "markdown"
+  - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Conteúdo", name: "body", widget: "markdown"}
   - name: "figure"
     widget: "object"
     fields:
@@ -377,9 +308,39 @@ collections:
   - {name: "layout", widget: "select", options: [ "results", "none" ]}
 
 
+- name: "transparency"
+  label: "Transparência"
+  folder: "content/transparency"
+  preview_path: "/transparency#{{slug}}"
+  slug: "{{slug}}.{{language}}"
+  format: frontmatter
+  extension: "md"
+  create: true
+  view_filters:
+  - {label: "Português", field: language, pattern: "pt"}
+  - {label: "Español", field: language, pattern: "es"}
+  fields:
+  - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
+  - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - name: "intro"
+    label: "Introdução"
+    widget: "text"
+    required: false
+  - {label: "Conteúdo", name: "body", widget: "markdown"}
+  - {name: "weight", value_type: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
+  - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
+  - {label: "Show on transparency", name: "transparency", widget: "boolean", default: false}
+  - {name: "layout", widget: "hidden", default: "none"}
+
+
 # - name: supporters
 #   label: "Apoiadores"
-#   slug: "{{slug}}"
+#   slug: "{{slug}}.{{language}}"
+#   format: frontmatter
+#   extension: "md"
 #   files:
 #   - name: "supporters"
 #     label: "Apoiadores"
@@ -399,44 +360,3 @@ collections:
 #       widget: "hidden"
 #       default: 1
 #       min: 0
-
-
-- name: "transparency"
-  label: "Transparência"
-  folder: "content/transparency"
-  slug: "{{slug}}.{{language}}"
-  preview_path: "/transparency#{{slug}}"
-  create: true
-  extension: md
-  view_filters:
-  - label: "Português"
-    field: language
-    pattern: "pt"
-  - label: "Español"
-    field: language
-    pattern: "es"
-  fields:
-  - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
-  - name: "title"
-    label: "Título"
-    widget: "string"
-  - name: "slug"
-    label: "Âncora / Slug"
-    widget: "string"
-    required: false
-  - name: "date"
-    label: "Data"
-    widget: "datetime"
-    format: "YYYY-MM-DDTHH:mm:ss[Z]"
-  - name: "intro"
-    label: "Introdução"
-    widget: "text"
-    required: false
-  - name: "body"
-    label: "Conteúdo"
-    widget: "markdown"
-  - {name: "weight", value_type: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
-  - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
-  - {label: "Show on transparency", name: "transparency", widget: "boolean", default: false}
-  - {name: "layout", widget: "hidden", default: "none"}
