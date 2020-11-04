@@ -168,23 +168,29 @@ if (!document.getElementById('app')) throw new Error('exit');
 
 window.$vue = new Vue({
 	el: '#app',
-	data: {
-		profileDetails: null,
-		debug: true,
-		profileList: [],
-		error: null,
-		metadata: {
-			apiURL: (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-				? 'http://localhost:8010/proxy'
-				: '',
-			loading: true,
-			current: 0,
-			total: 0,
-			download: '',
-			query: {},
-			limit: 12,
-		},
-		xhr_request: [],
+	data() {
+		return {
+			profileDetails: null,
+			debug: true,
+			profileList: [],
+			pending: {
+				toApprove: false,
+				toDisapprove: false,
+			},
+			error: null,
+			metadata: {
+				apiURL: (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+					? ''
+					: '',
+				loading: true,
+				current: 0,
+				total: 0,
+				download: '',
+				query: {},
+				limit: 12,
+			},
+			xhr_request: [],
+		};
 	},
 	components,
 	computed: {
@@ -319,10 +325,14 @@ window.$vue = new Vue({
 			}
 		},
 		toApprove(index) {
-			return this.submitApproval('approve', index);
+			this.pending.toApprove = true;
+			return this.submitApproval('approve', index)
+				.finally(() => { this.pending.toApprove = false; });
 		},
 		toDisapprove(index) {
-			return this.submitApproval('disapprove', index);
+			this.pending.toDisapprove = true;
+			return this.submitApproval('disapprove', index)
+				.finally(() => { this.pending.toDisapprove = false; });
 		},
 		submitApproval(value = 'approve', index) {
 			if (!this.profileList[index]) {
@@ -335,7 +345,7 @@ window.$vue = new Vue({
 
 			this.$set(this.profileList[index], 'loading', true);
 
-			this.$http.post(`${this.metadata.apiURL}/feedback`, {
+			return this.$http.post(`${this.metadata.apiURL}/feedback`, {
 				opinion: value,
 				analysis_id: this.analysisId,
 				before(xhr) {
@@ -354,7 +364,7 @@ window.$vue = new Vue({
 
 				return Promise.reject(error);
 			}).then(() => {
-				this.$set(this.profileList[index], 'opinionSubmited', true);
+				this.$set(this.profileList[index], 'opinionSubmitted', value);
 				this.$set(this.profileList[index], 'loading', false);
 			}).catch((error) => {
 				this.$set(this.profileList[index], 'loading', false);

@@ -141,7 +141,12 @@
 				>
 					<button type="button"
 						class="fancy-button fancy-button--purple"
+						:class="{
+							'chosen': user.opinionSubmitted === 'approve',
+							'not-chosen': user.opinionSubmitted === 'disapprove',
+						}"
 						@click="toApprove(index)"
+						:aria-busy="String($root.pending.toApprove)"
 						:disabled="user.opinionSubmitted"
 					>
 						{{ i18n "toApprove" }}
@@ -153,7 +158,12 @@
 				>
 					<button type="button"
 						class="fancy-button fancy-button--purple"
+						:class="{
+							'chosen': user.opinionSubmitted === 'disapprove',
+							'not-chosen': user.opinionSubmitted === 'approve',
+						}"
 						@click="toDisapprove(index)"
+						:aria-busy="String($root.pending.toDisapprove)"
 						:disabled="user.opinionSubmitted"
 					>
 						{{ i18n "toDisapprove" }}
