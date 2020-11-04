@@ -141,7 +141,8 @@
 				>
 					<button type="button"
 						class="fancy-button fancy-button--purple"
-						@click="toApprove(index)" :disabled="user.opinionSubmited"
+						@click="toApprove(index)"
+						:disabled="user.opinionSubmitted"
 					>
 						{{ i18n "toApprove" }}
 					</button>
@@ -152,7 +153,8 @@
 				>
 					<button type="button"
 						class="fancy-button fancy-button--purple"
-						@click="toDisapprove(index)" :disabled="user.opinionSubmited"
+						@click="toDisapprove(index)"
+						:disabled="user.opinionSubmitted"
 					>
 						{{ i18n "toDisapprove" }}
 					</button>

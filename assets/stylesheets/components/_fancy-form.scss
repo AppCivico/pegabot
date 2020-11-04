@@ -89,7 +89,10 @@ $duration: 0.5s;
 .fancy-form input,
 .fancy-form select,
 .fancy-form button {
-	display: block;
+	display: flex;
+
+	align-items: center;
+	justify-content: center;
 
 	width: 100%;
 	height: 2.5rem; // 40px
@@ -112,6 +115,8 @@ $duration: 0.5s;
 	transition-duration: $duration;
 	transition-property: background-color box-shadow color;
 	transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+
+	appearance: none;
 }
 
 .fancy-form button {
