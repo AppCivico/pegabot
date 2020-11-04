@@ -37,7 +37,7 @@ collections:
     pattern: "pt"
   - label: "Español"
     field: language
-    pattern: "en"
+    pattern: "es"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
@@ -86,7 +86,7 @@ collections:
     pattern: "pt"
   - label: "Español"
     field: language
-    pattern: "en"
+    pattern: "es"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
@@ -133,7 +133,7 @@ collections:
     pattern: "pt"
   - label: "Español"
     field: language
-    pattern: "en"
+    pattern: "es"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
@@ -170,7 +170,7 @@ collections:
     pattern: "pt"
   - label: "Español"
     field: language
-    pattern: "en"
+    pattern: "es"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
@@ -227,7 +227,7 @@ collections:
     pattern: "pt"
   - label: "Español"
     field: language
-    pattern: "en"
+    pattern: "es"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
@@ -261,7 +261,7 @@ collections:
     pattern: "pt"
   - label: "Español"
     field: language
-    pattern: "en"
+    pattern: "es"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
@@ -295,7 +295,7 @@ collections:
     pattern: "pt"
   - label: "Español"
     field: language
-    pattern: "en"
+    pattern: "es"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
@@ -341,7 +341,7 @@ collections:
     pattern: "pt"
   - label: "Español"
     field: language
-    pattern: "en"
+    pattern: "es"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - name: "title"
@@ -414,7 +414,7 @@ collections:
     pattern: "pt"
   - label: "Español"
     field: language
-    pattern: "en"
+    pattern: "es"
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
