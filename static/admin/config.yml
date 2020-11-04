@@ -66,7 +66,7 @@ collections:
       pattern:
       - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
       - "Use a valid URL"
-  - {name: "weight", valueType: "int", widget: "hidden", label: "Ordem", default: 1}
+  - {name: "weight", value_type: "int", widget: "hidden", label: "Ordem", default: 1}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "analysis"}
@@ -109,7 +109,7 @@ collections:
     - "Use a valid URL"
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "bookmark"}
-  - {name: "weight", valueType: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
+  - {name: "weight", value_type: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
 
 
 - name: "callToAction"
@@ -139,7 +139,7 @@ collections:
     widget: "markdown"
     required: false
   - {name: "layout", widget: "hidden", default: "none"}
-  - {name: "weight", valueType: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
+  - {name: "weight", value_type: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
 
 
 - name: "collaborate"
@@ -172,7 +172,7 @@ collections:
     label: "Ordem"
     widget: "hidden"
     default: 1
-    valueType: "int"
+    value_type: "int"
     min: 0
     required: false
   - name: "imageSrc"
@@ -219,7 +219,7 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
-  - {name: "weight", valueType: "int", label: "Ordem", default: 1, min: 0, required: false}
+  - {name: "weight", value_type: "int", label: "Ordem", default: 1, min: 0, required: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "faq"}
 
@@ -253,7 +253,7 @@ collections:
   - name: "file"
     label: "Arquivo para download"
     widget: "file"
-  - {name: "weight", valueType: "int", label: "Ordem", default: 1, min: 0, required: false}
+  - {name: "weight", value_type: "int", label: "Ordem", default: 1, min: 0, required: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "investigations"}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
@@ -303,7 +303,7 @@ collections:
       fields:
       - name: name
         widget: string
-  - {name: "weight", valueType: "int", label: "Ordem no menu", default: 1, min: 0}
+  - {name: "weight", value_type: "int", label: "Ordem no menu", default: 1, min: 0}
 
 
 - name: results
@@ -345,7 +345,7 @@ collections:
       widget: "string"
       required: true
   - name: "weight"
-    valueType: "int"
+    value_type: "int"
     label: "Ordem"
     widget: "hidden"
     default: 1
@@ -370,7 +370,7 @@ collections:
 #     - name: "url"
 #       label: "url"
 #     - name: "weight"
-#       valueType: "int"
+#       value_type: "int"
 #       label: "Ordem"
 #       widget: "hidden"
 #       default: 1
@@ -412,7 +412,7 @@ collections:
   - name: "body"
     label: "Conteúdo"
     widget: "markdown"
-  - {name: "weight", valueType: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
+  - {name: "weight", value_type: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
   - {label: "Show on transparency", name: "transparency", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
