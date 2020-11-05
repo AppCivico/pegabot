@@ -279,3 +279,6 @@ $base-url: '/assets' !default;
 @if variable-exists('im-media-support') and $im-media-support == false {
 	$breakpoints: _im-to-px($breakpoints);
 }
+
+/* UNIQ-ID */
+$uniq-id: unique-id();
