@@ -248,9 +248,6 @@ collections:
   summary: "{{title}} ({{language}})"
   extension: "md"
   create: true
-  # adding a meta object with a path property allows editing the path of entries
-  # moving an existing entry will move the entire sub tree of the entry to the new location
-  meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
   view_filters:
   - {label: "Português", field: language, pattern: "pt"}
   - {label: "Español", field: language, pattern: "es"}
