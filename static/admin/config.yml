@@ -43,7 +43,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: "0", min: 0}
+  - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: 0, min: 0}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - {name: "layout", widget: "select", options: [ "analysis", "collaborate", "detailed", "faq", "results", "transparency", "about" ]}
   - name: menu
@@ -83,7 +83,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: "0", min: 0}
+  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: 0, min: 0}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - label: "Favorito"
@@ -125,7 +125,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: "0", min: 0}
+  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: 0, min: 0}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - name: "author"
     label: "Autor(es)"
@@ -167,7 +167,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: "0", min: 0}
+  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: 0, min: 0}
   - label: "Conteúdo"
     name: "body"
     widget: "markdown"
@@ -198,7 +198,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: "0", min: 0}
+  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: 0, min: 0}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - name: "type"
     label: "type"
@@ -238,7 +238,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: "0", min: 0, required: false}
+  - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "faq"}
@@ -267,7 +267,7 @@ collections:
   - name: "file"
     label: "Arquivo para download"
     widget: "file"
-  - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: "0", min: 0, required: false}
+  - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "investigations"}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
@@ -289,7 +289,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: "0", min: 0}
+  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: 0, min: 0}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - name: "figure"
     widget: "object"
@@ -325,7 +325,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: "0", min: 0}
+  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: 0, min: 0}
   - name: "intro"
     label: "Introdução"
     widget: "text"
