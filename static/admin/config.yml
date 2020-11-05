@@ -43,6 +43,8 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: "0", min: 0}
+  - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - label: "Favorito"
     name: "bookmark"
@@ -60,8 +62,6 @@ collections:
       pattern:
       - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
       - "Use a valid URL"
-  - {name: "weight", value_type: "int", widget: "hidden", label: "Ordem", default: 1}
-  - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "analysis"}
 
@@ -85,6 +85,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: "0", min: 0}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - name: "author"
     label: "Autor(es)"
@@ -105,7 +106,6 @@ collections:
     - "Use a valid URL"
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "bookmark"}
-  - {name: "weight", value_type: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
 
 
 - name: "callToAction"
@@ -127,6 +127,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: "0", min: 0}
   - label: "Conteúdo"
     name: "body"
     widget: "markdown"
@@ -136,7 +137,6 @@ collections:
     widget: "hidden"
     default: "callToAction"
   - {name: "layout", widget: "hidden", default: "none"}
-  - {name: "weight", value_type: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
 
 
 - name: "collaborate"
@@ -158,19 +158,13 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: "0", min: 0}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - name: "type"
     label: "type"
     widget: "hidden"
     default: "collaborate"
   - {label: "Menus", name: "menu", widget: "select", options: [{ label: "Top", value: "header" }, { label: "Bottom", value: "main" }]}
-  - name: "weight"
-    label: "Ordem"
-    widget: "hidden"
-    default: 1
-    value_type: "int"
-    min: 0
-    required: false
   - name: "imageSrc"
     label: "Imagem"
     widget: "image"
@@ -204,8 +198,8 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: "0", min: 0, required: false}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
-  - {name: "weight", value_type: "int", label: "Ordem", default: 1, min: 0, required: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "faq"}
 
@@ -233,7 +227,7 @@ collections:
   - name: "file"
     label: "Arquivo para download"
     widget: "file"
-  - {name: "weight", value_type: "int", label: "Ordem", default: 1, min: 0, required: false}
+  - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: "0", min: 0, required: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "investigations"}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
@@ -257,6 +251,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: "0", min: 0}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - {name: "layout", widget: "select", options: [ "analysis", "collaborate", "detailed", "faq", "results", "transparency", "about" ]}
   - name: menu
@@ -275,7 +270,6 @@ collections:
       fields:
       - name: name
         widget: string
-  - {name: "weight", value_type: "int", label: "Ordem no menu", default: 1, min: 0}
 
 
 - name: results
@@ -294,6 +288,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: "0", min: 0}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - name: "figure"
     widget: "object"
@@ -308,12 +303,6 @@ collections:
       label: "Descrição"
       widget: "string"
       required: true
-  - name: "weight"
-    value_type: "int"
-    label: "Ordem"
-    widget: "hidden"
-    default: 1
-    min: 0
   - {name: "layout", widget: "select", options: [ "results", "none" ]}
 
 
@@ -335,12 +324,12 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: "0", min: 0}
   - name: "intro"
     label: "Introdução"
     widget: "text"
     required: false
   - {label: "Conteúdo", name: "body", widget: "markdown"}
-  - {name: "weight", value_type: "int", widget: "hidden", label: "Ordem", default: 1, min: 0}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
   - {label: "Show on transparency", name: "transparency", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
