@@ -450,19 +450,15 @@ $gauge-hand-height: 8px;
 }
 
 .profile__links ul {
-	display: table;
+	display: block;
 
 	margin-bottom: 0;
 
 	line-height: $line-height * 2;
-
-	table-layout: fixed;
 }
 
 .profile__buttons-list {
-	display: table;
-
-	justify-content: space-evenly;
+	display: flex;
 
 	width: 100%;
 	max-width: none;
@@ -472,14 +468,19 @@ $gauge-hand-height: 8px;
 }
 
 .profile__buttons-item {
-	display: table-cell;
+	display: block;
 
 	flex-grow: 1;
+	flex-shrink: 1;
 
-	vertical-align: top;
+	min-width: 0;
 
 	&::before {
 		content: none;
+	}
+
+	& + & {
+		margin-left: $gutter * 0.5;
 	}
 }
 
@@ -498,13 +499,18 @@ $gauge-hand-height: 8px;
 
 .profile__buttons button,
 .profile__buttons a {
-	width: auto;
+	width: 100%;
+	max-width: none;
+	min-width: 0;
 
 	margin-right: 0;
 	margin-left: 0;
 
+	overflow: hidden;
+
 	text-align: center;
 	text-decoration: none;
+	text-overflow: ellipsis;
 
 	color: palette('white');
 
