@@ -316,9 +316,6 @@ collections:
   summary: "{{title}} ({{language}})"
   extension: "md"
   create: true
-  nested:
-    depth: 100 # max depth to show in the collection tree
-    summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
   view_filters:
   - {label: "Português", field: language, pattern: "pt"}
   - {label: "Español", field: language, pattern: "es"}
@@ -337,9 +334,7 @@ collections:
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
   - {label: "Show on transparency", name: "transparency", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
-  # adding a meta object with a path property allows editing the path of entries
-  # moving an existing entry will move the entire sub tree of the entry to the new location
-  meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+
 
 # - name: supporters
 #   label: "Apoiadores"
