@@ -24,6 +24,45 @@ editor:
   preview: false
 collections:
 
+- name: "pages"
+  label: "Páginas"
+  folder: "content"
+  preview_path: "{{dirname}}/{{filename}}.{{extension}}"
+  slug: "{{slug}}.{{language}}"
+  format: frontmatter
+  summary: "{{title}} ({{language}})"
+  extension: "md"
+  create: true
+  view_filters:
+  - {label: "Português", field: language, pattern: "pt"}
+  - {label: "Español", field: language, pattern: "es"}
+  fields:
+  - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Âncora / Slug", name: "slug", widget: "string"}
+  - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
+  - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: "0", min: 0}
+  - {label: "Conteúdo", name: "body", widget: "markdown"}
+  - {name: "layout", widget: "select", options: [ "analysis", "collaborate", "detailed", "faq", "results", "transparency", "about" ]}
+  - name: menu
+    label: Menu
+    widget: "object"
+    fields:
+    - name: "header"
+      label: "Header"
+      widget: object
+      fields:
+      - name: name
+        widget: string
+    - name: "main"
+      label: "Footer"
+      widget: "object"
+      fields:
+      - name: name
+        widget: string
+
+
 - name: "analysis"
   label: "Análises"
   label_singular: "Análise"
@@ -231,45 +270,6 @@ collections:
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "investigations"}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
-
-
-- name: "pages"
-  label: "Páginas"
-  folder: "content"
-  preview_path: "{{dirname}}/{{filename}}.{{extension}}"
-  slug: "{{slug}}.{{language}}"
-  format: frontmatter
-  summary: "{{title}} ({{language}})"
-  extension: "md"
-  create: true
-  view_filters:
-  - {label: "Português", field: language, pattern: "pt"}
-  - {label: "Español", field: language, pattern: "es"}
-  fields:
-  - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
-  - {label: "Âncora / Slug", name: "slug", widget: "string"}
-  - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: "0", min: 0}
-  - {label: "Conteúdo", name: "body", widget: "markdown"}
-  - {name: "layout", widget: "select", options: [ "analysis", "collaborate", "detailed", "faq", "results", "transparency", "about" ]}
-  - name: menu
-    label: Menu
-    widget: "object"
-    fields:
-    - name: "header"
-      label: "Header"
-      widget: object
-      fields:
-      - name: name
-        widget: string
-    - name: "main"
-      label: "Footer"
-      widget: "object"
-      fields:
-      - name: name
-        widget: string
 
 
 - name: results
