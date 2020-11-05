@@ -6,4 +6,5 @@ layout: none
 type: callToAction
 language: ""
 slug: "{{ .TranslationBaseName }}"
+weight: 0
 ---
