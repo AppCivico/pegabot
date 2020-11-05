@@ -71,7 +71,6 @@ main {
 	}
 }
 
-
 .article__title,
 [role='doc-subtitle'],
 .article__content {
@@ -101,7 +100,7 @@ main {
 	}
 }
 
-article footer {
+[id='section-footer'] {
 	column-width: 22rem;
 	column-count: 2;
 	column-fill: balance;
@@ -109,4 +108,8 @@ article footer {
 	column-rule: $stroke solid palette('gray', 'x-light');
 	orphans: 2;
 	widows: 2;
+
+	* {
+		max-width: none;
+	}
 }
