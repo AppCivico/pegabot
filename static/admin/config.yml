@@ -41,7 +41,7 @@ collections:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
-  - {label: "Âncora / Slug", name: "slug", widget: "string"}
+  - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: "0", min: 0}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
