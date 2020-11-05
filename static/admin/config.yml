@@ -103,6 +103,7 @@ collections:
     - {label: "Legenda", name: "caption", widget: "string"}
     - label: "Link"
       name: "link"
+      default: ""
       widget: "string"
       pattern:
       - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
@@ -143,6 +144,7 @@ collections:
     widget: "string"
     required: false
   - name: "link"
+    default: ""
     label: "Link"
     widget: "string"
     required: false
@@ -218,6 +220,7 @@ collections:
     widget: "image"
   - label: "Link"
     name: "link"
+    default: ""
     widget: "string"
     pattern:
     - '^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?'
