@@ -20,9 +20,9 @@ slug:
   encoding: "ascii"
   clean_accents: true
   sanitize_replacement: "-"
-  editor:
-    preview: false
-    summary: "{{version}} - {{title}} - ({{language}})"
+editor:
+  preview: false
+summary: "{{version}} - {{title}} - ({{language}})"
 
 collections:
 
