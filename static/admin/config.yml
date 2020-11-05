@@ -43,25 +43,30 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: 0, min: 0}
+  - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
-  - {name: "layout", widget: "select", options: [ "analysis", "collaborate", "detailed", "faq", "results", "transparency", "about" ]}
+  - {name: "layout", widget: "select", options: [ "analysis", "collaborate", "detailed", "faq", "results", "transparency", "about" ], required: false}
   - name: menu
     label: Menu
     widget: "object"
+    required: false
     fields:
     - name: "header"
       label: "Header"
       widget: object
+      required: false
       fields:
       - name: name
         widget: string
+        required: false
     - name: "main"
       label: "Footer"
       widget: "object"
+      required: false
       fields:
       - name: name
         widget: string
+        required: false
 
 
 - name: "analysis"
