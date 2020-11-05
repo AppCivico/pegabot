@@ -89,7 +89,7 @@ collections:
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem", name: "weight", widget: "hidden", value_type: "int", default: 0, min: 0}
-  - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
+  - {label: "Show on home", name: "homepage", widget: "boolean", default: false, required: false}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - label: "Favorito"
     name: "bookmark"
@@ -275,7 +275,7 @@ collections:
   - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "type", widget: "hidden", default: "investigations"}
-  - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
+  - {label: "Show on home", name: "homepage", widget: "boolean", default: false, required: false}
 
 
 - name: results
@@ -336,7 +336,7 @@ collections:
     widget: "text"
     required: false
   - {label: "Conteúdo", name: "body", widget: "markdown"}
-  - {label: "Show on home", name: "homepage", widget: "boolean", default: false}
+  - {label: "Show on home", name: "homepage", widget: "boolean", default: false, required: false}
   - {label: "Show on transparency", name: "transparency", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
 
