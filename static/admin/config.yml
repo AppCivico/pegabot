@@ -39,7 +39,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
@@ -84,7 +84,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
@@ -126,7 +126,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
@@ -168,7 +168,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
@@ -199,7 +199,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
@@ -239,7 +239,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
@@ -264,7 +264,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
@@ -326,7 +326,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
