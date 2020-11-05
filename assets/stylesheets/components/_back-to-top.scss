@@ -60,7 +60,7 @@
 
 	@media screen and (min-width: $max-width / 1rem * 1em ) {
 		top: 50vh;
-		right: calc(50vw - #{$max-width / 2} + #{$gutter});
+		right: calc((50vw - #{$max-width / 2}) / 2);
 	}
 }
 
