@@ -62,6 +62,8 @@
   translation: "Profile analysis"
 - id: profileLink
   translation: "Social media profile"
+- id: printAnalyses
+  translation: "Print analysis"
 - id: readMore
   translation: "Read more"
 - id: readFullContent

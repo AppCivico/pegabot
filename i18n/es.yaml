@@ -72,6 +72,8 @@
   translation: "Esta funcionalidad depende de JavaScript."
 - id: notFound
   translation: "No encontrada"
+- id: printAnalyses
+  translation: "Imprimir resultados"
 - id: profileAnalysis
   translation: "Análisis de perfil"
 - id: profileLink

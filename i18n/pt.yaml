@@ -84,6 +84,8 @@
   translation: "Essa funcionalidade depende de JavaScript."
 - id: notFound
   translation: "Não encontrado."
+- id: printAnalyses
+  translation: "Imprimir resultado"
 - id: profileAnalysis
   translation: "Análise por critérios"
 - id: profileLink

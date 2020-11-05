@@ -170,15 +170,21 @@ $duration: 0.5s;
 .fancy-button,
 .fancy-form__button,
 .fancy-form button {
+	padding-top: 0;
 	padding-right: ($line-height * 1em);
+	padding-bottom: 0;
 	padding-left: ($line-height * 1em);
 
 	overflow: hidden;
 
 	font-weight: 900;
 
+	text-align: center;
+	text-decoration: none;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+
+	box-sizing: content-box;
 
 	&::after {
 		max-width: 0;
