@@ -116,7 +116,7 @@
 	}
 }
 
-.home__main > article {
+.home__main > article:not(.has-resources) {
 	@media screen and (min-width: breakpoint('tablet')) {
 		// second
 		&:nth-of-type(2) {

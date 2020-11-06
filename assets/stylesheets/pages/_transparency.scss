@@ -1,4 +1,4 @@
-.transparency__main > article {
+.transparency__main > article:not(.has-resources) {
 	@media screen and (min-width: breakpoint('tablet')) {
 		// second
 		&:nth-of-type(2) {
