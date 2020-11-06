@@ -6,4 +6,5 @@ menu:
 layout: none
 slug: "mala-direta"
 language: pt
+rootOf: false
 ---

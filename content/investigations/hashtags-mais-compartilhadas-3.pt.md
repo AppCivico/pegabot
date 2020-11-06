@@ -10,5 +10,4 @@ weight: 2
 language: pt
 type: investigations
 file: http://africau.edu/images/default/sample.pdf
-menu: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Quer contribuir com o projeto PegaBot?"
 date: 2018-03-13T18:17:00-03:00
-draft: false
+draft: true
 menu:
   - "main"
   - "header"

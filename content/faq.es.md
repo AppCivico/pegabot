@@ -9,4 +9,5 @@ slug: "faq"
 layout: faq
 weight: 2
 language: es
+rootOf: true
 ---

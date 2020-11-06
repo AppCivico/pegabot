@@ -6,6 +6,7 @@ menu: "main"
 slug: "privacidade"
 weight: 10
 language: es
+rootOf: false
 ---
 ## Política de privacidad
 

@@ -6,6 +6,7 @@ menu: "main"
 slug: "terminos-de-uso"
 weight: 12
 language: es
+rootOf: false
 ---
 ## A) TÉRMINOS DE USO- LEYES Y LICENCIAS
 

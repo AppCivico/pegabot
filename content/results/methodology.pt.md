@@ -2,9 +2,9 @@
 title: "Entendendo a metodologia que aplicamos a inteligência do Pegabot"
 date: 2020-08-15T23:17:58-03:00
 draft: true
-menu:
-layout: none
 language: pt
+headless: true
+weight: 0
 ---
 Desde início do uso do computadores pelo homem existe uma tentativa de aproveitar a capacidade de processamento das máquinas para que esta simule o comportamento humano. Durante quase 60 anos as pesquisas neste sentido desenvolveram um ramo da ciência d  computação que ficou conhecida como inteligência Artificial(IA).
 

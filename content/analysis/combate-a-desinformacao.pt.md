@@ -4,6 +4,7 @@ title: 'Transparência, Capacitação e Resiliência são as nossas palavras-cha
 file: 'http://africau.edu/images/default/sample.pdf'
 slug: ''
 date: 2020-08-11T19:30:31.000Z
+type: analysis
 bookmark:
   alt: ..
   caption: Análises atuais do Pegabot

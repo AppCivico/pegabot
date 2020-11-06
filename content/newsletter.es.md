@@ -6,4 +6,5 @@ menu:
 layout: none
 slug:
 language: es
+rootOf: false
 ---

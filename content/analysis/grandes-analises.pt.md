@@ -5,6 +5,7 @@ file: http://africau.edu/images/default/sample.pdf
 draft: false
 slug: ""
 date: 2020-08-11T19:27:19.000Z
+type: analisys
 bookmark:
   alt: /
   caption: A primeira grande análise do Pegabot

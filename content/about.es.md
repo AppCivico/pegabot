@@ -11,6 +11,7 @@ slug: "sobre"
 weight: 1
 layout: "about"
 language: es
+rootOf: false
 ---
 
 Bots, una abreviatura para robots, son programas computacionales creados para realizar tareas específicas. Los primeros robots no tenían intenciones maliciosas, y aún hoy existen los buenos bots, que tienen como propósito exigir rendición de cuentas de políticos, defender causas como la equidad de género o ayudar a organizar las (muchas) tareas diarias de sus usuarios. Pero a finales de la década de 1990, los bots comenzaron a desarrollar una reputación negativa. Algunos bots han sido usados en el envío de spam por correo electrónico, el robo de datos personales de usuarios, fraudes de tarjetas de crédito y ataques de desinformación para distorsionar la esfera pública. Estos bots tienen como objetivo esparcir mentiras para influenciar narrativas, un fenómeno que desde 2014 viene ganando escala global. Estos bots están por ahí y casi nadie sabe cómo funcionan, quién los desarrolla y por quién son financiados. Para ayudar a combatir este problema, lanzamos el Atrapabot, una herramienta que trae más transparencia para el uso de los bots en América Latina.

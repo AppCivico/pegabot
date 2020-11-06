@@ -8,6 +8,7 @@ slug: ""
 weight: 1
 intro: "Algumas das informações públicas dos perfis consideradas na análise do PegaBot são o nome do perfil do usuário, e quantos caracteres ele possui, quantidade de perfis seguidos (following) e seguidores (followers), texto da descrição do perfil, número de postagens (tweets) e favoritos."
 language: pt
+rootOf: false
 ---
 Algumas das informações públicas dos perfis consideradas na análise do PegaBot são o nome do perfil do usuário, e quantos caracteres ele possui, quantidade de perfis seguidos (following) e seguidores (followers), texto da descrição do perfil, número de postagens (tweets) e favoritos.
 Após coletar as informações, os algoritmos do PegaBot processam e transformam  os dados recebidos em variáveis que compõem o cálculo final de probabilidade.
@@ -20,6 +21,7 @@ Como o PegaBot prepara os dados:
 - Realiza comparações entre o nome do usuário (arroba/handle) com seu nome de perfil e busca similaridades em número de caracteres.
 
 O que o PegaBot analisa:
+
 - **Semelhança de nome do usuário e nome**: compara cada uma das letras que compõe o nome do usuário (arroba/handle) e o nome que aparece no perfil. Caso exista a palavra "bot", um peso maior será adicionado.
 - **Número de dígitos no nome do usuário**: Busca por uma composição de nome de perfil que contenha letras e números. Caso existam uma quantidade superior a dois dígitos na composição, maior peso é adicionado.
 - **Comprimento do nome**: pesos maiores são adicionados em nomes que possuem uma quantidade superior a 15 caracteres.

@@ -6,6 +6,7 @@ menu: "main"
 slug: "termos-de-uso"
 weight: 12
 language: pt
+rootOf: false
 ---
 
 ## A) TERMOS DE USO - OBRIGATORIEDADE E LICENCIAMENTO

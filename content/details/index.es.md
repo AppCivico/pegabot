@@ -4,7 +4,7 @@ date: 2020-10-07T21:07:54-03:00
 draft: false
 slug: "detalhes"
 layout: detailed
-language: pt
+language: es
 headless: false
 ---
 
