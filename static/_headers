@@ -31,6 +31,10 @@
   Cache-Control: max-age=0, public
 /*.html
   Cache-Control: max-age=0, public
+/*.yaml
+  Cache-Control: max-age=0, public
+/*.yml
+  Cache-Control: max-age=0, public
 /*.xml
   Cache-Control: max-age=0, public
 /*.json
