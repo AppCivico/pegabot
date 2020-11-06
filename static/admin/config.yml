@@ -54,25 +54,16 @@ collections:
   - {name: "rootOf", widget: "hidden", default: false}
   - name: menu
     label: Menu
-    widget: "object"
+    widget: "select"
+    multiple: true
     required: false
-    fields:
-    - name: "header"
-      label: "Header"
-      widget: object
-      required: false
-      fields:
-      - name: name
-        widget: string
-        required: false
-    - name: "main"
-      label: "Footer"
-      widget: "object"
-      required: false
-      fields:
-      - name: name
-        widget: string
-        required: false
+    options:
+      - {label: "Cabeçalho", value: "header"}
+      - {label: "Rodapé", value: "main"}
+  - name: "linkTitle"
+    label: "Nome nos links"
+    widget: "string"
+    required: false
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
@@ -101,25 +92,16 @@ collections:
   - {name: "rootOf", widget: "hidden", default: true}
   - name: menu
     label: Menu
-    widget: "object"
+    widget: "select"
+    multiple: true
     required: false
-    fields:
-    - name: "header"
-      label: "Header"
-      widget: object
-      required: false
-      fields:
-      - name: name
-        widget: string
-        required: false
-    - name: "main"
-      label: "Footer"
-      widget: "object"
-      required: false
-      fields:
-      - name: name
-        widget: string
-        required: false
+    options:
+      - {label: "Cabeçalho", value: "header"}
+      - {label: "Rodapé", value: "main"}
+  - name: "linkTitle"
+    label: "Nome nos links"
+    widget: "string"
+    required: false
 
 - name: "faq"
   label: "FAQ - itens"
@@ -172,25 +154,16 @@ collections:
   - {name: "rootOf", widget: "hidden", default: true}
   - name: menu
     label: Menu
-    widget: "object"
+    widget: "select"
+    multiple: true
     required: false
-    fields:
-    - name: "header"
-      label: "Header"
-      widget: object
-      required: false
-      fields:
-      - name: name
-        widget: string
-        required: false
-    - name: "main"
-      label: "Footer"
-      widget: "object"
-      required: false
-      fields:
-      - name: name
-        widget: string
-        required: false
+    options:
+      - {label: "Cabeçalho", value: "header"}
+      - {label: "Rodapé", value: "main"}
+  - name: "linkTitle"
+    label: "Nome nos links"
+    widget: "string"
+    required: false
 
 - name: "analysis"
   label: "Análises - itens"
@@ -293,25 +266,16 @@ collections:
   - {name: "rootOf", widget: "hidden", default: true}
   - name: menu
     label: Menu
-    widget: "object"
+    widget: "select"
+    multiple: true
     required: false
-    fields:
-    - name: "header"
-      label: "Header"
-      widget: object
-      required: false
-      fields:
-      - name: name
-        widget: string
-        required: false
-    - name: "main"
-      label: "Footer"
-      widget: "object"
-      required: false
-      fields:
-      - name: name
-        widget: string
-        required: false
+    options:
+      - {label: "Cabeçalho", value: "header"}
+      - {label: "Rodapé", value: "main"}
+  - name: "linkTitle"
+    label: "Nome nos links"
+    widget: "string"
+    required: false
 
 - name: "collaborate"
   label: "Colaboração - chamadas"
@@ -410,25 +374,16 @@ collections:
   - {name: "rootOf", widget: "hidden", default: true}
   - name: menu
     label: Menu
-    widget: "object"
+    widget: "select"
+    multiple: true
     required: false
-    fields:
-    - name: "header"
-      label: "Header"
-      widget: object
-      required: false
-      fields:
-      - name: name
-        widget: string
-        required: false
-    - name: "main"
-      label: "Footer"
-      widget: "object"
-      required: false
-      fields:
-      - name: name
-        widget: string
-        required: false
+    options:
+      - {label: "Cabeçalho", value: "header"}
+      - {label: "Rodapé", value: "main"}
+  - name: "linkTitle"
+    label: "Nome nos links"
+    widget: "string"
+    required: false
 
 - name: "transparency"
   label: "Transparência - items"

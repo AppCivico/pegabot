@@ -3,10 +3,9 @@ title: Desarrollando redes estructurales de bots
 date: 2018-07-05T11:07:39-02:00
 draft: false
 menu:
-  main:
-    name: Sobre
-  header:
-    name: Sobre
+  - "main"
+  - "header"
+linkTitle: Sobre
 slug: "sobre"
 weight: 1
 layout: "about"

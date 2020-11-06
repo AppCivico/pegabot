@@ -6,10 +6,9 @@ slug: "analise"
 layout: analysis
 weight: 3
 menu:
-  main:
-    name: Análises
-  header:
-    name: Análises
+  - "main"
+  - "header"
+linkTitle: Análises
 language: es
 rootOf: true
 ---
