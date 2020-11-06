@@ -55,7 +55,7 @@
 		{{ .Render "curved-section" }}
 	{{ end }}
 
-	{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "active-collaboration") }}
+	{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "collaborate") }}
 		{{ .Render "curved-section" }}
 	{{ end }}
 </article>
