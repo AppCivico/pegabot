@@ -8,4 +8,4 @@ language: "pt"
 slug: "check-another-one"
 theme: "purple"
 ---
-[Analisar outro perfil](/#s)
+[Analisar outro perfil](/)
