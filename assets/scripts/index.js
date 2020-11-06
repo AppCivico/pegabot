@@ -292,6 +292,8 @@ window.$vue = new Vue({
 						}
 					} else if (response.status === 425) {
 						window.alert('No Reason Phrase'); // eslint-disable-line no-alert
+					} else {
+						window.alert(response.message || 'Error'); // eslint-disable-line no-alert
 					}
 
 					if (currentIndex === this.metadata.limit - 1) {
