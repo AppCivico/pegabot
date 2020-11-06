@@ -2,6 +2,7 @@
 language: pt
 draft: false
 title: Achou um erro ou quer sugerir uma melhoria?
+slug: aa
 date: 2020-08-13T00:44:56-03:00
 weight: 4
 type: collaborate
