@@ -4,7 +4,7 @@ draft: false
 title: Vamos conversar sobre transparência no uso de bots nas redes sociais? AA
 slug: transparenciaa
 date: 2018-03-13T18:17:00-03:00
-weight: 2
+weight: 6
 layout: transparency
 menu:
   - header
