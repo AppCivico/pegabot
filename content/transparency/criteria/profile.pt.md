@@ -1,16 +1,19 @@
 ---
-title: "Perfil de usuário"
-date: 2020-08-14T00:38:52-03:00
-draft: false
-menu:
-layout: none
-slug: ""
-weight: 1
-intro: "Algumas das informações públicas dos perfis consideradas na análise do PegaBot são o nome do perfil do usuário, e quantos caracteres ele possui, quantidade de perfis seguidos (following) e seguidores (followers), texto da descrição do perfil, número de postagens (tweets) e favoritos."
 language: pt
+draft: false
+title: Perfil de usuário
+slug: ""
+date: 2020-08-14T00:38:52-03:00
+weight: 1
+intro: Algumas das informações públicas dos perfis consideradas na análise do
+  PegaBot são o nome do perfil do usuário, e quantos caracteres ele possui,
+  quantidade de perfis seguidos (following) e seguidores (followers), texto da
+  descrição do perfil, número de postagens (tweets) e favoritos.
+layout: none
 rootOf: false
+menu: null
 ---
-Algumas das informações públicas dos perfis consideradas na análise do PegaBot são o nome do perfil do usuário, e quantos caracteres ele possui, quantidade de perfis seguidos (following) e seguidores (followers), texto da descrição do perfil, número de postagens (tweets) e favoritos.
+Algumas das informações públicas dos perfis consideradas na análise do PEGABOT são o nome do perfil do usuário, e quantos caracteres ele possui, quantidade de perfis seguidos (following) e seguidores (followers), texto da descrição do perfil, número de postagens (tweets) e favoritos.
 Após coletar as informações, os algoritmos do PegaBot processam e transformam  os dados recebidos em variáveis que compõem o cálculo final de probabilidade.
 
 Como o PegaBot prepara os dados:

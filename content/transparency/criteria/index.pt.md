@@ -1,11 +1,11 @@
 ---
-title: "Como funcionam os critérios do PegaBot"
-date: 2020-08-11T16:23:28-03:00
 draft: false
-layout: none
 slug: criterios
-weight: 4
+date: 2020-08-11T16:23:28-03:00
+layout: none
 homepage: true
+title: Como funcionam os critérios do PEGABOT
+weight: 4
 language: pt
 rootOf: true
 ---

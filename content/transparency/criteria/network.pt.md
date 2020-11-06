@@ -1,12 +1,15 @@
 ---
-title: "Rede"
-date: 2020-08-14T00:39:57-03:00
-draft: false
-layout: none
-slug: ""
-weight: 2
-intro: "O algoritmo do PegaBot coleta uma amostra da linha do tempo do usuário, identificando hashtags utilizadas e menções ao perfil para realizar suas análises. O objetivo é identificar características de distribuição de informação na rede da conta analisada."
 language: pt
+draft: false
+title: Rede
+slug: ""
+date: 2020-08-14T00:39:57-03:00
+weight: 2
+intro: O algoritmo do PEGABOT coleta uma amostra da linha do tempo do usuário,
+  identificando hashtags utilizadas e menções ao perfil para realizar suas
+  análises. O objetivo é identificar características de distribuição de
+  informação na rede da conta analisada.
+layout: none
 rootOf: false
 ---
 O algoritmo do PegaBot coleta uma amostra da linha do tempo do usuário, identificando hashtags utilizadas e menções ao perfil para realizar suas análises. O objetivo é identificar características de distribuição de informação na rede da conta analisada.
