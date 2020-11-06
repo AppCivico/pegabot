@@ -41,7 +41,7 @@
 
 						{{ $input := "(?i)(Pegabot)" }}
 						{{ $output := "<b>PEGABOT</b>" }}
-						{{ $finalContent := .Content | truncate 150 | replaceRE $input $output | safeHTML }}
+						{{ $finalContent := .Params.intro | default (.Content | truncate 150) | replaceRE $input $output | safeHTML }}
 						{{ $finalContent }}
 
 						<p>

@@ -13,8 +13,7 @@ layout: none
 rootOf: false
 menu: null
 ---
-Algumas das informações públicas dos perfis consideradas na análise do PEGABOT são o nome do perfil do usuário, e quantos caracteres ele possui, quantidade de perfis seguidos (following) e seguidores (followers), texto da descrição do perfil, número de postagens (tweets) e favoritos.
-Após coletar as informações, os algoritmos do PegaBot processam e transformam  os dados recebidos em variáveis que compõem o cálculo final de probabilidade.
+Algumas das informações públicas dos perfis consideradas na análise do PEGABOT são o nome do perfil do usuário, e quantos caracteres ele possui, quantidade de perfis seguidos (following) e seguidores (followers), texto da descrição do perfil, número de postagens (tweets) e favoritos. Após coletar as informações, os algoritmos do PegaBot processam e transformam os dados recebidos em variáveis que compõem o cálculo final de probabilidade.
 
 Como o PegaBot prepara os dados:
 

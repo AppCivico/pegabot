@@ -469,6 +469,7 @@ collections:
     label: "Introdução"
     widget: "text"
     required: false
+    hint: "texto opcional. Os 150 primeiros caracteres do conteúdo serão usados em caso de não preenchimento"
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "rootOf", widget: "hidden", default: false}
