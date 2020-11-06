@@ -603,7 +603,7 @@ collections:
   folder: "content/details"
   slug: "{{slug}}.{{language}}"
   format: frontmatter
-  summary: "{{title}} ({{language}})"
+  summary: "({{language}})"
   extension: "md"
   create: false
   delete: false
@@ -614,7 +614,6 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
