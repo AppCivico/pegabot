@@ -656,7 +656,7 @@ collections:
   - {name: "headless", widget: "hidden", default: false}
 
 - name: results
-  label: "Resultados - seçãos"
+  label: "Resultados - seções"
   folder: "content/results"
   # preview_path: "{{dirname}}/{{filename}}.{{extension}}"
   slug: "{{slug}}.{{language}}"
