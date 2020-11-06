@@ -4,7 +4,7 @@ draft: false
 title: Análise de sentimentos
 slug: ""
 date: 2020-08-14T00:41:05-03:00
-weight: 3
+weight: 1
 intro: Os algoritmos do PegaBot  selecionam uma amostra de até 100 tweets mais
   recentes publicados pelo perfil analisado. O objetivo é identificar a
   neutralidade do perfil analisado. Quanto mais neutro, menor a chance de ser
