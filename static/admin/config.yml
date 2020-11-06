@@ -87,7 +87,7 @@ collections:
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
-  - {label: "Conteúdo", name: "body", widget: "markdown"}
+  - {label: "Conteúdo", name: "body", widget: "markdown", required: false}
   - {name: "layout", widget: "hidden", default: "faq"}
   - {name: "rootOf", widget: "hidden", default: true}
   - name: menu
@@ -149,7 +149,7 @@ collections:
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
-  - {label: "Conteúdo", name: "body", widget: "markdown"}
+  - {label: "Conteúdo", name: "body", widget: "markdown", required: false}
   - {name: "layout", widget: "hidden", default: "analysis"}
   - {name: "rootOf", widget: "hidden", default: true}
   - name: menu
@@ -261,7 +261,7 @@ collections:
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
-  - {label: "Conteúdo", name: "body", widget: "markdown"}
+  - {label: "Conteúdo", name: "body", widget: "markdown", required: false}
   - {name: "layout", widget: "hidden", default: "collaborate"}
   - {name: "rootOf", widget: "hidden", default: true}
   - name: menu
@@ -369,7 +369,7 @@ collections:
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
-  - {label: "Conteúdo", name: "body", widget: "markdown"}
+  - {label: "Conteúdo", name: "body", widget: "markdown", required: false}
   - {name: "layout", widget: "hidden", default: "transparency"}
   - {name: "rootOf", widget: "hidden", default: true}
   - name: menu
@@ -435,7 +435,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Conteúdo", name: "body", widget: "markdown"}
+  - {label: "Conteúdo", name: "body", widget: "markdown", required: false}
   - {name: "layout", widget: "hidden", default: "none"}
   - {name: "rootOf", widget: "hidden", default: true}
 
@@ -532,7 +532,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Conteúdo", name: "body", widget: "markdown"}
+  - {label: "Conteúdo", name: "body", widget: "markdown", required: false}
   - {name: "layout", widget: "hidden", default: "results"}
   - {name: "headless", widget: "hidden", default: false}
 
@@ -592,7 +592,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Conteúdo", name: "body", widget: "markdown"}
+  - {label: "Conteúdo", name: "body", widget: "markdown", required: false}
   - {name: "layout", widget: "hidden", default: "detailed"}
   - {name: "headless", widget: "hidden", default: false}
 
