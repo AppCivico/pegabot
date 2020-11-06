@@ -48,7 +48,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -94,7 +94,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -138,7 +138,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -172,7 +172,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -216,7 +216,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -267,7 +267,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -307,7 +307,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -350,7 +350,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -400,7 +400,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -438,7 +438,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -481,7 +481,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -520,7 +520,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -550,7 +550,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -588,7 +588,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -640,7 +640,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -718,7 +718,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - {label: "Título", name: "title", widget: "string"}
   - label: "Âncora / Slug"
     name: "slug"
@@ -748,7 +748,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Draft?", name: "draft", widget: "boolean", default: true}
+  - {label: "Draft?", name: "draft", widget: "boolean", default: false}
   - label: "Âncora / Slug"
     name: "slug"
     widget: "string"
