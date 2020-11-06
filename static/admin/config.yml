@@ -271,7 +271,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Conteúdo", name: "body", widget: "markdown"}
+  - {label: "Conteúdo", name: "body", widget: "markdown", required: false}
   - name: "file"
     label: "Arquivo para download"
     widget: "file"
