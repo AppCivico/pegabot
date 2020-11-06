@@ -224,6 +224,7 @@ window.$vue = new Vue({
 			// this.$http.get('/botometer.json', {
 			// dev only on /details
 			// this.$http.get('/details.json', {
+				timeout: 20000,
 				params,
 				before(xhr) {
 					this.xhr_request.push(xhr);
