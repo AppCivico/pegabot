@@ -2,18 +2,17 @@
 language: pt
 draft: false
 title: Política de Privacidade
-slug: privacidadee
+slug: privacidade
 date: 2018-03-29T18:42:22-03:00
-weight: 1
+weight: 10
 rootOf: false
 menu:
-  - header
   - main
-linkTitle: priv
+linkTitle: Politica de privacidade
 ---
 O tratamento de dados pessoais conduzido no âmbito do Pegabot será regido pela presente Política de Privacidade, ficando os usuários cientes de que o acesso às funcionalidades do Pegabot configura consentimento para tratamento de seus dados pessoais na forma estabelecida nesta Política de Privacidade.
 
-## Dos registros de acessoA
+## Dos registros de acesso
 
 1. Ao acessar este site, independente de cadastro, certas informações sobre o visitante como o protocolo de Internet (IP), navegação através do site, o software utilizado e o tempo gasto, junto com outras informações semelhantes, serão armazenados em servidores do Pegabot. Este registro não irá identificar especificamente o usuário. A informação será utilizada apenas internamente para análise de tráfego no website.
 2. Essas informações serão armazenadas e somente serão fornecidas a terceiros na forma da Lei e mediante ordem judicial.
