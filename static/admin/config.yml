@@ -557,17 +557,19 @@ collections:
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - name: "figure"
     widget: "object"
+    required: false
     fields:
     - name: "src"
       widget: file
-      required: true
+      required: false
     - name: "caption"
       label: "Legenda"
       widget: "string"
+      required: false
     - name: "alt"
       label: "Descrição"
       widget: "string"
-      required: true
+      required: false
   - {name: "headless", widget: "hidden", default: true}
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
