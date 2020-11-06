@@ -1,7 +1,7 @@
 ---
 date: 2018-03-13T18:10:01-03:00
 draft: false
-id: "quem-financia-o-pegabot"
+slug: "quem-financia-o-pegabot"
 title: "¿Quién financia Atrapabot?"
 layout: none
 type: faq

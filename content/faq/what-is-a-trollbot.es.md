@@ -1,7 +1,7 @@
 ---
 date: 2020-09-11T18:29:08-03:00
 draft: false
-id: "o-que-sao-trollbots"
+slug: "o-que-sao-trollbots"
 title: "O que são trollbots?"
 layout: none
 type: faq

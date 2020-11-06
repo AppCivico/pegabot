@@ -1,7 +1,7 @@
 ---
 date: 2020-09-11T18:31:52-03:00
 draft: false
-id: "open-software"
+slug: "open-software"
 title: "Por que é importante um sistema de detecção de bot ser construído em software livre?"
 layout: none
 type: faq

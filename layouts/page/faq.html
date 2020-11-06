@@ -10,7 +10,7 @@
 	{{ with where $.Site.RegularPages ".Type" "faq" }}
 		<section class="questions">
 			{{ range . }}
-				<details id="faq__{{ .Params.id }}" class="questions__item">
+				<details id="faq__{{ .Params.slug }}" class="questions__item">
 					<summary class="questions__question">{{ .Title | safeHTML | markdownify }}</summary>
 					<div
 						class="questions__answer"

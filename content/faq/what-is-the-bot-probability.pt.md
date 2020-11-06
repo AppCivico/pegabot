@@ -1,7 +1,7 @@
 ---
 date: 2018-03-13T18:04:04-03:00
 draft: false
-id: "o-que-a-nota-significa"
+slug: "o-que-a-nota-significa"
 title: "O que a nota significa?"
 layout: none
 type: faq

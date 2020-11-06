@@ -1,7 +1,7 @@
 ---
 date: 2018-03-13T18:05:53-03:00
 draft: false
-id: "como-interpretar-as-notas"
+slug: "como-interpretar-as-notas"
 title: "Como eu deveria interpretar as notas?"
 layout: none
 type: faq
