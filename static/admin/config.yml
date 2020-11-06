@@ -76,6 +76,7 @@ collections:
   summary: "{{title}} ({{language}})"
   extension: "md"
   create: false
+  delete: false
   filter: {field: "layout", value: "faq"}
   view_filters:
   - {label: "Português", field: language, pattern: "pt"}
@@ -138,6 +139,7 @@ collections:
   summary: "{{title}} ({{language}})"
   extension: "md"
   create: false
+  delete: false
   filter: {field: "layout", value: "analysis"}
   view_filters:
   - {label: "Português", field: language, pattern: "pt"}
@@ -250,6 +252,7 @@ collections:
   summary: "{{title}} ({{language}})"
   extension: "md"
   create: false
+  delete: false
   filter: {field: "layout", value: "collaborate"}
   view_filters:
   - {label: "Português", field: language, pattern: "pt"}
@@ -358,6 +361,7 @@ collections:
   summary: "{{title}} ({{language}})"
   extension: "md"
   create: false
+  delete: false
   filter: {field: "layout", value: "transparency"}
   view_filters:
   - {label: "Português", field: language, pattern: "pt"}
@@ -425,6 +429,7 @@ collections:
   summary: "{{title}} ({{language}})"
   extension: "md"
   create: false
+  delete: false
   filter: {field: "rootOf", value: true}
   view_filters:
   - {label: "Português", field: language, pattern: "pt"}
