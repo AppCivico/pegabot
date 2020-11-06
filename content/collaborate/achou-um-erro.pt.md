@@ -6,7 +6,7 @@ date: 2020-08-13T00:44:56-03:00
 weight: 4
 type: collaborate
 imageSrc: /uploads/plus-sign-bg.png
-bottomImageSrc: uploads/plus-sign-bg.png
+bottomImageSrc: uploads/file-bg.png
 link: https://itsrio2.typeform.com/to/uGFw4zDc
 layout: none
 ---
