@@ -1,5 +1,8 @@
 {{ range where $.Site.Pages "File.TranslationBaseName" "newsletter" }}
-<div class="newsletter-wrapper">
+<div
+	class="newsletter-wrapper"
+	{{ with .Params.slug }}id="{{ . }}"{{ end }}
+>
 	<div id="mc_embed_signup" class="newsletter">
 		<div class="newsletter__content">
 			<div  role="doc-subtitle">

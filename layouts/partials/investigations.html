@@ -5,7 +5,10 @@
 <div class="link-boxes">
 	<div class="link-boxes__container" id="js-link-boxes">
 		{{ range first 3 (where $.Site.RegularPages "Section" "investigations") }}
-			<div class="link-boxes__box">
+			<div
+				class="link-boxes__box"
+				{{ with .Params.slug }}id="{{ . }}"{{ end }}
+			>
 				<h2>{{ .Title }}</h2>
 				<a href="{{ .Params.file }}" target="_blank" class="button">{{ i18n "analisysDownload" }}</a>
 			</div>

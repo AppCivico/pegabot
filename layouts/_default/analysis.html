@@ -3,6 +3,7 @@
 		delayed-entrance
 		delayed-entrance__bottom
 	"
+	{{ with .Params.slug }}id="{{ . }}"{{ end }}
 >
 	<div class="container">
 		<div role="doc-subtitle">{{ i18n "analysis" }}</div>

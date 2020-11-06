@@ -31,6 +31,7 @@
 						jumbotron--full
 						jumbotron--image
 					"
+					{{ with .Params.slug }}id="{{ . }}"{{ end }}
 					style="background-image: url('{{ .Params.imageSrc }}'), url('{{ .Params.bottomImageSrc }}')">
 
 					<h1>{{ .Title }}</h1>

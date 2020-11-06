@@ -42,8 +42,8 @@
 		{{ with .Resources.ByType "page" }}
 			{{ range . }}
 				<footer
-					id="section-footer"
-					class="footer"
+					{{ with .Params.slug }}id="{{ . }}"{{ end }}
+					class="footer section-footer"
 				>
 					{{ with .Title }}
 						<h2 class="article__title">

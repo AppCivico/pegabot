@@ -1,10 +1,10 @@
 <article
-	id="{{ with .File }}{{ .TranslationBaseName }}{{ end }}"
 	class="
 		{{ with .File }}{{ .TranslationBaseName }}{{ end }}
 		delayed-entrance
 		delayed-entrance__bottom
 	"
+	{{ with .Params.slug }}id="{{ . }}"{{ end }}
 >
 	<div
 		class="container"

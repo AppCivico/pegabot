@@ -141,14 +141,14 @@
 		display: none;
 	}
 
-	[id='section-footer'],
+	.section-footer,
 	.results-details__description {
 		max-width: none;
 
 		columns: 1;
 	}
 
-	[id='section-footer'] {
+	.section-footer {
 		font-size: smaller;
 	}
 
