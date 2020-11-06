@@ -9,6 +9,10 @@ backend:
   auth_endpoint: auth
   squash_merges: true
   api_root: https://api.github.com
+
+# for local development only
+#local_backend: true
+
 media_folder: "content/uploads"
 public_folder: "uploads"
 publish_mode: editorial_workflow
