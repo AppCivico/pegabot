@@ -99,7 +99,7 @@
 - id: result
   translation: Resultado
 - id: returnedResults
-  translation: "Sua busca retornou {{ .Count }} resultados."
+  translation: "Sua busca retornou {{ . }} resultados."
 - id: returnToHome
   translation: "Retornar à página inicial."
 - id: robotProfiles

@@ -87,7 +87,7 @@
 - id: result
   translation: "Resultado"
 - id: returnedResults
-  translation: "Su búsqueda arrojó {{ .Count }} resultados."
+  translation: "Su búsqueda arrojó {{ . }} resultados."
 - id: returnToHome
   translation: "Regresar a la página principal."
 - id: sentiment

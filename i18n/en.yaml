@@ -69,7 +69,7 @@
 - id: readFullContent
   translation: "Read full content"
 - id: returnedResults
-  translation: "Your search returned {{ .Count }} results."
+  translation: "Your search returned {{ . }} results."
 - id: returnToHome
   translation: "Return to home-page."
 - id: shareResults
