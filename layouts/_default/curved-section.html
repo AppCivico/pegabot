@@ -1,8 +1,8 @@
 <div
 	class="
 		curved-section
-		curved-section--{{ with .File }}{{ .TranslationBaseName }}{{ end }}
-		curved-section--{{ with .Params.theme }}{{ . }}{{ end }}
+		{{ with .File }}curved-section--{{ .TranslationBaseName }}{{ end }}
+		{{ with .Params.theme }}curved-section--{{ . }}{{ end }}
 	"
 	{{ with .Params.slug }}id="{{ . }}"{{ end }}
 >
