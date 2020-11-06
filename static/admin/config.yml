@@ -48,7 +48,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
@@ -87,7 +87,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
@@ -123,7 +123,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
@@ -150,7 +150,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
@@ -186,7 +186,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
@@ -197,7 +197,7 @@ collections:
     widget: "object"
     collapsed: true
     fields:
-    - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+    - {label: "Título", name: "title", widget: "string"}
     - {label: "Trecho", name: "excerpt", widget: "string"}
     - {label: "Imagem", name: "src", widget: "image"}
     - {label: "Descrição", name: "alt", widget: "string", hint: "usada por leitores de telas para cegos"}
@@ -230,7 +230,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
@@ -263,7 +263,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
@@ -299,7 +299,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
@@ -341,7 +341,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Conteúdo", name: "body", widget: "markdown", required: false}
@@ -372,7 +372,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
@@ -407,7 +407,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
@@ -439,7 +439,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Conteúdo", name: "body", widget: "markdown", required: false}
@@ -461,7 +461,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
@@ -491,7 +491,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
@@ -536,7 +536,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Conteúdo", name: "body", widget: "markdown", required: false}
@@ -557,7 +557,7 @@ collections:
   - {label: "Español", field: language, pattern: "es"}
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
@@ -598,7 +598,7 @@ collections:
   fields:
   - {label: "Idioma", name: "language", widget: "select", options: ["es", "pt"]}
   - {label: "Draft?", name: "draft", widget: "boolean", default: true}
-  - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
+  - {label: "Título", name: "title", widget: "string"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Conteúdo", name: "body", widget: "markdown", required: false}
