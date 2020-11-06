@@ -6,7 +6,7 @@ slug: o-que
 date: 2020-08-11T16:16:19-03:00
 weight: 1
 intro: adicionando uma introdução aqui
-homepage: false
+homepage: true
 transparency: true
 layout: none
 ---
