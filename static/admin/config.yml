@@ -49,8 +49,7 @@ collections:
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
   - {label: "Ordem no menu", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
-  - {name: "layout", widget: "select", options: [ "analysis", "collaborate",
-  "detailed", "faq", "results", "transparency", "about" ], required: false}
+  # - {name: "layout", widget: "select", options: [ "analysis", "collaborate", "detailed", "faq", "results", "transparency", "about" ], required: false}
   - {name: "rootOf", widget: "hidden", default: false}
   - name: menu
     label: Menu
