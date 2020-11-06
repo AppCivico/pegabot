@@ -514,7 +514,7 @@ collections:
 
 - name: "pagesAndResults"
   label: "Resultados - intro/pág"
-  folder: "content/transparency/criteria"
+  folder: "content/results"
   # preview_path: "{{dirname}}/{{filename}}.{{extension}}"
   slug: "{{slug}}.{{language}}"
   format: frontmatter
