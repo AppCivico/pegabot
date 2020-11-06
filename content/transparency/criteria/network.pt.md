@@ -2,7 +2,6 @@
 title: "Rede"
 date: 2020-08-14T00:39:57-03:00
 draft: false
-menu:
 layout: none
 slug: ""
 weight: 2

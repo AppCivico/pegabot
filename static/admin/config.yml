@@ -416,7 +416,6 @@ collections:
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false, required: false}
   - {label: "Show on transparency", name: "transparency", widget: "boolean", default: false}
   - {name: "layout", widget: "hidden", default: "none"}
-  - {name: "rootOf", widget: "hidden", default: false}
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 

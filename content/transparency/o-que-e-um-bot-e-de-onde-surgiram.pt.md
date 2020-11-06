@@ -2,7 +2,6 @@
 title: "O que é um bot"
 date: 2020-08-11T16:16:19-03:00
 draft: false
-menu:
 layout: none
 slug: ""
 weight: 1
