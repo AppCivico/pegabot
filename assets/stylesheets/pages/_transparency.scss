@@ -37,8 +37,8 @@
 			image('robot__orange--circular.svg'),
 			image('robot__purple--square.svg');
 			background-position: calc(50vw + 96px) 176px,
-			calc(50vw + 376px) 384px,
-			calc(50vw + 406px) 139px;
+			right #{$gutter} top 384px,
+			right 139px;
 		}
 
 		// forth
@@ -58,7 +58,6 @@
 			background-image: image('robot__orange--circular.svg'),
 			image('robot__purple--square.svg'),
 			image('robot__yellow--rounded.svg');
-
 			background-position: calc(37.5vw - 213px - 86px) 185px,
 			calc(37.5vw - 81px - 366px) 398px,
 			calc(37.5vw - 102px - 398px) 150px;
