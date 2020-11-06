@@ -189,7 +189,7 @@ collections:
   - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false, required: false}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
-  - label: "Favorito"
+  - label: "Link externo comentado"
     name: "bookmark"
     widget: "object"
     collapsed: true
