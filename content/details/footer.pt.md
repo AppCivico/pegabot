@@ -9,9 +9,7 @@ headless: true
 ---
 Esta ficha foi desenvolvida para que você entenda o porquê da avaliação final do
 [PegaBot](/), com base em todos os critérios que são considerados por nosso algoritmo
-para a realização da análise. Caso você tenha dúvidas ou discorde do resultado,
-você pode [informar aqui](https://itsrio2.typeform.com/to/uGFw4zDc). Caso você
-queira analisar nosso código e sugerir melhorias, você também pode acessar o repositório no [GitHub](https://github.com/AppCivico/pegabot).
+para a realização da análise. Algumas das informações públicas dos perfis consideradas na análise do PEGABOT são o nome do perfil do usuário, quantos caracteres ele possui, quantidade de perfis seguidos (following) e seguidores (followers), texto da descrição do perfil, número de postagens (tweets) e favoritos. Após coletar as informações, os algoritmos do PEGABOT processam e transformam os dados recebidos em variáveis que compõem o cálculo final de probabilidade.
 
 Se você quiser saber mais sobre como surgiu o PegaBot, quem são os idealizadores
 do projeto e para que ele serve, acesse a nossa página de [Transparência](/transparencia)!
