@@ -211,7 +211,7 @@ collections:
     label: "type"
     widget: "hidden"
     default: "collaborate"
-  - {label: "Menus", name: "menu", widget: "select", options: [{ label: "Top", value: "header" }, { label: "Bottom", value: "main" }]}
+  - {label: "Menus", name: "menu", widget: "select", options: [{ label: "Top", value: "header" }, { label: "Bottom", value: "main" }], required: false}
   - name: "imageSrc"
     label: "Imagem"
     widget: "image"
