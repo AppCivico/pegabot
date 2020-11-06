@@ -36,7 +36,7 @@ collections:
   format: frontmatter
   summary: "{{title}} ({{language}})"
   extension: "md"
-  create: true
+  create: false
   filter: {field: "rootOf", value: false}
   view_filters:
   - {label: "Português", field: language, pattern: "pt"}
