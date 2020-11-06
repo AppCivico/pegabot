@@ -5,7 +5,7 @@ title: Como surgiu o PEGABOT
 date: 2020-08-11T16:19:01-03:00
 weight: 2
 homepage: true
-transparency: false
+transparency: true
 layout: none
 ---
 No final da década de 1990, os bots começaram a desenvolver uma reputação negativa, ao serem usados no envio de SPAMs por e-mail, roubos de dados pessoais e fraudes, por exemplo. A partir de 2014, um fenômeno ganhou escala global e se tornou cada vez mais frequente: o uso de bots em campanhas de desinformação e manipulação do discurso na esfera pública.
