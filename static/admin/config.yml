@@ -41,6 +41,7 @@ collections:
   summary: "{{title}} ({{filename}})"
   extension: "md"
   create: false
+  delete: false
   filter: {field: "rootOf", value: false}
   view_filters:
   - {label: "Português", field: language, pattern: "pt"}
@@ -131,6 +132,7 @@ collections:
   summary: "{{title}} ({{language}})"
   extension: "md"
   create: true
+  delete: true
   view_filters:
   - {label: "Português", field: language, pattern: "pt"}
   - {label: "Español", field: language, pattern: "es"}
@@ -208,6 +210,7 @@ collections:
   summary: "{{title}} ({{language}})"
   extension: "md"
   create: true
+  delete: true
   view_filters:
   - {label: "Português", field: language, pattern: "pt"}
   - {label: "Español", field: language, pattern: "es"}
@@ -391,6 +394,7 @@ collections:
   summary: "{{title}} ({{language}})"
   extension: "md"
   create: true
+  delete: true
   view_filters:
   - {label: "Português", field: language, pattern: "pt"}
   - {label: "Español", field: language, pattern: "es"}
@@ -471,6 +475,7 @@ collections:
   summary: "{{title}} ({{language}})"
   extension: "md"
   create: true
+  delete: true
   view_filters:
   - {label: "Português", field: language, pattern: "pt"}
   - {label: "Español", field: language, pattern: "es"}
@@ -538,6 +543,7 @@ collections:
   summary: "{{title}} ({{language}})"
   extension: "md"
   create: true
+  delete: true
   filter: {field: "rootOf", value: false}
   view_filters:
   - {label: "Português", field: language, pattern: "pt"}
@@ -657,6 +663,8 @@ collections:
   format: frontmatter
   summary: "{{title}} ({{language}})"
   extension: "md"
+  create: true
+  delete: true
   filter: {field: "headless", value: true}
   view_filters:
   - {label: "Português", field: language, pattern: "pt"}
