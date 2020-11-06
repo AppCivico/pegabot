@@ -15,11 +15,11 @@
 		<section
 			class="results__list results-loading"
 			:aria-busy="(metadata.loading && profileList.length === 0) | booleanToString"
-			data-loading-1="{{ i18n "analisysLoading-1" }}"
-			data-loading-2="{{ i18n "analisysLoading-2" }}"
-			data-loading-3="{{ i18n "analisysLoading-3" }}"
-			data-loading-4="{{ i18n "analisysLoading-4" }}"
-			data-loading-5="{{ i18n "analisysLoading-5" }}"
+			data-loading-1="{{ i18n "analysisLoading-1" }}"
+			data-loading-2="{{ i18n "analysisLoading-2" }}"
+			data-loading-3="{{ i18n "analysisLoading-3" }}"
+			data-loading-4="{{ i18n "analysisLoading-4" }}"
+			data-loading-5="{{ i18n "analysisLoading-5" }}"
 		>
 			<profile
 				v-for="(profileItem, index) in profileList"

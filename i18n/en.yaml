@@ -4,13 +4,13 @@
   translation: "Analysis"
 - id: analysisProgress
   translation: "{{ .Count }} assessed accounts."
-- id: analisysLoading-1
+- id: analysisLoading-1
   translation: Wait. Pegabot is analyzing.
-- id: analisysLoading-2
+- id: analysisLoading-2
   translation: Pegabot analyzes the tweets of the researched profile.
-- id: analisysLoading-3
+- id: analysisLoading-3
   translation: Pegabot analyzes the network of the researched profile.
-- id: analisysLoading-4
+- id: analysisLoading-4
   translation: Pegabot uses sentimental analysis to assess your likelihood of being a robot.
 - id: aProjectBy
   translation: "A project"

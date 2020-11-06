@@ -10,7 +10,7 @@
 				{{ with .Params.slug }}id="{{ . }}"{{ end }}
 			>
 				<h2>{{ .Title }}</h2>
-				<a href="{{ .Params.file }}" target="_blank" class="button">{{ i18n "analisysDownload" }}</a>
+				<a href="{{ .Params.file }}" target="_blank" class="button">{{ i18n "analysisDownload" }}</a>
 			</div>
 		{{ end }}
 	</div>
@@ -73,7 +73,7 @@
 						box.innerHTML = `
 							<h2>${item.title}</h2>
 							<a href="${item.file}" target="_blank" class="button">
-								{{ i18n "analisysDownload" }}
+								{{ i18n "analysisDownload" }}
 							</a>
 						`;
 

@@ -4,13 +4,13 @@
   translation: "Acerca de este perfil"
 - id: allFeatures
   translation: "Análisis completo"
-- id: analisysLoading-1
+- id: analysisLoading-1
   translation: Espere. Pegabot está analizando.
-- id: analisysLoading-2
+- id: analysisLoading-2
   translation: Pegabot analiza los tweets del perfil investigado.
-- id: analisysLoading-3
+- id: analysisLoading-3
   translation: Pegabot analiza la red del perfil investigado.
-- id: analisysLoading-4
+- id: analysisLoading-4
   translation: Pegabot utiliza el análisis sentimental para evaluar su probabilidad de ser un robot.
 - id: analysis
   translation: "Análisis"

@@ -4,17 +4,17 @@
   translation: sobre este perfil
 - id: allFeatures
   translation: "Análise completa"
-- id: analisysDownload
+- id: analysisDownload
   translation: Baixar análise
-- id: analisysLoading-1
+- id: analysisLoading-1
   translation: Aguarde enquanto o PegaBot realiza a análise
-- id: analisysLoading-2
+- id: analysisLoading-2
   translation: O Pegabot analisa os tweets do perfil.
-- id: analisysLoading-3
+- id: analysisLoading-3
   translation: O Pegabot analisa a frequência de tweets.
-- id: analisysLoading-4
+- id: analysisLoading-4
   translation: O Pegabot analisa a linguagem do perfil.
-- id: analisysLoading-5
+- id: analysisLoading-5
   translation: O Pegabot analisa a rede do perfil.
 - id: analysis
   translation: "Análise"
