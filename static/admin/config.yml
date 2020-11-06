@@ -211,8 +211,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem", name: "weight", widget: "number", value_type: "int",
-  default: 0, min: 0, required: false}
+  - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
   - {label: "Show on home", name: "homepage", widget: "boolean", default: false, required: false}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - label: "Favorito"
@@ -256,8 +255,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem", name: "weight", widget: "number", value_type: "int",
-  default: 0, min: 0, required: false}
+  - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
   - label: "Conteúdo"
     name: "body"
     widget: "markdown"
@@ -334,8 +332,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem", name: "weight", widget: "number", value_type: "int",
-  default: 0, min: 0, required: false}
+  - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - name: "type"
     label: "type"
@@ -451,8 +448,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem", name: "weight", widget: "number", value_type: "int",
-  default: 0, min: 0, required: false}
+  - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
   - name: "intro"
     label: "Introdução"
     widget: "text"
@@ -506,8 +502,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem", name: "weight", widget: "number", value_type: "int",
-  default: 0, min: 0, required: false}
+  - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
   - name: "intro"
     label: "Introdução"
     widget: "text"
@@ -537,8 +532,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem", name: "weight", widget: "number", value_type: "int",
-  default: 0, min: 0, required: false}
+  - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - name: "author"
     label: "Autor(es)"
@@ -604,8 +598,7 @@ collections:
   - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
   - {label: "Âncora / Slug", name: "slug", widget: "string", required: false, hint: "identificador único para ser usado em links: `/exemplo` ou `#exemplo`"}
   - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]"}
-  - {label: "Ordem", name: "weight", widget: "number", value_type: "int",
-  default: 0, min: 0, required: false}
+  - {label: "Ordem", name: "weight", widget: "number", value_type: "int", default: 0, min: 0, required: false}
   - {label: "Conteúdo", name: "body", widget: "markdown"}
   - name: "figure"
     widget: "object"
