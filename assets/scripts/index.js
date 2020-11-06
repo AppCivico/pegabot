@@ -181,7 +181,7 @@ window.$vue = new Vue({
 			metadata: {
 				apiURL: (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
 					? ''
-					: '',
+					: 'https://api.pegabot.com.br',
 				loading: true,
 				current: 0,
 				total: 0,
