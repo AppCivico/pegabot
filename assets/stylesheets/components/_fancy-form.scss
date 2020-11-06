@@ -349,7 +349,7 @@ $duration: 0.5s;
 	}
 
 	@media screen and (min-width: breakpoint('phablet')) {
-		width: 28%;
+		width: calc(28% - #{$gutter * 2});
 	}
 
 	&.fancy-button--purple {
