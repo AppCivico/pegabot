@@ -1,4 +1,5 @@
 $faq-bg: hsl(269, 31%, 47%);
+$wave-height: 62px;
 
 .faq-page {
 	background-image: image('robot-pattern.png');
@@ -10,18 +11,40 @@ $faq-bg: hsl(269, 31%, 47%);
 .faq-page .content-container {
 	position: relative;
 
-	padding-top: $gutter * 5;
+	margin-top: calc(#{$gutter * 5} + #{$wave-height});
+
+	background-color: palette('white');
 }
 
 .faq-page [role='main'] {
 	margin-bottom: 0;
 
-	background-color: palette('white');
+	&::before {
+		position: relative;
+		right: 50%;
+		left: 50%;
+
+		display: block;
+
+		width: 100vw;
+		min-height: #{$wave-height};
+
+		margin-top: calc(-#{$wave-height} - #{$gutter});
+		margin-right: -50vw;
+		margin-bottom: $gutter;
+		margin-left: -50vw;
+
+		background-image: image('white-wave.png');
+		background-position: 50% bottom;
+		background-repeat: repeat-x;
+
+		content: '';
+	}
 }
 
 .faq-page h1 {
 	position: absolute;
-	top: $gutter;
+	top: calc(-#{$gutter * 5} - #{$wave-height});
 	left: $gutter;
 
 	color: palette('white');
@@ -62,8 +85,6 @@ $faq-bg: hsl(269, 31%, 47%);
 }
 
 .questions {
-	position: relative;
-
 	display: flex;
 
 	align-items: baseline;
@@ -74,21 +95,6 @@ $faq-bg: hsl(269, 31%, 47%);
 
 	margin-right: $gutter * -0.5;
 	margin-left: $gutter * -0.5;
-
-	&::before {
-		position: absolute;
-		top: calc(-#{$gutter} - 62px);
-		right: $gutter * -0.5;
-		left: $gutter * -0.5;
-
-		min-height: 62px;
-
-		background-image: image('white-wave.png');
-		background-position: 50% bottom;
-		background-repeat: repeat-x;
-
-		content: '';
-	}
 }
 
 .questions__item {
