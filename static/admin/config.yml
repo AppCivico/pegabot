@@ -34,7 +34,7 @@ collections:
   # preview_path: "{{dirname}}/{{filename}}.{{extension}}"
   slug: "{{slug}}.{{language}}"
   format: frontmatter
-  summary: "{{title}} ({{language}})"
+  summary: "{{title}} ({{filename}})"
   extension: "md"
   create: false
   filter: {field: "rootOf", value: false}
