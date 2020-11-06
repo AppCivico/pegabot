@@ -196,7 +196,7 @@ collections:
     - {label: "Título", name: "title", widget: "string", default: "{{slug}}"}
     - {label: "Trecho", name: "excerpt", widget: "string"}
     - {label: "Imagem", name: "src", widget: "image"}
-    - {label: "Descrição", name: "alt", widget: "string"}
+    - {label: "Descrição", name: "alt", widget: "string", hint: "usada por leitores de telas para cegos"}
     - {label: "Legenda", name: "caption", widget: "string"}
     - label: "Link"
       name: "link"
