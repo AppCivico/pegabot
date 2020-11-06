@@ -7,6 +7,6 @@ rootOf: false
 ---
 O **Pegabot** verifica um perfil em rede social e dá uma pontuação baseada na probabilidade desse perfil ser um *bot*. Quanto maior a pontuação, maior a chance de ser um *bot*.!!
 
-## [Veja](https://www.google.com/)
+### [Veja](https://www.google.com/)
 
 [Saiba mais...](/faq/)
