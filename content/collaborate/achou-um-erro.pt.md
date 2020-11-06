@@ -1,14 +1,14 @@
 ---
 language: pt
 draft: false
-title: Achou um erro ou quer sugerir uma melhoria? AA
-slug: aa
+title: Achou um erro ou quer sugerir uma melhoria?
+slug: ""
 date: 2020-08-13T00:44:56-03:00
-weight: 4
+weight: 1
 type: collaborate
 imageSrc: /uploads/plus-sign-bg.png
-bottomImageSrc: uploads/file-bg.png
+bottomImageSrc: uploads/bug-bg.png
 link: https://itsrio2.typeform.com/to/uGFw4zDc
 layout: none
 ---
-Envie sua sugestão ou reporte o erro para a gente! A sua opinião é muito importante para ajudar a melhorar o algoritmo do PegaBot. AA
+Envie sua sugestão ou reporte o erro para a gente! A sua opinião é muito importante para ajudar a melhorar o algoritmo do PegaBot.
