@@ -1,7 +1,7 @@
 ---
 language: pt
 draft: false
-title: Como funcionam os critérios do PEGABOT AA
+title: Como funcionam os critérios do PEGABOT AAA
 slug: criteriosa
 date: 2020-08-11T16:23:28-03:00
 layout: none
