@@ -10,4 +10,3 @@ rootOf: true
 menu:
   - main
 ---
-testo aqui...
