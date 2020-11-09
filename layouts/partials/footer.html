@@ -71,7 +71,7 @@
 
 {{ $externals := slice "vue-chartjs" }}
 
-{{ $opts := dict "externals" $externals }}
+{{ $opts := dict "externals" $externals "params" (dict "language" (string $.Site.LanguageCode) ) }}
 
 {{ $js := resources.Get "scripts/index.js" | js.Build $opts | resources.Fingerprint "sha512" }}
 

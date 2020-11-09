@@ -1,15 +1,20 @@
 /* global Vue */
 
+import * as params from '@params';
+
 import chart from './TheChart';
 
 const toPercentageFilter = function toPercentageFilter(value) {
 	return `${Math.round(parseFloat(value) * 100)}%`;
 };
 
+const lang = params.language;
+
 Vue.filter('toPercentage', toPercentageFilter);
 
 Vue.prototype.window = window;
 
+console.debug('params', params);
 
 const booleanToStringFilter = function booleanToStringFilter(value, trueText, falseText) {
 	return value ? trueText || 'true' : falseText || 'false';
@@ -201,17 +206,17 @@ window.$vue = new Vue({
 	methods: {
 		getQueryString(uri) {
 			const queryString = uri || window.location.search;
-			const params = {};
+			const queryParams = {};
 			const queries = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
 
 			for (let i = 0; i < queries.length; i += 1) {
 				const element = queries[i].split('=');
-				params[decodeURIComponent(element[0])] = decodeURIComponent(element[1] || '');
+				queryParams[decodeURIComponent(element[0])] = decodeURIComponent(element[1] || '');
 			}
 
-			return params;
+			return queryParams;
 		},
-		loadResults(params, currentIndex = 0) {
+		loadResults(requestParams, currentIndex = 0) {
 			const endPoint = this.isDetailedView
 				? `${this.metadata.apiURL}/analyze`
 				: `${this.metadata.apiURL}/botometer`;
@@ -224,8 +229,11 @@ window.$vue = new Vue({
 			// this.$http.get('/botometer.json', {
 			// dev only on /details
 			// this.$http.get('/details.json', {
+				headers: {
+					'Accept-Language': lang,
+				},
 				timeout: 20000,
-				params,
+				params: requestParams,
 				before(xhr) {
 					this.xhr_request.push(xhr);
 				},
@@ -263,27 +271,27 @@ window.$vue = new Vue({
 						if (response.body.profiles) {
 							let profileList = response.body.profiles;
 
-							if (params.search_for === 'followers' || params.search_for === 'friends') {
+							if (requestParams.search_for === 'followers' || requestParams.search_for === 'friends') {
 								if (this.metadata.limit > 0 && this.metadata.limit < profileList.length) {
 									profileList = profileList.slice(0, this.metadata.limit);
 								} else if (this.metadata.limit > profileList.length) {
 									this.metadata.limit = profileList.length;
 								}
 								this.metadata.total = profileList.length;
-							} else if (params.search_for === 'profile') {
+							} else if (requestParams.search_for === 'profile') {
 								this.metadata.current += 1;
 							}
 
-							if (params.search_for === 'profile') {
+							if (requestParams.search_for === 'profile') {
 								this.$set(this.profileList, currentIndex, profileList[0]);
-							} else if (params.search_for === 'followers' || params.search_for === 'friends') {
+							} else if (requestParams.search_for === 'followers' || requestParams.search_for === 'friends') {
 								this.profileList = this.profileList.concat(profileList);
 
 								for (let index = 0; index < profileList.length; index += 1) {
 									const thisProfile = profileList[index];
 									this.$set(this.profileList, index, thisProfile);
 
-									const newParams = Object.assign({}, params);
+									const newParams = Object.assign({}, requestParams);
 									newParams.profile = thisProfile.username;
 									newParams.search_for = 'profile';
 
@@ -387,7 +395,7 @@ window.$vue = new Vue({
 		}
 	},
 	mounted() {
-		const params = {
+		const requestParams = {
 			socialnetwork: this.metadata.query.socialnetwork,
 			profile: this.metadata.query.profile,
 			search_for: this.metadata.query.search_for,
@@ -395,37 +403,37 @@ window.$vue = new Vue({
 		};
 
 		if (this.metadata.query.verbose) {
-			params.verbose = this.metadata.query.verbose;
-			params.responseType = 'blob';
+			requestParams.verbose = this.metadata.query.verbose;
+			requestParams.responseType = 'blob';
 		}
 
 		if (this.metadata.query.search_for === 'profile') {
 			this.metadata.limit = 1;
 			this.metadata.total = 1;
-			params.limit = 1;
+			requestParams.limit = 1;
 		}
 
 		if (this.isDetailedView) {
-			params.wantsDocument = 1;
-			params.wants_document = 1;
+			requestParams.wantsDocument = 1;
+			requestParams.wants_document = 1;
 			this.metadata.limit = 1;
 			this.metadata.total = 1;
-			params.limit = 1;
+			requestParams.limit = 1;
 		}
 
 		if (this.metadata.query.authenticated) {
-			params.authenticated = this.metadata.query.authenticated;
+			requestParams.authenticated = this.metadata.query.authenticated;
 		}
 
 		if (this.metadata.query.oauth_token) {
-			params.oauth_token = this.metadata.query.oauth_token;
+			requestParams.oauth_token = this.metadata.query.oauth_token;
 		}
 
 		if (this.metadata.query.oauth_verifier) {
-			params.oauth_verifier = this.metadata.query.oauth_verifier;
+			requestParams.oauth_verifier = this.metadata.query.oauth_verifier;
 		}
 
-		this.loadResults(params);
+		this.loadResults(requestParams);
 
 		this.showElement();
 	},
