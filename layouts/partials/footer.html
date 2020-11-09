@@ -73,10 +73,11 @@
 
 {{ $opts := dict "externals" $externals "params" (dict "language" (string $.Site.LanguageCode) ) }}
 
-{{ $js := resources.Get "scripts/index.js" | js.Build $opts | resources.Fingerprint "sha512" }}
+{{ $js := resources.Get "scripts/index.js" | js.Build $opts | resources.Minify | resources.Fingerprint "sha512" }}
 
 <script
 	src="{{ $js.RelPermalink }}"
+	integrity="{{ $js.Data.Integrity }}"
 ></script>
 
 <script>
