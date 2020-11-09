@@ -1,5 +1,6 @@
 backend:
-  name: github
+  name: git-gateway
+  # name: github
   # @see https://www.netlifycms.org/docs/test-backend/
   # name: test-repo
   branch: dev # Branch to update (optional; defaults to master)
