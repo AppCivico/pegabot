@@ -8,7 +8,6 @@ weight: 4
 layout: collaborate
 rootOf: true
 menu:
-  - main
   - header
 linkTitle: Quero Colaborar
 ---
