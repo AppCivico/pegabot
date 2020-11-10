@@ -201,10 +201,10 @@
 @function layer($layer: 'default') {
 // sass-lint:disable-block indentation
 	$default-layers: (
-		'modal':    100000,
-		'dropdown': 10000,
-		'default':  1,
-		'below':   -1,
+		'modal': 500000,
+		'dropdown': 40000,
+		'default': 1,
+		'below': -1,
 	);
 
 	@if variable-exists('layers') and type-of($layers) == 'map' {
