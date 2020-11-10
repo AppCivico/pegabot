@@ -1,6 +1,6 @@
 ---
 language: es
-draft: true
+draft: false
 title: Quer contribuir com o projeto PegaBot?
 slug: colaborar
 date: 2018-03-13T18:17:00-03:00
