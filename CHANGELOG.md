@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Fixed
+
+- curved backgrounds
 - missing media queries
 
 ## [2.0.1][] - 2020-11-10
