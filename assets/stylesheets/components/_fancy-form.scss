@@ -364,7 +364,7 @@ $duration: 0.5s;
 		}
 	}
 
-	&[id='fancy-form__button'] {
+	.fancy-form__search-fields + & {
 		margin-left: $gutter;
 	}
 }

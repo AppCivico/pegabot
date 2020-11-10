@@ -40,8 +40,6 @@
 			</p>
 		</fieldset>
 
-		<input type="hidden" name="limit" value="{{ $.Site.Params.searchlimit | default 12 }}" />
-
 		<button
 			name="search_for"
 			value="profile"
@@ -52,6 +50,8 @@
 			{{ i18n "toCatch" }}
 		</button>
 	</fieldset>
+
+	<input type="hidden" name="limit" value="{{ $.Site.Params.searchlimit | default 12 }}" />
 </form>
 
 <script>
