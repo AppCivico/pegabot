@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - curved section arc
 - details header height
+- details titles font body
 - home logotype vertical margins
 - mobile to fixed on screen
 - newsletter form alignment
