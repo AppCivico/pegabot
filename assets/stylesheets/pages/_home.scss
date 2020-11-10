@@ -2,31 +2,33 @@
 .home-page .main-container {
 	max-width: none;
 
-	&::before,
-	&::after {
-		position: absolute;
-		top: 0;
-		left: 50%;
+	@media screen and (min-width: breakpoint('tablet')) {
+		&::before,
+		&::after {
+			position: absolute;
+			top: 0;
+			left: 50%;
 
-		z-index: -1;
+			z-index: -1;
 
-		width: 100vw;
-		height: 100vh;
-		max-width: $max-width;
+			width: 100vw;
+			height: 100vh;
+			max-width: $max-width;
 
-		content: '';
+			content: '';
 
-		transform: translateX(-50%);
-	}
+			transform: translateX(-50%);
+		}
 
-	&::before {
-		background-image: image('robot__purple--square.svg');
-		background-position: $gutter 192px;
-	}
+		&::before {
+			background-image: image('robot__purple--square.svg');
+			background-position: $gutter 192px;
+		}
 
-	&::after {
-		background-image: image('robot__purple--circular.svg');
-		background-position: right $gutter top 384px;
+		&::after {
+			background-image: image('robot__purple--circular.svg');
+			background-position: right $gutter top 384px;
+		}
 	}
 }
 

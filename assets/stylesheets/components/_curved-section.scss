@@ -141,15 +141,17 @@
 }
 
 .curved-section__container {
-	display: flex;
-
-	align-items: center;
-	flex-wrap: wrap;
-
 	max-width: 43rem; // 688px
 
 	margin-right: auto;
 	margin-left: auto;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		display: flex;
+
+		align-items: center;
+		flex-wrap: wrap;
+	}
 }
 
 @function select-all-from($n, $selector) {

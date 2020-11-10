@@ -2,11 +2,15 @@
 }
 
 .about-page .content-container {
-	padding-top: $gutter * 12;
+	padding-top: $gutter * 5;
 
 	background-image: image('logos/logotype__horizontal.svg');
 	background-position: 50% $gutter;
 	background-size: 75% auto;
+
+	@media screen and (min-width: breakpoint('phablet')) {
+		padding-top: $gutter * 12;
+	}
 
 	@media screen and (min-width: 640px) {
 		background-size: 495px auto,
@@ -52,13 +56,15 @@
 }
 
 .about-page h1 {
-	margin-bottom: 5rem;
-
 	column-span: all;
 
 	text-align: center;
 
 	color: palette('purple');
+
+	@media screen and (min-width: breakpoint('phablet')) {
+		margin-bottom: 5rem;
+	}
 }
 
 .about-page hr,

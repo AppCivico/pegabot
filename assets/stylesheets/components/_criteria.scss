@@ -1,14 +1,16 @@
 .criteria__section-list[class] {
-	display: flex;
-
-	flex-wrap: wrap;
-	justify-content: space-between;
-
 	max-width: none;
 
 	font-size: ms(-1);
 
 	text-align: center;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		display: flex;
+
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 }
 
 .criteria__section {

@@ -1,8 +1,12 @@
 .jumbotron {
-	margin-top: $gutter * 2;
-	margin-bottom: 4rem;
+	margin-top: 0;
 
 	text-align: center;
+
+	@media screen and (min-width: breakpoint('phablet')) {
+		margin-top: $gutter * 2;
+		margin-bottom: 4rem;
+	}
 }
 
 .jumbotron-alternate .jumbotron:nth-child(even),
@@ -33,17 +37,21 @@
 }
 
 .jumbotron--image {
-	padding-top: 6rem;
-	padding-bottom: 6rem;
+	padding-top: $gutter * 3;
+	padding-bottom: $gutter * 3;
 
 	background-position: top left, bottom right;
 	background-size: auto 65px;
 	background-repeat: no-repeat;
 
+	@media screen and (min-width: breakpoint('phablet')) {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
+
 	@media screen and (min-width: breakpoint('desktop')) {
 		padding-top: 4rem;
 		padding-bottom: 4rem;
-		// margin-bottom: 8rem;
 	}
 }
 
@@ -79,9 +87,11 @@
 }
 
 .jumbotron--collaborate {
-	background-image: image('robot__purple--square.svg'), image('robot__orange--square.svg'), image('logos/logotype.svg');
-	background-position: 80% 0, 100% 100%, 40% 100%;
-	background-size: auto, auto, 108px;
+	@media screen and (min-width: breakpoint('phablet')) {
+		background-image: image('robot__purple--square.svg'), image('robot__orange--square.svg'), image('logos/logotype.svg');
+		background-position: 80% 0, 100% 100%, 40% 100%;
+		background-size: auto, auto, 108px;
+	}
 
 	@media screen and (min-width: breakpoint('desktop')) {
 		background-position: 80% 0, 100% 50%, 77% 100%;
