@@ -13,6 +13,7 @@ outputs:
     - html
     - json
 googleAnalytics: "UA-116653569-1"
+languageCode: "pt-br"
 removePathAccents: true
 metaDataFormat: "yaml"
 blackfriday:
@@ -22,10 +23,9 @@ params:
 languages:
   pt:
     languageCode: "pt-br"
-    # baseURL: "https://pegabot.com.br"
+    baseURL: "https://pegabot.com.br"
     languageName: Português
     title: Pegabot
-    weight: 1
     params:
       siteDescription: "O Pegabot verifica a atividade de uma conta em rede social e dá uma pontuação baseada na probabilidade dessa conta ser um bot. Maiores pontuações são mais bot-like."
       tagline: "Por mais transparência no uso de bots"
@@ -35,10 +35,9 @@ languages:
       ogTitle: "Descubra se aquele perfil de rede social é bot"
   es:
     languageCode: "es-mx"
-    # baseURL: "https://es.pegabot.com.br"
+    baseURL: "https://es.pegabot.com.br"
     languageName: Español
     title: AtrapaBot
-    weight: 2
     params:
       siteDescription: "El AtrapaBot verifica la actividad de una determinada cuenta en la red social y le atribuye una puntuación basada en la probabilidad de que sea un bot. Las puntuaciones mayores son más bot-like."
       tagline: "Por una mayor transparencia en el uso de bots."
