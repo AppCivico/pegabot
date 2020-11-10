@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.2][] - 2020-11-10
+
 ### Fixed
 
 - curved backgrounds
@@ -280,7 +282,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
-[Unreleased]: undefined/compare/v2.0.1...HEAD
+[Unreleased]: undefined/compare/v2.0.2...HEAD
+[2.0.2]: undefined/compare/v2.0.1...v2.0.2
 [2.0.1]: undefined/compare/v2.0.0...v2.0.1
 [2.0.0]: undefined/compare/v1.5.10...v2.0.0
 [1.5.10]: undefined/compare/v1.5.9...v1.5.10
