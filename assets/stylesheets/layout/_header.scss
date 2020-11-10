@@ -33,7 +33,12 @@ $duration: 0.5s;
 }
 
 .site-header {
-	position: relative;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+
+	z-index: layer('dropdown');
 
 	padding-top: 0;
 	padding-bottom: 0;
@@ -46,6 +51,10 @@ $duration: 0.5s;
 	background-color: palette('white');
 
 	box-shadow: 2px 2px 8px 0 palette('shadow');
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		position: relative;
+	}
 
 	@media screen and (min-width: breakpoint('desktop')) {
 		box-shadow: 1px 1px 4px 0 palette('shadow');

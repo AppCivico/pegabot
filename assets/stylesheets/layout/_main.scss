@@ -21,6 +21,12 @@
 
 	flex-direction: column;
 	flex-grow: 1;
+
+	margin-top: $line-height * 2rem;
+
+	@media screen and (min-width: breakpoint('tablet')) {
+		margin-top: 0;
+	}
 }
 
 [role='main'],
