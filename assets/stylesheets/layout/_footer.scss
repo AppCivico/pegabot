@@ -66,7 +66,7 @@ $height--desktop: $line-height * 3rem;
 	@media screen and (min-width: breakpoint('tablet')) {
 		float: left;
 
-		margin-bottom: $line-height * 3em;
+		margin-bottom: $line-height * 3rem;
 	}
 }
 
@@ -74,6 +74,11 @@ $height--desktop: $line-height * 3rem;
 	display: flex;
 
 	flex-wrap: wrap;
+}
+
+.footer-menu li {
+	flex-basis: 0;
+	flex-grow: 1;
 }
 
 .site-footer__contact,
@@ -146,11 +151,12 @@ $height--desktop: $line-height * 3rem;
 	display: flex;
 
 	align-items: flex-start;
+	flex-wrap: wrap;
 
 	width: auto;
 
 	margin-right: auto;
-	margin-bottom: $line-height * 1em;
+	margin-bottom: $line-height * 1rem;
 	margin-left: 0;
 
 	vertical-align: inherit;
@@ -229,10 +235,11 @@ $height--desktop: $line-height * 3rem;
 	flex-grow: 1;
 	flex-wrap: wrap;
 
+	min-width: 272px;
+
 	text-align: center;
 
 	@media screen and (min-width: breakpoint('desktop')) {
-
 	}
 }
 
