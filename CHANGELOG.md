@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.1][] - 2020-11-10
+
 ### Fixed
 
 - domain config on deploys
@@ -273,7 +275,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
-[Unreleased]: undefined/compare/v2.0.0...HEAD
+[Unreleased]: undefined/compare/v2.0.1...HEAD
+[2.0.1]: undefined/compare/v2.0.0...v2.0.1
 [2.0.0]: undefined/compare/v1.5.10...v2.0.0
 [1.5.10]: undefined/compare/v1.5.9...v1.5.10
 [1.5.9]: undefined/compare/v1.5.8...v1.5.9
