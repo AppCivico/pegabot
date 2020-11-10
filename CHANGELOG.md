@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- curved boxes
 - profile data over menu
 
 ## [2.0.4][] - 2020-11-10
