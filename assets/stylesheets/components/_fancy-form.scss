@@ -21,12 +21,15 @@ $duration: 0.5s;
 }
 
 .fancy-form > fieldset {
+	display: flex;
+
+	flex-wrap: wrap;
+	justify-content: flex-end;
+
 	max-width: 33.75rem;
 	min-height: 2.5rem; // 40px
 
 	padding-top: $line-height * 1rem;
-	padding-right: $gutter;
-	padding-left: $gutter;
 	margin-right: auto;
 	margin-left: auto;
 
@@ -131,6 +134,8 @@ $duration: 0.5s;
 .fancy-form__search-fields {
 	@include clearfix;
 
+	flex-grow: 1;
+
 	height: 100%;
 
 	margin-bottom: $line-height * 1em;
@@ -146,14 +151,6 @@ $duration: 0.5s;
 	&:hover,
 	&:focus {
 		box-shadow: 0 4px 0 0 palette('blue', 'dark');
-	}
-
-	@media screen and (min-width: breakpoint('phablet')) {
-		float: left;
-
-		width: 70%;
-
-		margin-right: 2%;
 	}
 }
 
@@ -295,6 +292,10 @@ $duration: 0.5s;
 	}
 }
 
+.fancy-form .fancy-form__button {
+	margin-left: $gutter;
+}
+
 .fancy-form__social-network select {
 	padding-right: $line-height * 1em;
 
@@ -361,6 +362,10 @@ $duration: 0.5s;
 		&:focus {
 			background-color: palette('blue', 'dark');
 		}
+	}
+
+	&[id='fancy-form__button'] {
+		margin-left: $gutter;
 	}
 }
 

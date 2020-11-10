@@ -33,10 +33,15 @@
 }
 
 .home-page .content-container {
-	padding-top: 4.5rem;
+	padding-top: $line-height * 1rem;
 }
 
 .home-page [role='banner'] {
+	display: none;
+
+	@media screen and (min-width: breakpoint('phablet')) {
+		display: block;
+	}
 }
 
 .home-page [role='banner'] a {
@@ -60,7 +65,6 @@
 }
 
 .home-page .fancy-form {
-	margin-bottom: 0;
 }
 
 .intro {
