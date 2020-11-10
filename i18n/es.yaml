@@ -1,121 +1,141 @@
 - id: 100TweetsAnalyzed
-  translation: "100 tweets analizados"
+  translation: "100 tuits analizados"
 - id: aboutThisProfile
-  translation: "Acerca de este perfil"
+  translation: "sobre este perfil"
 - id: allFeatures
   translation: "Análisis completo"
-- id: analysisLoading-1
-  translation: Espere. Pegabot está analizando.
-- id: analysisLoading-2
-  translation: Pegabot analiza los tweets del perfil investigado.
-- id: analysisLoading-3
-  translation: Pegabot analiza la red del perfil investigado.
-- id: analysisLoading-4
-  translation: Pegabot utiliza el análisis sentimental para evaluar su probabilidad de ser un robot.
+- id: analisysDownload
+  translation: "Descargar análisis"
+- id: analisysLoading-1
+  translation: "Espere mientras AtrapaBot realiza el análisis"
+- id: analisysLoading-2
+  translation: "AtrapaBot analiza los tuits del perfil."
+- id: analisysLoading-3
+  translation: "AtrapaBot analiza la frecuencia de los tuits."
+- id: analisysLoading-4
+  translation: "AtrapaBot analiza el lenguaje del perfil."
+- id: analisysLoading-5
+  translation: "AtrapaBot analiza la red del perfil."
 - id: analysis
   translation: "Análisis"
 - id: analysisProgress
   translation: "{{ .Count }} cuentas analizadas."
 - id: analyze
   translation: "Analizar"
+- id: analyzeAProfile
+  translation: "Analizar un perfil"
 - id: aProjectBy
-  translation: "Un proyecto de"
+  translation: "Un proyecto"
 - id: backToTop
-  translation: "Volver al principio"
+  translation: "Volver al comienzo"
 - id: botProbability
-  translation: "Probabilidades de ser un bot"
+  translation: "Probabilidad de que sea un robot"
 - id: callToFaqResults
-  translation: "Lo que [significan los resultados](/faq/#faq__como-interpretar-as-notas)"
+  translation: "¿Qué los [resultados significan](/faq#faq__como-interpretar-as-notas)?"
 - id: close
   translation: "Cerrar"
 - id: closeThisModal
-  translation: "Cerrar este modal"
+  translation: "Cerrar ese modal"
 - id: contact
   translation: "Contacto"
 - id: content
   translation: "Contenido"
+- id: details
+  translation: "Detalles"
 - id: detailsLink
   translation: "Detalle del análisis"
 - id: developedBy
   translation: "Desarrollado por"
 - id: doYouWantToKnowMore
-  translation: "Desea saber más?"
+  translation: "¿Quiere saber más?"
 - id: email
   translation: "Correo electrónico"
 - id: englishSpecificFeatures
   translation: "Elementos lingüísticos"
 - id: feedbackLink
-  translation: "Feedback"
+  translation: "Emitir un dictamen"
 - id: friendship
-  translation: "Amistad"
+  translation: "Amistades"
 - id: handle
-  translation: "Handle"
+  translation: "Manejo"
 - id: index
   translation: "Índice"
+- id: investigationsTitle
+  translation: "Mire algunas descubiertas que se tornaron posibles con AtrapaBot"
 - id: iWantToCollaborate
-  translation: "Quiero colaborar!"
+  translation: "¡Yo quiero colaborar!"
 - id: languageIndependentFeatures
+  translation: "Elementos lingüísticos"
+- id: feedbackLink
   translation: "Elementos independientes del lenguaje"
 - id: link
-  translation: "Enlace"
+  translation: "enlace"
+- id: loadMoreAnalysis
+  translation: "Conocer más análisis"
 - id: mentions
   translation: "Menciones"
 - id: menu
   translation: "Menú"
 - id: mostUsedTags
-  translation: "Etiquetas más usadas"
+  translation: "Tags más utilizadas"
 - id: network
-  translation: "Red"
+  translation: "Red (seguidores y seguidos)"
 - id: newsletter
-  translation: "Boletín"
+  translation: "Newsletter"
 - id: noScriptMessage
-  translation: "Esta funcionalidad depende de JavaScript."
+  translation: "Esa funcionalidad depende de JavaScript."
 - id: notFound
-  translation: "No encontrada"
-- id: printAnalyses
-  translation: "Imprimir resultados"
+  translation: "No encontrado."
 - id: profileAnalysis
-  translation: "Análisis de perfil"
+  translation: "Análisis por criterios"
 - id: profileLink
   translation: "Perfil en la red social"
 - id: profileOf
-  translation: "Perfil de"
+  translation: "Perfil de usuario"
 - id: readFullContent
-  translation: "Leer el contenido completo"
+  translation: "Leer contenido completo"
 - id: readMore
-  translation: "Sigue leyendo"
+  translation: "Seguir leyendo"
 - id: result
   translation: "Resultado"
 - id: returnedResults
-  translation: "Su búsqueda arrojó {{ . }} resultados."
+  translation: "Su búsqueda regresó {{ .Count }} resultados."
 - id: returnToHome
   translation: "Regresar a la página principal."
+- id: robotProfiles
+  translation: "15% de un total de 330 millones de perfiles en Twitter eran falsos y estaban compuestos por bots"
+- id: robotResponsable
+  translation: "Los bots son responsables por 66% de los enlaces compartidos en Twitter"
+- id: robotTime
+  translation: "Los robots trabajan 24h al día a fin de alcanzar diferentes tipos de públicos en horarios variados"
+- id: robotTraffic
+  translation: "En el 2016 los bots correspondieron a más de 50% del tráfico total de Internet"
 - id: sentiment
-  translation: "Emocional"
+  translation: "Lenguaje utilizado el los tuits"
 - id: shareResults
-  translation: "Compartir resultados"
+  translation: "Comparta el resultado"
 - id: signUpNewsletter
-  translation: "Suscribirse a la lista"
+  translation: "Inscíbase a la lista"
 - id: socialNetwork
   translation: "Red social"
 - id: sponsorship
-  translation: "Financiación"
+  translation: "Financiamiento"
 - id: subscribe
-  translation: "Suscribirse"
+  translation: "Firmar"
 - id: temporal
   translation: "Frecuencia"
 - id: toApprove
-  translation: aprobar
+  translation: Aprobar
 - id: toCatch
-  translation: "Analizar"
+  translation: "Atrapar"
 - id: toCatchMyFollowers
-  translation: "Analizar quién sigue a este perfil"
+  translation: "Analizar quién sigue ese perfil"
 - id: toCatchMyFriends
-  translation: "Analizar a quién sigue este perfil"
+  translation: "Analizar quién ese perfil sigue"
 - id: toCatchThatBot
-  translation: "Atrapar bots"
+  translation: "Atrapar a los bots"
 - id: toDisapprove
-  translation: desaprobar
+  translation: "Reprobar"
 - id: toExportData
   translation: "Exportar datos"
 - id: toStop
@@ -123,8 +143,10 @@
 - id: transparency
   translation: "Transparencia"
 - id: tweetItLink
-  translation: "Tuitear este resultado"
+  translation: "Tuitear ese resultado"
 - id: twitterProfile
   translation: "perfil en Twitter"
+- id: usePegabot
+  translation: "Ahora que ya ha observado lo que se puede hacer con AtrapaBot,<br /> analice la probabilidad de que un perfil de Twitter sea un bot"
 - id: user
   translation: "Usuario"
