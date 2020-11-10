@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.4][] - 2020-11-10
+
 ### Fixed
 
 - layers overriding
@@ -294,7 +296,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
-[Unreleased]: undefined/compare/v2.0.3...HEAD
+[Unreleased]: undefined/compare/v2.0.4...HEAD
+[2.0.4]: undefined/compare/v2.0.3...v2.0.4
 [2.0.3]: undefined/compare/v2.0.2...v2.0.3
 [2.0.2]: undefined/compare/v2.0.1...v2.0.2
 [2.0.1]: undefined/compare/v2.0.0...v2.0.1
