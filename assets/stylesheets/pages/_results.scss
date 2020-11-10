@@ -64,7 +64,9 @@ $gauge-hand-height: 8px;
 .print-results {
 	width: auto;
 
+	margin-top: $line-height * 1rem;
 	margin-right: $gutter;
+	margin-bottom: $line-height * 1rem;
 
 	text-decoration: none;
 
@@ -85,17 +87,22 @@ $gauge-hand-height: 8px;
 }
 
 .results__data {
-	display: flex;
-
-	align-items: stretch;
-	flex-wrap: wrap;
-	justify-content: space-between;
-
 	margin-bottom: 0;
 
-	@media screen and (min-width: breakpoint('phablet')) {
+	@media screen and (min-width: breakpoint('tablet')) {
+		display: flex;
+
+		align-items: stretch;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
 		margin-right: $gutter * -0.5;
 		margin-left: $gutter * -0.5;
+
+		> * {
+			padding-right: $gutter * 0.5;
+			padding-left: $gutter * 0.5;
+		}
 	}
 }
 
@@ -114,12 +121,6 @@ $gauge-hand-height: 8px;
 	transition-delay: $delay;
 	transition-duration: $duration;
 	transition-property: top, padding;
-
-	@media screen and (min-width: breakpoint('phablet')) {
-		width: 33.33333%;
-
-		padding: 0 ($gutter / 2);
-	}
 
 	@media screen and (min-width: breakpoint('tablet')) {
 		order: 2;
@@ -211,13 +212,6 @@ $gauge-hand-height: 8px;
 	width: 100%;
 
 	margin-bottom: $line-height * 1em;
-
-	@media screen and (min-width: breakpoint('phablet')) {
-		width: 66.66666%;
-
-		padding-right: $gutter * 0.5;
-		padding-left: $gutter * 0.5;
-	}
 
 	@media screen and (min-width: breakpoint('tablet')) {
 		width: 50%;
@@ -497,37 +491,52 @@ $gauge-hand-height: 8px;
 }
 
 .profile__links ul {
-	display: block;
+	display: table;
 
 	margin-bottom: 0;
 
 	line-height: $line-height * 2;
+
+	table-layout: fixed;
 }
 
 .profile__buttons-list {
 	display: flex;
 
-	width: 100%;
+	flex-wrap: wrap;
+
 	max-width: none;
+	min-width: 100%;
 
 	padding: 0;
-	margin: 0;
+	margin: 0 $gutter * -0.5;
 }
 
-.profile__buttons-item {
-	display: block;
+.profile__links li {
+	display: table-cell;
 
-	flex-grow: 1;
-	flex-shrink: 1;
-
-	min-width: 0;
+	padding: 0;
 
 	&::before {
 		content: none;
 	}
+}
 
-	& + & {
-		margin-left: $gutter * 0.5;
+.profile__buttons-item {
+	display: flex;
+
+	flex-basis: min-content;
+	flex-grow: 1;
+
+	width: 100%;
+	min-width: 0;
+
+	padding-right: $gutter * 0.5;
+	padding-left: $gutter * 0.5;
+	margin-bottom: $line-height * 1rem;
+
+	&::before {
+		content: none;
 	}
 }
 
@@ -546,6 +555,8 @@ $gauge-hand-height: 8px;
 
 .profile__buttons button,
 .profile__buttons a {
+	flex-grow: 1;
+
 	width: auto;
 	max-width: none;
 	min-width: 0;
@@ -583,16 +594,6 @@ $gauge-hand-height: 8px;
 	white-space: normal;
 
 	color: palette('orange');
-}
-
-.profile__links li {
-	display: table-cell;
-
-	padding: 0;
-
-	&::before {
-		content: none;
-	}
 }
 
 .profile__links button,
