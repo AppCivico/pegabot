@@ -29,7 +29,7 @@
 
 	box-shadow: 2px 2px 8px 0 palette('shadow');
 
-	transition: transform 0.8s, opacity  0.5s ease-in-out;
+	transition: transform 0.8s, opacity 0.5s ease-in-out;
 
 	@media screen and (min-width: breakpoint('tablet')) {
 		display: flex;

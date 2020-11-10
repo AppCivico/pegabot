@@ -9,7 +9,9 @@
 	max-width: 100vw;
 
 	padding-top: $gutter * 3;
+	padding-right: $gutter;
 	padding-bottom: $gutter * 2.5;
+	padding-left: $gutter;
 	margin-right: -50vw;
 	margin-bottom: $gutter * 2;
 	margin-left: -50vw;
@@ -169,6 +171,8 @@
 	flex-basis: 50%;
 	flex-grow: 1;
 
+	max-width: 100%;
+
 	#{select-all-from(2, '.active')} & {
 		order: 2;
 	}
@@ -247,6 +251,7 @@
 
 	width: max-content;
 	height: 2.5rem; // 40px
+	max-width: 100%;
 
 	padding-top: ($line-height / 4 * 1em);
 	padding-right: ($line-height * 1em);
@@ -264,7 +269,6 @@
 	text-decoration: none;
 	text-overflow: ellipsis;
 	text-transform: uppercase;
-	white-space: nowrap;
 
 	color: palette('white');
 
