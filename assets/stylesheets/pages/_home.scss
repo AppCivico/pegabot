@@ -33,7 +33,7 @@
 }
 
 .home-page .content-container {
-	padding-top: $line-height * 1rem;
+	padding-top: $line-height * 3rem;
 }
 
 .home-page [role='banner'] {
@@ -57,7 +57,7 @@
 .home-page [role='main'] {
 	max-width: none;
 
-	padding-top: 155px;
+	padding-top: $line-height * 7rem;
 
 	background-image: image('logos/logotype__vertical.svg');
 	background-position: 50% 0;
