@@ -1,16 +1,16 @@
 ---
-title: "Política de Privacidad"
-date: 2018-03-29T18:42:22-03:00
-draft: false
-menu: "main"
-slug: "privacidade"
-weight: 10
 language: es
+draft: false
+title: Política de Privacidad
+slug: privacidade
+date: 2018-03-29T18:42:22-03:00
+weight: 10
 rootOf: false
+menu: main
 ---
 ## Política de privacidad
 
-El tratamiento de los datos personales por parte de Atrapabot se regirá por la siguiente política de privacidad.
+ES El tratamiento de los datos personales por parte de Atrapabot se regirá por la siguiente política de privacidad.
 
 La política de privacidad establece los usos y las características de Atrapabot. El acceso a las funcionalidades de Atrapabot implica el consentimiento por parte del usuario para el tratamiento de sus datos en la forma definida por esta política.
 
