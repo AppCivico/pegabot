@@ -18,8 +18,8 @@
 
 	background-image: image('curved-mask__top.svg'),
 	image('curved-mask__bottom.svg');
-	background-position: 50% -1%,
-	50% 101%,
+	background-position: 0 -1px,
+	0 calc(100% + 1px),
 
 	calc(50vw + 300px) 85%,
 	calc(50vw + 350px) 25%,
@@ -28,8 +28,8 @@
 	calc(50vw - 300px - 54px) 15%,
 	calc(50vw - 350px - 36px) 75%,
 	calc(50vw - 450px - 36px) 45%;
-	background-size: 101% auto,
-	101% auto,
+	background-size: 102% auto,
+	102% auto,
 
 	54px auto,
 	36px auto,
