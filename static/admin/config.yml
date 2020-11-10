@@ -3,9 +3,9 @@ backend:
   # name: github
   # @see https://www.netlifycms.org/docs/test-backend/
   # name: test-repo
-  branch: dev # Branch to update (optional; defaults to master)
+  # branch: dev # Branch to update (optional; defaults to master)
   repo: AppCivico/pegabot
-  site_domain: dev.pegabot.com.br
+  site_domain: pegabot.com.br
   base_url: https://api.netlify.com
   auth_endpoint: auth
   squash_merges: true
