@@ -71,12 +71,10 @@ h3,
 h4,
 h5,
 h6 {
-	hyphens: auto;
-	text-transform: uppercase;
+	overflow: hidden;
 
-	@media screen and (min-width: breakpoint('phablet')) {
-		hyphens: none;
-	}
+	text-overflow: ellipsis;
+	text-transform: uppercase;
 }
 
 h1 a,
