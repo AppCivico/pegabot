@@ -201,8 +201,8 @@
 @function layer($layer: 'default') {
 // sass-lint:disable-block indentation
 	$default-layers: (
-		'modal': 500000,
-		'dropdown': 40000,
+		'modal': 5000,
+		'dropdown': 4000,
 		'default': 1,
 		'below': -1,
 	);
