@@ -42,12 +42,10 @@ services:
   twitter:
     disableInlineCSS: true
 
-
-
-
 blackfriday:
   smartypants: false
 params:
+  cookieDomain: ".pegabot.com.br"
   searchLimit: 12
 languages:
   pt:
