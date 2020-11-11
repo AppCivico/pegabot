@@ -285,9 +285,6 @@
 
 	width: calc(100% / 3 - #{$gutter});
 	max-width: 100%;
-
-	margin-right: $gutter * 0.5;
-	margin-left: $gutter * 0.5;
 }
 
 .results-details__analysis-title {

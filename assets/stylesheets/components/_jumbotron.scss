@@ -60,11 +60,7 @@
 
 	flex-wrap: wrap;
 
-	text-align: right;
-
-	@media screen and (min-width: breakpoint('desktop')) {
-		text-align: left;
-	}
+	text-align: left;
 }
 
 .jumbotron--video video {

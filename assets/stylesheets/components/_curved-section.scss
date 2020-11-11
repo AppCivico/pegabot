@@ -119,7 +119,7 @@
 .curved-section--revisao-humana .curved-section__container {
 	max-width: 70rem;
 
-	padding: $gutter * 2;
+	padding: #{$gutter * 2} 0;
 }
 
 .curved-section--robos-por-todos-os-lados .curved-section__image,

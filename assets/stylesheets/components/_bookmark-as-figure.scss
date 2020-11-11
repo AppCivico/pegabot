@@ -4,6 +4,8 @@
 	position: relative;
 
 	padding: $gutter * 0.5;
+	margin-right: 0;
+	margin-left: 0;
 
 	text-align: center;
 
@@ -44,7 +46,9 @@
 
 	width: auto;
 
+	margin-right: auto;
 	margin-bottom: $gutter;
+	margin-left: auto;
 
 	object-fit: cover;
 
@@ -69,7 +73,9 @@
 
 .bookmark-as-figure__title {
 	margin-top: 0;
+	margin-right: auto;
 	margin-bottom: $gutter;
+	margin-left: auto;
 
 	font-size: ms(2);
 	font-family: $title-font-stack;
@@ -97,7 +103,9 @@
 	clear: both;
 
 	margin-top: $gutter;
+	margin-right: auto;
 	margin-bottom: $gutter;
+	margin-left: auto;
 
 	font-size: ms(-1);
 
@@ -114,8 +122,14 @@
 	}
 }
 
+.bookmark-as-figure__button-wrapper {
+	max-width: none;
+}
+
 .bookmark-as-figure__button {
-	display: block;
+	display: flex;
+
+	align-items: center;
 
 	width: max-content;
 	height: 2.5rem; // 40px

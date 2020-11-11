@@ -251,8 +251,7 @@ textarea {
 }
 
 article .container {
-	padding-top: 0;
-	padding-bottom: 0;
+	padding: 0;
 }
 
 .alternate-paragraphs .article__content {
@@ -288,7 +287,11 @@ body {
 }
 
 .container > figure {
-	float: right;
+	@media screen and (min-width: breakpoint('tablet')) {
+		float: right;
+
+		margin-left: $gutter;
+	}
 }
 
 .wave-ornament.wave-ornament.wave-ornament {
@@ -298,6 +301,8 @@ body {
 
 	width: 100vw;
 
+	padding-right: $gutter;
+	padding-left: $gutter;
 	margin-right: 50%;
 	margin-left: 50%;
 

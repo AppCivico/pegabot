@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 
 - curved boxes
+- external margins
 - footer minor design issues
 - profile data over menu
 
