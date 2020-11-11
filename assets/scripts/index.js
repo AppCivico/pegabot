@@ -231,8 +231,9 @@ window.newVue = {
 			// this.$http.get('/details.json', {
 				headers: {
 					'Accept-Language': lang,
+					'Content-type': 'application/json',
 				},
-				timeout: 20000,
+				timeout: 120000,
 				params: requestParams,
 				before(xhr) {
 					this.xhr_request.push(xhr);
@@ -314,6 +315,7 @@ window.newVue = {
 
 				this.metadata.loading = false;
 			}).catch((error) => {
+				this.cancelRequest();
 				this.error = error.statusText;
 				this.metadata.loading = false;
 				if (error.status === 0) {
