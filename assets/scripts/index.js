@@ -304,7 +304,7 @@ const newVue = {
 					} else if (response.status === 425) {
 						window.alert('No Reason Phrase'); // eslint-disable-line no-alert
 					} else {
-						window.alert(response.message || 'Error'); // eslint-disable-line no-alert
+						window.alert(response.body.message || 'Error'); // eslint-disable-line no-alert
 					}
 
 					if (currentIndex === this.metadata.limit - 1) {
@@ -313,13 +313,13 @@ const newVue = {
 				}
 
 				this.metadata.loading = false;
-			}, (error) => {
-				console.log('error', error); // eslint-disable-line no-console
-				this.cancelRequest();
+			}).catch((error) => {
 				this.error = error.statusText;
 				this.metadata.loading = false;
-				if (error.statusText) {
-					window.alert(error.statusText); // eslint-disable-line no-alert
+				if (error.status === 0) {
+					window.alert('API did not respond'); // eslint-disable-line no-alert
+				} else {
+					window.alert(error.statusText || error.status); // eslint-disable-line no-alert
 				}
 			});
 		},
