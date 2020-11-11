@@ -82,12 +82,12 @@
 
 <script>
 var cookieContent = {
-		message: "Esse site usa serviços de terceiros para executar sua funcionalidade básica. Você aceita que esses serviços possam rastreá-lo em sua visita?",
-		dismiss: "Tudo bem!",
-		allow: "Aceitar",
-		deny: "Recusar",
-		link: "Saber mais",
-		href: "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd"
+		message: {{ i18n "cookieContentMessage" }},
+		dismiss: {{ i18n "cookieContentDismiss" }},
+		allow: {{ i18n "cookieContentAllow" }},
+		deny: {{ i18n "cookieContentDeny" }},
+		link: {{ i18n "cookieContentLink" }},
+		href: {{ "$.Site.Params.cookieContentHref" }}
 	};
 
 window.cookieconsent.initialise({

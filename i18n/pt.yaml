@@ -40,6 +40,16 @@
   translation: "Contato"
 - id: content
   translation: "Conteúdo"
+- id: cookieContentAllow
+  translation: "Aceitar"
+- id: cookieContentDeny
+  translation: "Recusar"
+- id: cookieContentDismiss
+  translation: "Tudo bem!"
+- id: cookieContentLink
+  translation: "Saber mais"
+- id: cookieContentMessage
+  translation: "Esse site usa serviços de terceiros para executar sua funcionalidade básica. Você aceita que esses serviços possam rastreá-lo em sua visita?"
 - id: details
   translation: "Detalhes"
 - id: detailsLink

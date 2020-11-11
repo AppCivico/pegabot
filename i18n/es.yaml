@@ -38,6 +38,16 @@
   translation: "Cerrar ese modal"
 - id: contact
   translation: "Contacto"
+- id: cookieContentAllow
+  translation: "Aceptar"
+- id: cookieContentDeny
+  translation: "Negar"
+- id: cookieContentDismiss
+  translation: "¡Todo bien!"
+- id: cookieContentLink
+  translation: "Saber mas"
+- id: cookieContentMessage
+  translation: "Este sitio web utiliza servicios de terceros para realizar su funcionalidad básica. ¿Acepta que estos servicios puedan rastrearlo en su visita?"
 - id: content
   translation: "Contenido"
 - id: details

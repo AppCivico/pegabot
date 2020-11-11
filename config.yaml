@@ -62,6 +62,7 @@ languages:
       typeform: https://itsrio2.typeform.com/to/uGFw4zDc
       ogImage: "/pegabot-fb-img__pt.jpg"
       ogTitle: "Descubra se aquele perfil de rede social é bot"
+      cookieContentHref: "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd"
   es:
     languageCode: "es-mx"
     baseURL: "https://es.pegabot.com.br"
@@ -74,3 +75,4 @@ languages:
       typeform: https://itsrio2.typeform.com/to/ucOsl1sP
       ogImage: "/es/pegabot-fb-img__es.jpg"
       ogTitle: "Descubra las chances de que aquel perfil tan exitoso sea un bot."
+      cookieContentHref: "https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd"
