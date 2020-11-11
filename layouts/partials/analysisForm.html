@@ -58,7 +58,7 @@
 	var profile = document.getElementById('s');
 
 	profile.addEventListener('blur', function(e){
-		var value = e.target.value;
+		var value = e.target.value || '';
 
 		var regex = /(https?:\/\/)?(www\.)?(twitter\.com\/)/gi;
 
