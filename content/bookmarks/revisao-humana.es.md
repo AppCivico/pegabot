@@ -8,7 +8,7 @@ author: Por Priscilla Silva e Juliana Medeiros
 imageSrc: /uploads/captcha.jpg
 layout: none
 imageAlt: null
-link: https://medium.com/@ITSriodejaneiro
+link: https://feed.itsrio.org/a-pol%C3%AAmica-da-revis%C3%A3o-humana-sobre-decis%C3%B5es-automatizadas-a81592886345
 type: bookmark
 ---
 A polêmica da revisão (humana) sobre decisões automatizadas.
