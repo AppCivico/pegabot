@@ -169,7 +169,8 @@ if (document.querySelector('#results__detail')) {
 
 if (!document.getElementById('app')) throw new Error('exit');
 
-window.$vue = new Vue({
+// eslint-disable-next-line no-unused-vars
+const newVue = {
 	el: '#app',
 	data() {
 		return {
@@ -223,10 +224,10 @@ window.$vue = new Vue({
 			this.metadata.loading = true;
 
 			this.$http.get(endPoint, {
-			// dev only on /results
-			// this.$http.get('/botometer.json', {
-			// dev only on /details
-			// this.$http.get('/details.json', {
+				// dev only on /results
+				// this.$http.get('/botometer.json', {
+				// dev only on /details
+				// this.$http.get('/details.json', {
 				headers: {
 					'Accept-Language': lang,
 				},
@@ -435,4 +436,4 @@ window.$vue = new Vue({
 
 		this.showElement();
 	},
-});
+};
