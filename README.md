@@ -49,7 +49,7 @@ To run it locally, you need to install:
 - [Hugo](https://gohugo.io/)
 - [NodeJS](https://nodejs.org/en/)
 
-Then you can run `npm install` or `yarn`, to install the dependencies, and then `npm run dev`, which will start and hugo server on [multilingual mode](https://gohugo.io/content-management/multilingual/#configure-multilingual-multihost).
+Then you can run `npm install`, to install the dependencies, and then `npm run dev`, which will start and hugo server on [multilingual mode](https://gohugo.io/content-management/multilingual/#configure-multilingual-multihost).
 
 ## Build
 
