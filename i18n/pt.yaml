@@ -50,6 +50,8 @@
   translation: "Saber mais"
 - id: cookieContentMessage
   translation: "Esse site usa serviços de terceiros para executar sua funcionalidade básica. Você aceita que esses serviços possam rastreá-lo em sua visita?"
+- id: cookieContentPolicy
+  translation: "Política de cookies"
 - id: details
   translation: "Detalhes"
 - id: detailsLink
