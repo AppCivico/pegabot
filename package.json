@@ -65,6 +65,7 @@
     "version-changelog": "^2.1.0"
   },
   "dependencies": {
+    "cookieconsent": "^3.1.1",
     "css-modal": "^1.5.0"
   },
   "browser": {

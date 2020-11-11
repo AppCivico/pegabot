@@ -1,6 +1,7 @@
 /* global Vue */
 
 import * as params from '@params';
+import 'cookieconsent';
 
 import chart from './TheChart';
 
@@ -224,10 +225,10 @@ const newVue = {
 			this.metadata.loading = true;
 
 			this.$http.get(endPoint, {
-				// dev only on /results
-				// this.$http.get('/botometer.json', {
-				// dev only on /details
-				// this.$http.get('/details.json', {
+			// dev only on /results
+			// this.$http.get('/botometer.json', {
+			// dev only on /details
+			// this.$http.get('/details.json', {
 				headers: {
 					'Accept-Language': lang,
 				},

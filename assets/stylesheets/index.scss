@@ -3,7 +3,8 @@
 // 2. Vendors
 @import
 '../../node_modules/css-modal/modal',
-'../../node_modules/modularscale-sass/stylesheets/modularscale';
+'../../node_modules/modularscale-sass/stylesheets/modularscale',
+'../../node_modules/cookieconsent/build/cookieconsent.min';
 
 // '../../node_modules/susy/sass/susy',
 // '../../node_modules/susy/sass/plugins/svg-grid',
@@ -61,7 +62,8 @@
 'components/bubble-text',
 'components/jumbotron',
 'components/back-to-top',
-'components/link-boxes';
+'components/link-boxes',
+'components/cookieconsent';
 
 // 6. Page-specific styles
 @import
