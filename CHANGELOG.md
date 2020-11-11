@@ -7,7 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- privacy setting of 3rd-party services
+
 ## [2.0.6][] - 2020-11-10
+
+### Fixed
+
+- external margins
 
 ## [2.0.5][] - 2020-11-10
 

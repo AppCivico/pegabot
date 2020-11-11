@@ -16,6 +16,35 @@ googleAnalytics: "UA-116653569-1"
 languageCode: "pt-br"
 removePathAccents: true
 metaDataFormat: "yaml"
+
+privacy:
+  googleAnalytics:
+    anonymizeIP: true
+    disable: false
+    respectDoNotTrack: true
+    useSessionStorage: true
+  instagram:
+    disable: false
+    simple: true
+  twitter:
+    disable: false
+    enableDNT: true
+    simple: true
+  vimeo:
+    disable: false
+    enableDNT: true
+    simple: true
+  youtube:
+    disable: false
+    privacyEnhanced: true
+
+services:
+  twitter:
+    disableInlineCSS: true
+
+
+
+
 blackfriday:
   smartypants: false
 params:
