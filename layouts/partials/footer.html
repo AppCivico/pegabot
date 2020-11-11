@@ -91,12 +91,48 @@ var cookieContent = {
 	};
 
 window.cookieconsent.initialise({
-	onStatusChange: function(status) {
-		console.log(this.hasConsented() ? 'enable cookies' : 'disable cookies');
+	onInitialise: function(status) {
+		var type = this.options.type;
+		var didConsent = this.hasConsented();
 
-		if (this.hasConsented() && newVue) {
-			window.$vue = new Vue(newVue);
+		if (didConsent) {
+			if(!window.$vue) {
+				window.$vue = new Vue(window.newVue);
+			}
 		}
+		if (!didConsent) {
+			// disable cookies
+		}
+	},
+
+	onStatusChange: function(status, chosenBefore) {
+		var type = this.options.type;
+		var didConsent = this.hasConsented();
+
+		if (type === 'opt-in' && didConsent && !window.$vue) {
+			// enable cookies
+			window.$vue = new Vue(window.newVue);
+		}
+
+		if (type == 'opt-out' && !didConsent && !!window.$vue) {
+			// disable cookies
+		}
+	},
+
+	onRevokeChoice: function() {
+		var type = this.options.type;
+
+		if (type == 'opt-in') {
+		// disable cookies
+		}
+
+		if (type == 'opt-out') {
+		// enable cookies
+		}
+	},
+
+	cookie: {
+		domain: '{{ $.Site.BaseURL }}'
 	},
 
 	law: {

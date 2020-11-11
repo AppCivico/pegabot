@@ -171,7 +171,7 @@ if (document.querySelector('#results__detail')) {
 if (!document.getElementById('app')) throw new Error('exit');
 
 // eslint-disable-next-line no-unused-vars
-const newVue = {
+window.newVue = {
 	el: '#app',
 	data() {
 		return {
