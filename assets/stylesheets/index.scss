@@ -19,7 +19,8 @@
 
 // 2. Vendors
 @import
-'vendor/css-modal';
+'vendor/css-modal',
+'components/cookie-consent';
 
 // 3. Base stuff
 @import
@@ -62,8 +63,7 @@
 'components/bubble-text',
 'components/jumbotron',
 'components/back-to-top',
-'components/link-boxes',
-'components/cookieconsent';
+'components/link-boxes';
 
 // 6. Page-specific styles
 @import
