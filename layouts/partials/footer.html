@@ -95,9 +95,6 @@ window.cookieconsent.initialise({
 	onInitialise: function(status) {
 		var type = this.options.type;
 		var didConsent = this.hasConsented();
-		if(!window.$vue) {
-			window.$vue = new Vue(window.newVue);
-		}
 
 		if (didConsent) {
 		}

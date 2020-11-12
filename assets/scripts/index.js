@@ -5,6 +5,8 @@ import 'cookieconsent';
 
 import chart from './TheChart';
 
+window.$vue = new Vue(window.newVue);
+
 const toPercentageFilter = function toPercentageFilter(value) {
 	return `${Math.round(parseFloat(value) * 100)}%`;
 };
