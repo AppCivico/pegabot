@@ -22,6 +22,8 @@
   translation: "{{ .Count }} cuentas analizadas."
 - id: analyze
   translation: "Analizar"
+- id: analyzeAnotherProfile
+  translation: "Analizar otro perfil"
 - id: analyzeAProfile
   translation: "Analizar un perfil"
 - id: aProjectBy

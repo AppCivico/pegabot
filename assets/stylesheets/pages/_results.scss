@@ -656,6 +656,26 @@ $gauge-hand-height: 8px;
 	background-image: image('feedback-icon.png');
 }
 
+.results__error {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 8rem;
+	text-align: center;
+	background-image: image('robot__sad.svg');
+	background-position: top center;
+}
+
+
+.results__error .fancy-button {
+	width: auto;
+	margin-top: 0.5rem;
+	margin-left: 0;
+	text-decoration: none;
+	color: palette('white');
+}
+
 .results__footer {
 	padding: ($gutter / 2) $gutter;
 	margin-right: $gutter * -1;

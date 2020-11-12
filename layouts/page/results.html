@@ -12,6 +12,12 @@
 
 	<div id="app" class="results" hidden>
 		<noscript>{{ i18n "noScriptMessage" }}</noscript>
+		<section class="results__error" v-if="error">
+			<strong>
+				{{ "{{ error }}" }}
+			</strong>
+			<a class="fancy-button" href="/">{{ i18n "analyzeAnotherProfile" }}</a>
+		</section>
 		<section
 			class="results__list results-loading"
 			:aria-busy="(metadata.loading && profileList.length === 0) | booleanToString"

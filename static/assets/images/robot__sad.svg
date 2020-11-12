@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="103px" height="109px" viewBox="0 0 103 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>robot_1</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="robot_1">
+            <circle id="Oval" fill="#6E6D70" fill-rule="nonzero" cx="51.38" cy="56.91" r="51.38"></circle>
+            <circle id="Oval" fill="#D7D7D7" fill-rule="nonzero" cx="51.38" cy="51.38" r="51.38"></circle>
+            <g id="Group" transform="translate(27.624866, 27.870000)" stroke="#3B2461">
+                <path d="M37.0751342,47.02 L9.81513421,46.83 C7.94902644,46.8113349 6.33219908,45.5318608 5.88513421,43.72 L0.105134211,20 C-0.176355394,18.7839129 0.11432334,17.5058791 0.894092986,16.531167 C1.67386263,15.556455 2.85691735,14.9923219 4.10513421,14.9999226 L43.4551342,14.9999226 C44.7170383,15.0109611 45.9032216,15.6038321 46.6694315,16.6065506 C47.4356413,17.6092692 47.6960693,18.90954 47.3751342,20.13 L41.0151342,44.03 C40.5492299,45.8165158 38.9211239,47.0520582 37.0751342,47.02 Z" id="Path" stroke-width="3"></path>
+                <circle id="Oval" stroke-width="4" cx="12.3451342" cy="25.59" r="4.15"></circle>
+                <circle id="Oval" stroke-width="4" cx="34.5051342" cy="25.59" r="4.15"></circle>
+                <circle id="Oval" stroke-width="2.47" cx="24.1251342" cy="3.72" r="3.72"></circle>
+                <line x1="24.1251342" y1="14.96" x2="24.1251342" y2="7.44" id="Path" stroke-width="2.76"></line>
+                <path d="M16.3751342,37.34 C20.5858876,40.777835 26.6343809,40.777835 30.8451342,37.34" id="Path" stroke-width="2.76" stroke-linecap="round" stroke-linejoin="round" transform="translate(23.610134, 38.629188) rotate(-180.000000) translate(-23.610134, -38.629188) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

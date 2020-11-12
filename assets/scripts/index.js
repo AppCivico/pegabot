@@ -314,11 +314,11 @@ window.newVue = {
 				this.metadata.loading = false;
 			}).catch((error) => {
 				this.cancelRequest();
-				this.error = error.body.message;
+				this.error = error.body.message ? error.body.message : error.statusText;
 				this.metadata.loading = false;
-				window.alert(error.status === 0 // eslint-disable-line no-alert
-					? 'API did not respond'
-					: error.body.message || error.status);
+				// window.alert(error.status === 0 // eslint-disable-line no-alert
+				// 	? 'API did not respond'
+				// 	: error.body.message || error.status);
 			});
 		},
 		cancelRequest() {
