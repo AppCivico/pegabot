@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- default values on some functions
+- cookie consent form
 
 ### Changed
 
@@ -25,31 +25,34 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [2.0.6][] - 2020-11-10
 
-### Fixed
-
-- external margins
-
-## [2.0.5][] - 2020-11-10
-
 ### Changed
 
 - curved section arc
-- details header height
 - details titles font body
-- home logotype vertical margins
 - mobile to fixed on screen
 - newsletter form alignment
 
 ### Fixed
 
-- curved boxes
 - external margins
 - footer minor design issues
-- profile data over menu
 
 ### Removed
 
 - titles hyphenation
+
+## [2.0.5][] - 2020-11-10
+
+### Changed
+
+- details header height
+- home logotype vertical margins
+
+### Fixed
+
+- curved boxes
+- external margins
+- profile data over menu
 
 ## [2.0.4][] - 2020-11-10
 
