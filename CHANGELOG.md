@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.1.1][] - 2020-11-12
+
 ### Fixed
 
 - API messages feedback
@@ -349,7 +351,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - initial release
 
 
-[Unreleased]: undefined/compare/v2.1.0...HEAD
+[Unreleased]: undefined/compare/v2.1.1...HEAD
+[2.1.1]: undefined/compare/v2.1.0...v2.1.1
 [2.1.0]: undefined/compare/v2.0.6...v2.1.0
 [2.0.6]: undefined/compare/v2.0.5...v2.0.6
 [2.0.5]: undefined/compare/v2.0.4...v2.0.5
