@@ -26,6 +26,8 @@
   translation: "Analisar outro perfil"
 - id: analyzeAProfile
   translation: "Analisar um perfil"
+- id: analyzeProbability
+  translation: "Analise a probabilidade de um perfil do Twitter ser um bot"
 - id: aProjectBy
   translation: "Um projeto"
 - id: backToTop
