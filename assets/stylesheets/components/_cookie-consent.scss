@@ -13,3 +13,9 @@
 .cc-theme-classic .cc-btn {
 	border-radius: 999em;
 }
+
+.cc-revoke {
+	&:hover {
+		text-decoration: inherit;
+	}
+}
