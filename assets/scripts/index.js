@@ -224,11 +224,11 @@ window.newVue = {
 			this.error = null;
 			this.metadata.loading = true;
 
-			// this.$http.get(endPoint, {
+			this.$http.get(endPoint, {
 			// dev only on /results
 			// this.$http.get('/botometer.json', {
 			// dev only on /details
-			this.$http.get('/details.json', {
+			// this.$http.get('/details.json', {
 				headers: {
 					'Accept-Language': lang,
 					'Content-type': 'application/json',
