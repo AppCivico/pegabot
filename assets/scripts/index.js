@@ -302,8 +302,6 @@ window.newVue = {
 								}
 							}
 						}
-					} else if (response.status === 425) {
-						window.alert('No Reason Phrase'); // eslint-disable-line no-alert
 					} else {
 						window.alert(response.body.message || 'Error'); // eslint-disable-line no-alert
 					}
@@ -316,13 +314,11 @@ window.newVue = {
 				this.metadata.loading = false;
 			}).catch((error) => {
 				this.cancelRequest();
-				this.error = error.statusText;
+				this.error = error.body.message;
 				this.metadata.loading = false;
-				if (error.status === 0) {
-					window.alert('API did not respond'); // eslint-disable-line no-alert
-				} else {
-					window.alert(error.statusText || error.status); // eslint-disable-line no-alert
-				}
+				window.alert(error.status === 0 // eslint-disable-line no-alert
+					? 'API did not respond'
+					: error.body.message || error.status);
 			});
 		},
 		cancelRequest() {
