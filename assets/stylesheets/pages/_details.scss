@@ -9,6 +9,11 @@
 
 }
 
+.details-page .container {
+	max-width: 78.125rem;
+	padding: 0 1.875rem;
+}
+
 .details-page__wave-header {
 	position: relative;
 
@@ -277,7 +282,7 @@
 }
 
 .results-details__analysis-container {
-	min-width: $min-width;
+	min-width: 16rem;
 }
 
 .results-details__analysis-container--chart {
@@ -419,13 +424,12 @@
 	max-width: 100%;
 	min-width: $min-width;
 
-	margin-right: $gutter * 0.5;
-	margin-left: $gutter * 0.5;
 
 	overflow: hidden;
 
 	@media screen and (min-width: $min-width / 1rem * 3em ) {
 		order: -1;
+		margin-right: $gutter * 0.5;
 	}
 }
 

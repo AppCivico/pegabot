@@ -72,7 +72,7 @@
 	</div>
 
 	<section
-		class="results-details__analysis"
+		class="results-details__analysis results-details__analysis-container"
 		v-for="(analysis, i) in item.analyses"
 		:key="i"
 		:class="{
@@ -81,7 +81,6 @@
 		}"
 	>
 		<div
-			class="results-details__analysis-container"
 			:class="{'results-details__analysis-container--chart': analysis.chart}"
 		>
 			<h4
