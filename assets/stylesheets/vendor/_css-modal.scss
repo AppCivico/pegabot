@@ -4,6 +4,14 @@
 	border-radius: 8px;
 }
 
+.modal--show {
+	top: 4rem;
+}
+
+.modal--show:target {
+	height: calc(100% - 4rem);
+}
+
 .modal--fade header,
 .modal--show header {
 	font-weight: 700;
@@ -22,16 +30,30 @@
 
 .modal--fade .modal-close,
 .modal--show .modal-close {
-	&::before {
-		opacity: 0.75;
+	// shaaaaaame
+	@media screen and (max-width: breakpoint('desktop')) {
+		&::before {
+			background: transparent;
+			opacity: 0.75;
+			box-shadow: none;
+		}
+
+		&::after {
+			top: 60px;
+
+			font-weight: 900;
+
+			color: palette('purple');
+
+			box-shadow: 0 0 0 palette('shadow');
+		}
 	}
 
-	&::after {
-		top: 60px;
-
-		font-weight: 900;
-		font-size: 2em;
-
-		color: palette('purple');
+	@media screen and (min-width: breakpoint('phablet')) {
+		&::after {
+			font-size: 2em;
+		}
 	}
 }
+
+
