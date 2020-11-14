@@ -3,7 +3,7 @@
 	<h6>{{ i18n "aProjectBy" }}</h6>
 
 	<ul>
-		{{ range . }}
+		{{ range  sort . "weight" }}
 			<li
 				{{ with .id }}
 					class="responsibles__item--{{ . }}"
