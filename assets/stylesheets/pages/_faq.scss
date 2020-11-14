@@ -44,7 +44,7 @@ $wave-height: 62px;
 
 .faq-page h1 {
 	position: absolute;
-	top: calc(-#{$gutter * 5} - #{$wave-height});
+	top: -($gutter * 4);
 	left: $gutter;
 
 	color: palette('white');
@@ -60,6 +60,7 @@ $wave-height: 62px;
 	}
 
 	@media screen and (min-width: breakpoint('tablet')) {
+		top: calc(-#{$gutter * 5} - #{$wave-height});
 		font-size: ms(8);
 	}
 
