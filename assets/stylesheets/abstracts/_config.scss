@@ -129,6 +129,10 @@ $palette: (
 		'dark': shade($_blue--dark, 25%),
 		'base': $_purple,
 	),
+	'green': (
+		'base': rgb(66, 133, 66),
+		'dark': rgb(0, 83, 66),
+	),
 	'shadow': rgba(18, 0, 42, 0.35),
 	'debug': rgb(255, 0, 0),
 	'anchor': (
@@ -159,7 +163,7 @@ $palette: (
 		'background': rgb(237, 237, 237),
 	),
 	'label': (
-		'default': rgb(119, 119, 119),
+		'base': rgb(119, 119, 119),
 		'primary': rgb(51, 122, 183),
 		'success': rgb(66, 133, 66),
 		'info': rgb(60, 127, 145),

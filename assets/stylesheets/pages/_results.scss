@@ -537,6 +537,24 @@ $gauge-hand-height: 8px;
 	}
 }
 
+.profile__buttons-item:nth-child(1) .fancy-button {
+	background-color: palette('green');
+	box-shadow: 0 4px 0 0 palette('green', 'dark');
+}
+
+.profile__buttons-item:nth-child(2) .fancy-button {
+	background-color: palette('orange');
+	box-shadow: 0 4px 0 0 palette('orange', 'dark');
+}
+
+.profile__buttons-item:nth-child(3) .fancy-button {
+	// background-color: palette('purple');
+	// box-shadow: 0 4px 0 0 palette('purple', 'dark');
+	color: palette('purple');
+	background-color: palette('white');
+	box-shadow: 0 4px 0 0 palette('gray');
+}
+
 .profile__buttons {
 	text-overflow: ellipsis;
 
