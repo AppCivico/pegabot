@@ -136,11 +136,9 @@
 
 		<footer class="profile__buttons">
 			<ul class="profile__buttons-list">
-				<li
-					class="profile__buttons-item"
-				>
+				<li class="profile__buttons-item">
 					<button type="button"
-						class="fancy-button fancy-button--purple"
+						class="fancy-button"
 						:class="{
 							'chosen': user.opinionSubmitted === 'approve',
 							'not-chosen': user.opinionSubmitted === 'disapprove',
@@ -153,11 +151,9 @@
 					</button>
 				</li>
 
-				<li
-					class="profile__buttons-item"
-				>
+				<li class="profile__buttons-item">
 					<button type="button"
-						class="fancy-button fancy-button--purple"
+						class="fancy-button"
 						:class="{
 							'chosen': user.opinionSubmitted === 'disapprove',
 							'not-chosen': user.opinionSubmitted === 'approve',
@@ -170,11 +166,9 @@
 					</button>
 
 				</li>
-				<li
-					class="profile__buttons-item"
-				>
+				<li class="profile__buttons-item">
 					<a :href="window.location.href.replace('/resultados', '/detalhes')"
-						class="fancy-button fancy-button--purple">
+						class="fancy-button">
 						{{ i18n "allFeatures" }}
 					</a>
 				</li>
