@@ -538,8 +538,10 @@ $gauge-hand-height: 8px;
 }
 
 .profile__buttons-item:nth-child(1) .fancy-button {
-	background-color: palette('green');
-	box-shadow: 0 4px 0 0 palette('green', 'dark');
+	// background-color: palette('green');
+	// box-shadow: 0 4px 0 0 palette('green', 'dark');
+	background-color: palette('purple');
+	box-shadow: 0 4px 0 0 palette('purple', 'dark');
 }
 
 .profile__buttons-item:nth-child(2) .fancy-button {
