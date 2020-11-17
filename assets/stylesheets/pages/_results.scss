@@ -526,7 +526,7 @@ $gauge-hand-height: 8px;
 	flex-basis: calc(33% - 2rem);
 	flex-grow: 1;
 
-	min-width: 0;
+	min-width: min-content;
 
 	padding-right: $gutter * 0.5;
 	padding-left: $gutter * 0.5;
