@@ -8,7 +8,7 @@ weight: 10
 rootOf: false
 menu: main
 ---
-PT O tratamento de dados pessoais conduzido no âmbito do Pegabot será regido pela presente Política de Privacidade, ficando os usuários cientes de que o acesso às funcionalidades do Pegabot configura consentimento para tratamento de seus dados pessoais na forma estabelecida nesta Política de Privacidade.
+O tratamento de dados pessoais conduzido no âmbito do Pegabot será regido pela presente Política de Privacidade, ficando os usuários cientes de que o acesso às funcionalidades do Pegabot configura consentimento para tratamento de seus dados pessoais na forma estabelecida nesta Política de Privacidade.
 
 ## Dos registros de acesso
 
