@@ -97,6 +97,11 @@ window.cookieconsent.initialise({
 		var didConsent = this.hasConsented();
 
 		if (didConsent) {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+
+			gtag('config', '{{ $.Site.GoogleAnalytics }}');
 		}
 		if (!didConsent) {
 			// disable cookies
@@ -107,9 +112,14 @@ window.cookieconsent.initialise({
 		var type = this.options.type;
 		var didConsent = this.hasConsented();
 
-		if (type === 'opt-in' && didConsent && !window.$vue) {
+		if (didConsent) {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+
+			gtag('config', '{{ $.Site.GoogleAnalytics }}');
 			// enable cookies
-			window.$vue = new Vue(window.newVue);
+			// window.$vue = new Vue(window.newVue);
 		}
 
 		if (type == 'opt-out' && !didConsent && !!window.$vue) {
@@ -130,7 +140,8 @@ window.cookieconsent.initialise({
 	},
 
 	cookie: {
-		domain: '{{ $.Site.Params.cookieDomain }}'
+		// domain: '{{ $.Site.Params.cookieDomain }}'
+		domain: ''
 	},
 
 	law: {
