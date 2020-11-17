@@ -523,7 +523,7 @@ $gauge-hand-height: 8px;
 .profile__buttons-item {
 	display: flex;
 
-	flex-basis: min-content;
+	flex-basis: calc(33% - 2rem);
 	flex-grow: 1;
 
 	min-width: 0;
