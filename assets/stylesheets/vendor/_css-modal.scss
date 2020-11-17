@@ -14,11 +14,15 @@
 
 .modal--fade header,
 .modal--show header {
+	padding: 2.5rem 1rem 0;
+
 	font-weight: 700;
+	font-size: ms(2);
 
 	text-transform: uppercase;
 
 	color: palette('purple');
+
 
 	border-bottom: 0;
 }
@@ -31,22 +35,22 @@
 .modal--fade .modal-close,
 .modal--show .modal-close {
 	// shaaaaaame
-	@media screen and (max-width: breakpoint('desktop')) {
-		&::before {
-			background: transparent;
-			opacity: 0.75;
-			box-shadow: none;
-		}
+	// sass-lint:disable no-important
 
-		&::after {
-			top: 60px;
+	&::before {
+		background: transparent;
+		opacity: 0.75;
+		box-shadow: none;
+	}
 
-			font-weight: 900;
+	&::after {
+		top: 60px;
 
-			color: palette('purple');
+		font-weight: 900;
 
-			box-shadow: 0 0 0 palette('shadow');
-		}
+		color: palette('orange');
+
+		box-shadow: 0 0 0 palette('shadow') !important;
 	}
 
 	@media screen and (min-width: breakpoint('phablet')) {

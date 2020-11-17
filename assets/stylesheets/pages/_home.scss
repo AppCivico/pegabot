@@ -37,7 +37,7 @@
 }
 
 .home-page [role='banner'] {
-	display: none;
+	// display: none;
 
 	@media screen and (min-width: breakpoint('phablet')) {
 		display: block;
