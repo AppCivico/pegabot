@@ -10,7 +10,7 @@ bookmark:
   excerpt: O caso envolvendo o Facebook e a empresa Cambridge Analytica mostrou a
     necessidade de entendermos melhor a forma como bots atuam criando tendências
     e influenciando debates políticos…
-  link: http://www.com.br
+  link: https://feed.itsrio.org/oito-mat%C3%A9rias-para-voc%C3%AA-entender-bots-fake-news-e-m%C3%ADdias-sociais-6ef8b9401f39
   src: /uploads/materias.png
   title: Oito matérias para você entender bots, fake news e mídias sociais
 type: analysis
