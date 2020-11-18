@@ -62,7 +62,9 @@ $duration: 0.5s;
 }
 
 [for='menu-opener'] {
-	position: relative;
+	position: absolute;
+
+	right: 2rem;
 
 	z-index: layer('default');
 
@@ -70,8 +72,6 @@ $duration: 0.5s;
 	height: 4rem;
 
 	padding: 0;
-	margin-right: 0;
-	margin-left: auto;
 
 	overflow: hidden;
 
@@ -93,7 +93,7 @@ $duration: 0.5s;
 }
 
 .languages-and-header-menus {
-	position: fixed;
+	position: absolute;
 	top: 4rem;
 	right: 0;
 	bottom: 0;
@@ -101,8 +101,10 @@ $duration: 0.5s;
 	display: flex;
 	z-index: layer('dropdown');
 
+
 	flex-direction: column;
 
+	height: 90vh;
 	max-width: 0;
 
 	padding-right: 0;
@@ -151,6 +153,8 @@ $duration: 0.5s;
 
 	@media screen and (min-width: breakpoint('tablet')) {
 		position: static;
+
+		height: auto;
 
 		max-width: none;
 
@@ -207,8 +211,9 @@ $duration: 0.5s;
 }
 
 .header-menu {
-	flex-grow: 1;
 	order: -1;
+
+	height: 55vh;
 
 	margin-top: 0;
 	margin-right: 0;
@@ -219,6 +224,8 @@ $duration: 0.5s;
 
 	@media screen and (min-width: breakpoint('tablet')) {
 		clear: right;
+
+		height: auto;
 
 		display: table;
 
@@ -232,6 +239,7 @@ $duration: 0.5s;
 
 		color: palette('blue');
 	}
+
 }
 
 .header-menu ul {
@@ -267,7 +275,7 @@ $duration: 0.5s;
 
 	display: block;
 
-	margin-top: auto;
+	margin-top: 2rem;
 	margin-right: 0;
 	margin-bottom: 0;
 	margin-left: auto;
@@ -409,7 +417,7 @@ $duration: 0.5s;
 }
 
 [id='menu-opener']:checked + .main-container {
-	height: 100%;
+	// height: 100%;
 
 	padding: 0;
 
