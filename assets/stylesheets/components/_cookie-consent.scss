@@ -8,6 +8,10 @@
 	background-color: transparent;
 
 	border: 0;
+
+	-webkit-appearance: none; //sass-lint:disable-line no-vendor-prefixes
+	   -moz-appearance: none; //sass-lint:disable-line no-vendor-prefixes indentation
+	        appearance: normal; //sass-lint:disable-line indentation
 }
 
 .cc-theme-classic .cc-btn {
