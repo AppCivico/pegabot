@@ -73,12 +73,23 @@ $height--desktop: $line-height * 3rem;
 .footer-menu > ul {
 	display: flex;
 
+	flex-direction: column;
 	flex-wrap: wrap;
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		flex-direction: row;
+	}
+
 }
 
 .footer-menu li {
 	flex-basis: 0;
 	flex-grow: 1;
+	margin-bottom: 0.5rem;
+
+	@media screen and (min-width: breakpoint('desktop')) {
+		margin-bottom: 0;
+	}
 }
 
 .site-footer__contact,
