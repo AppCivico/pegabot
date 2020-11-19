@@ -1,7 +1,7 @@
 ---
 language: pt
 draft: false
-title: Política de Privacidade PEGABOTS
+title: Política de Privacidade PEGABOT
 slug: privacidade
 date: 2018-03-29T18:42:22-03:00
 weight: 10
