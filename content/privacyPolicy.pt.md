@@ -1,7 +1,7 @@
 ---
 language: pt
 draft: false
-title: Política de Privacidade PEGABOTS
+title: Política de Privacidade PEGABOT
 slug: privacidade
 date: 2018-03-29T18:42:22-03:00
 weight: 10
@@ -14,9 +14,8 @@ Esta política de privacidade está em conformidade com a LEI Nº 13.709, DE 14 
 
 ## DOS REGISTROS DE ACESSO
 
-1) Ao acessar este site, independente de cadastro, certas informações sobre o visitante como o protocolo de Internet (IP), navegação através do site, o software utilizado e o tempo gasto, junto com outras informações semelhantes, serão armazenados em servidores do Pegabot com base no legítimo interesse, objetivando melhorar a experiência do usuário. Este registro não irá identificar especificamente o usuário. A informação será utilizada apenas internamente para análise de tráfego no website.
-
-1. Essas informações serão armazenadas e somente serão fornecidas a terceiros na forma da Lei e mediante ordem judicial.
+1. Ao acessar este site, independente de cadastro, certas informações sobre o visitante como o protocolo de Internet (IP), navegação através do site, o software utilizado e o tempo gasto, junto com outras informações semelhantes, serão armazenados em servidores do Pegabot com base no legítimo interesse, objetivando melhorar a experiência do usuário. Este registro não irá identificar especificamente o usuário. A informação será utilizada apenas internamente para análise de tráfego no website.
+2. Essas informações serão armazenadas e somente serão fornecidas a terceiros na forma da Lei e mediante ordem judicial.
 
 ## DISPOSIÇÕES SOBRE O TRATAMENTO DE DADOS PESSOAIS
 
