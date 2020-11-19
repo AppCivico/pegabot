@@ -19,7 +19,7 @@ Esta política de privacidade está em conformidade com a LEI Nº 13.709, DE 14 
 
 ## DISPOSIÇÕES SOBRE O TRATAMENTO DE DADOS PESSOAIS
 
-3- Para o correto desempenho de suas finalidades, o Pegabot pode solicitar ou obter dados pessoais (aqui denominados "dados") dos seus usuários. O tratamento desses dados será governado pelos Termos de Uso do Pegabot, bem como pela presente política de privacidade.
+**3-** Para o correto desempenho de suas finalidades, o Pegabot pode solicitar ou obter dados pessoais (aqui denominados "dados") dos seus usuários. O tratamento desses dados será governado pelos Termos de Uso do Pegabot, bem como pela presente política de privacidade.
 
 Para fins da LGPD considera-se dado pessoal, a “informação relacionada a pessoa natural identificada ou identificável” (Art. 5º, I), considerando-se a criptografia instrumento para anonimização de dados “dado anonimizado: dado relativo a titular que não possa ser identificado, considerando a utilização de meios técnicos razoáveis e disponíveis na ocasião de seu tratamento” (Art. 5º, III).
 
