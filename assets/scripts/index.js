@@ -1,4 +1,5 @@
 /* global Vue */
+/* global gtag */
 
 import * as params from '@params';
 import 'cookieconsent';
@@ -336,11 +337,17 @@ window.newVue = {
 			}
 		},
 		toApprove(index) {
+			if (gtag) {
+				gtag('event', 'aprovar');
+			}
 			this.pending.toApprove = true;
 			return this.submitApproval('approve', index)
 				.finally(() => { this.pending.toApprove = false; });
 		},
 		toDisapprove(index) {
+			if (gtag) {
+				gtag('event', 'desaprovar');
+			}
 			this.pending.toDisapprove = true;
 			return this.submitApproval('disapprove', index)
 				.finally(() => { this.pending.toDisapprove = false; });
