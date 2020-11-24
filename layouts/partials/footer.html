@@ -81,6 +81,9 @@
 ></script>
 
 <script>
+
+var gtag;
+
 var cookieContent = {
 		message: {{ i18n "cookieContentMessage" }},
 		dismiss: {{ i18n "cookieContentDismiss" }},
@@ -98,7 +101,7 @@ window.cookieconsent.initialise({
 
 		if (didConsent) {
 			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
+			gtag = function gtag() { dataLayer.push(arguments); }
 			gtag('js', new Date());
 
 			gtag('config', '{{ $.Site.GoogleAnalytics }}');
@@ -114,7 +117,7 @@ window.cookieconsent.initialise({
 
 		if (didConsent) {
 			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
+			gtag = function gtag() { dataLayer.push(arguments); }
 			gtag('js', new Date());
 
 			gtag('config', '{{ $.Site.GoogleAnalytics }}');
