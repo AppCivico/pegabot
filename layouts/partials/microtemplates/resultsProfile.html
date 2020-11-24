@@ -167,7 +167,9 @@
 
 				</li>
 				<li class="profile__buttons-item">
-					<a :href="window.location.href.replace('/resultados', '/detalhes')"
+					<a
+						@click="gtag ? gtag('event', 'detalhes') : ''"
+						:href="window.location.href.replace('/resultados', '/detalhes')"
 						class="fancy-button">
 						{{ i18n "allFeatures" }}
 					</a>
