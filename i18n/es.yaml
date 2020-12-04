@@ -6,15 +6,15 @@
   translation: "Análisis completo"
 - id: analisysDownload
   translation: "Descargar análisis"
-- id: analisysLoading-1
+- id: analysisLoading-1
   translation: "Espere mientras AtrapaBot realiza el análisis"
-- id: analisysLoading-2
+- id: analysisLoading-2
   translation: "AtrapaBot analiza los tuits del perfil."
-- id: analisysLoading-3
+- id: analysisLoading-3
   translation: "AtrapaBot analiza la frecuencia de los tuits."
-- id: analisysLoading-4
+- id: analysisLoading-4
   translation: "AtrapaBot analiza el lenguaje del perfil."
-- id: analisysLoading-5
+- id: analysisLoading-5
   translation: "AtrapaBot analiza la red del perfil."
 - id: analysis
   translation: "Análisis"
