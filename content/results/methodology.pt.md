@@ -10,6 +10,4 @@ Desde início do uso do computadores pelo homem existe uma tentativa de aproveit
 
 Dispondo de teorias suficientemente precisas acerca do  funcionamento da mente humana, torna-se possível expressar essas teorias num programa de computador. Se as entradas e as saídas de um programa corresponder ao comportamento humano, dispomos de uma evidência de que alguns dos mecanismos do programa podem estar funcionando como nos seres humanos.
 
-Dispondo de teorias suficientemente precisas acerca do  funcionamento da mente humana, torna-se possível expressar essas teorias num programa de computador. Se as entradas e as saídas de um programa corresponder ao comportamento humano, dispomos de uma evidência de que alguns dos mecanismos do programa podem estar funcionando como nos seres humanos.
-
-Newell e Simon que desenvolveram o GPS (General Problem Solving) não se contentavam com que o seu programa resolvesse os problemas de forma correcta. Para eles era mais importante comparar os passos de raciocínio seguidos pelo programa com os passos seguidos por várias pessoas na resolução dos mesmo problemas [Newell & Simon, 1961].
+Newell e Simon que desenvolveram o GPS (General Problem Solving) não se contentavam com que o seu programa resolvesse os problemas de forma correcta. Para eles era mais importante comparar os passos de raciocínio seguidos pelo programa com os passos seguidos por várias pessoas na resolução dos mesmo problemas \[Newell & Simon, 1961].
