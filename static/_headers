@@ -1,27 +1,3 @@
-/*
-  # Only connect to this site and subdomains via HTTPS for the next one year
-  Strict-Transport-Security: max-age=31536000; includeSubDomains
-
-  # Block site from being framed with X-Frame-Options and CSP
-  Content-Security-Policy: frame-ancestors 'self'; upgrade-insecure-requests; default-src 'self' https://api.github.com/; connect-src 'self' https://*.google-analytics.com/ https://api.github.com/ https://www.githubstatus.com/ https://api.pegabot.com.br/; frame-src 'self' https://www.youtube-nocookie.com/ https://youtube-nocookie.com/ https://www.youtube.com/ https://youtube.com/; img-src 'self' 'unsafe-inline' https://*.google-analytics.com/ https://*.appcivico.com/ https://*.cloudfront.net/ https://browser-update.org/ https://pbs.twimg.com/ https://*.githubusercontent.com data: blob:; object-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://identity.netlify.com/ https://api.twitter.com/ https://browser-update.org/ https://cdn.jsdelivr.net/ https://mobile.twitter.com/ https://pbs.twimg.com/ https://pic.twitter.com/ https://platform.twitter.com/ https://publish.twitter.com/ https://s3.amazonaws.com/downloads.mailchimp.com/ https://sentry.eokoe.com/ https://static.twitter.com/ https://storage.googleapis.com/ https://twemoji.twitter.com/ https://twitter.com/ https://unpkg.com/ https://www.google-analytics.com/ https://www.googletagmanager.com/ https://api.github.com/ https://s3.amazonaws.com/ https://cdnjs.cloudflare.com/ data:; style-src 'self' 'unsafe-inline' https://cdn-images.mailchimp.com/ https://fonts.googleapis.com/; font-src 'self' https://cdn-images.mailchimp.com/ https://fonts.googleapis.com/ https://www.google-analytics.com/ https://fonts.gstatic.com/; media-src https://*.cloudfront.net/ https://google-analytics.com/ ;
-
-  # X-Frame-Options tells the browser whether you want to allow your site to be framed or not. By preventing a browser from framing your site you can defend against attacks like clickjacking.
-  X-Frame-Options: SAMEORIGIN
-
-  # Prevent browsers from incorrectly detecting non-scripts as scripts
-  X-Content-Type-Options: nosniff
-
-  # Don't load any resource type not explicitly enabled
-  # Disable plugins like Flash or Silverlight
-  # Load images, scripts, stylesheets and fonts from self
-  Content-Security-Policy: upgrade-insecure-requests;
-
-  # X-XSS-Protection sets the configuration for the cross-site scripting filter built into most browsers.
-  X-XSS-Protection: 1; mode=block
-
-  # Referrer Policy is a new header that allows a site to control how much information the browser includes with navigations away from a document and should be set by all sites.
-  Referrer-Policy: strict-origin-when-cross-origin
-
 # Expire rules for static content
 
 # cache.appcache, your document html and data

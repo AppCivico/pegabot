@@ -2,9 +2,9 @@ eU:
   id: "europeanUnion"
   name: "European Union"
   icon: "/assets/images/logos/Flag_of_Europe.svg"
-  iconNegative: "/assets/images/logos/Flag_of_Europe.svg"
-  iconHeight: 132
-  iconWidth: 197
+  iconNegative: "/assets/images/logos/Flag_of_Europe--negative.svg"
+  iconWidth: 507
+  iconHeight: 489
   link: "https://europa.eu/"
   weight: 0
 ndi:
@@ -12,7 +12,7 @@ ndi:
   name: "National Democratic Institute"
   icon: "/assets/images/logos/NDI.svg"
   iconNegative: "/assets/images/logos/NDI--negative.svg"
-  iconHeight: 65
   iconWidth: 200
+  iconHeight: 65
   link: "https://www.ndi.org/"
   weight: 1
