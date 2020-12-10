@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Change
 
+
 - CSP rules to TOML file
 - Vue lib to minified version
 
