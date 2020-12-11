@@ -70,6 +70,7 @@
 .about-page hr,
 .about-page hr ~ * {
 	margin-right: auto;
+	margin-bottom: $line-height * 2em;
 	margin-left: auto;
 
 	font-size: ms(1);

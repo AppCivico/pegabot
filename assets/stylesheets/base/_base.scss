@@ -290,6 +290,10 @@ video {
 	max-width: 100%;
 }
 
+p > img:only-child {
+	margin-bottom: $line-height * 1em;
+}
+
 video {
 }
 
