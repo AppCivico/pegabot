@@ -8,7 +8,9 @@ weight: 10
 rootOf: false
 menu: main
 ---
-La presente Política de Privacidad rige el tratamiento de datos personales por parte de AtrapaBot. Los usuarios quedan informados, por lo tanto, que al acceder a las funcionalidades de **ATRAPABOT** prestan consentimiento al tratamiento de sus datos personales en la forma establecida en esta Política de Privacidad. Esta política de privacidad está de conformidade con la LEY Nº 13.709, DE 14 DE AGOSTO DE 2018 (Ley General de Protección de Datos, o LGPD). 
+La presente Política de Privacidad rige el tratamiento de datos personales por parte de AtrapaBot. Los usuarios quedan informados, por lo tanto, que al acceder a las funcionalidades de **ATRAPABOT** prestan consentimiento al tratamiento de sus datos personales en la forma establecida en esta Política de Privacidad. 
+
+Esta política de privacidad está de conformidade con la LEY Nº 13.709, DE 14 DE AGOSTO DE 2018 (Ley General de Protección de Datos, o LGPD). 
 
 
 
