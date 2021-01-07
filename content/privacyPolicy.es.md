@@ -1,7 +1,7 @@
 ---
 language: es
 draft: false
-title: Política de Privacidad Pegabot
+title: Política de Privacidade ATRAPABOTs
 slug: privacidade
 date: 2018-03-29T18:42:22-03:00
 weight: 10
@@ -18,7 +18,9 @@ La presente Política de Privacidad rige el tratamiento de datos personales por 
 
 **2-** Esas informaciones serán almacenadas y sólo se las ofrecerán a terceros en la forma de la Ley y mediante orden judicial. 
 
-\## DISPOSICIONES SOBRE EL TRATAMIENTO DE DATOS PERSONALES
+
+
+###### DISPOSICIONES SOBRE EL TRATAMIENTO DE DATOS PERSONALES
 
  **3-** Para el correcto desempeño de sus finalidades, **ATRAPABOT** puede solicitar u obtener datos personales (en adelante demonidados "datos") de sus usuarios. El tratamiento de esos datos se regirá por las Condiciones de Uso de **ATRAPABOT**, así como por la presente política de privacidad. A los efectos de la LGPD, se considera dato personal a la "información relacionada a la persona natural identificada o identificable"(Art. 5º, I), considerándose a la criptografía un instrumento para la anonimización de datos "dato anonimizado: dato relativo a titular que no pueda ser identificado, considerando la utilización de medios técnicos razonables y disponibles en el momento de su tratamiento” (Art. 5º, III).
 
@@ -36,13 +38,17 @@ La presente Política de Privacidad rige el tratamiento de datos personales por 
 
 **10-** Hay un canal a través del cual los usuarios pueden corregir o actualizar datos, siempre que sea necesario, así como solicitar eliminación definitiva de sus datos de **ATRAPABOT**, en caso deseen salir o ser eliminados de **ATRAPABOT**. El usuario podrá solicitar la eliminación a través del canal de contacto con el equipo de **ATRAPABOT**(\[dadosopessoais@itsrio.org](mailto:dadosopessoais@itsrio.org)), debiendo identificarse e informar qué contenidos de su autoría desea eliminar. 
 
-\## SOBRE EL ALMACENAMIENTO DE INFORMACIONES CONSULTADAS
+
+
+###### SOBRE EL ALMACENAMIENTO DE INFORMACIONES CONSULTADAS
 
  **11-** **ATRAPABOT** almacena en su sistema informaciones de perfiles públicos consultados y podrá utilizarlos para fines de búsqueda. Las informaciones almacenadas consisten en: (1) nombre de usuario, (2) arroba (handle), (3) descripción de perfil, (4) sello de verificación, (5) fecha de creación, (6) cantidad de tuits, (7) cantidad de me gusta, (8) foto de perfil, (9) hashtags y menciones de tuits más recientes. Datos consultados, pero no almacenados: 200 tuits más recientes. Todo de conformidad con las condiciones de uso y política de privacidad de Twitter. 
 
 **12-** De acuerdo con la Lei General de Protección de Datos (Art. 7º § 4º), se dispensa la exigencia de consentimiento para los datos que se hicieron manifestamente públicos por el titular, resguardados sus derechos y princípios previstos en la ley. 
 
-\## SOBRE LA COMPARTICIÓN DE INFORMACIONES CON TERCEROS PARA FINES DE BÚSQUEDA
+
+
+###### SOBRE LA COMPARTICIÓN DE INFORMACIONES CON TERCEROS PARA FINES DE BÚSQUEDA
 
  **13-** **ATRAPABOT** podrá compartir los datos, obtenidos junto a los usuarios, a organismos de investigación, periodistas y organismos públicos para la realización de estudios, siempre observando la anonimización de datos personales cuando se publique los resultados de análisis. 
 
@@ -54,7 +60,9 @@ La presente Política de Privacidad rige el tratamiento de datos personales por 
 
 **17-** También se reserva la posibilidad de compartición en la hipótesis de orden judicial. 
 
-\## SOBRE LA PORTABILIDAD DE DATOS 
+
+
+###### SOBRE LA PORTABILIDAD DE DATOS 
 
 **18- ATRAPABOT** atenderá a las solicitudes de portabilidad de datos del titular a través del correo: \[dadosopessoais@itsrio.org](mailto:dadosopessoais@itsrio.org) 
 
@@ -62,10 +70,12 @@ La presente Política de Privacidad rige el tratamiento de datos personales por 
 
 **20-** Para el cumplimiento de la portabilidad de datos, el suministro de datos solicitados ocurrirá a través de formatos más usuales, como JSON, CSV y XML. 
 
-\## SOBRE LA INSTALACIÓN DE COOKIES Y LA AUTORIZACIÓN PARA LA REALIZACIÓN DE INVESTIGACIONES 
+
+
+###### SOBRE LA INSTALACIÓN DE COOKIES Y LA AUTORIZACIÓN PARA LA REALIZACIÓN DE INVESTIGACIONES 
 
 **21-** Al acceder a **ATRAPABOT** el usuario está de acuerdo con la instalación de cookies en el dispositivo utilizado para acceder al sitio, estando seguro que tales cookies serán utilizados con el propósito de analizar la actividade de los usuarios para perfeccionar el funcionamiento del sitio. Así como para almacenar las consultas individuales realizadas por cada usuario con la intención de posibilitar a **ATRAPABOT** la realización de búsqueda basada en esas consultas, optimizando los resultados entregados, garantizando una mejor experiencia para el usuario. 
 
-\## SOBRE LA MODIFICACIÓN DE LA POLÍTICA DE PRIVACIDAD
+###### SOBRE LA MODIFICACIÓN DE LA POLÍTICA DE PRIVACIDAD
 
  **22-**Las condiciones especificadas en esta Política de Privacidad podrán modificarse en cualquier momento. En caso de que esas modificaciones sean significativas o afecten, de manera concreta, los derechos y deberes de los usuarios de **ATRAPABOT**, las mismas serán divulgadas, de forma clara, en el sitio de **ATRAPABOT** o enviadas por correo electrónico. Quedando el usuario, por lo tanto, responsable de verificar regularmente el sitio de **ATRAPABOT** para buscar actualizaciones.
