@@ -1,10 +1,11 @@
 ---
-title: "Inscribirse"
-date: 2018-03-26T15:21:11-03:00
 draft: false
-menu:
 layout: none
-slug:
 language: es
+title: Deja tu correo para enterarte de las novedades sobre AtrapaBot.
+slug: null
+date: 2018-03-26T15:21:11-03:00
+weight: 0
 rootOf: false
+menu: null
 ---
