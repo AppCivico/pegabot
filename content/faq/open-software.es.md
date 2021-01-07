@@ -1,17 +1,18 @@
 ---
-date: 2020-09-11T18:31:52-03:00
+language: es
 draft: false
-slug: "open-software"
-title: "Por que é importante um sistema de detecção de bot ser construído em software livre?"
+title: ¿Por qué es importante que se construya un sistema de detección de bots
+  en software libre?
+slug: open-software
+date: 2020-09-11T18:31:52-03:00
+weight: 5
 layout: none
 type: faq
-weight: 5
-language: es
 ---
-Os sistemas em software livre concedem ao usuário a liberdade de modificar um código. Entendemos que ter um código aberto permite a participação da sociedade na sua construção e melhoria como forma de produzir um conhecimento mais democrático às tecnologias livres. Além de possibilitar que as pessoas troquem informações de forma horizontal, fortalece ações junto às plataformas digitais, suas políticas de uso e principalmente como redes de desinformação podem funcionar com uso dessas técnicas.
+Los sistemas de software libre conceden al usuario la libertad de modificar un código. Entendemos que al tener un código abierto, se permite que la sociedad participe en su construcción y perfeccionamiento como forma de producir un conocimiento más democrático a las tecnologías libres. Además de posibilitar que las personas cambien informaciones de manera horizontal, fortalecen acciones junto a las plataformas digitales y sus políticas de uso. Por fin, ayudan a identificar cómo las redes de desinformación pueden funcionar, para que de esa manera puedan combatir su multiplicación utilizando esas técnicas. 
 
-Essa iniciativa também está alinhada ao White Paper ["Recomendações Sistêmicas para combater a desinformação nas eleições do Brasil"](https://tecnologiaequidade.org.br/projects/desinformacao-em-eleicoes/), realizado pelo Instituto Tecnologia e Equidade (IT&E).
+Esa iniciativa también está alineada a White Paper \["Recomendaciones Sistémicas para combatir a la desinformación en las elecciones de Brasil"](https://tecnologiaequidade.org.br/projects/desinformacao-em-eleicoes/), realizado por el Instituto Equidad & Tecnología (IT&E). 
 
-No tópico 5 do documento, há a informação: CRIAR NOVOS CICLOS DE FEEDBACK DE AJUSTE - em Recomendações 2019-2020. Nesse item, o Instituto acredita que "Demandar das Academias e dos Institutos de Pesquisa: desenvolvimento de tecnologias livres para detecção de robôs, perfis falsos, haters e desinformação" é um ponto de alavancagem ao combate dos desequilíbrios apresentados no sistema eleitoral.
+En el tema 5 del documento, se encuentra la información: CREAR NUEVOS CICLOS DE FEEDBACK DE AJUSTE - en Recomendaciones 2019-2020. En ese tema, el Instituto considera " Demanda a la Autoridad y a los Institutos de Investigación: desarrollo de tecnologías libres para la detección de robots, perfiles falsos, haters y desinformación" un ponto de apalancamiento al combate a los desequilibrios presentados en el sistema electoral. 
 
-Não há estudos definitivos sobre algoritmos de detecção de bots e nenhum método é isento de falhas. Neste sentido, a inteligência coletiva e a possibilidade de colaboração são os melhores caminhos para mantermos nossa ferramenta atualizada e eficaz. Você pode colaborar de várias formas, veja como [aqui](/collaborate).
+No hay estudios definitivos sobre algoritmos de detección de bots y ningún método está exento de errores. En este sentido, la inteligencia colectiva y la posibilidad de colaboración son los mejores caminos para que podamos mantener nuestra herramienta actualizada y eficaz. Puedes colaborar de diversas formas, míralo \[acá](/collaborate).
