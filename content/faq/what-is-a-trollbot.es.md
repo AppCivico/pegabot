@@ -1,11 +1,11 @@
 ---
-date: 2020-09-11T18:29:08-03:00
+language: es
 draft: false
-slug: "o-que-sao-trollbots"
-title: "O que são trollbots?"
+title: ¿Qué son trollbots?
+slug: o-que-sao-trollbots
+date: 2020-09-11T18:29:08-03:00
+weight: 2
 layout: none
 type: faq
-language: es
-weight: 2
 ---
-O termo troll, em inglês, significa aquele que “trolla” alguém, ou seja, publica conteúdo não relacionado à uma discussão, causa um desentendimento, inflama essa discussão ou mesmo ataca diretamente um usuário na rede. Os trollbots, então, são um tipo de bot, muitas vezes controlado por humanos, que atua nas redes sociais com o objetivo específico de “trollar” alguma pessoa, perfil, marca, empresa, figura pública, causando discórdia, manipulação de discurso e incitando violência.
+El término troll, en inglés, significa el que “trollea” a alguién, o sea, publica contenido no relacionado a una discusión, causa algún tipo de desacuerdo, calienta esa discusión o incluso ataca directamente a un usuario en la red. Los trollbots, por lo tanto, son un tipo de bot, muchas veces controlados por humanos, que actúan en las redes sociales con el objetivo específico de "trolear" a una persona, perfil, marca, empresa o figura pública, causando desacuerdo, manipulación de discurso e incitando a la violencia.
