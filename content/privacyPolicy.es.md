@@ -10,7 +10,7 @@ menu: main
 ---
 La presente Política de Privacidad rige el tratamiento de datos personales por parte de AtrapaBot. Los usuarios quedan informados, por lo tanto, que al acceder a las funcionalidades de **ATRAPABOT** prestan consentimiento al tratamiento de sus datos personales en la forma establecida en esta Política de Privacidad. Esta política de privacidad está de conformidade con la LEY Nº 13.709, DE 14 DE AGOSTO DE 2018 (Ley General de Protección de Datos, o LGPD). 
 
-\## SOBRE LOS REGISTROS DE ACCESO
+###### SOBRE LOS REGISTROS DE ACCESO
 
  **1-** Al acceder a este sitio web, independiente de estar registrado, determinadas informaciones sobre el visitante se almacenarán en los servidores de **ATRAPABOT** con el interés legítimo de mejorar su experiencia . Son ellas: protocolo de Internet (IP), navegación a través del sitio web, o software y tiempo utilizado, junto a otras ifnformaciones semejantes. Este registro no identificará el usuario en específico, sólo se utilizará la información internamente para el análisis de tráfico en el sitio web. 
 
