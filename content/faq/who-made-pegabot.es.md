@@ -8,4 +8,4 @@ weight: 4
 layout: none
 type: faq
 ---
-Atrapabot está desarrolado por el \[Instituto de Tecnología y Sociedad de Río de Janeiro (ITS Rio)](https://itsrio.org/) en colaboración con el \[Instituto Equidad & Tecnología](http://tecnologiaequidade.org.br/). El motor de análisis es un software libre y puede ser libremente utilizado, estudiado, modificado y redistribuido. Su código está disponible en \[Github](https://github.com/AppCivico/pegabot).
+**ATRAPABOT** está desarrolado por el \[Instituto de Tecnología y Sociedad de Río de Janeiro (ITS Rio)](https://itsrio.org/) en colaboración con el \[Instituto Equidad & Tecnología](http://tecnologiaequidade.org.br/). El motor de análisis es un software libre y puede ser libremente utilizado, estudiado, modificado y redistribuido. Su código está disponible en \[Github](https://github.com/AppCivico/pegabot).
