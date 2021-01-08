@@ -8,4 +8,4 @@ date: 2020-10-13T13:56:58-03:00
 type: callToAction
 layout: none
 ---
-\[Analizar otro perfil](/)
+[Analizar otro perfil](/)
