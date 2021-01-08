@@ -27,3 +27,8 @@ Puesdes contribuir con el proyecto de diversas maneras: siendo un multiplicador 
 - - -
 
 Se lanzó la plataforma en marzo de 2018 y desde entonces sigue en constante perfeccionamiento. El proyecto está financiado por la Unión Europea. Su versión en español ha sido finanaciada por National Democratic Institute (NDI).
+
+![União Européia](/assets/images/logos/Flag_of_Europe.svg)
+![National Democratic Institute](/assets/images/logos/NDI.svg)
+- - -
+{{< youtube wRfFalcGEoo >}}
