@@ -1,10 +1,10 @@
 ---
 language: es
 draft: false
-title: Agora que você já viu o que pode ser feito com o PEGABOT
+title: "Ahora que ya has visto lo que se puede hacer con ATRAPABOT "
 date: 2020-09-04T18:51:34.000Z
 weight: 0
 type: callToAction
 layout: none
 ---
-[Analise a probabilidade de um perfil do Twitter ser um bot](/)
+[Analiza la probabilidad de que un perfil de Twitter sea un bot](/)
