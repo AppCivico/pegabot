@@ -1,7 +1,7 @@
 ---
 language: es
 draft: false
-title: Quer contribuir com o projeto PegaBot?
+title: ¿Quieres contribuir con el proyecto AtrapaBot?
 slug: colaborar
 date: 2018-03-13T18:17:00-03:00
 weight: 4
@@ -12,4 +12,4 @@ menu:
   - main
 linkTitle: Quero Colaborar
 ---
-Você pode contribuir com o PegaBot sendo um multiplicador das análises, ajudando a melhorar o código da ferramenta ou mesmo identificando erros nas análises e sugerindo melhorias. De todas as formas, você contribuirá a dar mais transparência ao uso de bots no Brasil. Conheça as possibilidades!
+Puedes contribuir con el proyecto de diversas maneras: siendo un multiplicador de análisis, ayudando a perfeccionar el código de herramientas o incluso identificando errores en los análisis y sugiriendo mejoras. De todas formas, contribuyes para dar más  transparencia a la utilización de bots en Brasil. ¡Conoce las posibilidades!
