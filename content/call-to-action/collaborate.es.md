@@ -1,12 +1,12 @@
 ---
-title: "Quer fazer parte do projeto?"
-date: 2020-08-13T00:40:11-03:00
-draft: false
-layout: none
-type: callToAction
-slug: "colaborar"
 language: es
+draft: false
+title: ¿Quieres formar parte del proyecto?
+slug: colaborar
+date: 2020-08-13T00:40:11-03:00
+type: callToAction
+layout: none
 ---
-Você pode contribuir com o PegaBot sendo um multiplicador das análises, ajudando a melhorar o código da ferramenta ou mesmo identificando erros nas análises e sugerindo melhorias. De todas as formas, você contribuirá a dar mais transparência ao uso de bots no Brasil.
+Puedes contribuir con el proyecto de diversas maneras: siendo un multiplicador de análisis, ayudando a perfeccionar el código de herramientas, o incluso identificando errores en los análisis y sugiriendo mejoras. De todas formas, contribuyes para dar más  transparencia a la utilización de bots en Brasil.
 
-[Quero colaborar](/colaborar)
+[Quiero cooperar](/cooperar)
