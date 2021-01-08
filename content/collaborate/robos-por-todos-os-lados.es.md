@@ -1,13 +1,13 @@
 ---
-date: 2020-08-13T00:44:56-03:00
+language: es
 draft: false
-title: "Quer multiplicar o conhecimento sobre bots no Twitter?"
-layout: none
+title: ¿Quieres multiplicar el conocimiento sobre bots en Twitter?
+date: 2020-08-13T00:44:56-03:00
+weight: 2
 type: collaborate
 imageSrc: /uploads/twitter-letter-bg.png
 bottomImageSrc: /uploads/twitter-bird-bg.png
 link: https://itsrio2.typeform.com/to/uGFw4zDc
-weight: 2
-language: es
+layout: none
 ---
-Mais do que uma  ferramenta para detecção de bots, o PegaBot é um projeto para ajudar as pessoas a entenderem mais sobre o uso de contas automatizadas na circulação de  desinformação nas redes sociais. Compartilhe conhecimento e ajude no debate sobre o uso de bots no Twitter!
+Más allá de una herramienta para detección de bots, Atrapabot es un proyecto que ayuda a las personas a comprender mejor el uso de cuentas automatizadas en la circulación de desinformación en las redes sociales. ¡Comparte conocimiento y ayuda en el debate sobre el uso de bots en Twitter!
