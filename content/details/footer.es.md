@@ -1,20 +1,14 @@
 ---
-title:
-date: 2020-10-22T19:22:06-03:00
+title: null
+language: es
 draft: false
+slug: ""
+date: 2020-10-22T19:22:06-03:00
 layout: none
 headless: true
-slug: ""
-language: es
 ---
+Esta ficha fue desarrollada para que entiendas el por qué de la evaluación final de Atrapabot [PegaBot](/), con base en todos los criterios que nuestros algoritmos llevan en cuenta para la realización del análisis. Algunas de las informaciones públicas de los perfiles consideradas en el análisis son: el nombre del perfil de usuario y cuantos caracteres posee, la cantidad de perfiles seguidos (following) y seguidores (followers), texto de la descripción del perfil, número de publicaciones (tuits) y favoritos. Después de rerererecopilar las informaciones de los datos, Atrapabot los proccesa y los transforma en variables que componen el cálculo final de la probabilidad .
 
-Esta ficha foi desenvolvida para que você entenda o porquê da avaliação final do
-[PegaBot](/), com base em todos os critérios que são considerados por nosso algoritmo
-para a realização da análise. Caso você tenha dúvidas ou discorde do resultado,
-você pode [informar aqui](https://itsrio2.typeform.com/to/uGFw4zDc). Caso você
-queira analisar nosso código e sugerir melhorias, você também pode acessar o repositório no [GitHub](https://github.com/AppCivico/pegabot).
+¡Si quieres saber más sobre cómo ha surgido Atrapabot, quiénes son los idealizadores del proyecto y para qué sirve, accede a nuestra página de [Transparencia](/transparencia)!
 
-Se você quiser saber mais sobre como surgiu o PegaBot, quem são os idealizadores
-do projeto e para que ele serve, acesse a nossa página de [Transparência](/transparencia/)!
-
-Quer saber mais sobre bots e conhecer análises que foram feitas utilizando a ferramenta PegaBot? Acesse a nossa página de [Análises](/analise/)!
+¿Quieres saber más sobre bots y conocer los análisis que se han hecho con la herramienta Atrapabot? ¡Accede a nuestra página de [Análisis](/análisis)!
