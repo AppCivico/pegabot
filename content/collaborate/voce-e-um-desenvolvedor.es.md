@@ -1,7 +1,8 @@
 ---
 language: es
 draft: false
-title: Você é um desenvolvedor e quer ajudar a melhorar o algoritmo do PEGABOT?
+title: ¿Eres un desarrollador y quieres ayudar a perfeccionar el algoritmo de
+  ATRAPABOT?
 slug: sou-dev
 date: 2020-08-13T00:44:56-03:00
 weight: 3
@@ -11,4 +12,5 @@ bottomImageSrc: /uploads/file-bg.png
 link: https://itsrio2.typeform.com/to/uGFw4zDc
 layout: none
 ---
-Sabemos que todo projeto de tecnologia precisa de constante aprimoramento. Com o PegaBot não é diferente! O projeto possui um grupo de desenvolvedores voluntários que trabalham para melhorar o algoritmo da ferramenta. Além de compartilhar pesquisas e ideias, você pode efetivamente botar a mão na massa - quer dizer, nos códigos! O PegaBot foi construído em uma licença de código aberto, disponível no [Github](https://github.com/AppCivico/pegabot).
+
+Sabemos que todo proyecto de tecnología requiere constante perfeccionamiento. ¡Con Atrapabot no es diferente! El proyecto posee un grupo de desarrolladores voluntarios que trabajan para perfeccionar el algoritmo de la herramienta. ¡Además de compartir búsquedas e ideas, puedes poner manos a la obra - o mejor, a los códigos! AtrapaBot fue construído en una licencia de código abierto, disponible en [Github](https://github.com/AppCivico/pegabot).
