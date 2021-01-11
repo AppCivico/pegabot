@@ -1,15 +1,15 @@
 ---
 language: es
 draft: false
-title: Como surgiu o PEGABOT ES
+title: "Cómo  ha surgido ATRAPABOT "
 slug: ""
-date: 2020-11-09T18:32:21Z
+date: 2020-11-09T18:32:21.000Z
 weight: 2
 intro: ""
 homepage: true
 transparency: true
 layout: none
 ---
-ES No final da década de 1990, os bots começaram a desenvolver uma reputação negativa, ao serem usados no envio de SPAMs por e-mail, roubos de dados pessoais e fraudes, por exemplo. A partir de 2014, um fenômeno ganhou escala global e se tornou cada vez mais frequente: o uso de bots em campanhas de desinformação e manipulação do discurso na esfera pública.
+A finales de los años 90, los bots han empezado a desarrollar una mala reputación cuando se empieza a utilizarlos en el envío de SPAMs por correo electónico, robo de datos personales y fraudes, por ejemplo. A partir de 2014, un fenómeno adquirió escala global y se ha vuelto cada vez más frecuente: el uso de bots en las campañas de desinformación y manipulación de discurso en la esfera pública.
 
-Viralizar informações, desacreditar adversários e dificultar o debate público são apenas algumas das estratégias nas quais os bots são utilizados de forma coordenada. E pior: eles estão por aí e quase ninguém sabe como funcionam, quem os desenvolve e por quem são financiados. Para ajudar a combater esse problema, lançamos o PegaBot, um projeto dá mais transparência para o uso dos bots no Brasil.
+Viralizar informaciones, desacreditar adversarios y dificultar el debate público son apenas algunas de las estrategias en las cuales se utilizan los bots de manera coordinada. Lo peor es: están ahí y casi nadie sabe cómo funcionan, quiénes los desarrollan y financian. Para ayudar a combatir ese problema, lanzamos AtrapaBot, un poyecto para dar más transparencia a la utilización de bots en Brasil.
