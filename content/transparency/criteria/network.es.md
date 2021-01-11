@@ -1,32 +1,32 @@
 ---
 language: es
 draft: false
-title: Rede ES
-date: 2020-11-09T18:49:29Z
+title: Red
+date: 2020-11-09T18:49:29.000Z
 weight: 2
-intro: ES O algoritmo do PEGABOT coleta uma amostra da linha do tempo do
-  usuário, identificando hashtags utilizadas e menções ao perfil para realizar
-  suas análises. O objetivo é identificar características de distribuição de
-  informação na rede da conta analisada.
+intro: El algoritmo de AtrapaBot recopila una muestra de línea del tiempo,
+  identificando hasgtags utilizados y menciones al perfil, para realizar sus
+  análisis. El objetivo es identificar caracteristicas de distribución en la red
+  de la cuenta analizada.
 layout: none
 rootOf: false
 ---
-ES O algoritmo do PegaBot coleta uma amostra da linha do tempo do usuário, identificando hashtags utilizadas e menções ao perfil para realizar suas análises. O objetivo é identificar características de distribuição de informação na rede da conta analisada.
+El algoritmo de AtrapaBot recopila una muestra de línea del tiempo, identificando hasgtags utilizados y menciones al perfil, para realizar sus análisis. El objetivo es identificar caracteristicas de distribución en la red de la cuenta analizada.
 
-Após coletar as informações os dados, o PegaBot processa e transforma os dados recebidos em variáveis que compõem o cálculo final de probabilidade.
+Después de recopilar las informaciones de los datos, Atrapabot los proccesa y los transforma en variables que componen el calcula final de la probabilidad .
 
-Como o PegaBot prepara os dados
+Cómo AtrapaBot prepara los datos
 
-* Todas as hashtags coletadas são separadas e distribuídas em uma matriz;
-* Elementos repetidos não são contabilizados;
-* Não são contabilizados dados de menções ao perfil se elas pertencerem a uma resposta;
+* Todos los hastags recopilados son separados y distribuídos en una matriz;
+* No se contabilizan elementos repetidos;
+* No se contabilizan datos de menciones caso pertenezcan a una respuesta;
 
-O que o PegaBot analisa:
+Qué analiza Atrapabot:
 
-* **Distribuição das hashtags**: calcula o tamanho da distribuição dessas hashtags na rede;
-* **Distribuição das menções**: calcula o tamanho da distribuição de menções ao perfil do usuário na rede;
-* **Hashtags e menções**: encontra a quantidade de hashtags utilizadas e quantidade de menções realizadas ao perfil do usuário dentro da amostra coletada.
+* **Distribución de hashtags**: calcula el tamaño de la distribución de esos hashtags en la red;
+* **Distribución de menciones**: calcula el tamaño de la distribución de menciones al perfil del usuario de la red;
+* **Hashtags y menciones**: descubre la cantidad de hastags utilizados y la cantidad de menciones realizadas por el perfil del usuario dentro de la muestra recopilada.
 
-**Observações**
+**Observaciones**
 
-O índice de rede busca compreender se o usuário está, por exemplo, encaminhando mensagens de spam para uma certa hashtag. Perfis que possuem grandes quantidades de interações e um perfil monotemático quanto às hashtags utilizadas tendem a ter uma pontuação superior nas análises.
+El índice de red busca comprender si el usuario está, por ejemplo, reenviando mensajes de spam a un determinado hashtag. Perfiles que poseen grandes cantidades de interacciones y son monotemáticos en relación a los hastags utilizados suelen tener una calificación superior en los análisis.
