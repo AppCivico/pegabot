@@ -11,4 +11,4 @@ imageAlt: null
 link: https://feed.itsrio.org/eu-vejo-rob%C3%B4s-e-eles-est%C3%A3o-por-toda-parte-quase-tudo-que-voc%C3%AA-precisa-saber-sobre-bots-e-e6254225728c
 type: bookmark
 ---
-Eu vejo robôs e eles estão por toda parte: (quase) tudo que você precisa saber sobre bots e metodologias para detecção de automação
+Yo veo robots y están por todas partes: (casi) todo que necesitas saber sobre bots y metodologías para la detección de automatización. 
