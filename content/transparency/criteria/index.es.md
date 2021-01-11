@@ -1,7 +1,7 @@
 ---
 language: es
 draft: false
-title: Como funcionam os critérios do PegaBot
+title: Cómo funcionan los criterios de ATRAPABOT
 slug: criterios
 date: 2020-08-11T16:23:28-03:00
 layout: none
@@ -10,4 +10,4 @@ weight: 4
 rootOf: true
 menu: null
 ---
-O algoritmo do PegaBot utiliza informações públicas dos perfis no Twitter para realizar suas análises. O objetivo é identificar características que ajudem a determinar se o perfil é mais ou menos bot. Dê uma olhada abaixo nos critérios que são utilizados pela ferramenta.
+El algoritmo de Atrapabot utiliza informaciones públicas de los perfiles en Twitter para realizar sus análisis. El objetivo es identificar características que ayuden a determinar si el perfil es más o menos bot. Echa un vistazo abajo en los criterios utilizados por la plataforma.
