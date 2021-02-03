@@ -1,25 +1,18 @@
 ---
-date: 2018-03-13T18:04:04-03:00
+language: es
 draft: false
-slug: "o-que-a-nota-significa"
-title: "¿Qué significan los resultados?"
+title: ¿Qué significan los resultados?
+slug: o-que-a-nota-significa
+date: 2018-03-13T18:04:04-03:00
+weight: 7
 layout: none
 type: faq
-language: es
-weight: 7
 ---
-Atrapabot analiza el historial de mensajes del perfil de la red social que usted solicita analizar. En este momento Atrapabot se basa en patrones de comportamiento para identificar si es más probable que un humano utilice ese perfil o un robot. Los criterios para hacer esta evaluación son el intervalo de tiempo entre cada entrada (un intervalo pequeño entre cada entrada, 2 segundos por ejemplo, pueden indicar que la entrada fue hecha por un robot); la frecuencia y la aleatoriedad en el tiempo en que se efectúan las entradas (las entradas hechas siempre a la misma hora, a las 10 de la mañana, por ejemplo, pueden haber sido hechas por un robot); y la personalidad dada a los textos publicados (textos repetidos o extraídos de otras publicaciones, preformateadas, son un indicativo de haber sido hecho por un robot). Con base en el promedio general de las entradas del perfil, Atrapabot da una calificación, que indica la probabilidad de que ese perfil sea o no un robot.
+El algoritmo de Atrapabot utiliza informaciones públicas de los perfiles en Twitter para realizar sus análisis. El objetivo es identificar características que ayuden a determinar si el perfil es más o menos bot. En este momento, Atrapabot se basa en los patrones de comportamiento para identificar la probabilidad de que un determinado perfil sea utilizado por un humano o por un robot. Utilizamos los siguientes criterios:
 
+* **Perfil de Usuario** : Algunas de las informaciones públicas de los perfiles consideradas en el análisis de Atrapabot son: el nombre del perfil de usuario y cuantos caracteres posee, la cantidad de perfiles seguidos (following) y seguidores (followers), texto de la descripción del perfil, número de publicaciones (tuits) y favoritos.  Elementos como la ausencia de imagen de perfil y descripción, por ejemplo, incrementan la probabilidad de que la cuenta sea un robot.
+* **Número de Tuits**: Perfiles que tuitean mucho en un breve intervalo de tiempo reciben una calificación mayor, una vez que este comportamiento se asemeja al comportamiento de los bots. Un breve intervalo de tiempo entre cada publicación, 2 segundos por ejemplo, puede indicar que ésta ha sido realizada por un robot. La frecuencia y la aletoriedad en el tiempo que se suben las publicaciones también señalan características de comportamiento: publicaciones subidas siempre en el mismo horario, a las 10 de la mañana, por ejemplo, pueden haber sido realizadas por un robot.
+* **Red**:El algoritmo de AtrapaBot recopila una muestra de línea del tiempo, identificando hasgtags utilizados y menciones al perfil, para realizar sus análisis. El objetivo es identificar caracteristicas de distribución en la red de la cuenta analizada.
+* **Análisis de sentimiento**: Los algoritmos de Atrapabot seleccionan una muestra de hasta los 100 tuits más recientes publicados por el perfil analizado. El objetivo es identificar palabras que hacen con que la publicación del usuario sea más o menos negativa (sentimiento).  
 
-|   | Características para la identificación de bots   |
-|---|---|
-|  Contenido (publicaciones) |  Se basa en claves lingüísticas a través del procesamiento del lenguaje natural. Incluye frecuencia de verbos, sustantivos y adverbios en los tuits. El sistema analiza la longitud y la entropía del contenido del tuit. Los mensajes engañosos generalmente exhiben un lenguaje informal y frases cortas.  |
-| Sentimiento (emocional)  | Se extraen los diversos estados emocionales a partir del análisis de sentimiento de los tuits. Un humano suele expresar una variedad de estados emocionales, mientras un bot no.  |
-|  Usuario | Las características del usuario están basadas en metadatos relacionados con la cuenta. Esto datos incluyen el número de amigos y seguidores, el número de tuits producidos por los usuarios, la descripción del perfil y las configuraciones de la cuenta  (lenguaje, ubicación, momento de creación de la cuenta).   |
-|  Amigos | Incluye estadísticas relativas a los contactos sociales, como la media, los momentos y la entropía de la distribución del número de seguidos, seguidores y posts. Se analizan las relaciones seguido-seguidores, los retuits y las menciones. Para cada campo se extraen las características sobre el uso el lenguaje, tiempo local, popularidad.   |
-|  Red |  La estructura de la red muestra varias dimensiones de los patrones de difusión de la información. El sistema reconstruye tres tipos de redes: retuits, menciones y co-ocurrencia de hashtags. Todas las redes se pesan de acuerdo con la frecuencia de la interacción o las co-ocurrencias.  |
-| Tiempo | La característica del tiempo captura los patrones relacionados con la actividad del usuario. Incluye el periodo promedio en la generación de contenido (tuits) y el consumo (retuits), el tiempo entre dos publicaciones.   |
-
-Ferrara, E., Varol, O., Davis, C., Menczer, F. & Flammini, A.  (2016) The Rise of Social Bots. Communications of the ACM. DOI: 10.1145/2818717.
-
-Varol, O., Ferrara, E., Davis, C., Menczer, F. & Flammini, A. (2017). Online Human-Bot Interactions: Detection, Estimation, and Characterization. arXiv preprint arXiv:1703.03107.
+Para una explicación completa a cerca de los criterios, accede a la página Transparencia.
