@@ -1,7 +1,7 @@
 ---
 title: "Entender como bots são usados nas redes sociais é urgente"
 date: 2018-01-24T13:51:23-02:00
-draft: false
+draft: true
 slug: "analise"
 layout: analyses
 weight: 3
