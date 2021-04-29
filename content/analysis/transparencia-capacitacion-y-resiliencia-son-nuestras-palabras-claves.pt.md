@@ -1,7 +1,7 @@
 ---
 language: pt
 draft: false
-title: Transparência, Capacitação e Resiliência são as nossas palavras-chaves
+title: O PegaBot é uma ferramenta de educação midiática
 slug: ""
 date: 2021-04-29T16:55:17.000Z
 bookmark:
@@ -16,4 +16,4 @@ bookmark:
 type: analysis
 file: http://africau.edu/images/default/sample.pdf
 ---
-A partir das análises realizadas com a ferramenta PegaBot, é possível identificar, por exemplo, se um assunto desinformativo nos trending topics do Twitter está sendo impulsionado por robôs. Ou mesmo se ataques realizados a um perfil foram coordenados por bots e como tomar as melhores decisões para enfrentar esse cenário.
+Por meio do uso de um algoritmo que promove a transparência no comportamento dos robôs nas mídias sociais, o projeto visa fortalecer organizações da sociedade civil (OSCs), jornalistas, governos e cidadãos, como um todo, na identificação e contextualização de campanhas de desinformação.
