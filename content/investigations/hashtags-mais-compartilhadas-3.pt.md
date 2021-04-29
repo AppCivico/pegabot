@@ -1,11 +1,10 @@
 ---
 language: pt
 draft: false
-title: As 3 mais compartilhadas no ano de 2019. E como elas interferiram na vida
-  das pessoas.
+title: Eu amo o pegabot e você também deveria amá-lo
 slug: investigation-03
 date: 2020-08-11T16:30:31-03:00
-file: http://africau.edu/images/default/sample.pdf
+file: www.google.com
 weight: 2
 layout: none
 type: investigations
