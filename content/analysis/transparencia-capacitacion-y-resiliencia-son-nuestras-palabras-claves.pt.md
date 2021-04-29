@@ -12,7 +12,7 @@ bookmark:
     e influenciando debates políticos…
   link: http://www.com.br
   src: /uploads/materias.png
-  title: Oito matérias para você entender bots, fake news e mídias sociais
+  title: __Oito matérias para você entender bots, fake news e mídias sociais
 type: analysis
 file: http://africau.edu/images/default/sample.pdf
 ---
