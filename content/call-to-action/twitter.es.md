@@ -1,10 +1,10 @@
 ---
-title: "Pegabot no Twitter"
-date: 2020-08-13T00:40:23-03:00
-draft: true
-layout: none
-type: callToAction
-slug: "twitter"
 language: es
+draft: true
+title: Atrapabot en Twitter
+slug: twitter
+date: 2020-08-13T00:40:23-03:00
+type: callToAction
+layout: none
 ---
-Agora, você pode utilizar o PegaBot diretamente no Twitter. Basta mencionar [@pegabots](https://twitter.com/pegabots) junto ao handle do perfil que você gostaria de analisar.
+Ahora puedes utilizar el Atrapabot directamente en Twitter. Basta con mencionar [@atrapabots](https://twitter.com/pegabots) junto a la arroba del perfil que te gustaría analizar.

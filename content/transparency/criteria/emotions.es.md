@@ -1,28 +1,28 @@
 ---
 language: es
 draft: false
-title: Análise de sentimentos ES
-date: 2020-11-09T18:48:05Z
+title: Análisis de sentimientos
+date: 2020-11-09T18:48:05.000Z
 weight: 3
-intro: Os algoritmos do PegaBot  selecionam uma amostra de até 100 tweets mais
-  recentes publicados pelo perfil analisado. O objetivo é identificar a
-  neutralidade do perfil analisado. Quanto mais neutro, menor a chance de ser
-  considerado um bot.
+intro: Los algoritmos de Atrapabot seleccionan una muestra de hasta los 100
+  tuits más recientes publicados por el perfil analizado. El objetivo es
+  identificar la neutralidad del perfil analizado. Cuanto más neutro, menor la
+  probabilidad de que se lo considere un bot.
 layout: none
 rootOf: false
 ---
-ES Os algoritmos do PegaBot  selecionam uma amostra de até 100 tweets mais recentes publicados pelo perfil analisado. O objetivo é identificar a neutralidade do perfil analisado. Quanto mais neutro, menor a chance de ser considerado um bot.
+Los algoritmos de Atrapabot seleccionan una muestra de hasta los 100 tuits más recientes publicados por el perfil analizado. El objetivo es identificar la neutralidad del perfil analizado. Cuanto más neutro, menor la probabilidad de que se lo considere un bot.
 
-Após coletar os dados, os algoritmos do PegaBot fornecem uma pontuação, em uma escada de -5 a 5, de cada uma das palavras dos tweets coletados. A classificação se baseia em uma biblioteca, onde, cada uma das palavras possui uma pontuação, sendo considerada mais ou menos negativa. Assim, ao final da classificação, calcula-se a pontuação média para a quantidade de palavras positivas, negativas e neutras utilizadas pelo usuário.
+Después de recopilar los datos, los algoritmos de Atrapabot proporcionan una calificación en una escala de -5 a 5, de cada una de las palabras de los tuits copilados. La clasificación está basada en una biblioteca, en la cual cada una de las palabras posee una calificación, considerándola más o menos negativa. De esa manera, al fin de la clasificación se calcula la calificación media para la cantidad de palabras positivas, negativas y neutras utilizadas por el usuario.
 
-Como o PegaBot prepara os dados:
+Cómo Atrapabot prepara los datos:
 
-* Seleciona os últimos tweets publicados pelo usuário (até 100);
-* Pontua o discurso de cada tweet baseado em uma dicionário de sentimento, onde cada palavra é pontuada de acordo com uma classificação;
-* Pontuações variam de -5 a 5, sendo -5 mais negativas e 5 mais positivas
-* Palavras neutras são avaliadas com uma pontuação zero;
-* É realizada uma ponderação das pontuações obtidas por cada tweet;
+* Selecciona los últimos tuits publicados por el usuario (hasta 100);
+* Califica el discurso de cada tuit basado en un diccionario de sentimiento, en el cual se puntua cada palabra de acuerdo con una clasificación;
+* Las calificaciones difieren de -5 a 5, siendo -5 más negativas y 5 más positivas;
+* Palabras neutras están evaluadas con una calificación zero;
+* Se realiza una ponderación de las calificaciones obtenidas por cada tuit;
 
-**Observações**
+**Observaciones**
 
-Ao calcular as médias entre palavras neutras, negativas e positivas, observamos uma tendência de, quanto menos neutro o sentimento, maiores são as probabilidades do usuário receber uma pontuação maior, assemelhando-se mais a um comportamento de bot.
+Al calcular las medias entre las palabras neutras, negativas y positivas, observamos una tendencia: cuanto menos neutro sea el sentimiento, mayores serán las posibilidades de que el usuario reciba una calificación mayor, asemejándose, de esa manera, a un comportamiento de bot.

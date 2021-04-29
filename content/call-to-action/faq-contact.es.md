@@ -1,14 +1,13 @@
 ---
-date: 2020-09-05T17:55:17-03:00
-draft: false
-title: "Não encontrou uma resposta para sua pergunta?"
-layout: none
-type: callToAction
-slug: "faq"
-weight: 0
 language: es
+draft: false
+title: ¿No has encontrado una respuesta a tu pregunta?
+slug: faq
+date: 2020-09-05T17:55:17-03:00
+weight: 0
+type: callToAction
+layout: none
 ---
+Contáctanos para que puedas obtener detalles sobre el proyecto y sacar dudas específicas.
 
-Entre em contato conosco para obter detalhes sobre o projeto e para tirar suas dúvidas personalizadas.
-
-[Entrar em contato](https://itsrio2.typeform.com/to/uGFw4zDc)
+[Ponerse en contacto](https://itsrio2.typeform.com/to/uGFw4zDc)

@@ -1,5 +1,5 @@
 ---
-title: Saiba como interpretar os resultados do PEGABOT
+title: Descubre cómo interpretar los resultados de Atrapabot
 date: 2020-08-14T00:22:30-03:00
 draft: false
 language: es
@@ -10,4 +10,4 @@ figure:
   alt: Captura do mostrador de resultados
 headless: true
 ---
-O PegaBot indica o percentual de probabilidade de um perfil do Twitter ser um bot. Quanto maior a nota, maior a chance daquela conta não ser de uma pessoa real. Cada perfil pesquisado ocupa uma zona do medidor: verde, amarela ou roxa. Se o perfil pesquisado estiver na zona roxa, a chance de ser um bot é alta, ou seja, essa conta possui um comportamento bastante similar ao de um robô. Muitos resultados são classificados na zona amarela, o que significa que existem elementos para suspeitar de uso de automação, mas em menor nível. Neste caso, pode ser que seja um perfil usado com pouca frequência, um uso humano muito repetitivo ou um perfil institucional que utiliza plataformas para agendamento de tweets. Se é verde, provavelmente é humano, ou seja, o índice de comportamento similar ao de um robô é baixo.
+**ATRAPABOT** indica el porcentual de probabilidad de que un perfil de Twitter sea un bot. Cuanto mayor la calificación, mayor la probabilidad de que la cuenta no pertenezca a una persona real. Cada perfil investigado ocupa una zona del medidor: morada, amarilla o verde. Si el perfil de búesqueda está en la zona morada, la probabilidad de que sea un bot es alta, o sea, esa cuenta posee un comportamiento muy semejante al de un robot. Muchos resultados se clasifican en la zona amarilla, lo que significa que existen elementos suficientes para que se sospeche de la utilización de automatización, pero en menor nivel. En este caso, puede ser que sea un perfil usado con poca frecuencia, que tenga un uso humano muy repetitivo o que sea un perfil institucional que utiliza plataformas para programar tuits. Si es verde, probablemente es humano, o sea, el índice de comportamiento semejante al de un robot es bajo.
