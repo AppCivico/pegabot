@@ -10,7 +10,7 @@ bookmark:
   excerpt: Campanha que associa genocídio a Sleeping Giants envolveu perfis com
     alta probabilidade de automação
   link: https://apublica.org/2021/04/defensores-de-tratamento-precoce-contra-a-covid-19-atacam-perfil-sleeping-giants/
-  src: uploads/mexico.png
+  src: uploads/materias.png
   title: Perfis com alta probabilidade de automação atacam Sleeping Giants no Twitter
 type: analysis
 file: http://africau.edu/images/default/sample.pdf
