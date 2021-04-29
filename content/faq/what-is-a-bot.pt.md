@@ -1,7 +1,7 @@
 ---
 language: pt
 draft: false
-title: O que é um Twitter Bot?_dev
+title: O que é um Twitter Bot?
 slug: o-que-e-um-twitter-bot
 date: 2018-03-13T17:51:20-03:00
 weight: 1
