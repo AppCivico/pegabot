@@ -16,4 +16,4 @@ bookmark:
 type: analysis
 file: http://africau.edu/images/default/sample.pdf
 ---
-Por meio do uso de um algoritmo que promove a transparência no comportamento dos robôs nas mídias sociais, o projeto visa fortalecer organizações da sociedade civil (OSCs), jornalistas, governos e cidadãos, como um todo, na identificação e contextualização de campanhas de desinformação.
+___Por meio do uso de um algoritmo que promove a transparência no comportamento dos robôs nas mídias sociais, o projeto visa fortalecer organizações da sociedade civil (OSCs), jornalistas, governos e cidadãos, como um todo, na identificação e contextualização de campanhas de desinformação.
