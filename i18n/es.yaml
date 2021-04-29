@@ -115,7 +115,7 @@
 - id: result
   translation: "Resultado"
 - id: returnedResults
-  translation: "Su búsqueda regresó {{ .Count }} resultados."
+  translation: "Su búsqueda regresó {{ . }} resultados."
 - id: returnToHome
   translation: "Regresar a la página principal."
 - id: robotProfiles
