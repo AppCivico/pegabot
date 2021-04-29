@@ -1,9 +1,9 @@
 ---
 language: pt
 draft: false
-title: Transparencia, Capacitación y Resiliencia son nuestras palabras claves.
+title: Transparência, Capacitação e Resiliência são as nossas palavras-chaves
 slug: ""
-date: 2021-04-29T16:55:17Z
+date: 2021-04-29T16:55:17.000Z
 bookmark:
   alt: ..
   caption: Análises atuais do PEGABOT
@@ -16,4 +16,4 @@ bookmark:
 type: analysis
 file: http://africau.edu/images/default/sample.pdf
 ---
-A partir de los análisis realizados con la herramienta **ATRAPABOT**, es posible identificar, por ejemplo, si un asunto desinformativo que está en los "Trending topics" de Twitter está impulsado por robots. O incluso si los ataques realizados a un perfil han sido coordinados y realizados por bots y cómo tomar las mejores decisiones para enfrentar a ese escenario.
+A partir das análises realizadas com a ferramenta PegaBot, é possível identificar, por exemplo, se um assunto desinformativo nos trending topics do Twitter está sendo impulsionado por robôs. Ou mesmo se ataques realizados a um perfil foram coordenados por bots e como tomar as melhores decisões para enfrentar esse cenário.
