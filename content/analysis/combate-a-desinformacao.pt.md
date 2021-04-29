@@ -8,9 +8,7 @@ bookmark:
   alt: ..
   caption: Parceria com jornalistas
   excerpt: Campanha que associa genocídio a Sleeping Giants envolveu perfis com
-    alta probabilidade de automação e sites acusados de desinformação, aponta
-    levantamento realizado pela Agência Pública utilizando dados de análises do
-    PegaBot.
+    alta probabilidade de automação
   link: https://apublica.org/2021/04/defensores-de-tratamento-precoce-contra-a-covid-19-atacam-perfil-sleeping-giants/
   src: uploads/mexico.png
   title: Perfis com alta probabilidade de automação atacam Sleeping Giants no Twitter
