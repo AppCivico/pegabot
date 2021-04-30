@@ -6,13 +6,13 @@ slug: ""
 date: 2021-04-29T16:55:17.000Z
 bookmark:
   alt: ..
-  caption: Análises atuais do PEGABOT
-  excerpt: O caso envolvendo o Facebook e a empresa Cambridge Analytica mostrou a
-    necessidade de entendermos melhor a forma como bots atuam criando tendências
-    e influenciando debates políticos…
-  link: http://www.com.br
+  caption: Parceria com jornalistas
+  excerpt: De acordo com análises do PegaBot para a Agência Pública, campanha que
+    associa genocídio a Sleeping Giants envolveu perfis com alta probabilidade
+    de automação no Twitter.
+  link: https://apublica.org/2021/04/defensores-de-tratamento-precoce-contra-a-covid-19-atacam-perfil-sleeping-giants/
   src: /uploads/materias.png
-  title: __Oito matérias para você entender bots, fake news e mídias sociais
+  title: Perfis com alta probabilidade de automação atacam Sleeping Giants no Twitter
 type: analysis
 file: http://africau.edu/images/default/sample.pdf
 ---
