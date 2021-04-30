@@ -321,7 +321,7 @@ const collections = [
 		delete: false,
 		filter: {
 			field: 'layout',
-			value: 'analysis',
+			value: 'analyses',
 		},
 		view_filters: [
 			{
