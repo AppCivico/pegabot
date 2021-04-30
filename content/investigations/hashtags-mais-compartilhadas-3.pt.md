@@ -10,4 +10,3 @@ layout: none
 type: investigations
 homepage: false
 ---
-teste
