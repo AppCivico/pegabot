@@ -7,13 +7,12 @@ date: 2021-04-29T16:55:17.000Z
 bookmark:
   alt: ..
   caption: Parceria com jornalistas
-  excerpt: De acordo com análises do PegaBot para a Agência Pública, campanha que
-    associa genocídio a Sleeping Giants envolveu perfis com alta probabilidade
-    de automação no Twitter.
-  link: https://apublica.org/2021/04/defensores-de-tratamento-precoce-contra-a-covid-19-atacam-perfil-sleeping-giants/
+  excerpt: Levantamento feito pelo PegaBot para a Agência Pública identificou
+    contas com alto índice de automação que reagiram negativamente à anulação.
+  link: https://apublica.org/2021/03/como-as-redes-sociais-reagiram-a-anulacao-das-condenacoes-de-lula/
   src: /uploads/materias.png
-  title: Perfis com alta probabilidade de automação atacam Sleeping Giants no Twitter
+  title: Como as redes sociais reagiram à anulação das condenações de Lula
 type: analysis
 file: http://africau.edu/images/default/sample.pdf
 ---
-___Por meio do uso de um algoritmo que promove a transparência no comportamento dos robôs nas mídias sociais, o projeto visa fortalecer organizações da sociedade civil (OSCs), jornalistas, governos e cidadãos, como um todo, na identificação e contextualização de campanhas de desinformação.
+Por meio do uso de um algoritmo que promove a transparência no comportamento dos robôs nas mídias sociais, o projeto visa fortalecer organizações da sociedade civil (OSCs), jornalistas, governos e cidadãos, como um todo, na identificação e contextualização de campanhas de desinformação.
