@@ -1,7 +1,7 @@
 ---
 language: pt
 draft: false
-title: Eu amo o pegabot e você também deveria amá-lo
+title: Eu sou um robô beeb boop
 slug: investigation-06
 date: 2020-08-11T16:30:31-03:00
 file: uploads/captcha.jpg
