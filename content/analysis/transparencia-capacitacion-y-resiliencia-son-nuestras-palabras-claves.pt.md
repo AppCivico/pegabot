@@ -10,7 +10,7 @@ bookmark:
   excerpt: Levantamento feito pelo PegaBot para a Agência Pública identificou
     contas com alto índice de automação que reagiram negativamente à anulação.
   link: https://apublica.org/2021/03/como-as-redes-sociais-reagiram-a-anulacao-das-condenacoes-de-lula/
-  src: /uploads/materias.png
+  src: /uploads/copia-de-thumb-facebook-31.png
   title: Como as redes sociais reagiram à anulação das condenações de Lula
 type: analysis
 file: http://africau.edu/images/default/sample.pdf
