@@ -37,6 +37,8 @@
       ;
       connect-src
         'self'
+        blob:
+        data:
         https://*.google-analytics.com/
         https://api.github.com/
         https://www.githubstatus.com/
