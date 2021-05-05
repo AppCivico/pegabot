@@ -1869,7 +1869,6 @@ const config = {
 		name: 'git-gateway',
 		branch: cmsBranch,
 		repo: 'AppCivico/pegabot',
-		api_root: 'https://api.github.com',
 	},
 	load_config_file: false,
 	media_folder: 'content/uploads',
@@ -1878,6 +1877,7 @@ const config = {
 	publish_mode: 'editorial_workflow',
 	squash_merges: true,
 	locale: 'pt',
+	show_preview_links: false,
 	sortable_fields: [
 		'commit_date',
 		'draft',
