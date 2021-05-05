@@ -1,3 +1,5 @@
+const { CMS } = window;
+
 const collections = [
 	{
 		name: 'pages',
@@ -1869,6 +1871,7 @@ const config = {
 		repo: 'AppCivico/pegabot',
 		api_root: 'https://api.github.com',
 	},
+	load_config_file: false,
 	media_folder: 'content/uploads',
 	public_folder: '/uploads',
 	collections,
