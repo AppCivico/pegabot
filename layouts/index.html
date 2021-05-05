@@ -21,8 +21,8 @@
 
 	{{ range $resources }}
 		<article
-			id="{{ with .File }}{{ .TranslationBaseName }}{{ end }}"
-			class="{{ with .File }}{{ .TranslationBaseName }}{{ end }}"
+			{{ with .File }}id="{{ .TranslationBaseName }}"{{ end }}
+			{{ with .File }}class="{{ .TranslationBaseName }}"{{ end }}
 		>
 			<div class="container">
 				<h2

@@ -27,11 +27,11 @@
 			<section class="criteria__section-list">
 				{{ range . }}
 					<article
-						id="section--{{ .File.TranslationBaseName }}"
+						{{ with .File }}id="section--{{ .TranslationBaseName }}"{{ end }}
 
 						class="
 							criteria__section
-							criteria__section--{{ .File.TranslationBaseName }}
+							{{ with .File }}criteria__section--{{ .TranslationBaseName }}{{ end }}
 							delayed-entrance
 							delayed-entrance__bottom
 						"
@@ -46,12 +46,12 @@
 						{{ $finalContent }}
 
 						<p>
-							<a href="#section__modal--{{ .File.TranslationBaseName }}" class="modal-link read-more">{{ i18n "readMore" }}</a>
+							<a {{ with .File }}href="#section__modal--{{ .TranslationBaseName }}"{{ end }} class="modal-link read-more">{{ i18n "readMore" }}</a>
 						</p>
 
 						<section
 							class="modal--show"
-							id="section__modal--{{ .File.TranslationBaseName }}"
+							{{ with .File }}id="section__modal--{{ .TranslationBaseName }}"{{ end }}
 							tabindex="-1"
 							role="dialog"
 							aria-labelledby="modal-label"
@@ -71,7 +71,7 @@
 								</div>
 							</div>
 
-							<a href="#section--{{ .File.TranslationBaseName }}"
+							<a {{ with .File }}href="#section--{{ .TranslationBaseName }}"{{ end }}
 								class="modal-close"
 								title="{{ i18n "closeThisModal" }}"
 								data-close="{{ i18n "close" }}"

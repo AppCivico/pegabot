@@ -25,10 +25,11 @@
 		</section>
 	{{ end }}
 
-	{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "faq-contact") }}
-		{{ .Render "curved-section" }}
+	{{ with .File }}
+		{{ range first 1 (where (where $.Site.Pages ".Type" "callToAction") ".File.TranslationBaseName" "faq-contact") }}
+			{{ .Render "curved-section" }}
+		{{ end }}
 	{{ end }}
-
 </article>
 
 {{ partial "footer.html" . }}
