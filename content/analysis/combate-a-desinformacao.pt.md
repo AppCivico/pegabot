@@ -1,7 +1,7 @@
 ---
 language: pt
 draft: false
-title: dev_Transparência, Capacitação e Resiliência são as nossas palavras-chaves
+title: Transparência, Capacitação e Resiliência são as nossas palavras-chaves
 slug: ""
 date: 2020-08-11T19:30:31.000Z
 bookmark:
@@ -16,4 +16,4 @@ bookmark:
 type: analysis
 file: http://africau.edu/images/default/sample.pdf
 ---
-dev_A partir das análises realizadas com a ferramenta PEGABOT, é possível identificar, por exemplo, se um assunto desinformativo nos “Trending topics” do Twitter está sendo impulsionado por robôs. Ou mesmo se ataques realizados a um perfil foram coordenados e realizados por bots e como tomar as melhores decisões para enfrentar esse cenário.
+A partir das análises realizadas com a ferramenta PEGABOT, é possível identificar, por exemplo, se um assunto desinformativo nos “Trending topics” do Twitter está sendo impulsionado por robôs. Ou mesmo se ataques realizados a um perfil foram coordenados e realizados por bots e como tomar as melhores decisões para enfrentar esse cenário.
