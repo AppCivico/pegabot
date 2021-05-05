@@ -40,6 +40,9 @@
         https://*.google-analytics.com/
         https://api.github.com/
         https://www.githubstatus.com/
+        https://githubstatus.com/
+        https://www.netlifystatus.com/
+        https://netlifystatus.com/
         https://api.pegabot.com.br/
       ;
       frame-src
