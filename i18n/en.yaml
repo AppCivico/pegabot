@@ -1,5 +1,7 @@
 - id: allFeatures
   translation: "Full analysis"
+- id: analysisDownload
+  translation: Download
 - id: analysis
   translation: "Analysis"
 - id: analysisProgress
