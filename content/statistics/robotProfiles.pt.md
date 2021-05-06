@@ -1,9 +1,9 @@
 ---
-title: "RobotProfiles"
-date: 2021-05-06T13:45:21-03:00
-draft: false
 language: pt
-icon: "images/user.svg"
+draft: false
+title: RobotProfiles
+date: 2021-05-06T13:45:21-03:00
+icon: images/user.svg
 layout: none
 ---
-15% do total de 330 milhões de perfis do Twitter eram falsos e compostos por bots
+Os robôs trabalham 24hrs por dia de forma a atingir diferentes tipos de público em horários variados
