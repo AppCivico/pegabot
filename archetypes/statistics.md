@@ -1,10 +1,8 @@
 ---
-language:
 date: {{ .Date }}
+language:
 draft: true
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
+icon:
 layout: none
-type: analysis
-weight: 0
-homepage: false
 ---

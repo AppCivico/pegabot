@@ -1,0 +1,20 @@
+{{ with where $.Site.Pages ".Type" "statistics" }}
+	{{ with where . ".Kind" "page" }}
+		<div class="bubble-text">
+			{{ range . }}
+				<div class="bubble-text__item bubble-text__item--{{ .Title | lower }}">
+					<div class="bubble-text__image">
+						{{ $img := resources.Get .Params.icon | resources.Fingerprint "sha512" }}
+						<img
+							src="{{ $img.RelPermalink }}"
+							alt=""
+						>
+					</div>
+					<div class="bubble-text__text">
+						{{ .Content }}
+					</div>
+				</div>
+			{{ end }}
+		</div>
+	{{ end }}
+{{ end }}

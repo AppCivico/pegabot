@@ -118,14 +118,6 @@
   translation: "Sua busca retornou {{ . }} resultados."
 - id: returnToHome
   translation: "Retornar à página inicial."
-- id: robotProfiles
-  translation: "15% do total de 330 milhões de perfis do Twitter eram falsos e compostos por bots"
-- id: robotResponsible
-  translation: "Bots são responsáveis por 66% dos links compartilhados no Twitter"
-- id: robotTime
-  translation: "Os robôs trabalham 24hrs por dia de forma a atingir diferentes tipos de público em horários variados"
-- id: robotTraffic
-  translation: "Em 2016 os bots corresponderam a mais de 50% do tráfego total da Internet"
 - id: sentiment
   translation: "Linguagem utilizada nos tweets"
 - id: shareResults
