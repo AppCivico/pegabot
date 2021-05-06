@@ -3,7 +3,7 @@ language: pt
 draft: false
 title: RobotTime
 date: 2021-05-06T13:45:47-03:00
-icon: "/uploads/icons/clock.svg"
+icon: /content/uploads/icons/globe.svg
 layout: none
 type: statistics
 ---
