@@ -6,13 +6,12 @@ slug: ""
 date: 2021-04-29T16:55:17.000Z
 bookmark:
   alt: ..
-  caption: Análises atuais do PEGABOT
-  excerpt: O caso envolvendo o Facebook e a empresa Cambridge Analytica mostrou a
-    necessidade de entendermos melhor a forma como bots atuam criando tendências
-    e influenciando debates políticos…
-  link: http://www.com.br
-  src: /uploads/materias.png
-  title: Oito matérias para você entender bots, fake news e mídias sociais
+  caption: Parceria com jornalistas
+  excerpt: Levantamento feito pelo PegaBot para a Agência Pública identificou
+    contas com alto índice de automação que reagiram negativamente à anulação.
+  link: https://apublica.org/2021/03/como-as-redes-sociais-reagiram-a-anulacao-das-condenacoes-de-lula/
+  src: /uploads/copia-de-thumb-facebook-31.png
+  title: Como as redes sociais reagiram à anulação das condenações de Lula
 type: analysis
 file: http://africau.edu/images/default/sample.pdf
 ---
