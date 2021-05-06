@@ -11,7 +11,7 @@ bookmark:
     alta probabilidade de automação de acordo com análises feitas pelo PegaBot
     para a Agência Pública.
   link: https://apublica.org/2021/04/defensores-de-tratamento-precoce-contra-a-covid-19-atacam-perfil-sleeping-giants/
-  src: /uploads/ex-xtjbxmaezm43.jpeg
+  src: /uploads/juliette-1024x682.png
   title: Perfis com alta probabilidade de automação atacam Sleeping Giants no Twitter
 type: analysis
 file: http://africau.edu/images/default/sample.pdf
