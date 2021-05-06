@@ -290,8 +290,10 @@ collections:
     widget: "markdown"
     required: false
   - name: "icon"
-    label: "icon"
-    widget: "hidden"
+    label: "Ícone"
+    widget: "image"
+    allow_multiple: false
+    media_folder: "/content/uploads/icons"
   - {name: "layout", widget: "hidden", default: "none"}
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
