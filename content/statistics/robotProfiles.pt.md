@@ -6,4 +6,4 @@ date: 2021-05-06T13:45:21-03:00
 icon: images/user.svg
 layout: none
 ---
-Os robôs trabalham 24hrs por dia de forma a atingir diferentes tipos de público em horários variados
+Estima-se que entre 2019 e 2020 foram gastos mais de 10 milhões de dólares com bots de propaganda política ao redor do mundo
