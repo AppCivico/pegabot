@@ -294,6 +294,7 @@ collections:
     widget: "image"
     allow_multiple: false
     media_folder: "/content/uploads/icons"
+    public_folder: "/uploads/icons"
   - {name: "layout", widget: "hidden", default: "none"}
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
