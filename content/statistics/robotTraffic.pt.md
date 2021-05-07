@@ -3,7 +3,7 @@ language: pt
 draft: false
 title: RobotTraffic
 date: 2021-05-06T13:45:54-03:00
-icon: /content/uploads/icons/robot.svg
+icon: /uploads/icons/robot.svg
 layout: none
 type: statistics
 ---
