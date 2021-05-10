@@ -3,8 +3,8 @@ eU:
   name: "European Union"
   icon: "/assets/images/logos/Flag_of_Europe.svg"
   iconNegative: "/assets/images/logos/Flag_of_Europe--negative.svg"
-  iconWidth: 507
-  iconHeight: 489
+  iconWidth: 722
+  iconHeight: 259
   link: "https://europa.eu/"
   weight: 0
 ndi:

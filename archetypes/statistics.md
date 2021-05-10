@@ -1,10 +1,9 @@
 ---
 language:
-date: {{ .Date }}
 draft: true
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
+date: {{ .Date }}
+icon: "/content/uploads/icons"
 layout: none
-type: analysis
-weight: 0
-homepage: false
+type: statistics
 ---

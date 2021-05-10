@@ -1,6 +1,7 @@
 /* global Vue */
 /* global gtag */
 
+// eslint-disable-next-line import/no-unresolved import/extensions
 import * as params from '@params';
 import 'cookieconsent';
 

@@ -1,10 +1,10 @@
 ---
 language: pt
 draft: false
-title: Eu amo o pegabot e você também deveria amá-lo
-slug: investigation-03
+title: "Análise da hashtag #DitaduraNuncaMais [06/05/2021]"
+slug: investigation-06
 date: 2020-08-11T16:30:31-03:00
-file: uploads/bug-bg.png
+file: /uploads/ditaduranuncamais.pdf
 weight: 1
 layout: none
 type: investigations
