@@ -1,10 +1,16 @@
-https://pegabot.com.br/analyze/* https://api.pegabot.com.br/analyze/:splat 200
-https://pegabot.com.br/botometer/* https://api.pegabot.com.br/botometer/:splat 200
-https://pegabot.com.br/feedback/* https://api.pegabot.com.br/feedback/:splat 200
+https://pegabot.com.br/analyze/* https://backend.pegabot.com.br/
+analyze/:splat 200
+https://pegabot.com.br/botometer/* https://backend.pegabot.com.br/
+botometer/:splat 200
+https://pegabot.com.br/feedback/* https://backend.pegabot.com.br/
+feedback/:splat 200
 
-https://dev.pegabot.com.br/analyze/* https://api.pegabot.com.br/analyze/:splat 200
-https://dev.pegabot.com.br/botometer/* https://api.pegabot.com.br/botometer/:splat 200
-https://dev.pegabot.com.br/feedback/* https://api.pegabot.com.br/feedback/:splat 200
+https://dev.pegabot.com.br/analyze/* https://backend.pegabot.com.br/
+analyze/:splat 200
+https://dev.pegabot.com.br/botometer/* https://backend.pegabot.com.br/
+botometer/:splat 200
+https://dev.pegabot.com.br/feedback/* https://backend.pegabot.com.br/
+feedback/:splat 200
 
 # *** Warning! Your custom domain is not using HTTPS yet ***
 # These rules will change if you change your site’s custom domains or HTTPS settings
