@@ -4,15 +4,17 @@ draft: false
 title: Transparência, Capacitação e Resiliência são as nossas palavras-chaves
 slug: ""
 date: 2020-08-11T19:30:31.000Z
+weight: 2
 bookmark:
   alt: ..
   caption: Parceria com jornalistas
-  excerpt: Campanha que associa genocídio a Sleeping Giants envolveu perfis com
-    alta probabilidade de automação de acordo com análises feitas pelo PegaBot
-    para a Agência Pública.
-  link: https://apublica.org/2021/04/defensores-de-tratamento-precoce-contra-a-covid-19-atacam-perfil-sleeping-giants/
-  src: /uploads/ex-xtjbxmaezm43.jpeg
-  title: Perfis com alta probabilidade de automação atacam Sleeping Giants no Twitter
+  excerpt: Em meio aos pedidos legítimos, golpistas e robôs buscam se aproveitar
+    da boa-fé de doadores no Twitter. A análise dos perfis foi realizada em
+    parceria com a BBC Brasil.
+  link: https://www.bbc.com/portuguese/brasil-58206463
+  src: /uploads/_119926783_1pedintescolagemv2borrado.png
+  title: "'Estou passando fome, faz um Pix': como pedidos de doação se
+    multiplicaram nas redes sociais"
 type: analysis
 file: http://africau.edu/images/default/sample.pdf
 ---
