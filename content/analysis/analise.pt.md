@@ -11,8 +11,9 @@ bookmark:
     multiplicaram nas redes sociais"
   alt: ..
   caption: Parceria com jornalistas
-  excerpt: Em meio aos pedidos legítimos, é possível encontrar também golpistas e
-    robôs que buscam se aproveitar da boa-fé de doadores.
+  excerpt: Em meio aos pedidos legítimos, golpistas e robôs buscam se aproveitar
+    da boa-fé de doadores no Twitter. A análise dos perfis foi realizada em
+    parceria com a BBC Brasil.
   src: /uploads/_119926783_1pedintescolagemv2borrado.png
 layout: none
 type: analysis
