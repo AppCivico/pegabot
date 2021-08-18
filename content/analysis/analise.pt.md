@@ -2,8 +2,8 @@
 language: pt
 draft: false
 title: " analise"
-date: 2021-08-18T10:26:45Z
-weight: 0
+date: 2021-08-18T10:26:45.000Z
+weight: 2
 homepage: false
 bookmark:
   link: https://www.bbc.com/portuguese/brasil-58206463
