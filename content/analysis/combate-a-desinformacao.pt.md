@@ -16,4 +16,4 @@ bookmark:
 type: analysis
 file: http://africau.edu/images/default/sample.pdf
 ---
-Nesta página, você pode acessar tanto os relatórios produzidos pela equipe ITS Rio por meio do projeto PEGABOT, como as matérias jornalísticas investigativas que foram realizadas em parcerias com organizações de mídia e que utilizaram dados de análise da ferramenta.
+Nesta página, você pode acessar tanto os relatórios produzidos pela equipe ITS Rio por meio do projeto PEGABOT, como as matérias jornalísticas investigativas que foram realizadas em parcerias com organizações de mídia.
