@@ -11,7 +11,7 @@ bookmark:
     multiplicaram nas redes sociais"
   alt: ..
   caption: Parceria com jornalistas
-  excerpt: em meio aos pedidos legítimos, é possível encontrar também golpistas e
+  excerpt: Em meio aos pedidos legítimos, é possível encontrar também golpistas e
     robôs que buscam se aproveitar da boa-fé de doadores.
   src: /uploads/_119926783_1pedintescolagemv2borrado.png
 layout: none
