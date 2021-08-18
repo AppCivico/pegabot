@@ -1,7 +1,7 @@
 ---
 language: pt
 draft: false
-title: Transparência, Capacitação e Resiliência são as nossas palavras-chaves
+title: Confira todas as análises do PEGABOT
 slug: ""
 date: 2020-08-11T19:30:31.000Z
 bookmark:
@@ -16,4 +16,4 @@ bookmark:
 type: analysis
 file: http://africau.edu/images/default/sample.pdf
 ---
-A partir das análises realizadas com a ferramenta PEGABOT, é possível identificar, por exemplo, se um assunto desinformativo nos “Trending topics” do Twitter está sendo impulsionado por robôs. Ou mesmo se ataques realizados a um perfil foram coordenados e realizados por bots e como tomar as melhores decisões para enfrentar esse cenário.
+Nesta página, você pode acessar tanto os relatórios produzidos pela equipe ITS Rio por meio do projeto PEGABOT, como as matérias jornalísticas investigativas que foram realizadas em parcerias com organizações de mídia e que utilizaram dados de análise da ferramenta.
