@@ -4,14 +4,16 @@ draft: false
 title: O PegaBot é uma ferramenta de educação midiática
 slug: ""
 date: 2021-04-29T16:55:17.000Z
+weight: 1
 bookmark:
   alt: ..
   caption: Parceria com jornalistas
-  excerpt: Levantamento feito pelo PegaBot para a Agência Pública identificou
-    contas com alto índice de automação que reagiram negativamente à anulação.
-  link: https://apublica.org/2021/03/como-as-redes-sociais-reagiram-a-anulacao-das-condenacoes-de-lula/
-  src: /uploads/copia-de-thumb-facebook-31.png
-  title: Como as redes sociais reagiram à anulação das condenações de Lula
+  excerpt: Levantamento feito pelo PegaBot para a Agência Lupa identificou contas
+    com alto índice de automação que ajudaram a impulsionar o tema no Twitter .
+  link: https://piaui.folha.uol.com.br/lupa/2021/08/12/acoes-automatizadas-voto-impresso/
+  src: /uploads/e8i-n2-xmasjuap-1-.png
+  title: "Ações automatizadas guiaram um a cada quatro perfis favoráveis ao voto
+    impresso no Twitter "
 type: analysis
 file: http://africau.edu/images/default/sample.pdf
 ---
