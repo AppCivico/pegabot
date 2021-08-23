@@ -188,7 +188,7 @@ window.newVue = {
 			metadata: {
 				apiURL: (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
 					? ''
-					: 'https://lh2e1dqt6e.execute-api.us-east-1.amazonaws.com/hmg',
+					: 'https://api.pegabot.com.br',
 				loading: true,
 				current: 0,
 				total: 0,
