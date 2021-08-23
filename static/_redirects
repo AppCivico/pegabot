@@ -1,23 +1,23 @@
 https://pegabot.com.br/analyze/*        https://api.pegabot.com.br/analyze/:splat     200
 https://pegabot.com.br/botometer/*      https://api.pegabot.com.br/botometer/:splat   200
-https://pegabot.com.br/feedback/*       https://api.pegabot.com.br/feedback/:splat    200
+https://pegabot.com.br/feedback/*       https://lh2e1dqt6e.execute-api.us-east-1.amazonaws.com/hmg/feedback/:splat    200
 
-https://dev.pegabot.com.br/analyze/*    https://api.pegabot.com.br/analyze/:splat     200
-https://dev.pegabot.com.br/botometer/*  https://api.pegabot.com.br/botometer/:splat   200
-https://dev.pegabot.com.br/feedback/*   https://api.pegabot.com.br/feedback/:splat    200
+https://dev.pegabot.com.br/analyze/*    https://lh2e1dqt6e.execute-api.us-east-1.amazonaws.com/hmg/analyze/:splat     200
+https://dev.pegabot.com.br/botometer/*  https://lh2e1dqt6e.execute-api.us-east-1.amazonaws.com/hmg/botometer/:splat   200
+https://dev.pegabot.com.br/feedback/*   https://lh2e1dqt6e.execute-api.us-east-1.amazonaws.com/hmg/feedback/:splat    200
 
 # *** Warning! Your custom domain is not using HTTPS yet ***
 # These rules will change if you change your site`s custom domains or HTTPS settings
 
 # Redirect domain aliases to primary domain
-http://pegabots.com.br/*                https://api.com.br/:splat 301!
-http://www.pegabots.com.br/*            https://api.com.br/:splat 301!
-https://pegabots.com.br/*               https://api.com.br/:splat 301!
-https://www.pegabots.com.br/*           https://api.com.br/:splat 301!
+http://pegabots.com.br/*                https://lh2e1dqt6e.execute-api.us-east-1.amazonaws.com/hmg/:splat 301!
+http://www.pegabots.com.br/*            https://lh2e1dqt6e.execute-api.us-east-1.amazonaws.com/hmg/:splat 301!
+https://pegabots.com.br/*               https://lh2e1dqt6e.execute-api.us-east-1.amazonaws.com/hmg/:splat 301!
+https://www.pegabots.com.br/*           https://lh2e1dqt6e.execute-api.us-east-1.amazonaws.com/hmg/:splat 301!
 
 # Optional: Redirect default Netlify subdomain to primary domain
-http://brave-kare-15be24.netlify.com/*  http://api.com.br/:splat  301!
+http://brave-kare-15be24.netlify.com/*  https://lh2e1dqt6e.execute-api.us-east-1.amazonaws.com/hmg/:splat  301!
 
 # http and https need separate rules if you don't force_ssl!
-http://pegabot.com.br/*                 https://api.com.br/:splat 301!
-http://www.pegabot.com.br/*             https://api.com.br/:splat 301!
+http://pegabot.com.br/*                 https://lh2e1dqt6e.execute-api.us-east-1.amazonaws.com/hmg/:splat 301!
+http://www.pegabot.com.br/*             https://lh2e1dqt6e.execute-api.us-east-1.amazonaws.com/hmg/:splat 301!

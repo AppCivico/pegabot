@@ -46,7 +46,7 @@
         https://www.netlifystatus.com/
         https://netlifystatus.com/
         https://api.pegabot.com.br/
-        https://api.pegabot.com.br/
+        https://lh2e1dqt6e.execute-api.us-east-1.amazonaws.com/hmg
       ;
       frame-src
         'self'
