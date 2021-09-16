@@ -2,16 +2,17 @@
 language: pt
 draft: false
 title: Confira as análises mais recentes do PEGABOT
-date: 2021-08-18T15:42:25Z
-weight: ""
+date: 2021-08-18T15:42:25.000Z
+weight: 1
 homepage: false
 bookmark:
-  link: https://apublica.org/2021/04/defensores-de-tratamento-precoce-contra-a-covid-19-atacam-perfil-sleeping-giants/
-  title: Perfis com alta probabilidade de automação atacam Sleeping Giants no Twitter
-  excerpt: Campanha que associa genocídio a Sleeping Giants envolveu perfis com
-    alta probabilidade de automação de acordo com análises feitas pelo PegaBot
-    para a Agência Pública.
-  src: /uploads/ex-xtjbxmaezm43.jpeg
+  link: https://www1.folha.uol.com.br/poder/2021/09/acao-automatizada-pro-bolsonaro-no-twitter-aumenta-as-vesperas-do-7-de-setembro-diz-relatorio.shtml
+  title: Ação automatizada pró-Bolsonaro no Twitter aumenta às vésperas do 7 de
+    Setembro
+  excerpt: Perfis com alta probabilidade de automação publicaram 81 mil vezes em
+    apoio aos atos em uma semana, de acordo com análises feitas pelo PegaBot em
+    parceria com a Folha de S.Paulo...
+  src: /uploads/1630526530612fdc42d605c_1630526530_3x2_rt.jpeg
   alt: ..
   caption: Parceria com jornalistas
 layout: none
