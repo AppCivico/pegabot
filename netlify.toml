@@ -64,6 +64,7 @@
         https://browser-update.org/
         https://pbs.twimg.com/
         https://*.githubusercontent.com
+        https://puppeteer.pegabot.com.br/
         data:
         blob:
       ;
@@ -113,5 +114,6 @@
       media-src
         https://*.cloudfront.net/
         https://google-analytics.com/
+        https://puppeteer.pegabot.com.br/
       ;
     '''
