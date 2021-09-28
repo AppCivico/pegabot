@@ -16,7 +16,7 @@ https://pegabots.com.br/*               https://backend.pegabot.com.br/:splat 30
 https://www.pegabots.com.br/*           https://backend.pegabot.com.br/:splat 301!
 
 # Optional: Redirect default Netlify subdomain to primary domain
-http://brave-kare-15be24.netlify.com/*  http://backend.pegabot.com.br/:splat  301!
+http://brave-kare-15be24.netlify.com/*  http://pegabot.com.br/:splat  301!
 
 # http and https need separate rules if you don't force_ssl!
 http://pegabot.com.br/*                 https://backend.pegabot.com.br/:splat 301!
