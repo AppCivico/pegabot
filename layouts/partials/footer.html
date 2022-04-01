@@ -53,17 +53,17 @@
 	{{ . | safeHTML }}
 {{ end }}
 
-{{ if eq (getenv "NODE_ENV") "development" }}
-	<script src="https://vuejs.org/js/vue.js"></script>
-{{ else }}
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min.js"></script>
-{{ end }}
+{{ $vue := resources.Get "vendor/vue/vue.min.js" | resources.Fingerprint "sha512" }}
+<script src="{{ $vue.RelPermalink }}" integrity="{{ $vue.Data.Integrity }}"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+{{ $vueResource := resources.Get "vendor/vue-resource/vue-resource.min.js" | resources.Fingerprint "sha512" }}
+<script src="{{ $vueResource.RelPermalink }}" integrity="{{ $vueResource.Data.Integrity }}"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-<script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
+{{ $chartJS := resources.Get "vendor/chart.js/chart.min.js" | resources.Fingerprint "sha512" }}
+<script src="{{ $chartJS.RelPermalink }}" integrity="{{ $chartJS.Data.Integrity }}"></script>
+
+{{ $vueChartJS := resources.Get "vendor/vue-chartjs/vue-chartjs.min.js"  | resources.Fingerprint "sha512" }}
+<script src="{{ $vueChartJS.RelPermalink }}" integrity="{{ $vueChartJS.Data.Integrity }}"></script>
 
 {{ $vc := "module.exports = window.vue-chartjs" | resources.FromString "js/shims/vue-chartjs.js" }}
 {{/* Call RelPermalink unnecessarily to generate JS files */}}

@@ -18,7 +18,7 @@
     "lint:sass": "sass-lint \"./assets/stylesheets/**/*.scss\" --verbose --no-exit --format junit --output ./testResults/sassLint.xml",
     "dev": "npm run serve",
     "serve": "npm-run-all start:*",
-    "start:hugo": "cross-env NODE_ENV=development hugo server --verbose --noHTTPCache=true --ignoreCache --templateMetrics --templateMetricsHints --disableFastRender --path-warnings --log --debug",
+    "start:hugo": "cross-env NODE_ENV=development hugo server --verbose --noHTTPCache=true --ignoreCache --templateMetrics --templateMetricsHints --disableFastRender --log --debug",
     "start:proxy": "lcp --proxyUrl https://dev.pegabot.com.br",
     "pretest": "npm run lint",
     "test": "jest",
@@ -65,8 +65,12 @@
     "version-changelog": "^2.1.0"
   },
   "dependencies": {
+    "chart.js": "^2.9.3",
     "cookieconsent": "^3.1.1",
-    "css-modal": "^1.5.0"
+    "css-modal": "^1.5.0",
+    "vue": "^2.5.13",
+    "vue-chartjs": "^3.5.1",
+    "vue-resource": "^1.3.5"
   },
   "browser": {
     "vue-chartjs": "./public/js/shims/vue-chartjs.js"

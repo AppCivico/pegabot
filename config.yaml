@@ -17,6 +17,34 @@ languageCode: "pt-br"
 removePathAccents: true
 metaDataFormat: "yaml"
 
+security:
+  funcs:
+    getenv:
+      - '^HUGO_'
+      - "NODE_ENV"
+
+module:
+  mounts:
+    -
+      source: "node_modules/chart.js/dist/"
+      target: "assets/vendor/chart.js/"
+    -
+      source: "node_modules/vue/dist/"
+      target: "assets/vendor/vue/"
+    -
+      source: "node_modules/vue-chartjs/dist/"
+      target: "assets/vendor/vue-chartjs/"
+    -
+      source: "node_modules/vue-resource/dist/"
+      target: "assets/vendor/vue-resource/"
+    -
+      source: "node_modules/wowjs/dist/"
+      target: "assets/vendor/"
+    -
+      source: "assets/"
+      target: "assets/"
+
+
 privacy:
   googleAnalytics:
     anonymizeIP: true
