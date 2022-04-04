@@ -224,16 +224,11 @@ $duration: 0.5s;
 
 	@media screen and (min-width: breakpoint('tablet')) {
 		clear: right;
-
-		height: auto;
-
 		display: table;
-
 		order: unset;
-
 		width: auto;
+		height: auto;
 		max-width: 80rem;
-
 		margin-top: auto;
 		margin-bottom: auto;
 

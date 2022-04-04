@@ -1,7 +1,10 @@
 
 
 %content-info h6 {
-	margin: 0 0 #{$line-height * 1rem} 0;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: #{$line-height * 1rem};
+	margin-left: 0;
 
 	@media screen and (min-width: breakpoint('tablet')) {
 		font-size: ms(-2);
@@ -46,4 +49,3 @@
 	width: auto;
 	max-height: 47px;
 }
-
