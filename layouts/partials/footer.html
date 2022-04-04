@@ -59,7 +59,7 @@
 {{ $vueResource := resources.Get "vendor/vue-resource/vue-resource.min.js" | resources.Fingerprint "sha512" }}
 <script src="{{ $vueResource.RelPermalink }}" integrity="{{ $vueResource.Data.Integrity }}"></script>
 
-{{ $chartJS := resources.Get "vendor/chart.js/chart.min.js" | resources.Fingerprint "sha512" }}
+{{ $chartJS := resources.Get "vendor/chart.js/Chart.min.js" | resources.Fingerprint "sha512" }}
 <script src="{{ $chartJS.RelPermalink }}" integrity="{{ $chartJS.Data.Integrity }}"></script>
 
 {{ $vueChartJS := resources.Get "vendor/vue-chartjs/vue-chartjs.min.js"  | resources.Fingerprint "sha512" }}
