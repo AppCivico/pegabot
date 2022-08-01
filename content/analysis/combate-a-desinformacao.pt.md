@@ -5,7 +5,7 @@ title: Transparência, Capacitação e Resiliência são as nossas palavras-chav
 slug: ""
 date: 2020-08-11T19:30:31.000Z
 weight: 2
-homepage: true
+homepage: false
 bookmark:
   alt: ..
   caption: Parceria com jornalistas
