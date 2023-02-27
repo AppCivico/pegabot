@@ -60,7 +60,7 @@
     "postcss-cli": "^4.1.1",
     "rimraf": "^2.6.2",
     "sass": "^1.26.9",
-    "sass-lint": "^1.12.1",
+    "sass-lint": "^1.13.1",
     "uglify-js": "^3.3.8",
     "version-changelog": "^2.1.0"
   },
